@@ -1,0 +1,188 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 210 90% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 310 90% 65%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 310 90% 65%;
+    --chart-1: 210 90% 55%;
+    --chart-2: 160 80% 45%;
+    --chart-3: 40 90% 55%;
+    --chart-4: 280 85% 65%;
+    --chart-5: 340 90% 60%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 245 40% 8%;
+    --foreground: 210 40% 98%;
+    --card: 250 50% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 250 50% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 90% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 310 90% 65%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 30% 25%;
+    --input: 220 30% 25%;
+    --ring: 310 90% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  body.animate-gradient-bg {
+    @apply bg-gradient-to-br from-fuchsia-950 via-blue-950 to-purple-950 bg-[size:200%_200%] animate-gradient-bg;
+  }
+}
+
+@keyframes animate-bubbles {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+.bubbles{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.bubbles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: hsla(var(--primary), 0.2);
+    animation: animate-bubbles 25s linear infinite;
+    bottom: -150px;
+}
+
+.bubbles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    background: hsla(var(--chart-1), 0.2);
+}
+
+.bubbles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+    background: hsla(var(--chart-2), 0.2);
+}
+
+.bubbles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+    background: hsla(var(--chart-3), 0.2);
+}
+
+.bubbles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+    background: hsla(var(--chart-4), 0.2);
+}
+
+.bubbles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    background: hsla(var(--accent), 0.2);
+}
+
+.bubbles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+    background: hsla(var(--primary), 0.2);
+}
+
+.bubbles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+    background: hsla(var(--chart-5), 0.2);
+}
+
+.bubbles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+    background: hsla(var(--chart-1), 0.2);
+}
+
+.bubbles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    background: hsla(var(--chart-2), 0.2);
+}
+
+.bubbles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+    background: hsla(var(--accent), 0.2);
+}
