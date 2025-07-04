@@ -29,6 +29,7 @@ export function Header() {
   const router = useRouter()
 
   const navLinks = [
+    { href: "/leaderboard", icon: Trophy, text: "Leaderboard" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
     { href: "/badges", icon: Badge, text: "Badges" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
