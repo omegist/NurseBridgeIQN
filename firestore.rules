@@ -1,23 +1,25 @@
 
 rules_version = '2';
-
 service cloud.firestore {
   match /databases/{database}/documents {
     match /users/{userId} {
-      // Users can only read and write their own profile data.
-      allow read, write: if request.auth.uid == userId;
-
-      // Users can only read and write their own badges.
-      // This rule is nested inside the user document match.
+      // Users can get and update their own profile document.
+      // They cannot list all users, which is more secure.
+      allow get: if request.auth.uid == userId;
+      allow update: if request.auth.uid == userId;
+      
+      // Allow user document creation for new sign-ups.
+      allow create: if request.auth != null;
+      
+      // Users can read (get/list) and write their own badges in the subcollection.
       match /userBadges/{badgeId} {
         allow read, write: if request.auth.uid == userId;
       }
     }
-
-    // Users can only read and write their own quiz progress.
+    
+    // Users can read and write their own quiz progress documents.
     match /quizProgress/{progressId} {
-      // The progressId is formatted as `${userId}_${topicId}`
-      allow read, write: if request.auth.uid == split(progressId, '_')[0];
+      allow read, write: if request.auth.uid == progressId.split('_')[0];
     }
   }
 }
