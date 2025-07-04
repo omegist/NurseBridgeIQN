@@ -4,13 +4,13 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useRouter } from "next/navigation"
-import type { FlashcardTopic } from "@/lib/types"
+import type { SerializableFlashcardTopic } from "@/lib/types"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, ChevronLeft, ChevronRight, RotateCw } from "lucide-react"
 import { Progress } from "@/components/ui/progress"
 
-export function FlashcardClient({ topic }: { topic: FlashcardTopic }) {
+export function FlashcardClient({ topic }: { topic: SerializableFlashcardTopic }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
   const [direction, setDirection] = useState(0)

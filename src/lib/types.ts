@@ -36,3 +36,5 @@ export interface FlashcardTopic {
   icon: React.ComponentType<{ className?: string }>;
   cards: Flashcard[];
 }
+
+export type SerializableFlashcardTopic = Omit<FlashcardTopic, 'icon'>;
