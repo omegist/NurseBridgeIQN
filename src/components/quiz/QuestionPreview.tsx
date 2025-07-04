@@ -26,7 +26,7 @@ export function QuestionPreview({
   userAnswers,
   visitedQuestions,
 }: QuestionPreviewProps) {
-  const answeredCount = userAnswers.filter(a => a !== null).length;
+  const answeredCount = userAnswers.filter(a => a != null).length;
   const answeredPercentage = questionCount > 0 ? (answeredCount / questionCount) * 100 : 0;
 
   return (
@@ -53,7 +53,7 @@ export function QuestionPreview({
           <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-5 lg:grid-cols-7 gap-3">
             {Array.from({ length: questionCount }, (_, i) => {
               const isCurrent = i === currentQuestionIndex;
-              const isAnswered = userAnswers[i] !== null;
+              const isAnswered = userAnswers[i] != null;
               const isVisited = visitedQuestions[i];
 
               return (

@@ -31,6 +31,12 @@ export function TestClient({ test }: { test: Test }) {
   } = useTest()
   
   const [time, setTime] = useState(test.timeLimitMinutes ? test.timeLimitMinutes * 60 : 0);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
 
   useEffect(() => {
     startTest(test);
@@ -51,6 +57,8 @@ export function TestClient({ test }: { test: Test }) {
   }, [userAnswers, currentQuestionIndex, time, test.timeLimitMinutes, saveProgress, setTestDuration, router]);
 
   useEffect(() => {
+    if (!isMounted) return;
+
     const timer = setInterval(() => {
       if (test.timeLimitMinutes) {
         // Countdown
@@ -69,7 +77,7 @@ export function TestClient({ test }: { test: Test }) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [test.timeLimitMinutes, handleSubmit]);
+  }, [isMounted, test.timeLimitMinutes, handleSubmit]);
 
   const handleNext = useCallback(() => {
     if (currentQuestionIndex < test.questions.length - 1) {
