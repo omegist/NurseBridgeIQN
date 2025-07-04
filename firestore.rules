@@ -3,22 +3,20 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Rules for the 'users' collection
+    // Users collection
     match /users/{userId} {
-      // Any authenticated user can read the list of users for the leaderboard.
-      // The 'list' permission allows querying a collection.
-      allow list: if request.auth != null;
+      // Any authenticated user can read any user profile (for the leaderboard).
+      allow read: if request.auth != null;
       
-      // An authenticated user can get, create, or update their own user document.
-      // The 'get' permission allows fetching a single document by ID.
-      allow get, create, update: if request.auth != null && request.auth.uid == userId;
+      // A user can only write to their own profile.
+      allow write: if request.auth.uid == userId;
     }
-    
-    // Rules for the 'quizProgress' collection
+
+    // Quiz progress collection
     match /quizProgress/{progressId} {
-      // A user can only read and write their own progress documents.
-      // The document ID is formatted as "userId_topicId", so we check the first part.
-      allow read, write: if request.auth != null && request.auth.uid == split(progressId, '_')[0];
+      // A user can only read or write their own progress documents.
+      // We verify this by checking if their UID matches the first part of the document ID.
+      allow read, write: if request.auth != null && request.auth.uid == progressId.split('_')[0];
     }
   }
 }
