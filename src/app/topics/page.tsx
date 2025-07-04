@@ -42,17 +42,16 @@ export default function TopicsPage() {
             const topicId = data.topicId;
             const topic = topics.find(t => t.id === topicId);
             if (topic) {
-                const userAnswers = data.userAnswers || [];
-                const totalQuestions = topic.questionCount || 0;
-                if (totalQuestions > 0) {
-                    const answeredCount = userAnswers.filter((answer: null | number) => answer !== null).length;
-                    
-                    // Logic to check if all questions are answered
-                    if (answeredCount === totalQuestions) {
-                         progressData[topicId] = 100;
-                    } else {
-                         const percentage = (answeredCount / totalQuestions) * 100;
-                         progressData[topicId] = percentage;
+                // NEW: Check for the 'completed' flag first.
+                if (data.completed === true) {
+                    progressData[topicId] = 100;
+                } else {
+                    const userAnswers = data.userAnswers || [];
+                    const totalQuestions = topic.questionCount || 0;
+                    if (totalQuestions > 0) {
+                        const answeredCount = userAnswers.filter((answer: null | number) => answer !== null).length;
+                        const percentage = (answeredCount / totalQuestions) * 100;
+                        progressData[topicId] = percentage;
                     }
                 }
             }

@@ -41,6 +41,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
         userAnswers: answers,
         currentQuestionIndex: currentIndex,
         updatedAt: new Date(),
+        completed: false,
       }, { merge: true });
     }
   }, [user, topic]);
@@ -53,26 +54,45 @@ export function QuizProvider({ children }: { children: ReactNode }) {
         const progressRef = doc(db, 'quizProgress', `${user.uid}_${selectedTopic.id}`);
         const progressSnap = await getDoc(progressRef);
         
-        if (progressSnap.exists()) {
+        // Check if we are retaking a completed quiz
+        if (progressSnap.exists() && progressSnap.data().completed) {
+            // This is a retake. Reset the progress.
+            const newAnswers = new Array(selectedTopic.questions.length).fill(null);
+            await setDoc(progressRef, {
+              userId: user.uid,
+              topicId: selectedTopic.id,
+              userAnswers: newAnswers,
+              currentQuestionIndex: 0,
+              updatedAt: new Date(),
+              completed: false, // Mark as in-progress for the new attempt
+            }, { merge: true });
+
+            setUserAnswers(newAnswers);
+            setCurrentQuestionIndex(0);
+            const initialVisited = new Array(selectedTopic.questions.length).fill(false);
+            initialVisited[0] = true;
+            setVisitedQuestions(initialVisited);
+
+        } else if (progressSnap.exists()) { // Resuming an in-progress quiz
             const progress = progressSnap.data();
             setUserAnswers(progress.userAnswers || new Array(selectedTopic.questions.length).fill(null));
             setCurrentQuestionIndex(progress.currentQuestionIndex || 0);
 
             const initialVisited = new Array(selectedTopic.questions.length).fill(false);
-            progress.userAnswers.forEach((ans: number | null, index: number) => {
+            (progress.userAnswers || []).forEach((ans: number | null, index: number) => {
               if(ans !== null) initialVisited[index] = true;
             });
             initialVisited[progress.currentQuestionIndex || 0] = true;
             setVisitedQuestions(initialVisited);
 
-        } else {
+        } else { // Starting a brand new quiz
             setUserAnswers(new Array(selectedTopic.questions.length).fill(null));
             setCurrentQuestionIndex(0);
             const initialVisited = new Array(selectedTopic.questions.length).fill(false);
             initialVisited[0] = true;
             setVisitedQuestions(initialVisited);
         }
-    } else {
+    } else { // User not logged in (fallback)
         setUserAnswers(new Array(selectedTopic.questions.length).fill(null));
         setCurrentQuestionIndex(0);
         const initialVisited = new Array(selectedTopic.questions.length).fill(false);
@@ -81,20 +101,15 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     }
   }, [user]);
   
-  const resetQuiz = useCallback(async () => {
-    if (user && topic) {
-      const progressRef = doc(db, 'quizProgress', `${user.uid}_${topic.id}`);
-      await setDoc(progressRef, {
-        userAnswers: new Array(topic.questions.length).fill(null),
-        currentQuestionIndex: 0,
-      }, { merge: true });
-    }
+  const resetQuiz = useCallback(() => {
+    // This function is now mostly for leaving a quiz and returning to the topics list
+    // or starting a completely new topic.
     setTopic(null)
     setUserAnswers([])
     setCurrentQuestionIndex(0)
     setQuizStarted(false)
     setVisitedQuestions([])
-  }, [user, topic])
+  }, [])
 
   return (
     <QuizContext.Provider

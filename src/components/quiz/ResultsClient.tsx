@@ -30,7 +30,7 @@ import {
 import { CheckCircle, XCircle, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
-import { doc, deleteDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 
 interface QuizResults {
@@ -102,9 +102,17 @@ export function ResultsClient() {
     setResults(calculatedResults);
     if (score > 0) updateUserScore(score * 10);
 
-    /* clear progress in Firestore */
+    /* Update progress in Firestore to mark as completed */
     const progressRef = doc(db, "quizProgress", `${user.uid}_${topic.id}`);
-    deleteDoc(progressRef).catch(() => {});
+    setDoc(
+      progressRef,
+      {
+        completed: true,
+        score: score,
+        percentage: percentage,
+      },
+      { merge: true }
+    ).catch(() => {});
 
     setIsLoading(false);
   }, [topic, userAnswers, user, updateUserScore]);
@@ -136,8 +144,8 @@ export function ResultsClient() {
   /* ---------- button handlers ---------- */
   const handleRetake = async () => {
     if (topic) {
-      await resetQuiz();
-      await startQuiz(topic);
+      // The startQuiz function in QuizContext will handle resetting the progress
+      // since it detects the 'completed' flag.
       router.push(`/quiz/${topic.id}`);
     }
   };
@@ -302,4 +310,3 @@ export function ResultsClient() {
     </div>
   );
 }
-
