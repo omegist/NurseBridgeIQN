@@ -8,15 +8,11 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Mail, CalendarDays, Award, Trophy, Pencil, Loader2 } from "lucide-react"
+import { ArrowLeft, Mail, CalendarDays, Pencil, Loader2 } from "lucide-react"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { useToast } from "@/hooks/use-toast"
-import { collection, getDocs } from "firebase/firestore"
-import { db } from "@/lib/firebase"
-import { badges as allBadges, type Badge as BadgeType } from "@/data/badges"
 import { Skeleton } from "@/components/ui/skeleton"
-import { cn } from "@/lib/utils"
 
 export default function ProfilePage() {
     const { user, loading, updateUserAvatar } = useAuth();
@@ -24,37 +20,12 @@ export default function ProfilePage() {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [isUploading, setIsUploading] = useState(false);
     const { toast } = useToast();
-    const [earnedBadges, setEarnedBadges] = useState<BadgeType[]>([]);
-    const [isLoadingBadges, setIsLoadingBadges] = useState(true);
-
+    
     useEffect(() => {
         if (!loading && !user) {
             router.push("/auth");
         }
     }, [user, loading, router]);
-
-    useEffect(() => {
-        if (!user) return;
-
-        const fetchBadges = async () => {
-            setIsLoadingBadges(true);
-            try {
-                const badgesRef = collection(db, 'users', user.uid, 'userBadges');
-                const badgesSnap = await getDocs(badgesRef);
-                const userBadgeIds = badgesSnap.docs.map(doc => doc.id);
-                
-                const filteredBadges = allBadges.filter(b => userBadgeIds.includes(b.name));
-                setEarnedBadges(filteredBadges);
-
-            } catch (error) {
-                console.error("Error fetching user badges:", error);
-            } finally {
-                setIsLoadingBadges(false);
-            }
-        };
-
-        fetchBadges();
-    }, [user]);
 
     const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
@@ -154,10 +125,6 @@ export default function ProfilePage() {
                             </p>
                             <div className="flex items-center justify-center sm:justify-start gap-4 mt-4 text-muted-foreground text-sm">
                                 <div className="flex items-center gap-2">
-                                    <Award className="h-4 w-4 text-orange-400" />
-                                    <span>{earnedBadges.length} Badge{earnedBadges.length !== 1 && 's'} Earned</span>
-                                </div>
-                                <div className="flex items-center gap-2">
                                     <CalendarDays className="h-4 w-4" />
                                     <span>Member since {joinYear}</span>
                                 </div>
@@ -171,51 +138,6 @@ export default function ProfilePage() {
                 </Card>
             </motion.div>
 
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-            >
-                <h2 className="text-2xl font-bold font-headline mb-4 flex items-center gap-2">
-                   <Trophy className="h-6 w-6 text-accent"/>
-                   Achievements & Badges
-                </h2>
-                {isLoadingBadges ? (
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                        {Array.from({ length: 4 }).map((_, i) => (
-                            <div key={i} className="flex flex-col items-center gap-2 p-4 bg-card/50 rounded-lg">
-                                <Skeleton className="h-24 w-24 rounded-full" />
-                                <Skeleton className="h-5 w-3/4 mt-2" />
-                                <Skeleton className="h-4 w-full" />
-                            </div>
-                        ))}
-                    </div>
-                ) : earnedBadges.length > 0 ? (
-                    <Card className="p-6 bg-card/50 backdrop-blur-sm">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-                            {earnedBadges.map((badge) => (
-                                <motion.div
-                                    key={badge.name}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="flex flex-col items-center text-center"
-                                >
-                                    <div className={cn("mb-3 rounded-full p-4 w-20 h-20 flex items-center justify-center transition-all duration-300 transform hover:scale-110", badge.bgColor)}>
-                                        <badge.icon className={cn("w-10 h-10", badge.color)} />
-                                    </div>
-                                    <p className="font-semibold font-headline">{badge.name}</p>
-                                    <p className="text-xs text-muted-foreground mt-1">{badge.description}</p>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </Card>
-                ) : (
-                    <Card className="p-6 text-center bg-card/50 backdrop-blur-sm">
-                        <p className="text-muted-foreground">You haven't earned any badges yet. Complete quizzes to start collecting them!</p>
-                    </Card>
-                )}
-            </motion.div>
              <div className="mt-12 flex justify-end">
                 <Button asChild className="bg-accent hover:bg-accent/90">
                     <Link href="/topics">Back to Topics</Link>

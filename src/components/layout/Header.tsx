@@ -5,7 +5,6 @@ import Link from "next/link"
 import React from "react"
 import {
   Menu,
-  Badge,
   BarChart2,
   Layers,
   Sun,
@@ -29,7 +28,6 @@ export function Header() {
 
   const navLinks = [
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
-    { href: "/badges", icon: Badge, text: "Badges" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
   ]
 
