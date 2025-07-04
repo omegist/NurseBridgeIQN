@@ -21,7 +21,10 @@ export default function HomePage() {
   if (loading || !user) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+        <div
+          className="animate-spin rounded-full h-16 w-16 border-4 border-t-transparent border-primary"
+          aria-label="Loading spinner"
+        ></div>
       </div>
     )
   }
@@ -38,7 +41,7 @@ export default function HomePage() {
           Welcome to Nurse IQ
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
-          Hello {user.name}! Sharpen your nursing skills and test your knowledge with our interactive quizzes.
+          Hello {user?.name || "Nurse"}! Sharpen your nursing skills and test your knowledge with our interactive quizzes.
         </p>
       </motion.div>
 
@@ -49,10 +52,15 @@ export default function HomePage() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-10 py-6 text-lg shadow-lg">
+        <Button
+          asChild
+          size="lg"
+          className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-10 py-6 text-lg shadow-lg"
+        >
           <Link href="/topics">Start Quiz</Link>
         </Button>
       </motion.div>
     </div>
   )
 }
+
