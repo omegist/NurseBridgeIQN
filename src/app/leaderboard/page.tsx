@@ -63,11 +63,9 @@ export default function LeaderboardPage() {
         setUsers(fetchedUsers);
       } catch (e: any) {
         console.error("Error fetching leaderboard data:", e);
-        if (e.code === 'failed-precondition' && e.message.includes('index')) {
-          setError("The leaderboard requires a database index. Please open the browser's developer console (F12), find the error message from Firebase, and click the link to create the required index automatically. It may take a few minutes to build.");
-        } else {
-          setError("Failed to load leaderboard. Please check your Firestore security rules and internet connection.");
-        }
+        // Firestore often reports a missing index as a 'permission-denied' or 'failed-precondition' error.
+        // We will catch any error and guide the user to create the index.
+        setError("The leaderboard requires a database index to sort by score. Please open the browser's developer console (F12), find the error message from Firebase, and click the link to create the required index automatically. It may take a few minutes to build.");
       } finally {
         setIsLoading(false);
       }
