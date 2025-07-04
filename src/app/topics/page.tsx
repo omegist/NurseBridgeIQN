@@ -1,12 +1,57 @@
+
 "use client"
 
 import { topics } from "@/data/topics"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { Clock, BookOpen, FlaskConical } from "lucide-react"
+import { Clock, BookOpen, FlaskConical, RotateCw } from "lucide-react"
+import { useAuth } from "@/contexts/AuthContext"
+import { useEffect, useState } from "react"
+import { collection, query, where, getDocs } from "firebase/firestore"
+import { db } from "@/lib/firebase"
+import { Progress } from "@/components/ui/progress"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export default function TopicsPage() {
+  const { user } = useAuth();
+  const [topicProgress, setTopicProgress] = useState<Record<string, number>>({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProgress() {
+      if (!user) {
+        setIsLoading(false);
+        return;
+      };
+
+      try {
+        const progressQuery = query(collection(db, "quizProgress"), where("userId", "==", user.uid));
+        const querySnapshot = await getDocs(progressQuery);
+        
+        const progressData: Record<string, number> = {};
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          const topicId = data.topicId;
+          const userAnswers = data.userAnswers || [];
+          const totalQuestions = topics.find(t => t.id === topicId)?.questionCount || 0;
+          if (totalQuestions > 0) {
+            const answeredCount = userAnswers.filter((answer: null | number) => answer !== null).length;
+            const percentage = (answeredCount / totalQuestions) * 100;
+            progressData[topicId] = percentage;
+          }
+        });
+        setTopicProgress(progressData);
+      } catch (error) {
+        console.error("Error fetching topic progress:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchProgress();
+  }, [user]);
+
   return (
     <div className="container mx-auto py-10 px-4">
       <motion.div
@@ -18,60 +63,113 @@ export default function TopicsPage() {
           Choose a Topic
         </h1>
         <p className="text-muted-foreground text-center mb-10">
-          Select a category to start your quiz.
+          Select a category to start your quiz. You can resume any topic you've already started.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {topics.map((topic, index) => (
-          <motion.div
-            key={topic.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="flex"
-          >
-            <div className="bg-card rounded-2xl shadow-lg p-6 flex flex-col w-full border border-border/20 hover:border-accent transition-all duration-300 group">
+      {isLoading ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {Array.from({ length: 6 }).map((_, index) => (
+             <div key={index} className="bg-card rounded-2xl shadow-lg p-6 flex flex-col w-full border border-border/20">
                 <div className="flex justify-between items-start mb-4">
-                    <div className="p-3 rounded-lg bg-primary/10">
-                       <topic.icon className="w-7 h-7 text-primary" />
-                    </div>
-                    <span className={cn(
-                        "px-3 py-1 text-xs font-semibold rounded-full capitalize",
-                        topic.difficulty === 'easy' 
-                            ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' 
-                            : 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300'
-                    )}>
-                        {topic.difficulty}
-                    </span>
+                    <Skeleton className="h-12 w-12 rounded-lg" />
+                    <Skeleton className="h-6 w-16 rounded-full" />
                 </div>
-
                 <div className="flex-grow">
-                    <h2 className="font-headline text-xl font-bold mb-1 group-hover:text-accent transition-colors">{topic.name}</h2>
-                    <p className="text-sm text-muted-foreground mb-3">from {topic.name}</p>
-                    <p className="text-sm text-muted-foreground">{topic.description}</p>
+                    <Skeleton className="h-6 w-3/4 mb-2" />
+                    <Skeleton className="h-4 w-1/2 mb-3" />
+                    <Skeleton className="h-10 w-full" />
                 </div>
-
-                <div className="mt-auto pt-4">
+                 <div className="mt-auto pt-4">
                     <div className="flex justify-between items-center text-muted-foreground text-sm mb-6 border-t pt-4">
-                        <div className="flex items-center gap-2">
-                            <BookOpen className="w-4 h-4" />
-                            <span>{topic.questionCount} questions</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" />
-                            <span>{topic.questionCount * 2} min</span>
-                        </div>
+                        <Skeleton className="h-5 w-24" />
+                        <Skeleton className="h-5 w-16" />
                     </div>
-                    <Link href={`/quiz/${topic.id}`} className="w-full text-center py-3 px-6 rounded-lg text-white font-bold bg-gradient-to-r from-violet-600 to-teal-500 hover:shadow-lg hover:shadow-teal-500/30 transition-all duration-300 flex items-center justify-center gap-2">
-                        <span>Start Quiz</span>
-                        <FlaskConical className="w-5 h-5" />
-                    </Link>
+                    <Skeleton className="h-12 w-full rounded-lg" />
                 </div>
             </div>
-          </motion.div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {topics.map((topic, index) => {
+            const progress = topicProgress[topic.id] || 0;
+            const isCompleted = progress === 100;
+            const hasStarted = progress > 0;
+
+            return (
+              <motion.div
+                key={topic.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex"
+              >
+                <div className="bg-card rounded-2xl shadow-lg p-6 flex flex-col w-full border border-border/20 hover:border-accent transition-all duration-300 group">
+                    <div className="flex justify-between items-start mb-4">
+                        <div className="p-3 rounded-lg bg-primary/10">
+                          <topic.icon className="w-7 h-7 text-primary" />
+                        </div>
+                        <span className={cn(
+                            "px-3 py-1 text-xs font-semibold rounded-full capitalize",
+                            topic.difficulty === 'easy' 
+                                ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' 
+                                : 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300'
+                        )}>
+                            {topic.difficulty}
+                        </span>
+                    </div>
+
+                    <div className="flex-grow">
+                        <h2 className="font-headline text-xl font-bold mb-1 group-hover:text-accent transition-colors">{topic.name}</h2>
+                        <p className="text-sm text-muted-foreground mb-3">from {topic.name}</p>
+                        <p className="text-sm text-muted-foreground">{topic.description}</p>
+                    </div>
+
+                    <div className="mt-auto pt-4">
+                        <div className="flex justify-between items-center text-muted-foreground text-sm mb-4 border-t pt-4">
+                            <div className="flex items-center gap-2">
+                                <BookOpen className="w-4 h-4" />
+                                <span>{topic.questionCount} questions</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Clock className="w-4 h-4" />
+                                <span>{topic.questionCount * 2} min</span>
+                            </div>
+                        </div>
+
+                        {hasStarted && !isCompleted && (
+                          <div className="space-y-2 mb-6">
+                            <Progress value={progress} />
+                            <p className="text-xs text-muted-foreground text-center">{Math.round(progress)}% complete</p>
+                          </div>
+                        )}
+                        
+                         <Link href={`/quiz/${topic.id}`} className="w-full text-center py-3 px-6 rounded-lg text-white font-bold bg-gradient-to-r from-violet-600 to-teal-500 hover:shadow-lg hover:shadow-teal-500/30 transition-all duration-300 flex items-center justify-center gap-2">
+                            {isCompleted ? (
+                                <>
+                                  <span>Retake Quiz</span>
+                                  <RotateCw className="w-5 h-5" />
+                                </>
+                            ) : hasStarted ? (
+                                <>
+                                  <span>Resume Quiz</span>
+                                  <FlaskConical className="w-5 h-5" />
+                                </>
+                            ) : (
+                                <>
+                                  <span>Start Quiz</span>
+                                  <FlaskConical className="w-5 h-5" />
+                                </>
+                            )}
+                        </Link>
+                    </div>
+                </div>
+              </motion.div>
+            )
+          })}
+        </div>
+      )}
     </div>
   )
 }
