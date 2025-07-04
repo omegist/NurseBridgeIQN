@@ -64,7 +64,7 @@
   }
 
   body.animate-gradient-bg {
-    @apply bg-gradient-to-br from-fuchsia-950 via-blue-950 to-purple-950 bg-[size:200%_200%] animate-gradient-bg;
+    @apply bg-gradient-to-br from-gray-950 via-blue-950 to-cyan-950 bg-[size:200%_200%] animate-gradient-bg;
   }
 }
 
