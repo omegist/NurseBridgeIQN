@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -38,7 +37,7 @@ export function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <AnimatedLogo className="h-6 w-6" />
             <span className="hidden font-bold sm:inline-block font-headline">
-              Nurse IQ
+              NURSE IQN
             </span>
           </Link>
           {user && (
@@ -73,7 +72,7 @@ export function Header() {
                   <div className="border-b pb-4">
                     <Link href="/" className="flex items-center space-x-2">
                       <AnimatedLogo className="h-6 w-6" />
-                      <span className="font-bold font-headline">Nurse IQ</span>
+                      <span className="font-bold font-headline">NURSE IQN</span>
                     </Link>
                   </div>
                   <nav className="flex flex-col space-y-2 mt-4">

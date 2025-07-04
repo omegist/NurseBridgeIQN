@@ -38,7 +38,7 @@ export default function HomePage() {
       >
         <AnimatedLogo className="h-32 w-32 mx-auto mb-6" />
         <h1 className="text-5xl font-bold font-headline text-foreground">
-          Welcome to Nurse IQ
+          Welcome to NURSE IQN
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
           Hello {user?.name || "Nurse"}! Sharpen your nursing skills and test your knowledge with our interactive quizzes.

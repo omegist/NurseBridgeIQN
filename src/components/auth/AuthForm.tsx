@@ -75,7 +75,7 @@ export function AuthForm() {
             {isLogin ? "Welcome Back!" : "Create Account"}
           </h2>
           <p className="text-center text-muted-foreground mb-6">
-            {isLogin ? "Sign in to continue your journey." : "Join Nurse IQ to start learning."}
+            {isLogin ? "Sign in to continue your journey." : "Join NURSE IQN to start learning."}
           </p>
 
           <form onSubmit={isLogin ? handleLoginSubmit(onLogin) : handleSignupSubmit(onSignup)} className="space-y-4">

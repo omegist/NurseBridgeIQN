@@ -9,7 +9,7 @@ import { Header } from "@/components/layout/Header"
 import { FloatingBubbles } from "@/components/layout/FloatingBubbles"
 
 export const metadata: Metadata = {
-  title: "Nurse IQ",
+  title: "NURSE IQN",
   description: "A nursing quiz app to test your knowledge.",
 }
 
@@ -29,7 +29,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <ThemeProvider storageKey="nurse-iq-theme">
+        <ThemeProvider storageKey="nurse-iqn-theme">
           <AuthProvider>
             <QuizProvider>
               <FloatingBubbles />
