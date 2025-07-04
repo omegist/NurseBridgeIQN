@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { Clock, BookOpen, FlaskConical, RotateCw } from "lucide-react"
 import { useAuth } from "@/contexts/AuthContext"
 import { useEffect, useState } from "react"
-import { collection, query, where, getDocs } from "firebase/firestore"
+import { collection, query, where, getDocs, doc, getDoc } from "firebase/firestore"
 import { db } from "@/lib/firebase"
 import { Progress } from "@/components/ui/progress"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -23,27 +23,39 @@ export default function TopicsPage() {
       if (!user) {
         setIsLoading(false);
         return;
-      };
+      }
 
       try {
-        const progressQuery = query(collection(db, "quizProgress"), where("userId", "==", user.uid));
-        const querySnapshot = await getDocs(progressQuery);
-        
         const progressData: Record<string, number> = {};
-        querySnapshot.forEach((doc) => {
-          const data = doc.data();
-          const topicId = data.topicId;
-          const userAnswers = data.userAnswers || [];
-          const totalQuestions = topics.find(t => t.id === topicId)?.questionCount || 0;
-          if (totalQuestions > 0) {
-            const answeredCount = userAnswers.filter((answer: null | number) => answer !== null).length;
-            const percentage = (answeredCount / totalQuestions) * 100;
-            progressData[topicId] = percentage;
+
+        // Create a list of promises for each topic's progress document
+        const promises = topics.map(topic => 
+            getDoc(doc(db, "quizProgress", `${user.uid}_${topic.id}`))
+        );
+
+        // Fetch all progress documents in parallel
+        const docSnapshots = await Promise.all(promises);
+
+        docSnapshots.forEach((docSnap) => {
+          if (docSnap.exists()) {
+            const data = docSnap.data();
+            const topicId = data.topicId;
+            const topic = topics.find(t => t.id === topicId);
+            if (topic) {
+                const userAnswers = data.userAnswers || [];
+                const totalQuestions = topic.questionCount || 0;
+                if (totalQuestions > 0) {
+                    const answeredCount = userAnswers.filter((answer: null | number) => answer !== null).length;
+                    const percentage = (answeredCount / totalQuestions) * 100;
+                    progressData[topicId] = percentage;
+                }
+            }
           }
         });
+
         setTopicProgress(progressData);
       } catch (error) {
-        console.error("Error fetching topic progress:", error);
+        console.error("Error fetching topic progress. This is likely a Firestore security rules issue.", error);
       } finally {
         setIsLoading(false);
       }

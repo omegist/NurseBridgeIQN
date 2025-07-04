@@ -1,0 +1,18 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users can read and write their own user document
+    match /users/{userId} {
+      allow read, write: if request.auth.uid == userId;
+    }
+
+    // Users can read and write their own quiz progress documents,
+    // which are identified by a document ID starting with their user ID.
+    match /quizProgress/{progressId} {
+      allow read, write: if request.auth.uid != null && progressId.startsWith(request.auth.uid);
+    }
+  }
+}
