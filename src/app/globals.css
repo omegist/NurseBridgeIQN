@@ -184,16 +184,53 @@
 }
 
 @keyframes animate-gradient-bg {
-  0%, 100% {
+  0% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
   }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body.animate-gradient-bg {
-  background: linear-gradient(to bottom right, #020617, #1e3a8a, #047857);
-  background-size: 200% 200%;
+  background: linear-gradient(-45deg, #1f2937, #111827, #008080, #14b8a6);
+  background-size: 400% 400%;
   animation: animate-gradient-bg 15s ease infinite;
+}
+
+/* Flashcard Page Background */
+.flashcard-background {
+  background-color: #008080; /* Teal Accent Color */
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.flashcard-background::before {
+  content: '';
+  position: absolute;
+  top: -10rem;
+  left: -15rem;
+  width: 30rem;
+  height: 30rem;
+  background-color: rgba(44, 62, 80, 0.25); /* Darker shape from image palette */
+  transform: rotate(45deg);
+  z-index: -1;
+  border-radius: 4rem;
+}
+
+.flashcard-background::after {
+  content: '';
+  position: absolute;
+  bottom: -12rem;
+  right: -12rem;
+  width: 30rem;
+  height: 30rem;
+  background-color: rgba(26, 188, 156, 0.25); /* Lighter teal shape */
+  transform: rotate(-30deg);
+  z-index: -1;
+  border-radius: 4rem;
 }
