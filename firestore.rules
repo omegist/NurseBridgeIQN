@@ -1,22 +1,35 @@
 rules_version = '2';
+
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{userId} {
-      allow get: if request.auth != null && request.auth.uid == userId;
-      allow create: if request.auth != null;
-      allow update: if request.auth != null && request.auth.uid == userId;
+
+    // Helper function to check if a user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
     }
 
-    match /quizProgress/{progressId} {
-      // Allow read/write if the document ID starts with the user's UID.
-      // Doc ID is formatted as "UID_topicId".
-      allow read, write: if request.auth != null && request.auth.uid == progressId.split('_')[0];
+    // Helper function to check if the user is the owner of the document
+    function isOwner(userId) {
+      return request.auth.uid == userId;
     }
     
-    match /testProgress/{progressId} {
-      // Allow read/write if the document ID starts with the user's UID.
-      // Doc ID is formatted as "UID_testId".
-      allow read, write: if request.auth != null && request.auth.uid == progressId.split('_')[0];
+    // Users can only read their own profile, but cannot list all users.
+    // They can create their own profile, and update their own name, avatar, and score.
+    match /users/{userId} {
+      allow get: if isAuthenticated() && isOwner(userId);
+      allow create: if isAuthenticated() && isOwner(userId);
+      allow update: if isAuthenticated() && isOwner(userId) && (
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'avatar', 'score'])
+      );
+
+      // Users can read and write to their own progress subcollections.
+      match /quizProgress/{topicId} {
+        allow read, write: if isAuthenticated() && isOwner(userId);
+      }
+
+      match /testProgress/{testId} {
+        allow read, write: if isAuthenticated() && isOwner(userId);
+      }
     }
   }
 }

@@ -99,7 +99,7 @@ export function TestResultsClient() {
     setResults(calculatedResults);
     if (score > 0) updateUserScore(score * 10);
 
-    const progressRef = doc(db, "testProgress", `${user.uid}_${test.id}`);
+    const progressRef = doc(db, 'users', user.uid, 'testProgress', test.id);
     setDoc(
       progressRef,
       {

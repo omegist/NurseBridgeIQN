@@ -103,7 +103,7 @@ export function ResultsClient() {
     if (score > 0) updateUserScore(score * 10);
 
     /* Update progress in Firestore to mark as completed */
-    const progressRef = doc(db, "quizProgress", `${user.uid}_${topic.id}`);
+    const progressRef = doc(db, "users", user.uid, "quizProgress", topic.id);
     setDoc(
       progressRef,
       {

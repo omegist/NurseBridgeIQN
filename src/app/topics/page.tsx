@@ -30,7 +30,7 @@ export default function TopicsPage() {
 
         // Create a list of promises for each topic's progress document
         const promises = topics.map(topic => 
-            getDoc(doc(db, "quizProgress", `${user.uid}_${topic.id}`))
+            getDoc(doc(db, "users", user.uid, "quizProgress", topic.id))
         );
 
         // Fetch all progress documents in parallel
