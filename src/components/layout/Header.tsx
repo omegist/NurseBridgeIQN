@@ -5,7 +5,6 @@ import Link from "next/link"
 import React from "react"
 import {
   Menu,
-  Trophy,
   Badge,
   BarChart2,
   Layers,
@@ -15,7 +14,7 @@ import {
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import { useAuth } from "@/contexts/AuthContext"
 import AnimatedLogo from "../shared/AnimatedLogo"
 import { ThemeToggle } from "./ThemeToggle"
@@ -29,7 +28,6 @@ export function Header() {
   const router = useRouter()
 
   const navLinks = [
-    { href: "/leaderboard", icon: Trophy, text: "Leaderboard" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
     { href: "/badges", icon: Badge, text: "Badges" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
@@ -69,6 +67,10 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left">
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Menu</SheetTitle>
+                  <SheetDescription>Main navigation menu and theme settings.</SheetDescription>
+                </SheetHeader>
                 <div className="flex flex-col h-full">
                   <div className="border-b pb-4">
                     <Link href="/" className="flex items-center space-x-2">
