@@ -62,10 +62,6 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  body.animate-gradient-bg {
-    @apply bg-gradient-to-br from-gray-950 via-blue-950 to-cyan-950 bg-[size:200%_200%] animate-gradient-bg;
-  }
 }
 
 @keyframes animate-bubbles {
@@ -185,4 +181,19 @@
     animation-delay: 0s;
     animation-duration: 11s;
     background: hsla(var(--accent), 0.2);
+}
+
+@keyframes animate-gradient-bg {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+body.animate-gradient-bg {
+  background: linear-gradient(to bottom right, #020617, #1e3a8a, #047857);
+  background-size: 200% 200%;
+  animation: animate-gradient-bg 15s ease infinite;
 }
