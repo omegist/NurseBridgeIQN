@@ -5,7 +5,7 @@ import { topics } from "@/data/topics"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { Clock, BookOpen, FlaskConical, RotateCw } from "lucide-react"
+import { Clock, BookOpen, FlaskConical, RotateCw, Check } from "lucide-react"
 import { useAuth } from "@/contexts/AuthContext"
 import { useEffect, useState } from "react"
 import { collection, query, where, getDocs, doc, getDoc } from "firebase/firestore"
@@ -46,8 +46,14 @@ export default function TopicsPage() {
                 const totalQuestions = topic.questionCount || 0;
                 if (totalQuestions > 0) {
                     const answeredCount = userAnswers.filter((answer: null | number) => answer !== null).length;
-                    const percentage = (answeredCount / totalQuestions) * 100;
-                    progressData[topicId] = percentage;
+                    
+                    // Logic to check if all questions are answered
+                    if (answeredCount === totalQuestions) {
+                         progressData[topicId] = 100;
+                    } else {
+                         const percentage = (answeredCount / totalQuestions) * 100;
+                         progressData[topicId] = percentage;
+                    }
                 }
             }
           }
@@ -122,14 +128,25 @@ export default function TopicsPage() {
                         <div className="p-3 rounded-lg bg-primary/10">
                           <topic.icon className="w-7 h-7 text-primary" />
                         </div>
-                        <span className={cn(
-                            "px-3 py-1 text-xs font-semibold rounded-full capitalize",
-                            topic.difficulty === 'easy' 
-                                ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' 
-                                : 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300'
-                        )}>
-                            {topic.difficulty}
-                        </span>
+                        <div className="flex flex-col items-end gap-2">
+                            <span className={cn(
+                                "px-3 py-1 text-xs font-semibold rounded-full capitalize",
+                                topic.difficulty === 'easy' 
+                                    ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' 
+                                    : 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300'
+                            )}>
+                                {topic.difficulty}
+                            </span>
+                             {isCompleted && (
+                                <motion.span 
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="px-3 py-1 text-xs font-semibold rounded-full capitalize bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 flex items-center gap-1">
+                                    <Check className="w-4 h-4" />
+                                    Completed
+                                </motion.span>
+                           )}
+                        </div>
                     </div>
 
                     <div className="flex-grow">
