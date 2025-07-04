@@ -75,15 +75,35 @@ export function QuizProvider({ children }: { children: ReactNode }) {
 
         } else if (progressSnap.exists()) { // Resuming an in-progress quiz
             const progress = progressSnap.data();
-            setUserAnswers(progress.userAnswers || new Array(selectedTopic.questions.length).fill(null));
-            setCurrentQuestionIndex(progress.currentQuestionIndex || 0);
+            const savedAnswers = progress.userAnswers || [];
 
-            const initialVisited = new Array(selectedTopic.questions.length).fill(false);
-            (progress.userAnswers || []).forEach((ans: number | null, index: number) => {
-              if(ans !== null) initialVisited[index] = true;
-            });
-            initialVisited[progress.currentQuestionIndex || 0] = true;
-            setVisitedQuestions(initialVisited);
+            // If the number of questions in the topic has changed, reset progress.
+            if (savedAnswers.length !== selectedTopic.questions.length) {
+              const newAnswers = new Array(selectedTopic.questions.length).fill(null);
+              await setDoc(progressRef, {
+                userAnswers: newAnswers,
+                currentQuestionIndex: 0,
+                updatedAt: new Date(),
+                completed: false,
+              }, { merge: true });
+
+              setUserAnswers(newAnswers);
+              setCurrentQuestionIndex(0);
+              const initialVisited = new Array(selectedTopic.questions.length).fill(false);
+              initialVisited[0] = true;
+              setVisitedQuestions(initialVisited);
+            } else {
+              // Lengths match, so resume as normal
+              setUserAnswers(savedAnswers);
+              setCurrentQuestionIndex(progress.currentQuestionIndex || 0);
+
+              const initialVisited = new Array(selectedTopic.questions.length).fill(false);
+              (savedAnswers || []).forEach((ans: number | null, index: number) => {
+                if(ans !== null) initialVisited[index] = true;
+              });
+              initialVisited[progress.currentQuestionIndex || 0] = true;
+              setVisitedQuestions(initialVisited);
+            }
 
         } else { // Starting a brand new quiz
             setUserAnswers(new Array(selectedTopic.questions.length).fill(null));
