@@ -1,9 +1,16 @@
 "use client"
 
-import { useQuiz } from "@/contexts/QuizContext"
 import { cn } from "@/lib/utils"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
+
+interface QuestionPreviewProps {
+  questionCount: number;
+  currentQuestionIndex: number;
+  setCurrentQuestionIndex: (index: number) => void;
+  userAnswers: (number | null)[];
+  visitedQuestions: boolean[];
+}
 
 const LegendItem = ({ colorClass, label }: { colorClass: string; label: string }) => (
     <div className="flex items-center space-x-2">
@@ -12,9 +19,13 @@ const LegendItem = ({ colorClass, label }: { colorClass: string; label: string }
     </div>
   );
 
-export function QuestionPreview({ questionCount }: { questionCount: number }) {
-  const { currentQuestionIndex, setCurrentQuestionIndex, userAnswers, visitedQuestions } = useQuiz()
-
+export function QuestionPreview({ 
+  questionCount,
+  currentQuestionIndex,
+  setCurrentQuestionIndex,
+  userAnswers,
+  visitedQuestions,
+}: QuestionPreviewProps) {
   const answeredCount = userAnswers.filter(a => a !== null).length;
   const answeredPercentage = questionCount > 0 ? (answeredCount / questionCount) * 100 : 0;
 
@@ -39,7 +50,7 @@ export function QuestionPreview({ questionCount }: { questionCount: number }) {
 
         <h4 className="font-semibold text-sm mb-2">Questions</h4>
         <ScrollArea className={cn(questionCount > 50 ? "h-64" : "")}>
-          <div className="grid grid-cols-5 gap-3">
+          <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-5 lg:grid-cols-7 gap-3">
             {Array.from({ length: questionCount }, (_, i) => {
               const isCurrent = i === currentQuestionIndex;
               const isAnswered = userAnswers[i] !== null;

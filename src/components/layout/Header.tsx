@@ -10,6 +10,7 @@ import {
   Sun,
   Moon,
   Laptop,
+  ClipboardCheck,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -20,7 +21,6 @@ import { ThemeToggle } from "./ThemeToggle"
 import { useTheme } from "@/contexts/ThemeContext"
 import { UserNav } from "../auth/UserNav"
 import { useRouter } from "next/navigation"
-import { Skeleton } from "../ui/skeleton"
 
 export function Header() {
   const { user } = useAuth()
@@ -28,34 +28,20 @@ export function Header() {
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
 
-  // Ensure component is mounted on the client to avoid hydration errors
   useEffect(() => {
     setMounted(true)
   }, [])
 
   const navLinks = [
+    { href: "/tests", icon: ClipboardCheck, text: "Tests" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
   ]
 
-  // Render a skeleton placeholder on the server and initial client render
   if (!mounted) {
     return (
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center">
-            <div className="mr-4 hidden md:flex">
-                <Link href="/" className="mr-6 flex items-center space-x-2">
-                    <AnimatedLogo className="h-6 w-6" />
-                    <span className="hidden font-bold sm:inline-block font-headline">
-                    NURSE IQN
-                    </span>
-                </Link>
-            </div>
-            <div className="flex flex-1 items-center justify-end space-x-2">
-                <Skeleton className="h-8 w-8 rounded-full" />
-                <Skeleton className="h-8 w-20" />
-            </div>
-        </div>
+        <div className="container flex h-16 items-center"></div>
       </header>
     )
   }
@@ -94,48 +80,43 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left">
-                <SheetHeader className="sr-only">
-                  <SheetTitle>Menu</SheetTitle>
-                  <SheetDescription>Main navigation menu and theme settings.</SheetDescription>
+                <SheetHeader className="border-b pb-4">
+                  <SheetTitle className="sr-only">Menu</SheetTitle>
+                  <Link href="/" className="flex items-center space-x-2">
+                    <AnimatedLogo className="h-6 w-6" />
+                    <span className="font-bold font-headline">NURSE IQN</span>
+                  </Link>
                 </SheetHeader>
-                <div className="flex flex-col h-full">
-                  <div className="border-b pb-4">
-                    <Link href="/" className="flex items-center space-x-2">
-                      <AnimatedLogo className="h-6 w-6" />
-                      <span className="font-bold font-headline">NURSE IQN</span>
-                    </Link>
-                  </div>
-                  <nav className="flex flex-col space-y-2 mt-4">
-                    {navLinks.map(({ href, icon: Icon, text }) => (
-                      <Button
-                        key={text}
-                        variant="ghost"
-                        className="justify-start"
-                        asChild
-                      >
-                        <Link href={href}>
-                          <Icon className="mr-2 h-4 w-4" />
-                          {text}
-                        </Link>
+                <nav className="flex flex-col space-y-2 mt-4">
+                  {navLinks.map(({ href, icon: Icon, text }) => (
+                    <Button
+                      key={text}
+                      variant="ghost"
+                      className="justify-start"
+                      asChild
+                    >
+                      <Link href={href}>
+                        <Icon className="mr-2 h-4 w-4" />
+                        {text}
+                      </Link>
+                    </Button>
+                  ))}
+                </nav>
+                <div className="mt-auto pt-4 border-t">
+                  <span className="text-sm font-medium text-muted-foreground px-2">Theme</span>
+                  <div className="flex flex-col space-y-1 mt-2">
+                      <Button variant="ghost" className="justify-start" onClick={() => setTheme("light")}>
+                          <Sun className="mr-2 h-4 w-4" />
+                          <span>Light</span>
                       </Button>
-                    ))}
-                  </nav>
-                  <div className="mt-auto pt-4 border-t">
-                    <span className="text-sm font-medium text-muted-foreground px-2">Theme</span>
-                    <div className="flex flex-col space-y-1 mt-2">
-                        <Button variant="ghost" className="justify-start" onClick={() => setTheme("light")}>
-                            <Sun className="mr-2 h-4 w-4" />
-                            <span>Light</span>
-                        </Button>
-                        <Button variant="ghost" className="justify-start" onClick={() => setTheme("dark")}>
-                            <Moon className="mr-2 h-4 w-4" />
-                            <span>Dark</span>
-                        </Button>
-                        <Button variant="ghost" className="justify-start" onClick={() => setTheme("system")}>
-                            <Laptop className="mr-2 h-4 w-4" />
-                            <span>System</span>
-                        </Button>
-                    </div>
+                      <Button variant="ghost" className="justify-start" onClick={() => setTheme("dark")}>
+                          <Moon className="mr-2 h-4 w-4" />
+                          <span>Dark</span>
+                      </Button>
+                      <Button variant="ghost" className="justify-start" onClick={() => setTheme("system")}>
+                          <Laptop className="mr-2 h-4 w-4" />
+                          <span>System</span>
+                      </Button>
                   </div>
                 </div>
               </SheetContent>

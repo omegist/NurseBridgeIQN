@@ -38,3 +38,12 @@ export interface FlashcardTopic {
 }
 
 export type SerializableFlashcardTopic = Omit<FlashcardTopic, 'icon'>;
+
+export interface Test {
+  id: string;
+  name: string;
+  questions: Question[];
+  timeLimitMinutes: number | null; // null for no time limit
+}
+
+export type SerializableTest = Omit<Test, 'icon'>;

@@ -7,6 +7,7 @@ import { QuizProvider } from "@/contexts/QuizContext"
 import { ThemeProvider } from "@/contexts/ThemeContext"
 import { Header } from "@/components/layout/Header"
 import { FloatingBubbles } from "@/components/layout/FloatingBubbles"
+import { TestProvider } from "@/contexts/TestContext"
 
 export const metadata: Metadata = {
   title: "NURSE IQN",
@@ -32,12 +33,14 @@ export default function RootLayout({
         <ThemeProvider storageKey="nurse-iqn-theme">
           <AuthProvider>
             <QuizProvider>
-              <FloatingBubbles />
-              <div className="relative flex min-h-screen flex-col">
-                <Header />
-                <main className="flex-1">{children}</main>
-              </div>
-              <Toaster />
+              <TestProvider>
+                <FloatingBubbles />
+                <div className="relative flex min-h-screen flex-col">
+                  <Header />
+                  <main className="flex-1">{children}</main>
+                </div>
+                <Toaster />
+              </TestProvider>
             </QuizProvider>
           </AuthProvider>
         </ThemeProvider>
