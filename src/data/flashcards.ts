@@ -34,7 +34,7 @@ const flashcardData: Omit<FlashcardTopic, 'name' | 'description' | 'icon'>[] = [
       { term: 'Hypovolemic Shock: Key Sign', definition: 'A weak, rapid pulse (tachycardia) is a classic compensatory sign for low blood volume.' },
       { term: 'Increased Intracranial Pressure (ICP): Early Sign', definition: 'A change or decrease in the level of consciousness (LOC) is the earliest and most sensitive indicator.' },
       { term: 'Post-Total Hip Replacement: Positioning', definition: 'Keep the leg slightly abducted (away from the midline) using an abduction pillow. Avoid flexion beyond 90 degrees and adduction.' },
-      { term:p: 'Transfusion Reaction: First Action', definition: 'Stop the transfusion immediately, then maintain IV line with normal saline and notify the provider.' },
+      { term: 'Transfusion Reaction: First Action', definition: 'Stop the transfusion immediately, then maintain IV line with normal saline and notify the provider.' },
       { term: 'Sepsis: Priority Action', definition: 'Obtain blood cultures BEFORE administering broad-spectrum antibiotics to identify the pathogen and guide treatment.' },
     ],
   },
