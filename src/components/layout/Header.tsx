@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -7,6 +8,7 @@ import {
   Trophy,
   Badge,
   BarChart2,
+  Layers,
   Sun,
   Moon,
   Laptop,
@@ -27,6 +29,7 @@ export function Header() {
   const router = useRouter()
 
   const navLinks = [
+    { href: "/flashcards", icon: Layers, text: "Flashcards" },
     { href: "/badges", icon: Badge, text: "Badges" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
   ]

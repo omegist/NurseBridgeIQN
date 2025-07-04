@@ -1,3 +1,4 @@
+
 export interface Question {
   id: number;
   topic: string;
@@ -22,3 +23,16 @@ export type UserAnswer = {
   answerIndex: number | null;
   isCorrect: boolean;
 };
+
+export interface Flashcard {
+  term: string;
+  definition: string;
+}
+
+export interface FlashcardTopic {
+  id: string;
+  name: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  cards: Flashcard[];
+}
