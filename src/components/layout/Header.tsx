@@ -1,7 +1,8 @@
+
 "use client"
 
 import Link from "next/link"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import {
   Menu,
   BarChart2,
@@ -19,16 +20,45 @@ import { ThemeToggle } from "./ThemeToggle"
 import { useTheme } from "@/contexts/ThemeContext"
 import { UserNav } from "../auth/UserNav"
 import { useRouter } from "next/navigation"
+import { Skeleton } from "../ui/skeleton"
 
 export function Header() {
   const { user } = useAuth()
   const { setTheme } = useTheme()
   const router = useRouter()
+  const [mounted, setMounted] = useState(false)
+
+  // Ensure component is mounted on the client to avoid hydration errors
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const navLinks = [
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
   ]
+
+  // Render a skeleton placeholder on the server and initial client render
+  if (!mounted) {
+    return (
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center">
+            <div className="mr-4 hidden md:flex">
+                <Link href="/" className="mr-6 flex items-center space-x-2">
+                    <AnimatedLogo className="h-6 w-6" />
+                    <span className="hidden font-bold sm:inline-block font-headline">
+                    NURSE IQN
+                    </span>
+                </Link>
+            </div>
+            <div className="flex flex-1 items-center justify-end space-x-2">
+                <Skeleton className="h-8 w-8 rounded-full" />
+                <Skeleton className="h-8 w-20" />
+            </div>
+        </div>
+      </header>
+    )
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
