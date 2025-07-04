@@ -1,28 +1,26 @@
 rules_version = '2';
+
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Users can only read their own profile, but not list all users.
-    // They can only update their own profile.
-    match /users/{userId} {
-      allow get, update, delete: if request.auth != null && request.auth.uid == userId;
-      allow create: if request.auth != null;
+    // Helper function to check if a user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
     }
 
-    // A user can read their own earned badges.
-    match /users/{userId}/userBadges/{badgeId} {
-       allow read: if request.auth != null && request.auth.uid == userId;
+    // Users can only read their own profile, but not list all users.
+    match /users/{userId} {
+      allow get: if isAuthenticated() && request.auth.uid == userId;
+      allow create, update, delete: if isAuthenticated() && request.auth.uid == userId;
     }
     
-    // Quiz progress can only be read/written by the user who owns it.
-    // The document ID is structured as {userId}_{topicId}.
-    match /quizProgress/{docId} {
-      allow read, write: if request.auth != null && request.auth.uid == docId.split('_')[0];
+    // Users can only read and write their own quiz progress documents
+    match /quizProgress/{progressId} {
+      allow read, write: if isAuthenticated() && progressId.split('_')[0] == request.auth.uid;
     }
 
-    // Test progress can only be read/written by the user who owns it.
-    // The document ID is structured as {userId}_{testId}.
-    match /testProgress/{docId} {
-      allow read, write: if request.auth != null && request.auth.uid == docId.split('_')[0];
+    // Users can only read and write their own test progress documents
+    match /testProgress/{progressId} {
+      allow read, write: if isAuthenticated() && progressId.split('_')[0] == request.auth.uid;
     }
   }
 }
