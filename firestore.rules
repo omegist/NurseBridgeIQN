@@ -1,21 +1,23 @@
+
 rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
   
-    // Users can only read and write their own data
+    // Users can read and write to their own user document.
     match /users/{userId} {
       allow read, write: if request.auth.uid == userId;
-    }
-
-    // Users can only manage their own quiz progress
-    match /quizProgress/{progressId} {
-      allow read, write: if request.auth.uid == request.resource.data.userId;
+      
+      // Users can read and write their own earned badges.
+      match /userBadges/{badgeId} {
+        allow read, write: if request.auth.uid == userId;
+      }
     }
     
-    // Default deny all other access
-    match /{document=**} {
-      allow read, write: if false;
+    // Users can read and write their own quiz progress documents.
+    // The document ID is structured as "{userId}_{topicId}".
+    match /quizProgress/{userId}_{topicId} {
+      allow read, write: if request.auth.uid == userId;
     }
   }
 }

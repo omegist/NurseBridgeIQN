@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useQuiz } from "@/contexts/QuizContext";
 import { Button } from "@/components/ui/button";
@@ -30,8 +30,10 @@ import {
 import { CheckCircle, XCircle, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, collection, getDocs, serverTimestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { badges, type Badge as BadgeType } from "@/data/badges";
+import { useToast } from "@/hooks/use-toast";
 
 interface QuizResults {
   score: number;
@@ -51,8 +53,9 @@ interface QuizResults {
 
 export function ResultsClient() {
   const router = useRouter();
-  const { topic, userAnswers, startQuiz, resetQuiz } = useQuiz();
+  const { topic, userAnswers, resetQuiz, quizDuration } = useQuiz();
   const { user, updateUserScore } = useAuth();
+  const { toast } = useToast();
 
   const [results, setResults] = useState<QuizResults | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -117,6 +120,52 @@ export function ResultsClient() {
     setIsLoading(false);
   }, [topic, userAnswers, user, updateUserScore]);
 
+  /* ---------- Award Badges ---------- */
+  useEffect(() => {
+    const awardBadges = async () => {
+        if (!results || !user || !topic) return;
+
+        const badgesCollectionRef = collection(db, 'users', user.uid, 'userBadges');
+        const existingBadgesSnap = await getDocs(badgesCollectionRef);
+        const existingBadgeIds = existingBadgesSnap.docs.map(doc => doc.id);
+        const newBadges: BadgeType[] = [];
+
+        const checkForAndAwardBadge = async (badgeName: string) => {
+            if (!existingBadgeIds.includes(badgeName)) {
+                const badgeToAward = badges.find(b => b.name === badgeName);
+                if (badgeToAward) {
+                    await setDoc(doc(badgesCollectionRef, badgeName), { earnedAt: serverTimestamp() });
+                    newBadges.push(badgeToAward);
+                }
+            }
+        };
+
+        // 1. Perfect Score
+        if (results.percentage === 100) {
+            await checkForAndAwardBadge('Perfect Score');
+        }
+        // 2. Speed Runner (< 5 minutes)
+        if (quizDuration > 0 && quizDuration < 300) { 
+            await checkForAndAwardBadge('Speed Runner');
+        }
+        // 3. Topic Novice Badge
+        if (topic.id === 'pharmacology') {
+            await checkForAndAwardBadge('Pharmacology Novice');
+        }
+
+        if (newBadges.length > 0) {
+           toast({
+              title: "Badge Unlocked!",
+              description: `You've earned ${newBadges.length} new badge${newBadges.length > 1 ? 's' : ''}. Check your profile!`
+           });
+        }
+    };
+
+    if (!isLoading) {
+        awardBadges();
+    }
+  }, [isLoading, results, user, topic, quizDuration, toast]);
+
   /* ---------- redirect if no topic ---------- */
   useEffect(() => {
     if (!isLoading && (!topic || !user)) {
@@ -144,8 +193,6 @@ export function ResultsClient() {
   /* ---------- button handlers ---------- */
   const handleRetake = async () => {
     if (topic) {
-      // The startQuiz function in QuizContext will handle resetting the progress
-      // since it detects the 'completed' flag.
       router.push(`/quiz/${topic.id}`);
     }
   };

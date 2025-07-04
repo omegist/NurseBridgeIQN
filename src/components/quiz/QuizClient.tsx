@@ -29,6 +29,7 @@ export function QuizClient({ topic }: { topic: SerializableTopic }) {
     setVisitedQuestions,
     saveProgress,
     resetQuiz,
+    setQuizDuration,
   } = useQuiz()
 
   const initialTopic = topic
@@ -98,6 +99,7 @@ export function QuizClient({ topic }: { topic: SerializableTopic }) {
 
   const handleSubmit = () => {
     saveProgress(userAnswers, currentQuestionIndex)
+    setQuizDuration(timeElapsed);
     router.push("/results")
   }
 

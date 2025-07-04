@@ -20,6 +20,8 @@ interface QuizContextType {
   visitedQuestions: boolean[];
   setVisitedQuestions: React.Dispatch<React.SetStateAction<boolean[]>>;
   saveProgress: (answers: (number | null)[], currentIndex: number) => Promise<void>;
+  quizDuration: number;
+  setQuizDuration: (duration: number) => void;
 }
 
 const QuizContext = createContext<QuizContextType | undefined>(undefined)
@@ -31,6 +33,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [quizStarted, setQuizStarted] = useState(false)
   const [visitedQuestions, setVisitedQuestions] = useState<boolean[]>([])
+  const [quizDuration, setQuizDuration] = useState(0);
 
   const saveProgress = useCallback(async (answers: (number | null)[], currentIndex: number) => {
     if (user && topic) {
@@ -129,6 +132,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     setCurrentQuestionIndex(0)
     setQuizStarted(false)
     setVisitedQuestions([])
+    setQuizDuration(0);
   }, [])
 
   return (
@@ -146,6 +150,8 @@ export function QuizProvider({ children }: { children: ReactNode }) {
         visitedQuestions,
         setVisitedQuestions,
         saveProgress,
+        quizDuration,
+        setQuizDuration,
       }}
     >
       {children}
