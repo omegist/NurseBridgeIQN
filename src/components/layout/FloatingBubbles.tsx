@@ -2,11 +2,19 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation';
 
 export function FloatingBubbles() {
     const [showBubbles, setShowBubbles] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
+        const isFlashcardPage = pathname.startsWith('/flashcards');
+        if (isFlashcardPage) {
+            setShowBubbles(false);
+            return;
+        }
+
         const checkTheme = () => {
             const isDark = document.documentElement.classList.contains('dark');
             setShowBubbles(!isDark);
@@ -22,7 +30,7 @@ export function FloatingBubbles() {
 
         // Clean up the observer when the component unmounts
         return () => observer.disconnect();
-    }, []);
+    }, [pathname]);
 
     if (!showBubbles) {
         return null;
