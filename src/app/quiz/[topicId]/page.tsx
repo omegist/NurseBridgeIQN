@@ -35,14 +35,15 @@ async function getTopicData(
 export default async function QuizTopicPage({ 
   params 
 }: { 
-  params: Promise<{ topicId: string }> 
+  params: { topicId: string } 
 }) {
-  const { topicId } = await params;
+  const { topicId } = params;
   const topic = await getTopicData(topicId);
   if (!topic) notFound();
 
   return <QuizClient topic={topic} />;
 }
+
 
 
 

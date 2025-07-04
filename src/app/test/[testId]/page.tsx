@@ -19,9 +19,9 @@ async function getTestData(testId: string): Promise<Test | null> {
 export default async function TestPage({ 
   params 
 }: { 
-  params: Promise<{ testId: string }> 
+  params: { testId: string } 
 }) {
-  const { testId } = await params;
+  const { testId } = params;
   const test = await getTestData(testId);
 
   if (!test) {
