@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/contexts/AuthContext";
 
 interface LeaderboardUser {
   id: string;
@@ -30,11 +31,21 @@ const getMedalColor = (rank: number) => {
 
 export default function LeaderboardPage() {
     const router = useRouter();
+    const { user, loading: authLoading } = useAuth();
     const [users, setUsers] = useState<LeaderboardUser[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        if (authLoading) {
+            return; // Wait for authentication to resolve
+        }
+        if (!user) {
+            router.push('/auth'); // Redirect if not logged in
+            return;
+        }
+
         const fetchUsers = async () => {
+            setIsLoading(true);
             try {
                 const usersQuery = query(collection(db, "users"), orderBy("score", "desc"));
                 const querySnapshot = await getDocs(usersQuery);
@@ -57,7 +68,9 @@ export default function LeaderboardPage() {
         };
 
         fetchUsers();
-    }, []);
+    }, [user, authLoading, router]);
+
+    const showLoadingSkeleton = authLoading || isLoading;
 
     return (
         <div className="container mx-auto py-10 px-4">
@@ -109,7 +122,7 @@ export default function LeaderboardPage() {
                                 </TableRow>
                             </TableHeader>
                             <TableBody>
-                                {isLoading ? (
+                                {showLoadingSkeleton ? (
                                     Array.from({ length: 5 }).map((_, i) => (
                                         <TableRow key={i}>
                                             <TableCell className="text-center"><Skeleton className="h-6 w-6 rounded-full mx-auto" /></TableCell>
