@@ -1,26 +1,22 @@
 rules_version = '2';
-
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Helper function to check if a user is authenticated
-    function isAuthenticated() {
-      return request.auth != null;
+    match /users/{userId} {
+      allow get: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null && request.auth.uid == userId;
     }
 
-    // Users can only read their own profile, but not list all users.
-    match /users/{userId} {
-      allow get: if isAuthenticated() && request.auth.uid == userId;
-      allow create, update, delete: if isAuthenticated() && request.auth.uid == userId;
+    match /quizProgress/{progressId} {
+      // Allow read/write if the document ID starts with the user's UID.
+      // Doc ID is formatted as "UID_topicId".
+      allow read, write: if request.auth != null && request.auth.uid == progressId.split('_')[0];
     }
     
-    // Users can only read and write their own quiz progress documents
-    match /quizProgress/{progressId} {
-      allow read, write: if isAuthenticated() && progressId.split('_')[0] == request.auth.uid;
-    }
-
-    // Users can only read and write their own test progress documents
     match /testProgress/{progressId} {
-      allow read, write: if isAuthenticated() && progressId.split('_')[0] == request.auth.uid;
+      // Allow read/write if the document ID starts with the user's UID.
+      // Doc ID is formatted as "UID_testId".
+      allow read, write: if request.auth != null && request.auth.uid == progressId.split('_')[0];
     }
   }
 }
