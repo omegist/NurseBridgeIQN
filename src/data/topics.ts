@@ -58,7 +58,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
     name: 'NZ Nursing Context',
     icon: BookMarked,
     description: 'Covers cultural safety, ethics, and legal frameworks specific to nursing in New Zealand.',
-    questionCount: 41,
+    questionCount: 136,
     difficulty: 'hard',
   },
   {
