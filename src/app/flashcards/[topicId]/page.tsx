@@ -1,27 +1,31 @@
-
 import { notFound } from 'next/navigation';
-import { flashcardTopics } from '@/data/flashcards';
+import { flashcardTopics } from '@/data/flashcards'; // Correct import for flashcards data
 import { FlashcardClient } from '@/components/flashcards/FlashcardClient';
 import type { FlashcardTopic } from '@/lib/types';
 
-// Generate static paths for all topics that have flashcards
+interface FlashcardTopicPageProps {
+  params: Promise<{
+    topicId: string;
+  }>;
+  // If you also need searchParams, you can add them here, also as a Promise:
+  // searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
 export function generateStaticParams() {
   return flashcardTopics.map((topic) => ({
     topicId: topic.id,
   }));
 }
 
-// Fetch the combined data for a specific topic
 function getFlashcardTopicData(topicId: string): FlashcardTopic | undefined {
- return flashcardTopics.find((topic) => topic.id === topicId);
+  return flashcardTopics.find((topic) => topic.id === topicId);
 }
 
 export default async function FlashcardTopicPage({ 
   params 
-}: { 
-  params: { topicId: string } 
-}) {
-  const topicWithIcon = getFlashcardTopicData(params.topicId);
+}: FlashcardTopicPageProps) {
+  const resolvedParams = await params; // Await params for Next.js 15
+  const topicWithIcon = getFlashcardTopicData(resolvedParams.topicId);
 
   if (!topicWithIcon) {
     notFound();

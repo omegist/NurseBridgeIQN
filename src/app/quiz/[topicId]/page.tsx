@@ -1,47 +1,39 @@
-// app/quiz/[topicId]/page.tsx
 import { notFound } from 'next/navigation';
-import { topics } from '@/data/topics';
-import { QuizClient } from '@/components/quiz/QuizClient';
-import type { Topic, Question } from '@/lib/types';
+// IMPORTANT: Make sure these imports match your actual project structure.
+// 'quizTopics' MUST be imported and NOT commented out here for the quiz page.
+import { quizTopics } from '@/data/quizzes'; 
+import { QuizClient } from '@/components/quiz/QuizClient'; 
+import type { QuizTopic } from '@/lib/types'; 
 
-/* ---------- generate static params ---------- */
-export async function generateStaticParams() {
-  return topics.map((topic) => ({
+interface QuizTopicPageProps {
+  params: Promise<{
+    topicId: string;
+  }>; // params is a Promise for Next.js 15
+  // If you also need searchParams, you can add them here, also as a Promise:
+  // searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export function generateStaticParams() {
+  return quizTopics.map((topic) => ({
     topicId: topic.id,
   }));
 }
 
-/* ---------- helper ---------- */
-async function getTopicData(
-  topicId: string,
-): Promise<Omit<Topic, 'icon'> | null> {
-  const topicInfo = topics.find(t => t.id === topicId);
-  if (!topicInfo) return null;
-
-  try {
-    const { questions } = await import(`@/data/questions/${topicId}`);
-    const { icon, ...serialisableTopic } = topicInfo;
-    return {
-      ...serialisableTopic,
-      questions: questions as Question[],
-    };
-  } catch (err) {
-    console.error(`❌ Failed to load questions for ${topicId}`, err);
-    return null;
-  }
+function getQuizTopicData(topicId: string): QuizTopic | undefined {
+  return quizTopics.find((topic) => topic.id === topicId);
 }
 
-/* ---------- page component ---------- */
 export default async function QuizTopicPage({ 
   params 
-}: { 
-  params: { topicId: string } 
-}) {
-  const { topicId } = params;
-  const topic = await getTopicData(topicId);
-  if (!topic) notFound();
+}: QuizTopicPageProps) {
+  const resolvedParams = await params; // Await params for Next.js 15
+  const quizData = getQuizTopicData(resolvedParams.topicId);
 
-  return <QuizClient topic={topic} />;
+  if (!quizData) {
+    notFound();
+  }
+
+  return <QuizClient topic={quizData} />; 
 }
 
 
