@@ -2,11 +2,17 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // A user can read and write to any document in their own user path.
-    // This includes their main user document and any subcollections like quizProgress or testProgress.
-    // This rule is secure because it's locked down to the authenticated user's ID.
-    match /users/{userId}/{document=**} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+    match /users/{userId} {
+      // Allow user to read and write their own main document
+      allow read, write: if request.auth.uid == userId;
+
+      // Allow user to read and write documents in their own subcollections
+      match /quizProgress/{quizDocId} {
+        allow read, write: if request.auth.uid == userId;
+      }
+      match /testProgress/{testDocId} {
+        allow read, write: if request.auth.uid == userId;
+      }
     }
   }
 }
