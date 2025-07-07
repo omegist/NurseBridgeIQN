@@ -80,7 +80,6 @@ export function ResultsClient() {
 
       return {
         questionId: question.id,
-        /* ✅ changed .question -> .text */
         question: question.text,
         isCorrect,
         correctAnswer: question.options[question.correctIndex],

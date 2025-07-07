@@ -31,9 +31,7 @@ import {
 import { QuestionPreview } from "./QuestionPreview";
 import { ChevronLeft, ChevronRight, Clock } from "lucide-react";
 
-type SerializableTopic = Omit<Topic, "icon">;
-
-export function QuizClient({ topic }: { topic: SerializableTopic }) {
+export function QuizClient({ topic }: { topic: Topic }) {
   const router = useRouter();
   const {
     startQuiz,

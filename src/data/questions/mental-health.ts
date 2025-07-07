@@ -2,17 +2,15 @@ import type { Question } from '@/lib/types';
 
 export const questions: Question[] = [
       {
-        id: 13,
-        topic: 'Mental Health Nursing',
-        question: 'A common reversible cause of delirium in the elderly is:',
+        id: '13',
+        text: 'A common reversible cause of delirium in the elderly is:',
         options: ['Dehydration', 'Hypertension', 'Osteoarthritis', 'Hyperlipidaemia'],
         correctIndex: 0,
         explanation: 'Often reversible; dehydration is a common trigger for delirium in older adults.',
       },
       {
-        id: 14,
-        topic: 'Mental Health Nursing',
-        question: 'In mental health nursing, the priority de-escalation action when a patient becomes agitated is to:',
+        id: '14',
+        text: 'In mental health nursing, the priority de-escalation action when a patient becomes agitated is to:',
         options: [
           'Raise your voice to assert control',
           'Maintain personal space and use a calm tone',
@@ -23,9 +21,8 @@ export const questions: Question[] = [
         explanation: 'Non-threatening posture and calm communication help de-escalate agitation.',
       },
       {
-        id: 15,
-        topic: 'Mental Health Nursing',
-        question: 'Under the Mental Health (Compulsory Assessment and Treatment) Act, patient confidentiality may be breached when:',
+        id: '15',
+        text: 'Under the Mental Health (Compulsory Assessment and Treatment) Act, patient confidentiality may be breached when:',
         options: [
           'A patient is suicidal and sharing is necessary to prevent harm',
           'A nurse discusses patient details in the hallway',
@@ -36,17 +33,15 @@ export const questions: Question[] = [
         explanation: 'Confidentiality may be breached to protect the patient or others from serious harm.',
       },
       {
-        id: 39,
-        topic: 'Mental Health Nursing',
-        question: 'The Mini-Mental State Examination (MMSE) is primarily used to:',
+        id: '39',
+        text: 'The Mini-Mental State Examination (MMSE) is primarily used to:',
         options: ['Diagnose depression', 'Assess cognitive impairment', 'Measure pain', 'Test motor function'],
         correctIndex: 1,
         explanation: 'MMSE evaluates orientation, memory, and attention.',
       },
       {
-        id: 43,
-        topic: 'Mental Health Nursing',
-        question: 'A nurse using therapeutic communication should:',
+        id: '43',
+        text: 'A nurse using therapeutic communication should:',
         options: [
           'Frequently interrupt to reassure the patient',
           'Ask open-ended questions',
@@ -57,17 +52,15 @@ export const questions: Question[] = [
         explanation: 'Encourages patient expression without leading.',
       },
       {
-        id: 76,
-        topic: 'Mental Health Nursing',
-        question: 'The priority concern for a suicidal patient is:',
+        id: '76',
+        text: 'The priority concern for a suicidal patient is:',
         options: ['Medication-side effects', 'Risk for self-harm', 'Family therapy', 'Improving diet'],
         correctIndex: 1,
         explanation: 'Risk for self-harm is the priority.',
       },
       {
-        id: 77,
-        topic: 'Mental Health Nursing',
-        question: 'A patient with schizophrenia is experiencing auditory hallucinations. The best response is:',
+        id: '77',
+        text: 'A patient with schizophrenia is experiencing auditory hallucinations. The best response is:',
         options: [
           '"Those voices are not real."',
           '"I don\'t hear anything, but I understand that you do."',
@@ -78,9 +71,8 @@ export const questions: Question[] = [
         explanation: 'Empathy and validation are key.',
       },
       {
-        id: 78,
-        topic: 'Mental Health Nursing',
-        question: 'A patient with depression says, "I am a burden to everyone." The most therapeutic response is:',
+        id: '78',
+        text: 'A patient with depression says, "I am a burden to everyone." The most therapeutic response is:',
         options: [
           '"That\'s not true."',
           '"You seem to feel like a burden. Tell me more."',
@@ -91,9 +83,8 @@ export const questions: Question[] = [
         explanation: 'Validate feelings without judgment.',
       },
       {
-        id: 79,
-        topic: 'Mental Health Nursing',
-        question: 'In New Zealand, under the Mental Health (Compulsory Assessment and Treatment) Act, patients can be treated against their will if:',
+        id: '79',
+        text: 'In New Zealand, under the Mental Health (Compulsory Assessment and Treatment) Act, patients can be treated against their will if:',
         options: [
           'They request it',
           'They pose a serious risk to themselves or others',
@@ -104,9 +95,8 @@ export const questions: Question[] = [
         explanation: 'Risk to self/others justifies compulsory treatment under law.',
       },
       {
-        id: 80,
-        topic: 'Mental Health Nursing',
-        question: 'A patient says, "I feel like hurting someone." What should the nurse do?',
+        id: '80',
+        text: 'A patient says, "I feel like hurting someone." What should the nurse do?',
         options: [
           'Tell them to stop thinking that',
           'Ensure safety and notify security immediately',
@@ -117,9 +107,8 @@ export const questions: Question[] = [
         explanation: 'Immediate safety action is required for violence threats.',
       },
       {
-        id: 126,
-        topic: 'Mental Health Nursing',
-        question: 'A patient with bipolar disorder in the manic phase often exhibits:',
+        id: '126',
+        text: 'A patient with bipolar disorder in the manic phase often exhibits:',
         options: [
           'Decreased energy',
           'Depressed mood',
@@ -130,9 +119,8 @@ export const questions: Question[] = [
         explanation: 'Manic episodes are characterized by high energy, racing thoughts (flight of ideas), and increased activity.',
       },
       {
-        id: 127,
-        topic: 'Mental Health Nursing',
-        question: 'An example of an open-ended question is:',
+        id: '127',
+        text: 'An example of an open-ended question is:',
         options: [
           '"Are you feeling better?"',
           '"How do you feel today?"',
@@ -143,9 +131,8 @@ export const questions: Question[] = [
         explanation: 'Open-ended questions encourage detailed responses.',
       },
       {
-        id: 128,
-        topic: 'Mental Health Nursing',
-        question: 'Cognitive Behavioral Therapy (CBT) mainly focuses on:',
+        id: '128',
+        text: 'Cognitive Behavioral Therapy (CBT) mainly focuses on:',
         options: [
           'Exploring childhood trauma',
           'Changing negative thoughts and behaviors',
@@ -156,9 +143,8 @@ export const questions: Question[] = [
         explanation: 'CBT is a therapeutic approach that helps patients identify and change destructive thought patterns and behaviors.',
       },
       {
-        id: 129,
-        topic: 'Mental Health Nursing',
-        question: 'A voluntary mental health patient decides to leave the hospital. The nurse should:',
+        id: '129',
+        text: 'A voluntary mental health patient decides to leave the hospital. The nurse should:',
         options: [
           'Physically restrain the patient',
           'Inform the doctor immediately',
@@ -169,9 +155,8 @@ export const questions: Question[] = [
         explanation: 'The nurse must inform the medical team to assess the patient for risk and facilitate a safe discharge if appropriate.',
       },
       {
-        id: 130,
-        topic: 'Mental Health Nursing',
-        question: 'Signs of lithium toxicity include:',
+        id: '130',
+        text: 'Signs of lithium toxicity include:',
         options: [
           'Dry skin and alopecia',
           'Increased urination and fine tremors',

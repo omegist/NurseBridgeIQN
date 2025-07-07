@@ -36,6 +36,7 @@ export interface Topic {
   description: string;
   questions: Question[];
   difficulty?: Difficulty;
+  questionCount: number;
 }
 
 /* ────────────────────────────────────────────────────────────────────
@@ -65,10 +66,6 @@ export type SerializableFlashcardTopic = FlashcardTopic;
 export interface Test {
   id: string;
   name: string;
-  description: string;
-  icon?: string;
-  questionCount: number;
-  difficulty?: Difficulty;
-  timeLimitMinutes?: number;   // optional
+  timeLimitMinutes?: number | null;   // optional
   questions: Question[];
 }

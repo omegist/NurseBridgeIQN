@@ -2,9 +2,8 @@ import type { Question } from '@/lib/types';
 
 export const questions: Question[] = [
   {
-    id: 172,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient with diabetes becomes pale, shaky, and confused. What is your immediate action as a nurse?',
+    id: '172',
+    text: 'A patient with diabetes becomes pale, shaky, and confused. What is your immediate action as a nurse?',
     options: [
       'Administer insulin',
       'Check blood glucose level',
@@ -15,9 +14,8 @@ export const questions: Question[] = [
     explanation: 'These are classic signs of hypoglycemia. Always confirm with a glucose check before treating.',
   },
   {
-    id: 173,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the first-line treatment for hypoglycemia if the patient is conscious and able to swallow?',
+    id: '173',
+    text: 'What is the first-line treatment for hypoglycemia if the patient is conscious and able to swallow?',
     options: [
       'Glucagon injection',
       '20 ml of IV glucose',
@@ -28,9 +26,8 @@ export const questions: Question[] = [
     explanation: 'If alert and oriented, give oral glucose like juice or glucose tablets. IV or IM options are used if the patient is unconscious.',
   },
   {
-    id: 174,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which sign is most indicative of hypovolemic shock?',
+    id: '174',
+    text: 'Which sign is most indicative of hypovolemic shock?',
     options: [
       'Hypertension',
       'Bradycardia',
@@ -41,9 +38,8 @@ export const questions: Question[] = [
     explanation: 'A weak, rapid pulse is a classic sign as the body compensates for low blood volume with tachycardia.',
   },
   {
-    id: 175,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which medication is commonly used to increase heart contractility in cardiogenic shock?',
+    id: '175',
+    text: 'Which medication is commonly used to increase heart contractility in cardiogenic shock?',
     options: [
       'Morphine',
       'Dobutamine',
@@ -54,9 +50,8 @@ export const questions: Question[] = [
     explanation: 'Dobutamine is a positive inotrope used to increase myocardial contractility.',
   },
   {
-    id: 176,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which of the following patients is at the highest risk for septic shock?',
+    id: '176',
+    text: 'Which of the following patients is at the highest risk for septic shock?',
     options: [
       'A 5-year-old with chickenpox',
       'A healthy adult with a cold',
@@ -67,9 +62,8 @@ export const questions: Question[] = [
     explanation: 'Indwelling catheters and advanced age increase the risk of sepsis.',
   },
   {
-    id: 177,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which nursing action is a priority for a patient in suspected septic shock?',
+    id: '177',
+    text: 'Which nursing action is a priority for a patient in suspected septic shock?',
     options: [
       'Administer glucagon IM',
       'Elevate the head of the bed',
@@ -80,9 +74,8 @@ export const questions: Question[] = [
     explanation: 'Septic shock involves widespread inflammation and potential hypoxemia, making oxygen therapy a priority to support tissue perfusion.',
   },
   {
-    id: 178,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which type of shock is most associated with severe allergic reactions?',
+    id: '178',
+    text: 'Which type of shock is most associated with severe allergic reactions?',
     options: [
       'Cardiogenic',
       'Neurogenic',
@@ -93,9 +86,8 @@ export const questions: Question[] = [
     explanation: 'Anaphylactic shock is due to hypersensitivity reactions, causing vasodilation and airway compromise.',
   },
   {
-    id: 179,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the most appropriate nursing intervention for a patient in shock?',
+    id: '179',
+    text: 'What is the most appropriate nursing intervention for a patient in shock?',
     options: [
       'Keep patient flat and still',
       'Place patient in Trendelenburg position',
@@ -106,9 +98,8 @@ export const questions: Question[] = [
     explanation: 'Keeping the patient flat (supine) maintains perfusion to vital organs. Trendelenburg is generally not recommended.',
   },
   {
-    id: 180,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What does a high lactate level indicate in a patient with suspected shock?',
+    id: '180',
+    text: 'What does a high lactate level indicate in a patient with suspected shock?',
     options: [
       'Normal metabolism',
       'Liver failure',
@@ -119,9 +110,8 @@ export const questions: Question[] = [
     explanation: "Lactate rises when cells aren't getting enough oxygen and switch to anaerobic metabolism.",
   },
   {
-    id: 181,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is a sign of fluid overload during shock resuscitation?',
+    id: '181',
+    text: 'What is a sign of fluid overload during shock resuscitation?',
     options: [
       'Increased capillary refill',
       'Jugular vein distension',
@@ -132,9 +122,8 @@ export const questions: Question[] = [
     explanation: 'Over-resuscitation can lead to circulatory overload, causing jugular vein distension (JVD) and pulmonary edema.',
   },
   {
-    id: 182,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which medication is the first-line treatment for anaphylactic shock?',
+    id: '182',
+    text: 'Which medication is the first-line treatment for anaphylactic shock?',
     options: [
       'Hydrocortisone',
       'Salbutamol',
@@ -145,9 +134,8 @@ export const questions: Question[] = [
     explanation: 'Epinephrine reverses airway obstruction and vasodilation in anaphylaxis.',
   },
   {
-    id: 183,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is a late sign of shock?',
+    id: '183',
+    text: 'What is a late sign of shock?',
     options: [
       'Hypotension',
       'Tachycardia',
@@ -158,9 +146,8 @@ export const questions: Question[] = [
     explanation: 'Hypotension is a late sign, appearing after the body\'s compensatory mechanisms (like tachycardia) fail.',
   },
   {
-    id: 184,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which nursing assessment best determines perfusion in a shocked patient?',
+    id: '184',
+    text: 'Which nursing assessment best determines perfusion in a shocked patient?',
     options: [
       'Skin color',
       'Capillary refill time',
@@ -171,9 +158,8 @@ export const questions: Question[] = [
     explanation: 'Capillary refill time is a quick and simple test to assess peripheral perfusion and blood flow to tissues.',
   },
   {
-    id: 185,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which nursing action prevents progression of sepsis in high-risk patients?',
+    id: '185',
+    text: 'Which nursing action prevents progression of sepsis in high-risk patients?',
     options: [
       'Avoiding pain medication',
       'Daily ambulation',
@@ -184,9 +170,8 @@ export const questions: Question[] = [
     explanation: 'Early removal of invasive devices like urinary catheters reduces the risk of healthcare-associated infections, a common source of sepsis.',
   },
   {
-    id: 186,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What happens to urine output during cardiogenic shock?',
+    id: '186',
+    text: 'What happens to urine output during cardiogenic shock?',
     options: [
       'It increases',
       'It decreases',
@@ -197,9 +182,8 @@ export const questions: Question[] = [
     explanation: 'Decreased perfusion to the kidneys reduces urine output in shock states.',
   },
   {
-    id: 187,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is a key nursing intervention during the administration of vasopressors (e.g., noradrenaline) in shock?',
+    id: '187',
+    text: 'What is a key nursing intervention during the administration of vasopressors (e.g., noradrenaline) in shock?',
     options: [
       'Monitor hourly blood glucose',
       'Maintain central line access',
@@ -210,9 +194,8 @@ export const questions: Question[] = [
     explanation: 'Vasopressors are potent medications that can cause severe tissue damage if they extravasate. Administration through a central line is essential for patient safety.',
   },
   {
-    id: 188,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is a classic sign of neurogenic shock?',
+    id: '188',
+    text: 'What is a classic sign of neurogenic shock?',
     options: [
       'Warm skin and bradycardia',
       'Cold clammy skin and tachycardia',
@@ -223,9 +206,8 @@ export const questions: Question[] = [
     explanation: 'Loss of sympathetic tone leads to vasodilation (warm skin) and an inability to mount a tachycardic response (bradycardia).',
   },
   {
-    id: 189,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which electrolyte imbalance is common after massive fluid loss (hypovolemia)?',
+    id: '189',
+    text: 'Which electrolyte imbalance is common after massive fluid loss (hypovolemia)?',
     options: [
       'Hyperkalemia',
       'Hyponatremia',
@@ -236,9 +218,8 @@ export const questions: Question[] = [
     explanation: 'Loss of both fluid and electrolytes can lead to hyponatremia (low sodium levels).',
   },
   {
-    id: 190,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the priority nursing assessment for a diabetic patient who is diaphoretic and confused?',
+    id: '190',
+    text: 'What is the priority nursing assessment for a diabetic patient who is diaphoretic and confused?',
     options: [
       'Assess temperature',
       'Assess respiratory rate',
@@ -249,9 +230,8 @@ export const questions: Question[] = [
     explanation: 'Diaphoresis (sweating) and confusion are hallmark signs of hypoglycemia; checking the blood glucose level is the immediate priority.',
   },
   {
-    id: 191,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A 55-year-old patient with a history of type 2 diabetes mellitus is admitted with confusion, dry mucous membranes, and a blood glucose level of 32 mmol/L. Which is the priority nursing intervention?',
+    id: '191',
+    text: 'A 55-year-old patient with a history of type 2 diabetes mellitus is admitted with confusion, dry mucous membranes, and a blood glucose level of 32 mmol/L. Which is the priority nursing intervention?',
     options: [
       'Administer insulin stat',
       'Start oral rehydration therapy',
@@ -262,9 +242,8 @@ export const questions: Question[] = [
     explanation: 'Hyperosmolar hyperglycaemic state (HHS) presents with extreme hyperglycaemia and dehydration. IV fluid replacement is the first-line intervention to restore perfusion before insulin is administered.',
   },
   {
-    id: 192,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A Māori patient tells you they prefer to have their whanau involved in their care decisions. What is the most appropriate response by the nurse?',
+    id: '192',
+    text: 'A Māori patient tells you they prefer to have their whanau involved in their care decisions. What is the most appropriate response by the nurse?',
     options: [
       'Respect the request and involve the whanau',
       'Explain that decisions must be made by the patient only',
@@ -275,9 +254,8 @@ export const questions: Question[] = [
     explanation: 'Under the principles of whanaungatanga and partnership from the Treaty of Waitangi, nurses should support Māori patients cultural preferences, including collective decision-making.',
   },
   {
-    id: 193,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient is on digoxin. You notice nausea, visual halos, and bradycardia. What is your first response?',
+    id: '193',
+    text: 'A patient is on digoxin. You notice nausea, visual halos, and bradycardia. What is your first response?',
     options: [
       'Continue monitoring',
       'Document the findings',
@@ -288,9 +266,8 @@ export const questions: Question[] = [
     explanation: 'These are signs of digoxin toxicity. The nurse must withhold the drug and notify the prescriber immediately.',
   },
   {
-    id: 194,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient undergoing chemotherapy reports mouth ulcers. What nursing advice is most appropriate?',
+    id: '194',
+    text: 'A patient undergoing chemotherapy reports mouth ulcers. What nursing advice is most appropriate?',
     options: [
       'Use alcohol-based mouthwash',
       'Eat citrus fruits for Vitamin C',
@@ -301,9 +278,8 @@ export const questions: Question[] = [
     explanation: 'Chemotherapy can cause mucositis. Gentle care with saline rinses and avoiding irritants prevents worsening.',
   },
   {
-    id: 195,
-    topic: 'Most Repeated Questions Part B',
-    question: 'In the context of nursing ethics, what does autonomy refer to?',
+    id: '195',
+    text: 'In the context of nursing ethics, what does autonomy refer to?',
     options: [
       'Acting in the patient\'s best interest',
       'Telling the patient what to do',
@@ -314,9 +290,8 @@ export const questions: Question[] = [
     explanation: 'Autonomy is a core ethical principle that refers to respecting the individual\'s right to make their own decisions.',
   },
   {
-    id: 196,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the rationale for giving blood transfusions at a fixed, controlled rate?',
+    id: '196',
+    text: 'What is the rationale for giving blood transfusions at a fixed, controlled rate?',
     options: [
       'To prevent circulatory overload and monitor for reactions',
       'To make the transfusion last longer',
@@ -327,9 +302,8 @@ export const questions: Question[] = [
     explanation: 'A fixed, controlled rate helps prevent circulatory overload, especially in vulnerable patients, and allows for early detection of transfusion reactions.',
   },
   {
-    id: 197,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Define anhedonia.',
+    id: '197',
+    text: 'Define anhedonia.',
     options: [
       'Excessive appetite',
       'Inability to experience pleasure',
@@ -340,9 +314,8 @@ export const questions: Question[] = [
     explanation: 'Anhedonia is a core symptom of depression, where the person no longer finds joy in activities they previously enjoyed.',
   },
   {
-    id: 198,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A state of akathisia, a side effect of some antipsychotics, is best described as:',
+    id: '198',
+    text: 'A state of akathisia, a side effect of some antipsychotics, is best described as:',
     options: [
       'Involuntary muscle spasms of the face',
       'A feeling of inner restlessness and inability to sit still',
@@ -353,9 +326,8 @@ export const questions: Question[] = [
     explanation: 'Akathisia is an extrapyramidal side effect of antipsychotics, commonly causing patients to pace, fidget, or report inner restlessness.',
   },
   {
-    id: 199,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A post-tonsillectomy child has regular pulse checks ordered. What is the rationale?',
+    id: '199',
+    text: 'A post-tonsillectomy child has regular pulse checks ordered. What is the rationale?',
     options: [
       'To detect respiratory failure',
       'To monitor sedation level',
@@ -366,9 +338,8 @@ export const questions: Question[] = [
     explanation: 'Tachycardia is an early sign of hemorrhage in children post-tonsillectomy, often before visible bleeding occurs.',
   },
   {
-    id: 200,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient is diagnosed with congestive heart failure (CHF). Which of the following is NOT a typical symptom?',
+    id: '200',
+    text: 'A patient is diagnosed with congestive heart failure (CHF). Which of the following is NOT a typical symptom?',
     options: [
       'Dyspnoea (shortness of breath)',
       'Peripheral oedema',
@@ -379,9 +350,8 @@ export const questions: Question[] = [
     explanation: 'CHF typically causes tachycardia (fast heart rate), not bradycardia. The heart compensates for poor pumping by increasing the heart rate.',
   },
   {
-    id: 201,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which of the following is a common sign of wound infection?',
+    id: '201',
+    text: 'Which of the following is a common sign of wound infection?',
     options: [
       'Serous (clear, watery) drainage',
       'Decreased redness and warmth',
@@ -392,9 +362,8 @@ export const questions: Question[] = [
     explanation: 'Infection presents with classic inflammatory signs: increased redness (erythema), warmth, swelling, and often purulent (pus) drainage.',
   },
   {
-    id: 202,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient\'s family member wants to record a video of staff transferring the patient. What is the correct response?',
+    id: '202',
+    text: 'A patient\'s family member wants to record a video of staff transferring the patient. What is the correct response?',
     options: [
       'Allow the video with verbal consent from the patient',
       'Politely explain that video recording is not permitted to protect the privacy of all patients and staff',
@@ -405,9 +374,8 @@ export const questions: Question[] = [
     explanation: 'Patient and staff privacy must be maintained. Filming in a clinical area without consent from all involved is a breach of privacy.',
   },
   {
-    id: 203,
-    topic: 'Most Repeated Questions Part B',
-    question: 'You overhear two colleagues discussing a patient\'s confidential details in a public cafeteria. What is your responsibility?',
+    id: '203',
+    text: 'You overhear two colleagues discussing a patient\'s confidential details in a public cafeteria. What is your responsibility?',
     options: [
       'Join in the conversation to offer your opinion',
       'Politely and privately remind them that the conversation is inappropriate for a public space',
@@ -418,9 +386,8 @@ export const questions: Question[] = [
     explanation: 'Sharing patient information outside appropriate channels is a breach of confidentiality. Nurses have a duty to intervene and report as required by professional conduct codes.',
   },
   {
-    id: 204,
-    topic: 'Most Repeated Questions Part B',
-    question: 'During a home visit, a patient\'s son posts on public social media, naming and praising you for the care provided. What should the nurse do?',
+    id: '204',
+    text: 'During a home visit, a patient\'s son posts on public social media, naming and praising you for the care provided. What should the nurse do?',
     options: [
       'Like the post to show appreciation',
       'Contact the son and politely request removal to protect patient confidentiality and professional boundaries',
@@ -431,9 +398,8 @@ export const questions: Question[] = [
     explanation: 'Public naming of healthcare providers in relation to care may violate professional boundaries and patient confidentiality. A respectful request for removal is the most professional action.',
   },
   {
-    id: 205,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the priority nursing action for a patient with a suspected spinal fracture?',
+    id: '205',
+    text: 'What is the priority nursing action for a patient with a suspected spinal fracture?',
     options: [
       'Encourage the patient to sit up',
       'Log roll the patient and maintain cervical spine alignment',
@@ -444,9 +410,8 @@ export const questions: Question[] = [
     explanation: 'Any suspected spinal trauma requires strict spinal precautions to prevent further injury. Log rolling maintains spinal integrity until a full assessment is done.',
   },
   {
-    id: 206,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What are the common signs and symptoms of alcohol withdrawal?',
+    id: '206',
+    text: 'What are the common signs and symptoms of alcohol withdrawal?',
     options: [
       'Hypotension, sedation, bradycardia',
       'Tremors, anxiety, tachycardia, and hallucinations',
@@ -457,9 +422,8 @@ export const questions: Question[] = [
     explanation: 'Alcohol withdrawal typically starts within 6-24 hours and includes CNS hyper-excitability symptoms like tremors, irritability, tachycardia, hallucinations, and possibly seizures.',
   },
   {
-    id: 207,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which intervention is most effective for preventing deep vein thrombosis (DVT) post-surgery?',
+    id: '207',
+    text: 'Which intervention is most effective for preventing deep vein thrombosis (DVT) post-surgery?',
     options: [
       'Bed rest for 24 hours',
       'Elevating the head of the bed',
@@ -470,9 +434,8 @@ export const questions: Question[] = [
     explanation: 'Early ambulation and mechanical prophylaxis (like compression stockings) improve venous return and are key to preventing DVT.',
   },
   {
-    id: 208,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient with Type 1 Diabetes is NPO (nothing by mouth) for surgery. What is the key nursing action regarding their insulin?',
+    id: '208',
+    text: 'A patient with Type 1 Diabetes is NPO (nothing by mouth) for surgery. What is the key nursing action regarding their insulin?',
     options: [
       'Administer the full usual dose of long-acting insulin',
       'Hold all insulin until after the surgery',
@@ -483,9 +446,8 @@ export const questions: Question[] = [
     explanation: 'Blood glucose must be closely monitored and insulin managed per anesthetic/surgical guidelines to avoid hypo- or hyperglycemia during the perioperative period.',
   },
   {
-    id: 209,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which signs are classic indicators of Diabetic Ketoacidosis (DKA)?',
+    id: '209',
+    text: 'Which signs are classic indicators of Diabetic Ketoacidosis (DKA)?',
     options: [
       'Sweating and bradycardia',
       'Kussmaul respirations and a fruity odor on the breath',
@@ -496,9 +458,8 @@ export const questions: Question[] = [
     explanation: 'DKA presents with hyperglycemia, metabolic acidosis (causing deep, rapid Kussmaul respirations), and ketonemia (causing a fruity breath odor).',
   },
   {
-    id: 210,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the best way to manage pain for a burn patient who grimaces during dressing changes?',
+    id: '210',
+    text: 'What is the best way to manage pain for a burn patient who grimaces during dressing changes?',
     options: [
       'Apply cold water to the wound',
       'Provide prescribed analgesia 30 minutes before the dressing change',
@@ -509,9 +470,8 @@ export const questions: Question[] = [
     explanation: 'Prophylactic pain medication should be administered before painful procedures like dressing changes to manage anticipated discomfort effectively.',
   },
   {
-    id: 211,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which factor is most critical for promoting wound healing?',
+    id: '211',
+    text: 'Which factor is most critical for promoting wound healing?',
     options: [
       'High sugar diet',
       'Immobility',
@@ -522,9 +482,8 @@ export const questions: Question[] = [
     explanation: 'Adequate oxygen is critical for collagen synthesis, cellular repair, and immune function in healing wounds.',
   },
   {
-    id: 212,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A doctor prescribes 2g of paracetamol QID (four times a day). What is the most appropriate nursing action?',
+    id: '212',
+    text: 'A doctor prescribes 2g of paracetamol QID (four times a day). What is the most appropriate nursing action?',
     options: [
       'Administer as written',
       'Clarify the dose with the doctor before administration',
@@ -535,9 +494,8 @@ export const questions: Question[] = [
     explanation: 'The maximum safe daily dose of paracetamol for an adult is 4g. A dose of 2g QID equals 8g/day, which is toxic. The nurse must clarify this potentially unsafe order.',
   },
   {
-    id: 213,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient with schizophrenia states, "The news anchor on TV is sending me secret messages." This is an example of what type of delusion?',
+    id: '213',
+    text: 'A patient with schizophrenia states, "The news anchor on TV is sending me secret messages." This is an example of what type of delusion?',
     options: [
       'Persecutory delusion',
       'Delusion of reference',
@@ -548,9 +506,8 @@ export const questions: Question[] = [
     explanation: 'Delusions of reference involve believing that unrelated events, objects, or people have a particular and unusual meaning specifically for oneself.',
   },
   {
-    id: 214,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What are common symptoms of a blood transfusion reaction?',
+    id: '214',
+    text: 'What are common symptoms of a blood transfusion reaction?',
     options: [
       'Hypertension and bradycardia',
       'Fever, chills, rash, and shortness of breath',
@@ -561,9 +518,8 @@ export const questions: Question[] = [
     explanation: 'Transfusion reactions can occur when the immune system reacts against donor blood cells; early detection of fever, chills, rash, itching, and SOB is crucial.',
   },
   {
-    id: 215,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Define delirium.',
+    id: '215',
+    text: 'Define delirium.',
     options: [
       'A chronic, progressive decline in memory',
       'A mood disorder characterized by sadness',
@@ -574,9 +530,8 @@ export const questions: Question[] = [
     explanation: 'Delirium is an acute confusional state. It is common in hospitalized elderly patients and requires immediate assessment and management of the underlying cause.',
   },
   {
-    id: 216,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the primary action of the antipsychotic medication risperidone?',
+    id: '216',
+    text: 'What is the primary action of the antipsychotic medication risperidone?',
     options: [
       'It stimulates the central nervous system',
       'It blocks dopamine and serotonin receptors',
@@ -587,9 +542,8 @@ export const questions: Question[] = [
     explanation: 'By blocking these receptors, risperidone helps manage positive and negative symptoms of schizophrenia and bipolar disorder.',
   },
   {
-    id: 217,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the primary function of the spleen in the human body?',
+    id: '217',
+    text: 'What is the primary function of the spleen in the human body?',
     options: [
       'It produces insulin',
       'It filters blood, removes old red blood cells, and aids immunity',
@@ -600,9 +554,8 @@ export const questions: Question[] = [
     explanation: 'The spleen filters blood, removes old red blood cells, and helps fight infection by producing lymphocytes and storing white blood cells.',
   },
   {
-    id: 218,
-    topic: 'Most Repeated Questions Part B',
-    question: 'You witness a colleague make a medication error. What is your immediate professional responsibility?',
+    id: '218',
+    text: 'You witness a colleague make a medication error. What is your immediate professional responsibility?',
     options: [
       'Ignore it to avoid conflict',
       'Tell the patient about the error first',
@@ -613,9 +566,8 @@ export const questions: Question[] = [
     explanation: 'Prompt reporting is crucial for patient safety, allowing for immediate assessment and corrective actions to prevent harm. It is a key professional and ethical duty.',
   },
   {
-    id: 219,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is your first action if you witness a co-worker verbally abusing a patient?',
+    id: '219',
+    text: 'What is your first action if you witness a co-worker verbally abusing a patient?',
     options: [
       'Confront the co-worker aggressively',
       'Intervene immediately to stop the abuse and ensure patient safety, then report it',
@@ -626,9 +578,8 @@ export const questions: Question[] = [
     explanation: 'Patient safety and dignity are paramount. The nurse must intervene immediately to de-escalate the situation and protect the patient, followed by reporting the incident to a manager.',
   },
   {
-    id: 220,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Someone has posted a photo of you at work on social media, tagging you without your consent. What should you do?',
+    id: '220',
+    text: 'Someone has posted a photo of you at work on social media, tagging you without your consent. What should you do?',
     options: [
       'Comment on the post explaining the situation',
       'Untag yourself and block the person',
@@ -639,9 +590,8 @@ export const questions: Question[] = [
     explanation: 'Protecting personal and professional boundaries online is important. The most effective approach is to request removal and use the platform\'s reporting tools if needed.',
   },
   {
-    id: 221,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient has left-sided hemiplegia after a stroke. Where should the nurse measure the blood pressure?',
+    id: '221',
+    text: 'A patient has left-sided hemiplegia after a stroke. Where should the nurse measure the blood pressure?',
     options: [
       'Left arm',
       'Right arm (unaffected side)',
@@ -652,9 +602,8 @@ export const questions: Question[] = [
     explanation: 'BP should be taken on the unaffected arm. Readings on the affected side can be inaccurate due to impaired circulation or muscle tone.',
   },
   {
-    id: 222,
-    topic: 'Most Repeated Questions Part B',
-    question: 'How should a nurse communicate with a patient experiencing acute psychosis?',
+    id: '222',
+    text: 'How should a nurse communicate with a patient experiencing acute psychosis?',
     options: [
       'Use complex medical terminology to sound professional',
       'Argue with the patient\'s delusions to orient them to reality',
@@ -665,9 +614,8 @@ export const questions: Question[] = [
     explanation: 'Therapeutic communication helps reduce agitation and build trust. Simple, direct language in a calm tone is most effective.',
   },
   {
-    id: 223,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is syphilis?',
+    id: '223',
+    text: 'What is syphilis?',
     options: [
       'A viral infection that causes warts',
       'A sexually transmitted bacterial infection caused by Treponema pallidum',
@@ -678,9 +626,8 @@ export const questions: Question[] = [
     explanation: 'Syphilis is a bacterial STI that can cause serious long-term complications if not treated with antibiotics.',
   },
   {
-    id: 224,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A patient with heart failure is experiencing shortness of breath (SOB). What is the most common underlying cause?',
+    id: '224',
+    text: 'A patient with heart failure is experiencing shortness of breath (SOB). What is the most common underlying cause?',
     options: [
       'Dehydration',
       'Anemia',
@@ -691,9 +638,8 @@ export const questions: Question[] = [
     explanation: 'In heart failure, the weakened heart can\'t pump effectively, leading to a backup of fluid in the lungs (pulmonary congestion), which causes shortness of breath.',
   },
   {
-    id: 225,
-    topic: 'Most Repeated Questions Part B',
-    question: 'You enter a room and find a patient collapsed. A bystander is shouting. What is your first action?',
+    id: '225',
+    text: 'You enter a room and find a patient collapsed. A bystander is shouting. What is your first action?',
     options: [
       'Address the shouting bystander to calm them down',
       'Ensure the scene is safe, then assess the patient\'s responsiveness and ABCs',
@@ -704,9 +650,8 @@ export const questions: Question[] = [
     explanation: 'The first step in any emergency is to ensure your own and others\' safety (DRSABCD). Then, you can proceed with assessing the patient.',
   },
   {
-    id: 226,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the mechanism of action for the anticoagulant dabigatran?',
+    id: '226',
+    text: 'What is the mechanism of action for the anticoagulant dabigatran?',
     options: [
       'It is a Vitamin K antagonist',
       'It is a direct thrombin inhibitor',
@@ -717,9 +662,8 @@ export const questions: Question[] = [
     explanation: 'Dabigatran is a direct thrombin inhibitor, which means it works by blocking the action of thrombin, a key enzyme in the blood clotting process.',
   },
   {
-    id: 227,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Which blood group is known as the universal recipient?',
+    id: '227',
+    text: 'Which blood group is known as the universal recipient?',
     options: [
       'O negative',
       'A positive',
@@ -730,9 +674,8 @@ export const questions: Question[] = [
     explanation: 'AB positive individuals can receive all blood types because they have both A and B antigens and do not have anti-A or anti-B antibodies to react with donor blood.',
   },
   {
-    id: 228,
-    topic: 'Most Repeated Questions Part B',
-    question: 'What is the primary purpose of bowel preparation before a colonoscopy?',
+    id: '228',
+    text: 'What is the primary purpose of bowel preparation before a colonoscopy?',
     options: [
       'To increase nutrient absorption',
       'To cleanse the bowel for clear visualization of the colon wall',
@@ -743,9 +686,8 @@ export const questions: Question[] = [
     explanation: 'A clean bowel is essential for the endoscopist to have a clear view of the colon lining, which allows for accurate detection of polyps or other abnormalities.',
   },
   {
-    id: 229,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Why is a patient made NPO (nil per os – nothing by mouth) for several hours prior to major surgery?',
+    id: '229',
+    text: 'Why is a patient made NPO (nil per os – nothing by mouth) for several hours prior to major surgery?',
     options: [
       'To save on hospital food costs',
       'To reduce the risk of aspiration of stomach contents during anesthesia',
@@ -756,9 +698,8 @@ export const questions: Question[] = [
     explanation: 'Fasting ensures the stomach is empty, reducing the risk that stomach contents could be regurgitated and aspirated into the lungs while the patient is under anesthesia.',
   },
   {
-    id: 230,
-    topic: 'Most Repeated Questions Part B',
-    question: 'A parent expresses hesitation and refuses a recommended vaccine for their 10-year-old child. What is the nurse\'s most appropriate initial response?',
+    id: '230',
+    text: 'A parent expresses hesitation and refuses a recommended vaccine for their 10-year-old child. What is the nurse\'s most appropriate initial response?',
     options: [
       'Insist that they must vaccinate for public safety',
       'Explore their concerns in a non-judgmental way and provide factual information',
@@ -769,9 +710,8 @@ export const questions: Question[] = [
     explanation: 'Building trust is key. The first step is to listen, understand the parent\'s perspective, and then offer clear, evidence-based information to help them make an informed decision.',
   },
   {
-    id: 231,
-    topic: 'Most Repeated Questions Part B',
-    question: 'How is end-stage renal failure (ESRF) primarily managed?',
+    id: '231',
+    text: 'How is end-stage renal failure (ESRF) primarily managed?',
     options: [
       'With high-dose antibiotics',
       'With dialysis or kidney transplant',
@@ -782,9 +722,8 @@ export const questions: Question[] = [
     explanation: 'When kidneys fail, renal replacement therapies like dialysis (hemodialysis or peritoneal) or a kidney transplant are necessary to filter waste from the blood and manage fluid balance.',
   },
   {
-    id: 232,
-    topic: 'Most Repeated Questions Part B',
-    question: 'The prescription reads: Paracetamol 1 g orally now. Available: Paracetamol 500 mg tablets. How many tablets will you give?',
+    id: '232',
+    text: 'The prescription reads: Paracetamol 1 g orally now. Available: Paracetamol 500 mg tablets. How many tablets will you give?',
     options: [
       '0.5 tablets',
       '1 tablet',
@@ -795,9 +734,8 @@ export const questions: Question[] = [
     explanation: '1 g is equal to 1000 mg. To get 1000 mg from 500 mg tablets, you need: (1000 mg) / (500 mg/tablet) = 2 tablets.',
   },
   {
-    id: 233,
-    topic: 'Most Repeated Questions Part B',
-    question: 'The doctor prescribes Amoxicillin 250 mg orally. The available syrup is 125 mg/5 mL. How many mL should you administer?',
+    id: '233',
+    text: 'The doctor prescribes Amoxicillin 250 mg orally. The available syrup is 125 mg/5 mL. How many mL should you administer?',
     options: [
       '2.5 mL',
       '5 mL',
@@ -808,9 +746,8 @@ export const questions: Question[] = [
     explanation: 'Calculation: (Dose required / Stock strength) * Stock volume = (250 mg / 125 mg) * 5 mL = 10 mL.',
   },
   {
-    id: 234,
-    topic: 'Most Repeated Questions Part B',
-    question: 'The doctor prescribes 1,000 mL of Normal Saline to infuse over 8 hours. What is the correct IV infusion rate in mL/hour?',
+    id: '234',
+    text: 'The doctor prescribes 1,000 mL of Normal Saline to infuse over 8 hours. What is the correct IV infusion rate in mL/hour?',
     options: [
       '100 mL/hour',
       '125 mL/hour',
@@ -821,9 +758,8 @@ export const questions: Question[] = [
     explanation: 'To find the rate in mL per hour, divide the total volume by the total time: (1000 mL) / (8 hours) = 125 mL/hour.',
   },
   {
-    id: 235,
-    topic: 'Most Repeated Questions Part B',
-    question: 'Order: Ibuprofen 600 mg. Available: 200 mg tablets. How many tablets do you administer?',
+    id: '235',
+    text: 'Order: Ibuprofen 600 mg. Available: 200 mg tablets. How many tablets do you administer?',
     options: [
       '1 tablet',
       '2 tablets',

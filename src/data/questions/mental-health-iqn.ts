@@ -2,9 +2,8 @@ import type { Question } from '@/lib/types';
 
 export const questions: Question[] = [
   {
-    id: 401,
-    topic: 'Mental Health IQN',
-    question: 'A patient with swallowing difficulty is prescribed a tablet. What should you do?',
+    id: '401',
+    text: 'A patient with swallowing difficulty is prescribed a tablet. What should you do?',
     options: [
       'Crush and administer without checking',
       'Mix it in juice',
@@ -15,9 +14,8 @@ export const questions: Question[] = [
     explanation: 'Altering a medication\'s form can affect its efficacy and safety. Always consult the pharmacist or prescriber for an appropriate alternative.',
   },
   {
-    id: 402,
-    topic: 'Mental Health IQN',
-    question: 'A patient on IV fluids for alcohol withdrawal becomes restless and agitated. What is your action?',
+    id: '402',
+    text: 'A patient on IV fluids for alcohol withdrawal becomes restless and agitated. What is your action?',
     options: [
       'Stop IV fluids',
       'Inform the doctor immediately',
@@ -28,9 +26,8 @@ export const questions: Question[] = [
     explanation: 'Restlessness may indicate delirium tremens, a medical emergency. Immediate medical attention is required.',
   },
   {
-    id: 403,
-    topic: 'Mental Health IQN',
-    question: 'A patient is admitted to a psychiatric ward for assessment. What is a key safety measure?',
+    id: '403',
+    text: 'A patient is admitted to a psychiatric ward for assessment. What is a key safety measure?',
     options: [
       'Allow privacy without supervision',
       'Remove personal belongings and assess environment',
@@ -41,9 +38,8 @@ export const questions: Question[] = [
     explanation: 'Environmental safety checks are critical to reduce the risk of self-harm or aggression in psychiatric settings.',
   },
   {
-    id: 404,
-    topic: 'Mental Health IQN',
-    question: 'A child is admitted with suspected meningitis. What is your first plan of action?',
+    id: '404',
+    text: 'A child is admitted with suspected meningitis. What is your first plan of action?',
     options: [
       'Administer antibiotics immediately',
       'Isolate the patient and use PPE',
@@ -54,9 +50,8 @@ export const questions: Question[] = [
     explanation: 'Meningitis is contagious and dangerous. Isolation and PPE use are essential to prevent transmission.',
   },
   {
-    id: 405,
-    topic: 'Mental Health IQN',
-    question: 'A patient with fever (39.2°C) is requested by family for a spiritual gathering. What will you do?',
+    id: '405',
+    text: 'A patient with fever (39.2°C) is requested by family for a spiritual gathering. What will you do?',
     options: [
       'Allow it without restriction',
       'Refuse immediately',
@@ -67,9 +62,8 @@ export const questions: Question[] = [
     explanation: 'Respecting spiritual needs is important, but patient condition and safety must be assessed first.',
   },
   {
-    id: 406,
-    topic: 'Mental Health IQN',
-    question: 'You are changing an infant\'s diaper who has diarrhea. What protective measures do you take?',
+    id: '406',
+    text: 'You are changing an infant\'s diaper who has diarrhea. What protective measures do you take?',
     options: [
       'Only use gloves',
       'Hand hygiene and gloves',
@@ -80,9 +74,8 @@ export const questions: Question[] = [
     explanation: 'Gloves and hand hygiene are essential standard precautions to prevent the spread of infection.',
   },
   {
-    id: 407,
-    topic: 'Mental Health IQN',
-    question: 'You see a patient has fallen in the washroom. What is your first response?',
+    id: '407',
+    text: 'You see a patient has fallen in the washroom. What is your first response?',
     options: [
       'Help the patient stand up immediately',
       'Call for help and assess the patient\'s condition',
@@ -93,9 +86,8 @@ export const questions: Question[] = [
     explanation: 'Ensuring the patient\'s safety and assessing for injuries is the priority before moving or assisting them.',
   },
   {
-    id: 408,
-    topic: 'Mental Health IQN',
-    question: 'A patient underwent cholecystectomy and is advised to do deep breathing and coughing exercises. Why?',
+    id: '408',
+    text: 'A patient underwent cholecystectomy and is advised to do deep breathing and coughing exercises. Why?',
     options: [
       'To relieve pain',
       'To prevent constipation',
@@ -106,9 +98,8 @@ export const questions: Question[] = [
     explanation: 'Postoperative respiratory exercises help prevent pulmonary complications due to anesthesia and immobility.',
   },
   {
-    id: 409,
-    topic: 'Mental Health IQN',
-    question: 'What changes in a stoma indicate the need for immediate nursing care?',
+    id: '409',
+    text: 'What changes in a stoma indicate the need for immediate nursing care?',
     options: [
       'Pink and moist appearance',
       'Slight bleeding during cleaning',
@@ -119,9 +110,8 @@ export const questions: Question[] = [
     explanation: 'A dusky or black stoma may indicate necrosis or poor blood supply and requires urgent assessment.',
   },
   {
-    id: 410,
-    topic: 'Mental Health IQN',
-    question: 'A staff from another ward is reading your patient\'s records. You ask her to stop, but she continues. Your response?',
+    id: '410',
+    text: 'A staff from another ward is reading your patient\'s records. You ask her to stop, but she continues. Your response?',
     options: [
       'Let it go',
       'Report to the ward manager or supervisor',
@@ -132,9 +122,8 @@ export const questions: Question[] = [
     explanation: 'Unauthorized access to patient records violates confidentiality. It should be reported to ensure policy compliance.',
   },
   {
-    id: 411,
-    topic: 'Mental Health IQN',
-    question: 'A former patient sends you a friend request on social media. What is your best response?',
+    id: '411',
+    text: 'A former patient sends you a friend request on social media. What is your best response?',
     options: [
       'Accept the request',
       'Accept and limit interactions',
@@ -145,9 +134,8 @@ export const questions: Question[] = [
     explanation: 'Maintaining professional boundaries is essential. It\'s appropriate to decline and explain that nurse-patient relationships must remain professional.',
   },
   {
-    id: 412,
-    topic: 'Mental Health IQN',
-    question: 'You are performing a neurovascular assessment for a tibia fracture. The patient asks why. What is your response?',
+    id: '412',
+    text: 'You are performing a neurovascular assessment for a tibia fracture. The patient asks why. What is your response?',
     options: [
       '"It\'s just routine."',
       '"To check if your bone is healing."',
@@ -158,9 +146,8 @@ export const questions: Question[] = [
     explanation: 'Neurovascular checks assess circulation, sensation, and movement, which are vital after fractures to detect early signs of compartment syndrome or neurovascular compromise.',
   },
   {
-    id: 413,
-    topic: 'Mental Health IQN',
-    question: 'Why does a wound injury delay healing during the inflammatory phase?',
+    id: '413',
+    text: 'Why does a wound injury delay healing during the inflammatory phase?',
     options: [
       'The wound is dry',
       'Inadequate blood supply and infection',
@@ -171,9 +158,8 @@ export const questions: Question[] = [
     explanation: 'Inflammation is prolonged when there\'s infection or poor perfusion, delaying progression to the proliferative phase of healing.',
   },
   {
-    id: 414,
-    topic: 'Mental Health IQN',
-    question: 'What are professional boundaries in nursing?',
+    id: '414',
+    text: 'What are professional boundaries in nursing?',
     options: [
       'Sharing personal issues with patients',
       'Accepting gifts from patients',
@@ -184,9 +170,8 @@ export const questions: Question[] = [
     explanation: 'Professional boundaries ensure a safe, respectful, and therapeutic nurse-patient relationship by avoiding over-involvement.',
   },
   {
-    id: 415,
-    topic: 'Mental Health IQN',
-    question: 'A body produces little or no insulin, leading to high glucose levels. Which condition is this?',
+    id: '415',
+    text: 'A body produces little or no insulin, leading to high glucose levels. Which condition is this?',
     options: [
       'Type 2 Diabetes Mellitus',
       'Hyperthyroidism',
@@ -197,9 +182,8 @@ export const questions: Question[] = [
     explanation: 'Type 1 Diabetes is an autoimmune condition where the pancreas produces little or no insulin.',
   },
   {
-    id: 416,
-    topic: 'Mental Health IQN',
-    question: 'Why is Vitamin D important in elderly patients?',
+    id: '416',
+    text: 'Why is Vitamin D important in elderly patients?',
     options: [
       'It increases appetite',
       'It improves memory',
@@ -210,9 +194,8 @@ export const questions: Question[] = [
     explanation: 'Vitamin D is essential for calcium absorption and bone health, reducing the risk of osteoporosis and fractures in the elderly.',
   },
   {
-    id: 417,
-    topic: 'Mental Health IQN',
-    question: 'A patient underwent mastectomy and is advised to perform arm-raising exercises. Why?',
+    id: '417',
+    text: 'A patient underwent mastectomy and is advised to perform arm-raising exercises. Why?',
     options: [
       'To reduce pain',
       'To prevent lymphedema and improve mobility',
@@ -223,9 +206,8 @@ export const questions: Question[] = [
     explanation: 'Post-mastectomy exercises improve range of motion and help prevent lymphedema by promoting lymphatic drainage.',
   },
   {
-    id: 418,
-    topic: 'Mental Health IQN',
-    question: 'How can nurses maintain proper documentation?',
+    id: '418',
+    text: 'How can nurses maintain proper documentation?',
     options: [
       'Write general information at end of shift',
       'Document only abnormal findings',
@@ -236,9 +218,8 @@ export const questions: Question[] = [
     explanation: 'Accurate, timely, and objective documentation is essential for legal, clinical, and communication purposes.',
   },
   {
-    id: 419,
-    topic: 'Mental Health IQN',
-    question: 'A patient is receiving the maximum dose of morphine but still complains of pain. What is your plan of action?',
+    id: '419',
+    text: 'A patient is receiving the maximum dose of morphine but still complains of pain. What is your plan of action?',
     options: [
       'Tell the patient to wait',
       'Explain that the dose can\'t be increased',
@@ -249,9 +230,8 @@ export const questions: Question[] = [
     explanation: 'Persistent pain despite maximum dosage requires reassessment and consultation with the prescriber to adjust the pain management plan.',
   },
   {
-    id: 420,
-    topic: 'Mental Health IQN',
-    question: 'What does the Glasgow Coma Scale (GCS) assess?',
+    id: '420',
+    text: 'What does the Glasgow Coma Scale (GCS) assess?',
     options: [
       'Oxygen levels',
       'Heart rhythm',
@@ -262,9 +242,8 @@ export const questions: Question[] = [
     explanation: 'The GCS evaluates a patient\'s level of consciousness by scoring eye opening, verbal response, and motor response.',
   },
   {
-    id: 421,
-    topic: 'Mental Health IQN',
-    question: 'What does \'Q\' indicate in the PQRSTU pain assessment tool?',
+    id: '421',
+    text: 'What does \'Q\' indicate in the PQRSTU pain assessment tool?',
     options: [
       'Quality of the pain',
       'Quantity of pain relief',
@@ -275,9 +254,8 @@ export const questions: Question[] = [
     explanation: '"Q" stands for "Quality" and refers to the patient\'s description of the pain (e.g., sharp, dull, burning).',
   },
   {
-    id: 422,
-    topic: 'Mental Health IQN',
-    question: 'Why is ISBAR used in nursing communication?',
+    id: '422',
+    text: 'Why is ISBAR used in nursing communication?',
     options: [
       'To write care plans',
       'To train new staff',
@@ -288,9 +266,8 @@ export const questions: Question[] = [
     explanation: 'ISBAR (Introduction, Situation, Background, Assessment, Recommendation) provides a standard format to enhance communication and reduce errors.',
   },
   {
-    id: 423,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a key symptom of major depressive disorder?',
+    id: '423',
+    text: 'Which of the following is a key symptom of major depressive disorder?',
     options: [
       'Elevated mood',
       'Decreased energy levels',
@@ -301,9 +278,8 @@ export const questions: Question[] = [
     explanation: 'A key symptom of major depressive disorder is a persistent feeling of sadness or a significant reduction in energy levels. This can lead to fatigue, lack of motivation, and difficulty performing everyday tasks.',
   },
   {
-    id: 424,
-    topic: 'Mental Health IQN',
-    question: 'What is the primary therapeutic goal in the management of schizophrenia?',
+    id: '424',
+    text: 'What is the primary therapeutic goal in the management of schizophrenia?',
     options: [
       'Cure the disorder',
       'Minimize symptoms and prevent relapses',
@@ -314,9 +290,8 @@ export const questions: Question[] = [
     explanation: 'The goal in managing schizophrenia is to minimize symptoms, such as delusions and hallucinations, and prevent future relapses. Complete cure is typically not achievable, but long-term management is essential.',
   },
   {
-    id: 425,
-    topic: 'Mental Health IQN',
-    question: 'Which medication is commonly prescribed for managing bipolar disorder?',
+    id: '425',
+    text: 'Which medication is commonly prescribed for managing bipolar disorder?',
     options: [
       'Diazepam',
       'Lithium',
@@ -327,9 +302,8 @@ export const questions: Question[] = [
     explanation: 'Lithium is commonly prescribed as a mood stabilizer for individuals with bipolar disorder to help control manic and depressive episodes.',
   },
   {
-    id: 426,
-    topic: 'Mental Health IQN',
-    question: 'What is a common side effect of selective serotonin reuptake inhibitors (SSRIs)?',
+    id: '426',
+    text: 'What is a common side effect of selective serotonin reuptake inhibitors (SSRIs)?',
     options: [
       'Weight gain',
       'Dry mouth',
@@ -340,9 +314,8 @@ export const questions: Question[] = [
     explanation: 'SSRIs, commonly prescribed for depression and anxiety disorders, are known to cause sexual dysfunction, including reduced libido, erectile dysfunction, or delayed orgasm.',
   },
   {
-    id: 427,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a typical symptom of generalized anxiety disorder (GAD)?',
+    id: '427',
+    text: 'Which of the following is a typical symptom of generalized anxiety disorder (GAD)?',
     options: [
       'Excessive worry',
       'Intense mood swings',
@@ -353,9 +326,8 @@ export const questions: Question[] = [
     explanation: 'Generalized anxiety disorder is characterized by excessive, uncontrollable worry about everyday events, often leading to physical symptoms such as restlessness, fatigue, and muscle tension.',
   },
   {
-    id: 428,
-    topic: 'Mental Health IQN',
-    question: 'What is the first-line treatment for panic disorder?',
+    id: '428',
+    text: 'What is the first-line treatment for panic disorder?',
     options: [
       'Benzodiazepines',
       'Cognitive Behavioral Therapy (CBT)',
@@ -366,9 +338,8 @@ export const questions: Question[] = [
     explanation: 'Cognitive Behavioral Therapy (CBT) is the first-line treatment for panic disorder. It helps individuals understand and change their patterns of thinking and behavior that contribute to anxiety.',
   },
   {
-    id: 429,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following conditions is classified as an anxiety disorder?',
+    id: '429',
+    text: 'Which of the following conditions is classified as an anxiety disorder?',
     options: [
       'Bipolar disorder',
       'Obsessive-compulsive disorder (OCD)',
@@ -379,9 +350,8 @@ export const questions: Question[] = [
     explanation: 'Obsessive-compulsive disorder (OCD) is classified under anxiety disorders, characterized by persistent intrusive thoughts (obsessions) and repetitive behaviors (compulsions) performed to reduce anxiety.',
   },
   {
-    id: 430,
-    topic: 'Mental Health IQN',
-    question: 'Which therapeutic approach is most commonly used in the treatment of borderline personality disorder (BPD)?',
+    id: '430',
+    text: 'Which therapeutic approach is most commonly used in the treatment of borderline personality disorder (BPD)?',
     options: [
       'Electroconvulsive therapy (ECT)',
       'Dialectical Behavior Therapy (DBT)',
@@ -392,9 +362,8 @@ export const questions: Question[] = [
     explanation: 'Dialectical Behavior Therapy (DBT) is a form of Cognitive Behavioral Therapy (CBT) specifically designed for individuals with borderline personality disorder. It helps patients develop skills to manage emotions and improve relationships.',
   },
   {
-    id: 431,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a characteristic of schizophrenia?',
+    id: '431',
+    text: 'Which of the following is a characteristic of schizophrenia?',
     options: [
       'Unstable mood',
       'Hallucinations',
@@ -405,9 +374,8 @@ export const questions: Question[] = [
     explanation: 'Schizophrenia is often marked by hallucinations, especially auditory ones, as well as delusions and disorganized thinking.',
   },
   {
-    id: 432,
-    topic: 'Mental Health IQN',
-    question: 'In the context of mental health, what does the term "psychosis" refer to?',
+    id: '432',
+    text: 'In the context of mental health, what does the term "psychosis" refer to?',
     options: [
       'Chronic sadness',
       'Severe anxiety',
@@ -418,9 +386,8 @@ export const questions: Question[] = [
     explanation: 'Psychosis refers to a condition where a person loses contact with reality, often experiencing symptoms like hallucinations, delusions, and disorganized thinking.',
   },
   {
-    id: 433,
-    topic: 'Mental Health IQN',
-    question: 'What is the main goal of cognitive-behavioral therapy (CBT) in treating depression?',
+    id: '433',
+    text: 'What is the main goal of cognitive-behavioral therapy (CBT) in treating depression?',
     options: [
       'Medications to stabilize mood',
       'Changing negative thought patterns and behaviors',
@@ -431,9 +398,8 @@ export const questions: Question[] = [
     explanation: 'Cognitive-behavioral therapy (CBT) aims to help patients identify and change negative thought patterns and behaviors that contribute to depression, ultimately improving mood and functioning.',
   },
   {
-    id: 434,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a common side effect of antipsychotic medications?',
+    id: '434',
+    text: 'Which of the following is a common side effect of antipsychotic medications?',
     options: [
       'Weight loss',
       'Sedation',
@@ -444,9 +410,8 @@ export const questions: Question[] = [
     explanation: 'Many antipsychotic medications, particularly first-generation antipsychotics, can cause sedation as a side effect, making patients feel drowsy or lethargic.',
   },
   {
-    id: 435,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is considered a mood stabilizer used in the treatment of bipolar disorder?',
+    id: '435',
+    text: 'Which of the following is considered a mood stabilizer used in the treatment of bipolar disorder?',
     options: [
       'Clonazepam',
       'Mirtazapine',
@@ -457,9 +422,8 @@ export const questions: Question[] = [
     explanation: 'Lithium is a classic mood stabilizer commonly used to manage both manic and depressive episodes in patients with bipolar disorder.',
   },
   {
-    id: 436,
-    topic: 'Mental Health IQN',
-    question: 'Which disorder is characterized by persistent, intrusive thoughts and repetitive behaviors?',
+    id: '436',
+    text: 'Which disorder is characterized by persistent, intrusive thoughts and repetitive behaviors?',
     options: [
       'Post-traumatic stress disorder (PTSD)',
       'Obsessive-compulsive disorder (OCD)',
@@ -470,9 +434,8 @@ export const questions: Question[] = [
     explanation: 'OCD is defined by persistent, intrusive thoughts (obsessions) and repetitive behaviors (compulsions) that individuals feel compelled to perform in response to these thoughts.',
   },
   {
-    id: 437,
-    topic: 'Mental Health IQN',
-    question: 'What is a key feature of post-traumatic stress disorder (PTSD)?',
+    id: '437',
+    text: 'What is a key feature of post-traumatic stress disorder (PTSD)?',
     options: [
       'Social withdrawal',
       'Flashbacks to traumatic events',
@@ -483,9 +446,8 @@ export const questions: Question[] = [
     explanation: 'Flashbacks, where the individual re-experiences traumatic events as if they are happening again, are a hallmark symptom of PTSD.',
   },
   {
-    id: 438,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following best describes the term “mania”?',
+    id: '438',
+    text: 'Which of the following best describes the term “mania”?',
     options: [
       'A prolonged state of sadness and hopelessness',
       'A period of intense euphoria and elevated mood',
@@ -496,9 +458,8 @@ export const questions: Question[] = [
     explanation: 'Mania involves an abnormally elevated or irritable mood, often accompanied by hyperactivity, impulsive behavior, and a decreased need for sleep.',
   },
   {
-    id: 439,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is an effective non-pharmacological treatment for anxiety?',
+    id: '439',
+    text: 'Which of the following is an effective non-pharmacological treatment for anxiety?',
     options: [
       'Sleep deprivation',
       'Mindfulness meditation',
@@ -509,9 +470,8 @@ export const questions: Question[] = [
     explanation: 'Mindfulness meditation has been shown to reduce anxiety by helping individuals focus on the present moment, thereby reducing worry and stress.',
   },
   {
-    id: 440,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is the most commonly diagnosed mood disorder?',
+    id: '440',
+    text: 'Which of the following is the most commonly diagnosed mood disorder?',
     options: [
       'Bipolar disorder',
       'Major depressive disorder',
@@ -522,9 +482,8 @@ export const questions: Question[] = [
     explanation: 'Major depressive disorder is one of the most commonly diagnosed mood disorders, affecting a significant portion of the population worldwide.',
   },
   {
-    id: 441,
-    topic: 'Mental Health IQN',
-    question: 'What is the primary focus of psychodynamic therapy?',
+    id: '441',
+    text: 'What is the primary focus of psychodynamic therapy?',
     options: [
       'Changing thought patterns',
       'Exploring unconscious conflicts and past experiences',
@@ -535,9 +494,8 @@ export const questions: Question[] = [
     explanation: 'Psychodynamic therapy focuses on exploring unconscious conflicts, repressed memories, and how past experiences shape present behavior.',
   },
   {
-    id: 442,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a potential risk of long-term use of benzodiazepines?',
+    id: '442',
+    text: 'Which of the following is a potential risk of long-term use of benzodiazepines?',
     options: [
       'Weight loss',
       'Dependence and withdrawal',
@@ -548,9 +506,8 @@ export const questions: Question[] = [
     explanation: 'Long-term use of benzodiazepines can lead to physical dependence, and stopping the medication suddenly can lead to withdrawal symptoms.',
   },
   {
-    id: 443,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a common feature of antisocial personality disorder?',
+    id: '443',
+    text: 'Which of the following is a common feature of antisocial personality disorder?',
     options: [
       'Emotional instability',
       'A disregard for the rights of others',
@@ -561,9 +518,8 @@ export const questions: Question[] = [
     explanation: 'Individuals with antisocial personality disorder often exhibit a disregard for the rights and feelings of others, along with manipulative or deceitful behavior.',
   },
   {
-    id: 444,
-    topic: 'Mental Health IQN',
-    question: 'What is the main treatment goal for individuals with post-traumatic stress disorder (PTSD)?',
+    id: '444',
+    text: 'What is the main treatment goal for individuals with post-traumatic stress disorder (PTSD)?',
     options: [
       'Immediate sedation',
       'Reprocessing traumatic memories in a safe environment',
@@ -574,9 +530,8 @@ export const questions: Question[] = [
     explanation: 'The primary goal of treatment for PTSD is to help individuals safely process and reframe their traumatic experiences, often through therapies like Cognitive Behavioral Therapy (CBT) or Eye Movement Desensitization and Reprocessing (EMDR).',
   },
   {
-    id: 445,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following best describes a characteristic of narcissistic personality disorder?',
+    id: '445',
+    text: 'Which of the following best describes a characteristic of narcissistic personality disorder?',
     options: [
       'Overwhelming fear of social situations',
       'A constant need for admiration and a lack of empathy',
@@ -587,9 +542,8 @@ export const questions: Question[] = [
     explanation: 'Narcissistic personality disorder is marked by a grandiose sense of self-importance, a need for constant admiration, and a lack of empathy for others.',
   },
   {
-    id: 446,
-    topic: 'Mental Health IQN',
-    question: 'What is the primary risk of untreated anorexia nervosa?',
+    id: '446',
+    text: 'What is the primary risk of untreated anorexia nervosa?',
     options: [
       'Excessive weight gain',
       'Physical complications such as organ failure',
@@ -600,9 +554,8 @@ export const questions: Question[] = [
     explanation: 'Untreated anorexia nervosa can lead to severe physical health complications, including malnutrition, electrolyte imbalances, and organ failure, which can be life-threatening.',
   },
   {
-    id: 447,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following best describes a symptom of dissociative identity disorder (DID)?',
+    id: '447',
+    text: 'Which of the following best describes a symptom of dissociative identity disorder (DID)?',
     options: [
       'Severe memory loss',
       'Two or more distinct personality states',
@@ -613,9 +566,8 @@ export const questions: Question[] = [
     explanation: 'Dissociative identity disorder is characterized by the presence of two or more distinct personality states, which may take control of the individual’s behavior at different times.',
   },
   {
-    id: 448,
-    topic: 'Mental Health IQN',
-    question: 'What is the primary function of antipsychotic medications in the treatment of schizophrenia?',
+    id: '448',
+    text: 'What is the primary function of antipsychotic medications in the treatment of schizophrenia?',
     options: [
       'To alleviate depressive symptoms',
       'To stabilize mood fluctuations',
@@ -626,9 +578,8 @@ export const questions: Question[] = [
     explanation: 'Antipsychotic medications are used to manage the positive symptoms of schizophrenia, including hallucinations, delusions, and disorganized thinking.',
   },
   {
-    id: 449,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a common side effect of selective serotonin-norepinephrine reuptake inhibitors (SNRIs)?',
+    id: '449',
+    text: 'Which of the following is a common side effect of selective serotonin-norepinephrine reuptake inhibitors (SNRIs)?',
     options: [
       'Excessive sweating',
       'Increased appetite',
@@ -639,9 +590,8 @@ export const questions: Question[] = [
     explanation: 'SNRIs are commonly associated with side effects such as sleep disturbances, including insomnia or drowsiness.',
   },
   {
-    id: 450,
-    topic: 'Mental Health IQN',
-    question: 'In the management of alcohol use disorder, which of the following is commonly prescribed to discourage drinking?',
+    id: '450',
+    text: 'In the management of alcohol use disorder, which of the following is commonly prescribed to discourage drinking?',
     options: [
       'Lorazepam',
       'Acamprosate',
@@ -652,9 +602,8 @@ export const questions: Question[] = [
     explanation: 'Acamprosate is used to help people maintain abstinence from alcohol by reducing cravings and the desire to drink.',
   },
   {
-    id: 451,
-    topic: 'Mental Health IQN',
-    question: 'What is the most common comorbid condition found with obsessive-compulsive disorder (OCD)?',
+    id: '451',
+    text: 'What is the most common comorbid condition found with obsessive-compulsive disorder (OCD)?',
     options: [
       'Bipolar disorder',
       'Depression',
@@ -665,9 +614,8 @@ export const questions: Question[] = [
     explanation: 'Depression is the most common comorbid condition found in individuals with OCD. Many people with OCD experience significant distress that can lead to depressive symptoms.',
   },
   {
-    id: 452,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a sign of a manic episode in bipolar disorder?',
+    id: '452',
+    text: 'Which of the following is a sign of a manic episode in bipolar disorder?',
     options: [
       'Extreme fatigue',
       'Impulsive behavior and grandiosity',
@@ -678,9 +626,8 @@ export const questions: Question[] = [
     explanation: 'A manic episode is characterized by an elevated or irritable mood, impulsive behavior, excessive energy, and a sense of grandiosity or overconfidence.',
   },
   {
-    id: 453,
-    topic: 'Mental Health IQN',
-    question: 'Which therapeutic approach is most effective for treating anxiety disorders?',
+    id: '453',
+    text: 'Which therapeutic approach is most effective for treating anxiety disorders?',
     options: [
       'Psychoanalysis',
       'Cognitive Behavioral Therapy (CBT)',
@@ -691,9 +638,8 @@ export const questions: Question[] = [
     explanation: 'Cognitive Behavioral Therapy (CBT) is highly effective for treating anxiety disorders. It helps individuals identify and challenge irrational thoughts and behaviors that contribute to anxiety.',
   },
   {
-    id: 454,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is true regarding the use of electroconvulsive therapy (ECT) in treating depression?',
+    id: '454',
+    text: 'Which of the following is true regarding the use of electroconvulsive therapy (ECT) in treating depression?',
     options: [
       'It is a first-line treatment for most cases of depression',
       'It is used primarily for patients who are non-responsive to other treatments',
@@ -704,9 +650,8 @@ export const questions: Question[] = [
     explanation: 'ECT is typically reserved for severe depression cases that do not respond to medications or therapy. It is a highly effective treatment for refractory depression.',
   },
   {
-    id: 455,
-    topic: 'Mental Health IQN',
-    question: 'What is the most appropriate initial intervention for a person experiencing a panic attack?',
+    id: '455',
+    text: 'What is the most appropriate initial intervention for a person experiencing a panic attack?',
     options: [
       'Provide reassurance and encourage deep breathing',
       'Administer antianxiety medications immediately',
@@ -717,9 +662,8 @@ export const questions: Question[] = [
     explanation: 'The initial intervention for a panic attack is to provide reassurance and guide the person through deep breathing to help reduce the intensity of the attack and manage anxiety.',
   },
   {
-    id: 456,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a common characteristic of conduct disorder in children?',
+    id: '456',
+    text: 'Which of the following is a common characteristic of conduct disorder in children?',
     options: [
       'Extreme shyness',
       'Repeated violation of the rights of others',
@@ -730,9 +674,8 @@ export const questions: Question[] = [
     explanation: 'Conduct disorder is marked by repetitive patterns of behavior where the child violates the rights of others, including aggression, theft, and truancy.',
   },
   {
-    id: 457,
-    topic: 'Mental Health IQN',
-    question: 'In the treatment of ADHD, which of the following medications is commonly prescribed?',
+    id: '457',
+    text: 'In the treatment of ADHD, which of the following medications is commonly prescribed?',
     options: [
       'Amphetamines',
       'Antidepressants',
@@ -743,9 +686,8 @@ export const questions: Question[] = [
     explanation: 'Stimulant medications, such as amphetamines (e.g., Adderall), are commonly prescribed to treat Attention-Deficit Hyperactivity Disorder (ADHD) to help increase attention and control impulsivity.',
   },
   {
-    id: 458,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is considered a key feature of paranoid personality disorder?',
+    id: '458',
+    text: 'Which of the following is considered a key feature of paranoid personality disorder?',
     options: [
       'Excessive emotional expression',
       'A pervasive distrust and suspicion of others',
@@ -756,9 +698,8 @@ export const questions: Question[] = [
     explanation: 'Paranoid personality disorder is characterized by a chronic mistrust and suspicion of others, often leading to unjustified doubts about the loyalty or intentions of others.',
   },
   {
-    id: 459,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following describes the action of antidepressant medications such as SSRIs?',
+    id: '459',
+    text: 'Which of the following describes the action of antidepressant medications such as SSRIs?',
     options: [
       'They increase serotonin and/or norepinephrine levels in the brain',
       'They block dopamine receptors',
@@ -769,9 +710,8 @@ export const questions: Question[] = [
     explanation: 'SSRIs work by inhibiting the reuptake of serotonin, increasing its availability in the brain, which helps alleviate symptoms of depression and anxiety.',
   },
   {
-    id: 460,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following best describes a symptom of agoraphobia?',
+    id: '460',
+    text: 'Which of the following best describes a symptom of agoraphobia?',
     options: [
       'Fear of social situations',
       'Fear of being in situations where escape is difficult or help may not be available',
@@ -782,9 +722,8 @@ export const questions: Question[] = [
     explanation: 'Agoraphobia is characterized by a fear of being in situations where escape might be difficult or where help might not be available, such as crowded places or open spaces.',
   },
   {
-    id: 461,
-    topic: 'Mental Health IQN',
-    question: 'What is the typical age of onset for schizophrenia?',
+    id: '461',
+    text: 'What is the typical age of onset for schizophrenia?',
     options: [
       'Early childhood',
       'Late adolescence or early adulthood',
@@ -793,9 +732,8 @@ export const questions: Question[] = [
     explanation: 'Schizophrenia typically begins to manifest in late adolescence or early adulthood, often between the ages of 16 and 30 years.',
   },
   {
-    id: 462,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is an example of a dissociative symptom?',
+    id: '462',
+    text: 'Which of the following is an example of a dissociative symptom?',
     options: [
       'Hyperactivity',
       'Loss of memory for personal information',
@@ -806,9 +744,8 @@ export const questions: Question[] = [
     explanation: 'Dissociative symptoms can include memory loss or detachment from one’s thoughts, feelings, or identity, often seen in dissociative amnesia or dissociative identity disorder.',
   },
   {
-    id: 463,
-    topic: 'Mental Health IQN',
-    question: 'Which mental health disorder is most commonly associated with substance abuse?',
+    id: '463',
+    text: 'Which mental health disorder is most commonly associated with substance abuse?',
     options: [
       'Bipolar disorder',
       'Major depressive disorder',
@@ -819,9 +756,8 @@ export const questions: Question[] = [
     explanation: 'Borderline personality disorder is often associated with substance abuse, as individuals with this disorder may engage in risky behaviors or use substances as a coping mechanism.',
   },
   {
-    id: 464,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a potential side effect of antipsychotic medication?',
+    id: '464',
+    text: 'Which of the following is a potential side effect of antipsychotic medication?',
     options: [
       'Rapid weight loss',
       'Muscle stiffness and tremors',
@@ -832,9 +768,8 @@ export const questions: Question[] = [
     explanation: 'A common side effect of antipsychotic medications, especially first-generation drugs, is extrapyramidal symptoms (EPS), such as muscle stiffness and tremors.',
   },
   {
-    id: 465,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following would be an appropriate nursing intervention for a patient with a manic episode?',
+    id: '465',
+    text: 'Which of the following would be an appropriate nursing intervention for a patient with a manic episode?',
     options: [
       'Encourage the patient to engage in physical activity',
       'Provide a calm, structured environment with minimal stimulation',
@@ -845,9 +780,8 @@ export const questions: Question[] = [
     explanation: 'During a manic episode, a calm, structured environment with minimal stimulation helps the patient manage agitation and reduce the risk of impulsive behaviors.',
   },
   {
-    id: 466,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a primary symptom of narcissistic personality disorder?',
+    id: '466',
+    text: 'Which of the following is a primary symptom of narcissistic personality disorder?',
     options: [
       'Excessive empathy',
       'A grandiose sense of self-importance',
@@ -858,9 +792,8 @@ export const questions: Question[] = [
     explanation: 'Narcissistic personality disorder is characterized by a grandiose sense of self-importance, a need for excessive admiration, and a lack of empathy for others.',
   },
   {
-    id: 467,
-    topic: 'Mental Health IQN',
-    question: 'What is a primary focus of family therapy in treating mental health disorders?',
+    id: '467',
+    text: 'What is a primary focus of family therapy in treating mental health disorders?',
     options: [
       'Individual behavior change',
       'Enhancing family communication and support',
@@ -871,9 +804,8 @@ export const questions: Question[] = [
     explanation: 'Family therapy focuses on improving communication and support within the family unit, helping individuals cope with mental health challenges in a more collaborative environment.',
   },
   {
-    id: 468,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a defining characteristic of psychopathy?',
+    id: '468',
+    text: 'Which of the following is a defining characteristic of psychopathy?',
     options: [
       'Extreme fear of others',
       'High emotional sensitivity',
@@ -884,9 +816,8 @@ export const questions: Question[] = [
     explanation: 'Psychopathy is characterized by a lack of empathy, remorse, and guilt, along with manipulative behaviors and an inability to form emotional connections.',
   },
   {
-    id: 469,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is often the first-line approach in treating generalized anxiety disorder (GAD)?',
+    id: '469',
+    text: 'Which of the following is often the first-line approach in treating generalized anxiety disorder (GAD)?',
     options: [
       'Electroconvulsive therapy',
       'Cognitive-behavioral therapy (CBT)',
@@ -897,9 +828,8 @@ export const questions: Question[] = [
     explanation: 'Cognitive-behavioral therapy (CBT) is the first-line treatment for generalized anxiety disorder (GAD), focusing on identifying and addressing the negative thought patterns that contribute to anxiety.',
   },
   {
-    id: 470,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a core symptom of schizophrenia?',
+    id: '470',
+    text: 'Which of the following is a core symptom of schizophrenia?',
     options: [
       'Obsessive thoughts',
       'Hallucinations',
@@ -910,9 +840,8 @@ export const questions: Question[] = [
     explanation: 'Hallucinations, particularly auditory hallucinations, are a core symptom of schizophrenia, where individuals may hear voices that others do not.',
   },
   {
-    id: 471,
-    topic: 'Mental Health IQN',
-    question: 'What is the primary purpose of Cognitive Behavioral Therapy (CBT) in treating depression?',
+    id: '471',
+    text: 'What is the primary purpose of Cognitive Behavioral Therapy (CBT) in treating depression?',
     options: [
       'To uncover repressed memories',
       'To modify irrational thought patterns',
@@ -923,9 +852,8 @@ export const questions: Question[] = [
     explanation: 'CBT helps individuals with depression identify and modify distorted or negative thought patterns that contribute to their symptoms.',
   },
   {
-    id: 472,
-    topic: 'Mental Health IQN',
-    question: 'What is a common side effect of tricyclic antidepressants (TCAs)?',
+    id: '472',
+    text: 'What is a common side effect of tricyclic antidepressants (TCAs)?',
     options: [
       'Weight loss',
       'Dry mouth and blurred vision',
@@ -936,9 +864,8 @@ export const questions: Question[] = [
     explanation: 'TCAs can cause anticholinergic side effects, such as dry mouth, blurred vision, constipation, and urinary retention.',
   },
   {
-    id: 473,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following best describes the behavior of someone with borderline personality disorder (BPD)?',
+    id: '473',
+    text: 'Which of the following best describes the behavior of someone with borderline personality disorder (BPD)?',
     options: [
       'Consistently seeking attention through exaggerated behaviors',
       'Chronic feelings of emptiness and intense mood swings',
@@ -949,9 +876,8 @@ export const questions: Question[] = [
     explanation: 'BPD is characterized by emotional instability, intense mood swings, difficulty in relationships, and chronic feelings of emptiness.',
   },
   {
-    id: 474,
-    topic: 'Mental Health IQN',
-    question: 'What is a hallmark symptom of bipolar disorder during a manic episode?',
+    id: '474',
+    text: 'What is a hallmark symptom of bipolar disorder during a manic episode?',
     options: [
       'Extreme sadness',
       'Increased energy and impulsivity',
@@ -962,9 +888,8 @@ export const questions: Question[] = [
     explanation: 'During a manic episode, individuals often experience heightened energy, impulsivity, and grandiose thinking, which can lead to risky behaviors.',
   },
   {
-    id: 475,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following disorders is most commonly treated with selective serotonin reuptake inhibitors (SSRIs)?',
+    id: '475',
+    text: 'Which of the following disorders is most commonly treated with selective serotonin reuptake inhibitors (SSRIs)?',
     options: [
       'Schizophrenia',
       'Anxiety disorders and depression',
@@ -975,9 +900,8 @@ export const questions: Question[] = [
     explanation: 'SSRIs are commonly prescribed to treat depression and anxiety disorders by increasing the availability of serotonin in the brain.',
   },
   {
-    id: 476,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following best describes the approach used in dialectical behavior therapy (DBT)?',
+    id: '476',
+    text: 'Which of the following best describes the approach used in dialectical behavior therapy (DBT)?',
     options: [
       'Focusing solely on changing maladaptive behaviors',
       'Balancing acceptance and change to help regulate emotions',
@@ -988,9 +912,8 @@ export const questions: Question[] = [
     explanation: 'DBT is a type of therapy that combines acceptance strategies with behavior change techniques, especially useful for treating borderline personality disorder and emotional regulation issues.',
   },
   {
-    id: 477,
-    topic: 'Mental Health IQN',
-    question: 'What is the first-line pharmacological treatment for generalized anxiety disorder (GAD)?',
+    id: '477',
+    text: 'What is the first-line pharmacological treatment for generalized anxiety disorder (GAD)?',
     options: [
       'Antipsychotic medications',
       'Benzodiazepines',
@@ -1001,9 +924,8 @@ export const questions: Question[] = [
     explanation: 'SSRIs are the first-line pharmacological treatment for GAD, as they help regulate serotonin levels in the brain, reducing anxiety symptoms over time.',
   },
   {
-    id: 478,
-    topic: 'Mental Health IQN',
-    question: 'Which of the following is a symptom of obsessive-compulsive disorder (OCD)?',
+    id: '478',
+    text: 'Which of the following is a symptom of obsessive-compulsive disorder (OCD)?',
     options: [
       'Panic attacks',
       'Compulsive rituals or behaviors',
@@ -1014,9 +936,8 @@ export const questions: Question[] = [
     explanation: 'OCD is marked by intrusive thoughts (obsessions) and repetitive behaviors (compulsions) that the individual feels compelled to perform to reduce anxiety.',
   },
   {
-    id: 479,
-    topic: 'Mental Health IQN',
-    question: 'In the treatment of major depressive disorder, which of the following interventions is most likely to be used?',
+    id: '479',
+    text: 'In the treatment of major depressive disorder, which of the following interventions is most likely to be used?',
     options: [
       'Group therapy',
       'Antidepressant medications and psychotherapy',
@@ -1027,9 +948,8 @@ export const questions: Question[] = [
     explanation: 'The combination of antidepressant medications (such as SSRIs) and psychotherapy, particularly Cognitive Behavioral Therapy (CBT), is a common and effective treatment for major depressive disorder.',
   },
   {
-    id: 480,
-    topic: 'Mental Health IQN',
-    question: 'What is the primary goal of crisis intervention in mental health?',
+    id: '480',
+    text: 'What is the primary goal of crisis intervention in mental health?',
     options: [
       'To diagnose mental health disorders',
       'To provide long-term counseling',

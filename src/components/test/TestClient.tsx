@@ -212,7 +212,6 @@ export function TestClient({ test }: { test: Test }) {
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* ✅ changed to .text */}
                 <p className="text-xl font-semibold mb-6">
                   {currentQuestion.text}
                 </p>

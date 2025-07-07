@@ -2,9 +2,8 @@ import type { Question } from '@/lib/types';
 
 export const questions: Question[] = [
       {
-        id: 151,
-        topic: 'Most Repeated Questions',
-        question: 'A patient with diabetes becomes pale, shaky, and confused. What is your immediate action as a nurse?',
+        id: '151',
+        text: 'A patient with diabetes becomes pale, shaky, and confused. What is your immediate action as a nurse?',
         options: [
           'Administer insulin',
           'Check blood glucose level',
@@ -15,9 +14,8 @@ export const questions: Question[] = [
         explanation: 'These are classic signs of hypoglycemia. Always confirm with a glucose check before treating.',
       },
       {
-        id: 152,
-        topic: 'Most Repeated Questions',
-        question: 'What is the first-line treatment for hypoglycemia if the patient is conscious and able to swallow?',
+        id: '152',
+        text: 'What is the first-line treatment for hypoglycemia if the patient is conscious and able to swallow?',
         options: [
           'Glucagon injection',
           '20 ml of IV glucose',
@@ -28,9 +26,8 @@ export const questions: Question[] = [
         explanation: 'If alert and oriented, give oral glucose like juice or glucose tablets. IV or IM options are used if the patient is unconscious.',
       },
       {
-        id: 153,
-        topic: 'Most Repeated Questions',
-        question: 'Which medication is commonly used to increase heart contractility in cardiogenic shock?',
+        id: '153',
+        text: 'Which medication is commonly used to increase heart contractility in cardiogenic shock?',
         options: [
           'Morphine',
           'Dobutamine',
@@ -41,9 +38,8 @@ export const questions: Question[] = [
         explanation: 'Dobutamine is a positive inotrope used to increase myocardial contractility.',
       },
       {
-        id: 154,
-        topic: 'Most Repeated Questions',
-        question: 'Which of the following patients is at the highest risk for septic shock?',
+        id: '154',
+        text: 'Which of the following patients is at the highest risk for septic shock?',
         options: [
           'A 5-year-old with chickenpox',
           'A healthy adult with a cold',
@@ -54,9 +50,8 @@ export const questions: Question[] = [
         explanation: 'Indwelling catheters and advanced age increase the risk of sepsis.',
       },
       {
-        id: 155,
-        topic: 'Most Repeated Questions',
-        question: 'Which type of shock is most associated with severe allergic reactions?',
+        id: '155',
+        text: 'Which type of shock is most associated with severe allergic reactions?',
         options: [
           'Cardiogenic',
           'Neurogenic',
@@ -67,9 +62,8 @@ export const questions: Question[] = [
         explanation: 'Anaphylactic shock is due to hypersensitivity reactions, causing vasodilation and airway compromise.',
       },
       {
-        id: 156,
-        topic: 'Most Repeated Questions',
-        question: 'What is the most appropriate nursing intervention for a patient in shock?',
+        id: '156',
+        text: 'What is the most appropriate nursing intervention for a patient in shock?',
         options: [
           'Keep patient flat and still',
           'Place patient in Trendelenburg position',
@@ -80,9 +74,8 @@ export const questions: Question[] = [
         explanation: 'This maintains perfusion to vital organs. Trendelenburg is not recommended in all patients.',
       },
       {
-        id: 157,
-        topic: 'Most Repeated Questions',
-        question: 'What does a high lactate level indicate in a patient with suspected shock?',
+        id: '157',
+        text: 'What does a high lactate level indicate in a patient with suspected shock?',
         options: [
           'Normal metabolism',
           'Liver failure',
@@ -93,9 +86,8 @@ export const questions: Question[] = [
         explanation: 'Lactate rises when cells aren\'t getting enough oxygen.',
       },
       {
-        id: 158,
-        topic: 'Most Repeated Questions',
-        question: 'What is a sign of fluid overload during shock resuscitation?',
+        id: '158',
+        text: 'What is a sign of fluid overload during shock resuscitation?',
         options: [
           'Increased capillary refill',
           'Jugular vein distension',
@@ -106,9 +98,8 @@ export const questions: Question[] = [
         explanation: 'Over-resuscitation can lead to pulmonary edema and JVD.',
       },
       {
-        id: 159,
-        topic: 'Most Repeated Questions',
-        question: 'Which IV fluid is most commonly used for initial resuscitation in septic shock?',
+        id: '159',
+        text: 'Which IV fluid is most commonly used for initial resuscitation in septic shock?',
         options: [
           'Dextrose 10%',
           'Normal saline (0.9%)',
@@ -119,9 +110,8 @@ export const questions: Question[] = [
         explanation: 'Normal saline is an isotonic crystalloid solution that is widely available and effective for volume expansion in septic shock.',
       },
       {
-        id: 160,
-        topic: 'Most Repeated Questions',
-        question: 'Which medication is the first-line treatment for anaphylactic shock?',
+        id: '160',
+        text: 'Which medication is the first-line treatment for anaphylactic shock?',
         options: [
           'Hydrocortisone',
           'Salbutamol',
@@ -132,9 +122,8 @@ export const questions: Question[] = [
         explanation: 'Epinephrine reverses airway obstruction and vasodilation in anaphylaxis.',
       },
       {
-        id: 161,
-        topic: 'Most Repeated Questions',
-        question: 'What is a late sign of shock?',
+        id: '161',
+        text: 'What is a late sign of shock?',
         options: [
           'Hypotension',
           'Tachycardia',
@@ -145,9 +134,8 @@ export const questions: Question[] = [
         explanation: 'Hypotension is a late sign, once compensatory mechanisms fail.',
       },
       {
-        id: 162,
-        topic: 'Most Repeated Questions',
-        question: 'Which nursing assessment best determines perfusion in a shocked patient?',
+        id: '162',
+        text: 'Which nursing assessment best determines perfusion in a shocked patient?',
         options: [
           'Skin color',
           'Capillary refill',
@@ -158,9 +146,8 @@ export const questions: Question[] = [
         explanation: 'Capillary refill time is a quick and simple test to assess peripheral perfusion and blood flow to tissues.',
       },
       {
-        id: 163,
-        topic: 'Most Repeated Questions',
-        question: 'What is a key nursing intervention during the administration of vasopressors (e.g., noradrenaline) in shock?',
+        id: '163',
+        text: 'What is a key nursing intervention during the administration of vasopressors (e.g., noradrenaline) in shock?',
         options: [
             'Monitor hourly blood glucose',
             'Maintain central line access',
@@ -170,9 +157,8 @@ export const questions: Question[] = [
         explanation: 'Vasopressors are potent medications that can cause severe tissue damage if they extravasate. Administration through a central line is essential for patient safety.',
       },
       {
-        id: 164,
-        topic: 'Most Repeated Questions',
-        question: 'What is a classic sign of neurogenic shock?',
+        id: '164',
+        text: 'What is a classic sign of neurogenic shock?',
         options: [
           'Warm skin and bradycardia',
           'Cold clammy skin and tachycardia',
@@ -183,9 +169,8 @@ export const questions: Question[] = [
         explanation: 'Loss of sympathetic tone leads to vasodilation and slower heart rate.',
       },
       {
-        id: 165,
-        topic: 'Most Repeated Questions',
-        question: 'A 55-year-old patient with a history of type 2 diabetes mellitus is admitted with confusion, dry mucous membranes, and a blood glucose level of 32 mmol/L. Which is the priority nursing intervention?',
+        id: '165',
+        text: 'A 55-year-old patient with a history of type 2 diabetes mellitus is admitted with confusion, dry mucous membranes, and a blood glucose level of 32 mmol/L. Which is the priority nursing intervention?',
         options: [
           'Administer insulin stat',
           'Start oral rehydration therapy',
@@ -196,9 +181,8 @@ export const questions: Question[] = [
         explanation: 'Hyperosmolar hyperglycaemic state (HHS) presents with extreme hyperglycaemia and dehydration. IV fluid replacement is the first-line intervention to restore perfusion before insulin is administered.',
       },
       {
-        id: 166,
-        topic: 'Most Repeated Questions',
-        question: 'A Māori patient tells you they prefer to have their whanau involved in their care decisions. What is the most appropriate response by the nurse?',
+        id: '166',
+        text: 'A Māori patient tells you they prefer to have their whanau involved in their care decisions. What is the most appropriate response by the nurse?',
         options: [
           'Respect the request and involve the whanau',
           'Explain that decisions must be made by the patient only',
@@ -209,9 +193,8 @@ export const questions: Question[] = [
         explanation: 'Under the principles of whanaungatanga and partnership from the Treaty of Waitangi, nurses should support Māori patients cultural preferences, including collective decision-making.',
       },
       {
-        id: 167,
-        topic: 'Most Repeated Questions',
-        question: 'A patient is on digoxin. You notice nausea, visual halos, and bradycardia. What is your first response?',
+        id: '167',
+        text: 'A patient is on digoxin. You notice nausea, visual halos, and bradycardia. What is your first response?',
         options: [
           'Continue monitoring',
           'Document the findings',
@@ -222,9 +205,8 @@ export const questions: Question[] = [
         explanation: 'These are signs of digoxin toxicity. The nurse must withhold the drug and notify the prescriber immediately.',
       },
       {
-        id: 168,
-        topic: 'Most Repeated Questions',
-        question: 'A patient undergoing chemotherapy reports mouth ulcers. What nursing advice is most appropriate?',
+        id: '168',
+        text: 'A patient undergoing chemotherapy reports mouth ulcers. What nursing advice is most appropriate?',
         options: [
           'Use alcohol-based mouthwash',
           'Eat citrus fruits for Vitamin C',
@@ -235,9 +217,8 @@ export const questions: Question[] = [
         explanation: 'Chemotherapy can cause mucositis. Gentle care with saline rinses and avoiding irritants prevents worsening.',
       },
       {
-        id: 169,
-        topic: 'Most Repeated Questions',
-        question: 'In the context of nursing ethics, what does autonomy refer to?',
+        id: '169',
+        text: 'In the context of nursing ethics, what does autonomy refer to?',
         options: [
           'Acting in the patient\'s best interest',
           'Telling the patient what to do',
@@ -248,9 +229,8 @@ export const questions: Question[] = [
         explanation: 'Autonomy is a core ethical principle that refers to respecting the individual\'s right to make their own decisions.',
       },
       {
-        id: 170,
-        topic: 'Most Repeated Questions',
-        question: 'Which nursing action breaches patient confidentiality?',
+        id: '170',
+        text: 'Which nursing action breaches patient confidentiality?',
         options: [
           'Discussing a case at the nurse\'s station',
           'Sharing information in a private handover room',
@@ -261,9 +241,8 @@ export const questions: Question[] = [
         explanation: 'Information must be protected.',
       },
       {
-        id: 171,
-        topic: 'Most Repeated Questions',
-        question: 'What is the purpose of an incident report in nursing practice?',
+        id: '171',
+        text: 'What is the purpose of an incident report in nursing practice?',
         options: [
           'To assign blame',
           'To punish the person involved',
