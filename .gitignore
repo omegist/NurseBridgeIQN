@@ -7,3 +7,4 @@ android/app/build/
 *.zip
 *.log
 .env
+.env
