@@ -11,7 +11,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'fundamentals',
     name: 'Fundamentals of Nursing',
-    icon: 'Stethoscope', // <--- CHANGED FROM Stethoscope to 'Stethoscope' (string)
+    icon: 'stethoscope', // <--- CHANGED FROM Stethoscope to 'stethoscope' (string)
     description: 'Covers core nursing skills, patient safety, infection control, and vital signs.',
     questionCount: 33,
     difficulty: 'hard',
@@ -20,7 +20,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'pharmacology',
     name: 'Pharmacology & Meds',
-    icon: 'Pill', // <--- CHANGED TO STRING
+    icon: 'pill', // <--- CHANGED TO STRING
     description: 'Test your knowledge of medications, drug actions, side effects, and dosage calculations.',
     questionCount: 23,
     difficulty: 'hard',
@@ -29,7 +29,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'medical-surgical',
     name: 'Medical-Surgical Nursing',
-    icon: 'HeartPulse', // <--- CHANGED TO STRING
+    icon: 'heartPulse', // <--- CHANGED TO STRING
     description: 'Focuses on adult patients with acute and chronic illnesses.',
     questionCount: 58,
     difficulty: 'hard',
@@ -38,7 +38,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'mental-health',
     name: 'Mental Health Nursing',
-    icon: 'Brain', // <--- CHANGED TO STRING
+    icon: 'brain', // <--- CHANGED TO STRING
     description: 'Explore psychiatric conditions, therapeutic communication, and de-escalation techniques.',
     questionCount: 15,
     difficulty: 'easy',
@@ -47,7 +47,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'maternity-paediatric',
     name: 'Maternity & Paediatric',
-    icon: 'Baby', // <--- CHANGED TO STRING
+    icon: 'baby', // <--- CHANGED TO STRING
     description: 'Questions on pregnancy, childbirth, newborn care, and pediatric nursing.',
     questionCount: 15,
     difficulty: 'easy',
@@ -56,7 +56,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'maternity-child-quest',
     name: 'Maternity & Child Quest',
-    icon: 'Baby', // <--- CHANGED TO STRING
+    icon: 'baby', // <--- CHANGED TO STRING
     description: 'A quiz covering key topics in maternity and child health.',
     questionCount: 35,
     difficulty: 'hard',
@@ -65,7 +65,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'nz-nursing-context',
     name: 'NZ Nursing Context',
-    icon: 'BookMarked', // <--- CHANGED TO STRING
+    icon: 'bookMarked', // <--- CHANGED TO STRING
     description: 'Covers cultural safety, ethics, and legal frameworks specific to nursing in New Zealand.',
     questionCount: 136,
     difficulty: 'hard',
@@ -74,7 +74,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'most-repeated-questions',
     name: 'Most Repeated Questions',
-    icon: 'Repeat', // <--- CHANGED TO STRING
+    icon: 'repeat', // <--- CHANGED TO STRING
     description: 'Challenge yourself with a set of frequently asked questions covering critical nursing topics.',
     questionCount: 21,
     difficulty: 'hard',
@@ -83,7 +83,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'most-repeated-questions-b',
     name: 'Most Repeated Questions Part B',
-    icon: 'Repeat', // <--- CHANGED TO STRING
+    icon: 'repeat', // <--- CHANGED TO STRING
     description: 'A second set of frequently asked questions covering critical nursing topics.',
     questionCount: 59,
     difficulty: 'hard',
@@ -92,7 +92,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'mental-health-iqn',
     name: 'Mental Health IQN',
-    icon: 'Brain', // <--- CHANGED TO STRING
+    icon: 'brain', // <--- CHANGED TO STRING
     description: 'A comprehensive set of questions focusing on various aspects of mental health nursing.',
     questionCount: 80,
     difficulty: 'hard',
@@ -101,7 +101,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'cardiology-quest-iqn',
     name: 'Cardiology Quest IQN',
-    icon: 'HeartPulse', // <--- CHANGED TO STRING
+    icon: 'heartPulse', // <--- CHANGED TO STRING
     description: 'A comprehensive quiz on cardiology topics.',
     questionCount: 80,
     difficulty: 'hard',
@@ -110,7 +110,7 @@ export const quizTopics: Topic[] = [
   {
     id: 'gastro-quest-iqn',
     name: 'Gastro Quest IQN',
-    icon: 'Stethoscope', // <--- CHANGED TO STRING
+    icon: 'stethoscope', // <--- CHANGED TO STRING
     description: 'A comprehensive quiz on gastroenterology nursing topics.',
     questionCount: 135,
     difficulty: 'hard',

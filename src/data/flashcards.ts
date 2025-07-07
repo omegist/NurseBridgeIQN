@@ -17,20 +17,87 @@ const rawFlashcardData: RawFlashcardSet[] = [
     cards: [
       { term: 'Pressure Injury: First Intervention', definition: 'Reposition the patient off the affected area. Relieving pressure is the key first step to prevent progression.' },
       { term: 'Airborne Precautions: Key PPE', definition: 'An N95 respirator is required for diseases like pulmonary tuberculosis to filter airborne particles.' },
-      { term: 'Sterile Urine Sample (Catheter)', definition: 'Aspirate urine from the sampling port using sterile technique. Never collect from the drainage bag.' },
-      { term: 'Contact Precautions: C. diff', definition: 'Requires gloves and gown. Spores are resistant to alcohol, so handwashing with soap and water is crucial.' },
-      { term: 'Secondary Prevention Goal', definition: 'Focuses on early detection and prompt treatment of disease to halt its progression (e.g., health screenings).' },
-      { term: 'Signs of Hypoxia (Early vs. Late)', definition: 'Early Sign: Restlessness and agitation. Late Sign: Cyanosis (bluish skin discoloration).' },
-      { term: 'Most Reliable Fluid Status Indicator', definition: 'Daily weight. It is more accurate than intake/output records, BP, or urine color for tracking fluid balance.' },
-      { term: 'Pressure Ulcer Staging: Stage 1', definition: 'Intact skin with non-blanchable redness over a bony prominence.' },
-      { term: 'Glasgow Coma Scale (GCS)', definition: 'Assesses level of consciousness based on eye opening, verbal response, and motor response. A lower score indicates deeper coma.' },
-      { term: 'Pain Assessment in Non-Verbal Patients', definition: 'Use a specialized tool like the PAINAD scale, which observes breathing, vocalization, facial expression, body language, and consolability.' },
-      { term: 'Aseptic Technique Principle', definition: 'Sterile items must only be touched by other sterile items. Keep sterile fields above waist level and do not turn your back on them.' },
-      { term: 'Prioritizing Care: ABCs', definition: 'Airway, Breathing, and Circulation are the top priorities in any emergency situation.' },
     ],
   },
-  // 🔁 Add other categories here the same way
+  {
+    id: 'pharmacology',
+    cards: [
+        { term: 'Warfarin (Coumadin) Antidote', definition: 'Vitamin K is the antidote for warfarin overdose.' },
+        { term: 'Digoxin Therapeutic Range', definition: 'The therapeutic range for digoxin is typically 0.5-2.0 ng/mL. Levels above this increase the risk of toxicity.' },
+    ],
+  },
+  {
+    id: 'medical-surgical',
+    cards: [
+        { term: 'Classic Sign of Appendicitis', definition: "Rebound tenderness at McBurney's point (located in the right lower quadrant of the abdomen)." },
+        { term: 'COPD: Primary Nursing Goal', definition: 'Improve gas exchange by maintaining a patent airway and providing appropriate oxygen therapy.' },
+    ],
+  },
+  {
+    id: 'mental-health',
+    cards: [
+        { term: 'Therapeutic Communication', definition: 'Using techniques like open-ended questions and active listening to build rapport and facilitate patient expression.' },
+        { term: 'Signs of Lithium Toxicity', definition: 'Early signs include fine hand tremors, nausea, vomiting, and diarrhea. Severe signs include ataxia and confusion.' },
+    ],
+  },
+  {
+    id: 'maternity-paediatric',
+    cards: [
+        { term: 'APGAR Score', definition: "A quick assessment of a newborn's health at 1 and 5 minutes after birth, evaluating Appearance, Pulse, Grimace, Activity, and Respiration." },
+        { term: 'Postpartum Hemorrhage Priority Action', definition: 'Firmly massage the uterine fundus to stimulate contraction and control bleeding.' },
+    ],
+  },
+  {
+    id: 'maternity-child-quest',
+    cards: [
+      { term: 'What is the APGAR score used for?', definition: 'Rapid assessment of the newborn’s transition to extra‑uterine life at 1 and 5 minutes after birth.' },
+      { term: 'Normal birth weight range for a term newborn?', definition: '2.5 kg – 4 kg.' },
+    ],
+  },
+  {
+    id: 'nz-nursing-context',
+    cards: [
+      { term: 'Define cultural safety in New Zealand nursing practice.', definition: 'Providing care that is respectful of and responsive to the cultural identity and needs of the person.' },
+      { term: 'What is Te Tiriti o Waitangi?', definition: 'The Treaty of Waitangi, New Zealand’s founding document between Māori and the Crown.' },
+    ],
+  },
+  {
+    id: 'most-repeated-questions',
+    cards: [
+      { term: 'What is the normal arterial blood pH?', definition: '7.35 – 7.45.' },
+      { term: 'Define tachycardia.', definition: 'A heart rate greater than 100 beats per minute in an adult.' },
+    ],
+  },
+  {
+    id: 'most-repeated-questions-b',
+    cards: [
+      { term: 'Normal serum sodium level?', definition: '135 – 145 mEq/L.' },
+      { term: 'Primary clinical use of insulin?', definition: 'To lower elevated blood glucose in patients with diabetes mellitus.' },
+    ],
+  },
+  {
+    id: 'mental-health-iqn',
+    cards: [
+      { term: 'What does CBT stand for?', definition: 'Cognitive Behavioral Therapy.' },
+      { term: 'Define bipolar disorder.', definition: 'A mood disorder with alternating episodes of depression and mania or hypomania.' },
+    ],
+  },
+  {
+    id: 'cardiology-quest-iqn',
+    cards: [
+      { term: 'Function of the heart valves?', definition: 'Ensure unidirectional flow of blood through the heart chambers.' },
+      { term: 'What is bradycardia?', definition: 'A heart rate less than 60 beats per minute in an adult.' },
+    ],
+  },
+  {
+    id: 'gastro-quest-iqn',
+    cards: [
+      { term: 'Primary function of the liver?', definition: 'Metabolism of nutrients, detoxification, and bile production.' },
+      { term: 'What is GERD?', definition: 'Gastro‑oesophageal reflux disease—chronic reflux of stomach acid into the oesophagus.' },
+    ]
+  }
 ];
+
 
 // Convert raw cards to Flashcard[] (with prompt, answer, and id)
 function convertToFlashcards(rawCards: { term: string; definition: string }[], topicId: string): Flashcard[] {
@@ -53,7 +120,7 @@ export const flashcardTopics: FlashcardTopic[] = rawFlashcardData.map((fd) => {
       id: fd.id,
       name: `Flashcard Topic ${fd.id}`,
       description: 'No description available.',
-      icon: 'BookOpen',
+      icon: 'bookMarked', // Default icon
       flashcards,
       flashcardCount: flashcards.length,
     };

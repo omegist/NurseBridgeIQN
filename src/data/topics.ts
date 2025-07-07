@@ -1,5 +1,4 @@
 import type { Topic } from '@/lib/types';
-import { Stethoscope, Pill, HeartPulse, Brain, Baby, BookMarked, Repeat } from 'lucide-react';
 
 // This file contains only the metadata for each topic, not the questions themselves.
 // The questions are loaded dynamically to improve performance.
@@ -8,7 +7,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'fundamentals',
     name: 'Fundamentals of Nursing',
-    icon: Stethoscope,
+    icon: 'stethoscope',
     description: 'Covers core nursing skills, patient safety, infection control, and vital signs.',
     questionCount: 33,
     difficulty: 'hard',
@@ -16,7 +15,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'pharmacology',
     name: 'Pharmacology & Meds',
-    icon: Pill,
+    icon: 'pill',
     description: 'Test your knowledge of medications, drug actions, side effects, and dosage calculations.',
     questionCount: 23,
     difficulty: 'hard',
@@ -24,7 +23,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'medical-surgical',
     name: 'Medical-Surgical Nursing',
-    icon: HeartPulse,
+    icon: 'heartPulse',
     description: 'Focuses on adult patients with acute and chronic illnesses.',
     questionCount: 58,
     difficulty: 'hard',
@@ -32,7 +31,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'mental-health',
     name: 'Mental Health Nursing',
-    icon: Brain,
+    icon: 'brain',
     description: 'Explore psychiatric conditions, therapeutic communication, and de-escalation techniques.',
     questionCount: 15,
     difficulty: 'easy',
@@ -40,7 +39,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'maternity-paediatric',
     name: 'Maternity & Paediatric',
-    icon: Baby,
+    icon: 'baby',
     description: 'Questions on pregnancy, childbirth, newborn care, and pediatric nursing.',
     questionCount: 15,
     difficulty: 'easy',
@@ -48,7 +47,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'maternity-child-quest',
     name: 'Maternity & Child Quest',
-    icon: Baby,
+    icon: 'baby',
     description: 'A quiz covering key topics in maternity and child health.',
     questionCount: 35,
     difficulty: 'hard',
@@ -56,7 +55,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'nz-nursing-context',
     name: 'NZ Nursing Context',
-    icon: BookMarked,
+    icon: 'bookMarked',
     description: 'Covers cultural safety, ethics, and legal frameworks specific to nursing in New Zealand.',
     questionCount: 136,
     difficulty: 'hard',
@@ -64,7 +63,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'most-repeated-questions',
     name: 'Most Repeated Questions',
-    icon: Repeat,
+    icon: 'repeat',
     description: 'Challenge yourself with a set of frequently asked questions covering critical nursing topics.',
     questionCount: 21,
     difficulty: 'hard',
@@ -72,7 +71,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'most-repeated-questions-b',
     name: 'Most Repeated Questions Part B',
-    icon: Repeat,
+    icon: 'repeat',
     description: 'A second set of frequently asked questions covering critical nursing topics.',
     questionCount: 59,
     difficulty: 'hard',
@@ -80,7 +79,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'mental-health-iqn',
     name: 'Mental Health IQN',
-    icon: Brain,
+    icon: 'brain',
     description: 'A comprehensive set of questions focusing on various aspects of mental health nursing.',
     questionCount: 80,
     difficulty: 'hard',
@@ -88,7 +87,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'cardiology-quest-iqn',
     name: 'Cardiology Quest IQN',
-    icon: HeartPulse,
+    icon: 'heartPulse',
     description: 'A comprehensive quiz on cardiology topics.',
     questionCount: 80,
     difficulty: 'hard',
@@ -96,7 +95,7 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
   {
     id: 'gastro-quest-iqn',
     name: 'Gastro Quest IQN',
-    icon: Stethoscope,
+    icon: 'stethoscope',
     description: 'A comprehensive quiz on gastroenterology nursing topics.',
     questionCount: 135,
     difficulty: 'hard'
