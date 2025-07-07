@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useQuiz } from "@/contexts/QuizContext";
 import { Button } from "@/components/ui/button";
@@ -40,12 +39,12 @@ interface QuizResults {
   correctAnswers: number;
   incorrectAnswers: number;
   breakdown: {
-    questionId: number;
+    questionId: number | string;
     isCorrect: boolean;
     correctAnswer: string;
     userAnswer: string | null;
     question: string;
-    originalExplanation: string;
+    originalExplanation?: string;
   }[];
 }
 
@@ -71,19 +70,24 @@ export function ResultsClient() {
     const breakdown = topic.questions.map((question, index) => {
       const userAnswerIndex = userAnswers[index];
       const isCorrect = userAnswerIndex === question.correctIndex;
+
       if (isCorrect) {
         score++;
         correctAnswers++;
       } else {
         incorrectAnswers++;
       }
+
       return {
         questionId: question.id,
-        question: question.question,
+        /* ✅ changed .question -> .text */
+        question: question.text,
         isCorrect,
         correctAnswer: question.options[question.correctIndex],
         userAnswer:
-          userAnswerIndex !== null ? question.options[userAnswerIndex] : null,
+          userAnswerIndex !== null && userAnswerIndex !== undefined
+            ? question.options[userAnswerIndex]
+            : null,
         originalExplanation: question.explanation,
       };
     });
@@ -100,28 +104,23 @@ export function ResultsClient() {
     };
 
     setResults(calculatedResults);
+
     if (score > 0) updateUserScore(score * 10);
 
-    /* Update progress in Firestore to mark as completed */
-    const progressRef = doc(db, "users", user.uid, "quizProgress", topic.id);
+    /* Update Firestore progress */
+    const ref = doc(db, "users", user.uid, "quizProgress", topic.id);
     setDoc(
-      progressRef,
-      {
-        completed: true,
-        score: score,
-        percentage: percentage,
-      },
+      ref,
+      { completed: true, score, percentage },
       { merge: true }
     ).catch(() => {});
 
     setIsLoading(false);
   }, [topic, userAnswers, user, updateUserScore]);
-  
+
   /* ---------- redirect if no topic ---------- */
   useEffect(() => {
-    if (!isLoading && (!topic || !user)) {
-      router.push("/topics");
-    }
+    if (!isLoading && (!topic || !user)) router.push("/topics");
   }, [isLoading, topic, user, router]);
 
   /* ---------- chart data ---------- */
@@ -142,12 +141,7 @@ export function ResultsClient() {
   }, [results]);
 
   /* ---------- button handlers ---------- */
-  const handleRetake = async () => {
-    if (topic) {
-      router.push(`/quiz/${topic.id}`);
-    }
-  };
-
+  const handleRetake = () => topic && router.push(`/quiz/${topic.id}`);
   const handleNewQuiz = () => {
     resetQuiz();
     router.push("/topics");
@@ -177,6 +171,7 @@ export function ResultsClient() {
   /* ---------- main render ---------- */
   return (
     <div className="container mx-auto py-10">
+      {/* header card */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -185,7 +180,9 @@ export function ResultsClient() {
         <Card className="text-center shadow-2xl rounded-2xl mb-8">
           <CardHeader>
             <Award className="mx-auto h-16 w-16 text-yellow-500" />
-            <CardTitle className="font-headline text-4xl">Quiz Results</CardTitle>
+            <CardTitle className="font-headline text-4xl">
+              Quiz Results
+            </CardTitle>
           </CardHeader>
           <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4 text-2xl">
             <div>
@@ -210,6 +207,7 @@ export function ResultsClient() {
         </Card>
       </motion.div>
 
+      {/* chart + review accordion */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* chart */}
         <motion.div
@@ -219,7 +217,9 @@ export function ResultsClient() {
         >
           <Card className="shadow-lg rounded-2xl">
             <CardHeader>
-              <CardTitle className="font-headline">Answer Breakdown</CardTitle>
+              <CardTitle className="font-headline">
+                Answer Breakdown
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <ResponsiveContainer width="100%" height={300}>
@@ -239,8 +239,8 @@ export function ResultsClient() {
                     }}
                   />
                   <Bar dataKey="value" barSize={40}>
-                    {chartData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.fill} />
+                    {chartData.map((entry, idx) => (
+                      <Cell key={idx} fill={entry.fill} />
                     ))}
                   </Bar>
                 </BarChart>
@@ -249,7 +249,7 @@ export function ResultsClient() {
           </Card>
         </motion.div>
 
-        {/* accordion with static explanations */}
+        {/* accordion with explanations */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -261,11 +261,8 @@ export function ResultsClient() {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {results.breakdown.map((item, index) => (
-                  <AccordionItem
-                    key={item.questionId}
-                    value={item.questionId.toString()}
-                  >
+                {results.breakdown.map((item, idx) => (
+                  <AccordionItem key={item.questionId} value={String(idx)}>
                     <AccordionTrigger>
                       <div className="flex items-center">
                         {item.isCorrect ? (
@@ -273,7 +270,7 @@ export function ResultsClient() {
                         ) : (
                           <XCircle className="h-5 w-5 text-red-500 mr-2" />
                         )}
-                        Question {index + 1}
+                        Question {idx + 1}
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="space-y-4">
@@ -286,9 +283,11 @@ export function ResultsClient() {
                         Your Answer: {item.userAnswer || "Not answered"}
                       </p>
                       <p>Correct Answer: {item.correctAnswer}</p>
-                      <p className="text-muted-foreground italic border-l-4 pl-4">
-                        {item.originalExplanation}
-                      </p>
+                      {item.originalExplanation && (
+                        <p className="text-muted-foreground italic border-l-4 pl-4">
+                          {item.originalExplanation}
+                        </p>
+                      )}
                     </AccordionContent>
                   </AccordionItem>
                 ))}

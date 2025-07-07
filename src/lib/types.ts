@@ -1,49 +1,74 @@
+/** --------------------------------------------------------------------
+ *  Core shared types for the NurseBridgeIQN app
+ *  ------------------------------------------------------------------ */
 
+export type Difficulty = 'easy' | 'medium' | 'hard';
+
+/* ────────────────────────────────────────────────────────────────────
+ *  Small helpers
+ * ────────────────────────────────────────────────────────────────────*/
+
+/** One answer selected by the user for a single MCQ question.
+ *  - `number` is the chosen option index (0‑based)
+ *  - `null` means the question was not answered yet
+ */
+export type UserAnswer = number | null;
+
+/* ────────────────────────────────────────────────────────────────────
+ *  Quiz questions
+ * ────────────────────────────────────────────────────────────────────*/
 export interface Question {
-  id: number;
-  topic: string;
-  question: string;
+  id: string;
+  /** The actual question text */
+  text: string;
   options: string[];
   correctIndex: number;
-  explanation: string;
+  explanation?: string;
 }
 
+/* ────────────────────────────────────────────────────────────────────
+ *  Topics (quizzes)
+ * ────────────────────────────────────────────────────────────────────*/
 export interface Topic {
   id: string;
   name: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: string;          // Lucide icon key
   description: string;
   questions: Question[];
-  questionCount: number;
-  difficulty: 'easy' | 'hard';
+  difficulty?: Difficulty;
 }
 
-export type UserAnswer = {
-  questionId: number;
-  answerIndex: number | null;
-  isCorrect: boolean;
-};
-
+/* ────────────────────────────────────────────────────────────────────
+ *  Flashcards
+ * ────────────────────────────────────────────────────────────────────*/
 export interface Flashcard {
-  term: string;
-  definition: string;
+  id: string;
+  prompt: string;
+  answer: string;
 }
 
 export interface FlashcardTopic {
   id: string;
   name: string;
+  icon: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  cards: Flashcard[];
+  flashcards: Flashcard[];
+  difficulty?: Difficulty;
 }
 
-export type SerializableFlashcardTopic = Omit<FlashcardTopic, 'icon'>;
+/** Alias used by FlashcardClient and page components */
+export type SerializableFlashcardTopic = FlashcardTopic;
 
+/* ────────────────────────────────────────────────────────────────────
+ *  Tests / mock exams
+ * ────────────────────────────────────────────────────────────────────*/
 export interface Test {
   id: string;
   name: string;
+  description: string;
+  icon?: string;
+  questionCount: number;
+  difficulty?: Difficulty;
+  timeLimitMinutes?: number;   // optional
   questions: Question[];
-  timeLimitMinutes: number | null; // null for no time limit
 }
-
-export type SerializableTest = Omit<Test, 'icon'>;

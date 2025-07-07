@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
@@ -39,12 +38,12 @@ interface TestResults {
   correctAnswers: number;
   incorrectAnswers: number;
   breakdown: {
-    questionId: number;
+    questionId: number | string;
     isCorrect: boolean;
     correctAnswer: string;
     userAnswer: string | null;
     question: string;
-    originalExplanation: string;
+    originalExplanation?: string;
   }[];
 }
 
@@ -56,6 +55,9 @@ export function TestResultsClient() {
   const [results, setResults] = useState<TestResults | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  /* ------------------------------------------------------------------ */
+  /*   Calculate results once                                           */
+  /* ------------------------------------------------------------------ */
   useMemo(() => {
     if (!test || !user) {
       setIsLoading(false);
@@ -77,11 +79,14 @@ export function TestResultsClient() {
       }
       return {
         questionId: question.id,
-        question: question.question,
+        /* ✅ changed .question → .text */
+        question: question.text,
         isCorrect,
         correctAnswer: question.options[question.correctIndex],
         userAnswer:
-          userAnswerIndex !== null ? question.options[userAnswerIndex] : null,
+          userAnswerIndex !== null && userAnswerIndex !== undefined
+            ? question.options[userAnswerIndex]
+            : null,
         originalExplanation: question.explanation,
       };
     });
@@ -99,26 +104,23 @@ export function TestResultsClient() {
     setResults(calculatedResults);
     if (score > 0) updateUserScore(score * 10);
 
-    const progressRef = doc(db, 'users', user.uid, 'testProgress', test.id);
+    /* save progress to Firestore */
+    const ref = doc(db, "users", user.uid, "testProgress", test.id);
     setDoc(
-      progressRef,
-      {
-        completed: true,
-        score: score,
-        percentage: percentage,
-      },
+      ref,
+      { completed: true, score, percentage },
       { merge: true }
     ).catch(() => {});
 
     setIsLoading(false);
   }, [test, userAnswers, user, updateUserScore]);
-  
+
+  /* redirect if we somehow lost state */
   useEffect(() => {
-    if (!isLoading && (!test || !user)) {
-      router.push("/tests");
-    }
+    if (!isLoading && (!test || !user)) router.push("/tests");
   }, [isLoading, test, user, router]);
 
+  /* chart data */
   const chartData = useMemo(() => {
     if (!results) return [];
     return [
@@ -135,17 +137,16 @@ export function TestResultsClient() {
     ];
   }, [results]);
 
-  const handleRetake = () => {
-    if (test) {
-      router.push(`/test/${test.id}`);
-    }
-  };
-
+  /* handlers */
+  const handleRetake = () => test && router.push(`/test/${test.id}`);
   const handleNewTest = () => {
     resetTest();
     router.push("/tests");
   };
 
+  /* ------------------------------------------------------------------ */
+  /*   Loading / error states                                           */
+  /* ------------------------------------------------------------------ */
   if (isLoading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] text-center">
@@ -166,8 +167,12 @@ export function TestResultsClient() {
     );
   }
 
+  /* ------------------------------------------------------------------ */
+  /*   Main render                                                      */
+  /* ------------------------------------------------------------------ */
   return (
     <div className="container mx-auto py-10">
+      {/* header card */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -176,7 +181,9 @@ export function TestResultsClient() {
         <Card className="text-center shadow-2xl rounded-2xl mb-8">
           <CardHeader>
             <Award className="mx-auto h-16 w-16 text-yellow-500" />
-            <CardTitle className="font-headline text-4xl">Test Results</CardTitle>
+            <CardTitle className="font-headline text-4xl">
+              Test Results
+            </CardTitle>
           </CardHeader>
           <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4 text-2xl">
             <div>
@@ -196,6 +203,7 @@ export function TestResultsClient() {
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* chart */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -203,7 +211,9 @@ export function TestResultsClient() {
         >
           <Card className="shadow-lg rounded-2xl">
             <CardHeader>
-              <CardTitle className="font-headline">Answer Breakdown</CardTitle>
+              <CardTitle className="font-headline">
+                Answer Breakdown
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <ResponsiveContainer width="100%" height={300}>
@@ -223,8 +233,8 @@ export function TestResultsClient() {
                     }}
                   />
                   <Bar dataKey="value" barSize={40}>
-                    {chartData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.fill} />
+                    {chartData.map((entry, idx) => (
+                      <Cell key={idx} fill={entry.fill} />
                     ))}
                   </Bar>
                 </BarChart>
@@ -233,6 +243,7 @@ export function TestResultsClient() {
           </Card>
         </motion.div>
 
+        {/* accordion */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -244,11 +255,8 @@ export function TestResultsClient() {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {results.breakdown.map((item, index) => (
-                  <AccordionItem
-                    key={item.questionId}
-                    value={item.questionId.toString()}
-                  >
+                {results.breakdown.map((item, idx) => (
+                  <AccordionItem key={item.questionId} value={String(idx)}>
                     <AccordionTrigger>
                       <div className="flex items-center">
                         {item.isCorrect ? (
@@ -256,7 +264,7 @@ export function TestResultsClient() {
                         ) : (
                           <XCircle className="h-5 w-5 text-red-500 mr-2" />
                         )}
-                        Question {index + 1}
+                        Question {idx + 1}
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="space-y-4">
@@ -269,9 +277,11 @@ export function TestResultsClient() {
                         Your Answer: {item.userAnswer || "Not answered"}
                       </p>
                       <p>Correct Answer: {item.correctAnswer}</p>
-                      <p className="text-muted-foreground italic border-l-4 pl-4">
-                        {item.originalExplanation}
-                      </p>
+                      {item.originalExplanation && (
+                        <p className="text-muted-foreground italic border-l-4 pl-4">
+                          {item.originalExplanation}
+                        </p>
+                      )}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
@@ -281,6 +291,7 @@ export function TestResultsClient() {
         </motion.div>
       </div>
 
+      {/* action buttons */}
       <div className="mt-8 flex justify-center gap-4">
         <Button onClick={handleRetake}>Retake Test</Button>
         <Button onClick={handleNewTest} variant="outline">

@@ -1,10 +1,10 @@
-
 import type { Topic } from '@/lib/types';
 import { Stethoscope, Pill, HeartPulse, Brain, Baby, BookMarked, Repeat } from 'lucide-react';
 
 // This file contains only the metadata for each topic, not the questions themselves.
 // The questions are loaded dynamically to improve performance.
-export const topics: (Omit<Topic, 'questions'> & { questionCount: number, difficulty: 'easy' | 'hard' })[] = [
+export const topics: (Omit<Topic, 'questions'> & { questionCount: number, difficulty: 'easy' | 'medium' | 'hard' })[] = [
+//                                                                          ^^^^^^^ ADDED 'medium' HERE
   {
     id: 'fundamentals',
     name: 'Fundamentals of Nursing',
@@ -102,5 +102,4 @@ export const topics: (Omit<Topic, 'questions'> & { questionCount: number, diffic
     difficulty: 'hard'
   }
 ];
-
     

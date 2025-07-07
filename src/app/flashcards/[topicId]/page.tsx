@@ -1,37 +1,30 @@
-import { notFound } from 'next/navigation';
-import { flashcardTopics } from '@/data/flashcards'; // Correct import for flashcards data
-import { FlashcardClient } from '@/components/flashcards/FlashcardClient';
-import type { FlashcardTopic } from '@/lib/types';
+// src/app/flashcards/[topicId]/page.tsx
+// Server Component – don’t add "use client"
 
-interface FlashcardTopicPageProps {
-  params: Promise<{
-    topicId: string;
-  }>;
-  // If you also need searchParams, you can add them here, also as a Promise:
-  // searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
-}
+import { notFound } from "next/navigation";
+import { flashcardTopics } from "@/data/flashcards";
+import { FlashcardClient } from "@/components/flashcards/FlashcardClient";
+import type { SerializableFlashcardTopic } from "@/lib/types";
 
 export function generateStaticParams() {
-  return flashcardTopics.map((topic) => ({
-    topicId: topic.id,
-  }));
+  return flashcardTopics.map(t => ({ topicId: t.id }));
 }
 
-function getFlashcardTopicData(topicId: string): FlashcardTopic | undefined {
-  return flashcardTopics.find((topic) => topic.id === topicId);
-}
+export default async function FlashcardTopicPage({
+  // 🔑  NO explicit type here — let Next provide it
+  params
+}: any) {
+  // (optional) narrow the type for IDE help
+  const { topicId } = params as { topicId: string };
 
-export default async function FlashcardTopicPage({ 
-  params 
-}: FlashcardTopicPageProps) {
-  const resolvedParams = await params; // Await params for Next.js 15
-  const topicWithIcon = getFlashcardTopicData(resolvedParams.topicId);
+  const meta = flashcardTopics.find(t => t.id === topicId);
+  if (!meta) return notFound();
 
-  if (!topicWithIcon) {
-    notFound();
-  }
+  const { default: flashcards } = (await import(
+    `@/data/flashcards-content/${meta.id}.json`
+  )) as { default: SerializableFlashcardTopic["flashcards"] };
 
-  const { icon, ...topic } = topicWithIcon;
+  const topic: SerializableFlashcardTopic = { ...meta, flashcards };
 
   return <FlashcardClient topic={topic} />;
 }
