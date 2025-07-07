@@ -1,30 +1,27 @@
-// src/app/flashcards/[topicId]/page.tsx
-// Server Component – don’t add "use client"
-
+// Server Component – no "use client"
 import { notFound } from "next/navigation";
 import { flashcardTopics } from "@/data/flashcards";
 import { FlashcardClient } from "@/components/flashcards/FlashcardClient";
-import type { SerializableFlashcardTopic } from "@/lib/types";
 
+/** Tell Next.js to pre‑render a page for every topic */
 export function generateStaticParams() {
-  return flashcardTopics.map(t => ({ topicId: t.id }));
+  return flashcardTopics.map((t) => ({ topicId: t.id }));
 }
 
+/**
+ * Next 15 passes `params` wrapped in a Promise, so:
+ *   1) the function is async
+ *   2) we await that promise to get the real object
+ */
 export default async function FlashcardTopicPage({
-  // 🔑  NO explicit type here — let Next provide it
-  params
-}: any) {
-  // (optional) narrow the type for IDE help
-  const { topicId } = params as { topicId: string };
+  params,
+}: {
+  params: Promise<{ topicId: string }>;
+}) {
+  const { topicId } = await params; // unwrap the promise
 
-  const meta = flashcardTopics.find(t => t.id === topicId);
-  if (!meta) return notFound();
-
-  const { default: flashcards } = (await import(
-    `@/data/flashcards-content/${meta.id}.json`
-  )) as { default: SerializableFlashcardTopic["flashcards"] };
-
-  const topic: SerializableFlashcardTopic = { ...meta, flashcards };
+  const topic = flashcardTopics.find((t) => t.id === topicId);
+  if (!topic) notFound();
 
   return <FlashcardClient topic={topic} />;
 }
