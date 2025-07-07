@@ -1,9 +1,9 @@
+
 import type { Question } from '@/lib/types';
 
 export const questions: Question[] = [
   {
     id: '701',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient with atrial fibrillation is at highest risk for which complication?',
     options: ['Myocardial infarction', 'Ischemic stroke', 'Pulmonary embolism', 'Heart failure'],
     correctIndex: 1,
@@ -11,7 +11,6 @@ export const questions: Question[] = [
   },
   {
     id: '702',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following ECG changes is most indicative of an acute myocardial infarction (MI)?',
     options: ['Flattened T-waves', 'Prolonged PR interval', 'ST-segment elevation', 'U-waves'],
     correctIndex: 2,
@@ -19,7 +18,6 @@ export const questions: Question[] = [
   },
   {
     id: '703',
-    topic: 'Cardiology Quest IQN',
     question: 'A nurse is administering a beta-blocker. Which assessment finding would require holding the medication?',
     options: ['Blood pressure 140/90 mmHg', 'Heart rate 52 bpm', 'Respiratory rate 20/min', 'Temperature 37.1°C'],
     correctIndex: 1,
@@ -27,7 +25,6 @@ export const questions: Question[] = [
   },
   {
     id: '704',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient with heart failure reports waking up at night feeling short of breath. This symptom is known as:',
     options: ['Orthopnea', 'Dyspnea on exertion', 'Paroxysmal nocturnal dyspnea (PND)', 'Apnea'],
     correctIndex: 2,
@@ -35,7 +32,6 @@ export const questions: Question[] = [
   },
   {
     id: '705',
-    topic: 'Cardiology Quest IQN',
     question: 'Which laboratory test is the most specific indicator of myocardial damage?',
     options: ['Creatine Kinase (CK-MB)', 'Myoglobin', 'Troponin I or T', 'Lactate Dehydrogenase (LDH)'],
     correctIndex: 2,
@@ -43,7 +39,6 @@ export const questions: Question[] = [
   },
   {
     id: '706',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the primary action of nitroglycerin in treating angina pectoris?',
     options: ['Increases heart rate', 'Causes coronary vasoconstriction', 'Reduces myocardial oxygen demand by causing vasodilation', 'Acts as a potent anti-inflammatory'],
     correctIndex: 2,
@@ -51,7 +46,6 @@ export const questions: Question[] = [
   },
   {
     id: '707',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient is diagnosed with deep vein thrombosis (DVT). What is the priority nursing concern?',
     options: ['Pain management', 'Risk for pulmonary embolism', 'Impaired skin integrity', 'Fluid volume deficit'],
     correctIndex: 1,
@@ -59,7 +53,6 @@ export const questions: Question[] = [
   },
   {
     id: '708',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is a classic sign of right-sided heart failure?',
     options: ['Pulmonary crackles', 'Peripheral edema', 'Cyanosis', 'Orthopnea'],
     correctIndex: 1,
@@ -67,7 +60,6 @@ export const questions: Question[] = [
   },
   {
     id: '709',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the target blood pressure for most adults with hypertension, according to JNC 8 guidelines?',
     options: ['<120/80 mmHg', '<130/80 mmHg', '<140/90 mmHg', '<150/90 mmHg for those >60 years'],
     correctIndex: 2,
@@ -75,7 +67,6 @@ export const questions: Question[] = [
   },
   {
     id: '710',
-    topic: 'Cardiology Quest IQN',
     question: 'Which electrolyte imbalance is most likely to cause ventricular fibrillation?',
     options: ['Hypocalcemia', 'Hypernatremia', 'Hypokalemia', 'Hypermagnesemia'],
     correctIndex: 2,
@@ -83,7 +74,6 @@ export const questions: Question[] = [
   },
   {
     id: '711',
-    topic: 'Cardiology Quest IQN',
     question: 'A nurse is teaching a patient about warfarin (Coumadin) therapy. Which statement indicates the need for further education?',
     options: ['"I will use a soft-bristle toothbrush."', '"I should report any unusual bleeding."', '"I will eat more green leafy vegetables to increase my Vitamin K."', '"I will get my INR checked regularly."'],
     correctIndex: 2,
@@ -91,7 +81,6 @@ export const questions: Question[] = [
   },
   {
     id: '712',
-    topic: 'Cardiology Quest IQN',
     question: 'Which heart sound is a hallmark of mitral valve prolapse?',
     options: ['S3 gallop', 'Pericardial friction rub', 'Mid-systolic click', 'Opening snap'],
     correctIndex: 2,
@@ -99,7 +88,6 @@ export const questions: Question[] = [
   },
   {
     id: '713',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the primary goal of treatment for cardiogenic shock?',
     options: ['Rapid fluid administration', 'Increase peripheral vascular resistance', 'Improve myocardial contractility and cardiac output', 'Decrease heart rate significantly'],
     correctIndex: 2,
@@ -107,7 +95,6 @@ export const questions: Question[] = [
   },
   {
     id: '714',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient presents with a tearing chest pain radiating to the back. Which condition is most likely?',
     options: ['Myocardial infarction', 'Aortic dissection', 'Pulmonary embolism', 'Pericarditis'],
     correctIndex: 1,
@@ -115,7 +102,6 @@ export const questions: Question[] = [
   },
   {
     id: '715',
-    topic: 'Cardiology Quest IQN',
     question: 'Which medication class is considered first-line for treating hypertension in a patient with diabetes?',
     options: ['Beta-blockers', 'ACE inhibitors or ARBs', 'Calcium channel blockers', 'Thiazide diuretics'],
     correctIndex: 1,
@@ -123,7 +109,6 @@ export const questions: Question[] = [
   },
   {
     id: '716',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the correct procedure for measuring orthostatic vital signs?',
     options: ['Measure BP and pulse after the patient has been standing for 10 minutes', 'Measure BP and pulse in supine, sitting, and standing positions with 1-3 minutes between each', 'Measure BP only in the sitting position at two different times', 'Measure pulse only after vigorous exercise'],
     correctIndex: 1,
@@ -131,7 +116,6 @@ export const questions: Question[] = [
   },
   {
     id: '717',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient with a pacemaker should be taught to avoid which of the following?',
     options: ['Using a microwave oven', 'Standing near strong magnetic fields (e.g., MRI)', 'Using a mobile phone on the opposite side of the pacemaker', 'Flying on commercial airplanes'],
     correctIndex: 1,
@@ -139,7 +123,6 @@ export const questions: Question[] = [
   },
   {
     id: '718',
-    topic: 'Cardiology Quest IQN',
     question: 'The "lub" sound (S1) of the heartbeat is caused by the closure of which valves?',
     options: ['Aortic and pulmonic valves', 'Mitral and tricuspid valves', 'Mitral and aortic valves', 'Tricuspid and pulmonic valves'],
     correctIndex: 1,
@@ -147,7 +130,6 @@ export const questions: Question[] = [
   },
   {
     id: '719',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient with pericarditis may report pain that is relieved by:',
     options: ['Lying flat', 'Deep breathing', 'Sitting up and leaning forward', 'Turning to the left side'],
     correctIndex: 2,
@@ -155,7 +137,6 @@ export const questions: Question[] = [
   },
   {
     id: '720',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of these is a non-modifiable risk factor for coronary artery disease?',
     options: ['Smoking', 'High-fat diet', 'Family history', 'Sedentary lifestyle'],
     correctIndex: 2,
@@ -163,7 +144,6 @@ export const questions: Question[] = [
   },
   {
     id: '721',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the primary cause of angina pectoris?',
     options: ['A blood clot completely blocking a coronary artery', 'Inflammation of the heart muscle', 'An imbalance between myocardial oxygen supply and demand', 'A tear in the aortic wall'],
     correctIndex: 2,
@@ -171,7 +151,6 @@ export const questions: Question[] = [
   },
   {
     id: '722',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient is diagnosed with infective endocarditis. The nurse anticipates the administration of which type of medication?',
     options: ['Long-term anticoagulant therapy', 'High-dose diuretic therapy', 'Long-term intravenous (IV) antibiotic therapy', 'Immediate corticosteroid therapy'],
     correctIndex: 2,
@@ -179,7 +158,6 @@ export const questions: Question[] = [
   },
   {
     id: '723',
-    topic: 'Cardiology Quest IQN',
     question: 'Which assessment finding is a classic sign of arterial insufficiency in the lower extremities?',
     options: ['Brownish discoloration of the skin', 'Warm, red skin', 'Pitting edema', 'Intermittent claudication'],
     correctIndex: 3,
@@ -187,7 +165,6 @@ export const questions: Question[] = [
   },
   {
     id: '724',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the electrical "pacemaker" of the heart?',
     options: ['Atrioventricular (AV) node', 'Sinoatrial (SA) node', 'Bundle of His', 'Purkinje fibers'],
     correctIndex: 1,
@@ -195,7 +172,6 @@ export const questions: Question[] = [
   },
   {
     id: '725',
-    topic: 'Cardiology Quest IQN',
     question: 'A common side effect of ACE inhibitors like lisinopril is:',
     options: ['Tachycardia', 'A persistent, dry cough', 'Weight gain', 'Hypokalemia'],
     correctIndex: 1,
@@ -203,7 +179,6 @@ export const questions: Question[] = [
   },
   {
     id: '726',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is a key component of patient teaching for heart failure management?',
     options: ['Avoiding all physical activity', 'Monitoring daily weight', 'Eating a high-sodium diet', 'Skipping medication doses if feeling well'],
     correctIndex: 1,
@@ -211,7 +186,6 @@ export const questions: Question[] = [
   },
   {
     id: '727',
-    topic: 'Cardiology Quest IQN',
     question: 'In a patient with peripheral venous disease, which intervention is most appropriate?',
     options: ['Elevating the legs above the heart', 'Keeping the legs in a dependent position', 'Applying heating pads to the feet', 'Restricting fluid intake'],
     correctIndex: 0,
@@ -219,7 +193,6 @@ export const questions: Question[] = [
   },
   {
     id: '728',
-    topic: 'Cardiology Quest IQN',
     question: 'What does the P wave on an ECG represent?',
     options: ['Ventricular depolarization', 'Ventricular repolarization', 'Atrial depolarization', 'Atrial repolarization'],
     correctIndex: 2,
@@ -227,7 +200,6 @@ export const questions: Question[] = [
   },
   {
     id: '729',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient is scheduled for a cardiac catheterization. What is a crucial pre-procedure assessment?',
     options: ['Assessing for allergies to iodine and shellfish', 'Checking for a history of asthma', 'Measuring abdominal girth', 'Testing hearing acuity'],
     correctIndex: 0,
@@ -235,7 +207,6 @@ export const questions: Question[] = [
   },
   {
     id: '730',
-    topic: 'Cardiology Quest IQN',
     question: 'Which finding is expected in a patient with severe aortic stenosis?',
     options: ['A wide pulse pressure', 'A bounding pulse', 'A systolic ejection murmur', 'A diastolic rumble'],
     correctIndex: 2,
@@ -243,7 +214,6 @@ export const questions: Question[] = [
   },
   {
     id: '731',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the primary action of diuretics in the treatment of heart failure?',
     options: ['To increase heart rate', 'To strengthen myocardial contraction', 'To reduce fluid volume (preload)', 'To dilate coronary arteries'],
     correctIndex: 2,
@@ -251,7 +221,6 @@ export const questions: Question[] = [
   },
   {
     id: '732',
-    topic: 'Cardiology Quest IQN',
     question: 'The QRS complex on an ECG represents:',
     options: ['Atrial depolarization', 'Ventricular depolarization', 'Atrial repolarization', 'Ventricular repolarization'],
     correctIndex: 1,
@@ -259,7 +228,6 @@ export const questions: Question[] = [
   },
   {
     id: '733',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following describes pulsus paradoxus?',
     options: ['An increase in heart rate during inspiration', 'A decrease in systolic blood pressure of >10 mmHg during inspiration', 'An alternating strong and weak pulse', 'A pulse that is difficult to palpate'],
     correctIndex: 1,
@@ -267,7 +235,6 @@ export const questions: Question[] = [
   },
   {
     id: '734',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient is taking spironolactone, a potassium-sparing diuretic. Which food should they be advised to consume in moderation?',
     options: ['Apples', 'White rice', 'Bananas', 'Cucumbers'],
     correctIndex: 2,
@@ -275,7 +242,6 @@ export const questions: Question[] = [
   },
   {
     id: '735',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the main therapeutic effect of statin medications (e.g., atorvastatin)?',
     options: ['Lowering blood pressure', 'Lowering LDL cholesterol', 'Preventing blood clots', 'Reducing heart rate'],
     correctIndex: 1,
@@ -283,7 +249,6 @@ export const questions: Question[] = [
   },
   {
     id: '736',
-    topic: 'Cardiology Quest IQN',
     question: 'Which rhythm requires immediate defibrillation?',
     options: ['Atrial fibrillation', 'Sinus bradycardia', 'Ventricular fibrillation', 'Asystole'],
     correctIndex: 2,
@@ -291,7 +256,6 @@ export const questions: Question[] = [
   },
   {
     id: '737',
-    topic: 'Cardiology Quest IQN',
     question: 'Jugular Vein Distention (JVD) at 45 degrees is a sign of:',
     options: ['Dehydration', 'Left-sided heart failure', 'Increased central venous pressure / fluid overload', 'Anemia'],
     correctIndex: 2,
@@ -299,7 +263,6 @@ export const questions: Question[] = [
   },
   {
     id: '738',
-    topic: 'Cardiology Quest IQN',
     question: 'What is a priority nursing intervention after a coronary artery bypass graft (CABG) surgery?',
     options: ['Encouraging coughing and deep breathing', 'Maintaining strict bed rest for 48 hours', 'Restricting all visitors', 'Removing the chest tube immediately'],
     correctIndex: 0,
@@ -307,7 +270,6 @@ export const questions: Question[] = [
   },
   {
     id: '739',
-    topic: 'Cardiology Quest IQN',
     question: 'What does a bruit heard over the carotid artery signify?',
     options: ['Normal blood flow', 'Complete artery blockage', 'Turbulent blood flow due to stenosis', 'A heart murmur'],
     correctIndex: 2,
@@ -315,7 +277,6 @@ export const questions: Question[] = [
   },
   {
     id: '740',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is the most dangerous complication of an abdominal aortic aneurysm (AAA)?',
     options: ['Hypertension', 'Rupture and hemorrhage', 'Formation of blood clots', 'Kidney failure'],
     correctIndex: 1,
@@ -323,7 +284,6 @@ export const questions: Question[] = [
   },
   {
     id: '741',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient with chronic atrial fibrillation is most likely to be prescribed which type of medication for stroke prevention?',
     options: ['An antiplatelet like aspirin', 'An anticoagulant like apixaban', 'A thrombolytic like alteplase', 'A beta-blocker like metoprolol'],
     correctIndex: 1,
@@ -331,7 +291,6 @@ export const questions: Question[] = [
   },
   {
     id: '742',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the correct placement for the V1 precordial ECG lead?',
     options: ['Fourth intercostal space, left sternal border', 'Fourth intercostal space, right sternal border', 'Fifth intercostal space, midclavicular line', 'Second intercostal space, right sternal border'],
     correctIndex: 1,
@@ -339,7 +298,6 @@ export const questions: Question[] = [
   },
   {
     id: '743',
-    topic: 'Cardiology Quest IQN',
     question: 'Which condition is associated with clubbing of the fingers?',
     options: ['Acute asthma attack', 'Chronic tissue hypoxia', 'Raynaud\'s disease', 'Iron deficiency anemia'],
     correctIndex: 1,
@@ -347,7 +305,6 @@ export const questions: Question[] = [
   },
   {
     id: '744',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient develops chest pain, dyspnea, and a pericardial friction rub. These are signs of:',
     options: ['Myocarditis', 'Pericarditis', 'Endocarditis', 'Aortic stenosis'],
     correctIndex: 1,
@@ -355,7 +312,6 @@ export const questions: Question[] = [
   },
   {
     id: '745',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the primary action of Calcium Channel Blockers (e.g., amlodipine) in treating hypertension?',
     options: ['Promote sodium excretion', 'Block the effects of adrenaline', 'Cause vasodilation by relaxing smooth muscle in blood vessels', 'Increase the force of heart contractions'],
     correctIndex: 2,
@@ -363,7 +319,6 @@ export const questions: Question[] = [
   },
   {
     id: '746',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is a sign of left-sided heart failure?',
     options: ['Jugular vein distention', 'Ascites', 'Crackles in the lungs', 'Hepatosplenomegaly'],
     correctIndex: 2,
@@ -371,7 +326,6 @@ export const questions: Question[] = [
   },
   {
     id: '747',
-    topic: 'Cardiology Quest IQN',
     question: 'What is Allen\'s test used to assess?',
     options: ['Deep vein thrombosis', 'The patency of the ulnar artery before radial artery cannulation', 'Carotid artery stenosis', 'Peripheral neuropathy'],
     correctIndex: 1,
@@ -379,7 +333,6 @@ export const questions: Question[] = [
   },
   {
     id: '748',
-    topic: 'Cardiology Quest IQN',
     question: 'What does the T wave on an ECG represent?',
     options: ['Atrial depolarization', 'Ventricular depolarization', 'Ventricular repolarization', 'The resting phase'],
     correctIndex: 2,
@@ -387,7 +340,6 @@ export const questions: Question[] = [
   },
   {
     id: '749',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the most common cause of coronary artery disease (CAD)?',
     options: ['Atherosclerosis', 'Valvular dysfunction', 'Congenital defects', 'Infection'],
     correctIndex: 0,
@@ -395,7 +347,6 @@ export const questions: Question[] = [
   },
   {
     id: '750',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient has a blood pressure of 210/120 mmHg with signs of end-organ damage. This is considered:',
     options: ['Stage 1 Hypertension', 'Stage 2 Hypertension', 'A hypertensive crisis', 'Normal for their age'],
     correctIndex: 2,
@@ -403,7 +354,6 @@ export const questions: Question[] = [
   },
   {
     id: '751',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is NOT a component of Virchow\'s triad for DVT risk?',
     options: ['Venous stasis', 'Endothelial injury', 'Hypercoagulability', 'Arterial hypertension'],
     correctIndex: 3,
@@ -411,7 +361,6 @@ export const questions: Question[] = [
   },
   {
     id: '752',
-    topic: 'Cardiology Quest IQN',
     question: 'The "point of maximal impulse" (PMI) is normally palpated at the:',
     options: ['Second intercostal space, right sternal border', 'Fifth intercostal space, midclavicular line', 'Subxiphoid area', 'Second intercostal space, left sternal border'],
     correctIndex: 1,
@@ -419,7 +368,6 @@ export const questions: Question[] = [
   },
   {
     id: '753',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient is being treated for heart failure with furosemide. Which lab value is most important for the nurse to monitor?',
     options: ['Hemoglobin', 'Serum potassium', 'White blood cell count', 'Serum creatinine'],
     correctIndex: 1,
@@ -427,7 +375,6 @@ export const questions: Question[] = [
   },
   {
     id: '754',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following best describes the pathophysiology of stable angina?',
     options: ['A fixed coronary artery obstruction', 'A ruptured atherosclerotic plaque with thrombus formation', 'Coronary artery vasospasm', 'Inflammation of the pericardial sac'],
     correctIndex: 0,
@@ -435,7 +382,6 @@ export const questions: Question[] = [
   },
   {
     id: '755',
-    topic: 'Cardiology Quest IQN',
     question: 'The difference between systolic and diastolic blood pressure is called:',
     options: ['Mean arterial pressure (MAP)', 'Pulse pressure', 'Cardiac output', 'Stroke volume'],
     correctIndex: 1,
@@ -443,7 +389,6 @@ export const questions: Question[] = [
   },
   {
     id: '756',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of these arrhythmias is characterized by a "saw-tooth" pattern on an ECG?',
     options: ['Atrial fibrillation', 'Ventricular tachycardia', 'Atrial flutter', 'Sinus tachycardia'],
     correctIndex: 2,
@@ -451,7 +396,6 @@ export const questions: Question[] = [
   },
   {
     id: '757',
-    topic: 'Cardiology Quest IQN',
     question: 'What is a common symptom of digoxin toxicity?',
     options: ['Tachycardia', 'Visual disturbances (e.g., yellow-green halos)', 'Hypertension', 'Increased appetite'],
     correctIndex: 1,
@@ -459,7 +403,6 @@ export const questions: Question[] = [
   },
   {
     id: '758',
-    topic: 'Cardiology Quest IQN',
     question: 'Which is a priority nursing diagnosis for a patient with acute decompensated heart failure and pulmonary edema?',
     options: ['Activity intolerance', 'Impaired gas exchange', 'Risk for infection', 'Knowledge deficit'],
     correctIndex: 1,
@@ -467,7 +410,6 @@ export const questions: Question[] = [
   },
   {
     id: '759',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the primary purpose of a Holter monitor?',
     options: ['To measure blood pressure over 24 hours', 'To continuously record the heart\'s electrical activity over 24-48 hours', 'To visualize the heart valves using ultrasound', 'To measure cardiac enzymes'],
     correctIndex: 1,
@@ -475,7 +417,6 @@ export const questions: Question[] = [
   },
   {
     id: '760',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient has an ankle-brachial index (ABI) of 0.6. This finding is indicative of:',
     options: ['Severe peripheral artery disease', 'Normal arterial circulation', 'Venous insufficiency', 'Moderate peripheral artery disease'],
     correctIndex: 3,
@@ -483,7 +424,6 @@ export const questions: Question[] = [
   },
   {
     id: '761',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is a key sign of cardiac tamponade (Beck\'s Triad)?',
     options: ['Hypertension, bradycardia, and wide pulse pressure', 'Hypotension, jugular vein distention, and muffled heart sounds', 'Chest pain, fever, and pericardial friction rub', 'Tachycardia, hypertension, and crackles'],
     correctIndex: 1,
@@ -491,7 +431,6 @@ export const questions: Question[] = [
   },
   {
     id: '762',
-    topic: 'Cardiology Quest IQN',
     question: 'Which lifestyle modification is most effective for lowering blood pressure?',
     options: ['Reducing sodium intake', 'Increasing caffeine intake', 'Adopting the DASH diet', 'Taking a daily multivitamin'],
     correctIndex: 2,
@@ -499,7 +438,6 @@ export const questions: Question[] = [
   },
   {
     id: '763',
-    topic: 'Cardiology Quest IQN',
     question: 'What does the PR interval on an ECG represent?',
     options: ['The time it takes for the ventricles to repolarize', 'The time for the electrical impulse to travel from the atria to the ventricles', 'The duration of ventricular contraction', 'The depolarization of the atria'],
     correctIndex: 1,
@@ -507,7 +445,6 @@ export const questions: Question[] = [
   },
   {
     id: '764',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient is prescribed sublingual nitroglycerin for angina. How should the nurse instruct the patient to take it?',
     options: ['"Swallow the tablet with a full glass of water."', '"Chew the tablet thoroughly before swallowing."', '"Place the tablet under your tongue and let it dissolve."', '"Take it only after the chest pain has gone away."'],
     correctIndex: 2,
@@ -515,7 +452,6 @@ export const questions: Question[] = [
   },
   {
     id: '765',
-    topic: 'Cardiology Quest IQN',
     question: 'Which is the most common symptom of a myocardial infarction in women?',
     options: ['Crushing chest pain radiating to the left arm', 'Sudden cardiac arrest', 'Unusual fatigue, shortness of breath, and indigestion', 'A sharp, stabbing pain on inspiration'],
     correctIndex: 2,
@@ -523,7 +459,6 @@ export const questions: Question[] = [
   },
   {
     id: '766',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the purpose of cardiac rehabilitation after an MI?',
     options: ['To ensure the patient remains on strict bed rest', 'To provide a medically supervised program to improve cardiovascular health', 'To administer daily anticoagulant injections', 'To focus solely on dietary restrictions'],
     correctIndex: 1,
@@ -531,7 +466,6 @@ export const questions: Question[] = [
   },
   {
     id: '767',
-    topic: 'Cardiology Quest IQN',
     question: 'Raynaud\'s disease is a condition characterized by:',
     options: ['Chronic inflammation of large arteries', 'Vasospasm of the arteries in the fingers and toes in response to cold or stress', 'Formation of varicose veins in the legs', 'Aneurysmal dilation of the aorta'],
     correctIndex: 1,
@@ -539,7 +473,6 @@ export const questions: Question[] = [
   },
   {
     id: '768',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the primary danger of untreated hypertension?',
     options: ['Risk of hypotension', 'Damage to target organs like the heart, brain, and kidneys', 'Development of diabetes', 'Chronic fatigue syndrome'],
     correctIndex: 1,
@@ -547,7 +480,6 @@ export const questions: Question[] = [
   },
   {
     id: '769',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is a compensatory mechanism in early heart failure?',
     options: ['Decreased heart rate', 'Activation of the renin-angiotensin-aldosterone system (RAAS)', 'Vasodilation of peripheral arteries', 'Decreased production of adrenaline'],
     correctIndex: 1,
@@ -555,7 +487,6 @@ export const questions: Question[] = [
   },
   {
     id: '770',
-    topic: 'Cardiology Quest IQN',
     question: 'A nurse is caring for a patient after a percutaneous coronary intervention (PCI) with stent placement. What is a priority assessment?',
     options: ['Checking for signs of bleeding at the catheter insertion site', 'Monitoring for an increase in appetite', 'Assessing for hearing loss', 'Encouraging immediate, vigorous ambulation'],
     correctIndex: 0,
@@ -563,7 +494,6 @@ export const questions: Question[] = [
   },
   {
     id: '771',
-    topic: 'Cardiology Quest IQN',
     question: 'Which statement about blood pressure is true?',
     options: ['Diastolic pressure is the peak pressure during ventricular contraction.', 'Systolic pressure reflects the pressure when the heart is at rest.', 'Blood pressure is calculated as Stroke Volume divided by Heart Rate.', 'Systolic pressure is the maximum pressure exerted on arteries when the ventricles contract.'],
     correctIndex: 3,
@@ -571,7 +501,6 @@ export const questions: Question[] = [
   },
   {
     id: '772',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient with a new diagnosis of hypertension asks how an ACE inhibitor works. The best response is:',
     options: ['"It helps your body get rid of excess fluid by making you urinate more."', '"It slows down your heart rate to reduce its workload."', '"It stops a hormone from being produced that tightens your blood vessels."', '"It directly dissolves cholesterol plaques in your arteries."'],
     correctIndex: 2,
@@ -579,7 +508,6 @@ export const questions: Question[] = [
   },
   {
     id: '773',
-    topic: 'Cardiology Quest IQN',
     question: 'What is a common complication of long-standing, uncontrolled atrial fibrillation?',
     options: ['Aortic regurgitation', 'Cardiomyopathy and heart failure', 'Complete heart block', 'Coronary artery vasospasm'],
     correctIndex: 1,
@@ -587,7 +515,6 @@ export const questions: Question[] = [
   },
   {
     id: '774',
-    topic: 'Cardiology Quest IQN',
     question: 'When auscultating the heart, an S3 heart sound ("ventricular gallop") in an older adult is an early sign of:',
     options: ['A well-conditioned athlete\'s heart', 'Aortic stenosis', 'Heart failure', 'Normal aging'],
     correctIndex: 2,
@@ -595,7 +522,6 @@ export const questions: Question[] = [
   },
   {
     id: '775',
-    topic: 'Cardiology Quest IQN',
     question: 'The primary purpose of administering morphine to a patient with an acute MI is to:',
     options: ['Prevent nausea and vomiting', 'Reduce pain and anxiety, which decreases cardiac workload', 'Dissolve the coronary artery thrombus', 'Increase the patient\'s heart rate'],
     correctIndex: 1,
@@ -603,7 +529,6 @@ export const questions: Question[] = [
   },
   {
     id: '776',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient has a potassium level of 6.2 mEq/L. Which ECG change would the nurse expect to see?',
     options: ['Prominent U wave', 'Tall, peaked T waves', 'ST segment depression', 'Shortened QT interval'],
     correctIndex: 1,
@@ -611,7 +536,6 @@ export const questions: Question[] = [
   },
   {
     id: '777',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is the most important modifiable risk factor for stroke?',
     options: ['Age', 'Gender', 'Hypertension', 'Ethnicity'],
     correctIndex: 2,
@@ -619,7 +543,6 @@ export const questions: Question[] = [
   },
   {
     id: '778',
-    topic: 'Cardiology Quest IQN',
     question: 'What is the definition of cardiac output?',
     options: ['The amount of blood ejected by a ventricle in one contraction.', 'The pressure the heart must work against to eject blood.', 'The volume of blood pumped by the heart in one minute.', 'The percentage of blood ejected from the left ventricle with each beat.'],
     correctIndex: 2,
@@ -627,7 +550,6 @@ export const questions: Question[] = [
   },
   {
     id: '779',
-    topic: 'Cardiology Quest IQN',
     question: 'A patient is in asystole. Which action is the priority?',
     options: ['Deliver a shock immediately (defibrillation)', 'Administer amiodarone', 'Start high-quality CPR and administer epinephrine', 'Check for a pulse every 30 seconds'],
     correctIndex: 2,
@@ -635,10 +557,11 @@ export const questions: Question[] = [
   },
   {
     id: '780',
-    topic: 'Cardiology Quest IQN',
     question: 'Which of the following is a classic symptom of peripheral artery disease (PAD)?',
     options: ['Warm skin with a ruddy color', 'Leg pain that is worse with dependency (dangling)', 'Leg pain during exercise that is relieved by rest (intermittent claudication)', 'Significant pitting edema in both legs'],
     correctIndex: 2,
     explanation: 'Intermittent claudication is the hallmark symptom of PAD, caused by muscle ischemia during activity.'
   }
 ];
+
+    
