@@ -37,7 +37,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
 
   const saveProgress = useCallback(async (answers: (number | null)[], currentIndex: number) => {
     if (user && topic) {
-      const progressRef = doc(db, 'users', user.uid, 'quizProgress', topic.id);
+      const progressRef = doc(db, "users", user.uid, "quizProgress", topic.id);
       await setDoc(progressRef, {
         userId: user.uid,
         topicId: topic.id,
@@ -54,7 +54,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     setTopic(selectedTopic);
     
     if (user) {
-        const progressRef = doc(db, 'users', user.uid, 'quizProgress', selectedTopic.id);
+        const progressRef = doc(db, "users", user.uid, "quizProgress", selectedTopic.id);
         const progressSnap = await getDoc(progressRef);
         
         // Check if we are retaking a completed quiz

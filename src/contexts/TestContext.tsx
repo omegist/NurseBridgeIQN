@@ -37,7 +37,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
 
   const saveProgress = useCallback(async (answers: (number | null)[], currentIndex: number) => {
     if (user && test) {
-      const progressRef = doc(db, 'users', user.uid, 'testProgress', test.id);
+      const progressRef = doc(db, "users", user.uid, "testProgress", test.id);
       await setDoc(progressRef, {
         userId: user.uid,
         testId: test.id,
@@ -54,7 +54,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
     setTest(selectedTest);
     
     if (user) {
-        const progressRef = doc(db, 'users', user.uid, 'testProgress', selectedTest.id);
+        const progressRef = doc(db, "users", user.uid, "testProgress", selectedTest.id);
         const progressSnap = await getDoc(progressRef);
         
         if (progressSnap.exists() && !progressSnap.data().completed) {
