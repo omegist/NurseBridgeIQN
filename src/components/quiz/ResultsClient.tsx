@@ -31,7 +31,7 @@ import { CheckCircle, XCircle, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
 import { doc, setDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { getFirebase } from "@/lib/firebase";
 
 interface QuizResults {
   score: number;
@@ -108,6 +108,7 @@ export function ResultsClient() {
     if (score > 0) updateUserScore(score * 10);
 
     /* Update Firestore progress */
+    const { db } = getFirebase();
     const ref = doc(db, "users", user.uid, "quizProgress", topic.id);
     setDoc(
       ref,

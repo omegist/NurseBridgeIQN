@@ -14,7 +14,7 @@ import {
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { getFirebase } from "@/lib/firebase";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -32,6 +32,7 @@ export default function TopicsPage() {
       }
 
       try {
+        const { db } = getFirebase();
         const progressData: Record<string, number> = {};
 
         // Fetch all progress docs in parallel

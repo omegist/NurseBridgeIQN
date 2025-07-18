@@ -3,7 +3,7 @@
 
 import React, { createContext, useContext, useState, ReactNode, useCallback } from "react"
 import { doc, getDoc, setDoc } from "firebase/firestore"
-import { db } from "@/lib/firebase"
+import { getFirebase } from "@/lib/firebase"
 import type { Test } from "@/lib/types"
 import { useAuth } from "./AuthContext"
 
@@ -37,6 +37,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
 
   const saveProgress = useCallback(async (answers: (number | null)[], currentIndex: number) => {
     if (user && test) {
+      const { db } = getFirebase();
       const progressRef = doc(db, "users", user.uid, "testProgress", test.id);
       await setDoc(progressRef, {
         userId: user.uid,
@@ -54,6 +55,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
     setTest(selectedTest);
     
     if (user) {
+        const { db } = getFirebase();
         const progressRef = doc(db, "users", user.uid, "testProgress", selectedTest.id);
         const progressSnap = await getDoc(progressRef);
         
