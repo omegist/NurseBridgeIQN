@@ -40,6 +40,9 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 const getAuthErrorMessage = (error: any): string => {
   switch (error.code) {
+    case 'auth/invalid-api-key':
+    case 'auth/api-key-not-valid':
+        return 'The Firebase API Key is not valid. Please check your .env file configuration.';
     case 'auth/invalid-credential':
     case 'auth/wrong-password':
     case 'auth/user-not-found':
@@ -64,9 +67,6 @@ const getAuthErrorMessage = (error: any): string => {
     case 'auth/operation-not-allowed':
     case 'auth/configuration-not-found':
         return 'Firebase project configuration is incomplete. Please go to your Firebase Console and ensure you have enabled the required Sign-in providers (Email/Password, Google, etc.).';
-    case 'auth/invalid-api-key':
-    case 'auth/api-key-not-valid':
-        return 'The Firebase API Key is not valid. Please check your .env file configuration.';
     default:
       console.error('Unhandled Auth Error:', error);
       return 'An unexpected error occurred. Please try again.';
@@ -82,20 +82,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter()
   const { toast } = useToast()
 
-  useEffect(() => {
+  const isInvalidApiKey = useCallback(() => {
     const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
-    if (!apiKey || apiKey === 'YOUR_API_KEY_HERE') {
+    const isInvalid = !apiKey || apiKey === 'YOUR_API_KEY_HERE';
+    if (isInvalid) {
+        toast({
+            variant: "destructive",
+            title: "Firebase API Key Missing",
+            description: "Please add your Firebase credentials to the .env file.",
+        });
+    }
+    return isInvalid;
+  }, [toast]);
+
+  useEffect(() => {
+    if (isInvalidApiKey()) {
       setIsApiKeyInvalid(true);
       setLoading(false);
       return;
     }
     setIsApiKeyInvalid(false);
-  }, []);
+  }, [isInvalidApiKey]);
 
   const handleUser = useCallback(async (firebaseUser: FirebaseUser | null) => {
     try {
       if (firebaseUser) {
-        const userRef = doc(db, 'users', firebaseUser.uid);
+        const userRef = doc(db, "users", firebaseUser.uid);
         let userDoc;
         try {
             userDoc = await getDoc(userRef);
@@ -176,6 +188,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [handleUser, isApiKeyInvalid]);
 
   const login = async (email: string, pass: string) => {
+    if (isInvalidApiKey()) return;
     try {
       await signInWithEmailAndPassword(auth, email, pass);
     } catch (error: any) {
@@ -187,6 +200,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const signup = async (email: string, pass: string, username: string) => {
+    if (isInvalidApiKey()) return;
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, pass);
       await updateProfile(userCredential.user, { displayName: username });
@@ -206,7 +220,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const updateUserScore = async (points: number) => {
     if (user) {
-      const userRef = doc(db, 'users', user.uid);
+      const userRef = doc(db, "users", user.uid);
       try {
         await updateDoc(userRef, { score: increment(points) });
         setUser(prev => prev ? { ...prev, score: prev.score + points } : null);
