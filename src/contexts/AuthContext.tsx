@@ -92,19 +92,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (isInvalidApiKey()) {
         setAuthConfigError('The Firebase API Key is missing or invalid. Please update your .env file.');
         setLoading(false);
+        setFirebaseInitialized(false);
         return;
     }
     
     try {
         initializeFirebase();
         setFirebaseInitialized(true);
+        setAuthConfigError(null);
     } catch (error: any) {
         setAuthConfigError('Failed to initialize Firebase. Please check your configuration.');
         setLoading(false);
+        setFirebaseInitialized(false);
     }
   }, [isInvalidApiKey]);
 
   const handleUser = useCallback(async (firebaseUser: FirebaseUser | null) => {
+    if (!firebaseInitialized) {
+        setLoading(false);
+        return;
+    }
+
     const { db } = getFirebase();
     try {
       if (firebaseUser) {
@@ -169,16 +177,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } finally {
       setLoading(false);
     }
-  }, [toast]);
+  }, [toast, firebaseInitialized]);
   
   useEffect(() => {
-    if (!firebaseInitialized) return;
+    if (!firebaseInitialized) {
+        setLoading(false);
+        return;
+    }
 
     const { auth } = getFirebase();
     const unsubscribe = onAuthStateChanged(auth, handleUser, (error: any) => {
       const message = getAuthErrorMessage(error);
       if (message.includes('API key') || message.includes('configuration')) {
         setAuthConfigError(message);
+        setFirebaseInitialized(false);
       } else {
         console.error("Firebase auth state error:", error);
       }
@@ -189,7 +201,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = async (email: string, pass: string) => {
     if (!firebaseInitialized) {
-        toast({ variant: 'destructive', title: 'Login failed', description: authConfigError });
+        toast({ variant: 'destructive', title: 'Login failed', description: authConfigError || "Firebase is not initialized." });
         return;
     }
     const { auth } = getFirebase();
@@ -205,13 +217,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signup = async (email: string, pass: string, username: string) => {
     if (!firebaseInitialized) {
-        toast({ variant: 'destructive', title: 'Sign up failed', description: authConfigError });
+        toast({ variant: 'destructive', title: 'Sign up failed', description: authConfigError || "Firebase is not initialized." });
         return;
     }
     const { auth } = getFirebase();
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, pass);
       await updateProfile(userCredential.user, { displayName: username });
+      // The onAuthStateChanged listener will handle creating the user doc in Firestore
     } catch (error: any) {
       const message = getAuthErrorMessage(error);
       if (message) {
