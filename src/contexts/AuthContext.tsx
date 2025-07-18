@@ -293,12 +293,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   };
   
+  const value = { user, loading, login, signup, logout, updateUserScore, updateUserAvatar };
+
   if (authConfigError) {
-    return <FirebaseWarning isApiKeyInvalid={isInvalidApiKey()} authConfigError={authConfigError} />;
+    return (
+        <AuthContext.Provider value={value}>
+            <FirebaseWarning isApiKeyInvalid={isInvalidApiKey()} authConfigError={authConfigError} />
+        </AuthContext.Provider>
+    );
   }
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, signup, logout, updateUserScore, updateUserAvatar }}>
+    <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
   )
