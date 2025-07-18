@@ -84,16 +84,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const isInvalidApiKey = useCallback(() => {
     const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
-    const isInvalid = !apiKey || apiKey === 'YOUR_API_KEY_HERE';
-    if (isInvalid) {
-        toast({
-            variant: "destructive",
-            title: "Firebase API Key Missing",
-            description: "Please add your Firebase credentials to the .env file.",
-        });
-    }
-    return isInvalid;
-  }, [toast]);
+    return !apiKey || apiKey === 'YOUR_API_KEY_HERE' || apiKey === 'undefined';
+  }, []);
 
   useEffect(() => {
     if (isInvalidApiKey()) {
@@ -188,7 +180,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [handleUser, isApiKeyInvalid]);
 
   const login = async (email: string, pass: string) => {
-    if (isInvalidApiKey()) return;
+    if (isInvalidApiKey()) {
+        toast({
+            variant: 'destructive',
+            title: 'Configuration Error',
+            description: 'The Firebase API Key is not valid. Please check your .env file.',
+        });
+        return;
+    }
     try {
       await signInWithEmailAndPassword(auth, email, pass);
     } catch (error: any) {
@@ -200,7 +199,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const signup = async (email: string, pass: string, username: string) => {
-    if (isInvalidApiKey()) return;
+    if (isInvalidApiKey()) {
+        toast({
+            variant: 'destructive',
+            title: 'Configuration Error',
+            description: 'The Firebase API Key is not valid. Please check your .env file.',
+        });
+        return;
+    }
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, pass);
       await updateProfile(userCredential.user, { displayName: username });
