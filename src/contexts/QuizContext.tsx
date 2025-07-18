@@ -3,7 +3,7 @@
 
 import React, { createContext, useContext, useState, ReactNode, useCallback } from "react"
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore"
-import { db } from "@/lib/firebase"
+import { getFirebase } from "@/lib/firebase"
 import type { Topic, UserAnswer } from "@/lib/types"
 import { useAuth } from "./AuthContext"
 
@@ -37,6 +37,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
 
   const saveProgress = useCallback(async (answers: (number | null)[], currentIndex: number) => {
     if (user && topic) {
+      const { db } = getFirebase();
       const progressRef = doc(db, "users", user.uid, "quizProgress", topic.id);
       await setDoc(progressRef, {
         userId: user.uid,
@@ -54,6 +55,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     setTopic(selectedTopic);
     
     if (user) {
+        const { db } = getFirebase();
         const progressRef = doc(db, "users", user.uid, "quizProgress", selectedTopic.id);
         const progressSnap = await getDoc(progressRef);
         
