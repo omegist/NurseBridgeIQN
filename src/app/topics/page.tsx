@@ -6,6 +6,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn, iconMap } from "@/lib/utils";
 import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
   Clock,
   BookOpen,
   FlaskConical,
@@ -18,6 +26,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase"; 
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
 
 export default function TopicsPage() {
   const { user } = useAuth();
