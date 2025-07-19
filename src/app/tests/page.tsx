@@ -1,3 +1,5 @@
+"use client";
+
 import { tests } from "@/data/tests";
 import { TestsClient } from "@/components/test/TestsClient";
 
