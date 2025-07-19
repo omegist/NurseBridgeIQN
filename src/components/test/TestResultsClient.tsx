@@ -146,7 +146,7 @@ export function TestResultsClient() {
     );
   }
 
-  if (!results) {
+  if (!results || !test) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] text-center">
         <h2 className="text-2xl font-headline">Could not load results.</h2>
@@ -286,4 +286,3 @@ export function TestResultsClient() {
     </div>
   );
 }
-
