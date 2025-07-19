@@ -22,13 +22,12 @@ import {
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { getFirebase } from "@/lib/firebase";
+import { db } from "@/lib/firebase";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 
 async function getTopicProgress(userId: string) {
-    const { db } = getFirebase();
     if (!db) return {};
 
     const progressData: Record<string, number> = {};
