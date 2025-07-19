@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
@@ -31,6 +32,7 @@ import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase"; // direct import of db here
+import { cn } from "@/lib/utils";
 
 interface TestResults {
   score: number;
@@ -43,6 +45,9 @@ interface TestResults {
     correctAnswer: string;
     userAnswer: string | null;
     question: string;
+    options: string[];
+    correctIndex: number;
+    userAnswerIndex: number | null;
     originalExplanation?: string;
   }[];
 }
@@ -78,6 +83,9 @@ export function TestResultsClient() {
         questionId: question.id,
         question: question.text,
         isCorrect,
+        options: question.options,
+        correctIndex: question.correctIndex,
+        userAnswerIndex: userAnswerIndex,
         correctAnswer: question.options[question.correctIndex],
         userAnswer:
           userAnswerIndex !== null && userAnswerIndex !== undefined
@@ -243,25 +251,40 @@ export function TestResultsClient() {
                 {results.breakdown.map((item, idx) => (
                   <AccordionItem key={item.questionId} value={String(idx)}>
                     <AccordionTrigger>
-                      <div className="flex items-center">
+                       <div className="flex items-center text-left">
                         {item.isCorrect ? (
-                          <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                          <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         ) : (
-                          <XCircle className="h-5 w-5 text-red-500 mr-2" />
+                          <XCircle className="h-5 w-5 text-red-500 mr-2 flex-shrink-0" />
                         )}
-                        Question {idx + 1}
+                        <span>Question {idx + 1}: {item.question}</span>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="space-y-4">
-                      <p className="font-semibold">{item.question}</p>
-                      <p
-                        className={
-                          item.isCorrect ? "text-green-600" : "text-red-600"
-                        }
-                      >
-                        Your Answer: {item.userAnswer || "Not answered"}
-                      </p>
-                      <p>Correct Answer: {item.correctAnswer}</p>
+                      <div className="space-y-2">
+                        {item.options.map((option, optionIdx) => {
+                          const isCorrectOption = optionIdx === item.correctIndex;
+                          const isUserSelected = optionIdx === item.userAnswerIndex;
+
+                          return (
+                            <div
+                              key={optionIdx}
+                              className={cn(
+                                "p-3 border rounded-lg",
+                                isCorrectOption ? "bg-green-100 border-green-300 dark:bg-green-900/50 dark:border-green-700" : "bg-muted/30",
+                                isUserSelected && !isCorrectOption ? "bg-red-100 border-red-300 dark:bg-red-900/50 dark:border-red-700" : ""
+                              )}
+                            >
+                              <p className={cn(
+                                isCorrectOption ? "text-green-800 dark:text-green-200" : "",
+                                isUserSelected && !isCorrectOption ? "text-red-800 dark:text-red-200" : ""
+                              )}>
+                                {option}
+                              </p>
+                            </div>
+                          );
+                        })}
+                      </div>
                       {item.originalExplanation && (
                         <p className="text-muted-foreground italic border-l-4 pl-4">
                           {item.originalExplanation}
