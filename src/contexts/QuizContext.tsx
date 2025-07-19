@@ -1,10 +1,9 @@
-
 "use client"
 
 import React, { createContext, useContext, useState, ReactNode, useCallback } from "react"
-import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore"
-import { getFirebase } from "@/lib/firebase"
-import type { Topic, UserAnswer } from "@/lib/types"
+import { doc, getDoc, setDoc } from "firebase/firestore"
+import { db } from "@/lib/firebase"  // Correct import from your firebase.ts
+import type { Topic } from "@/lib/types"
 import { useAuth } from "./AuthContext"
 
 interface QuizContextType {
@@ -37,7 +36,6 @@ export function QuizProvider({ children }: { children: ReactNode }) {
 
   const saveProgress = useCallback(async (answers: (number | null)[], currentIndex: number) => {
     if (user && topic) {
-      const { db } = getFirebase();
       const progressRef = doc(db, "users", user.uid, "quizProgress", topic.id);
       await setDoc(progressRef, {
         userId: user.uid,
@@ -53,82 +51,78 @@ export function QuizProvider({ children }: { children: ReactNode }) {
   const startQuiz = useCallback(async (selectedTopic: Topic) => {
     setQuizStarted(true);
     setTopic(selectedTopic);
-    
+
     if (user) {
-        const { db } = getFirebase();
-        const progressRef = doc(db, "users", user.uid, "quizProgress", selectedTopic.id);
-        const progressSnap = await getDoc(progressRef);
-        
-        // Check if we are retaking a completed quiz
-        if (progressSnap.exists() && progressSnap.data().completed) {
-            // This is a retake. Reset the progress.
-            const newAnswers = new Array(selectedTopic.questions.length).fill(null);
-            await setDoc(progressRef, {
-              userId: user.uid,
-              topicId: selectedTopic.id,
-              userAnswers: newAnswers,
-              currentQuestionIndex: 0,
-              updatedAt: new Date(),
-              completed: false, // Mark as in-progress for the new attempt
-            }, { merge: true });
+      const progressRef = doc(db, "users", user.uid, "quizProgress", selectedTopic.id);
+      const progressSnap = await getDoc(progressRef);
 
-            setUserAnswers(newAnswers);
-            setCurrentQuestionIndex(0);
-            const initialVisited = new Array(selectedTopic.questions.length).fill(false);
-            initialVisited[0] = true;
-            setVisitedQuestions(initialVisited);
+      if (progressSnap.exists() && progressSnap.data().completed) {
+        // Retake: reset progress
+        const newAnswers = new Array(selectedTopic.questions.length).fill(null);
+        await setDoc(progressRef, {
+          userId: user.uid,
+          topicId: selectedTopic.id,
+          userAnswers: newAnswers,
+          currentQuestionIndex: 0,
+          updatedAt: new Date(),
+          completed: false,
+        }, { merge: true });
 
-        } else if (progressSnap.exists()) { // Resuming an in-progress quiz
-            const progress = progressSnap.data();
-            const savedAnswers = progress.userAnswers || [];
+        setUserAnswers(newAnswers);
+        setCurrentQuestionIndex(0);
+        const initialVisited = new Array(selectedTopic.questions.length).fill(false);
+        initialVisited[0] = true;
+        setVisitedQuestions(initialVisited);
 
-            // If the number of questions in the topic has changed, reset progress.
-            if (savedAnswers.length !== selectedTopic.questions.length) {
-              const newAnswers = new Array(selectedTopic.questions.length).fill(null);
-              await setDoc(progressRef, {
-                userAnswers: newAnswers,
-                currentQuestionIndex: 0,
-                updatedAt: new Date(),
-                completed: false,
-              }, { merge: true });
+      } else if (progressSnap.exists()) {
+        // Resume in-progress quiz
+        const progress = progressSnap.data();
+        const savedAnswers = progress.userAnswers || [];
 
-              setUserAnswers(newAnswers);
-              setCurrentQuestionIndex(0);
-              const initialVisited = new Array(selectedTopic.questions.length).fill(false);
-              initialVisited[0] = true;
-              setVisitedQuestions(initialVisited);
-            } else {
-              // Lengths match, so resume as normal
-              setUserAnswers(savedAnswers);
-              setCurrentQuestionIndex(progress.currentQuestionIndex || 0);
+        if (savedAnswers.length !== selectedTopic.questions.length) {
+          const newAnswers = new Array(selectedTopic.questions.length).fill(null);
+          await setDoc(progressRef, {
+            userAnswers: newAnswers,
+            currentQuestionIndex: 0,
+            updatedAt: new Date(),
+            completed: false,
+          }, { merge: true });
 
-              const initialVisited = new Array(selectedTopic.questions.length).fill(false);
-              (savedAnswers || []).forEach((ans: number | null, index: number) => {
-                if(ans !== null) initialVisited[index] = true;
-              });
-              initialVisited[progress.currentQuestionIndex || 0] = true;
-              setVisitedQuestions(initialVisited);
-            }
+          setUserAnswers(newAnswers);
+          setCurrentQuestionIndex(0);
+          const initialVisited = new Array(selectedTopic.questions.length).fill(false);
+          initialVisited[0] = true;
+          setVisitedQuestions(initialVisited);
+        } else {
+          setUserAnswers(savedAnswers);
+          setCurrentQuestionIndex(progress.currentQuestionIndex || 0);
 
-        } else { // Starting a brand new quiz
-            setUserAnswers(new Array(selectedTopic.questions.length).fill(null));
-            setCurrentQuestionIndex(0);
-            const initialVisited = new Array(selectedTopic.questions.length).fill(false);
-            initialVisited[0] = true;
-            setVisitedQuestions(initialVisited);
+          const initialVisited = new Array(selectedTopic.questions.length).fill(false);
+          savedAnswers.forEach((ans: number | null, index: number) => {
+            if (ans !== null) initialVisited[index] = true;
+          });
+          initialVisited[progress.currentQuestionIndex || 0] = true;
+          setVisitedQuestions(initialVisited);
         }
-    } else { // User not logged in (fallback)
+      } else {
+        // New quiz
         setUserAnswers(new Array(selectedTopic.questions.length).fill(null));
         setCurrentQuestionIndex(0);
         const initialVisited = new Array(selectedTopic.questions.length).fill(false);
         initialVisited[0] = true;
         setVisitedQuestions(initialVisited);
+      }
+    } else {
+      // Not logged in fallback
+      setUserAnswers(new Array(selectedTopic.questions.length).fill(null));
+      setCurrentQuestionIndex(0);
+      const initialVisited = new Array(selectedTopic.questions.length).fill(false);
+      initialVisited[0] = true;
+      setVisitedQuestions(initialVisited);
     }
   }, [user]);
-  
+
   const resetQuiz = useCallback(() => {
-    // This function is now mostly for leaving a quiz and returning to the topics list
-    // or starting a completely new topic.
     setTopic(null)
     setUserAnswers([])
     setCurrentQuestionIndex(0)
@@ -168,3 +162,4 @@ export function useQuiz() {
   }
   return context
 }
+
