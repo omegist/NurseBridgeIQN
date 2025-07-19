@@ -269,6 +269,7 @@ export function TestResultsClient() {
                             )}
                           >
                             <p className={cn(
+                              "text-sm",
                               isCorrectOption ? "text-green-800 dark:text-green-200" : "",
                               isUserSelected && !isCorrectOption ? "text-red-800 dark:text-red-200" : ""
                             )}>
