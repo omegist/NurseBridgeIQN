@@ -2,9 +2,10 @@
 "use client"
 
 import { AuthForm } from "@/components/auth/AuthForm";
-import { Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
+import { Loader2 } from "lucide-react";
 
 export default function AuthPage() {
     const { user, loading } = useAuth();
@@ -17,19 +18,16 @@ export default function AuthPage() {
         }
     }, [user, loading, router]);
 
-    // Show a loading spinner while checking auth status or during redirection.
+    // While we're checking for auth state or if the user is logged in (and about to be redirected),
+    // show a loading spinner.
     if (loading || user) {
         return (
-            <div className="flex items-center justify-center h-screen">
-                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+            <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
+                <Loader2 className="h-16 w-16 animate-spin text-primary" />
             </div>
         );
     }
 
-    // Only show the AuthForm if the user is not logged in and loading is complete.
-    return (
-        <Suspense fallback={<div className="flex items-center justify-center h-screen"><div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div></div>}>
-            <AuthForm />
-        </Suspense>
-    );
+    // Only show the AuthForm once we're sure the user is not logged in.
+    return <AuthForm />;
 }

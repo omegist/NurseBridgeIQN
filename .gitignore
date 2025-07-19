@@ -6,6 +6,9 @@ android/.gradle/
 android/app/build/
 *.zip
 *.log
+
+# Ignore environment variables
 .env
-.env
-.env
+.env.local
+.env.*.local
+
