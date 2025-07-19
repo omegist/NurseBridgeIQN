@@ -16,17 +16,47 @@ import {
 import {
   Clock,
   BookOpen,
-  FlaskConical,
   RotateCw,
   Check,
 } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase"; 
+import { getFirebase } from "@/lib/firebase";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
+
+async function getTopicProgress(userId: string) {
+    const { db } = getFirebase();
+    if (!db) return {};
+
+    const progressData: Record<string, number> = {};
+    const topicPromises = topics.map((topic) =>
+        getDoc(doc(db, "users", userId, "quizProgress", topic.id))
+    );
+    const docSnapshots = await Promise.all(topicPromises);
+
+    docSnapshots.forEach((docSnap, index) => {
+        const currentTopic = topics[index];
+        if (docSnap.exists()) {
+            const data = docSnap.data();
+            if (data.completed === true) {
+                progressData[currentTopic.id] = 100;
+            } else {
+                const userAnswers = data.userAnswers || [];
+                const totalQuestions = currentTopic.questionCount || 0;
+                if (totalQuestions > 0) {
+                    const answeredCount = userAnswers.filter(
+                        (answer: null | number) => answer !== null
+                    ).length;
+                    progressData[currentTopic.id] = (answeredCount / totalQuestions) * 100;
+                }
+            }
+        }
+    });
+    return progressData;
+}
 
 export default function TopicsPage() {
   const { user } = useAuth();
@@ -41,31 +71,8 @@ export default function TopicsPage() {
 
     setIsLoading(true);
     try {
-      const progressData: Record<string, number> = {};
-      const topicPromises = topics.map((topic) =>
-        getDoc(doc(db, "users", user.uid, "quizProgress", topic.id))
-      );
-      const docSnapshots = await Promise.all(topicPromises);
-
-      docSnapshots.forEach((docSnap, index) => {
-        const currentTopic = topics[index];
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          if (data.completed === true) {
-            progressData[currentTopic.id] = 100;
-          } else {
-            const userAnswers = data.userAnswers || [];
-            const totalQuestions = currentTopic.questionCount || 0;
-            if (totalQuestions > 0) {
-              const answeredCount = userAnswers.filter(
-                (answer: null | number) => answer !== null
-              ).length;
-              progressData[currentTopic.id] = (answeredCount / totalQuestions) * 100;
-            }
-          }
-        }
-      });
-      setTopicProgress(progressData);
+        const progress = await getTopicProgress(user.uid);
+        setTopicProgress(progress);
     } catch (error) {
       console.error(
         "Error fetching topic progress. This could be a Firestore security rules issue.",
