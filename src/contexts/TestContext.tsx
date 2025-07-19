@@ -1,96 +1,154 @@
+
 "use client"
 
-import React, { createContext, useContext, useState, ReactNode, useCallback } from "react";
-import { doc, getDoc, setDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import { useAuth } from "./AuthContext";
+import React, { createContext, useContext, useState, ReactNode, useCallback } from "react"
+import { doc, getDoc, setDoc } from "firebase/firestore"
+import { db } from "@/lib/firebase"
+import type { Test } from "@/lib/types"
+import { useAuth } from "./AuthContext"
 
 interface TestContextType {
-  testData: any | null;
-  setTestData: React.Dispatch<React.SetStateAction<any | null>>;
-  loading: boolean;
-  error: string | null;
-  fetchTestData: (testId: string) => Promise<void>;
-  saveTestData: (testId: string, data: any) => Promise<void>;
+  test: Test | null;
+  setTest: (test: Test | null) => void;
+  userAnswers: (number | null)[];
+  setUserAnswers: React.Dispatch<React.SetStateAction<(number | null)[]>>;
+  currentQuestionIndex: number;
+  setCurrentQuestionIndex: React.Dispatch<React.SetStateAction<number>>;
+  testStarted: boolean;
+  startTest: (test: Test) => Promise<void>;
+  resetTest: () => void;
+  visitedQuestions: boolean[];
+  setVisitedQuestions: React.Dispatch<React.SetStateAction<boolean[]>>;
+  saveProgress: (answers: (number | null)[], currentIndex: number) => Promise<void>;
+  testDuration: number;
+  setTestDuration: (duration: number) => void;
 }
 
-const TestContext = createContext<TestContextType | undefined>(undefined);
+const TestContext = createContext<TestContextType | undefined>(undefined)
 
 export function TestProvider({ children }: { children: ReactNode }) {
   const { user } = useAuth();
-  const [testData, setTestData] = useState<any | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [test, setTest] = useState<Test | null>(null)
+  const [userAnswers, setUserAnswers] = useState<(number | null)[]>([])
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+  const [testStarted, setTestStarted] = useState(false)
+  const [visitedQuestions, setVisitedQuestions] = useState<boolean[]>([])
+  const [testDuration, setTestDuration] = useState(0);
 
-  const fetchTestData = useCallback(async (testId: string) => {
-    if (!user) {
-      setError("User not authenticated");
-      return;
+  const saveProgress = useCallback(async (answers: (number | null)[], currentIndex: number) => {
+    if (user && test) {
+      const progressRef = doc(db, "users", user.uid, "testProgress", test.id);
+      await setDoc(progressRef, {
+        userId: user.uid,
+        testId: test.id,
+        userAnswers: answers,
+        currentQuestionIndex: currentIndex,
+        updatedAt: new Date(),
+        completed: false,
+      }, { merge: true });
     }
+  }, [user, test]);
 
-    setLoading(true);
-    setError(null);
+  const startTest = useCallback(async (selectedTest: Test) => {
+    setTestStarted(true);
+    setTest(selectedTest);
 
-    try {
-      const testDocRef = doc(db, "users", user.uid, "tests", testId);
-      const testDocSnap = await getDoc(testDocRef);
+    if (user) {
+      const progressRef = doc(db, "users", user.uid, "testProgress", selectedTest.id);
+      try {
+        const progressSnap = await getDoc(progressRef);
 
-      if (testDocSnap.exists()) {
-        setTestData(testDocSnap.data());
-      } else {
-        setTestData(null);
-        setError("Test data not found");
+        if (progressSnap.exists() && !progressSnap.data().completed) {
+          // Resume in-progress test
+          const progress = progressSnap.data();
+          const savedAnswers = progress.userAnswers || [];
+          
+          setUserAnswers(savedAnswers);
+          setCurrentQuestionIndex(progress.currentQuestionIndex || 0);
+
+          const initialVisited = new Array(selectedTest.questions.length).fill(false);
+          savedAnswers.forEach((ans: number | null, index: number) => {
+            if (ans !== null) initialVisited[index] = true;
+          });
+          initialVisited[progress.currentQuestionIndex || 0] = true;
+          setVisitedQuestions(initialVisited);
+
+        } else {
+          // New test or completed test, so reset
+          const newAnswers = new Array(selectedTest.questions.length).fill(null);
+          setUserAnswers(newAnswers);
+          setCurrentQuestionIndex(0);
+          const initialVisited = new Array(selectedTest.questions.length).fill(false);
+          initialVisited[0] = true;
+          setVisitedQuestions(initialVisited);
+          // Optional: clear previous progress if retaking a completed test
+          if (progressSnap.exists() && progressSnap.data().completed) {
+              await setDoc(progressRef, {
+                  userAnswers: newAnswers,
+                  currentQuestionIndex: 0,
+                  completed: false,
+                  updatedAt: new Date()
+              }, {merge: true});
+          }
+        }
+      } catch (error) {
+        console.error("Error loading test progress, starting fresh:", error);
+        // Fallback to starting a new test if Firestore fails
+        const newAnswers = new Array(selectedTest.questions.length).fill(null);
+        setUserAnswers(newAnswers);
+        setCurrentQuestionIndex(0);
+        const initialVisited = new Array(selectedTest.questions.length).fill(false);
+        initialVisited[0] = true;
+        setVisitedQuestions(initialVisited);
       }
-    } catch (err) {
-      console.error("Error fetching test data:", err);
-      setError("Failed to fetch test data. Check Firestore rules.");
-      setTestData(null);
-    } finally {
-      setLoading(false);
+    } else {
+      // Not logged in fallback
+      const newAnswers = new Array(selectedTest.questions.length).fill(null);
+      setUserAnswers(newAnswers);
+      setCurrentQuestionIndex(0);
+      const initialVisited = new Array(selectedTest.questions.length).fill(false);
+      initialVisited[0] = true;
+      setVisitedQuestions(initialVisited);
     }
   }, [user]);
 
-  const saveTestData = useCallback(async (testId: string, data: any) => {
-    if (!user) {
-      setError("User not authenticated");
-      return;
-    }
-
-    setLoading(true);
-    setError(null);
-
-    try {
-      const testDocRef = doc(db, "users", user.uid, "tests", testId);
-      await setDoc(testDocRef, data, { merge: true });
-      setTestData(data);
-    } catch (err) {
-      console.error("Error saving test data:", err);
-      setError("Failed to save test data. Check Firestore rules.");
-    } finally {
-      setLoading(false);
-    }
-  }, [user]);
+  const resetTest = useCallback(() => {
+    setTest(null)
+    setUserAnswers([])
+    setCurrentQuestionIndex(0)
+    setTestStarted(false)
+    setVisitedQuestions([])
+    setTestDuration(0);
+  }, [])
 
   return (
     <TestContext.Provider
       value={{
-        testData,
-        setTestData,
-        loading,
-        error,
-        fetchTestData,
-        saveTestData,
+        test,
+        setTest,
+        userAnswers,
+        setUserAnswers,
+        currentQuestionIndex,
+        setCurrentQuestionIndex,
+        testStarted,
+        startTest,
+        resetTest,
+        visitedQuestions,
+        setVisitedQuestions,
+        saveProgress,
+        testDuration,
+        setTestDuration,
       }}
     >
       {children}
     </TestContext.Provider>
-  );
+  )
 }
 
 export function useTest() {
-  const context = useContext(TestContext);
+  const context = useContext(TestContext)
   if (context === undefined) {
-    throw new Error("useTest must be used within a TestProvider");
+    throw new Error("useTest must be used within a TestProvider")
   }
-  return context;
+  return context
 }
