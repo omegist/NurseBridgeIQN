@@ -10,13 +10,8 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
+  CardDescription
 } from "@/components/ui/card";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import {
   BarChart,
   Bar,
@@ -33,6 +28,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase"; // <-- direct import of db
 import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 interface QuizResults {
   score: number;
@@ -214,7 +210,7 @@ export function ResultsClient() {
         </Card>
       </motion.div>
 
-      {/* chart + review accordion */}
+      {/* chart + review list */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* chart */}
         <motion.div
@@ -256,65 +252,67 @@ export function ResultsClient() {
           </Card>
         </motion.div>
 
-        {/* accordion with explanations */}
+        {/* review list */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Card className="shadow-lg rounded-2xl">
+          <Card className="shadow-lg rounded-2xl max-h-[600px] overflow-y-auto">
             <CardHeader>
               <CardTitle className="font-headline">Review Answers</CardTitle>
             </CardHeader>
             <CardContent>
-              <Accordion type="single" collapsible className="w-full">
+              <div className="space-y-6">
                 {results.breakdown.map((item, idx) => (
-                  <AccordionItem key={item.questionId} value={String(idx)}>
-                    <AccordionTrigger>
-                      <div className="flex items-center text-left">
-                        {item.isCorrect ? (
-                          <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                  <div key={item.questionId}>
+                    <div className="flex items-start text-left space-x-3">
+                       {item.isCorrect ? (
+                          <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
                         ) : (
-                          <XCircle className="h-5 w-5 text-red-500 mr-2 flex-shrink-0" />
+                          <XCircle className="h-5 w-5 text-red-500 mt-1 flex-shrink-0" />
                         )}
-                        <span>Question {idx + 1}: {item.question}</span>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="space-y-4">
-                      <div className="space-y-2">
-                        {item.options.map((option, optionIdx) => {
-                          const isCorrectOption = optionIdx === item.correctIndex;
-                          const isUserSelected = optionIdx === item.userAnswerIndex;
+                      <p className="font-semibold">Question {idx + 1}: {item.question}</p>
+                    </div>
 
-                          return (
-                            <div
-                              key={optionIdx}
-                              className={cn(
-                                "p-3 border rounded-lg",
-                                isCorrectOption ? "bg-green-100 border-green-300 dark:bg-green-900/50 dark:border-green-700" : "bg-muted/30",
-                                isUserSelected && !isCorrectOption ? "bg-red-100 border-red-300 dark:bg-red-900/50 dark:border-red-700" : ""
-                              )}
-                            >
-                              <p className={cn(
-                                isCorrectOption ? "text-green-800 dark:text-green-200" : "",
-                                isUserSelected && !isCorrectOption ? "text-red-800 dark:text-red-200" : ""
-                              )}>
-                                {option}
-                              </p>
-                            </div>
-                          );
-                        })}
-                      </div>
+                    <div className="space-y-2 mt-4 ml-8">
+                      {item.options.map((option, optionIdx) => {
+                        const isCorrectOption = optionIdx === item.correctIndex;
+                        const isUserSelected = optionIdx === item.userAnswerIndex;
 
-                      {item.originalExplanation && (
-                        <p className="text-muted-foreground italic border-l-4 pl-4">
-                          {item.originalExplanation}
+                        return (
+                          <div
+                            key={optionIdx}
+                            className={cn(
+                              "p-3 border rounded-lg",
+                              isCorrectOption ? "bg-green-100 border-green-300 dark:bg-green-900/50 dark:border-green-700" : "bg-muted/30",
+                              isUserSelected && !isCorrectOption ? "bg-red-100 border-red-300 dark:bg-red-900/50 dark:border-red-700" : ""
+                            )}
+                          >
+                            <p className={cn(
+                              isCorrectOption ? "text-green-800 dark:text-green-200" : "",
+                              isUserSelected && !isCorrectOption ? "text-red-800 dark:text-red-200" : ""
+                            )}>
+                              {option}
+                            </p>
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {item.originalExplanation && (
+                      <div className="mt-4 ml-8 p-3 bg-blue-50 border-l-4 border-blue-400 dark:bg-blue-900/30 rounded-r-lg">
+                        <p className="text-sm text-blue-800 dark:text-blue-200">
+                          <span className="font-bold">Rationale:</span> {item.originalExplanation}
                         </p>
-                      )}
-                    </AccordionContent>
-                  </AccordionItem>
+                      </div>
+                    )}
+                    
+                    {idx < results.breakdown.length - 1 && <Separator className="mt-6" />}
+
+                  </div>
                 ))}
-              </Accordion>
+              </div>
             </CardContent>
           </Card>
         </motion.div>
