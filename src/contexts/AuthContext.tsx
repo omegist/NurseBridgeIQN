@@ -152,6 +152,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           })
         } else {
           console.error("Error handling user state:", error)
+          setAuthConfigError("An error occurred while fetching user data.");
         }
         setUser(null)
       } finally {
@@ -182,6 +183,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           setAuthConfigError(message);
         } else {
           console.error("Firebase auth state error:", error);
+          setAuthConfigError("An unknown authentication error occurred.");
         }
         setLoading(false);
       }

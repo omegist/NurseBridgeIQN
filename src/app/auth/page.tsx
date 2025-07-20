@@ -11,18 +11,14 @@ export default function AuthPage() {
     const router = useRouter();
 
     useEffect(() => {
-        // If loading is finished and we have a user, redirect to the homepage.
         if (!loading && user) {
             router.push('/');
         }
     }, [user, loading, router]);
 
-    // While we're checking for auth state or if the user is logged in (and about to be redirected),
-    // show nothing, as the AuthProvider will show a global loader.
     if (loading || user) {
         return null;
     }
 
-    // Only show the AuthForm once we're sure the user is not logged in.
     return <AuthForm />;
 }

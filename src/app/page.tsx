@@ -20,7 +20,6 @@ export default function HomePage() {
   }, [user, loading, router])
 
   if (loading || !user) {
-    // This state is now primarily handled by AuthProvider, but this is a good fallback.
     return null
   }
 
