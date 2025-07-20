@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -19,14 +20,8 @@ export default function HomePage() {
   }, [user, loading, router])
 
   if (loading || !user) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <div
-          className="animate-spin rounded-full h-16 w-16 border-4 border-t-transparent border-primary"
-          aria-label="Loading spinner"
-        ></div>
-      </div>
-    )
+    // This state is now primarily handled by AuthProvider, but this is a good fallback.
+    return null
   }
 
   return (
@@ -63,4 +58,3 @@ export default function HomePage() {
     </div>
   )
 }
-
