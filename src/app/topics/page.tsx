@@ -21,8 +21,8 @@ import {
 } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
@@ -31,29 +31,32 @@ async function getTopicProgress(userId: string) {
     if (!db) return {};
 
     const progressData: Record<string, number> = {};
-    const topicPromises = topics.map((topic) =>
-        getDoc(doc(db, "users", userId, "quizProgress", topic.id))
-    );
-    const docSnapshots = await Promise.all(topicPromises);
+    const progressCollectionRef = collection(db, `users/${userId}/quizProgress`);
+    const q = query(progressCollectionRef, where("userId", "==", userId));
 
-    docSnapshots.forEach((docSnap, index) => {
-        const currentTopic = topics[index];
-        if (docSnap.exists()) {
-            const data = docSnap.data();
-            if (data.completed === true) {
-                progressData[currentTopic.id] = 100;
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const topicId = doc.id;
+        const topic = topics.find(t => t.id === topicId);
+
+        if (topic) {
+            if (data.completed) {
+                progressData[topicId] = 100;
             } else {
                 const userAnswers = data.userAnswers || [];
-                const totalQuestions = currentTopic.questionCount || 0;
+                const totalQuestions = topic.questionCount || 0;
                 if (totalQuestions > 0) {
                     const answeredCount = userAnswers.filter(
                         (answer: null | number) => answer !== null
                     ).length;
-                    progressData[currentTopic.id] = (answeredCount / totalQuestions) * 100;
+                    progressData[topicId] = (answeredCount / totalQuestions) * 100;
                 }
             }
         }
     });
+
     return progressData;
 }
 
