@@ -23,7 +23,7 @@ import { UserNav } from "../auth/UserNav"
 import { useRouter } from "next/navigation"
 
 export function Header() {
-  const { user } = useAuth()
+  const { user, loading } = useAuth()
   const { setTheme } = useTheme()
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
@@ -128,7 +128,9 @@ export function Header() {
            <div className="hidden md:block">
             <ThemeToggle />
           </div>
-          {user ? (
+          {loading ? (
+             <div className="h-8 w-8 rounded-full bg-muted animate-pulse"></div>
+          ) : user ? (
             <UserNav />
           ) : (
             <Button onClick={() => router.push('/auth')}>Login</Button>

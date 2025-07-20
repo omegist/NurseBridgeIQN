@@ -312,7 +312,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   if (authConfigError) {
     return (
-      <AuthContext.Provider value={value}>
+      <AuthContext.Provider value={{...value, loading: false}}>
         <FirebaseWarning
           isApiKeyInvalid={isInvalidApiKey()}
           authConfigError={authConfigError}
@@ -323,9 +323,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   if (loading) {
      return (
-        <div className="flex items-center justify-center h-screen">
-            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
-        </div>
+        <AuthContext.Provider value={{ ...value, loading: true, user: null }}>
+          <div className="flex items-center justify-center h-screen">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+          </div>
+        </AuthContext.Provider>
     );
   }
 
