@@ -10,7 +10,8 @@ import React, {
   useCallback,
 } from "react"
 import { useRouter } from "next/navigation"
-import { auth, db, storage } from "@/lib/firebase"
+import { auth, db, storage, app, firebaseConfig } from "@/lib/firebase"
+import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 import {
   onAuthStateChanged,
   signOut,
@@ -92,9 +93,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const { toast } = useToast()
 
   const isInvalidApiKey = useCallback(() => {
-    const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
+    const apiKey = firebaseConfig.apiKey;
     return !apiKey || apiKey === "YOUR_API_KEY_HERE" || apiKey === "undefined";
   }, []);
+
+  useEffect(() => {
+    // Initialize App Check only on the client
+    if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY !== 'YOUR_RECAPTCHA_V3_SITE_KEY_HERE') {
+      try {
+        initializeAppCheck(app, {
+          provider: new ReCaptchaV3Provider(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY),
+          isTokenAutoRefreshEnabled: true
+        });
+      } catch (e) {
+        console.warn("App Check initialization failed. This might be due to hot-reloading. Error:", e);
+      }
+    }
+  }, []);
+
 
   const handleUser = useCallback(
     async (firebaseUser: FirebaseUser | null) => {
