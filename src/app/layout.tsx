@@ -8,7 +8,6 @@ import { ThemeProvider } from "@/contexts/ThemeContext"
 import { Header } from "@/components/layout/Header"
 import { FloatingBubbles } from "@/components/layout/FloatingBubbles"
 import { TestProvider } from "@/contexts/TestContext"
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "NURSE IQN",
@@ -22,14 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
+      <head>
         <script
             src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
             async
             defer
         ></script>
-      </Head>
-      <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
