@@ -60,8 +60,6 @@ export default function ProfilePage() {
     };
 
     if (loading || !user) {
-        // The global loader in AuthProvider handles the main loading state.
-        // This is a fallback to prevent rendering with null data.
         return null;
     }
 
