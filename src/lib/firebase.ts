@@ -16,14 +16,13 @@ const firebaseConfig = {
 
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
-// Initialize App Check
-if (typeof window !== 'undefined') {
+// Initialize App Check only if the site key is available
+if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
   initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!),
+    provider: new ReCaptchaV3Provider(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY),
     isTokenAutoRefreshEnabled: true
   });
 }
-
 
 const auth = getAuth(app);
 const db = getFirestore(app);
