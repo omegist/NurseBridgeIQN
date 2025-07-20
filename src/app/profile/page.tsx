@@ -12,7 +12,6 @@ import { ArrowLeft, Mail, CalendarDays, Pencil, Loader2 } from "lucide-react"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { useToast } from "@/hooks/use-toast"
-import { Skeleton } from "@/components/ui/skeleton"
 
 export default function ProfilePage() {
     const { user, loading, updateUserAvatar } = useAuth();
@@ -61,11 +60,9 @@ export default function ProfilePage() {
     };
 
     if (loading || !user) {
-        return (
-            <div className="flex items-center justify-center h-screen">
-                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
-            </div>
-        );
+        // The global loader in AuthProvider handles the main loading state.
+        // This is a fallback to prevent rendering with null data.
+        return null;
     }
 
     const nameInitials = user.name?.split(' ').map(n => n[0]).join('') || 'U';

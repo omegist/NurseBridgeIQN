@@ -308,7 +308,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     logout,
     updateUserScore,
     updateUserAvatar,
-  }
+  };
 
   if (authConfigError) {
     return (
@@ -323,14 +323,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   if (loading) {
      return (
-        <AuthContext.Provider value={{ ...value, loading: true, user: null }}>
-          <div className="flex items-center justify-center h-screen">
-              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
-          </div>
-        </AuthContext.Provider>
+        <div className="flex items-center justify-center h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+        </div>
     );
   }
-
 
   return (
     <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
