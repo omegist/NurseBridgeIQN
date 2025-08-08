@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fflashcards\u002F[topicId]","\u002Fquiz\u002F[topicId]","\u002Ftest\u002F[testId]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

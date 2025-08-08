@@ -1,4 +1,3 @@
-
 {
   "firestore": {
     "rules": "firestore.rules"
@@ -7,15 +6,18 @@
     "source": "functions",
     "runtime": "nodejs18"
   },
-  "hosting": {
-    "source": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "frameworksBackend": {
-      "region": "us-central1"
+  "hosting": [
+    {
+      "target": "newsite",
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-central1"
+      }
     }
-  }
+  ]
 }
