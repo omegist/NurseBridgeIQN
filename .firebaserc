@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "nurse-iq"
+  },
+  "targets": {
+    "nurse-iq": {
+      "hosting": {
+        "newsite": [
+          "nurseiqn"
+        ]
+      }
+    }
   }
 }
