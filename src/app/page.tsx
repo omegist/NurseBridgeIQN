@@ -24,38 +24,36 @@ export default function HomePage() {
   }
 
   return (
-    <div className="flashcard-background">
-        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-4 text-center">
-            <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-                <AnimatedLogo className="h-24 w-24 mx-auto text-white" />
-                <h1 className="text-5xl font-bold font-headline text-white mt-6">
-                Welcome to NURSE IQN
-                </h1>
-                <p className="mt-4 text-lg text-slate-200 max-w-xl mx-auto">
-                Hello {user?.name || "Nurse"}! Sharpen your nursing skills and test your knowledge with our interactive quizzes.
-                </p>
-            </motion.div>
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-4 text-center">
+        <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+            <AnimatedLogo className="h-24 w-24 mx-auto" />
+            <h1 className="text-5xl font-bold font-headline mt-6">
+            Welcome to NURSE IQN
+            </h1>
+            <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
+            Hello {user?.name || "Nurse"}! Sharpen your nursing skills and test your knowledge with our interactive quizzes.
+            </p>
+        </motion.div>
 
-            <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+        >
+            <Button
+            asChild
+            size="lg"
+            className="mt-8 rounded-full px-12 py-6 text-xl shadow-lg"
             >
-                <Button
-                asChild
-                size="lg"
-                className="mt-8 bg-white text-teal-700 hover:bg-slate-200 rounded-full px-12 py-6 text-xl shadow-lg"
-                >
-                <Link href="/topics">Start</Link>
-                </Button>
-            </motion.div>
-        </div>
+            <Link href="/topics">Start</Link>
+            </Button>
+        </motion.div>
     </div>
   )
 }
