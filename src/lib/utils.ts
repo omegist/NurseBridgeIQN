@@ -26,6 +26,7 @@ import {
   BookMarked,
   Repeat,
   Baby,
+  BookOpen,
 } from "lucide-react";
 
 export const iconMap: Record<string, React.ElementType> = {
@@ -36,6 +37,6 @@ export const iconMap: Record<string, React.ElementType> = {
   bookMarked: BookMarked,
   repeat: Repeat,
   baby: Baby,
+  bookOpen: BookOpen,
   // ➕ add more name‑to‑icon pairs here as needed
 };
-
