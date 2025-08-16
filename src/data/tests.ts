@@ -5,6 +5,7 @@ import { questions as partATest2 } from './questions/part-a-test-2';
 import { questions as partATest3 } from './questions/part-a-test-3';
 import { questions as partATest4 } from './questions/part-a-test-4';
 import { questions as partATest5 } from './questions/part-a-test-5';
+import { questions as partATest6 } from './questions/part-a-test-6';
 import type { Test } from '@/lib/types';
 
 // Seeded shuffle for consistency across builds
@@ -33,6 +34,7 @@ const partATests: Test[] = [
   { id: 'part-a-test-3', name: 'Medication Calculation Test 3', timeLimitMinutes: 30, questions: partATest3 },
   { id: 'part-a-test-4', name: 'Medication Calculation Test 4', timeLimitMinutes: 30, questions: partATest4 },
   { id: 'part-a-test-5', name: 'Medication Calculation Test 5', timeLimitMinutes: 30, questions: partATest5 },
+  { id: 'part-a-test-6', name: 'Medication Calculation Test 6', timeLimitMinutes: 30, questions: partATest6 },
 ];
 
 const partBTestsData: Omit<Test, 'questions'>[] = [
