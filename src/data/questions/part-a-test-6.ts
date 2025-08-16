@@ -88,5 +88,17 @@ export const questions: Question[] = [
     options: [ '32 gtt/min', '40 gtt/min', '42 gtt/min', '50 gtt/min' ],
     correctIndex: 2,
     explanation: 'First, convert hours to minutes: 8 hours × 60 min/hr = 480 minutes. Then, use the drop rate formula: (1000 mL × 20 drops/mL) ÷ 480 min = 41.66... gtt/min. Rounded to the nearest whole number, this is 42 gtt/min.'
+  },
+  {
+    id: 'pa6-12',
+    text: 'A patient is ordered to receive 1g of a medication. The stock available is 50mg/mL. How many millilitres should the nurse administer to deliver the full prescribed dose?',
+    options: [
+      '10 mL',
+      '15 mL',
+      '20 mL',
+      '25 mL'
+    ],
+    correctIndex: 2,
+    explanation: 'First, convert the prescribed dose to mg: 1 g = 1000 mg. Then, calculate the required volume: Required Dose ÷ Concentration = 1000 mg ÷ 50 mg/mL = 20 mL.'
   }
 ];
