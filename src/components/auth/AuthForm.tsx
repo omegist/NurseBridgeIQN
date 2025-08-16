@@ -14,6 +14,7 @@ import { useAuth } from "@/contexts/AuthContext"
 import { useToast } from "@/hooks/use-toast"
 import { Loader2 } from "lucide-react"
 import Image from "next/image"
+import AnimatedLogo from "../shared/AnimatedLogo"
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
@@ -73,13 +74,7 @@ export function AuthForm() {
         className="w-full max-w-md"
       >
         <div className="bg-card p-8 rounded-2xl shadow-2xl border">
-           <Image
-            src="/nurseiqn-logo.png"
-            alt="NURSEIQN Logo"
-            width={120}
-            height={120}
-            className="mx-auto h-[60px] w-auto object-contain mb-5"
-          />
+           <AnimatedLogo className="h-20 w-20 mx-auto mb-5" />
           <h2 className="text-3xl font-bold text-center font-headline mb-2">
             {isLogin ? "Welcome Back!" : "Create Account"}
           </h2>

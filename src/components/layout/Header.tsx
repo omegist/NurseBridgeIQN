@@ -53,13 +53,7 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image 
-              src="/nurseiqn-logo.png"
-              alt="NURSEIQN Logo"
-              width={140}
-              height={40}
-              className="h-10 w-auto object-contain"
-            />
+            <span className="font-bold">NURSE IQN</span>
           </Link>
           {user && (
             <nav className="flex items-center gap-2">
@@ -88,13 +82,7 @@ export function Header() {
                 <SheetHeader className="border-b pb-4">
                   <SheetTitle className="sr-only">Menu</SheetTitle>
                    <Link href="/" className="flex items-center space-x-2">
-                    <Image 
-                      src="/nurseiqn-logo.png"
-                      alt="NURSEIQN Logo"
-                      width={140}
-                      height={40}
-                      className="h-10 w-auto object-contain"
-                    />
+                    <span className="font-bold">NURSE IQN</span>
                   </Link>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-2 mt-4">
