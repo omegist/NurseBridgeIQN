@@ -11,6 +11,7 @@ import {
   Moon,
   Laptop,
   ClipboardCheck,
+  BookOpen,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -36,6 +37,7 @@ export function Header() {
     { href: "/tests", icon: ClipboardCheck, text: "Tests" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
+    { href: "/e-IQNhandbook.pdf", icon: BookOpen, text: "Handbook", isExternal: true },
   ]
 
   if (!mounted) {
@@ -58,9 +60,9 @@ export function Header() {
           </Link>
           {user && (
             <nav className="flex items-center gap-2">
-              {navLinks.map(({ href, icon: Icon, text }) => (
+              {navLinks.map(({ href, icon: Icon, text, isExternal }) => (
                 <Button key={text} variant="ghost" asChild>
-                  <Link href={href}>
+                  <Link href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
                     <Icon className="mr-2 h-4 w-4" />
                     {text}
                   </Link>
@@ -88,14 +90,14 @@ export function Header() {
                   </Link>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-2 mt-4">
-                  {navLinks.map(({ href, icon: Icon, text }) => (
+                  {navLinks.map(({ href, icon: Icon, text, isExternal }) => (
                     <Button
                       key={text}
                       variant="ghost"
                       className="justify-start"
                       asChild
                     >
-                      <Link href={href}>
+                      <Link href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
                         <Icon className="mr-2 h-4 w-4" />
                         {text}
                       </Link>
