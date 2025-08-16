@@ -3,14 +3,16 @@ import { tests } from '@/data/tests';
 import { TestClient } from '@/components/test/TestClient';
 import type { Test } from '@/lib/types';
 
+const allTests = [...tests.partA, ...tests.partB];
+
 export function generateStaticParams() {
-  return tests.map((test) => ({
+  return allTests.map((test) => ({
     testId: test.id,
   }));
 }
 
 async function getTestData(testId: string): Promise<Test | null> {
-  const testData = tests.find((t) => t.id === testId);
+  const testData = allTests.find((t) => t.id === testId);
   return testData ?? null;
 }
 
@@ -28,4 +30,3 @@ export default async function TestPage({
 
   return <TestClient test={test} />;
 }
-
