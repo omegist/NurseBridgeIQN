@@ -3,7 +3,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Send, Bot } from "lucide-react";
+import { Bot, X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
@@ -24,7 +24,7 @@ export function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: "Hello! I'm the Nurse IQN assistant. How can I help you learn about the app?",
+      text: "Hello! Dude. I'm the Nurse IQN assistant. How can I help you?",
       sender: "bot",
     },
   ]);
@@ -87,7 +87,7 @@ export function Chatbot() {
         >
           <Button
             size="icon"
-            className="rounded-full w-16 h-16 shadow-2xl"
+            className="rounded-full w-16 h-16 shadow-2xl bg-primary hover:bg-primary/90"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Chatbot"
           >
@@ -99,7 +99,7 @@ export function Chatbot() {
                   animate={{ rotate: 0, scale: 1 }}
                   exit={{ rotate: 90, scale: 0 }}
                 >
-                  <X className="h-8 w-8" />
+                  <X className="h-8 w-8 text-primary-foreground" />
                 </motion.div>
               ) : (
                  <motion.div
@@ -108,7 +108,7 @@ export function Chatbot() {
                   animate={{ rotate: 0, scale: 1 }}
                   exit={{ rotate: -90, scale: 0 }}
                 >
-                  <MessageCircle className="h-8 w-8" />
+                  <Bot className="h-8 w-8 text-primary-foreground" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -123,7 +123,7 @@ export function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="fixed bottom-24 right-6 z-40 w-[calc(100vw-3rem)] max-w-sm h-[60vh] bg-card border rounded-2xl shadow-2xl flex flex-col"
+            className="fixed bottom-24 right-4 sm:right-6 z-40 w-[calc(100vw-2rem)] sm:w-full max-w-sm h-[70vh] sm:h-[60vh] bg-card border rounded-2xl shadow-2xl flex flex-col"
           >
             <div className="p-4 border-b flex items-center gap-3">
                <Bot className="h-6 w-6 text-primary" />
