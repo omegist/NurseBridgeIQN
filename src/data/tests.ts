@@ -24,7 +24,7 @@ function seededShuffle<T>(array: T[], seed: number): T[] {
 const partBShuffledQuestions = seededShuffle(allQuestions, 12345); // Use a fixed seed for deterministic shuffle
 
 const partATests: Test[] = [
-  { id: 'part-a-test-1', name: 'Medication Calculation Test', timeLimitMinutes: 15, questions: partATest1 }
+  { id: 'part-a-test-1', name: 'Medication Calculation Test', timeLimitMinutes: 30, questions: partATest1 }
 ];
 
 const partBTestsData: Omit<Test, 'questions'>[] = [
