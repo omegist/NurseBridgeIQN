@@ -1,6 +1,8 @@
+
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -18,6 +20,10 @@ interface TestsClientProps {
 }
 
 export function TestsClient({ tests }: TestsClientProps) {
+  const pathname = usePathname();
+  const isPartB = pathname.includes('/part-b');
+  const title = isPartB ? "Test Part B" : "Medication Test";
+  
   return (
     <div className="container mx-auto py-10 px-4">
       <motion.div
@@ -26,7 +32,7 @@ export function TestsClient({ tests }: TestsClientProps) {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-4xl font-bold font-headline text-center mb-2">
-          Medication Test
+          {title}
         </h1>
         <p className="text-muted-foreground text-center mb-10">
           Select a test to challenge your comprehensive nursing knowledge.

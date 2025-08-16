@@ -13,11 +13,11 @@ import {
   ClipboardCheck,
   BookOpen,
 } from "lucide-react"
+import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import { useAuth } from "@/contexts/AuthContext"
-import AnimatedLogo from "../shared/AnimatedLogo"
 import { ThemeToggle } from "./ThemeToggle"
 import { useTheme } from "@/contexts/ThemeContext"
 import { UserNav } from "../auth/UserNav"
@@ -53,10 +53,13 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <AnimatedLogo className="h-6 w-6" />
-            <span className="hidden font-bold sm:inline-block font-headline">
-              NURSE IQN
-            </span>
+            <Image 
+              src="/nurseiqn-logo.png"
+              alt="NURSEIQN Logo"
+              width={140}
+              height={40}
+              className="h-10 w-auto object-contain"
+            />
           </Link>
           {user && (
             <nav className="flex items-center gap-2">
@@ -84,9 +87,14 @@ export function Header() {
               <SheetContent side="left">
                 <SheetHeader className="border-b pb-4">
                   <SheetTitle className="sr-only">Menu</SheetTitle>
-                  <Link href="/" className="flex items-center space-x-2">
-                    <AnimatedLogo className="h-6 w-6" />
-                    <span className="font-bold font-headline">NURSE IQN</span>
+                   <Link href="/" className="flex items-center space-x-2">
+                    <Image 
+                      src="/nurseiqn-logo.png"
+                      alt="NURSEIQN Logo"
+                      width={140}
+                      height={40}
+                      className="h-10 w-auto object-contain"
+                    />
                   </Link>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-2 mt-4">
