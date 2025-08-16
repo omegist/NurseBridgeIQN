@@ -49,9 +49,9 @@ export default function HomePage() {
         <Button
           asChild
           size="lg"
-          className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-10 py-6 text-lg shadow-lg"
+          className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-12 py-6 text-xl shadow-lg"
         >
-          <Link href="/topics">Start Quiz</Link>
+          <Link href="/topics">Start</Link>
         </Button>
       </motion.div>
     </div>
