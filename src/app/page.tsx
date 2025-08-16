@@ -5,9 +5,9 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { useAuth } from "@/contexts/AuthContext"
 import { Button } from "@/components/ui/button"
-import AnimatedLogo from "@/components/shared/AnimatedLogo"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
+import NurseIQNLogo from "@/components/NurseIQNLogo"
 
 export default function HomePage() {
   const { user, loading } = useAuth()
@@ -24,14 +24,14 @@ export default function HomePage() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-4 text-center">
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-4 text-center bg-background">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <AnimatedLogo className="h-32 w-32 mx-auto mb-6" />
-        <h1 className="text-5xl font-bold font-headline text-foreground">
+        <NurseIQNLogo size="lg" />
+        <h1 className="text-5xl font-bold font-headline text-foreground mt-6">
           Welcome to NURSE IQN
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
