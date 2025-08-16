@@ -34,10 +34,10 @@ export function Header() {
   }, [])
 
   const navLinks = [
+    { href: "/e-IQNhandbook.pdf", icon: BookOpen, text: "Handbook", isExternal: true },
     { href: "/tests", icon: ClipboardCheck, text: "Tests" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
-    { href: "/e-IQNhandbook.pdf", icon: BookOpen, text: "Handbook", isExternal: true },
   ]
 
   if (!mounted) {

@@ -26,7 +26,7 @@ export function TestsClient({ tests }: TestsClientProps) {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-4xl font-bold font-headline text-center mb-2">
-          Practice Tests
+          Medication Test
         </h1>
         <p className="text-muted-foreground text-center mb-10">
           Select a test to challenge your comprehensive nursing knowledge.
