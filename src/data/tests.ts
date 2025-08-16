@@ -1,6 +1,7 @@
 
 import { allQuestions } from './questions';
 import { questions as partATest1 } from './questions/part-a-test-1';
+import { questions as partATest2 } from './questions/part-a-test-2';
 import type { Test } from '@/lib/types';
 
 // Seeded shuffle for consistency across builds
@@ -24,7 +25,8 @@ function seededShuffle<T>(array: T[], seed: number): T[] {
 const partBShuffledQuestions = seededShuffle(allQuestions, 12345); // Use a fixed seed for deterministic shuffle
 
 const partATests: Test[] = [
-  { id: 'part-a-test-1', name: 'Medication Calculation Test', timeLimitMinutes: 30, questions: partATest1 }
+  { id: 'part-a-test-1', name: 'Medication Calculation Test', timeLimitMinutes: 30, questions: partATest1 },
+  { id: 'part-a-test-2', name: 'Medication Calculation Test 2', timeLimitMinutes: 30, questions: partATest2 }
 ];
 
 const partBTestsData: Omit<Test, 'questions'>[] = [
