@@ -7,7 +7,7 @@ import { useAuth } from "@/contexts/AuthContext"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import NurseIQNLogo from "@/components/NurseIQNLogo"
+import AnimatedLogo from "@/components/shared/AnimatedLogo"
 
 export default function HomePage() {
   const { user, loading } = useAuth()
@@ -30,7 +30,7 @@ export default function HomePage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <NurseIQNLogo size="lg" />
+        <AnimatedLogo className="h-24 w-24 mx-auto" />
         <h1 className="text-5xl font-bold font-headline text-foreground mt-6">
           Welcome to NURSE IQN
         </h1>
