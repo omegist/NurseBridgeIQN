@@ -39,25 +39,19 @@ export function ThemeProvider({
   }, [storageKey, defaultTheme])
 
   useEffect(() => {
-    const root = window.document.documentElement
-    const body = window.document.body
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
 
-    root.classList.remove("light", "dark")
-    body.classList.remove("animate-gradient-bg")
-
-    let effectiveTheme = theme
+    let effectiveTheme = theme;
     if (theme === "system") {
-      effectiveTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+      effectiveTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
         ? "dark"
-        : "light"
+        : "light";
     }
 
-    root.classList.add(effectiveTheme)
-    if (effectiveTheme === 'dark') {
-      body.classList.add("animate-gradient-bg")
-    }
-
-  }, [theme])
+    root.classList.add(effectiveTheme);
+  }, [theme]);
 
   const value = {
     theme,
