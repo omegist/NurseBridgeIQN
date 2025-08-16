@@ -161,24 +161,6 @@
 }
 
 
-@keyframes animate-gradient-bg {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-body.animate-gradient-bg {
-  background: linear-gradient(-45deg, #1f2937, #111827, #008080, #14b8a6);
-  background-size: 400% 400%;
-  animation: animate-gradient-bg 15s ease infinite;
-}
-
 /* Flashcard Page Background */
 .flashcard-background {
   background-color: #008080; /* Teal Accent Color */
