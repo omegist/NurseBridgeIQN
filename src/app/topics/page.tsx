@@ -115,22 +115,22 @@ export default function TopicsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {isLoading &&
           Array.from({ length: 6 }).map((_, i) => (
-            <Card key={i} className="flex flex-col justify-between rounded-2xl shadow-lg bg-[#0E1A35] border-none">
+            <Card key={i} className="flex flex-col justify-between rounded-2xl shadow-lg bg-slate-900 border-slate-700">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <Skeleton className="h-12 w-12 rounded-lg bg-slate-700" />
+                  <Skeleton className="h-12 w-12 rounded-lg bg-slate-800" />
                   <div className="space-y-2">
-                    <Skeleton className="h-6 w-48 bg-slate-700" />
-                    <Skeleton className="h-4 w-32 bg-slate-700" />
+                    <Skeleton className="h-6 w-48 bg-slate-800" />
+                    <Skeleton className="h-4 w-32 bg-slate-800" />
                   </div>
                 </div>
               </CardHeader>
               <CardContent className="space-y-2">
-                <Skeleton className="h-4 w-full bg-slate-700" />
-                <Skeleton className="h-4 w-3/4 bg-slate-700" />
+                <Skeleton className="h-4 w-full bg-slate-800" />
+                <Skeleton className="h-4 w-3/4 bg-slate-800" />
               </CardContent>
               <CardFooter>
-                <Skeleton className="h-10 w-full bg-slate-700" />
+                <Skeleton className="h-10 w-full bg-slate-800" />
               </CardFooter>
             </Card>
           ))}
@@ -150,11 +150,11 @@ export default function TopicsPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex"
               >
-                <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-[#0E1A35] text-white border-none transition-all duration-300 group">
+                <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-blue-950 text-white border-blue-800 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30">
                   <div>
                     <CardHeader className="flex-col items-start space-y-4">
                        <div className="flex items-center gap-4">
-                        <div className="p-3 rounded-lg bg-blue-900/50">
+                        <div className="p-3 rounded-lg bg-blue-900">
                           <Icon className="w-7 h-7 text-blue-400" />
                         </div>
                         <div>
