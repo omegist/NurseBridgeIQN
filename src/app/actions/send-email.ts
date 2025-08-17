@@ -6,11 +6,12 @@ import { Resend } from 'resend';
 
 const sendEmailSchema = z.object({
   message: z.string().min(10, { message: 'Message must be at least 10 characters long.' }),
-  userEmail: z.string().email().optional(),
+  userEmail: z.string().email().optional().or(z.literal('')),
   userName: z.string().optional(),
 });
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const supportEmail = 'hrishichavan2349@gmail.com';
 
 export async function sendEmail(prevState: any, formData: FormData) {
   const parsed = sendEmailSchema.safeParse({
@@ -27,13 +28,13 @@ export async function sendEmail(prevState: any, formData: FormData) {
   }
 
   const { message, userEmail, userName } = parsed.data;
-  const fromEmail = userEmail || 'anonymous@nurse-iqn.com';
+  const fromEmail = userEmail || 'anonymous-user@nurse-iqn.com';
   const fromName = userName || 'Anonymous User';
 
   try {
     const { data, error } = await resend.emails.send({
       from: 'Nurse IQN Contact Form <onboarding@resend.dev>',
-      to: ['hrishichavan2349@gmail.com'],
+      to: [supportEmail],
       subject: `New Query from ${fromName}`,
       reply_to: fromEmail,
       html: `
@@ -46,13 +47,17 @@ export async function sendEmail(prevState: any, formData: FormData) {
     });
 
     if (error) {
-      console.error('Resend API Error:', error);
-      return { success: false, message: 'Failed to send email. Please try again later.' };
+      console.error('Resend API Error:', error.message);
+      return { success: false, message: `Failed to send email. Error: ${error.message}` };
     }
 
     return { success: true, message: 'Your message has been sent successfully!' };
-  } catch (error) {
-    console.error('Email Sending Error:', error);
-    return { success: false, message: 'An unexpected error occurred.' };
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+        console.error('Email Sending Error:', error.message);
+        return { success: false, message: `An unexpected error occurred: ${error.message}` };
+    }
+    console.error('An unknown error occurred during email sending:', error);
+    return { success: false, message: 'An unexpected error occurred. Please check the server logs.' };
   }
 }
