@@ -1,17 +1,19 @@
 
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useTransition } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Bot, X, Send } from "lucide-react";
+import { Bot, X, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { useAuth } from "@/contexts/AuthContext";
+import { chat } from "@/ai/flows/chatbot-flow";
+import type { Message } from "genkit";
 
-type Message = {
+type ChatMessage = {
   text: string;
   sender: "user" | "bot";
 };
@@ -22,12 +24,13 @@ type FormData = {
 
 export function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
+  const [messages, setMessages] = useState<ChatMessage[]>([
     {
-      text: "Hello! Dude. I'm the Nurse IQN assistant. How can I help you?",
+      text: "Hello! I'm the Nurse IQN assistant. How can I help you with your New Zealand registration journey?",
       sender: "bot",
     },
   ]);
+  const [isPending, startTransition] = useTransition();
   const { user } = useAuth();
   const { register, handleSubmit, reset } = useForm<FormData>();
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -38,41 +41,29 @@ export function Chatbot() {
 
   useEffect(scrollToBottom, [messages]);
 
-  const getBotResponse = (userMessage: string): string => {
-    const lowerCaseMessage = userMessage.toLowerCase();
-
-    if (lowerCaseMessage.includes("what") && lowerCaseMessage.includes("app")) {
-      return "This app is designed to help nurses prepare for the IQN exams with interactive quizzes and detailed test modules.";
-    }
-    if (lowerCaseMessage.includes("premium") || lowerCaseMessage.includes("access")) {
-      return "You can unlock full access to all premium quizzes and content by making a one-time payment of ₹2000 through our secure Razorpay gateway.";
-    }
-    if (lowerCaseMessage.includes("payment") || lowerCaseMessage.includes("pay")) {
-        return "To make a payment, navigate to any premium quiz and click the 'Unlock' button. This will open the secure Razorpay payment window.";
-    }
-    if (lowerCaseMessage.includes("trial") || lowerCaseMessage.includes("free")) {
-        return "While there isn't a free trial for premium content, you can explore the app's interface and access some fundamental quizzes for free to see how it works!";
-    }
-    if (lowerCaseMessage.includes("content")) {
-        return "The app includes a wide range of quizzes covering Fundamentals, Pharmacology, Medical-Surgical nursing, and more. Premium access unlocks all test modules.";
-    }
-    
-    // Default response for out-of-scope questions
-    return "I'm here to help with app-related questions. Let me know what you'd like to explore!";
-  };
-
   const onSubmit = (data: FormData) => {
     if (!data.message.trim()) return;
 
-    const userMessage: Message = { text: data.message, sender: "user" };
+    const userMessage: ChatMessage = { text: data.message, sender: "user" };
     setMessages((prev) => [...prev, userMessage]);
-    
-    setTimeout(() => {
-      const botResponse: Message = { text: getBotResponse(data.message), sender: "bot" };
-      setMessages((prev) => [...prev, botResponse]);
-    }, 500);
-
     reset();
+
+    startTransition(async () => {
+      const chatHistory: Message[] = messages.map(msg => ({
+        role: msg.sender === 'user' ? 'user' : 'model',
+        content: [{ text: msg.text }]
+      }));
+
+      try {
+        const { response } = await chat({ message: data.message, history: chatHistory });
+        const botResponse: ChatMessage = { text: response, sender: "bot" };
+        setMessages((prev) => [...prev, botResponse]);
+      } catch (error) {
+        console.error("Chatbot AI error:", error);
+        const errorResponse: ChatMessage = { text: "Sorry, I'm having trouble connecting right now. Please try again later.", sender: "bot" };
+        setMessages((prev) => [...prev, errorResponse]);
+      }
+    });
   };
 
   const nameInitials = user?.name?.split(' ').map(n => n[0]).join('') || 'U';
@@ -146,7 +137,7 @@ export function Chatbot() {
                   )}
                   <div
                     className={cn(
-                      "p-3 rounded-2xl max-w-[80%]",
+                      "p-3 rounded-2xl max-w-[80%] whitespace-pre-wrap",
                       msg.sender === "user"
                         ? "bg-primary text-primary-foreground rounded-br-none"
                         : "bg-muted rounded-bl-none"
@@ -162,6 +153,20 @@ export function Chatbot() {
                   )}
                 </div>
               ))}
+
+              {isPending && (
+                <div className="flex items-end gap-2 justify-start">
+                   <Avatar className="h-8 w-8">
+                       <AvatarFallback className="bg-primary/20"><Bot className="h-5 w-5 text-primary" /></AvatarFallback>
+                    </Avatar>
+                    <div className="p-3 rounded-2xl max-w-[80%] bg-muted rounded-bl-none flex items-center space-x-2">
+                        <span className="h-2 w-2 bg-primary rounded-full animate-pulse delay-0"></span>
+                        <span className="h-2 w-2 bg-primary rounded-full animate-pulse delay-150"></span>
+                        <span className="h-2 w-2 bg-primary rounded-full animate-pulse delay-300"></span>
+                    </div>
+                </div>
+              )}
+
               <div ref={messagesEndRef} />
             </div>
 
@@ -172,14 +177,20 @@ export function Chatbot() {
                   placeholder="Ask a question..."
                   autoComplete="off"
                   className="pr-12"
+                  disabled={isPending}
                 />
                 <Button
                   type="submit"
                   size="icon"
                   variant="ghost"
                   className="absolute top-1/2 right-1 -translate-y-1/2"
+                  disabled={isPending}
                 >
-                  <Send className="h-5 w-5 text-primary" />
+                  {isPending ? (
+                    <Loader2 className="h-5 w-5 text-primary animate-spin" />
+                  ) : (
+                    <Send className="h-5 w-5 text-primary" />
+                  )}
                 </Button>
               </div>
             </form>
@@ -189,3 +200,5 @@ export function Chatbot() {
     </>
   );
 }
+
+    
