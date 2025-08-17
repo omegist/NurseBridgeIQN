@@ -35,7 +35,7 @@
   .dark {
     --background: 245 40% 8%;
     --foreground: 210 40% 98%;
-    --card: 250 50% 12%;
+    --card: 224 35% 15%; /* Dark Slate Blue for cards in dark mode */
     --card-foreground: 210 40% 98%;
     --popover: 250 50% 12%;
     --popover-foreground: 210 40% 98%;
