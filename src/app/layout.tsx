@@ -6,7 +6,6 @@ import { AuthProvider } from "@/contexts/AuthContext"
 import { QuizProvider } from "@/contexts/QuizContext"
 import { ThemeProvider } from "@/contexts/ThemeContext"
 import { Header } from "@/components/layout/Header"
-import { FloatingBubbles } from "@/components/layout/FloatingBubbles"
 import { TestProvider } from "@/contexts/TestContext"
 import { Chatbot } from "@/components/chatbot/Chatbot"
 
@@ -41,7 +40,6 @@ export default function RootLayout({
           <AuthProvider>
             <QuizProvider>
               <TestProvider>
-                <FloatingBubbles />
                 <div className="relative flex min-h-screen flex-col">
                   <Header />
                   <main className="flex-1">{children}</main>
