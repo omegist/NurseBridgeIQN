@@ -66,22 +66,8 @@
 
 @layer base {
   body {
-    background: linear-gradient(-45deg, #008080, #004d4d, #002b3a, #004d4d);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background-color: #002B3A;
     min-height: 100vh;
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
   }
 
   .light {
@@ -89,20 +75,16 @@
     --card: 0 0% 100% / 0.8;
     --popover: 0 0% 100% / 0.9;
     --border: 214.3 31.8% 91.4% / 0.2;
-    background: linear-gradient(-45deg, #e6e6fa, #f5f5ff, #c1c1f0, #e6e6fa);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background-color: #F0F8FF;
   }
 
   .dark {
-    --background: 245 40% 8% / 0.8;
+    --background: #002B3A;
     --foreground: 210 40% 98%;
     --card: 250 50% 12% / 0.8;
     --popover: 250 50% 12% / 0.9;
     --border: 220 30% 25% / 0.5;
-    background: linear-gradient(-45deg, #008080, #004d4d, #002b3a, #004d4d);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background-color: #002B3A;
   }
 
   /* Make cards and popovers slightly transparent to see the background */

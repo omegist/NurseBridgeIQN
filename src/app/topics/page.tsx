@@ -107,7 +107,7 @@ export default function TopicsPage() {
         <h1 className="text-4xl font-bold font-headline text-center mb-2 text-white">
           Select a Quiz Topic
         </h1>
-        <p className="text-slate-200 text-center mb-10">
+        <p className="text-slate-300 text-center mb-10">
           Choose a category to test your knowledge and track your progress.
         </p>
       </motion.div>
@@ -115,22 +115,22 @@ export default function TopicsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {isLoading &&
           Array.from({ length: 6 }).map((_, i) => (
-            <Card key={i} className="flex flex-col justify-between rounded-2xl shadow-lg">
+            <Card key={i} className="flex flex-col justify-between rounded-2xl shadow-lg bg-[#0E1A35] border-none">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <Skeleton className="h-12 w-12 rounded-lg" />
+                  <Skeleton className="h-12 w-12 rounded-lg bg-slate-700" />
                   <div className="space-y-2">
-                    <Skeleton className="h-6 w-48" />
-                    <Skeleton className="h-4 w-32" />
+                    <Skeleton className="h-6 w-48 bg-slate-700" />
+                    <Skeleton className="h-4 w-32 bg-slate-700" />
                   </div>
                 </div>
               </CardHeader>
               <CardContent className="space-y-2">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-3/4" />
+                <Skeleton className="h-4 w-full bg-slate-700" />
+                <Skeleton className="h-4 w-3/4 bg-slate-700" />
               </CardContent>
               <CardFooter>
-                <Skeleton className="h-10 w-full" />
+                <Skeleton className="h-10 w-full bg-slate-700" />
               </CardFooter>
             </Card>
           ))}
@@ -150,25 +150,27 @@ export default function TopicsPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex"
               >
-                <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-slate-900/80 text-white border-border/20 hover:border-accent transition-all duration-300 group">
+                <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-[#0E1A35] text-white border-none transition-all duration-300 group">
                   <div>
-                    <CardHeader className="flex-row items-center gap-4 space-y-0">
-                      <div className="p-3 rounded-lg bg-primary/10">
-                        <Icon className="w-7 h-7 text-primary group-hover:text-pink-500" />
-                      </div>
-                      <div>
-                        <CardTitle className="font-headline text-xl text-white group-hover:text-accent transition-colors">
-                          {topic.name}
-                        </CardTitle>
-                        <span className={cn("text-xs font-medium flex items-center gap-1", status.color)}>
-                          <StatusIcon className="w-3.5 h-3.5" />
-                          {status.text}
-                        </span>
+                    <CardHeader className="flex-col items-start space-y-4">
+                       <div className="flex items-center gap-4">
+                        <div className="p-3 rounded-lg bg-blue-900/50">
+                          <Icon className="w-7 h-7 text-blue-400" />
+                        </div>
+                        <div>
+                          <CardTitle className="font-headline text-xl text-white">
+                            {topic.name}
+                          </CardTitle>
+                           <span className={cn("text-xs font-medium flex items-center gap-1", status.color)}>
+                            <StatusIcon className="w-3.5 h-3.5" />
+                            {status.text}
+                          </span>
+                        </div>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-slate-300">{topic.description}</CardDescription>
-                      <div className="flex justify-between items-center text-slate-400 text-sm mt-4 border-t border-slate-700 pt-4">
+                      <CardDescription className="text-slate-400 mb-4">{topic.description}</CardDescription>
+                      <div className="flex justify-between items-center text-slate-400 text-sm">
                         <div className="flex items-center gap-2">
                           <BookOpen className="w-4 h-4" />
                           <span>{topic.questionCount} questions</span>
@@ -178,15 +180,15 @@ export default function TopicsPage() {
                           <span>{topic.difficulty}</span>
                         </div>
                       </div>
-                      {progress > 0 && (
+                       {progress > 0 && (
                         <div className="mt-4">
-                          <Progress value={progress} className="h-2" />
+                          <Progress value={progress} className="h-2 bg-slate-700" />
                         </div>
                       )}
                     </CardContent>
                   </div>
                   <CardFooter>
-                    <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white">
+                    <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                       <Link href={`/quiz/${topic.id}`}>
                         {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
                       </Link>
