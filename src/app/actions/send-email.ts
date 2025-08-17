@@ -47,12 +47,13 @@ export async function sendEmail(prevState: any, formData: FormData) {
     });
 
     if (error) {
-      console.error('Resend API Error:', error.message);
+      console.error('Resend API Error:', error);
       return { success: false, message: `Failed to send email. Error: ${error.message}` };
     }
 
     return { success: true, message: 'Your message has been sent successfully!' };
   } catch (error: unknown) {
+    // This block will catch network errors or other unexpected exceptions
     if (error instanceof Error) {
         console.error('Email Sending Error:', error.message);
         return { success: false, message: `An unexpected error occurred: ${error.message}` };
