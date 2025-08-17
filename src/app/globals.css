@@ -64,133 +64,49 @@
   }
 }
 
-/* New Light Mode Background - replacing bubbles */
-.bubbles {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: -10;
-  overflow: hidden;
-}
+@layer base {
+  body {
+    background: linear-gradient(-45deg, #008080, #004d4d, #002b3a, #004d4d);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+  }
 
-.bubbles li {
-  position: absolute;
-  display: block;
-  list-style: none;
-  background-color: hsla(var(--primary), 0.1);
-  border-radius: 3rem;
-}
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
-/* Top-right shape from image */
-.bubbles li:nth-child(1) {
-  width: 30vw;
-  height: 30vw;
-  min-width: 300px;
-  min-height: 300px;
-  top: -10vh;
-  right: -10vw;
-  transform: rotate(45deg);
-}
+  .light {
+    --background: 220 40% 98%;
+    --card: 0 0% 100% / 0.8;
+    --popover: 0 0% 100% / 0.9;
+    --border: 214.3 31.8% 91.4% / 0.2;
+    background: linear-gradient(-45deg, #e6e6fa, #f5f5ff, #c1c1f0, #e6e6fa);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
 
-/* Bottom-left shape from image */
-.bubbles li:nth-child(2) {
-  width: 25vw;
-  height: 25vw;
-  min-width: 250px;
-  min-height: 250px;
-  bottom: -10vh;
-  left: -8vw;
-  transform: rotate(15deg);
-  background-color: hsla(var(--primary), 0.05);
-}
+  .dark {
+    --background: 245 40% 8% / 0.8;
+    --foreground: 210 40% 98%;
+    --card: 250 50% 12% / 0.8;
+    --popover: 250 50% 12% / 0.9;
+    --border: 220 30% 25% / 0.5;
+    background: linear-gradient(-45deg, #008080, #004d4d, #002b3a, #004d4d);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
 
-/* Small accent circle top-left */
-.bubbles li:nth-child(3) {
-  width: 100px;
-  height: 100px;
-  top: 15vh;
-  left: 10vw;
-  border-radius: 50%;
-  background-color: hsla(var(--accent), 0.08);
-}
-
-/* Small accent circle bottom-right */
-.bubbles li:nth-child(4) {
-  width: 60px;
-  height: 60px;
-  bottom: 20vh;
-  right: 15vw;
-  border-radius: 50%;
-}
-
-/* Plus sign icon top-left */
-.bubbles li:nth-child(5)::before,
-.bubbles li:nth-child(5)::after {
-  content: '';
-  position: absolute;
-  background-color: hsla(var(--primary), 0.2);
-}
-.bubbles li:nth-child(5) {
-  width: 20px;
-  height: 20px;
-  top: 30vh;
-  left: 30vw;
-  background-color: transparent;
-  transform: rotate(45deg);
-}
-.bubbles li:nth-child(5)::before {
-  width: 100%;
-  height: 2px;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-.bubbles li:nth-child(5)::after {
-  width: 2px;
-  height: 100%;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-}
-
-/* hide the rest of the bubbles */
-.bubbles li:nth-child(n+6) {
-  display: none;
-}
-
-
-/* Flashcard Page Background */
-.flashcard-background {
-  background-color: #008080; /* Teal Accent Color */
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.flashcard-background::before {
-  content: '';
-  position: absolute;
-  top: -10rem;
-  left: -15rem;
-  width: 30rem;
-  height: 30rem;
-  background-color: rgba(44, 62, 80, 0.25); /* Darker shape from image palette */
-  transform: rotate(45deg);
-  z-index: -1;
-  border-radius: 4rem;
-}
-
-.flashcard-background::after {
-  content: '';
-  position: absolute;
-  bottom: -12rem;
-  right: -12rem;
-  width: 30rem;
-  height: 30rem;
-  background-color: rgba(26, 188, 156, 0.25); /* Lighter teal shape */
-  transform: rotate(-30deg);
-  z-index: -1;
-  border-radius: 4rem;
+  /* Make cards and popovers slightly transparent to see the background */
+  .card-blur {
+    @apply bg-card/80 backdrop-blur-sm border-border/20;
+  }
 }
