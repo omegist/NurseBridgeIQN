@@ -23,6 +23,6 @@ import { next } from '@genkit-ai/next';
  * and debugging of AI flows in the Genkit developer UI.
  */
 export const ai = genkit({
-  plugins: [firebase, googleAI(), next()],
+  plugins: [firebase, googleAI(), next],
   enableTracingAndMetrics: true,
 });
