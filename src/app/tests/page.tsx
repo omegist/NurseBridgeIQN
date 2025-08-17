@@ -37,10 +37,10 @@ export default function TestsPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold font-headline text-center mb-2 text-white">
+        <h1 className="text-4xl font-bold font-headline text-center mb-2 text-foreground">
           Choose a Test Part
         </h1>
-        <p className="text-slate-300 text-center mb-10">
+        <p className="text-muted-foreground text-center mb-10">
           Select a part to begin your practice test session.
         </p>
       </motion.div>
@@ -54,18 +54,18 @@ export default function TestsPage() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="flex"
           >
-            <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-slate-900 text-white border-slate-700 transition-all duration-300 hover:bg-slate-800/60">
+            <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-card">
               <div>
                 <CardHeader className="flex-row items-center gap-4 space-y-0">
-                  <div className="p-3 rounded-lg bg-slate-800">
-                    <BookCopy className="w-7 h-7 text-blue-400" />
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <BookCopy className="w-7 h-7 text-primary" />
                   </div>
-                  <CardTitle className="font-headline text-2xl text-white">
+                  <CardTitle className="font-headline text-2xl text-card-foreground">
                     {part.name}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-slate-400">{part.description}</CardDescription>
+                  <CardDescription className="text-muted-foreground">{part.description}</CardDescription>
                 </CardContent>
               </div>
               <CardFooter>

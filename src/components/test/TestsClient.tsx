@@ -31,10 +31,10 @@ export function TestsClient({ tests }: TestsClientProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold font-headline text-center mb-2 text-white">
+        <h1 className="text-4xl font-bold font-headline text-center mb-2 text-foreground">
           {title}
         </h1>
-        <p className="text-slate-300 text-center mb-10">
+        <p className="text-muted-foreground text-center mb-10">
           Select a test to challenge your comprehensive nursing knowledge.
         </p>
       </motion.div>
@@ -48,21 +48,21 @@ export function TestsClient({ tests }: TestsClientProps) {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="flex"
           >
-            <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-slate-900 text-white border-slate-700 transition-all duration-300 hover:bg-slate-800/60">
+            <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-card">
               <div>
                 <CardHeader className="flex-row items-center gap-4 space-y-0">
-                  <div className="p-3 rounded-lg bg-slate-800">
-                    <ClipboardCheck className="w-7 h-7 text-blue-400" />
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <ClipboardCheck className="w-7 h-7 text-primary" />
                   </div>
-                  <CardTitle className="font-headline text-xl text-white">
+                  <CardTitle className="font-headline text-xl text-card-foreground">
                     {test.name}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-slate-400">
+                  <CardDescription className="text-muted-foreground">
                     A comprehensive test covering multiple nursing topics.
                   </CardDescription>
-                  <div className="flex justify-between items-center text-slate-400 text-sm mt-4 border-t border-slate-700 pt-4">
+                  <div className="flex justify-between items-center text-muted-foreground text-sm mt-4 border-t border-border/20 pt-4">
                     <div className="flex items-center gap-2">
                       <ClipboardCheck className="w-4 h-4" />
                       <span>{test.questions.length} questions</span>
