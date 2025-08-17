@@ -3,8 +3,10 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from 'next/navigation';
+import { useTheme } from "@/contexts/ThemeContext";
 
 export function FloatingBubbles() {
+    const { theme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [showBubbles, setShowBubbles] = useState(false);
     const pathname = usePathname();
@@ -22,18 +24,14 @@ export function FloatingBubbles() {
             return;
         }
 
-        const checkTheme = () => {
-            const isDark = document.documentElement.classList.contains('dark');
-            setShowBubbles(!isDark);
-        };
+        let effectiveTheme = theme;
+        if (theme === "system") {
+          effectiveTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        
+        setShowBubbles(effectiveTheme === 'light');
 
-        checkTheme();
-
-        const observer = new MutationObserver(checkTheme);
-        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-
-        return () => observer.disconnect();
-    }, [pathname, mounted]);
+    }, [pathname, mounted, theme]);
 
     if (!mounted || !showBubbles) {
         return null;
