@@ -17,6 +17,7 @@ import {
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
   updateProfile,
   User as FirebaseUser,
 } from "firebase/auth"
@@ -47,6 +48,7 @@ interface AuthContextType {
   login: (email: string, pass: string) => Promise<void>
   signup: (email: string, pass: string, username: string) => Promise<void>
   logout: () => Promise<void>
+  sendPasswordReset: (email: string) => Promise<boolean>
   updateUserScore: (points: number) => Promise<void>
   updateUserAvatar: (file: File) => Promise<void>
 }
@@ -264,6 +266,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await signOut(auth)
     router.push("/auth")
   }
+  
+  const sendPasswordReset = async (email: string): Promise<boolean> => {
+    if (isInvalidApiKey()) {
+      toast({
+        variant: "destructive",
+        title: "Configuration Error",
+        description: "Firebase API Key is invalid. Please check your .env file."
+      });
+      return false;
+    }
+    try {
+      await sendPasswordResetEmail(auth, email);
+      toast({
+        title: "Password Reset Email Sent",
+        description: "Check your inbox for a link to reset your password.",
+      });
+      return true;
+    } catch (error: any) {
+      const message = getAuthErrorMessage(error);
+      toast({
+        variant: "destructive",
+        title: "Failed to Send Email",
+        description: message,
+      });
+      return false;
+    }
+  };
 
   const updateUserScore = async (points: number) => {
     if (!user) return
@@ -324,6 +353,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     login,
     signup,
     logout,
+    sendPasswordReset,
     updateUserScore,
     updateUserAvatar,
   };
