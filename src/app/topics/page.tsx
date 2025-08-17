@@ -104,10 +104,10 @@ export default function TopicsPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold font-headline text-center mb-2">
+        <h1 className="text-4xl font-bold font-headline text-center mb-2 text-white">
           Select a Quiz Topic
         </h1>
-        <p className="text-muted-foreground text-center mb-10">
+        <p className="text-slate-200 text-center mb-10">
           Choose a category to test your knowledge and track your progress.
         </p>
       </motion.div>
