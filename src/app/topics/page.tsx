@@ -1,3 +1,4 @@
+
 "use client";
 
 import { topics } from "@/data/topics";
@@ -149,14 +150,14 @@ export default function TopicsPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex"
               >
-                <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg border bg-card/80 backdrop-blur-sm border-border/20 hover:border-accent transition-all duration-300 group">
+                <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-slate-900/80 text-white border-border/20 hover:border-accent transition-all duration-300 group">
                   <div>
                     <CardHeader className="flex-row items-center gap-4 space-y-0">
                       <div className="p-3 rounded-lg bg-primary/10">
-                        <Icon className="w-7 h-7 text-primary" />
+                        <Icon className="w-7 h-7 text-primary group-hover:text-pink-500" />
                       </div>
                       <div>
-                        <CardTitle className="font-headline text-xl group-hover:text-accent transition-colors">
+                        <CardTitle className="font-headline text-xl text-white group-hover:text-accent transition-colors">
                           {topic.name}
                         </CardTitle>
                         <span className={cn("text-xs font-medium flex items-center gap-1", status.color)}>
@@ -166,8 +167,8 @@ export default function TopicsPage() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription>{topic.description}</CardDescription>
-                      <div className="flex justify-between items-center text-muted-foreground text-sm mt-4 border-t pt-4">
+                      <CardDescription className="text-slate-300">{topic.description}</CardDescription>
+                      <div className="flex justify-between items-center text-slate-400 text-sm mt-4 border-t border-slate-700 pt-4">
                         <div className="flex items-center gap-2">
                           <BookOpen className="w-4 h-4" />
                           <span>{topic.questionCount} questions</span>
@@ -185,7 +186,7 @@ export default function TopicsPage() {
                     </CardContent>
                   </div>
                   <CardFooter>
-                    <Button asChild className="w-full mt-4">
+                    <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white">
                       <Link href={`/quiz/${topic.id}`}>
                         {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
                       </Link>
