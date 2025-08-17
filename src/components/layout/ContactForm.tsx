@@ -1,7 +1,8 @@
 
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { sendEmail } from '@/app/actions/send-email';
@@ -28,7 +29,7 @@ function SubmitButton() {
 export function ContactForm({ onMessageSent }: ContactFormProps) {
   const { user } = useAuth();
   const { toast } = useToast();
-  const [state, formAction] = useFormState(sendEmail, {
+  const [state, formAction] = useActionState(sendEmail, {
     success: false,
     message: '',
   });
