@@ -65,30 +65,11 @@
 }
 
 @layer base {
-  body {
+  body.light, .light body {
+    background-color: #F0F8FF; /* AliceBlue for a soft white background */
+  }
+
+  body.dark, .dark body {
     background-color: #002B3A;
-    min-height: 100vh;
-  }
-
-  .light {
-    --background: 220 40% 98%;
-    --card: 0 0% 100% / 0.8;
-    --popover: 0 0% 100% / 0.9;
-    --border: 214.3 31.8% 91.4% / 0.2;
-    background-color: #F0F8FF;
-  }
-
-  .dark {
-    --background: #002B3A;
-    --foreground: 210 40% 98%;
-    --card: 250 50% 12% / 0.8;
-    --popover: 250 50% 12% / 0.9;
-    --border: 220 30% 25% / 0.5;
-    background-color: #002B3A;
-  }
-
-  /* Make cards and popovers slightly transparent to see the background */
-  .card-blur {
-    @apply bg-card/80 backdrop-blur-sm border-border/20;
   }
 }
