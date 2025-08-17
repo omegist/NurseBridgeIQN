@@ -150,11 +150,11 @@ export default function TopicsPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex"
               >
-                <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-blue-950 text-white border-blue-800 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30">
+                <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-slate-900 text-white border-slate-700 transition-all duration-300 hover:bg-slate-800/60">
                   <div>
                     <CardHeader className="flex-col items-start space-y-4">
                        <div className="flex items-center gap-4">
-                        <div className="p-3 rounded-lg bg-blue-900">
+                        <div className="p-3 rounded-lg bg-slate-800">
                           <Icon className="w-7 h-7 text-blue-400" />
                         </div>
                         <div>
