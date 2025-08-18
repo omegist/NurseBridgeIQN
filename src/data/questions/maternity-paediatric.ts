@@ -79,7 +79,7 @@ export const questions: Question[] = [
         text: 'Which is a sign of respiratory distress in infants?',
         options: ['Quiet breathing', 'Nasal flaring and grunting', 'Smiling and babbling', 'Warm extremities'],
         correctIndex: 1,
-        explanation: 'Nasal flaring and grunting = respiratory distress in infants.',
+        explanation: 'Nasal flaring and grunting are signs of respiratory distress in infants.',
       },
       {
         id: '138',
@@ -91,7 +91,7 @@ export const questions: Question[] = [
       {
         id: '139',
         text: 'What is a normal respiratory rate for a newborn?',
-        options: ['30-40 breaths per minute', '30-50 breaths per minute', '40-80 breaths per minute', '50-80 breaths per minute'],
+        options: ['20-40 breaths per minute', '30-60 breaths per minute', '40-80 breaths per minute', '50-80 breaths per minute'],
         correctIndex: 1,
         explanation: 'Normal newborn RR = 30-60 breaths per minute.',
       },
@@ -106,5 +106,5 @@ export const questions: Question[] = [
         ],
         correctIndex: 1,
         explanation: '>500 mL blood loss after vaginal birth = hemorrhage.',
-      },
+      }
 ];
