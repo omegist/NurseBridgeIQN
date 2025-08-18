@@ -7,7 +7,6 @@ import { QuizProvider } from "@/contexts/QuizContext"
 import { ThemeProvider } from "@/contexts/ThemeContext"
 import { Header } from "@/components/layout/Header"
 import { TestProvider } from "@/contexts/TestContext"
-import { Chatbot } from "@/components/chatbot/Chatbot"
 
 export const metadata: Metadata = {
   title: "NURSE IQN",
@@ -45,7 +44,6 @@ export default function RootLayout({
                   <main className="flex-1">{children}</main>
                 </div>
                 <Toaster />
-                <Chatbot />
               </TestProvider>
             </QuizProvider>
           </AuthProvider>
