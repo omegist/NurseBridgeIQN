@@ -1,8 +1,8 @@
+
 "use client";
 
 import React, { useState } from "react";
-import { runFlow } from "@genkit-ai/flow";
-import { chatbotFlow } from "../../ai/genkit"; // ✅ Fixed path
+import { runChatbotFlow } from "@/app/actions/chatbot-action";
 
 export default function Chatbot() {
   const [userMessage, setUserMessage] = useState("");
@@ -13,16 +13,20 @@ export default function Chatbot() {
   const handleSend = async () => {
     if (!userMessage.trim()) return;
 
-    setError(null); // Clear previous error
+    setError(null);
     setChatLog((prev) => [...prev, { sender: "user", text: userMessage }]);
     setLoading(true);
 
     try {
-      const result = await runFlow(chatbotFlow, { message: userMessage });
-      setChatLog((prev) => [
-        ...prev,
-        { sender: "bot", text: result.response },
-      ]);
+      const result = await runChatbotFlow({ message: userMessage });
+      if (result.success && result.response) {
+        setChatLog((prev) => [
+          ...prev,
+          { sender: "bot", text: result.response },
+        ]);
+      } else {
+        setError(result.message || "Something went wrong. Please try again.");
+      }
     } catch (err: any) {
       console.error("Flow error:", err);
       setError("Something went wrong. Please try again.");
