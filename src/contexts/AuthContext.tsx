@@ -96,23 +96,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const isInvalidApiKey = useCallback(() => {
     const apiKey = firebaseConfig.apiKey;
-    return !apiKey || apiKey === "YOUR_API_KEY_HERE" || apiKey === "undefined";
+    return !apiKey || apiKey.startsWith("YOUR_");
   }, []);
-
-  useEffect(() => {
-    // Initialize App Check only on the client
-    if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY !== 'YOUR_RECAPTCHA_V3_SITE_KEY_HERE') {
-      try {
-        initializeAppCheck(app, {
-          provider: new ReCaptchaV3Provider(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY),
-          isTokenAutoRefreshEnabled: true
-        });
-      } catch (e) {
-        console.warn("App Check initialization failed. This might be due to hot-reloading. Error:", e);
-      }
-    }
-  }, []);
-
 
   const handleUser = useCallback(
     async (firebaseUser: FirebaseUser | null) => {

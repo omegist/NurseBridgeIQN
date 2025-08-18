@@ -12,16 +12,7 @@ const firebaseConfig = {
   appId: "1:1023611617242:web:22fbe75baf9e73b251cae3"
 };
 
-let app: FirebaseApp;
-try {
-  app = getApps().length ? getApp() : initializeApp(firebaseConfig);
-} catch (e) {
-  console.error("Firebase initialization failed", e);
-  // In a real app, you might want to throw this error or handle it differently.
-  // For now, we'll let it be caught by the app's error boundary.
-  throw new Error("Could not initialize Firebase. Please check your configuration.");
-}
-
+const app: FirebaseApp = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 const db = getFirestore(app);
