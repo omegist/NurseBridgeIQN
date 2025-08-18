@@ -12,7 +12,7 @@ const sendEmailSchema = z.object({
 const resend = new Resend(process.env.RESEND_API_KEY);
 const supportEmail = 'hrishichavan2349@gmail.com';
 
-export async function sendEmail(prevState: any, formData: FormData) {
+export async function sendFeedbackEmail(prevState: any, formData: FormData) {
   const parsed = sendEmailSchema.safeParse({
     message: formData.get('message'),
     userEmail: formData.get('userEmail'),
@@ -32,15 +32,15 @@ export async function sendEmail(prevState: any, formData: FormData) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Nurse IQN Contact Form <onboarding@resend.dev>',
+      from: 'Nurse IQN Feedback <onboarding@resend.dev>',
       to: [supportEmail],
-      subject: `New Query from ${fromName}`,
-      replyTo: fromEmail, // ✅ Corrected key
+      subject: `New Feedback from ${fromName}`,
+      replyTo: fromEmail,
       html: `
-        <h1>New Contact Form Submission</h1>
+        <h1>New Feedback Form Submission</h1>
         <p><strong>From:</strong> ${fromName} (${fromEmail})</p>
         <hr>
-        <h2>Message:</h2>
+        <h2>Feedback:</h2>
         <p>${message}</p>
       `,
     });
@@ -55,7 +55,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
 
     return {
       success: true,
-      message: 'Your message has been sent successfully!',
+      message: 'Your feedback has been sent successfully!',
     };
   } catch (error: unknown) {
     if (error instanceof Error) {
