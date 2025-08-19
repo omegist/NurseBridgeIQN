@@ -190,3 +190,34 @@ body {
     background: -webkit-linear-gradient(to left, #2F0743, #41295a);
     background: linear-gradient(to left, #2F0743, #41295a);
 }
+
+
+/* New Pulsing Heart Animation */
+.pulsing-heart {
+  width: 100px;
+  height: 90px;
+  animation: heartbeat 1.5s infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.7));
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.25) rotate(-2deg);
+  }
+  40% {
+    transform: scale(1) rotate(2deg);
+  }
+  60% {
+    transform: scale(1.25) rotate(-1deg);
+  }
+  80% {
+    transform: scale(1) rotate(1deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
