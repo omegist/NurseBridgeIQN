@@ -15,7 +15,6 @@ import {
   Mail,
   MessageSquare,
 } from "lucide-react"
-import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -33,6 +32,7 @@ import { UserNav } from "../auth/UserNav"
 import { useRouter } from "next/navigation"
 import { ContactForm } from "./ContactForm"
 import { FeedbackForm } from "./FeedbackForm"
+import AnimatedLogo from "../shared/AnimatedLogo"
 
 export function Header() {
   const { user, loading } = useAuth()
@@ -74,7 +74,8 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">NURSE-IQN</span>
+            <AnimatedLogo className="h-8 w-auto" />
+            <span className="font-bold hidden sm:inline-block">NURSE-IQN</span>
           </Link>
           {user && (
             <nav className="flex items-center gap-2">
@@ -103,6 +104,7 @@ export function Header() {
                 <SheetHeader className="border-b pb-4">
                 <SheetTitle className="sr-only">Menu</SheetTitle>
                 <Link href="/" className="flex items-center space-x-2">
+                    <AnimatedLogo className="h-8 w-auto" />
                     <span className="font-bold">NURSE-IQN</span>
                 </Link>
                 </SheetHeader>

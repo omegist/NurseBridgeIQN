@@ -6,7 +6,6 @@ import { Toaster } from "@/components/ui/toaster"
 import { AuthProvider } from "@/contexts/AuthContext"
 import { QuizProvider } from "@/contexts/QuizContext"
 import { ThemeProvider } from "@/contexts/ThemeContext"
-import { Header } from "@/components/layout/Header"
 import { TestProvider } from "@/contexts/TestContext"
 import { FloatingBubbles } from "@/components/layout/FloatingBubbles"
 
