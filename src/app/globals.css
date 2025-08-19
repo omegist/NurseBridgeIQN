@@ -168,6 +168,21 @@ body {
   }
 }
 
+@keyframes pulse-icon {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px hsl(var(--primary)));
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px hsl(var(--primary)));
+  }
+}
+
+.dark .animated-icon {
+  animation: pulse-icon 3s ease-in-out infinite;
+}
+
 
 @layer components {
   .light .glass-card {
