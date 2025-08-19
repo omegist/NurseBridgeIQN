@@ -33,10 +33,11 @@ import { useRouter } from "next/navigation"
 import { ContactForm } from "./ContactForm"
 import { FeedbackForm } from "./FeedbackForm"
 import AnimatedLogo from "../shared/AnimatedLogo"
+import { cn } from "@/lib/utils"
 
 export function Header() {
   const { user, loading } = useAuth()
-  const { setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
   const [contactFormOpen, setContactFormOpen] = useState(false)
@@ -75,7 +76,7 @@ export function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <AnimatedLogo className="h-8 w-auto" />
-            <span className="font-bold hidden sm:inline-block">NURSE-IQN</span>
+            <span className="font-bold hidden sm:inline-block">NIQN</span>
           </Link>
           {user && (
             <nav className="flex items-center gap-2">
@@ -105,7 +106,7 @@ export function Header() {
                 <SheetTitle className="sr-only">Menu</SheetTitle>
                 <Link href="/" className="flex items-center space-x-2">
                     <AnimatedLogo className="h-8 w-auto" />
-                    <span className="font-bold">NURSE-IQN</span>
+                    <span className="font-bold">NIQN</span>
                 </Link>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-2 mt-4">

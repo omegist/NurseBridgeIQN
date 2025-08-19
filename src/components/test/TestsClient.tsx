@@ -84,11 +84,11 @@ export function TestsClient({ tests }: TestsClientProps) {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex"
             >
-              <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-card">
+              <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-1">
                 <div>
                   <CardHeader className="flex-row items-center gap-4 space-y-0">
                     <div className="p-3 rounded-lg bg-primary/10">
-                      <ClipboardCheck className="w-7 h-7 text-primary" />
+                      <ClipboardCheck className="w-7 h-7 text-primary animated-icon" />
                     </div>
                     <CardTitle className="font-headline text-xl text-card-foreground">
                       {test.name}
