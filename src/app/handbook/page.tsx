@@ -32,7 +32,7 @@ export default function HandbookPage() {
             The PDF viewer will be implemented here. For now, you can add a download link.
           </p>
           <Button asChild size="lg" className="mt-4 rounded-full px-12 py-6 text-xl shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
-            <Link href="/path-to-your-handbook.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/nursing-handbook.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" />
                 Download Handbook
             </Link>
