@@ -14,6 +14,7 @@ import {
   BookOpen,
   Mail,
   MessageSquare,
+  BookText,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -48,6 +49,7 @@ export function Header() {
   }, [])
 
   const navLinks = [
+    { href: "/handbook", icon: BookText, text: "Handbook" },
     { href: "/topics", icon: BookOpen, text: "Quizzes" },
     { href: "/tests", icon: ClipboardCheck, text: "Tests" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
@@ -76,7 +78,6 @@ export function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <AnimatedLogo className="h-8 w-auto" />
-            <span className="font-bold hidden sm:inline-block">NIQN</span>
           </Link>
           {user && (
             <nav className="flex items-center gap-2">
@@ -106,7 +107,6 @@ export function Header() {
                 <SheetTitle className="sr-only">Menu</SheetTitle>
                 <Link href="/" className="flex items-center space-x-2">
                     <AnimatedLogo className="h-8 w-auto" />
-                    <span className="font-bold">NIQN</span>
                 </Link>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-2 mt-4">
