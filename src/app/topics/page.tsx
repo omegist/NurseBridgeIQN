@@ -22,6 +22,7 @@ import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
+import { useTheme } from "@/contexts/ThemeContext";
 
 async function getTopicProgress(userId: string) {
   if (!db) return {};
@@ -59,6 +60,7 @@ async function getTopicProgress(userId: string) {
 
 export default function TopicsPage() {
   const { user } = useAuth();
+  const { theme } = useTheme();
   const [topicProgress, setTopicProgress] = useState<Record<string, number>>({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -97,6 +99,15 @@ export default function TopicsPage() {
       };
     return { text: "Not Started", icon: BookOpen, color: "text-muted-foreground" };
   };
+
+  const topicColors = [
+    { gradient: 'topic-gradient-1', iconBg: 'bg-blue-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-2', iconBg: 'bg-green-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-3', iconBg: 'bg-purple-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-4', iconBg: 'bg-orange-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-5', iconBg: 'bg-pink-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-6', iconBg: 'bg-lime-400', iconColor: 'text-white' },
+  ];
 
   return (
     <>
@@ -144,7 +155,28 @@ export default function TopicsPage() {
               const progress = topicProgress[topic.id] || 0;
               const status = getTopicStatus(topic.id, progress);
               const StatusIcon = status.icon;
+              const colorInfo = topicColors[index % topicColors.length];
 
+              if (theme === 'light') {
+                return (
+                  <motion.div
+                    key={topic.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
+                      <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
+                        <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
+                      </div>
+                      <h3 className="font-semibold text-foreground">{topic.name}</h3>
+                      <Link href={`/quiz/${topic.id}`} className="absolute inset-0" aria-label={`Start ${topic.name} quiz`}></Link>
+                    </Card>
+                  </motion.div>
+                )
+              }
+              
+              // Dark theme card
               return (
                 <motion.div
                   key={topic.id}

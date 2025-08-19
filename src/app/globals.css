@@ -5,31 +5,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
     --primary: 270 90% 65%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
     --accent: 330 80% 55%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 84.2% 60.2%;
+
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 270 90% 65%;
+
     --radius: 0.5rem;
+
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 75% 60%;
     --chart-5: 340 85% 65%;
+
+    /* Glassmorphism Card Gradients */
+    --topic-gradient-1: linear-gradient(135deg, rgba(169, 214, 255, 0.4) 0%, rgba(169, 214, 255, 0.1) 100%);
+    --topic-gradient-2: linear-gradient(135deg, rgba(168, 255, 209, 0.4) 0%, rgba(168, 255, 209, 0.1) 100%);
+    --topic-gradient-3: linear-gradient(135deg, rgba(224, 194, 255, 0.4) 0%, rgba(224, 194, 255, 0.1) 100%);
+    --topic-gradient-4: linear-gradient(135deg, rgba(255, 199, 169, 0.4) 0%, rgba(255, 199, 169, 0.1) 100%);
+    --topic-gradient-5: linear-gradient(135deg, rgba(255, 184, 203, 0.4) 0%, rgba(255, 184, 203, 0.1) 100%);
+    --topic-gradient-6: linear-gradient(135deg, rgba(206, 255, 188, 0.4) 0%, rgba(206, 255, 188, 0.1) 100%);
+
   }
 
   .dark {
@@ -52,11 +71,28 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 270 90% 65%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 75% 60%;
-    --chart-5: 340 85% 65%;
+  }
+
+  .light {
+    --background: 236 100% 97%; /* Light blueish-gray */
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 270 90% 65%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 330 80% 55%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
   }
 }
 
@@ -130,4 +166,20 @@ body {
     opacity: 0;
     border-radius: 50%;
   }
+}
+
+
+@layer components {
+  .light .glass-card {
+    @apply bg-white/40 border-white/50 backdrop-blur-lg;
+    border-width: 1px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .topic-gradient-1 { background-image: var(--topic-gradient-1); }
+  .topic-gradient-2 { background-image: var(--topic-gradient-2); }
+  .topic-gradient-3 { background-image: var(--topic-gradient-3); }
+  .topic-gradient-4 { background-image: var(--topic-gradient-4); }
+  .topic-gradient-5 { background-image: var(--topic-gradient-5); }
+  .topic-gradient-6 { background-image: var(--topic-gradient-6); }
 }
