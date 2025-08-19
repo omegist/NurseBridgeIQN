@@ -20,7 +20,11 @@ export default function HomePage() {
   }, [user, loading, router])
 
   if (loading || !user) {
-    return null
+    return (
+        <div className="flex items-center justify-center h-screen">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+        </div>
+    );
   }
 
   return (
@@ -51,7 +55,7 @@ export default function HomePage() {
             size="lg"
             className="mt-8 rounded-full px-12 py-6 text-xl shadow-lg bg-pink-600 hover:bg-pink-700 text-white"
             >
-            <Link href="/topics">Start</Link>
+            <Link href="/topics">Start Quiz</Link>
             </Button>
         </motion.div>
     </div>

@@ -188,7 +188,7 @@ export default function TopicsPage() {
                     </CardContent>
                   </div>
                   <CardFooter>
-                    <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+                    <Button asChild className="w-full mt-4 bg-pink-600 hover:bg-pink-700 text-white font-semibold">
                       <Link href={`/quiz/${topic.id}`}>
                         {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
                       </Link>
