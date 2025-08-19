@@ -34,11 +34,10 @@ import { useRouter } from "next/navigation"
 import { ContactForm } from "./ContactForm"
 import { FeedbackForm } from "./FeedbackForm"
 import AnimatedLogo from "../shared/AnimatedLogo"
-import { cn } from "@/lib/utils"
 
 export function Header() {
   const { user, loading } = useAuth()
-  const { theme, setTheme } = useTheme()
+  const { setTheme } = useTheme()
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
   const [contactFormOpen, setContactFormOpen] = useState(false)
@@ -49,7 +48,6 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { href: "/handbook", icon: BookText, text: "Handbook" },
     { href: "/topics", icon: BookOpen, text: "Quizzes" },
     { href: "/tests", icon: ClipboardCheck, text: "Tests" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
@@ -72,6 +70,24 @@ export function Header() {
     )
   }
 
+  const handbookLink = (
+    <Button variant="ghost" asChild>
+      <a href="/nursing-handbook.pdf" target="_blank" rel="noopener noreferrer">
+        <BookText className="mr-2 h-4 w-4" />
+        Handbook
+      </a>
+    </Button>
+  );
+
+  const handbookLinkMobile = (
+     <Button variant="ghost" className="justify-start" asChild>
+      <a href="/nursing-handbook.pdf" target="_blank" rel="noopener noreferrer">
+        <BookText className="mr-2 h-4 w-4" />
+        Handbook
+      </a>
+    </Button>
+  );
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -81,6 +97,7 @@ export function Header() {
           </Link>
           {user && (
             <nav className="flex items-center gap-2">
+              {handbookLink}
               {navLinks.map(({ href, icon: Icon, text }) => (
                 <Button key={text} variant="ghost" asChild>
                   <Link href={href}>
@@ -110,6 +127,7 @@ export function Header() {
                 </Link>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-2 mt-4">
+                {handbookLinkMobile}
                 {navLinks.map(({ href, icon: Icon, text }) => (
                     <Button
                     key={text}
