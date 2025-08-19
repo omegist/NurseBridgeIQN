@@ -35,7 +35,7 @@ export async function sendEmail(prevState: any, formData: FormData) {
       from: 'Nurse IQN Contact Form <onboarding@resend.dev>',
       to: [supportEmail],
       subject: `New Query from ${fromName}`,
-      replyTo: fromEmail, // ✅ Corrected key
+      replyTo: fromEmail,
       html: `
         <h1>New Contact Form Submission</h1>
         <p><strong>From:</strong> ${fromName} (${fromEmail})</p>
@@ -47,9 +47,11 @@ export async function sendEmail(prevState: any, formData: FormData) {
 
     if (error) {
       console.error('Resend API Error:', error);
+      // More robust error message handling
+      const errorMessage = error.message || JSON.stringify(error);
       return {
         success: false,
-        message: `Failed to send email. Error: ${error.message}`,
+        message: `Failed to send email. Error: ${errorMessage}`,
       };
     }
 
