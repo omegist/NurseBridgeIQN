@@ -17,7 +17,7 @@ import { Clock, BookOpen, RotateCw, Check } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { db } from "@/lib/firebase"; // ✅ FIXED IMPORT
+import { db } from "@/lib/firebase";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
@@ -155,25 +155,23 @@ export default function TopicsPage() {
                 >
                   <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-card">
                     <div>
-                      <CardHeader className="flex-col items-start space-y-4">
-                        <div className="flex items-center gap-4">
-                          <div className="p-3 rounded-lg bg-primary/10">
-                            <Icon className="w-7 h-7 text-primary" />
-                          </div>
-                          <div>
-                            <CardTitle className="font-headline text-xl text-card-foreground">
-                              {topic.name}
-                            </CardTitle>
-                            <span className={cn("text-xs font-medium flex items-center gap-1", status.color)}>
-                              <StatusIcon className="w-3.5 h-3.5" />
-                              {status.text}
-                            </span>
-                          </div>
+                      <CardHeader className="flex-row items-start gap-4">
+                        <div className="p-3 rounded-lg bg-primary/10">
+                          <Icon className="w-8 h-8 text-primary" />
+                        </div>
+                        <div>
+                          <CardTitle className="font-headline text-xl text-card-foreground">
+                            {topic.name}
+                          </CardTitle>
+                          <span className={cn("text-xs font-medium flex items-center gap-1", status.color)}>
+                            <StatusIcon className="w-3.5 h-3.5" />
+                            {status.text}
+                          </span>
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <CardDescription className="text-muted-foreground mb-4">{topic.description}</CardDescription>
-                        <div className="flex justify-between items-center text-muted-foreground text-sm">
+                        <CardDescription className="text-muted-foreground mb-4 min-h-[40px]">{topic.description}</CardDescription>
+                        <div className="flex justify-between items-center text-muted-foreground text-sm mb-4">
                           <div className="flex items-center gap-2">
                             <BookOpen className="w-4 h-4" />
                             <span>{topic.questionCount} questions</span>
@@ -183,7 +181,7 @@ export default function TopicsPage() {
                             <span>{topic.difficulty}</span>
                           </div>
                         </div>
-                        {progress > 0 && (
+                         {progress > 0 && (
                           <div className="mt-4">
                             <Progress value={progress} className="h-2 bg-muted" />
                           </div>
@@ -191,7 +189,7 @@ export default function TopicsPage() {
                       </CardContent>
                     </div>
                     <CardFooter>
-                      <Button asChild className="w-full mt-4 bg-pink-600 hover:bg-pink-700 text-white font-semibold">
+                      <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                         <Link href={`/quiz/${topic.id}`}>
                           {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
                         </Link>

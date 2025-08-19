@@ -87,7 +87,7 @@ export function AuthForm() {
   const getTitle = () => {
     switch (authState) {
       case "login": return "Login to your account"
-      case "signup": return "Book your Free Session"
+      case "signup": return "Create an account"
       case "forgotPassword": return "Reset Password"
     }
   }
@@ -95,7 +95,7 @@ export function AuthForm() {
   const getDescription = () => {
       switch (authState) {
         case "login": return "Welcome back! Please enter your details."
-        case "signup": return "Learn from India's best teachers"
+        case "signup": return "Enter your information to create an account."
         case "forgotPassword": return "Enter your email to receive a password reset link."
       }
   }
@@ -107,11 +107,11 @@ export function AuthForm() {
         transition={{ duration: 0.5 }}
         className="w-full max-w-md"
       >
-        <div className="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl border">
+        <div className="bg-card text-card-foreground p-8 rounded-2xl shadow-2xl border">
           <h2 className="text-2xl font-bold text-center mb-1">
             {getTitle()}
           </h2>
-          <p className="text-center text-gray-500 mb-6">
+          <p className="text-center text-muted-foreground mb-6">
             {getDescription()}
           </p>
 
@@ -119,15 +119,15 @@ export function AuthForm() {
             <form onSubmit={handleLoginSubmit(onLogin)} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" {...registerLogin("email")} className="bg-gray-100" />
+                <Input id="email" type="email" {...registerLogin("email")} />
                 {loginErrors.email && <p className="text-sm text-red-500">{loginErrors.email.message}</p>}
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" {...registerLogin("password")} className="bg-gray-100" />
+                <Input id="password" type="password" {...registerLogin("password")} />
                 {loginErrors.password && <p className="text-sm text-red-500">{loginErrors.password.message}</p>}
               </div>
-              <Button type="submit" className="w-full !mt-6 bg-orange-500 hover:bg-orange-600 text-white" disabled={isLoading}>
+              <Button type="submit" className="w-full !mt-6" disabled={isLoading}>
                 {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 Login
               </Button>
@@ -138,22 +138,22 @@ export function AuthForm() {
              <form onSubmit={handleSignupSubmit(onSignup)} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="username">Username</Label>
-                  <Input id="username" type="text" {...registerSignup("username")} className="bg-gray-100" placeholder="Enter your name"/>
+                  <Input id="username" type="text" {...registerSignup("username")} placeholder="Enter your name"/>
                   {signupErrors.username && <p className="text-sm text-red-500">{signupErrors.username.message}</p>}
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" {...registerSignup("email")} className="bg-gray-100" placeholder="Enter your email"/>
+                  <Input id="email" type="email" {...registerSignup("email")} placeholder="Enter your email"/>
                   {signupErrors.email && <p className="text-sm text-red-500">{signupErrors.email.message}</p>}
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">Password</Label>
-                  <Input id="password" type="password" {...registerSignup("password")} className="bg-gray-100" placeholder="Create a password"/>
+                  <Input id="password" type="password" {...registerSignup("password")} placeholder="Create a password"/>
                   {signupErrors.password && <p className="text-sm text-red-500">{signupErrors.password.message}</p>}
                 </div>
-                <Button type="submit" className="w-full !mt-6 bg-orange-500 hover:bg-orange-600 text-white" disabled={isLoading}>
+                <Button type="submit" className="w-full !mt-6" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Continue to Schedule
+                  Sign Up
                 </Button>
             </form>
           )}
@@ -162,10 +162,10 @@ export function AuthForm() {
             <form onSubmit={handleForgotPasswordSubmit(onForgotPassword)} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="forgot-email">Email</Label>
-                  <Input id="forgot-email" type="email" {...registerForgotPassword("email")} className="bg-gray-100" placeholder="Enter your registered email"/>
+                  <Input id="forgot-email" type="email" {...registerForgotPassword("email")} placeholder="Enter your registered email"/>
                   {forgotPasswordErrors.email && <p className="text-sm text-red-500">{forgotPasswordErrors.email.message}</p>}
                 </div>
-                <Button type="submit" className="w-full !mt-6 bg-orange-500 hover:bg-orange-600 text-white" disabled={isLoading}>
+                <Button type="submit" className="w-full !mt-6" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   Send Reset Link
                 </Button>
@@ -188,7 +188,7 @@ export function AuthForm() {
                     Sign Up
                 </Button>
                 <div className="mt-2">
-                    <Button variant="link" onClick={() => setAuthState("forgotPassword")} className="text-xs text-gray-500">
+                    <Button variant="link" onClick={() => setAuthState("forgotPassword")} className="text-xs text-muted-foreground">
                         Forgot Password?
                     </Button>
                 </div>

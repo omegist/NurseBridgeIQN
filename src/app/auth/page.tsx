@@ -7,6 +7,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import AnimatedLogo from "@/components/shared/AnimatedLogo";
 
 export default function AuthPage() {
     const { user, loading } = useAuth();
@@ -27,9 +28,9 @@ export default function AuthPage() {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-background p-4">
             <Link href="/" className="mb-8">
-                <Image src="https://placehold.co/150x50.png" alt="Logo" width={150} height={50} data-ai-hint="logo company"/>
+                <AnimatedLogo className="h-20 w-auto" />
             </Link>
             <AuthForm />
         </div>
