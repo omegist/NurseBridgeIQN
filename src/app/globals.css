@@ -171,9 +171,13 @@ body {
 
 @layer components {
   .light .glass-card {
-    @apply bg-white/40 border-white/50 backdrop-blur-lg;
+    @apply bg-white/40 border-white/50 backdrop-blur-lg transition-all duration-300;
     border-width: 1px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  .light .glass-card:hover {
+    @apply shadow-2xl;
+    transform: translateY(-5px);
   }
 
   .topic-gradient-1 { background-image: var(--topic-gradient-1); }

@@ -13,9 +13,21 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { iconMap } from "@/lib/utils";
+import { cn, iconMap } from "@/lib/utils";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function FlashcardsPage() {
+  const { theme } = useTheme();
+
+  const cardColors = [
+    { gradient: 'topic-gradient-1', iconBg: 'bg-blue-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-2', iconBg: 'bg-green-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-3', iconBg: 'bg-purple-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-4', iconBg: 'bg-orange-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-5', iconBg: 'bg-pink-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-6', iconBg: 'bg-lime-400', iconColor: 'text-white' },
+  ];
+
   return (
     <div className="container mx-auto py-10 px-4 min-h-[calc(100vh-4rem)]">
       <motion.div
@@ -34,7 +46,29 @@ export default function FlashcardsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {flashcardTopics.map((topic, index) => {
           const Icon = iconMap[topic.icon] ?? (() => null);
+          const colorInfo = cardColors[index % cardColors.length];
 
+          if (theme === 'light') {
+            return (
+              <motion.div
+                key={topic.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative flex flex-col"
+              >
+                <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
+                  <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
+                    <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
+                  </div>
+                  <h3 className="font-semibold text-foreground">{topic.name}</h3>
+                  <Link href={`/flashcards/${topic.id}`} className="absolute inset-0" aria-label={`Start ${topic.name} flashcards`}></Link>
+                </Card>
+              </motion.div>
+            )
+          }
+
+          // Dark theme card
           return (
             <motion.div
               key={topic.id}
