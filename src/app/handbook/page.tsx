@@ -29,7 +29,7 @@ export default function HandbookPage() {
             Your comprehensive guide to nursing principles, procedures, and best practices.
           </p>
           <p className="text-muted-foreground mb-8">
-            The PDF viewer will be implemented here. For now, you can add a download link.
+            Click the button below to download the handbook as a PDF.
           </p>
           <Button asChild size="lg" className="mt-4 rounded-full px-12 py-6 text-xl shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
             <Link href="/nursing-handbook.pdf" target="_blank" rel="noopener noreferrer">
