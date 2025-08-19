@@ -7,7 +7,7 @@ import { useAuth } from "@/contexts/AuthContext"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import { PulsingHeart } from "@/components/shared/PulsingHeart"
+import AnimatedLogo from "@/components/shared/AnimatedLogo"
 
 export default function HomePage() {
   const { user, loading } = useAuth()
@@ -29,7 +29,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-4 text-center">
-      <PulsingHeart />
+      <AnimatedLogo className="h-40 w-40" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
