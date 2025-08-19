@@ -47,7 +47,7 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { href: "/e-IQNhandbook.pdf", icon: BookOpen, text: "Handbook", isExternal: true },
+    { href: "/topics", icon: BookOpen, text: "Quizzes" },
     { href: "/tests", icon: ClipboardCheck, text: "Tests" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
@@ -74,13 +74,13 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">NURSE IQN</span>
+            <span className="font-bold">NURSE-IQN</span>
           </Link>
           {user && (
             <nav className="flex items-center gap-2">
-              {navLinks.map(({ href, icon: Icon, text, isExternal }) => (
+              {navLinks.map(({ href, icon: Icon, text }) => (
                 <Button key={text} variant="ghost" asChild>
-                  <Link href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
+                  <Link href={href}>
                     <Icon className="mr-2 h-4 w-4" />
                     {text}
                   </Link>
@@ -103,18 +103,18 @@ export function Header() {
                 <SheetHeader className="border-b pb-4">
                 <SheetTitle className="sr-only">Menu</SheetTitle>
                 <Link href="/" className="flex items-center space-x-2">
-                    <span className="font-bold">NURSE IQN</span>
+                    <span className="font-bold">NURSE-IQN</span>
                 </Link>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-2 mt-4">
-                {navLinks.map(({ href, icon: Icon, text, isExternal }) => (
+                {navLinks.map(({ href, icon: Icon, text }) => (
                     <Button
                     key={text}
                     variant="ghost"
                     className="justify-start"
                     asChild
                     >
-                    <Link href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
+                    <Link href={href}>
                         <Icon className="mr-2 h-4 w-4" />
                         {text}
                     </Link>

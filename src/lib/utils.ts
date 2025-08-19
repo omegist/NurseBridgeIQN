@@ -1,3 +1,4 @@
+
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -27,9 +28,13 @@ import {
   Repeat,
   Baby,
   BookOpen,
+  Award,
+  BarChart,
+  Star,
+  LucideIcon
 } from "lucide-react";
 
-export const iconMap: Record<string, React.ElementType> = {
+export const iconMap: Record<string, LucideIcon> = {
   pill: Pill,
   heartPulse: HeartPulse,
   brain: Brain,
@@ -38,5 +43,8 @@ export const iconMap: Record<string, React.ElementType> = {
   repeat: Repeat,
   baby: Baby,
   bookOpen: BookOpen,
+  award: Award,
+  barChart: BarChart,
+  star: Star,
   // ➕ add more name‑to‑icon pairs here as needed
 };
