@@ -188,7 +188,7 @@ export function Header() {
             <Dialog open={feedbackFormOpen} onOpenChange={setFeedbackFormOpen}>
               {user && (
                   <DialogTrigger asChild>
-                      <Button variant="ghost" size="icon">
+                      <Button variant="ghost" size="icon" className="hidden md:inline-flex">
                           <MessageSquare className="h-5 w-5" />
                           <span className="sr-only">Feedback</span>
                       </Button>
@@ -208,7 +208,7 @@ export function Header() {
             <Dialog open={contactFormOpen} onOpenChange={setContactFormOpen}>
                 {user && (
                     <DialogTrigger asChild>
-                        <Button variant="ghost" size="icon">
+                        <Button variant="ghost" size="icon" className="hidden md:inline-flex">
                             <Mail className="h-5 w-5" />
                             <span className="sr-only">Contact Us</span>
                         </Button>
