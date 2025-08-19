@@ -26,20 +26,25 @@ const AnimatedLogo = ({ className }: { className?: string }) => {
         strokeLinejoin="round"
         className="h-full w-full"
       >
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
         <motion.path
-          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-          fill="currentColor"
+          d="M19.3 5.3C17.2 3.2 14.2 3.2 12 5.3L12 5.3C9.8 3.2 6.8 3.2 4.7 5.3C2.6 7.4 2.6 10.4 4.7 12.5L12 19.8L19.3 12.5C21.4 10.4 21.4 7.4 19.3 5.3Z"
+          fill="#4A90E2"
           stroke="none"
           initial={{ scale: 1 }}
-          animate={{ scale: [1, 1.1, 1] }}
+          animate={{ scale: [1, 1.05, 1] }}
           transition={{
-            duration: 1,
+            duration: 1.5,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 0.5,
+            delay: 0.2,
           }}
         />
+        <path d="M16.5 3.01C14.76 3.01 13.09 3.82 12 5.09C10.91 3.82 9.24 3.01 7.5 3.01C4.42 3.01 2 5.43 2 8.51C2 12.28 5.4 15.36 10.55 19.99L12 21.35L13.45 19.99C18.6 15.36 22 12.28 22 8.51C22 5.43 19.58 3.01 16.5 3.01Z"
+            stroke="#4A90E2"
+            strokeWidth="0"
+            fill="#4A90E2"
+        />
+
       </svg>
     </motion.div>
   )
