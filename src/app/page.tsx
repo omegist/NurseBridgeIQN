@@ -29,12 +29,16 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-4 text-center">
+      
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        className="-mt-16" // Nudge the whole container up
       >
-        <h1 className="text-5xl font-bold font-headline mt-8">
+        <AnimatedLogo className="h-24 w-auto mx-auto mb-6" />
+
+        <h1 className="text-5xl font-bold font-headline">
           Welcome to NURSE IQ
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
