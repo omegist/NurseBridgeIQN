@@ -1,8 +1,9 @@
 // src/hooks/useChart.ts
 
-export function useChart() {
-    return {
-      config: {}
-    }
-  }
-  
+import type { Config } from "../types/chart";
+
+export function useChart(): { config: Config } {
+  return {
+    config: {} // Replace with real config when ready
+  };
+}
