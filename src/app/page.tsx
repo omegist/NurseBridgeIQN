@@ -7,7 +7,7 @@ import { useAuth } from "@/contexts/AuthContext"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import AnimatedLogo from "@/components/shared/AnimatedLogo"
+import { PulsingHeart } from "@/components/shared/PulsingHeart"
 
 export default function HomePage() {
   const { user, loading } = useAuth()
@@ -29,35 +29,35 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-4 text-center">
-        <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-            <AnimatedLogo className="h-24 w-24 mx-auto" />
-            <h1 className="text-5xl font-bold font-headline mt-6">
-            Welcome to NURSE IQN
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
-            Hello {user?.name || "Nurse"}! Sharpen your nursing skills and test your knowledge with our interactive quizzes.
-            </p>
-        </motion.div>
+      <PulsingHeart />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+      >
+        <h1 className="text-5xl font-bold font-headline mt-8">
+          Welcome to NURSE IQ
+        </h1>
+        <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
+          Hello {user?.name || "Nurse"}! Sharpen your nursing skills and test your knowledge with our interactive quizzes.
+        </p>
+      </motion.div>
 
-        <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-        >
-            <Button
-            asChild
-            size="lg"
-            className="mt-8 rounded-full px-12 py-6 text-xl shadow-lg bg-pink-600 hover:bg-pink-700 text-white"
-            >
-            <Link href="/topics">Start Quiz</Link>
-            </Button>
-        </motion.div>
+      <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+      >
+          <Button
+          asChild
+          size="lg"
+          className="mt-8 rounded-full px-12 py-6 text-xl shadow-lg bg-pink-600 hover:bg-pink-700 text-white"
+          >
+          <Link href="/topics">Start Quiz</Link>
+          </Button>
+      </motion.div>
     </div>
   )
 }
