@@ -38,7 +38,7 @@ export default function RootLayout({
         <link rel="icon" href="/nurseiqn-logo.png" type="image/png" />
       </head>
       <body className={`${belleza.variable} ${alegreya.variable} font-body antialiased`}>
-        <ThemeProvider storageKey="nurse-iqn-theme">
+        <ThemeProvider storageKey="nurse-iqn-theme" defaultTheme="dark">
           <AuthProvider>
             <QuizProvider>
               <TestProvider>
