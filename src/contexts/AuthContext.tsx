@@ -177,11 +177,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const unsubscribe = onAuthStateChanged(
       auth,
       (user) => {
-        handleUser(user).then(() => {
-            if(user) {
-              router.push('/topics');
-            }
-        });
+        handleUser(user)
       },
       (error: any) => {
         const message = getAuthErrorMessage(error);
@@ -198,7 +194,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     );
     return () => unsubscribe();
-  }, [handleUser, isInvalidApiKey, router]);
+  }, [handleUser, isInvalidApiKey]);
 
   const login = async (email: string, pass: string) => {
     if (isInvalidApiKey()) {
@@ -211,6 +207,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     try {
       await signInWithEmailAndPassword(auth, email, pass)
+      router.push('/topics')
     } catch (error: any) {
       const message = getAuthErrorMessage(error)
       if (message) {
@@ -241,6 +238,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       await updateProfile(userCredential.user, {
         displayName: username,
       })
+      router.push('/topics')
     } catch (error: any) {
       const message = getAuthErrorMessage(error)
       if (message) {
