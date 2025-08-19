@@ -4,7 +4,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { BookText, Download } from "lucide-react";
-import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 
 export default function HandbookPage() {
@@ -32,10 +31,10 @@ export default function HandbookPage() {
             Click the button below to download the handbook as a PDF.
           </p>
           <Button asChild size="lg" className="mt-4 rounded-full px-12 py-6 text-xl shadow-lg bg-blue-600 hover:bg-blue-700 text-white">
-            <Link href="/nursing-handbook.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/nursing-handbook.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" />
                 Download Handbook
-            </Link>
+            </a>
           </Button>
         </motion.div>
       </div>
