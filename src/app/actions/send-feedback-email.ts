@@ -47,9 +47,11 @@ export async function sendFeedbackEmail(prevState: any, formData: FormData) {
 
     if (error) {
       console.error('Resend API Error:', error);
+      // More robust error message handling
+      const errorMessage = error.message || JSON.stringify(error);
       return {
         success: false,
-        message: `Failed to send email. Error: ${error.message}`,
+        message: `Failed to send email. Error: ${errorMessage}`,
       };
     }
 
