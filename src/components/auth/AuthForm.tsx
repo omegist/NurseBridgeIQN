@@ -12,7 +12,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useAuth } from "@/contexts/AuthContext"
 import { Loader2 } from "lucide-react"
-import AnimatedLogo from "../shared/AnimatedLogo"
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Invalid email address." }),
@@ -36,7 +35,7 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>
 type AuthState = "login" | "signup" | "forgotPassword"
 
 export function AuthForm() {
-  const [authState, setAuthState] = useState<AuthState>("login")
+  const [authState, setAuthState] = useState<AuthState>("signup")
   const [isLoading, setIsLoading] = useState(false)
   const { login, signup, sendPasswordReset } = useAuth()
 
@@ -87,34 +86,32 @@ export function AuthForm() {
 
   const getTitle = () => {
     switch (authState) {
-      case "login": return "Welcome Back!"
-      case "signup": return "Create Account"
+      case "login": return "Login to your account"
+      case "signup": return "Book your Free Session"
       case "forgotPassword": return "Reset Password"
     }
   }
   
   const getDescription = () => {
       switch (authState) {
-        case "login": return "Sign in to continue your journey."
-        case "signup": return "Join NURSE IQN to start learning."
+        case "login": return "Welcome back! Please enter your details."
+        case "signup": return "Learn from India's best teachers"
         case "forgotPassword": return "Enter your email to receive a password reset link."
       }
   }
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="w-full max-w-md"
       >
-        <div className="bg-card p-8 rounded-2xl shadow-2xl border">
-          <AnimatedLogo className="h-20 w-20 mx-auto mb-5" />
-          <h2 className="text-3xl font-bold text-center font-headline mb-2">
+        <div className="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl border">
+          <h2 className="text-2xl font-bold text-center mb-1">
             {getTitle()}
           </h2>
-          <p className="text-center text-muted-foreground mb-6">
+          <p className="text-center text-gray-500 mb-6">
             {getDescription()}
           </p>
 
@@ -122,15 +119,15 @@ export function AuthForm() {
             <form onSubmit={handleLoginSubmit(onLogin)} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" {...registerLogin("email")} />
-                {loginErrors.email && <p className="text-sm text-destructive">{loginErrors.email.message}</p>}
+                <Input id="email" type="email" {...registerLogin("email")} className="bg-gray-100" />
+                {loginErrors.email && <p className="text-sm text-red-500">{loginErrors.email.message}</p>}
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" {...registerLogin("password")} />
-                {loginErrors.password && <p className="text-sm text-destructive">{loginErrors.password.message}</p>}
+                <Input id="password" type="password" {...registerLogin("password")} className="bg-gray-100" />
+                {loginErrors.password && <p className="text-sm text-red-500">{loginErrors.password.message}</p>}
               </div>
-              <Button type="submit" className="w-full !mt-6" disabled={isLoading}>
+              <Button type="submit" className="w-full !mt-6 bg-orange-500 hover:bg-orange-600 text-white" disabled={isLoading}>
                 {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 Login
               </Button>
@@ -141,22 +138,22 @@ export function AuthForm() {
              <form onSubmit={handleSignupSubmit(onSignup)} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="username">Username</Label>
-                  <Input id="username" type="text" {...registerSignup("username")} />
-                  {signupErrors.username && <p className="text-sm text-destructive">{signupErrors.username.message}</p>}
+                  <Input id="username" type="text" {...registerSignup("username")} className="bg-gray-100" placeholder="Enter your name"/>
+                  {signupErrors.username && <p className="text-sm text-red-500">{signupErrors.username.message}</p>}
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" {...registerSignup("email")} />
-                  {signupErrors.email && <p className="text-sm text-destructive">{signupErrors.email.message}</p>}
+                  <Input id="email" type="email" {...registerSignup("email")} className="bg-gray-100" placeholder="Enter your email"/>
+                  {signupErrors.email && <p className="text-sm text-red-500">{signupErrors.email.message}</p>}
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">Password</Label>
-                  <Input id="password" type="password" {...registerSignup("password")} />
-                  {signupErrors.password && <p className="text-sm text-destructive">{signupErrors.password.message}</p>}
+                  <Input id="password" type="password" {...registerSignup("password")} className="bg-gray-100" placeholder="Create a password"/>
+                  {signupErrors.password && <p className="text-sm text-red-500">{signupErrors.password.message}</p>}
                 </div>
-                <Button type="submit" className="w-full !mt-6" disabled={isLoading}>
+                <Button type="submit" className="w-full !mt-6 bg-orange-500 hover:bg-orange-600 text-white" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Sign Up
+                  Continue to Schedule
                 </Button>
             </form>
           )}
@@ -165,10 +162,10 @@ export function AuthForm() {
             <form onSubmit={handleForgotPasswordSubmit(onForgotPassword)} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="forgot-email">Email</Label>
-                  <Input id="forgot-email" type="email" {...registerForgotPassword("email")} />
-                  {forgotPasswordErrors.email && <p className="text-sm text-destructive">{forgotPasswordErrors.email.message}</p>}
+                  <Input id="forgot-email" type="email" {...registerForgotPassword("email")} className="bg-gray-100" placeholder="Enter your registered email"/>
+                  {forgotPasswordErrors.email && <p className="text-sm text-red-500">{forgotPasswordErrors.email.message}</p>}
                 </div>
-                <Button type="submit" className="w-full !mt-6" disabled={isLoading}>
+                <Button type="submit" className="w-full !mt-6 bg-orange-500 hover:bg-orange-600 text-white" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   Send Reset Link
                 </Button>
@@ -176,31 +173,31 @@ export function AuthForm() {
           )}
           
           <div className="mt-6 text-center text-sm">
+            {authState === "signup" && (
+                <>
+                <span>Already have an account?</span>
+                <Button variant="link" onClick={() => setAuthState("login")} className="font-semibold text-primary">
+                    Login
+                </Button>
+                </>
+            )}
             {authState === "login" && (
                 <>
                 <span>Don't have an account?</span>
-                <Button variant="link" onClick={() => setAuthState("signup")} className="font-semibold">
+                <Button variant="link" onClick={() => setAuthState("signup")} className="font-semibold text-primary">
                     Sign Up
                 </Button>
                 <div className="mt-2">
-                    <Button variant="link" onClick={() => setAuthState("forgotPassword")} className="text-xs">
+                    <Button variant="link" onClick={() => setAuthState("forgotPassword")} className="text-xs text-gray-500">
                         Forgot Password?
                     </Button>
                 </div>
                 </>
             )}
-            {authState === "signup" && (
-                 <>
-                <span>Already have an account?</span>
-                <Button variant="link" onClick={() => setAuthState("login")} className="font-semibold">
-                    Login
-                </Button>
-                </>
-            )}
             {authState === "forgotPassword" && (
                  <>
                 <span>Remembered your password?</span>
-                <Button variant="link" onClick={() => setAuthState("login")} className="font-semibold">
+                <Button variant="link" onClick={() => setAuthState("login")} className="font-semibold text-primary">
                     Login
                 </Button>
                 </>
@@ -208,6 +205,5 @@ export function AuthForm() {
           </div>
         </div>
       </motion.div>
-    </div>
   )
 }

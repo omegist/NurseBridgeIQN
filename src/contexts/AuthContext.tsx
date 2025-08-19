@@ -176,7 +176,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const unsubscribe = onAuthStateChanged(
       auth,
-      handleUser,
+      (user) => {
+        handleUser(user).then(() => {
+            if(user) {
+              router.push('/topics');
+            }
+        });
+      },
       (error: any) => {
         const message = getAuthErrorMessage(error);
         if (
@@ -192,7 +198,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     );
     return () => unsubscribe();
-  }, [handleUser, isInvalidApiKey]);
+  }, [handleUser, isInvalidApiKey, router]);
 
   const login = async (email: string, pass: string) => {
     if (isInvalidApiKey()) {
@@ -249,7 +255,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = async () => {
     await signOut(auth)
-    router.push("/auth")
+    router.push("/")
   }
   
   const sendPasswordReset = async (email: string): Promise<boolean> => {
@@ -351,14 +357,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           authConfigError={authConfigError}
         />
       </AuthContext.Provider>
-    );
-  }
-
-  if (loading) {
-     return (
-        <div className="flex items-center justify-center h-screen">
-            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
-        </div>
     );
   }
 

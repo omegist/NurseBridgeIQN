@@ -38,14 +38,12 @@ export default function RootLayout({
         <link rel="icon" href="/nurseiqn-logo.png" type="image/png" />
       </head>
       <body className={`${belleza.variable} ${alegreya.variable} font-body antialiased`}>
-        <ThemeProvider storageKey="nurse-iqn-theme" defaultTheme="dark">
+        <ThemeProvider storageKey="nurse-iqn-theme" defaultTheme="light">
           <AuthProvider>
             <QuizProvider>
               <TestProvider>
                 <div className="relative flex min-h-screen flex-col">
-                  <Header />
                   <main className="flex-1">{children}</main>
-                  <FloatingBubbles />
                 </div>
                 <Toaster />
               </TestProvider>
