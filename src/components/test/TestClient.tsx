@@ -65,7 +65,9 @@ export function TestClient({ test }: { test: Test }) {
   useEffect(() => {
     setVisitedQuestions((prev) => {
       const arr = [...prev];
-      arr[currentQuestionIndex] = true;
+      if (arr.length > currentQuestionIndex) {
+        arr[currentQuestionIndex] = true;
+      }
       return arr;
     });
   }, [currentQuestionIndex, setVisitedQuestions]);
@@ -102,7 +104,7 @@ export function TestClient({ test }: { test: Test }) {
           if (t <= 1) {
             clearInterval(timer);
             /* fire-and-forget to avoid returning a Promise */
-            void handleSubmit();
+            handleSubmit();
             return 0;
           }
           return t - 1;

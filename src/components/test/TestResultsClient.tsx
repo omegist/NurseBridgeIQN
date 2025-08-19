@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
@@ -25,7 +24,7 @@ import { CheckCircle, XCircle, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
 import { doc, setDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase"; // direct import of db here
+import { db } from "@/lib/firebase";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 
