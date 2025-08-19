@@ -8,7 +8,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 export function FloatingBubbles() {
     const { theme } = useTheme();
     const [mounted, setMounted] = useState(false);
-    const [showBubbles, setShowBubbles] = useState(false);
+    const [showBubbles, setShowBubbles] = useState(true);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -21,15 +21,9 @@ export function FloatingBubbles() {
         const isFlashcardPage = pathname.startsWith('/flashcards');
         if (isFlashcardPage) {
             setShowBubbles(false);
-            return;
+        } else {
+            setShowBubbles(true);
         }
-
-        let effectiveTheme = theme;
-        if (theme === "system") {
-          effectiveTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        }
-        
-        setShowBubbles(effectiveTheme === 'light');
 
     }, [pathname, mounted, theme]);
 

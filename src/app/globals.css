@@ -74,6 +74,10 @@
   }
 }
 
+body {
+    @apply bg-background text-foreground;
+}
+
 .dark body {
   @apply bg-gradient-to-br from-teal-900 to-gray-900 text-foreground;
 }
@@ -94,15 +98,11 @@
     display: block;
     width: 40px;
     height: 40px;
-    background-color: hsla(252, 73%, 97%, 1); /* Light Lavender for bubbles */
+    background-color: hsla(var(--primary), 0.15);
     bottom: -160px;
     animation: bubble-animation 20s infinite;
     transition-timing-function: linear;
     border-radius: 50%;
-}
-
-.dark .bubbles li {
-    background-color: hsla(var(--primary), 0.15); /* Keep original color for dark mode */
 }
 
 .bubbles li:nth-child(1) {
@@ -127,10 +127,6 @@
     width: 60px;
     height: 60px;
     animation-duration: 18s;
-    background-color: hsla(180, 80%, 40%, 0.15); /* Light Teal for bubbles */
-}
-
-.dark .bubbles li:nth-child(4) {
     background-color: hsla(var(--accent), 0.15);
 }
 
@@ -166,10 +162,6 @@
     height: 10px;
     animation-delay: 2s;
     animation-duration: 25s;
-    background-color: hsla(180, 80%, 40%, 0.2); /* Light Teal for bubbles */
-}
-
-.dark .bubbles li:nth-child(9) {
     background-color: hsla(var(--accent), 0.2);
 }
 
