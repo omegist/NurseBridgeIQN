@@ -1,6 +1,6 @@
 import { onUserCreate } from "firebase-functions/v2/auth";
 import type { UserRecord } from "firebase-admin/auth";
-import * as logger from "firebase-functions/logger";
+import { logger } from "firebase-functions";
 import nodemailer from "nodemailer";
 
 // Configure Nodemailer transporter using Gmail.
