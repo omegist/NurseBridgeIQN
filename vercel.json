@@ -20,5 +20,8 @@
       "destination": "/home",
       "statusCode": 301
     }
+  ],
+  "ignore": [
+    "functions/**"
   ]
 }
