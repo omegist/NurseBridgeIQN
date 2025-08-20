@@ -1,6 +1,4 @@
-// src/utils/chartUtils.ts
-
-import type { Config, ConfigItem, PayloadItem } from "../types/chart";
+import type { Config, ConfigItem, ExtendedTooltipPayload } from "@/types/chart"
 
 /**
  * Safely gets the config item from config by key
@@ -11,8 +9,8 @@ import type { Config, ConfigItem, PayloadItem } from "../types/chart";
  */
 export function getPayloadConfigFromPayload(
   config: Config,
-  item: PayloadItem,
+  item: ExtendedTooltipPayload,
   key: string
 ): ConfigItem {
-  return config?.[key] ?? {};
+  return config?.[key] ?? {}
 }
