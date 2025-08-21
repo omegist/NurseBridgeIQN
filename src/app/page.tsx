@@ -33,6 +33,7 @@ export default function HomePage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
+        className="flex flex-col items-center"
       >
         <h1 className="text-5xl font-bold font-headline mb-4 text-foreground">
           Welcome to NURSE IQN
@@ -52,6 +53,15 @@ export default function HomePage() {
           </Button>
         )}
       </motion.div>
+      
+      <footer className="absolute bottom-4 text-center text-sm text-muted-foreground w-full">
+        <div className="flex justify-center gap-4">
+            <Link href="/shipping-policy" className="hover:text-primary transition-colors">Shipping Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link>
+            <Link href="/cancellations-and-refunds" className="hover:text-primary transition-colors">Cancellations and Refunds</Link>
+            <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+        </div>
+      </footer>
     </div>
   )
 }
