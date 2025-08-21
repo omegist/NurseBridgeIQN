@@ -3,7 +3,7 @@
 
 import Razorpay from 'razorpay';
 import { z } from 'zod';
-import { doc, updateDoc } from 'firebase/firestore';
+import { doc, updateDoc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { revalidatePath } from 'next/cache';
 
@@ -54,9 +54,27 @@ export async function createOrder(prevState: any, formData: FormData) {
 export async function updateUserPaymentStatus(userId: string) {
   try {
     const userRef = doc(db, 'users', userId);
+    
+    // Update the isPaid flag in the main users collection
     await updateDoc(userRef, {
       isPaid: true,
     });
+
+    // Create a record in the new 'payments' collection
+    const userSnap = await getDoc(userRef);
+    if (userSnap.exists()) {
+      const userData = userSnap.data();
+      const paymentRef = doc(db, 'payments', userId);
+      await setDoc(paymentRef, {
+        userId: userId,
+        userEmail: userData.email,
+        amount: 2000,
+        currency: 'INR',
+        paymentDate: serverTimestamp(),
+        isPaid: true,
+      });
+    }
+
     revalidatePath('/topics');
     revalidatePath('/tests');
     revalidatePath('/flashcards');
