@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useActionState, useTransition } from 'react';
+import { useActionState, useEffect, useTransition } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
 import { createOrder, updateUserPaymentStatus } from '@/app/actions/payment';
@@ -35,11 +35,6 @@ export function usePayment() {
     });
   };
 
-  // Effect to handle order creation and open Razorpay checkout
-  // This effect depends on `orderState`, which is updated by `createOrderAction`
-  // We cannot use useEffect here as it's a hook and can't be called conditionally.
-  // Instead, the component using this hook should trigger this logic when orderState changes.
-  
   const processOrder = (state: typeof orderState) => {
     if (state.success && state.order && user) {
         const options = {

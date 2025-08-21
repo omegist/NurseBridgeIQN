@@ -35,6 +35,7 @@ import { useRouter } from "next/navigation"
 import { ContactForm } from "./ContactForm"
 import { FeedbackForm } from "./FeedbackForm"
 import AnimatedLogo from "../shared/AnimatedLogo"
+import { usePayment } from "@/hooks/usePayment"
 
 export function Header() {
   const { user, loading, logout } = useAuth()
@@ -43,10 +44,18 @@ export function Header() {
   const [mounted, setMounted] = useState(false)
   const [contactFormOpen, setContactFormOpen] = useState(false)
   const [feedbackFormOpen, setFeedbackFormOpen] = useState(false)
+  const { openPaymentDialog, isPending, orderState, processOrder } = usePayment();
 
   useEffect(() => {
     setMounted(true)
   }, [])
+  
+  useEffect(() => {
+    if (orderState.success) {
+      processOrder(orderState);
+    }
+  }, [orderState, processOrder]);
+
 
   const navLinks = [
     { href: "/topics", icon: BookOpen, text: "Quizzes" },
@@ -62,6 +71,14 @@ export function Header() {
   const feedbackLink = {
       icon: MessageSquare, text: "Feedback"
   }
+  
+  const handleHandbookClick = (e: React.MouseEvent) => {
+    if (user && !user.isPaid) {
+      e.preventDefault();
+      openPaymentDialog();
+    }
+  };
+
 
   if (!mounted) {
     return (
@@ -73,7 +90,7 @@ export function Header() {
 
   const handbookLink = (
     <Button variant="ghost" asChild>
-      <a href="/nursing-handbook.pdf" target="_blank" rel="noopener noreferrer">
+      <a href="/nursing-handbook.pdf" onClick={handleHandbookClick} target="_blank" rel="noopener noreferrer">
         <BookText className="mr-2 h-4 w-4" />
         Handbook
       </a>
@@ -82,7 +99,7 @@ export function Header() {
 
   const handbookLinkMobile = (
      <Button variant="ghost" className="justify-start" asChild>
-      <a href="/nursing-handbook.pdf" target="_blank" rel="noopener noreferrer">
+      <a href="/nursing-handbook.pdf" onClick={handleHandbookClick} target="_blank" rel="noopener noreferrer">
         <BookText className="mr-2 h-4 w-4" />
         Handbook
       </a>
