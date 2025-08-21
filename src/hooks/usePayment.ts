@@ -12,7 +12,7 @@ export function usePayment() {
   const [isPending, startTransition] = useTransition();
   const [orderState, createOrderAction] = useActionState(createOrder, {
     success: false,
-    order: null,
+    order: undefined, // ✅ Fixes the type error
     message: '',
   });
 
