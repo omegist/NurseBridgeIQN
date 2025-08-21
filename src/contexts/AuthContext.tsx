@@ -89,6 +89,8 @@ const getAuthErrorMessage = (error: any): string => {
   }
 }
 
+const DEVELOPER_EMAIL = "chavansahil1610@gmail.com";
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
@@ -107,6 +109,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (userDoc.exists()) {
       const userData = userDoc.data();
       const firebaseUser = auth.currentUser;
+      const isDeveloper = firebaseUser?.email === DEVELOPER_EMAIL;
+
       return {
         uid: uid,
         name: userData.name || firebaseUser?.displayName,
@@ -114,7 +118,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         score: userData.score || 0,
         avatar: userData.avatar || firebaseUser?.photoURL,
         createdAt: userData.createdAt?.toDate() || null,
-        isPaid: userData.isPaid || false,
+        isPaid: isDeveloper || userData.isPaid || false,
       };
     }
     return null;
@@ -125,6 +129,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       try {
         if (firebaseUser) {
           let userProfile = await fetchUserDocument(firebaseUser.uid);
+          const isDeveloper = firebaseUser.email === DEVELOPER_EMAIL;
 
           if (!userProfile) {
             const newUser: User = {
@@ -137,7 +142,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               score: 0,
               avatar: firebaseUser.photoURL,
               createdAt: new Date(),
-              isPaid: false,
+              isPaid: isDeveloper,
             }
 
             await setDoc(doc(db, "users", firebaseUser.uid), {
@@ -146,7 +151,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               score: 0,
               avatar: newUser.avatar,
               createdAt: serverTimestamp(),
-              isPaid: false,
+              isPaid: isDeveloper,
             })
 
             setUser(newUser)
@@ -263,14 +268,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         displayName: username,
       })
       
-      // Create user document immediately on signup
+      const isDeveloper = userCredential.user.email === DEVELOPER_EMAIL;
+      
        await setDoc(doc(db, "users", userCredential.user.uid), {
           name: username,
           email: email,
           score: 0,
           avatar: null,
           createdAt: serverTimestamp(),
-          isPaid: false,
+          isPaid: isDeveloper,
         });
 
       router.push('/topics')

@@ -90,7 +90,7 @@ export default function TopicsPage() {
     fetchProgress();
   }, [fetchProgress]);
 
-  const handleTopicClick = (e: React.MouseEvent, topicId: string) => {
+  const handleTopicClick = (e: React.MouseEvent) => {
     if (user && !user.isPaid) {
       e.preventDefault();
       openPaymentDialog();
@@ -168,7 +168,7 @@ export default function TopicsPage() {
               const isLocked = user && !user.isPaid;
 
               const CardContentComponent = () => (
-                 <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-1">
+                 <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-1 relative">
                     {isLocked && (
                       <div className="absolute inset-0 bg-black/60 rounded-2xl flex flex-col items-center justify-center z-10">
                         <Lock className="w-12 h-12 text-white mb-2"/>
@@ -211,7 +211,7 @@ export default function TopicsPage() {
                     </div>
                     <CardFooter>
                        <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
-                        <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)}>
+                        <Link href={isLocked ? '#' : `/quiz/${topic.id}`} onClick={handleTopicClick}>
                           {isLocked ? "Unlock Full App" : (progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz")}
                         </Link>
                       </Button>
@@ -227,7 +227,7 @@ export default function TopicsPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Link href={isLocked ? '#' : `/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)} className="relative block">
+                    <Link href={isLocked ? '#' : `/quiz/${topic.id}`} onClick={handleTopicClick} className="relative block">
                        {isLocked && (
                           <div className="absolute inset-0 bg-black/60 rounded-2xl flex flex-col items-center justify-center z-10">
                             <Lock className="w-12 h-12 text-white mb-2"/>
