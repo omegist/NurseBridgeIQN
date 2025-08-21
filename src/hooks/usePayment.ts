@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useActionState } from 'react';
+import { useActionState, useTransition } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
 import { createOrder, updateUserPaymentStatus } from '@/app/actions/payment';
@@ -9,6 +9,7 @@ import { createOrder, updateUserPaymentStatus } from '@/app/actions/payment';
 export function usePayment() {
   const { user, refreshUser } = useAuth();
   const { toast } = useToast();
+  const [isPending, startTransition] = useTransition();
   const [orderState, createOrderAction] = useActionState(createOrder, {
     success: false,
     order: null,
@@ -28,7 +29,10 @@ export function usePayment() {
     const formData = new FormData();
     formData.append('amount', '2000');
     formData.append('userId', user.uid);
-    createOrderAction(formData);
+    
+    startTransition(() => {
+        createOrderAction(formData);
+    });
   };
 
   // Effect to handle order creation and open Razorpay checkout
@@ -82,5 +86,5 @@ export function usePayment() {
   };
 
   // This hook now returns the state and the action trigger
-  return { orderState, openPaymentDialog, processOrder };
+  return { orderState, openPaymentDialog, processOrder, isPending };
 }
