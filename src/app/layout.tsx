@@ -8,6 +8,7 @@ import { QuizProvider } from "@/contexts/QuizContext"
 import { ThemeProvider } from "@/contexts/ThemeContext"
 import { TestProvider } from "@/contexts/TestContext"
 import { FloatingBubbles } from "@/components/layout/FloatingBubbles"
+import Script from "next/script"
 
 const belleza = Belleza({
   subsets: ['latin'],
@@ -50,6 +51,7 @@ export default function RootLayout({
             </QuizProvider>
           </AuthProvider>
         </ThemeProvider>
+        <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </body>
     </html>
   )

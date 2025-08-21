@@ -13,7 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Clock, BookOpen, RotateCw, Check } from "lucide-react";
+import { Clock, BookOpen, RotateCw, Check, Lock } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
@@ -23,6 +23,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
 import { useTheme } from "@/contexts/ThemeContext";
+import { usePayment } from "@/hooks/usePayment";
 
 async function getTopicProgress(userId: string) {
   if (!db) return {};
@@ -63,6 +64,7 @@ export default function TopicsPage() {
   const { theme } = useTheme();
   const [topicProgress, setTopicProgress] = useState<Record<string, number>>({});
   const [isLoading, setIsLoading] = useState(true);
+  const { openPaymentDialog } = usePayment();
 
   const fetchProgress = useCallback(async () => {
     if (!user) {
@@ -88,6 +90,13 @@ export default function TopicsPage() {
     fetchProgress();
   }, [fetchProgress]);
 
+  const handleTopicClick = (e: React.MouseEvent, topicId: string) => {
+    if (user && !user.isPaid) {
+      e.preventDefault();
+      openPaymentDialog();
+    }
+  };
+  
   const getTopicStatus = (topicId: string, progress: number) => {
     if (progress === 100)
       return { text: "Completed", icon: Check, color: "text-green-500" };
@@ -156,36 +165,16 @@ export default function TopicsPage() {
               const status = getTopicStatus(topic.id, progress);
               const StatusIcon = status.icon;
               const colorInfo = topicColors[index % topicColors.length];
+              const isLocked = user && !user.isPaid;
 
-              if (theme === 'light') {
-                return (
-                  <motion.div
-                    key={topic.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
-                      <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
-                        <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
+              const CardContentComponent = () => (
+                 <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-1">
+                    {isLocked && (
+                      <div className="absolute inset-0 bg-black/60 rounded-2xl flex flex-col items-center justify-center z-10">
+                        <Lock className="w-12 h-12 text-white mb-2"/>
+                        <span className="text-white font-bold text-lg">₹2000</span>
                       </div>
-                      <h3 className="font-semibold text-foreground">{topic.name}</h3>
-                      <Link href={`/quiz/${topic.id}`} className="absolute inset-0" aria-label={`Start ${topic.name} quiz`}></Link>
-                    </Card>
-                  </motion.div>
-                )
-              }
-              
-              // Dark theme card
-              return (
-                <motion.div
-                  key={topic.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex"
-                >
-                  <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-1">
+                    )}
                     <div>
                       <CardHeader className="flex-row items-start gap-4">
                         <div className="p-3 rounded-lg bg-primary/10">
@@ -221,13 +210,50 @@ export default function TopicsPage() {
                       </CardContent>
                     </div>
                     <CardFooter>
-                      <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
-                        <Link href={`/quiz/${topic.id}`}>
-                          {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
+                       <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+                        <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)}>
+                          {isLocked ? "Unlock Full App" : (progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz")}
                         </Link>
                       </Button>
                     </CardFooter>
                   </Card>
+              );
+
+              if (theme === 'light') {
+                 return (
+                  <motion.div
+                    key={topic.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Link href={isLocked ? '#' : `/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)} className="relative block">
+                       {isLocked && (
+                          <div className="absolute inset-0 bg-black/60 rounded-2xl flex flex-col items-center justify-center z-10">
+                            <Lock className="w-12 h-12 text-white mb-2"/>
+                            <span className="text-white font-bold text-lg">₹2000</span>
+                          </div>
+                        )}
+                      <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
+                        <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
+                          <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
+                        </div>
+                        <h3 className="font-semibold text-foreground">{topic.name}</h3>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                )
+              }
+              
+              return (
+                <motion.div
+                  key={topic.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex"
+                >
+                 <CardContentComponent />
                 </motion.div>
               );
             })}

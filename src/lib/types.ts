@@ -1,3 +1,4 @@
+
 /** --------------------------------------------------------------------
  *  Core shared types for the NurseBridgeIQN app
  *  ------------------------------------------------------------------ */
@@ -68,4 +69,11 @@ export interface Test {
   name: string;
   timeLimitMinutes?: number | null;   // optional
   questions: Question[];
+}
+
+// Payment-related types
+declare global {
+    interface Window {
+        Razorpay: any;
+    }
 }

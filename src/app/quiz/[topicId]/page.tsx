@@ -1,7 +1,10 @@
+
+// src/app/quiz/[topicId]/page.tsx
 import { notFound } from 'next/navigation';
 import { quizTopics } from '@/data/quizzes';
 import { QuizClient } from '@/components/quiz/QuizClient';
 import type { Topic } from '@/lib/types';
+import { Header } from '@/components/layout/Header';
 
 export function generateStaticParams() {
   return quizTopics.map((topic) => ({
@@ -26,16 +29,10 @@ export default async function QuizTopicPage({
     notFound();
   }
 
-  return <QuizClient topic={quizData} />;
+  return (
+    <>
+      <Header />
+      <QuizClient topic={quizData} />
+    </>
+  );
 }
-
-
-
-
-
-
-
-
-
-
-

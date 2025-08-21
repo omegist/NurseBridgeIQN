@@ -3,7 +3,13 @@
 
 import { tests } from "@/data/tests";
 import { TestsClient } from "@/components/test/TestsClient";
+import { Header } from "@/components/layout/Header";
 
 export default function PartAPage() {
-  return <TestsClient tests={tests.partA} />;
+  return (
+    <>
+      <Header />
+      <TestsClient tests={tests.partA} />
+    </>
+  );
 }

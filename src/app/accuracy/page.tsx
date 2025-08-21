@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
@@ -6,6 +7,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { Header } from "@/components/layout/Header";
 
 const accuracyData = [
     { topic: 'Pharmacology', accuracy: 88, fill: 'hsl(var(--chart-1))' },
@@ -18,6 +20,8 @@ export default function AccuracyPage() {
     const router = useRouter();
 
     return (
+      <>
+        <Header />
         <div className="container mx-auto py-10 px-4">
              <div className="flex flex-col sm:relative items-center sm:justify-center mb-10 gap-4 sm:gap-0">
                 <motion.div
@@ -26,9 +30,9 @@ export default function AccuracyPage() {
                     transition={{ duration: 0.5 }}
                     className="w-full flex justify-start sm:absolute sm:left-0 sm:top-1/2 sm:-translate-y-1/2"
                 >
-                    <Button variant="outline" onClick={() => router.push('/')}>
+                    <Button variant="outline" onClick={() => router.push('/topics')}>
                         <ArrowLeft className="mr-2 h-4 w-4" />
-                        Back
+                        Back to Topics
                     </Button>
                 </motion.div>
                 <motion.div
@@ -82,5 +86,6 @@ export default function AccuracyPage() {
                 </Card>
             </motion.div>
         </div>
+      </>
     );
 }

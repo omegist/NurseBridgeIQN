@@ -15,6 +15,7 @@ import {
   Mail,
   MessageSquare,
   BookText,
+  LogOut,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -36,7 +37,7 @@ import { FeedbackForm } from "./FeedbackForm"
 import AnimatedLogo from "../shared/AnimatedLogo"
 
 export function Header() {
-  const { user, loading } = useAuth()
+  const { user, loading, logout } = useAuth()
   const { setTheme } = useTheme()
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
@@ -87,6 +88,10 @@ export function Header() {
       </a>
     </Button>
   );
+
+  const handleExit = () => {
+    router.push('/topics');
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -242,6 +247,13 @@ export function Header() {
                     <ContactForm onMessageSent={() => setContactFormOpen(false)} />
                 </DialogContent>
             </Dialog>
+
+            {user && (
+              <Button variant="ghost" size="icon" onClick={handleExit}>
+                  <LogOut className="h-5 w-5" />
+                  <span className="sr-only">Exit</span>
+              </Button>
+            )}
 
         {loading ? (
             <div className="h-8 w-8 rounded-full bg-muted animate-pulse"></div>

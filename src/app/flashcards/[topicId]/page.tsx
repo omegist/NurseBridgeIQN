@@ -1,7 +1,9 @@
+
 // Server Component – no "use client"
 import { notFound } from "next/navigation";
 import { flashcardTopics } from "@/data/flashcards";
 import { FlashcardClient } from "@/components/flashcards/FlashcardClient";
+import { Header } from "@/components/layout/Header";
 
 /** Tell Next.js to pre‑render a page for every topic */
 export function generateStaticParams() {
@@ -23,5 +25,10 @@ export default async function FlashcardTopicPage({
   const topic = flashcardTopics.find((t) => t.id === topicId);
   if (!topic) notFound();
 
-  return <FlashcardClient topic={topic} />;
+  return (
+    <>
+      <Header />
+      <FlashcardClient topic={topic} />
+    </>
+  );
 }

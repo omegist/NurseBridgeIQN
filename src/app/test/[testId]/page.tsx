@@ -1,7 +1,9 @@
+
 import { notFound } from 'next/navigation';
 import { tests } from '@/data/tests';
 import { TestClient } from '@/components/test/TestClient';
 import type { Test } from '@/lib/types';
+import { Header } from '@/components/layout/Header';
 
 const allTests = [...tests.partA, ...tests.partB];
 
@@ -28,5 +30,10 @@ export default async function TestPage({
     notFound();
   }
 
-  return <TestClient test={test} />;
+  return (
+    <>
+      <Header />
+      <TestClient test={test} />
+    </>
+  );
 }

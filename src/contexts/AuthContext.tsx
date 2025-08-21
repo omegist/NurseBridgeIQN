@@ -40,6 +40,7 @@ interface User {
   score: number
   avatar: string | null
   createdAt: Date | null
+  isPaid: boolean;
 }
 
 interface AuthContextType {
@@ -51,6 +52,7 @@ interface AuthContextType {
   sendPasswordReset: (email: string) => Promise<boolean>
   updateUserScore: (points: number) => Promise<void>
   updateUserAvatar: (file: File) => Promise<void>
+  refreshUser: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -99,24 +101,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return !apiKey || apiKey.startsWith("YOUR_");
   }, []);
 
+  const fetchUserDocument = async (uid: string): Promise<User | null> => {
+    const userRef = doc(db, "users", uid);
+    const userDoc = await getDoc(userRef);
+    if (userDoc.exists()) {
+      const userData = userDoc.data();
+      const firebaseUser = auth.currentUser;
+      return {
+        uid: uid,
+        name: userData.name || firebaseUser?.displayName,
+        email: userData.email || firebaseUser?.email,
+        score: userData.score || 0,
+        avatar: userData.avatar || firebaseUser?.photoURL,
+        createdAt: userData.createdAt?.toDate() || null,
+        isPaid: userData.isPaid || false,
+      };
+    }
+    return null;
+  }
+
   const handleUser = useCallback(
     async (firebaseUser: FirebaseUser | null) => {
       try {
         if (firebaseUser) {
-          const userRef = doc(db, "users", firebaseUser.uid)
-          const userDoc = await getDoc(userRef)
+          let userProfile = await fetchUserDocument(firebaseUser.uid);
 
-          if (userDoc.exists()) {
-            const userData = userDoc.data()
-            setUser({
-              uid: firebaseUser.uid,
-              name: userData.name,
-              email: firebaseUser.email,
-              score: userData.score || 0,
-              avatar: userData.avatar || firebaseUser.photoURL,
-              createdAt: userData.createdAt?.toDate() || null,
-            })
-          } else {
+          if (!userProfile) {
             const newUser: User = {
               uid: firebaseUser.uid,
               name:
@@ -127,17 +137,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               score: 0,
               avatar: firebaseUser.photoURL,
               createdAt: new Date(),
+              isPaid: false,
             }
 
-            await setDoc(userRef, {
+            await setDoc(doc(db, "users", firebaseUser.uid), {
               name: newUser.name,
               email: newUser.email,
               score: 0,
               avatar: newUser.avatar,
               createdAt: serverTimestamp(),
+              isPaid: false,
             })
 
             setUser(newUser)
+          } else {
+            setUser(userProfile)
           }
         } else {
           setUser(null)
@@ -164,6 +178,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     },
     [toast]
   )
+  
+  const refreshUser = async () => {
+    if (auth.currentUser) {
+      const updatedUser = await fetchUserDocument(auth.currentUser.uid);
+      if (updatedUser) {
+        setUser(updatedUser);
+      }
+    }
+  };
+
 
   useEffect(() => {
     if (isInvalidApiKey()) {
@@ -238,6 +262,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       await updateProfile(userCredential.user, {
         displayName: username,
       })
+      
+      // Create user document immediately on signup
+       await setDoc(doc(db, "users", userCredential.user.uid), {
+          name: username,
+          email: email,
+          score: 0,
+          avatar: null,
+          createdAt: serverTimestamp(),
+          isPaid: false,
+        });
+
       router.push('/topics')
     } catch (error: any) {
       const message = getAuthErrorMessage(error)
@@ -345,6 +380,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     sendPasswordReset,
     updateUserScore,
     updateUserAvatar,
+    refreshUser,
   };
 
   if (authConfigError) {
