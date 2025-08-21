@@ -12,13 +12,11 @@
     {
       "source": "/api/(.*)",
       "destination": "/api/$1"
-    }
-  ],
-  "redirects": [
+    },
     {
-      "source": "/",
-      "destination": "/home",
-      "statusCode": 301
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
+
