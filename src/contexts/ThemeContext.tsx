@@ -1,7 +1,7 @@
 
 "use client"
 
-import React, { createContext, useContext, useEffect, useState } from "react"
+import React, { createContext, useContext, useEffect, useState, useCallback } from "react"
 
 type Theme = "dark" | "light" | "system"
 
@@ -29,34 +29,43 @@ export function ThemeProvider({
   storageKey = "nurse-iqn-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(defaultTheme)
-
-  useEffect(() => {
-    const storedTheme = (localStorage.getItem(storageKey) as Theme) || defaultTheme
-    if (storedTheme) {
-      setTheme(storedTheme)
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === 'undefined') {
+      return defaultTheme;
     }
-  }, [storageKey, defaultTheme])
+    try {
+      return (localStorage.getItem(storageKey) as Theme) || defaultTheme
+    } catch (e) {
+      console.error("Failed to access localStorage for theme:", e);
+      return defaultTheme
+    }
+  })
 
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
 
-    let effectiveTheme = theme;
     if (theme === "system") {
-      effectiveTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
         ? "dark"
         : "light";
+
+      root.classList.add(systemTheme);
+      return;
     }
 
-    root.classList.add(effectiveTheme);
+    root.classList.add(theme);
   }, [theme]);
 
   const value = {
     theme,
     setTheme: (newTheme: Theme) => {
-      localStorage.setItem(storageKey, newTheme)
+      try {
+        localStorage.setItem(storageKey, newTheme)
+      } catch (e) {
+        console.error("Failed to set theme in localStorage:", e);
+      }
       setTheme(newTheme)
     },
   }
