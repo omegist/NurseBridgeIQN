@@ -12,7 +12,7 @@ export function usePayment() {
   const [isPending, startTransition] = useTransition();
   const [orderState, createOrderAction] = useActionState(createOrder, {
     success: false,
-    order: undefined, // ✅ Fixes the type error
+    order: undefined,
     message: '',
   });
 
@@ -51,7 +51,7 @@ export function usePayment() {
                         title: 'Payment Successful!',
                         description: 'You now have full access to all features.',
                     });
-                    refreshUser(); // Refresh user data to reflect paid status
+                    refreshUser();
                 } else {
                     toast({
                         variant: 'destructive',
@@ -71,7 +71,7 @@ export function usePayment() {
 
         const rzp = new window.Razorpay(options);
         rzp.open();
-    } else if (!state.success && state.message) {
+    } else if (!state.success && state.message && state.message !== '') {
         toast({
             variant: 'destructive',
             title: 'Payment Error',
@@ -80,6 +80,18 @@ export function usePayment() {
     }
   };
 
-  // This hook now returns the state and the action trigger
-  return { orderState, openPaymentDialog, processOrder, isPending };
+  useEffect(() => {
+    if (orderState.success && orderState.order) {
+      processOrder(orderState);
+    } else if (!orderState.success && orderState.message) {
+      toast({
+        variant: 'destructive',
+        title: 'Could Not Create Order',
+        description: orderState.message,
+      });
+    }
+  }, [orderState]);
+
+
+  return { openPaymentDialog, isPending };
 }
