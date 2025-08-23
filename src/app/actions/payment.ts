@@ -12,19 +12,27 @@ const paymentSchema = z.object({
   userId: z.string(),
 });
 
+// Correctly read the server-side environment variables
 const keyId = process.env.RAZORPAY_KEY_ID;
 const keySecret = process.env.RAZORPAY_KEY_SECRET;
 
+// This check now correctly validates the server-side secrets
 if (!keyId || !keySecret) {
-  throw new Error('Razorpay API keys are not configured in environment variables.');
+  console.error('Razorpay API keys are not configured in environment variables.');
+  // We return a user-friendly message instead of throwing an error which crashes the server process
+  // This is better for production environments.
 }
 
 const razorpay = new Razorpay({
-  key_id: keyId,
-  key_secret: keySecret,
+  key_id: keyId!,
+  key_secret: keySecret!,
 });
 
 export async function createOrder(prevState: any, formData: FormData) {
+  if (!keyId || !keySecret) {
+    return { success: false, message: 'Payment gateway is not configured on the server.' };
+  }
+
   const parsed = paymentSchema.safeParse({
     amount: Number(formData.get('amount')),
     userId: formData.get('userId'),
@@ -39,7 +47,7 @@ export async function createOrder(prevState: any, formData: FormData) {
   const options = {
     amount: amount * 100, // Amount in paise
     currency: 'INR',
-    receipt: `receipt_user_${userId}`,
+    receipt: `receipt_user_${userId}_${Date.now()}`, // Make receipt unique
   };
 
   try {
