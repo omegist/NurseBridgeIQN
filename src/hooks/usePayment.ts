@@ -38,7 +38,7 @@ export function usePayment() {
   const processOrder = (state: typeof orderState) => {
     if (state.success && state.order && user) {
         const options = {
-            key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+            key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Use NEXT_PUBLIC_ prefixed variable
             amount: state.order.amount,
             currency: state.order.currency,
             name: 'Nurse IQN',
@@ -74,7 +74,7 @@ export function usePayment() {
     } else if (!state.success && state.message && state.message !== '') {
         toast({
             variant: 'destructive',
-            title: 'Payment Error',
+            title: 'Could Not Create Order',
             description: state.message,
         });
     }
@@ -83,14 +83,16 @@ export function usePayment() {
   useEffect(() => {
     if (orderState.success && orderState.order) {
       processOrder(orderState);
-    } else if (!orderState.success && orderState.message) {
-      toast({
-        variant: 'destructive',
-        title: 'Could Not Create Order',
-        description: orderState.message,
-      });
+    } else if (!orderState.success && orderState.message && !isPending) {
+        if(orderState.message !== '') {
+            toast({
+                variant: 'destructive',
+                title: 'Could Not Create Order',
+                description: orderState.message,
+            });
+        }
     }
-  }, [orderState]);
+  }, [orderState, isPending]);
 
 
   return { openPaymentDialog, isPending };
