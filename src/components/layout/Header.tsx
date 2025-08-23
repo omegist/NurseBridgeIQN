@@ -44,18 +44,11 @@ export function Header() {
   const [mounted, setMounted] = useState(false)
   const [contactFormOpen, setContactFormOpen] = useState(false)
   const [feedbackFormOpen, setFeedbackFormOpen] = useState(false)
-  const { openPaymentDialog, isPending, orderState, processOrder } = usePayment();
+  const { openPaymentDialog } = usePayment();
 
   useEffect(() => {
     setMounted(true)
   }, [])
-  
-  useEffect(() => {
-    if (orderState.success) {
-      processOrder(orderState);
-    }
-  }, [orderState, processOrder]);
-
 
   const navLinks = [
     { href: "/topics", icon: BookOpen, text: "Quizzes" },
