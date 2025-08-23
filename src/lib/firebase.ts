@@ -9,7 +9,8 @@ const firebaseConfig = {
   projectId: "nurse-iq",
   storageBucket: "nurse-iq.firebasestorage.app",
   messagingSenderId: "1023611617242",
-  appId: "1:1023611617242:web:22fbe75baf9e73b251cae3"
+  appId: "1:1023611617242:web:22fbe75baf9e73b251cae3",
+  measurementId: "G-H8G364003E"
 };
 
 const app: FirebaseApp = getApps().length ? getApp() : initializeApp(firebaseConfig);
