@@ -17,10 +17,11 @@ export async function createOrder(prevState: any, formData: FormData) {
   const keySecret = process.env.RAZORPAY_KEY_SECRET;
 
   if (!keyId || !keySecret) {
-    console.error('Razorpay API keys are not configured in environment variables.');
-    return { success: false, message: 'Payment gateway is not configured correctly on the server.' };
+    const errorMessage = 'Razorpay API keys are not configured in environment variables.';
+    console.error(errorMessage);
+    return { success: false, message: errorMessage };
   }
-  
+
   const razorpay = new Razorpay({
     key_id: keyId,
     key_secret: keySecret,
