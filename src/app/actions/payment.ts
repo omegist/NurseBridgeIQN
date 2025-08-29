@@ -12,26 +12,19 @@ const paymentSchema = z.object({
   userId: z.string(),
 });
 
-// Correctly read the server-side environment variables
-const keyId = process.env.RAZORPAY_KEY_ID;
-const keySecret = process.env.RAZORPAY_KEY_SECRET;
-
-// This check now correctly validates the server-side secrets
-if (!keyId || !keySecret) {
-  console.error('Razorpay API keys are not configured in environment variables.');
-  // We return a user-friendly message instead of throwing an error which crashes the server process
-  // This is better for production environments.
-}
-
-const razorpay = new Razorpay({
-  key_id: keyId!,
-  key_secret: keySecret!,
-});
-
 export async function createOrder(prevState: any, formData: FormData) {
+  const keyId = process.env.RAZORPAY_KEY_ID;
+  const keySecret = process.env.RAZORPAY_KEY_SECRET;
+
   if (!keyId || !keySecret) {
-    return { success: false, message: 'Payment gateway is not configured on the server.' };
+    console.error('Razorpay API keys are not configured in environment variables.');
+    return { success: false, message: 'Payment gateway is not configured correctly on the server.' };
   }
+  
+  const razorpay = new Razorpay({
+    key_id: keyId,
+    key_secret: keySecret,
+  });
 
   const parsed = paymentSchema.safeParse({
     amount: Number(formData.get('amount')),
@@ -47,7 +40,7 @@ export async function createOrder(prevState: any, formData: FormData) {
   const options = {
     amount: amount * 100, // Amount in paise
     currency: 'INR',
-    receipt: `receipt_user_${userId}_${Date.now()}`, // Make receipt unique
+    receipt: `receipt_user_${userId}_${Date.now()}`,
   };
 
   try {
@@ -63,12 +56,10 @@ export async function updateUserPaymentStatus(userId: string) {
   try {
     const userRef = doc(db, 'users', userId);
     
-    // Update the isPaid flag in the main users collection
     await updateDoc(userRef, {
       isPaid: true,
     });
 
-    // Create a record in the new 'payments' collection
     const userSnap = await getDoc(userRef);
     if (userSnap.exists()) {
       const userData = userSnap.data();
