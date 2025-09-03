@@ -8,13 +8,10 @@ import Razorpay from "razorpay";
 import express, { Request, Response } from "express";
 import cors from "cors";
 
-// Get Firebase Config variables
+// 🔧 Firebase Config
 const config = functions.config();
 
-// ================================
-// 🔹 Email Notification on User Signup
-// ================================
-
+// ✅ Email Transport Setup
 const mailTransport = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -25,10 +22,10 @@ const mailTransport = nodemailer.createTransport({
 
 const ADMIN_EMAIL = config.admin.email;
 
+// ✅ User Signup Email Notification
 export const sendNewUserEmail = onUserCreate(
   async (event: { data: UserRecord | undefined }) => {
     const user = event.data;
-
     if (!user) {
       logger.error("No user data found in event.");
       return;
@@ -66,40 +63,38 @@ export const sendNewUserEmail = onUserCreate(
   }
 );
 
-// ================================
-// 🔹 Razorpay Payment Order Creation
-// ================================
-
+// ✅ Razorpay Config
 const razorpay = new Razorpay({
   key_id: config.razorpay.key_id,
   key_secret: config.razorpay.key_secret,
 });
 
+// ✅ Express App
 const app = express();
 app.use(cors({ origin: true }));
 app.use(express.json());
 
+// ✅ Create Razorpay Order Route
 app.post("/createOrder", async (req: Request, res: Response) => {
   try {
     const { amount } = req.body;
 
-    if (!amount) {
-      return res.status(400).json({ error: "Amount is required" });
+    // 🪵 Log input for debugging
+    console.log("Incoming request body:", req.body);
+    console.log("Parsed amount:", amount);
+
+    // ✅ Validate amount
+    if (!amount || isNaN(amount)) {
+      console.error("Invalid amount received:", amount);
+      return res.status(400).json({ error: "Amount is required and must be a valid number" });
     }
 
     const options = {
-      amount: amount * 100, // amount in paise
+      amount: Number(amount) * 100, // Convert ₹ to paise
       currency: "INR",
-      receipt: "receipt_order_" + Date.now(),
+      receipt: `receipt_order_${Date.now()}`,
     };
 
-    const order = await razorpay.orders.create(options);
-    return res.status(200).json(order);  // Explicit return added here
-  } catch (err) {
-    console.error("Error creating Razorpay order:", err);
-    return res.status(500).json({ error: "Failed to create payment order" });  // Explicit return added here
-  }
-});
+    console.log("Creating Razorpay order with options:", options);
 
-export const api = functions.https.onRequest(app);
-
+    con

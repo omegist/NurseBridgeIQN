@@ -1,10 +1,15 @@
-
 'use client';
 
 import { useEffect, useState, useTransition } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
 import { updateUserPaymentStatus } from '@/app/actions/payment';
+
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
 
 export function usePayment() {
   const { user, refreshUser } = useAuth();
@@ -69,8 +74,8 @@ export function usePayment() {
           },
         };
 
-        const rzp = new window.Razorpay(options);
-        rzp.open();
+        const razorpay = new window.Razorpay(options);
+        razorpay.open();
       } catch (error: any) {
         toast({
           variant: 'destructive',
