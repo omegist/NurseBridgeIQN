@@ -16,6 +16,7 @@ import {
   MessageSquare,
   BookText,
   LogOut,
+  CreditCard,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -257,6 +258,12 @@ export function Header() {
                     <ContactForm onMessageSent={() => setContactFormOpen(false)} />
                 </DialogContent>
             </Dialog>
+             {user && !user.isPaid && (
+              <Button onClick={openPaymentDialog} size="sm" className="bg-accent hover:bg-accent/90">
+                <CreditCard className="mr-2 h-4 w-4" />
+                Unlock Full Access
+              </Button>
+            )}
 
             {user && (
               <Button variant="ghost" size="icon" onClick={handleExit}>

@@ -13,7 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Clock, BookOpen, RotateCw, Check, Lock } from "lucide-react";
+import { Clock, BookOpen, RotateCw, Check } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
@@ -89,7 +89,7 @@ export function TopicGrid() {
     fetchProgress();
   }, [fetchProgress]);
 
-  const handleTopicClick = (e: React.MouseEvent) => {
+  const handleTopicClick = (e: React.MouseEvent, topicId: string) => {
     if (user && !user.isPaid) {
       e.preventDefault();
       openPaymentDialog();
@@ -148,19 +148,9 @@ export function TopicGrid() {
           const status = getTopicStatus(topic.id, progress);
           const StatusIcon = status.icon;
           const colorInfo = topicColors[index % topicColors.length];
-          const isLocked = user && !user.isPaid;
 
           const CardContentComponent = () => (
             <Card className="w-full flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-1 relative">
-              {isLocked && (
-                <div className="absolute inset-0 bg-black/60 rounded-2xl flex flex-col items-center justify-center z-10 p-4">
-                  <Lock className="w-12 h-12 text-white mb-2" />
-                  <span className="text-white font-bold text-lg mb-4">₹2000</span>
-                  <Button onClick={handleTopicClick} className="w-full bg-accent hover:bg-accent/90">
-                    Unlock Full App
-                  </Button>
-                </div>
-              )}
               <div>
                 <CardHeader className="flex-row items-start gap-4">
                   <div className="p-3 rounded-lg bg-primary/10">
@@ -197,7 +187,7 @@ export function TopicGrid() {
               </div>
               <CardFooter>
                 <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
-                  <Link href={`/quiz/${topic.id}`} onClick={isLocked ? handleTopicClick : undefined} className={isLocked ? "pointer-events-none" : ""}>
+                  <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)}>
                     {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
                   </Link>
                 </Button>
@@ -214,17 +204,7 @@ export function TopicGrid() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative"
               >
-                <div onClick={isLocked ? handleTopicClick : undefined} className="relative block cursor-pointer">
-                  {isLocked && (
-                    <div className="absolute inset-0 bg-black/60 rounded-2xl flex flex-col items-center justify-center z-10 p-4">
-                      <Lock className="w-12 h-12 text-white mb-2" />
-                      <span className="text-white font-bold text-lg mb-4">₹2000</span>
-                      <Button onClick={handleTopicClick} className="w-full bg-accent hover:bg-accent/90">
-                        Unlock Full App
-                      </Button>
-                    </div>
-                  )}
-                  <Link href={isLocked ? '#' : `/quiz/${topic.id}`} className={isLocked ? 'pointer-events-none' : ''}>
+                  <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)} className="relative block cursor-pointer">
                     <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
                       <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
                         <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
@@ -232,7 +212,6 @@ export function TopicGrid() {
                       <h3 className="font-semibold text-foreground">{topic.name}</h3>
                     </Card>
                   </Link>
-                </div>
               </motion.div>
             )
           }

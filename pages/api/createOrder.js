@@ -1,10 +1,14 @@
-// pages/api/createOrder.js
-
 import Razorpay from 'razorpay';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  const { amount } = req.body;
+
+  if (!amount || isNaN(amount)) {
+    return res.status(400).json({ message: 'Invalid or missing amount' });
   }
 
   const razorpay = new Razorpay({
@@ -13,9 +17,9 @@ export default async function handler(req, res) {
   });
 
   const options = {
-    amount: 200000, // ₹2000 in paise
+    amount: amount * 100, // Convert rupees to paise
     currency: 'INR',
-    receipt: 'receipt_order_2000',
+    receipt: `receipt_order_${Date.now()}`,
   };
 
   try {
@@ -26,4 +30,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ message: 'Failed to create payment order' });
   }
 }
-

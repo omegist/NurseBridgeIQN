@@ -36,6 +36,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/nurseiqn-logo.png" type="image/png" />
+        <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </head>
       <body className={`${belleza.variable} ${alegreya.variable} font-body antialiased`}>
         <ThemeProvider storageKey="nurse-iqn-theme" defaultTheme="dark">
@@ -51,7 +52,6 @@ export default function RootLayout({
             </QuizProvider>
           </AuthProvider>
         </ThemeProvider>
-        <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </body>
     </html>
   )

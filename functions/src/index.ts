@@ -3,19 +3,28 @@ import type { UserRecord } from "firebase-admin/auth";
 import { logger } from "firebase-functions/v2";
 import nodemailer from "nodemailer";
 
-// Configure Nodemailer transporter using Gmail.
+import * as functions from "firebase-functions";
+import Razorpay from "razorpay";
+import express, { Request, Response } from "express";
+import cors from "cors";
+
+// Get Firebase Config variables
+const config = functions.config();
+
+// ================================
+// 🔹 Email Notification on User Signup
+// ================================
+
 const mailTransport = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.GMAIL_EMAIL,
-    pass: process.env.GMAIL_PASSWORD,
+    user: config.gmail.email,
+    pass: config.gmail.password,
   },
 });
 
-// The email address to send notifications to.
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ADMIN_EMAIL = config.admin.email;
 
-// ✅ Correct event type with only what's used
 export const sendNewUserEmail = onUserCreate(
   async (event: { data: UserRecord | undefined }) => {
     const user = event.data;
@@ -34,7 +43,7 @@ export const sendNewUserEmail = onUserCreate(
     }
 
     const mailOptions = {
-      from: `"Nurse IQN App" <${process.env.GMAIL_EMAIL}>`,
+      from: `"Nurse IQN App" <${config.gmail.email}>`,
       to: ADMIN_EMAIL,
       subject: "🎉 New User Signup on Nurse IQN!",
       html: `
@@ -56,3 +65,41 @@ export const sendNewUserEmail = onUserCreate(
     }
   }
 );
+
+// ================================
+// 🔹 Razorpay Payment Order Creation
+// ================================
+
+const razorpay = new Razorpay({
+  key_id: config.razorpay.key_id,
+  key_secret: config.razorpay.key_secret,
+});
+
+const app = express();
+app.use(cors({ origin: true }));
+app.use(express.json());
+
+app.post("/createOrder", async (req: Request, res: Response) => {
+  try {
+    const { amount } = req.body;
+
+    if (!amount) {
+      return res.status(400).json({ error: "Amount is required" });
+    }
+
+    const options = {
+      amount: amount * 100, // amount in paise
+      currency: "INR",
+      receipt: "receipt_order_" + Date.now(),
+    };
+
+    const order = await razorpay.orders.create(options);
+    return res.status(200).json(order);  // Explicit return added here
+  } catch (err) {
+    console.error("Error creating Razorpay order:", err);
+    return res.status(500).json({ error: "Failed to create payment order" });  // Explicit return added here
+  }
+});
+
+export const api = functions.https.onRequest(app);
+

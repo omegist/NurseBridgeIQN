@@ -17,15 +17,10 @@ export async function createOrder(prevState: any, formData: FormData) {
   const keySecret = process.env.RAZORPAY_KEY_SECRET;
 
   if (!keyId || !keySecret) {
-    const errorMessage = 'Razorpay API keys are not configured in environment variables.';
+    const errorMessage = 'Razorpay API keys are not configured on the server.';
     console.error(errorMessage);
     return { success: false, message: errorMessage };
   }
-
-  const razorpay = new Razorpay({
-    key_id: keyId,
-    key_secret: keySecret,
-  });
 
   const parsed = paymentSchema.safeParse({
     amount: Number(formData.get('amount')),
@@ -38,17 +33,22 @@ export async function createOrder(prevState: any, formData: FormData) {
 
   const { amount, userId } = parsed.data;
 
-  const options = {
-    amount: amount * 100, // Amount in paise
-    currency: 'INR',
-    receipt: `receipt_user_${userId}_${Date.now()}`,
-  };
-
   try {
+    const razorpay = new Razorpay({
+      key_id: keyId,
+      key_secret: keySecret,
+    });
+    
+    const options = {
+      amount: amount * 100, // Amount in paise
+      currency: 'INR',
+      receipt: `receipt_user_${userId}_${Date.now()}`,
+    };
+
     const order = await razorpay.orders.create(options);
     return { success: true, order };
-  } catch (error) {
-    console.error('Razorpay order creation error:', error);
+  } catch (error: any) {
+    console.error('Razorpay order creation error:', error.message);
     return { success: false, message: 'Failed to create payment order.' };
   }
 }
