@@ -1,57 +1,9 @@
 
 'use server';
 
-import Razorpay from 'razorpay';
-import { z } from 'zod';
 import { doc, updateDoc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { revalidatePath } from 'next/cache';
-
-const paymentSchema = z.object({
-  amount: z.number().positive(),
-  userId: z.string(),
-});
-
-export async function createOrder(prevState: any, formData: FormData) {
-  const keyId = process.env.RAZORPAY_KEY_ID;
-  const keySecret = process.env.RAZORPAY_KEY_SECRET;
-
-  if (!keyId || !keySecret) {
-    const errorMessage = 'Razorpay API keys are not configured on the server.';
-    console.error(errorMessage);
-    return { success: false, message: errorMessage };
-  }
-
-  const parsed = paymentSchema.safeParse({
-    amount: Number(formData.get('amount')),
-    userId: formData.get('userId'),
-  });
-
-  if (!parsed.success) {
-    return { success: false, message: 'Invalid input data.' };
-  }
-
-  const { amount, userId } = parsed.data;
-
-  try {
-    const razorpay = new Razorpay({
-      key_id: keyId,
-      key_secret: keySecret,
-    });
-    
-    const options = {
-      amount: amount * 100, // Amount in paise
-      currency: 'INR',
-      receipt: `receipt_user_${userId}_${Date.now()}`,
-    };
-
-    const order = await razorpay.orders.create(options);
-    return { success: true, order };
-  } catch (error: any) {
-    console.error('Razorpay order creation error:', error.message);
-    return { success: false, message: 'Failed to create payment order.' };
-  }
-}
 
 export async function updateUserPaymentStatus(userId: string) {
   try {
