@@ -221,74 +221,76 @@ export function Header() {
         </div>
         
         {/* Right-side Actions */}
-        <div className="flex flex-1 items-center justify-end space-x-2 overflow-hidden">
-            <ScrollArea className="whitespace-nowrap">
-              <div className="flex items-center space-x-2 pr-4">
-                <div className="hidden md:block">
-                    <ThemeToggle />
-                </div>
-                
-                <Dialog open={feedbackFormOpen} onOpenChange={setFeedbackFormOpen}>
-                  {user && (
-                      <DialogTrigger asChild>
-                          <Button variant="ghost" size="icon" className="hidden md:inline-flex">
-                              <MessageSquare className="h-5 w-5" />
-                              <span className="sr-only">Feedback</span>
-                          </Button>
-                      </DialogTrigger>
-                  )}
-                   <DialogContent className="sm:max-w-[425px]">
-                      <DialogHeader>
-                          <DialogTitle>Submit Feedback</DialogTitle>
-                          <DialogDescription>
-                             Have an idea or suggestion? We'd love to hear it.
-                          </DialogDescription>
-                      </DialogHeader>
-                      <FeedbackForm onMessageSent={() => setFeedbackFormOpen(false)} />
-                  </DialogContent>
-                </Dialog>
+        <div className="flex flex-1 items-center justify-end space-x-2">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg overflow-hidden">
+                <ScrollArea className="whitespace-nowrap">
+                  <div className="flex items-center space-x-2 pr-4">
+                    <div className="hidden md:block">
+                        <ThemeToggle />
+                    </div>
+                    
+                    <Dialog open={feedbackFormOpen} onOpenChange={setFeedbackFormOpen}>
+                      {user && (
+                          <DialogTrigger asChild>
+                              <Button variant="ghost" size="icon" className="hidden md:inline-flex">
+                                  <MessageSquare className="h-5 w-5" />
+                                  <span className="sr-only">Feedback</span>
+                              </Button>
+                          </DialogTrigger>
+                      )}
+                       <DialogContent className="sm:max-w-[425px]">
+                          <DialogHeader>
+                              <DialogTitle>Submit Feedback</DialogTitle>
+                              <DialogDescription>
+                                 Have an idea or suggestion? We'd love to hear it.
+                              </DialogDescription>
+                          </DialogHeader>
+                          <FeedbackForm onMessageSent={() => setFeedbackFormOpen(false)} />
+                      </DialogContent>
+                    </Dialog>
 
-                <Dialog open={contactFormOpen} onOpenChange={setContactFormOpen}>
-                    {user && (
-                        <DialogTrigger asChild>
-                            <Button variant="ghost" size="icon" className="hidden md:inline-flex">
-                                <Mail className="h-5 w-5" />
-                                <span className="sr-only">Contact Us</span>
-                            </Button>
-                        </DialogTrigger>
-                    )}
-                     <DialogContent className="sm:max-w-[425px]">
-                        <DialogHeader>
-                            <DialogTitle>Contact Us</DialogTitle>
-                            <DialogDescription>
-                                Have a question or problem? Send us a message and we'll get back to you.
-                            </DialogDescription>
-                        </DialogHeader>
-                        <ContactForm onMessageSent={() => setContactFormOpen(false)} />
-                    </DialogContent>
-                </Dialog>
-                 {user && !user.isPaid && (
-                  <Button onClick={openPaymentDialog} size="sm" className="bg-accent hover:bg-accent/90 shrink-0">
-                    <CreditCard className="mr-2 h-4 w-4" />
-                    Unlock Full Access
-                  </Button>
-                )}
-
-                {loading ? (
-                    <div className="h-8 w-8 rounded-full bg-muted animate-pulse"></div>
-                ) : user ? (
-                    <>
-                      <UserNav />
-                      <Button variant="ghost" size="icon" onClick={logout} className="hidden md:inline-flex">
-                          <LogOut className="h-5 w-5" />
-                          <span className="sr-only">Logout</span>
+                    <Dialog open={contactFormOpen} onOpenChange={setContactFormOpen}>
+                        {user && (
+                            <DialogTrigger asChild>
+                                <Button variant="ghost" size="icon" className="hidden md:inline-flex">
+                                    <Mail className="h-5 w-5" />
+                                    <span className="sr-only">Contact Us</span>
+                                </Button>
+                            </DialogTrigger>
+                        )}
+                         <DialogContent className="sm:max-w-[425px]">
+                            <DialogHeader>
+                                <DialogTitle>Contact Us</DialogTitle>
+                                <DialogDescription>
+                                    Have a question or problem? Send us a message and we'll get back to you.
+                                </DialogDescription>
+                            </DialogHeader>
+                            <ContactForm onMessageSent={() => setContactFormOpen(false)} />
+                        </DialogContent>
+                    </Dialog>
+                     {user && !user.isPaid && (
+                      <Button onClick={openPaymentDialog} size="sm" className="bg-accent hover:bg-accent/90 shrink-0">
+                        <CreditCard className="mr-2 h-4 w-4" />
+                        Unlock Full Access
                       </Button>
-                    </>
-                ) : (
-                    <Button onClick={() => router.push('/auth')}>Login</Button>
-                )}
-              </div>
-            </ScrollArea>
+                    )}
+
+                    {loading ? (
+                        <div className="h-8 w-8 rounded-full bg-muted animate-pulse"></div>
+                    ) : user ? (
+                        <>
+                          <UserNav />
+                          <Button variant="ghost" size="icon" onClick={logout} className="hidden md:inline-flex">
+                              <LogOut className="h-5 w-5" />
+                              <span className="sr-only">Logout</span>
+                          </Button>
+                        </>
+                    ) : (
+                        <Button onClick={() => router.push('/auth')}>Login</Button>
+                    )}
+                  </div>
+                </ScrollArea>
+            </div>
         </div>
       </div>
     </header>
