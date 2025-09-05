@@ -9,7 +9,7 @@ export function FloatingBubbles() {
     const pathname = usePathname();
 
     useEffect(() => {
-        const isFlashcardPage = pathname.startsWith('/flashcards');
+        const isFlashcardPage = pathname?.startsWith('/flashcards') ?? false;
         setShowBubbles(!isFlashcardPage);
     }, [pathname]);
 

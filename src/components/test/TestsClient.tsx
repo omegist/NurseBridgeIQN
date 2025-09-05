@@ -24,7 +24,7 @@ interface TestsClientProps {
 export function TestsClient({ tests }: TestsClientProps) {
   const pathname = usePathname();
   const { theme } = useTheme();
-  const isPartB = pathname.includes('/part-b');
+  const isPartB = pathname?.includes('/part-b') ?? false;
   const title = isPartB ? "Test Part B" : "Medication Test";
 
   const cardColors = [
