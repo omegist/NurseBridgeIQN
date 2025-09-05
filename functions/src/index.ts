@@ -79,11 +79,9 @@ app.post("/createOrder", async (req: Request, res: Response) => {
   try {
     const { amount } = req.body;
 
-    // 🪵 Log input for debugging
     console.log("Incoming request body:", req.body);
     console.log("Parsed amount:", amount);
 
-    // ✅ Validate amount
     if (!amount || isNaN(amount)) {
       console.error("Invalid amount received:", amount);
       return res.status(400).json({ error: "Amount is required and must be a valid number" });
@@ -97,4 +95,17 @@ app.post("/createOrder", async (req: Request, res: Response) => {
 
     console.log("Creating Razorpay order with options:", options);
 
-    con
+    const order = await razorpay.orders.create(options);
+    console.log("Razorpay order created:", order);
+
+    return res.status(200).json(order);
+  } catch (error) {
+    console.error("Error creating Razorpay order:", error);
+    return res.status(500).json({ error: "Failed to create Razorpay order" });
+  }
+});
+
+// ✅ Export the Express App as a Firebase HTTPS Function
+export const api = functions.https.onRequest(app);
+
+
