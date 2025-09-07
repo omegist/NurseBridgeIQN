@@ -40,7 +40,7 @@
     "firebase-functions": "^4.0.0",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.540.0",
-    "next": "15.3.5",
+    "next": "14.2.3",
     "nodemailer": "^6.9.0",
     "openai": "^5.13.1",
     "razorpay": "^2.9.6",
