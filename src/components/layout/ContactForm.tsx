@@ -1,7 +1,6 @@
-
 'use client';
 
-import { useActionState } from 'react';
+import { useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
@@ -16,8 +15,7 @@ interface ContactFormProps {
   onMessageSent: () => void;
 }
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
+function SubmitButton({ pending }: { pending: boolean }) {
   return (
     <Button type="submit" disabled={pending} className="w-full">
       {pending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -29,31 +27,28 @@ function SubmitButton() {
 export function ContactForm({ onMessageSent }: ContactFormProps) {
   const { user } = useAuth();
   const { toast } = useToast();
-  const [state, formAction] = useActionState(sendEmail, {
-    success: false,
-    message: '',
-  });
+  const [pending, setPending] = useState(false);
 
-  useEffect(() => {
-    if (state.message) {
-      if (state.success) {
-        toast({
-          title: 'Success!',
-          description: state.message,
-        });
-        onMessageSent();
-      } else {
-        toast({
-          variant: 'destructive',
-          title: 'Error',
-          description: state.message,
-        });
-      }
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setPending(true);
+
+    const formData = new FormData(event.currentTarget);
+    const result = await sendEmail(formData);
+
+    if (result.success) {
+      toast({ title: 'Success!', description: result.message });
+      onMessageSent();
+      event.currentTarget.reset();
+    } else {
+      toast({ variant: 'destructive', title: 'Error', description: result.message });
     }
-  }, [state, toast, onMessageSent]);
+
+    setPending(false);
+  }
 
   return (
-    <form action={formAction} className="grid gap-4 py-4">
+    <form onSubmit={handleSubmit} className="grid gap-4 py-4">
       <input type="hidden" name="userEmail" value={user?.email || ''} />
       <input type="hidden" name="userName" value={user?.name || ''} />
       <div className="grid gap-2">
@@ -66,7 +61,7 @@ export function ContactForm({ onMessageSent }: ContactFormProps) {
           rows={5}
         />
       </div>
-      <SubmitButton />
+      <SubmitButton pending={pending} />
     </form>
   );
 }

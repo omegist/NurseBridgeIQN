@@ -12,7 +12,7 @@ const sendEmailSchema = z.object({
 const resend = new Resend(process.env.RESEND_API_KEY);
 const supportEmail = 'hrishichavan2349@gmail.com';
 
-export async function sendFeedbackEmail(prevState: any, formData: FormData) {
+export async function sendFeedbackEmail(formData: FormData) {
   const parsed = sendEmailSchema.safeParse({
     message: formData.get('message'),
     userEmail: formData.get('userEmail'),
@@ -47,7 +47,6 @@ export async function sendFeedbackEmail(prevState: any, formData: FormData) {
 
     if (error) {
       console.error('Resend API Error:', error);
-      // More robust error message handling
       const errorMessage = error.message || JSON.stringify(error);
       return {
         success: false,
@@ -75,3 +74,4 @@ export async function sendFeedbackEmail(prevState: any, formData: FormData) {
     };
   }
 }
+

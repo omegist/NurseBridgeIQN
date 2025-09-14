@@ -2,48 +2,49 @@
 
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { easeInOut, easeOut } from "framer-motion" // ✅ Import easing functions
+import { easeInOut, easeOut } from "framer-motion"
+import type { Variants } from "framer-motion" // ✅ Import type for variants
+
+const svgVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: easeInOut,
+    },
+  },
+}
+
+const pathVariants: Variants = {
+  hidden: {
+    pathLength: 0,
+    opacity: 0,
+  },
+  visible: {
+    pathLength: 1,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      ease: easeInOut,
+    },
+  },
+}
+
+const textVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 1,
+      ease: easeOut,
+    },
+  },
+}
 
 const AnimatedLogo = ({ className }: { className?: string }) => {
-  const svgVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: easeInOut, // ✅ Use easing function
-      },
-    },
-  }
-
-  const pathVariants = {
-    hidden: {
-      pathLength: 0,
-      opacity: 0,
-    },
-    visible: {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        duration: 2,
-        ease: easeInOut, // ✅ Use easing function
-      },
-    },
-  }
-
-  const textVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 1,
-        duration: 1,
-        ease: easeOut, // ✅ Use easing function
-      },
-    },
-  }
-
   return (
     <motion.div
       className={cn("text-primary", className)}
