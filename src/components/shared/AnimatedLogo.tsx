@@ -1,20 +1,20 @@
-
 "use client"
 
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
+import { easeInOut, easeOut } from "framer-motion" // ✅ Import easing functions
 
 const AnimatedLogo = ({ className }: { className?: string }) => {
   const svgVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
-      }
+        ease: easeInOut, // ✅ Use easing function
+      },
     },
-  };
+  }
 
   const pathVariants = {
     hidden: {
@@ -26,10 +26,10 @@ const AnimatedLogo = ({ className }: { className?: string }) => {
       opacity: 1,
       transition: {
         duration: 2,
-        ease: "easeInOut",
+        ease: easeInOut, // ✅ Use easing function
       },
     },
-  };
+  }
 
   const textVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -39,10 +39,10 @@ const AnimatedLogo = ({ className }: { className?: string }) => {
       transition: {
         delay: 1,
         duration: 1,
-        ease: "easeOut",
+        ease: easeOut, // ✅ Use easing function
       },
     },
-  };
+  }
 
   return (
     <motion.div
@@ -63,16 +63,16 @@ const AnimatedLogo = ({ className }: { className?: string }) => {
             <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 1 }} />
           </linearGradient>
         </defs>
-        
+
         {/* Text "NURSE IQN" */}
-        <motion.text 
-          fontFamily="var(--font-headline), sans-serif" 
-          fontSize="24" 
+        <motion.text
+          fontFamily="var(--font-headline), sans-serif"
+          fontSize="24"
           fontWeight="bold"
-          fill="url(#logo-gradient)" 
-          x="50%" 
-          y="50%" 
-          dominantBaseline="middle" 
+          fill="url(#logo-gradient)"
+          x="50%"
+          y="50%"
+          dominantBaseline="middle"
           textAnchor="middle"
           variants={textVariants}
         >
