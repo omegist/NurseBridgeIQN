@@ -1,4 +1,3 @@
-
 import type { Question } from '@/lib/types';
 
 export const questions: Question[] = [
@@ -53,12 +52,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-5',
     text: 'Which of the following is a sign of hypoglycemia?',
-    options: [
-      'Dry mouth',
-      'Sweating and shakiness',
-      'Slow heart rate',
-      'Flushed skin'
-    ],
+    options: [ 'Dry mouth', 'Sweating and shakiness', 'Slow heart rate', 'Flushed skin' ],
     correctIndex: 1,
     explanation: 'Sweating, shakiness, and confusion are classic signs of low blood sugar due to sympathetic nervous system activation.'
   },
@@ -192,12 +186,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-17',
     text: 'Which of the following is the best way to prevent infection?',
-    options: [
-      'Hand hygiene',
-      'Wearing jewelry',
-      'Sharing personal items',
-      'Avoiding bathing'
-    ],
+    options: [ 'Hand hygiene', 'Wearing jewelry', 'Sharing personal items', 'Avoiding bathing' ],
     correctIndex: 0,
     explanation: 'Hand hygiene is the cornerstone of infection prevention in all healthcare settings.'
   },
@@ -300,12 +289,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-26',
     text: 'Which of the following is a symptom of dengue fever?',
-    options: [
-      'High fever and joint pain',
-      'Frequent urination',
-      'Skin rash',
-      'Dry cough'
-    ],
+    options: [ 'High fever and joint pain', 'Frequent urination', 'Skin rash', 'Dry cough' ],
     correctIndex: 0,
     explanation: 'Dengue typically presents with high fever, severe muscle and joint pain, and sometimes a rash or bleeding tendency.'
   },
@@ -396,12 +380,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-34',
     text: 'Which of the following is a symptom of chickenpox?',
-    options: [
-      'Itchy rash with blisters',
-      'Frequent urination',
-      'Joint pain',
-      'Dry cough'
-    ],
+    options: [ 'Itchy rash with blisters', 'Frequent urination', 'Joint pain', 'Dry cough' ],
     correctIndex: 0,
     explanation: 'Chickenpox causes a vesicular rash that progresses from red spots to fluid-filled blisters, often itchy.'
   },
@@ -420,12 +399,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-36',
     text: 'Which of the following is a sign of ear infection?',
-    options: [
-      'Ear pain and discharge',
-      'Frequent urination',
-      'Skin rash',
-      'Joint pain'
-    ],
+    options: [ 'Ear pain and discharge', 'Frequent urination', 'Skin rash', 'Joint pain' ],
     correctIndex: 0,
     explanation: 'Otitis media or externa often presents with localized pain, discharge, and sometimes fever or hearing loss.'
   },
@@ -468,12 +442,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-40',
     text: 'Which of the following is a sign of eye infection?',
-    options: [
-      'Redness and discharge',
-      'Frequent urination',
-      'Skin rash',
-      'Joint pain'
-    ],
+    options: [ 'Redness and discharge', 'Frequent urination', 'Skin rash', 'Joint pain' ],
     correctIndex: 0,
     explanation: 'Conjunctivitis and other eye infections cause redness, tearing, and purulent discharge.'
   },
@@ -516,12 +485,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-44',
     text: 'Which of the following is a sign of skin allergy?',
-    options: [
-      'Itchy red patches',
-      'Frequent urination',
-      'Joint pain',
-      'Dry cough'
-    ],
+    options: [ 'Itchy red patches', 'Frequent urination', 'Joint pain', 'Dry cough' ],
     correctIndex: 0,
     explanation: 'Skin allergies typically present with pruritus (itching), redness, and sometimes swelling due to histamine release and immune response.'
   },
@@ -648,12 +612,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-55',
     text: 'Which of the following is a symptom of vitamin A deficiency?',
-    options: [
-      'Night blindness',
-      'Frequent urination',
-      'Skin rash',
-      'Joint pain'
-    ],
+    options: [ 'Night blindness', 'Frequent urination', 'Skin rash', 'Joint pain' ],
     correctIndex: 0,
     explanation: 'Vitamin A is essential for vision; deficiency leads to impaired night vision and dry eyes.'
   },
@@ -696,12 +655,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-59',
     text: 'Which of the following is a symptom of urinary tract infection in children?',
-    options: [
-      'Pain during urination',
-      'Skin rash',
-      'Joint pain',
-      'Dry cough'
-    ],
+    options: [ 'Pain during urination', 'Skin rash', 'Joint pain', 'Dry cough' ],
     correctIndex: 0,
     explanation: 'UTIs in children often present with dysuria, urgency, and sometimes fever or abdominal pain.'
   },
@@ -816,12 +770,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-69',
     text: 'Which of the following is a symptom of mumps?',
-    options: [
-      'Swelling near jaw and fever',
-      'Frequent urination',
-      'Skin rash',
-      'Joint pain'
-    ],
+    options: [ 'Swelling near jaw and fever', 'Frequent urination', 'Skin rash', 'Joint pain' ],
     correctIndex: 0,
     explanation: 'Mumps is a viral infection that typically causes painful swelling of the parotid glands near the jaw, along with fever and malaise.'
   },
@@ -900,12 +849,7 @@ export const questions: Question[] = [
   {
     id: 'pb8-76',
     text: 'Which of the following is a symptom of rubella?',
-    options: [
-      'Mild fever and pink rash',
-      'Frequent urination',
-      'Joint pain',
-      'Dry cough'
-    ],
+    options: [ 'Mild fever and pink rash', 'Frequent urination', 'Joint pain', 'Dry cough' ],
     correctIndex: 0,
     explanation: 'Rubella typically presents with low-grade fever, lymphadenopathy, and a pink maculopapular rash that starts on the face and spreads.'
   },
@@ -1044,47 +988,47 @@ export const questions: Question[] = [
   {
     id: 'pb8-88',
     text: 'Which of the following is a symptom of dehydration in hot weather?',
-    options: [
-      'Dry mouth and dizziness',
-      'Frequent urination',
-      'Skin rash',
-      'Joint pain'
+    options": [
+      "Dry mouth and dizziness",
+      "Frequent urination",
+      "Skin rash",
+      "Joint pain"
     ],
-    correctIndex: 0,
-    explanation: 'Heat-related dehydration causes symptoms like dry mouth, dizziness, and fatigue due to fluid loss.'
+    "correct_option": "A",
+    "rationale": "Heat-related dehydration causes symptoms like dry mouth, dizziness, and fatigue due to fluid loss."
   },
   {
-    id: 'pb8-89',
-    text: 'Which of the following is the best way to prevent spread of cold?',
-    options: [
-      'Cover mouth while sneezing and wash hands',
-      'Share towels',
-      'Avoid bathing',
-      'Touch nose frequently'
-    ],
-    correctIndex: 0,
-    explanation: 'Respiratory viruses spread via droplets; covering mouth and hand hygiene reduce transmission.'
+    "question_number": 89,
+    "question": "Which of the following is the best way to prevent spread of cold?",
+    "options": {
+      "A": "Cover mouth while sneezing and wash hands",
+      "B": "Share towels",
+      "C": "Avoid bathing",
+      "D": "Touch nose frequently"
+    },
+    "correct_option": "A",
+    "rationale": "Respiratory viruses spread via droplets; covering mouth and hand hygiene reduce transmission."
   },
   {
-    id: 'pb8-90',
-    text: 'Which of the following is a symptom of vitamin E deficiency?',
-    options: [
-      'Muscle weakness and vision problems',
-      'Frequent urination',
-      'Skin rash',
-      'Dry cough'
-    ],
-    correctIndex: 0,
-    explanation: 'Vitamin E deficiency affects nerve and muscle function, leading to weakness and visual disturbances.'
+    "question_number": 90,
+    "question": "Which of the following is a symptom of vitamin E deficiency?",
+    "options": {
+      "A": "Muscle weakness and vision problems",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Vitamin E deficiency affects nerve and muscle function, leading to weakness and visual disturbances."
   },
   {
-    id: 'pb8-91',
-    text: 'Which of the following is the best way to manage insect bites?',
-    options: [
-      'Clean area and apply cold compress',
-      'Scratch vigorously',
-      'Apply toothpaste',
-      'Ignore swelling'
+    "question_number": 91,
+    "question": "Which of the following is the best way to manage insect bites?",
+    "options": {
+      "A": "Clean area and apply cold compress",
+      "B": "Scratch vigorously",
+      "C": "Apply toothpaste",
+      "D": "Ignore swelling"
     },
     "correct_option": "A",
     "rationale": "Cleaning and cooling reduce inflammation and prevent infection; scratching worsens irritation."
@@ -1099,7 +1043,7 @@ export const questions: Question[] = [
       "D": "Dry cough"
     },
     "correct_option": "A",
-    "rationale": "Vitamin B6 deficiency affects neurotransmitter synthesis, leading to irritability, convulsions, and developmental delays in children."
+    "rationale": "Vitamin B6 deficiency affects mood and skin, causing irritability, glossitis, and cheilitis."
   },
   {
     "question_number": 93,
@@ -1183,7 +1127,7 @@ export const questions: Question[] = [
       "D": "Eat uncovered street food"
     },
     "correct_option": "A",
-    "rationale": "Typhoid spreads via contaminated water; hygiene and safe water are essential for prevention."
+    "rationale": "Typhoid spreads via contaminated food and water; hygiene and safe water are essential for prevention."
   },
   {
     "question_number": 100,
@@ -1298,3 +1242,4 @@ export const questions: Question[] = [
 ]
 ]
 ]
+now add this
