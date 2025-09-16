@@ -524,5 +524,294 @@ export const questions: Question[] = [
     ],
     correctIndex: 0,
     explanation: 'Skin allergies typically present with pruritus (itching), redness, and sometimes swelling due to histamine release and immune response.'
+  },
+  {
+    id: 'pb8-45',
+    text: 'Which of the following is the best way to prevent heat stroke?',
+    options: [
+      'Stay hydrated and avoid direct sun',
+      'Wear thick clothes',
+      'Avoid drinking water',
+      'Exercise in peak afternoon hours'
+    ],
+    correctIndex: 0,
+    explanation: 'Hydration and avoiding sun exposure during peak heat hours are key to preventing heat stroke, which can be life-threatening.'
+  },
+  {
+    id: 'pb8-46',
+    text: 'Which of the following is a symptom of eye strain?',
+    options: [
+      'Blurred vision and headache',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Eye strain from prolonged screen use or poor lighting often causes blurred vision, headaches, and eye discomfort.'
+  },
+  {
+    id: 'pb8-47',
+    text: 'Which of the following is the best way to manage nosebleed?',
+    options: [
+      'Tilt head forward and pinch nose',
+      'Tilt head backward',
+      'Blow nose forcefully',
+      'Apply heat to nose'
+    ],
+    correctIndex: 0,
+    explanation: 'Tilting forward prevents blood from entering the throat, and pinching the nose helps compress bleeding vessels.'
+  },
+  {
+    id: 'pb8-48',
+    text: 'Which of the following is a sign of vitamin D deficiency?',
+    options: [
+      'Bone pain and muscle weakness',
+      'Frequent urination',
+      'Skin rash',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'Vitamin D deficiency impairs calcium absorption, leading to bone pain, muscle weakness, and increased fracture risk.'
+  },
+  {
+    id: 'pb8-49',
+    text: 'Which of the following is the best way to prevent cold and flu?',
+    options: [
+      'Hand hygiene and vaccination',
+      'Avoid bathing',
+      'Share personal items',
+      'Touch face frequently'
+    ],
+    correctIndex: 0,
+    explanation: 'Hand hygiene reduces transmission, and vaccines protect against specific viral strains responsible for flu.'
+  },
+  {
+    id: 'pb8-50',
+    text: 'Which of the following is a symptom of dehydration in infants?',
+    options: [
+      'Sunken fontanelle and dry mouth',
+      'Frequent urination',
+      'Skin rash',
+      'Excessive drooling'
+    ],
+    correctIndex: 0,
+    explanation: 'Infants show dehydration through signs like sunken fontanelle, dry mucous membranes, and reduced urine output.'
+  },
+  {
+    id: 'pb8-51',
+    text: 'Which of the following is a symptom of anemia in children?',
+    options: [
+      'Pale skin and fatigue',
+      'Frequent urination',
+      'Skin rash',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'Children with anemia often show pallor, fatigue, and reduced activity due to decreased oxygen-carrying capacity.'
+  },
+  {
+    id: 'pb8-52',
+    text: 'Which of the following is the best way to prevent worm infestation?',
+    options: [
+      'Eat raw vegetables',
+      'Wash hands before eating',
+      'Avoid bathing',
+      'Drink untreated water'
+    ],
+    correctIndex: 1,
+    explanation: 'Hand hygiene before meals prevents ingestion of worm eggs, especially in children.'
+  },
+  {
+    id: 'pb8-53',
+    text: 'Which of the following is a symptom of dehydration in adults?',
+    options: [
+      'Dry mouth and dizziness',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Dehydration causes reduced saliva production, dizziness due to low blood volume, and fatigue.'
+  },
+  {
+    id: 'pb8-54',
+    text: 'Which of the following is the best way to prevent respiratory infections?',
+    options: [
+      'Cover mouth while coughing',
+      'Share towels',
+      'Avoid cleaning surroundings',
+      'Touch face frequently'
+    ],
+    correctIndex: 0,
+    explanation: 'Covering the mouth during coughing prevents droplet spread, reducing transmission of respiratory pathogens.'
+  },
+  {
+    id: 'pb8-55',
+    text: 'Which of the following is a symptom of vitamin A deficiency?',
+    options: [
+      'Night blindness',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Vitamin A is essential for vision; deficiency leads to impaired night vision and dry eyes.'
+  },
+  {
+    id: 'pb8-56',
+    text: 'Which of the following is the best way to manage fever?',
+    options: [
+      'Give paracetamol and monitor temperature',
+      'Avoid fluids',
+      'Apply ice directly to skin',
+      'Force feed spicy food'
+    ],
+    correctIndex: 0,
+    explanation: 'Paracetamol reduces fever safely, and monitoring ensures timely intervention if symptoms worsen.'
+  },
+  {
+    id: 'pb8-57',
+    text: 'Which of the following is a symptom of scabies?',
+    options: [
+      'Intense itching, especially at night',
+      'Frequent urination',
+      'Dry cough',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Scabies causes severe itching due to mite infestation, often worse at night and in skin folds.'
+  },
+  {
+    id: 'pb8-58',
+    text: 'Which of the following is the best way to prevent skin infections?',
+    options: [
+      'Maintain personal hygiene',
+      'Share towels',
+      'Avoid bathing',
+      'Wear tight clothes'
+    ],
+    correctIndex: 0,
+    explanation: 'Clean skin and clothes reduce microbial growth and prevent skin infections like fungal or bacterial dermatitis.'
+  },
+  {
+    id: 'pb8-59',
+    text: 'Which of the following is a symptom of urinary tract infection in children?',
+    options: [
+      'Pain during urination',
+      'Skin rash',
+      'Joint pain',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'UTIs in children often present with dysuria, urgency, and sometimes fever or abdominal pain.'
+  },
+  {
+    id: 'pb8-60',
+    text: 'Which of the following is the best way to prevent diarrhea?',
+    options: [
+      'Drink clean water and wash hands',
+      'Eat street food frequently',
+      'Avoid washing fruits',
+      'Share utensils'
+    ],
+    correctIndex: 0,
+    explanation: 'Safe water and hand hygiene prevent ingestion of pathogens that cause diarrhea.'
+  },
+  {
+    id: 'pb8-61',
+    text: 'Which of the following is a symptom of dehydration in children?',
+    options: [
+      'Sunken eyes and dry mouth',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Children show dehydration through sunken eyes, dry mucosa, and reduced urine output.'
+  },
+  {
+    id: 'pb8-62',
+    text: 'Which of the following is the best way to prevent eye infections?',
+    options: [
+      'Avoid touching eyes with dirty hands',
+      'Share eye drops',
+      'Rub eyes frequently',
+      'Use expired medication'
+    ],
+    correctIndex: 0,
+    explanation: 'Dirty hands carry bacteria and viruses that can cause conjunctivitis and other eye infections.'
+  },
+  {
+    id: 'pb8-63',
+    text: 'Which of the following is a symptom of ear infection in children?',
+    options: [
+      'Ear pain and irritability',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Children with ear infections may tug at ears, cry excessively, and show signs of pain or fever.'
+  },
+  {
+    id: 'pb8-64',
+    text: 'Which of the following is the best way to manage minor burns?',
+    options: [
+      'Cool with running water and cover with clean cloth',
+      'Apply toothpaste',
+      'Break blisters',
+      'Rub with ice directly'
+    ],
+    correctIndex: 0,
+    explanation: 'Cooling the burn and covering it reduces pain and prevents infection; toothpaste and ice can worsen tissue damage.'
+  },
+  {
+    id: 'pb8-65',
+    text: 'Which of the following is a symptom of vitamin C deficiency?',
+    options: [
+      'Bleeding gums and fatigue',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Vitamin C is vital for collagen synthesis; deficiency leads to scurvy symptoms like bleeding gums and fatigue.'
+  },
+  {
+    id: 'pb8-66',
+    text: 'Which of the following is the best way to prevent cold sores?',
+    options: [
+      'Avoid sharing utensils and maintain hygiene',
+      'Touch sores frequently',
+      'Share lip balm',
+      'Ignore symptoms'
+    ],
+    correctIndex: 0,
+    explanation: 'Cold sores are caused by HSV-1 and spread via contact; hygiene and avoiding shared items reduce transmission.'
+  },
+  {
+    id: 'pb8-67',
+    text: 'Which of the following is a symptom of food poisoning?',
+    options: [
+      'Vomiting and abdominal cramps',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Food poisoning causes GI symptoms like nausea, vomiting, cramps, and diarrhea due to contaminated food.'
+  },
+  {
+    id: 'pb8-68',
+    text: 'Which of the following is the best way to prevent lice infestation?',
+    options: [
+      'Avoid sharing combs and maintain hair hygiene',
+      'Share pillows',
+      'Avoid washing hair',
+      'Use dirty towels'
+    ],
+    correctIndex: 0,
+    explanation: 'Lice spread through shared items; personal hygiene and avoiding shared combs prevent infestation.'
   }
-];
+]
+]
