@@ -13,7 +13,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ClipboardCheck, ArrowRight, Clock, Repeat } from "lucide-react";
+import { ClipboardCheck, ArrowRight, Clock, Repeat, BookCopy } from "lucide-react";
 import type { Test } from "@/lib/types";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
@@ -21,6 +21,7 @@ import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { Skeleton } from "../ui/skeleton";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/contexts/ThemeContext";
 
 
 interface TestsClientProps {
@@ -53,6 +54,7 @@ async function getTestAttempts(userId: string, testIds: string[]) {
 export function TestsClient({ tests }: TestsClientProps) {
   const pathname = usePathname();
   const { user } = useAuth();
+  const { theme } = useTheme();
   const [testAttempts, setTestAttempts] = useState<Record<string, number>>({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -79,6 +81,15 @@ export function TestsClient({ tests }: TestsClientProps) {
   useEffect(() => {
     fetchAttempts();
   }, [fetchAttempts]);
+
+  const cardColors = [
+    { gradient: 'topic-gradient-1', iconBg: 'bg-blue-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-2', iconBg: 'bg-green-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-3', iconBg: 'bg-purple-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-4', iconBg: 'bg-orange-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-5', iconBg: 'bg-pink-400', iconColor: 'text-white' },
+    { gradient: 'topic-gradient-6', iconBg: 'bg-lime-400', iconColor: 'text-white' },
+  ];
 
   return (
     <div className="container mx-auto py-10 px-4">
@@ -119,6 +130,27 @@ export function TestsClient({ tests }: TestsClientProps) {
 
         {!isLoading && tests.map((test, index) => {
            const attempts = testAttempts[test.id] || 0;
+           const colorInfo = cardColors[index % cardColors.length];
+            if (theme === 'light') {
+              return (
+                <motion.div
+                  key={test.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative flex flex-col"
+                >
+                  <Link href={`/test/${test.id}`} className="relative block cursor-pointer">
+                    <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
+                      <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
+                        <BookCopy className={cn("w-8 h-8", colorInfo.iconColor)} />
+                      </div>
+                      <h3 className="font-semibold text-foreground">{test.name}</h3>
+                    </Card>
+                  </Link>
+                </motion.div>
+              )
+            }
            return (
             <motion.div
               key={test.id}
