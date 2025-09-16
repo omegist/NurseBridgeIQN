@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -55,7 +56,7 @@ export function Header() {
     { href: "/topics", icon: BookOpen, text: "Quizzes" },
     { href: "/tests", icon: ClipboardCheck, text: "Tests" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
-    { href: "/handbook", icon: BookHeart, text: "Handbook" },
+    { href: "/handbook.pdf", icon: BookHeart, text: "Handbook", isExternal: true },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
   ]
   
@@ -109,14 +110,19 @@ export function Header() {
                     </Link>
                     </SheetHeader>
                     <nav className="flex flex-col space-y-2 mt-4">
-                    {navLinks.map(({ href, icon: Icon, text }) => (
+                    {navLinks.map(({ href, icon: Icon, text, isExternal }) => (
                         <Button
                         key={text}
                         variant="ghost"
                         className="justify-start"
                         asChild
                         >
-                        <Link href={href} onClick={text === 'Handbook' ? handleHandbookClick : undefined}>
+                        <Link 
+                          href={href} 
+                          onClick={text === 'Handbook' ? handleHandbookClick : undefined}
+                          target={isExternal ? "_blank" : undefined}
+                          rel={isExternal ? "noopener noreferrer" : undefined}
+                        >
                             <Icon className="mr-2 h-4 w-4" />
                             {text}
                         </Link>
@@ -187,9 +193,14 @@ export function Header() {
         <div className="mr-4 hidden md:flex ml-6">
           {user && (
             <nav className="flex items-center gap-2">
-              {navLinks.map(({ href, icon: Icon, text }) => (
+              {navLinks.map(({ href, icon: Icon, text, isExternal }) => (
                 <Button key={text} variant="ghost" asChild>
-                  <Link href={href} onClick={text === 'Handbook' ? handleHandbookClick : undefined}>
+                  <Link 
+                    href={href} 
+                    onClick={text === 'Handbook' ? handleHandbookClick : undefined}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                  >
                     <Icon className="mr-2 h-4 w-4" />
                     {text}
                   </Link>
