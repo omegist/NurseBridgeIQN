@@ -12,13 +12,62 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Repeat } from "lucide-react";
 import { cn, iconMap } from "@/lib/utils";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Header } from "@/components/layout/Header";
+import { useAuth } from "@/contexts/AuthContext";
+import { collection, query, getDocs, where } from "firebase/firestore";
+import { db } from "@/lib/firebase";
+import { useState, useEffect, useCallback } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
+
+async function getFlashcardAttempts(userId: string) {
+  if (!db) return {};
+
+  const attemptsData: Record<string, number> = {};
+  const attemptsCollectionRef = collection(db, `users/${userId}/flashcardProgress`);
+  const q = query(attemptsCollectionRef);
+
+  try {
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      attemptsData[doc.id] = doc.data().completedCount || 0;
+    });
+  } catch (error) {
+    console.error("Failed to fetch flashcard attempts:", error);
+  }
+
+  return attemptsData;
+}
+
 
 export default function FlashcardsPage() {
   const { theme } = useTheme();
+  const { user } = useAuth();
+  const [flashcardAttempts, setFlashcardAttempts] = useState<Record<string, number>>({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchAttempts = useCallback(async () => {
+    if (!user) {
+      setIsLoading(false);
+      return;
+    }
+    setIsLoading(true);
+    try {
+      const attempts = await getFlashcardAttempts(user.uid);
+      setFlashcardAttempts(attempts);
+    } catch (error) {
+      console.error("Error fetching flashcard attempts:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [user]);
+
+  useEffect(() => {
+    fetchAttempts();
+  }, [fetchAttempts]);
+
 
   const cardColors = [
     { gradient: 'topic-gradient-1', iconBg: 'bg-blue-400', iconColor: 'text-white' },
@@ -47,9 +96,29 @@ export default function FlashcardsPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {flashcardTopics.map((topic, index) => {
+          {isLoading && Array.from({ length: 6 }).map((_, i) => (
+             <Card key={i} className="flex flex-col justify-between rounded-2xl shadow-lg bg-card/80 dark:bg-card border-border/20 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="flex items-center gap-4">
+                    <Skeleton className="h-12 w-12 rounded-lg bg-muted" />
+                    <div className="space-y-2">
+                      <Skeleton className="h-6 w-48 bg-muted" />
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <Skeleton className="h-4 w-full bg-muted" />
+                </CardContent>
+                <CardContent>
+                   <Skeleton className="h-10 w-full bg-muted" />
+                </CardContent>
+              </Card>
+          ))}
+
+          {!isLoading && flashcardTopics.map((topic, index) => {
             const Icon = iconMap[topic.icon] ?? (() => null);
             const colorInfo = cardColors[index % cardColors.length];
+            const attempts = flashcardAttempts[topic.id] || 0;
 
             if (theme === 'light') {
               return (
@@ -61,8 +130,7 @@ export default function FlashcardsPage() {
                   className="flex"
                 >
                   <Card className={cn("w-full flex flex-col justify-between rounded-2xl glass-card", colorInfo.gradient)}>
-                     <Link href={`/flashcards/${topic.id}`} className="flex-grow">
-                      <div>
+                     <div>
                         <CardHeader className="flex-row items-center gap-4 space-y-0">
                            <div className={cn("p-3 rounded-lg", colorInfo.iconBg)}>
                             <Icon className={cn("w-7 h-7", colorInfo.iconColor)} />
@@ -73,13 +141,16 @@ export default function FlashcardsPage() {
                         </CardHeader>
                         <CardContent>
                           <CardDescription className="text-foreground/80">{topic.description}</CardDescription>
+                           <div className="flex items-center gap-2 text-foreground/70 text-sm mt-4">
+                              <Repeat className="w-4 h-4" />
+                              <span>{attempts} {attempts === 1 ? 'review' : 'reviews'}</span>
+                            </div>
                         </CardContent>
                       </div>
-                     </Link>
                     <CardContent>
                        <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                         <Link href={`/flashcards/${topic.id}`}>
-                          Start Reviewing
+                          {attempts > 0 ? "Review Again" : "Start Reviewing"}
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
@@ -110,12 +181,16 @@ export default function FlashcardsPage() {
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-muted-foreground">{topic.description}</CardDescription>
+                       <div className="flex items-center gap-2 text-muted-foreground text-sm mt-4">
+                          <Repeat className="w-4 h-4" />
+                          <span>{attempts} {attempts === 1 ? 'review' : 'reviews'}</span>
+                        </div>
                     </CardContent>
                   </div>
                   <CardContent>
                     <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                       <Link href={`/flashcards/${topic.id}`}>
-                        Start Reviewing
+                         {attempts > 0 ? "Review Again" : "Start Reviewing"}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>

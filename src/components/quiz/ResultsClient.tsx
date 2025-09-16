@@ -25,7 +25,7 @@ import {
 import { CheckCircle, XCircle, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, increment } from "firebase/firestore";
 import { db } from "@/lib/firebase"; // <-- direct import of db
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
@@ -114,7 +114,12 @@ export function ResultsClient() {
     const ref = doc(db, "users", user.uid, "quizProgress", topic.id);
     setDoc(
       ref,
-      { completed: true, score, percentage },
+      { 
+        completed: true, 
+        lastScore: score, 
+        lastPercentage: percentage,
+        completedCount: increment(1) 
+      },
       { merge: true }
     ).catch(() => {});
 

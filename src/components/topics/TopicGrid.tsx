@@ -13,7 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Clock, BookOpen, RotateCw, Check } from "lucide-react";
+import { Clock, BookOpen, RotateCw, Check, Repeat } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
@@ -24,10 +24,15 @@ import { Button } from "@/components/ui/button";
 import { usePayment } from "@/hooks/usePayment";
 import { useTheme } from "@/contexts/ThemeContext";
 
+type ProgressData = {
+  progress: number;
+  attempts: number;
+};
+
 async function getTopicProgress(userId: string) {
   if (!db) return {};
 
-  const progressData: Record<string, number> = {};
+  const progressData: Record<string, ProgressData> = {};
   const progressCollectionRef = collection(db, `users/${userId}/quizProgress`);
   const q = query(progressCollectionRef, where("userId", "==", userId));
 
@@ -40,8 +45,9 @@ async function getTopicProgress(userId: string) {
       const topic = topics.find((t) => t.id === topicId);
 
       if (topic) {
+        let progress = 0;
         if (data.completed) {
-          progressData[topicId] = 100;
+          progress = 100;
         } else {
           const userAnswers = data.userAnswers || [];
           const totalQuestions = topic.questionCount || 0;
@@ -49,10 +55,13 @@ async function getTopicProgress(userId: string) {
             const answeredCount = userAnswers.filter(
               (answer: null | number) => answer !== null
             ).length;
-            progressData[topicId] =
-              (answeredCount / totalQuestions) * 100;
+            progress = (answeredCount / totalQuestions) * 100;
           }
         }
+        progressData[topicId] = {
+          progress: progress,
+          attempts: data.completedCount || 0,
+        };
       }
     });
   } catch (error) {
@@ -64,7 +73,7 @@ async function getTopicProgress(userId: string) {
 export function TopicGrid() {
   const { user } = useAuth();
   const { theme } = useTheme();
-  const [topicProgress, setTopicProgress] = useState<Record<string, number>>({});
+  const [topicProgress, setTopicProgress] = useState<Record<string, ProgressData>>({});
   const [isLoading, setIsLoading] = useState(true);
   const { openPaymentDialog } = usePayment();
 
@@ -105,7 +114,7 @@ export function TopicGrid() {
     }
   };
 
-  const getTopicStatus = (topicId: string, progress: number) => {
+  const getTopicStatus = (progress: number) => {
     if (progress === 100)
       return { text: "Completed", icon: Check, color: "text-green-500" };
     if (progress > 0)
@@ -144,10 +153,13 @@ export function TopicGrid() {
       {!isLoading &&
         topics.map((topic, index) => {
           const Icon = iconMap[topic.icon];
-          const progress = topicProgress[topic.id] || 0;
-          const status = getTopicStatus(topic.id, progress);
+          const progressInfo = topicProgress[topic.id] || { progress: 0, attempts: 0 };
+          const { progress, attempts } = progressInfo;
+          const status = getTopicStatus(progress);
           const StatusIcon = status.icon;
           const colorInfo = cardColors[index % cardColors.length];
+          const buttonText = attempts > 0 ? (progress < 100 ? "Continue Quiz" : "Retake Quiz") : "Start Quiz";
+
 
           if (theme === 'light') {
             return (
@@ -159,10 +171,10 @@ export function TopicGrid() {
                 className="flex"
               >
                   <Card className={cn("w-full flex flex-col justify-between rounded-2xl glass-card", colorInfo.gradient)}>
-                    <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)} className="flex-grow">
-                      <div>
-                        <CardHeader className="flex-row items-start gap-4">
-                          <div className={cn("p-3 rounded-lg", colorInfo.iconBg)}>
+                    <div>
+                      <CardHeader className="flex-col items-start space-y-4">
+                        <div className="flex items-center gap-4">
+                           <div className={cn("p-3 rounded-lg", colorInfo.iconBg)}>
                             <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
                           </div>
                           <div>
@@ -174,31 +186,35 @@ export function TopicGrid() {
                               {status.text}
                             </span>
                           </div>
-                        </CardHeader>
-                        <CardContent>
-                          <CardDescription className="text-foreground/80 mb-4 min-h-[40px]">{topic.description}</CardDescription>
-                          <div className="flex justify-between items-center text-foreground/70 text-sm mb-4">
-                            <div className="flex items-center gap-2">
-                              <BookOpen className="w-4 h-4" />
-                              <span>{topic.questionCount} questions</span>
-                            </div>
-                            <div className="flex items-center gap-2 capitalize">
-                              <Clock className="w-4 h-4" />
-                              <span>{topic.difficulty}</span>
-                            </div>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-foreground/80 mb-4 min-h-[40px]">{topic.description}</CardDescription>
+                        <div className="flex justify-between items-center text-foreground/70 text-sm mb-4">
+                          <div className="flex items-center gap-2">
+                            <BookOpen className="w-4 h-4" />
+                            <span>{topic.questionCount} questions</span>
                           </div>
-                          {progress > 0 && (
-                            <div className="mt-4">
-                              <Progress value={progress} className="h-2 bg-black/20" />
-                            </div>
-                          )}
-                        </CardContent>
-                      </div>
-                    </Link>
+                           <div className="flex items-center gap-2 capitalize">
+                            <Clock className="w-4 h-4" />
+                            <span>{topic.difficulty}</span>
+                          </div>
+                           <div className="flex items-center gap-2">
+                              <Repeat className="w-4 h-4" />
+                              <span>{attempts} {attempts === 1 ? 'attempt' : 'attempts'}</span>
+                          </div>
+                        </div>
+                        {progress > 0 && (
+                          <div className="mt-4">
+                            <Progress value={progress} className="h-2 bg-black/20" />
+                          </div>
+                        )}
+                      </CardContent>
+                    </div>
                     <CardFooter>
                       <Button asChild className="w-full mt-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                         <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)}>
-                           {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
+                           {buttonText}
                         </Link>
                       </Button>
                     </CardFooter>
@@ -242,6 +258,10 @@ export function TopicGrid() {
                         <Clock className="w-4 h-4" />
                         <span>{topic.difficulty}</span>
                       </div>
+                       <div className="flex items-center gap-2">
+                        <Repeat className="w-4 h-4" />
+                        <span>{attempts} {attempts === 1 ? 'attempt' : 'attempts'}</span>
+                      </div>
                     </div>
                     {progress > 0 && (
                       <div className="mt-4">
@@ -253,7 +273,7 @@ export function TopicGrid() {
                 <CardFooter>
                   <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                     <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)}>
-                      {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
+                       {buttonText}
                     </Link>
                   </Button>
                 </CardFooter>

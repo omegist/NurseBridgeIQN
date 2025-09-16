@@ -1,6 +1,7 @@
+
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import type { SerializableFlashcardTopic } from "@/lib/types";
@@ -8,6 +9,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, RotateCw } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { useAuth } from "@/contexts/AuthContext";
+import { doc, setDoc, increment } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 interface Props {
   topic: SerializableFlashcardTopic;
@@ -18,6 +22,22 @@ export function FlashcardClient({ topic }: Props) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [direction, setDirection] = useState(0);
   const router = useRouter();
+  const { user } = useAuth();
+
+  const handleCompletion = useCallback(async () => {
+    if (user && topic) {
+      const progressRef = doc(db, "users", user.uid, "flashcardProgress", topic.id);
+      await setDoc(
+        progressRef,
+        {
+          completedCount: increment(1),
+          lastReviewed: new Date(),
+        },
+        { merge: true }
+      );
+    }
+    router.push("/flashcards");
+  }, [user, topic, router]);
 
   /* ──────────────────────────────────────────────────────────────── */
 
@@ -31,6 +51,13 @@ export function FlashcardClient({ topic }: Props) {
   };
 
   const paginate = (dir: number) => {
+    const nextIndex = currentIndex + dir;
+    
+    if (nextIndex >= topic.flashcards.length) {
+      handleCompletion();
+      return;
+    }
+
     setDirection(dir);
     setIsFlipped(false);
     /* wait for flip reset before index change */
@@ -157,6 +184,7 @@ export function FlashcardClient({ topic }: Props) {
               size="lg"
               className="bg-background/20 text-white border-white/50 hover:bg-background/40"
               onClick={() => paginate(-1)}
+              disabled={currentIndex === 0}
             >
               <ChevronLeft className="h-5 w-5" />
               Prev
@@ -175,7 +203,7 @@ export function FlashcardClient({ topic }: Props) {
               className="bg-background/20 text-white border-white/50 hover:bg-background/40"
               onClick={() => paginate(1)}
             >
-              Next
+              {currentIndex === topic.flashcards.length - 1 ? "Finish" : "Next"}
               <ChevronRight className="h-5 w-5" />
             </Button>
           </motion.div>
