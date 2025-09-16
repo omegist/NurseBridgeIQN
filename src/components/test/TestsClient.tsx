@@ -138,16 +138,53 @@ export function TestsClient({ tests }: TestsClientProps) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative flex flex-col"
+                  className="flex"
                 >
-                  <Link href={`/test/${test.id}`} className="relative block cursor-pointer">
-                    <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
-                      <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
-                        <BookCopy className={cn("w-8 h-8", colorInfo.iconColor)} />
+                  <Card className={cn("w-full flex flex-col justify-between rounded-2xl glass-card", colorInfo.gradient)}>
+                     <Link href={`/test/${test.id}`} className="flex-grow">
+                      <div>
+                        <CardHeader className="flex-row items-center gap-4 space-y-0">
+                          <div className={cn("p-3 rounded-lg", colorInfo.iconBg)}>
+                            <ClipboardCheck className={cn("w-7 h-7", colorInfo.iconColor)} />
+                          </div>
+                          <CardTitle className="font-headline text-xl text-foreground">
+                            {test.name}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-foreground/80 min-h-[40px]">
+                            A comprehensive test covering multiple nursing topics.
+                          </CardDescription>
+                          <div className="flex flex-wrap justify-between items-center text-foreground/70 text-sm mt-4 border-t border-black/20 pt-4 gap-y-2">
+                            <div className="flex items-center gap-2">
+                              <ClipboardCheck className="w-4 h-4" />
+                              <span>{test.questions.length} questions</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <Clock className="w-4 h-4" />
+                              <span>
+                                {test.timeLimitMinutes
+                                  ? `${test.timeLimitMinutes} min limit`
+                                  : "No time limit"}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <Repeat className="w-4 h-4" />
+                              <span>{attempts} {attempts === 1 ? 'attempt' : 'attempts'}</span>
+                            </div>
+                          </div>
+                        </CardContent>
                       </div>
-                      <h3 className="font-semibold text-foreground">{test.name}</h3>
-                    </Card>
-                  </Link>
+                     </Link>
+                    <CardFooter>
+                       <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+                        <Link href={`/test/${test.id}`}>
+                          {attempts > 0 ? "Retake Test" : "Start Test"}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
                 </motion.div>
               )
             }

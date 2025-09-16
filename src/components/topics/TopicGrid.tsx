@@ -156,18 +156,53 @@ export function TopicGrid() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative flex flex-col"
+                className="flex"
               >
-                  <div className="relative block cursor-pointer">
-                    <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)}>
-                      <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
-                        <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
-                          <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
-                        </div>
-                        <h3 className="font-semibold text-foreground">{topic.name}</h3>
-                      </Card>
+                  <Card className={cn("w-full flex flex-col justify-between rounded-2xl glass-card", colorInfo.gradient)}>
+                    <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)} className="flex-grow">
+                      <div>
+                        <CardHeader className="flex-row items-start gap-4">
+                          <div className={cn("p-3 rounded-lg", colorInfo.iconBg)}>
+                            <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
+                          </div>
+                          <div>
+                            <CardTitle className="font-headline text-xl text-foreground">
+                              {topic.name}
+                            </CardTitle>
+                             <span className={cn("text-xs font-medium flex items-center gap-1", status.color)}>
+                              <StatusIcon className="w-3.5 h-3.5" />
+                              {status.text}
+                            </span>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-foreground/80 mb-4 min-h-[40px]">{topic.description}</CardDescription>
+                          <div className="flex justify-between items-center text-foreground/70 text-sm mb-4">
+                            <div className="flex items-center gap-2">
+                              <BookOpen className="w-4 h-4" />
+                              <span>{topic.questionCount} questions</span>
+                            </div>
+                            <div className="flex items-center gap-2 capitalize">
+                              <Clock className="w-4 h-4" />
+                              <span>{topic.difficulty}</span>
+                            </div>
+                          </div>
+                          {progress > 0 && (
+                            <div className="mt-4">
+                              <Progress value={progress} className="h-2 bg-black/20" />
+                            </div>
+                          )}
+                        </CardContent>
+                      </div>
                     </Link>
-                  </div>
+                    <CardFooter>
+                      <Button asChild className="w-full mt-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+                        <Link href={`/quiz/${topic.id}`} onClick={(e) => handleTopicClick(e, topic.id)}>
+                           {progress > 0 && progress < 100 ? "Continue Quiz" : "Start Quiz"}
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
               </motion.div>
             )
           }

@@ -58,18 +58,33 @@ export default function FlashcardsPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative flex flex-col"
+                  className="flex"
                 >
-                    <div className="relative block cursor-pointer">
-                      <Link href={`/flashcards/${topic.id}`}>
-                        <Card className={cn("glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center h-48", colorInfo.gradient)}>
-                          <div className={cn("w-16 h-16 rounded-full flex items-center justify-center mb-4", colorInfo.iconBg)}>
-                            <Icon className={cn("w-8 h-8", colorInfo.iconColor)} />
+                  <Card className={cn("w-full flex flex-col justify-between rounded-2xl glass-card", colorInfo.gradient)}>
+                     <Link href={`/flashcards/${topic.id}`} className="flex-grow">
+                      <div>
+                        <CardHeader className="flex-row items-center gap-4 space-y-0">
+                           <div className={cn("p-3 rounded-lg", colorInfo.iconBg)}>
+                            <Icon className={cn("w-7 h-7", colorInfo.iconColor)} />
                           </div>
-                          <h3 className="font-semibold text-foreground">{topic.name}</h3>
-                        </Card>
-                      </Link>
-                    </div>
+                          <CardTitle className="font-headline text-xl text-foreground">
+                            {topic.name}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-foreground/80">{topic.description}</CardDescription>
+                        </CardContent>
+                      </div>
+                     </Link>
+                    <CardContent>
+                       <Button asChild className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+                        <Link href={`/flashcards/${topic.id}`}>
+                          Start Reviewing
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
                 </motion.div>
               )
             }
