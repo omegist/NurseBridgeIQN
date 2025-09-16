@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
@@ -23,7 +24,7 @@ import {
 import { CheckCircle, XCircle, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc, increment } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
@@ -102,11 +103,15 @@ export function TestResultsClient() {
     setResults(calculatedResults);
     if (score > 0) updateUserScore(score * 10);
 
-    // Save progress to Firestore using imported db
     const ref = doc(db, "users", user.uid, "testProgress", test.id);
     setDoc(
       ref,
-      { completed: true, score, percentage },
+      { 
+        completed: true, 
+        lastScore: score, 
+        lastPercentage: percentage,
+        completedCount: increment(1)
+      },
       { merge: true }
     ).catch(() => {});
 
