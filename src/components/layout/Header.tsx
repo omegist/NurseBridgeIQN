@@ -15,6 +15,7 @@ import {
   MessageSquare,
   LogOut,
   CreditCard,
+  BookHeart,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -54,6 +55,7 @@ export function Header() {
     { href: "/topics", icon: BookOpen, text: "Quizzes" },
     { href: "/tests", icon: ClipboardCheck, text: "Tests" },
     { href: "/flashcards", icon: Layers, text: "Flashcards" },
+    { href: "/handbook", icon: BookHeart, text: "Handbook" },
     { href: "/accuracy", icon: BarChart2, text: "Accuracy" },
   ]
   
@@ -114,7 +116,7 @@ export function Header() {
                         className="justify-start"
                         asChild
                         >
-                        <Link href={href}>
+                        <Link href={href} onClick={text === 'Handbook' ? handleHandbookClick : undefined}>
                             <Icon className="mr-2 h-4 w-4" />
                             {text}
                         </Link>
@@ -187,7 +189,7 @@ export function Header() {
             <nav className="flex items-center gap-2">
               {navLinks.map(({ href, icon: Icon, text }) => (
                 <Button key={text} variant="ghost" asChild>
-                  <Link href={href}>
+                  <Link href={href} onClick={text === 'Handbook' ? handleHandbookClick : undefined}>
                     <Icon className="mr-2 h-4 w-4" />
                     {text}
                   </Link>
