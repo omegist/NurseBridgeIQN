@@ -814,4 +814,4 @@ export const questions: Question[] = [
     explanation: 'Lice spread through shared items; personal hygiene and avoiding shared combs prevent infestation.'
   }
 ]
-]
+```
