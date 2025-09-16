@@ -813,5 +813,4 @@ export const questions: Question[] = [
     correctIndex: 0,
     explanation: 'Lice spread through shared items; personal hygiene and avoiding shared combs prevent infestation.'
   }
-]
-```
+];
