@@ -1,3 +1,4 @@
+
 import type { Question } from '@/lib/types';
 
 export const questions: Question[] = [
@@ -692,7 +693,7 @@ export const questions: Question[] = [
       'Rub eyes frequently',
       'Use expired medication'
     ],
-    correctIndex: 0,
+    correctIndex: 0,.
     explanation: 'Dirty hands carry bacteria and viruses that can cause conjunctivitis and other eye infections.'
   },
   {
@@ -952,48 +953,48 @@ export const questions: Question[] = [
   {
     id: 'pb8-85',
     text: 'Which of the following is the best way to manage minor bleeding?',
-    options: [
-      'Apply pressure with clean cloth',
-      'Rub wound vigorously',
-      'Leave wound open',
-      'Apply powder'
-    ],
-    correctIndex: 0,
-    explanation: 'Direct pressure helps stop bleeding and reduces risk of infection when applied with a clean cloth.'
+    options": {
+      "A": "Apply pressure with clean cloth",
+      "B": "Rub wound vigorously",
+      "C": "Leave wound open",
+      "D": "Apply powder"
+    },
+    "correct_option": "A",
+    "rationale": "Direct pressure helps stop bleeding and reduces risk of infection when applied with a clean cloth."
   },
   {
-    id: 'pb8-86',
-    text: 'Which of the following is a symptom of vitamin K deficiency?',
-    options: [
-      'Easy bruising and bleeding',
-      'Frequent urination',
-      'Skin rash',
-      'Dry cough'
-    ],
-    correctIndex: 0,
-    explanation: 'Vitamin K is essential for blood clotting; deficiency leads to prolonged bleeding and easy bruising.'
+    "question_number": 86,
+    "question": "Which of the following is a symptom of vitamin K deficiency?",
+    "options": {
+      "A": "Easy bruising and bleeding",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Vitamin K is essential for blood clotting; deficiency leads to prolonged bleeding and easy bruising."
   },
   {
-    id: 'pb8-87',
-    text: 'Which of the following is the best way to prevent spread of hepatitis A?',
-    options: [
-      'Wash hands and avoid contaminated food/water',
-      'Share utensils',
-      'Avoid bathing',
-      'Touch face frequently'
-    ],
-    correctIndex: 0,
-    explanation: 'Hepatitis A spreads via fecal-oral route; hygiene and safe food practices are key to prevention.'
+    "question_number": 87,
+    "question": "Which of the following is the best way to prevent spread of hepatitis A?",
+    "options": {
+      "A": "Wash hands and avoid contaminated food/water",
+      "B": "Share utensils",
+      "C": "Avoid bathing",
+      "D": "Touch face frequently"
+    },
+    "correct_option": "A",
+    "rationale": "Hepatitis A spreads via fecal-oral route; hygiene and safe food practices are key to prevention."
   },
   {
-    id: 'pb8-88',
-    text: 'Which of the following is a symptom of dehydration in hot weather?',
-    options": [
-      "Dry mouth and dizziness",
-      "Frequent urination",
-      "Skin rash",
-      "Joint pain"
-    ],
+    "question_number": 88,
+    "question": "Which of the following is a symptom of dehydration in hot weather?",
+    "options": {
+      "A": "Dry mouth and dizziness",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Joint pain"
+    },
     "correct_option": "A",
     "rationale": "Heat-related dehydration causes symptoms like dry mouth, dizziness, and fatigue due to fluid loss."
   },
@@ -1242,4 +1243,3 @@ export const questions: Question[] = [
 ]
 ]
 ]
-now add this
