@@ -67,10 +67,9 @@ const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
   } else {
     // Test 7 has the remaining 42 questions
     const startIndex = 6 * 108;
-    const endIndex = startIndex + 42; // Test 7 has 42 questions
     return {
       ...testInfo,
-      questions: partBShuffledQuestions.slice(startIndex, endIndex),
+      questions: partBShuffledQuestions.slice(startIndex),
     };
   }
 });
@@ -79,3 +78,5 @@ export const tests = {
   partA: partATests,
   partB: partBTests
 };
+
+    
