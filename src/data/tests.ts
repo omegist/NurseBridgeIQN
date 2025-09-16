@@ -6,6 +6,7 @@ import { questions as partATest3 } from './questions/part-a-test-3';
 import { questions as partATest4 } from './questions/part-a-test-4';
 import { questions as partATest5 } from './questions/part-a-test-5';
 import { questions as partATest6 } from './questions/part-a-test-6';
+import { questions as partBTest8 } from './questions/part-b-test-8';
 import type { Test } from '@/lib/types';
 
 // Seeded shuffle for consistency across builds
@@ -45,9 +46,16 @@ const partBTestsData: Omit<Test, 'questions'>[] = [
   { id: 'test-5', name: 'Test 5', timeLimitMinutes: 145 },
   { id: 'test-6', name: 'Test 6', timeLimitMinutes: 145 },
   { id: 'test-7', name: 'Test 7', timeLimitMinutes: null }, // No time limit
+  { id: 'test-8', name: 'Test 8', timeLimitMinutes: 60 },
 ];
 
 const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
+  if (testInfo.id === 'test-8') {
+    return {
+      ...testInfo,
+      questions: partBTest8
+    };
+  }
   if (index < 6) {
     // Tests 1-6 have 108 questions each
     const startIndex = index * 108;
@@ -59,9 +67,10 @@ const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
   } else {
     // Test 7 has the remaining 42 questions
     const startIndex = 6 * 108;
+    const endIndex = startIndex + 42; // Test 7 has 42 questions
     return {
       ...testInfo,
-      questions: partBShuffledQuestions.slice(startIndex),
+      questions: partBShuffledQuestions.slice(startIndex, endIndex),
     };
   }
 });

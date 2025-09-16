@@ -10,6 +10,7 @@ import { questions as mostRepeatedQuestionsB } from './most-repeated-questions-b
 import { questions as mentalHealthIqn } from './mental-health-iqn';
 import { questions as cardiologyQuestIqn } from './cardiology-quest-iqn';
 import { questions as gastroQuestIqn } from './gastro-quest-iqn';
+import { questions as partBTest8 } from './part-b-test-8';
 import type { Question } from '@/lib/types';
 
 export const allQuestions: Question[] = [
@@ -25,4 +26,5 @@ export const allQuestions: Question[] = [
   ...mentalHealthIqn,
   ...cardiologyQuestIqn,
   ...gastroQuestIqn,
+  ...partBTest8,
 ];
