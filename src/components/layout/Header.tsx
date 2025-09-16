@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -14,7 +13,6 @@ import {
   BookOpen,
   Mail,
   MessageSquare,
-  BookText,
   LogOut,
   CreditCard,
 } from "lucide-react"
@@ -74,7 +72,6 @@ export function Header() {
     }
   };
 
-
   if (!mounted) {
     return (
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -82,24 +79,6 @@ export function Header() {
       </header>
     )
   }
-
-  const handbookLink = (
-    <Button variant="ghost" asChild>
-      <a href="/nursing-handbook.pdf" onClick={handleHandbookClick} target="_blank" rel="noopener noreferrer">
-        <BookText className="mr-2 h-4 w-4" />
-        Handbook
-      </a>
-    </Button>
-  );
-
-  const handbookLinkMobile = (
-     <Button variant="ghost" className="justify-start" asChild>
-      <a href="/nursing-handbook.pdf" onClick={handleHandbookClick} target="_blank" rel="noopener noreferrer">
-        <BookText className="mr-2 h-4 w-4" />
-        Handbook
-      </a>
-    </Button>
-  );
 
   const handleExit = () => {
     router.push('/topics');
@@ -128,7 +107,6 @@ export function Header() {
                     </Link>
                     </SheetHeader>
                     <nav className="flex flex-col space-y-2 mt-4">
-                    {handbookLinkMobile}
                     {navLinks.map(({ href, icon: Icon, text }) => (
                         <Button
                         key={text}
@@ -207,7 +185,6 @@ export function Header() {
         <div className="mr-4 hidden md:flex ml-6">
           {user && (
             <nav className="flex items-center gap-2">
-              {handbookLink}
               {navLinks.map(({ href, icon: Icon, text }) => (
                 <Button key={text} variant="ghost" asChild>
                   <Link href={href}>
