@@ -812,5 +812,489 @@ export const questions: Question[] = [
     ],
     correctIndex: 0,
     explanation: 'Lice spread through shared items; personal hygiene and avoiding shared combs prevent infestation.'
+  },
+  {
+    id: 'pb8-69',
+    text: 'Which of the following is a symptom of mumps?',
+    options: [
+      'Swelling near jaw and fever',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Mumps is a viral infection that typically causes painful swelling of the parotid glands near the jaw, along with fever and malaise.'
+  },
+  {
+    id: 'pb8-70',
+    text: 'Which of the following is the best way to prevent fungal infections?',
+    options: [
+      'Keep skin dry and clean',
+      'Wear damp clothes',
+      'Share towels',
+      'Avoid bathing'
+    ],
+    correctIndex: 0,
+    explanation: 'Fungi thrive in moist environments; keeping skin dry and maintaining hygiene helps prevent infections like ringworm and athlete’s foot.'
+  },
+  {
+    id: 'pb8-71',
+    text: 'Which of the following is a symptom of dehydration in elderly patients?',
+    options: [
+      'Dry mouth and confusion',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Older adults may show dehydration through dry mucosa, confusion, dizziness, and low urine output due to reduced fluid reserves.'
+  },
+  {
+    id: 'pb8-72',
+    text: 'Which of the following is the best way to manage sore throat?',
+    options: [
+      'Gargle with warm salt water',
+      'Eat spicy food',
+      'Avoid fluids',
+      'Share utensils'
+    ],
+    correctIndex: 0,
+    explanation: 'Salt water gargles soothe inflammation and help reduce microbial load in the throat, aiding recovery.'
+  },
+  {
+    id: 'pb8-73',
+    text: 'Which of the following is a symptom of vitamin B12 deficiency?',
+    options: [
+      'Fatigue and tingling in hands',
+      'Frequent urination',
+      'Skin rash',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'Vitamin B12 deficiency affects nerve function and red blood cell production, leading to fatigue, numbness, and neurological symptoms.'
+  },
+  {
+    id: 'pb8-74',
+    text: 'Which of the following is the best way to prevent spread of conjunctivitis?',
+    options: [
+      'Avoid touching eyes and wash hands',
+      'Share eye drops',
+      'Rub eyes frequently',
+      'Use dirty towels'
+    ],
+    correctIndex: 0,
+    explanation: 'Conjunctivitis spreads through contact; hand hygiene and avoiding eye-touching reduce transmission risk.'
+  },
+  {
+    id: 'pb8-75',
+    text: 'Which of the following is a symptom of iron deficiency?',
+    options: [
+      'Fatigue and pale skin',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Iron deficiency reduces hemoglobin levels, leading to fatigue, pallor, and sometimes shortness of breath.'
+  },
+  {
+    id: 'pb8-76',
+    text: 'Which of the following is a symptom of rubella?',
+    options: [
+      'Mild fever and pink rash',
+      'Frequent urination',
+      'Joint pain',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'Rubella typically presents with low-grade fever, lymphadenopathy, and a pink maculopapular rash that starts on the face and spreads.'
+  },
+  {
+    id: 'pb8-77',
+    text: 'Which of the following is the best way to prevent spread of lice?',
+    options: [
+      'Avoid sharing combs and bedding',
+      'Share towels',
+      'Use dirty pillowcases',
+      'Avoid washing hair'
+    ],
+    correctIndex: 0,
+    explanation: 'Lice spread through direct contact and shared items; hygiene and avoiding shared combs or bedding are key to prevention.'
+  },
+  {
+    id: 'pb8-78',
+    text: 'Which of the following is a symptom of dehydration in infants?',
+    options: [
+      'Sunken fontanelle and dry lips',
+      'Frequent urination',
+      'Skin rash',
+      'Excessive drooling'
+    ],
+    correctIndex: 0,
+    explanation: 'Infants show dehydration through sunken soft spots (fontanelle), dry mucosa, and reduced urine output.'
+  },
+  {
+    id: 'pb8-79',
+    text: 'Which of the following is the best way to prevent scabies?',
+    options: [
+      'Maintain personal hygiene and avoid sharing clothes',
+      'Share bedding',
+      'Wear tight synthetic clothes',
+      'Avoid bathing'
+    ],
+    correctIndex: 0,
+    explanation: 'Scabies spreads through close contact and shared items; hygiene and avoiding shared clothing help prevent infestation.'
+  },
+  {
+    id: 'pb8-80',
+    text: 'Which of the following is a symptom of vitamin D deficiency in children?',
+    options: [
+      'Delayed growth and bowed legs',
+      'Frequent urination',
+      'Skin rash',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'Vitamin D deficiency impairs calcium absorption, leading to rickets in children — characterized by bone deformities and growth delays.'
+  },
+  {
+    id: 'pb8-81',
+    text: 'Which of the following is the best way to manage a sprain?',
+    options: [
+      'Rest, ice, compression, elevation (RICE)',
+      'Massage vigorously',
+      'Apply heat immediately',
+      'Ignore the pain'
+    ],
+    correctIndex: 0,
+    explanation: 'RICE protocol reduces swelling and pain, promoting healing in soft tissue injuries like sprains.'
+  },
+  {
+    id: 'pb8-82',
+    text: 'Which of the following is a symptom of dehydration during diarrhea?',
+    options: [
+      'Dry mouth and sunken eyes',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Diarrhea causes fluid loss; signs like dry mucosa and sunken eyes indicate dehydration.'
+  },
+  {
+    id: 'pb8-83',
+    text: 'Which of the following is the best way to prevent spread of ringworm?',
+    options: [
+      'Avoid sharing towels and maintain hygiene',
+      'Wear damp clothes',
+      'Share combs',
+      'Avoid washing skin'
+    ],
+    correctIndex: 0,
+    explanation: 'Ringworm is a fungal infection spread via contact; hygiene and avoiding shared items are essential for prevention.'
+  },
+  {
+    id: 'pb8-84',
+    text: 'Which of the following is a symptom of vitamin B1 deficiency?',
+    options: [
+      'Fatigue and nerve problems',
+      'Frequent urination',
+      'Skin rash',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'Vitamin B1 (thiamine) deficiency leads to beriberi, causing fatigue, neuropathy, and cardiac issues.'
+  },
+  {
+    id: 'pb8-85',
+    text: 'Which of the following is the best way to manage minor bleeding?',
+    options: [
+      'Apply pressure with clean cloth',
+      'Rub wound vigorously',
+      'Leave wound open',
+      'Apply powder'
+    ],
+    correctIndex: 0,
+    explanation: 'Direct pressure helps stop bleeding and reduces risk of infection when applied with a clean cloth.'
+  },
+  {
+    id: 'pb8-86',
+    text: 'Which of the following is a symptom of vitamin K deficiency?',
+    options: [
+      'Easy bruising and bleeding',
+      'Frequent urination',
+      'Skin rash',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'Vitamin K is essential for blood clotting; deficiency leads to prolonged bleeding and easy bruising.'
+  },
+  {
+    id: 'pb8-87',
+    text: 'Which of the following is the best way to prevent spread of hepatitis A?',
+    options: [
+      'Wash hands and avoid contaminated food/water',
+      'Share utensils',
+      'Avoid bathing',
+      'Touch face frequently'
+    ],
+    correctIndex: 0,
+    explanation: 'Hepatitis A spreads via fecal-oral route; hygiene and safe food practices are key to prevention.'
+  },
+  {
+    id: 'pb8-88',
+    text: 'Which of the following is a symptom of dehydration in hot weather?',
+    options: [
+      'Dry mouth and dizziness',
+      'Frequent urination',
+      'Skin rash',
+      'Joint pain'
+    ],
+    correctIndex: 0,
+    explanation: 'Heat-related dehydration causes symptoms like dry mouth, dizziness, and fatigue due to fluid loss.'
+  },
+  {
+    id: 'pb8-89',
+    text: 'Which of the following is the best way to prevent spread of cold?',
+    options: [
+      'Cover mouth while sneezing and wash hands',
+      'Share towels',
+      'Avoid bathing',
+      'Touch nose frequently'
+    ],
+    correctIndex: 0,
+    explanation: 'Respiratory viruses spread via droplets; covering mouth and hand hygiene reduce transmission.'
+  },
+  {
+    id: 'pb8-90',
+    text: 'Which of the following is a symptom of vitamin E deficiency?',
+    options: [
+      'Muscle weakness and vision problems',
+      'Frequent urination',
+      'Skin rash',
+      'Dry cough'
+    ],
+    correctIndex: 0,
+    explanation: 'Vitamin E deficiency affects nerve and muscle function, leading to weakness and visual disturbances.'
+  },
+  {
+    id: 'pb8-91',
+    text: 'Which of the following is the best way to manage insect bites?',
+    options: [
+      'Clean area and apply cold compress',
+      'Scratch vigorously',
+      'Apply toothpaste',
+      'Ignore swelling'
+    },
+    "correct_option": "A",
+    "rationale": "Cleaning and cooling reduce inflammation and prevent infection; scratching worsens irritation."
+  },
+  {
+    "question_number": 92,
+    "question": "Which of the following is a symptom of vitamin B6 deficiency?",
+    "options": {
+      "A": "Irritability and cracked lips",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Vitamin B6 deficiency affects neurotransmitter synthesis, leading to irritability, convulsions, and developmental delays in children."
+  },
+  {
+    "question_number": 93,
+    "question": "Which of the following is the best way to prevent spread of skin infections?",
+    "options": {
+      "A": "Avoid sharing personal items and maintain hygiene",
+      "B": "Share towels",
+      "C": "Wear damp clothes",
+      "D": "Avoid bathing"
+    },
+    "correct_option": "A",
+    "rationale": "Skin infections spread via contact; hygiene and avoiding shared items reduce risk."
+  },
+  {
+    "question_number": 94,
+    "question": "Which of the following is a symptom of vitamin B3 (niacin) deficiency?",
+    "options": {
+      "A": "Diarrhea, dermatitis, and dementia",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Niacin deficiency leads to pellagra, characterized by the '3 Ds': diarrhea, dermatitis, and dementia."
+  },
+  {
+    "question_number": 95,
+    "question": "Which of the following is the best way to prevent spread of foodborne illnesses?",
+    "options": {
+      "A": "Wash hands and cook food thoroughly",
+      "B": "Eat stale food",
+      "C": "Avoid refrigeration",
+      "D": "Share utensils"
+    },
+    "correct_option": "A",
+    "rationale": "Proper hygiene and cooking kill pathogens and prevent foodborne diseases like salmonella and E. coli."
+  },
+  {
+    "question_number": 96,
+    "question": "Which of the following is a symptom of dehydration in athletes?",
+    "options": {
+      "A": "Muscle cramps and fatigue",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Joint pain"
+    },
+    "correct_option": "A",
+    "rationale": "Athletes lose fluids through sweat; dehydration leads to cramps, fatigue, and decreased performance."
+  },
+  {
+    "question_number": 97,
+    "question": "Which of the following is the best way to manage a bee sting?",
+    "options": {
+      "A": "Remove stinger and apply cold compress",
+      "B": "Rub area vigorously",
+      "C": "Apply toothpaste",
+      "D": "Ignore swelling"
+    },
+    "correct_option": "A",
+    "rationale": "Removing the stinger and applying cold reduces inflammation and pain; rubbing may worsen the reaction."
+  },
+  {
+    "question_number": 98,
+    "question": "Which of the following is a symptom of vitamin B2 (riboflavin) deficiency?",
+    "options": {
+      "A": "Cracked lips and sore throat",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Riboflavin deficiency causes cheilitis, glossitis, and sore throat due to impaired mucosal integrity."
+  },
+  {
+    "question_number": 99,
+    "question": "Which of the following is the best way to prevent spread of typhoid?",
+    "options": {
+      "A": "Drink clean water and maintain hygiene",
+      "B": "Share food and utensils",
+      "C": "Avoid bathing",
+      "D": "Eat uncovered street food"
+    },
+    "correct_option": "A",
+    "rationale": "Typhoid spreads via contaminated water; hygiene and safe water are essential for prevention."
+  },
+  {
+    "question_number": 100,
+    "question": "Which of the following is a symptom of vitamin B5 (pantothenic acid) deficiency?",
+    "options": {
+      "A": "Fatigue and numbness",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Pantothenic acid deficiency may cause fatigue, numbness, and burning sensations due to its role in energy metabolism."
+  },
+  {
+    "question_number": 101,
+    "question": "Which of the following is the best way to prevent spread of cholera?",
+    "options": {
+      "A": "Use clean drinking water and proper sanitation",
+      "B": "Share food",
+      "C": "Avoid bathing",
+      "D": "Eat raw seafood"
+    },
+    "correct_option": "A",
+    "rationale": "Cholera spreads via contaminated water; clean water and sanitation are critical to prevent outbreaks."
+  },
+  {
+    "question_number": 102,
+    "question": "Which of the following is a symptom of vitamin B7 (biotin) deficiency?",
+    "options": {
+      "A": "Hair loss and skin inflammation",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Biotin deficiency affects skin and hair health, leading to alopecia, dermatitis, and neurological symptoms."
+  },
+  {
+    "question_number": 103,
+    "question": "Which of the following is the best way to manage heat exhaustion?",
+    "options": {
+      "A": "Move to shade and hydrate",
+      "B": "Continue physical activity",
+      "C": "Avoid drinking water",
+      "D": "Wear heavy clothes"
+    },
+    "correct_option": "A",
+    "rationale": "Heat exhaustion requires cooling and rehydration to prevent progression to heat stroke."
+  },
+  {
+    "question_number": 104,
+    "question": "Which of the following is a symptom of vitamin B9 (folic acid) deficiency?",
+    "options": {
+      "A": "Fatigue and poor concentration",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Folic acid deficiency impairs DNA synthesis, leading to anemia, fatigue, and cognitive issues."
+  },
+  {
+    "question_number": 105,
+    "question": "Which of the following is the best way to prevent spread of influenza?",
+    "options": {
+      "A": "Vaccination and hand hygiene",
+      "B": "Share towels",
+      "C": "Avoid bathing",
+      "D": "Touch face frequently"
+    },
+    "correct_option": "A",
+    "rationale": "Influenza spreads via droplets; vaccination and hygiene reduce transmission and severity."
+  },
+  {
+    "question_number": 106,
+    "question": "Which of the following is a symptom of vitamin B12 deficiency in elderly?",
+    "options": {
+      "A": "Memory loss and numbness",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Vitamin B12 deficiency in elderly can cause neurological symptoms like memory loss, paresthesia, and gait disturbances."
+  },
+  {
+    "question_number": 107,
+    "question": "Which of the following is the best way to prevent spread of tuberculosis?",
+    "options": {
+      "A": "Cover mouth while coughing and early diagnosis",
+      "B": "Share bedding",
+      "C": "Avoid bathing",
+      "D": "Touch face frequently"
+    },
+    "correct_option": "A",
+    "rationale": "TB spreads via airborne droplets; covering mouth and early treatment reduce transmission risk."
+  },
+  {
+    "question_number": 108,
+    "question": "Which of the following is a symptom of vitamin B6 deficiency in children?",
+    "options": {
+      "A": "Irritability and seizures",
+      "B": "Frequent urination",
+      "C": "Skin rash",
+      "D": "Dry cough"
+    },
+    "correct_option": "A",
+    "rationale": "Vitamin B6 deficiency affects neurotransmitter synthesis, leading to irritability, convulsions, and developmental delays in children."
   }
-];
+]
+]
+]
+]
+]
