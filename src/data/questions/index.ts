@@ -14,6 +14,7 @@ import { questions as gastroQuestIqn } from './gastro-quest-iqn';
 import { questions as partBTest8 } from './part-b-test-8';
 import { questions as partBTest9 } from './part-b-test-9';
 import { questions as partBTest10 } from './part-b-test-10';
+import { questions as partBTest11 } from './part-b-test-11';
 import type { Question } from '@/lib/types';
 
 export const allQuestions: Question[] = [
@@ -32,4 +33,5 @@ export const allQuestions: Question[] = [
   ...partBTest8,
   ...partBTest9,
   ...partBTest10,
+  ...partBTest11,
 ];
