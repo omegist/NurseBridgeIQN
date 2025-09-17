@@ -138,7 +138,7 @@ export const questions: Question[] = [
     id: 'pb11-12',
     text: 'A patient with rheumatoid arthritis asks about the disease. What is the correct explanation?',
     options: [
-      'Autoimmune response to a trigger',
+      'An autoimmune response to a trigger',
       'Medications',
       'Infections',
       'Exercise and diet'
@@ -505,5 +505,185 @@ export const questions: Question[] = [
     ],
     correctIndex: 1,
     explanation: 'Informed consent from parents is essential when using off-label medications in children.'
+  },
+  {
+    id: 'pb11-43',
+    text: 'A nurse monitors a patient post-hip replacement who complains of upper thigh temperature and loin pain. What might this indicate?',
+    options: [
+      'Urine infection',
+      'Common adverse reaction',
+      'Serious adverse reaction',
+      'Not connected'
+    ],
+    correctIndex: 2,
+    explanation: 'These symptoms may indicate a serious complication such as infection or thromboembolism.'
+  },
+  {
+    id: 'pb11-44',
+    text: 'Mrs. Smith is receiving a blood transfusion post-hip replacement and complains of upper thigh temperature and loin pain. What might this indicate?',
+    options: [
+      'Urine infection',
+      'Common adverse reaction',
+      'Serious adverse reaction',
+      'Not connected'
+    ],
+    correctIndex: 2,
+    explanation: 'Pain and fever during transfusion may signal a transfusion reaction or systemic complication.'
+  },
+  {
+    id: 'pb11-45',
+    text: 'A clinician needs to examine a patient after spine surgery. What method should be used to turn them?',
+    options: [
+      'Log rolling on bed',
+      'Slide method to the side',
+      'Hoist to the bed',
+      'Advise the patient to sit at the end of the bed'
+    ],
+    correctIndex: 0,
+    explanation: 'Log rolling maintains spinal alignment and prevents injury during movement.'
+  },
+  {
+    id: 'pb11-46',
+    text: 'Which of the following medications causes diarrhea as a side effect?',
+    options: [
+      'Buscopan',
+      'Co-amoxiclav',
+      'Bismuth subsalicylate',
+      'Ramipril'
+    ],
+    correctIndex: 1,
+    explanation: 'Co-amoxiclav can disrupt gut flora and cause gastrointestinal upset including diarrhea.'
+  },
+  {
+    id: 'pb11-47',
+    text: 'Management of moderate malnutrition in children?',
+    options: [
+      'Supplementary nutrition',
+      'Immediate hospitalization',
+      'Weekly assessment',
+      'Document intake for three days'
+    ],
+    correctIndex: 0,
+    explanation: 'Moderate malnutrition is typically managed with supplementary feeding and monitoring.'
+  },
+  {
+    id: 'pb11-48',
+    text: 'You are asked to break bad news to a patient but feel uncomfortable. What should you do?',
+    options: [
+      'Ask a senior colleague to assist',
+      'Refuse to do it',
+      'Ask doctor to instruct another nurse',
+      'Do it even though you are hesitating'
+    ],
+    correctIndex: 0,
+    explanation: 'Seeking support ensures the message is delivered compassionately and professionally.'
+  },
+  {
+    id: 'pb11-49',
+    text: 'A patient wants to quit illegal drugs. What should you do?',
+    options: [
+      'Report to police',
+      'Refer to alcohol liaison',
+      'Refer to substance misuse group',
+      'Inform family and friends'
+    ],
+    correctIndex: 2,
+    explanation: 'Referral to a substance misuse team provides specialized support and treatment options.'
+  },
+  {
+    id: 'pb11-50',
+    text: 'You are feeding a patient via gastrostomy and notice redness and swelling. What should you do?',
+    options: [
+      'Continue feeding',
+      'Cover with dressing',
+      'Clean site and swab',
+      'Inform doctor'
+    ],
+    correctIndex: 3,
+    explanation: 'Redness and swelling may indicate infection; medical evaluation is necessary.'
+  },
+  {
+    id: 'pb11-51',
+    text: 'Appendicitis in adolescence, location of the pain can be from?',
+    options: [
+      'Middle of the abdomen radiating to right iliac',
+      'Pain around the middle of the abdomen',
+      'Pain in left iliac fossa radiating towards umbilicus',
+      'Pain in the epigastric region'
+    ],
+    correctIndex: 0,
+    explanation: 'Appendicitis often begins with central abdominal pain that shifts to the right iliac fossa.'
+  },
+  {
+    id: 'pb11-52',
+    text: 'How do you assess pressure sores in a black-skinned person?',
+    options: [
+      'No need unless there is a wound',
+      'Check for redness and loss of area on bony prominence',
+      'Check for blanching and treat bony prominence',
+      'Check for warmth and swelling'
+    ],
+    correctIndex: 1,
+    explanation: 'Redness may not be visible; assessment includes texture, temperature, and tissue integrity.'
+  },
+  {
+    id: 'pb11-53',
+    text: 'What are protected characteristics?',
+    options: [
+      'Protection of working methods',
+      'Protection against criminal acts',
+      'Protection against social care',
+      'Protection against discrimination'
+    ],
+    correctIndex: 3,
+    explanation: 'Protected characteristics are legally safeguarded against discrimination under equality laws.'
+  },
+  {
+    id: 'pb11-54',
+    text: 'Which does NOT apply to valuing dignity and respect in nursing care?',
+    options: [
+      'Respect aspirations and priorities',
+      'Find time for patients and colleagues',
+      'Be honest and open about limitations',
+      'Avoid discussing limitations with patients'
+    ],
+    correctIndex: 3,
+    explanation: 'Transparency and respect are key to maintaining dignity in care.'
+  },
+  {
+    id: 'pb11-55',
+    text: 'What are the principles of communicating with a patient with delirium?',
+    options: [
+      'Use short statements and open questions in a quiet environment',
+      'Use open questions focused on recent behavior',
+      'Communicate only through family',
+      'Use short statements and closed questions in a quiet, familiar environment'
+    ],
+    correctIndex: 3,
+    explanation: 'Simple, direct communication in a calm setting helps reduce confusion and anxiety.'
+  },
+  {
+    id: 'pb11-56',
+    text: 'Which statement shows understanding of intrapersonal communication?',
+    options: [
+      'It occurs within a person',
+      'It helps communicate with other nurses',
+      'It is the same as interpersonal communication',
+      'It should be avoided'
+    ],
+    correctIndex: 0,
+    explanation: 'Intrapersonal communication is internal dialogue that influences decision-making and reflection.'
+  },
+  {
+    id: 'pb11-57',
+    text: 'Which therapeutic communication technique is used in: ‘I’ll stay with you until your husband arrives’?',
+    options: [
+      'Formulating a plan of action',
+      'Offering self',
+      'Encouraging comparison',
+      'Exploring'
+    ],
+    correctIndex: 1,
+    explanation: 'Offering self shows presence and emotional support to the patient.'
   }
 ];
