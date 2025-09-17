@@ -508,7 +508,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb10-43',
-    text: "What action does a nurse take if they receive a social media request from a patient?",
+    text: 'What action does a nurse take if they receive a social media request from a patient?',
     options: [
       'Accept the request once the patient has been discharged',
       'Refuse politely and say that it is against the medical code to accept',
@@ -551,7 +551,7 @@ export const questions: Question[] = [
       'Personal strengths to aid recovery and empowerment',
       'Personal strengths to aid recovery and empowerment'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation: 'These approaches build on individual capabilities to support recovery and self-efficacy.'
   },
   {
@@ -612,7 +612,7 @@ export const questions: Question[] = [
       'Undertake the procedure'
     ],
     correctIndex: 0,
-    explanation: 'Nurses must assess their competence and seek support to ensure safe care.'
+    explanation: 'Nurses must assess their competence and seek support to ensure safe practice.'
   },
   {
     id: 'pb10-52',
@@ -855,40 +855,447 @@ export const questions: Question[] = [
     explanation: 'Respiratory depression is a key sign of magnesium toxicity and requires immediate action.'
   },
   {
-    id: 'pb10-72',
-    text: 'Which statement about erythromycin eye ointment in newborns indicates a need for further teaching?',
-    options: [
-      'Instill into each conjunctival sac',
-      'Administer within an hour after delivery',
-      'Flush the eyes after instilling',
-      'Finish the newborn’s eyes after instilling'
-    ],
-    correctIndex: 2,
-    explanation: 'Flushing the eyes removes the medication and defeats its prophylactic purpose.'
+    "question_number": 72,
+    "question": "Which statement about erythromycin eye ointment in newborns indicates a need for further teaching?",
+    "options": {
+      "a": "Instill into each conjunctival sac",
+      "b": "Administer within an hour after delivery",
+      "c": "Flush the eyes after instilling",
+      "d": "Finish the newborn’s eyes after instilling"
+    },
+    "answer": "c",
+    "rationale": "Flushing the eyes removes the medication and defeats its prophylactic purpose."
   },
   {
-    id: 'pb10-73',
-    text: 'What is the purpose of Rho(D) immune globulin (RhoGAM) given after delivery?',
-    options: [
-      'Prevent pernicious anemia',
-      'Prevent German measles',
-      'Prevent Rh incompatibility',
-      'Prevent HIV transmission'
-    ],
-    correctIndex: 2,
-    explanation: 'RhoGAM prevents maternal sensitization to Rh-positive fetal blood cells.'
+    "question_number": 73,
+    "question": "What is the purpose of Rho(D) immune globulin (RhoGAM) given after delivery?",
+    "options": {
+      "a": "Prevent pernicious anemia",
+      "b": "Prevent German measles",
+      "c": "Prevent Rh incompatibility",
+      "d": "Prevent HIV transmission"
+    },
+    "answer": "c",
+    "rationale": "RhoGAM prevents maternal sensitization to Rh-positive fetal blood cells."
   },
   {
-    id: 'pb10-74',
-    text: 'What is the nurse’s primary action if a bedridden patient develops a bedsore?',
-    options: [
-      'Apply antibiotic ointment',
-      'Cover with gauze',
-      'Assess and stage the wound',
-      'Turn and reposition the patient'
-    ],
-    correctIndex: 3,
-    explanation: 'Repositioning prevents further pressure damage and promotes healing.'
+    "question_number": 74,
+    "question": "What is the nurse’s primary action if a bedridden patient develops a bedsore?",
+    "options": {
+      "a": "Apply antibiotic ointment",
+      "b": "Cover with gauze",
+      "c": "Assess and stage the wound",
+      "d": "Turn and reposition the patient"
+    },
+    "answer": "d",
+    "rationale": "Repositioning prevents further pressure damage and promotes healing."
+  },
+  {
+    "question_number": 75,
+    "question": "A pregnant woman receiving opioid analgesics during labor develops respiratory depression. Which medication should be ready?",
+    "options": {
+      "a": "Oxycodone",
+      "b": "Naloxone",
+      "c": "Meperidine hydrochloride",
+      "d": "Morphine sulfate"
+    },
+    "answer": "b",
+    "rationale": "Naloxone is an opioid antagonist used to reverse respiratory depression caused by opioids."
+  },
+  {
+    "question_number": 76,
+    "question": "Before administering methylergonovine (Methergine) for postpartum bleeding, which condition requires physician notification?",
+    "options": {
+      "a": "Hypotension",
+      "b": "Uterine atony",
+      "c": "Ischemic heart disease",
+      "d": "Acute gastroenteritis"
+    },
+    "answer": "c",
+    "rationale": "Methergine causes vasoconstriction and is contraindicated in ischemic heart disease."
+  },
+  {
+    "question_number": 77,
+    "question": "What is the purpose of administering vitamin K to a newborn?",
+    "options": {
+      "a": "Protect against cold stress",
+      "b": "Prevent hyperbilirubinemia",
+      "c": "Protect against pneumonia and sepsis",
+      "d": "Provide active immunity"
+    },
+    "answer": "c",
+    "rationale": "Vitamin K prevents bleeding disorders by promoting clotting factor synthesis in newborns."
+  },
+  {
+    "question_number": 78,
+    "question": "When should a nurse terminate oxytocin infusion during labor?",
+    "options": {
+      "a": "Nausea",
+      "b": "Fatigue",
+      "c": "Early decelerations of fetal heart rate",
+      "d": "Uterine hyperstimulation"
+    },
+    "answer": "d",
+    "rationale": "Uterine hyperstimulation can compromise fetal oxygenation and requires immediate intervention."
+  },
+  {
+    "question_number": 79,
+    "question": "Which medication is expected if preterm labor is delayed for 2 days?",
+    "options": {
+      "a": "Penicillin",
+      "b": "Betamethasone",
+      "c": "Butorphanol tartrate",
+      "d": "Hydralazine"
+    },
+    "answer": "b",
+    "rationale": "Betamethasone promotes fetal lung maturity if preterm delivery is anticipated."
+  },
+  {
+    "question_number": 80,
+    "question": "Which lab test must be monitored for pregnant patients receiving dexamethasone?",
+    "options": {
+      "a": "Random blood sugar",
+      "b": "Serum calcium",
+      "c": "Red blood cell count",
+      "d": "Uric acid"
+    },
+    "answer": "a",
+    "rationale": "Steroids like dexamethasone can elevate blood glucose levels, requiring monitoring."
+  },
+  {
+    "question_number": 81,
+    "question": "What is the priority assessment before administering methylergonovine (Methergine)?",
+    "options": {
+      "a": "Blood pressure",
+      "b": "Urine output",
+      "c": "Vaginal bleeding",
+      "d": "Lochia discharge"
+    },
+    "answer": "a",
+    "rationale": "Methergine can raise blood pressure; it’s contraindicated in hypertensive patients."
+  },
+  {
+    "question_number": 82,
+    "question": "What is the correct route for administering lung surfactant to a newborn?",
+    "options": {
+      "a": "Endotracheal",
+      "b": "Intracardiac",
+      "c": "Subcutaneous",
+      "d": "Intravenous"
+    },
+    "answer": "a",
+    "rationale": "Surfactant is administered via endotracheal tube to reach the alveoli directly."
+  },
+  {
+    "question_number": 83,
+    "question": "Which statement about the Rubella vaccine is NOT true?",
+    "options": {
+      "a": "Redness and swelling are adverse reactions",
+      "b": "It ensures immunity to prevent miscarriage",
+      "c": "It immunizes against German measles",
+      "d": "It is contraindicated in egg allergy"
+    },
+    "answer": "b",
+    "rationale": "Rubella vaccine does not guarantee immunity sufficient to prevent miscarriage; timing and antibody levels matter."
+  },
+  {
+    "question_number": 84,
+    "question": "Which nursing intervention must be questioned when administering Cervidil?",
+    "options": {
+      "a": "Place the client on void bed before administration",
+      "b": "Place the client in a supine position after administration",
+      "c": "Monitor maternal vital signs",
+      "d": "Administer the medication before administration"
+    },
+    "answer": "b",
+    "rationale": "Supine position may reduce uterine perfusion; lateral or semi-Fowler’s is preferred."
+  },
+  {
+    "question_number": 85,
+    "question": "What is the appropriate nursing intervention for hypertonic contractions during oxygen therapy?",
+    "options": {
+      "a": "Leave the client to ask for help",
+      "b": "Administer oxygen at 8–10 L/min",
+      "c": "Stop the oxytocin infusion",
+      "d": "Place the client in supine position"
+    },
+    "answer": "c",
+    "rationale": "Stopping oxytocin reduces uterine activity and prevents fetal distress."
+  },
+  {
+    "question_number": 86,
+    "question": "Which client is at greatest risk for digitalis toxicity?",
+    "options": {
+      "a": "25-year-old with congenital heart disease",
+      "b": "50-year-old with CHF",
+      "c": "60-year-old post-MI",
+      "d": "80-year-old with CHF"
+    },
+    "answer": "d",
+    "rationale": "Elderly clients have reduced renal clearance, increasing risk of digoxin toxicity."
+  },
+  {
+    "question_number": 87,
+    "question": "Which is a contraindication for digoxin administration?",
+    "options": {
+      "a": "Blood pressure of 140/90",
+      "b": "Heart rate above 80",
+      "c": "Heart rate below 60",
+      "d": "Respiratory rate above 20"
+    },
+    "answer": "c",
+    "rationale": "Bradycardia is a sign of digoxin toxicity; hold the dose if HR < 60 bpm."
+  },
+  {
+    "question_number": 88,
+    "question": "What does an inotropic medication do?",
+    "options": {
+      "a": "Decrease afterload",
+      "b": "Increase heart rate",
+      "c": "Increase contractility",
+      "d": "Treat CHF"
+    },
+    "answer": "c",
+    "rationale": "Inotropic drugs enhance myocardial contractility, improving cardiac output."
+  },
+  {
+    "question_number": 89,
+    "question": "What is the most appropriate action before administering digoxin?",
+    "options": {
+      "a": "Monitor potassium level",
+      "b": "Assess blood pressure",
+      "c": "Evaluate urinary output",
+      "d": "Avoid giving with thiazide diuretic"
+    },
+    "answer": "a",
+    "rationale": "Hypokalemia increases digoxin toxicity risk; potassium must be checked."
+  },
+  {
+    "question_number": 90,
+    "question": "What is the therapeutic drug level for digoxin?",
+    "options": {
+      "a": "0.1–2.0 ng/mg",
+      "b": "0.5–1.0 ng/mg",
+      "c": "1.0–5 ng/mg",
+      "d": "0.5–2.0 ng/mg"
+    },
+    "answer": "d",
+    "rationale": "Therapeutic range for digoxin is 0.5–2.0 ng/mL; levels above this may be toxic."
+  },
+  {
+    "question_number": 91,
+    "question": "Blurred vision or halos are signs of:",
+    "options": {
+      "a": "Subtherapeutic digoxin levels",
+      "b": "Digoxin toxicity",
+      "c": "Unrelated to digoxin",
+      "d": "Corneal side effects"
+    },
+    "answer": "b",
+    "rationale": "Visual disturbances are classic signs of digoxin toxicity."
+  },
+  {
+    "question_number": 92,
+    "question": "What is the indication of vaccination?",
+    "options": {
+      "a": "To prevent spread of infectious diseases",
+      "b": "Causes autism",
+      "c": "Weakens the immune system",
+      "d": "Is unnecessary if you are healthy"
+    },
+    "answer": "a",
+    "rationale": "Vaccination is a preventive measure that helps protect individuals and communities from infectious diseases by stimulating immunity."
+  },
+  {
+    "question_number": 93,
+    "question": "What is the nurse's action if a parent refuses vaccination for a 12-year-old child?",
+    "options": {
+      "a": "Document the refusal and inform the health authorities",
+      "b": "Vaccinate the child without parental consent",
+      "c": "Ignore the situation",
+      "d": "Give vitamins instead"
+    },
+    "answer": "a",
+    "rationale": "Refusal must be documented and reported to ensure public health protocols are followed."
+  },
+  {
+    "question_number": 94,
+    "question": "What are the signs and symptoms of CVA (stroke)?",
+    "options": {
+      "a": "Sudden headache, weakness on one side, speech difficulties",
+      "b": "Gradual onset of memory loss, weight gain",
+      "c": "Chronic cough, weight loss, night sweats",
+      "d": "Sudden onset of chest pain and shortness of breath"
+    },
+    "answer": "a",
+    "rationale": "CVA presents with sudden neurological deficits such as weakness, speech issues, and headache."
+  },
+  {
+    "question_number": 95,
+    "question": "What is a Grand Mal seizure?",
+    "options": {
+      "a": "Partial seizure",
+      "b": "Absence seizure",
+      "c": "Generalized tonic-clonic seizure",
+      "d": "Myoclonic seizure"
+    },
+    "answer": "c",
+    "rationale": "Grand Mal seizures involve full-body convulsions and loss of consciousness, typical of tonic-clonic type."
+  },
+  {
+    "question_number": 96,
+    "question": "What is the indication of vitamin D in older age?",
+    "options": {
+      "a": "Essential for bone health and immune function",
+      "b": "Increased risk of heart disease",
+      "c": "Causes skin cancer",
+      "d": "Is not necessary"
+    },
+    "answer": "a",
+    "rationale": "Vitamin D supports calcium absorption and immune regulation, especially important in aging populations."
+  },
+  {
+    "question_number": 97,
+    "question": "Which organ is responsible for temperature control?",
+    "options": {
+      "a": "Kidney",
+      "b": "Cerebrum",
+      "c": "Hypothalamus",
+      "d": "Heart"
+    },
+    "answer": "c",
+    "rationale": "The hypothalamus regulates body temperature through feedback mechanisms."
+  },
+  {
+    "question_number": 98,
+    "question": "Polyuria in type 1 diabetes indicates:",
+    "options": {
+      "a": "Excessive protein intake",
+      "b": "Low blood sugar levels",
+      "c": "High blood sugar levels",
+      "d": "Dehydration"
+    },
+    "answer": "c",
+    "rationale": "High glucose levels cause osmotic diuresis, leading to excessive urination."
+  },
+  {
+    "question_number": 99,
+    "question": "What are the symptoms of type 1 diabetes?",
+    "options": {
+      "a": "Increased thirst, frequent urination, weight loss",
+      "b": "Persistent cough, weight gain, joint pain",
+      "c": "Hair loss, dry skin, fatigue",
+      "d": "Night sweats, anemia, enlarged spleen"
+    },
+    "answer": "a",
+    "rationale": "Classic symptoms of type 1 diabetes include polydipsia, polyuria, and unexplained weight loss."
+  },
+  {
+    "question_number": 100,
+    "question": "What are common side effects of amiodarone?",
+    "options": {
+      "a": "Hypercalcemia, hypertension, fall risk",
+      "b": "Bradycardia, photosensitivity, pulmonary toxicity",
+      "c": "Tachycardia, hyperkalemia, muscle weakness",
+      "d": "Hypoglycemia, hypertension, rashes"
+    },
+    "answer": "b",
+    "rationale": "Amiodarone can cause serious side effects including slow heart rate, skin sensitivity to light, and lung damage."
+  },
+  {
+    "question_number": 101,
+    "question": "What is the purpose of hand hygiene before procedures?",
+    "options": {
+      "a": "To avoid wasting time",
+      "b": "To minimize the spread of infection",
+      "c": "To keep hands moisturized",
+      "d": "To follow hospital rules only"
+    },
+    "answer": "b",
+    "rationale": "Hand hygiene is the most effective way to prevent healthcare-associated infections."
+  },
+  {
+    "question_number": 102,
+    "question": "Which of the following is best practice for colostomy care?",
+    "options": {
+      "a": "Change the bag once a week",
+      "b": "Avoid cleaning around the stoma",
+      "c": "Check for skin irritation and clean around the stoma regularly",
+      "d": "Ignore any signs of infection"
+    },
+    "answer": "c",
+    "rationale": "Regular cleaning and monitoring prevent skin breakdown and infection around the stoma."
+  },
+  {
+    "question_number": 103,
+    "question": "Which of the following is included in neurovascular assessment?",
+    "options": {
+      "a": "Checking respiratory rate and oxygen saturation",
+      "b": "Assessing skin color, temperature, pulse, and sensation",
+      "c": "Measuring blood pressure and heart rate",
+      "d": "Checking signs of dehydration"
+    },
+    "answer": "b",
+    "rationale": "Neurovascular checks assess circulation and nerve function in extremities."
+  },
+  {
+    "question_number": 104,
+    "question": "What is pneumonia?",
+    "options": {
+      "a": "Inflammation of the liver",
+      "b": "Infection of lungs causing inflammation and fluid buildup",
+      "c": "Chronic disease of joints",
+      "d": "Bacterial infection of the throat"
+    },
+    "answer": "b",
+    "rationale": "Pneumonia is a lung infection that leads to inflammation and fluid accumulation in alveoli."
+  },
+  {
+    "question_number": 105,
+    "question": "What are the symptoms of heart failure?",
+    "options": {
+      "a": "Frequent headaches and blurred vision",
+      "b": "Shortness of breath, swollen legs, fatigue",
+      "c": "Increased appetite and weight gain",
+      "d": "High fever and chills"
+    },
+    "answer": "b",
+    "rationale": "Heart failure leads to fluid retention and poor perfusion, causing dyspnea and fatigue."
+  },
+  {
+    "question_number": 106,
+    "question": "What is the immediate action after a needle stick injury?",
+    "options": {
+      "a": "Immediately stop whatever you are doing",
+      "b": "Clean the wound with soap and water",
+      "c": "Ignore it and continue working",
+      "d": "Apply a band-aid and continue working"
+    },
+    "answer": "b",
+    "rationale": "Immediate washing reduces risk of infection; further reporting and testing follow."
+  },
+  {
+    "question_number": 107,
+    "question": "What is the appearance of skin after radiation therapy?",
+    "options": {
+      "a": "Redness and peeling",
+      "b": "Blue discoloration",
+      "c": "Moles and freckles",
+      "d": "Increased hair growth"
+    },
+    "answer": "a",
+    "rationale": "Radiation can cause erythema and desquamation due to skin cell damage."
+  },
+  {
+    "question_number": 108,
+    "question": "Which of the following is a priority nursing action when caring for a patient with a chest tube?",
+    "options": {
+      "a": "Clamp the tube during transport",
+      "b": "Keep the drainage system above chest level",
+      "c": "Ensure the system is upright and below chest level",
+      "d": "Flush the tube with saline every shift"
+    },
+    "answer": "c",
+    "rationale": "Keeping the drainage system below chest level promotes gravity drainage and prevents backflow into the pleural space."
   }
-];
-
+]
