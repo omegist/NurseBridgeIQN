@@ -676,7 +676,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb11-57',
-    text: 'Which therapeutic communication technique is used in: \'I’ll stay with you until your husband arrives\'?',
+    text: "Which therapeutic communication technique is used in: 'I’ll stay with you until your husband arrives'?",
     options: [
       'Formulating a plan of action',
       'Offering self',
@@ -972,7 +972,7 @@ export const questions: Question[] = [
       'Ask for photo evidence'
     ],
     correctIndex: 0,
-    explanation: 'Respecting autonomy while offering support is key unless there\'s immediate risk or legal obligation.'
+    explanation: "Respecting autonomy while offering support is key unless there's immediate risk or legal obligation."
   },
   {
     id: 'pb11-82',
@@ -1106,4 +1106,4 @@ export const questions: Question[] = [
     correctIndex: 0,
     explanation: 'Alcohol rub is ineffective against C. difficile spores; soap and water are required.'
   }
-I have sent all the questions please add them into the test 11 and also correct the question count and one more thing that I have noticed is that in `src/data/questions/part-b-test-10.ts` file questions from 72 to 108 are not in correct format. Please make it correct too.
+]
