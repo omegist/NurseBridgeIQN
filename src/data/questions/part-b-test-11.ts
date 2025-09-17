@@ -4,12 +4,12 @@ import type { Question } from '@/lib/types';
 export const questions: Question[] = [
   {
     id: 'pb11-1',
-    text: "An analgesic medication has been prescribed for a persistent headache. The prescriber has not signed the chart. What is your response?",
+    text: 'An analgesic medication has been prescribed for a persistent headache. The prescriber has not signed the chart. What is your response?',
     options: [
-      "Double check the analgesic with the nurse manager.",
-      "Contact the prescriber to sign the chart.",
-      "Give the analgesic, sign for it and inform the nurse manager.",
-      "Phone the prescriber to ensure the prescription is correct and then give it."
+      'Double check the analgesic with the nurse manager.',
+      'Contact the prescriber to sign the chart.',
+      'Give the analgesic, sign for it and inform the nurse manager.',
+      'Phone the prescriber to ensure the prescription is correct and then give it.'
     ],
     correctIndex: 1,
     explanation: 'A prescription must be signed by the prescriber before administration to ensure legal and safe practice.'
@@ -138,7 +138,7 @@ export const questions: Question[] = [
     id: 'pb11-12',
     text: 'A patient with rheumatoid arthritis asks about the disease. What is the correct explanation?',
     options: [
-      'An autoimmune response to a trigger',
+      'Autoimmune response to a trigger',
       'Medications',
       'Infections',
       'Exercise and diet'
@@ -676,7 +676,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb11-57',
-    text: "Which therapeutic communication technique is used in: 'I’ll stay with you until your husband arrives'?",
+    text: 'Which therapeutic communication technique is used in: \'I’ll stay with you until your husband arrives\'?',
     options: [
       'Formulating a plan of action',
       'Offering self',
@@ -688,48 +688,48 @@ export const questions: Question[] = [
   },
   {
     id: 'pb11-58',
-    text: 'A client expresses concern regarding the confidentiality of her medical information. How does the nurse maintain confidentiality?',
+    text: "A client expresses concern regarding the confidentiality of her medical information. How does the nurse maintain confidentiality?",
     options: [
-      'Share information about the client with other clients',
-      'Explain to the client that she has the right to know her medical information',
-      'Provide information only to individuals directly involved in the client’s care and document appropriately',
-      'Share the information with all members of the healthcare team'
+      "Share information about the client with other clients",
+      "Explain to the client that she has the right to know her medical information",
+      "Provide information only to individuals directly involved in the client’s care and document appropriately",
+      "Share the information with all members of the healthcare team"
     ],
     correctIndex: 2,
-    explanation: 'Confidentiality is maintained by limiting access to patient information to those directly involved in care and ensuring proper documentation.'
+    explanation: "Confidentiality is maintained by limiting access to patient information to those directly involved in care and ensuring proper documentation."
   },
   {
     id: 'pb11-59',
     text: "If you were told by a nurse at handover to take 'standard precautions', what would you expect to be doing?",
     options: [
-      'Taking precautions when dealing with high-risk body fluids',
-      'Using PPE in protective isolation',
-      'Using hand hygiene, gloves, aprons, disposing of sharps safely, and maintaining a clean environment',
-      'Asking relatives to wash their hands when visiting'
+      "Taking precautions when dealing with high-risk body fluids",
+      "Using PPE in protective isolation",
+      "Using hand hygiene, gloves, aprons, disposing of sharps safely, and maintaining a clean environment",
+      "Asking relatives to wash their hands when visiting"
     ],
     correctIndex: 2,
-    explanation: 'Standard precautions include universal infection control measures to protect both patients and healthcare workers.'
+    explanation: "Standard precautions include universal infection control measures to protect both patients and healthcare workers."
   },
   {
     id: 'pb11-60',
     text: "A nurse manager is described as focusing only on the 'bottom line' and not quality of care. What is likely true?",
     options: [
-      'The manager is unwilling to listen to staff concerns unless they impact costs',
-      'The manager understands organizational values',
-      'The manager promotes a caring environment',
-      'The manager is looking at the total care picture'
+      "The manager is unwilling to listen to staff concerns unless they impact costs",
+      "The manager understands organizational values",
+      "The manager promotes a caring environment",
+      "The manager is looking at the total care picture"
     ],
     correctIndex: 0,
-    explanation: 'A manager focused solely on cost may neglect staff input and compromise care quality.'
+    explanation: "A manager focused solely on cost may neglect staff input and compromise care quality."
   },
   {
     id: 'pb11-61',
     text: 'What is the initial step in implementing a change in the documentation system?',
     options: [
-      'Identify potential solutions',
-      'Set goals and priorities',
-      'Identify the inefficiency needing improvement',
-      'Plan strategies to implement the change'
+      "Identify potential solutions",
+      "Set goals and priorities",
+      "Identify the inefficiency needing improvement",
+      "Plan strategies to implement the change"
     ],
     correctIndex: 2,
     explanation: 'Recognizing the problem is the first step in any change process to ensure targeted solutions.'
@@ -738,10 +738,10 @@ export const questions: Question[] = [
     id: 'pb11-62',
     text: 'In an emergency department, a doctor asks you to perform cannulation, but you haven’t done it before. What should you do?',
     options: [
-      'Don’t do it and inform the supervisor',
-      'Ask a colleague to do it',
-      'Do it anyway',
-      'Complain to the supervisor about the doctor'
+      "Don’t do it and inform the supervisor",
+      "Ask a colleague to do it",
+      "Do it anyway",
+      "Complain to the supervisor about the doctor"
     ],
     correctIndex: 0,
     explanation: 'Performing a procedure without competence risks patient safety; refusal and reporting are appropriate.'
@@ -750,10 +750,10 @@ export const questions: Question[] = [
     id: 'pb11-63',
     text: 'You notice a lack of PPE supplies in a reverse isolation room. Who do you escalate this to first?',
     options: [
-      'Immediate nurse manager',
-      'Head of department',
-      'Person in charge of supplies',
-      'Infection control team'
+      "Immediate nurse manager",
+      "Head of department",
+      "Person in charge of supplies",
+      "Infection control team"
     ],
     correctIndex: 2,
     explanation: 'The supply officer can immediately address stock issues to maintain infection control standards.'
@@ -762,10 +762,10 @@ export const questions: Question[] = [
     id: 'pb11-64',
     text: 'A head nurse wants all tasks completed by 10 a.m. using a task-oriented model. How should you respond?',
     options: [
-      'Tell other nurses to follow',
-      'Inform the patient about the goal',
-      'Discuss how this may negatively impact patient care outcomes',
-      'Disregard her method and do it your way'
+      "Tell other nurses to follow",
+      "Inform the patient about the goal",
+      "Discuss how this may negatively impact patient care outcomes",
+      "Disregard her method and do it your way"
     ],
     correctIndex: 2,
     explanation: 'Open discussion promotes patient-centered care and addresses concerns about rigid task scheduling.'
@@ -774,10 +774,10 @@ export const questions: Question[] = [
     id: 'pb11-65',
     text: 'An 18-year-old with recurrent UTIs discloses unprotected sex. What is the best nursing response?',
     options: [
-      'Inform the healthcare team to help her',
-      'Inform her parents',
-      'Keep the information confidential',
-      'Report her boyfriend to social services'
+      "Inform the healthcare team to help her",
+      "Inform her parents",
+      "Keep the information confidential",
+      "Report her boyfriend to social services"
     ],
     correctIndex: 0,
     explanation: 'Sharing relevant information with the healthcare team ensures appropriate care while maintaining confidentiality.'
@@ -786,10 +786,10 @@ export const questions: Question[] = [
     id: 'pb11-66',
     text: "What does 'standard precautions' include?",
     options: [
-      'Use PPE only for high-risk fluids',
-      'Wear gloves, apron, and mask for all care',
-      'Ask relatives to wash hands',
-      'Use hand hygiene, PPE when needed, dispose of sharps safely, and maintain cleanliness'
+      "Use PPE only for high-risk fluids",
+      "Wear gloves, apron, and mask for all care",
+      "Ask relatives to wash hands",
+      "Use hand hygiene, PPE when needed, dispose of sharps safely, and maintain cleanliness"
     ],
     correctIndex: 3,
     explanation: 'Standard precautions are universal safety measures applied to all patient care situations.'
@@ -804,7 +804,7 @@ export const questions: Question[] = [
       'Healthcare assistant is solely accountable'
     ],
     correctIndex: 1,
-    explanation: 'The nurse remains professionally accountable for delegated tasks under NMC standards.'
+    explanation: "The nurse remains professionally accountable for delegated tasks under NMC standards."
   },
   {
     id: 'pb11-68',
@@ -900,211 +900,210 @@ export const questions: Question[] = [
       'Avoid foods like broccoli because they can cause erratic function'
     ],
     correctIndex: 3,
-    explanation: "After stoma formation, patients should avoid gas-producing and high-fiber foods like broccoli initially, as they can cause erratic bowel function and discomfort."
+    explanation: 'After stoma formation, patients should avoid gas-producing and high-fiber foods like broccoli initially, as they can cause erratic bowel function and discomfort.'
   },
   {
     id: 'pb11-76',
-    text: "Which behavior will encourage a patient to talk about their concerns?",
+    text: 'Which behavior will encourage a patient to talk about their concerns?',
     options: [
-      "Giving reassurance and telling them not to worry",
-      "Asking the patient about their family and friends",
-      "Tell the patient you are interested in what is concerning them and that you are available to listen",
-      "Tell the patient you are interested in what is concerning them and if they tell you, they will feel better"
+      'Giving reassurance and telling them not to worry',
+      'Asking the patient about their family and friends',
+      'Tell the patient you are interested in what is concerning them and that you are available to listen',
+      'Tell the patient you are interested in what is concerning them and if they tell you, they will feel better'
     ],
     correctIndex: 2,
-    explanation: "Showing genuine interest and availability fosters trust and encourages open communication."
+    explanation: 'Showing genuine interest and availability fosters trust and encourages open communication.'
   },
   {
     id: 'pb11-77',
-    text: "A 17-year-old patient involved in an orthopedic accident refuses meals and bathing. What defense mechanism is this?",
+    text: 'A 17-year-old patient involved in an orthopedic accident refuses meals and bathing. What defense mechanism is this?',
     options: [
-      "Suppression",
-      "Undoing",
-      "Regression",
-      "Repression"
+      'Suppression',
+      'Undoing',
+      'Regression',
+      'Repression'
     ],
     correctIndex: 2,
-    explanation: "Regression involves reverting to earlier behaviors in response to stress or trauma."
+    explanation: 'Regression involves reverting to earlier behaviors in response to stress or trauma.'
   },
   {
     id: 'pb11-78',
-    text: "What does AVPU stand for?",
+    text: 'What does AVPU stand for?',
     options: [
-      "Alert verbalize pain unconscious",
-      "Awake voice pain unconscious",
-      "Alert voice pain unconscious",
-      "Awake verbalization pain unconscious"
+      'Alert verbalize pain unconscious',
+      'Awake voice pain unconscious',
+      'Alert voice pain unconscious',
+      'Awake verbalization pain unconscious'
     ],
     correctIndex: 2,
-    explanation: "AVPU is a rapid assessment tool for consciousness: Alert, responds to Voice, responds to Pain, Unresponsive."
+    explanation: 'AVPU is a rapid assessment tool for consciousness: Alert, responds to Voice, responds to Pain, Unresponsive.'
   },
   {
     id: 'pb11-79',
-    text: "A child appears withdrawn and refuses food during a hospital visit. What should the nurse do?",
+    text: 'A child appears withdrawn and refuses food during a hospital visit. What should the nurse do?',
     options: [
-      "Inform social worker",
-      "Ignore incident",
-      "Discuss with head nurse for intervention",
-      "Do nothing"
+      'Inform social worker',
+      'Ignore incident',
+      'Discuss with head nurse for intervention',
+      'Do nothing'
     ],
     correctIndex: 2,
-    explanation: "Raising concerns with the head nurse ensures appropriate assessment and safeguarding."
+    explanation: 'Raising concerns with the head nurse ensures appropriate assessment and safeguarding.'
   },
   {
     id: 'pb11-80',
-    text: "Two nurses are absent for the next shift. What should the incoming nurse-in-charge do?",
+    text: 'Two nurses are absent for the next shift. What should the incoming nurse-in-charge do?',
     options: [
-      "Encourage present staff to manage",
-      "Inform head nurse to arrange coverage",
-      "Do nothing and wait",
-      "Call absent nurses to report"
+      'Encourage present staff to manage',
+      'Inform head nurse to arrange coverage',
+      'Do nothing and wait',
+      'Call absent nurses to report'
     ],
     correctIndex: 1,
-    explanation: "Escalating to leadership ensures safe staffing and continuity of care."
+    explanation: 'Escalating to leadership ensures safe staffing and continuity of care.'
   },
   {
     id: 'pb11-81',
-    text: "You suspect an adult is being abused but they don’t want to report it. What should you do?",
+    text: 'You suspect an adult is being abused but they don’t want to report it. What should you do?',
     options: [
-      "Respect their decision and support them",
-      "Threaten to inform police",
-      "Report to police",
-      "Ask for photo evidence"
+      'Respect their decision and support them',
+      'Threaten to inform police',
+      'Report to police',
+      'Ask for photo evidence'
     ],
     correctIndex: 0,
-    explanation: "Respecting autonomy while offering support is key unless there's immediate risk or legal obligation."
+    explanation: 'Respecting autonomy while offering support is key unless there\'s immediate risk or legal obligation.'
   },
   {
     id: 'pb11-82',
-    text: "If abuse is happening but not serious enough for police, who should be informed?",
+    text: 'If abuse is happening but not serious enough for police, who should be informed?',
     options: [
-      "Adult safeguarding team",
-      "Manager or Adult Social Care Direct",
-      "No one",
-      "Everyone with caring responsibility"
+      'Adult safeguarding team',
+      'Manager or Adult Social Care Direct',
+      'No one',
+      'Everyone with caring responsibility'
     ],
     correctIndex: 0,
-    explanation: "Safeguarding teams are equipped to assess and respond to non-urgent abuse concerns."
+    explanation: 'Safeguarding teams are equipped to assess and respond to non-urgent abuse concerns.'
   },
   {
     id: 'pb11-83',
-    text: "How do you prevent the spread of Clostridium difficile in isolation?",
+    text: 'How do you prevent the spread of Clostridium difficile in isolation?',
     options: [
-      "Hand hygiene and infection link nurse role",
-      "Encourage PPE and soap-based cleaning",
-      "Provide hygiene education to patient and family",
-      "All of the above"
+      'Hand hygiene and infection link nurse role',
+      'Encourage PPE and soap-based cleaning',
+      'Provide hygiene education to patient and family',
+      'All of the above'
     ],
     correctIndex: 3,
-    explanation: "Comprehensive infection control includes hygiene, PPE, education, and environmental cleaning."
+    explanation: 'Comprehensive infection control includes hygiene, PPE, education, and environmental cleaning.'
   },
   {
     id: 'pb11-84',
-    text: "A nurse struggles with care plans and team members are concerned. What should the nurse do?",
+    text: 'A nurse struggles with care plans and team members are concerned. What should the nurse do?',
     options: [
-      "Confront the team",
-      "Continue care as usual",
-      "Ignore feedback",
-      "Accept criticism and improve skills"
+      'Confront the team',
+      'Continue care as usual',
+      'Ignore feedback',
+      'Accept criticism and improve skills'
     ],
     correctIndex: 3,
-    explanation: "Constructive feedback supports professional growth and improves care quality."
+    explanation: 'Constructive feedback supports professional growth and improves care quality.'
   },
   {
     id: 'pb11-85',
-    text: "How do you know a student nurse is using critical thinking in community health education?",
+    text: 'How do you know a student nurse is using critical thinking in community health education?',
     options: [
-      "Uses visual aids for illiterate adult",
-      "Reports to instructor",
-      "Listens to elderly patient",
-      "Asks questions during discussion"
+      'Uses visual aids for illiterate adult',
+      'Reports to instructor',
+      'Listens to elderly patient',
+      'Asks questions during discussion'
     ],
     correctIndex: 0,
-    explanation: "Adapting teaching methods to patient needs reflects critical thinking and patient-centered care."
+    explanation: 'Adapting teaching methods to patient needs reflects critical thinking and patient-centered care.'
   },
   {
     id: 'pb11-86',
-    text: "What is the primary purpose of the Early Warning Score (EWS)?",
+    text: 'What is the primary purpose of the Early Warning Score (EWS)?',
     options: [
-      "Detect early signs of deterioration",
-      "Provide diagnosis",
-      "Improve communication",
-      "Assess pre-existing conditions"
+      'Detect early signs of deterioration',
+      'Provide diagnosis',
+      'Improve communication',
+      'Assess pre-existing conditions'
     ],
     correctIndex: 0,
-    explanation: "EWS helps identify clinical deterioration early to prompt timely intervention."
+    explanation: 'EWS helps identify clinical deterioration early to prompt timely intervention.'
   },
   {
     id: 'pb11-87',
-    text: "What are the principles of gaining informed consent before surgery?",
+    text: 'What are the principles of gaining informed consent before surgery?',
     options: [
-      "Use medical terms and explain risks",
-      "Provide verbal and written info on surgery day",
-      "Provide info, highlight risks, allow questions",
-      "Provide info and get two signed forms"
+      'Use medical terms and explain risks',
+      'Provide verbal and written info on surgery day',
+      'Provide info, highlight risks, allow questions',
+      'Provide info and get two signed forms'
     ],
     correctIndex: 2,
-    explanation: "Informed consent requires clear communication, understanding, and voluntary agreement."
+    explanation: 'Informed consent requires clear communication, understanding, and voluntary agreement.'
   },
   {
     id: 'pb11-88',
-    text: "You notice a discrepancy in the controlled drug record book. What should you do?",
+    text: 'You notice a discrepancy in the controlled drug record book. What should you do?',
     options: [
-      "Complete incident form and contact pharmacy",
-      "Check safe and record books, then complete incident form",
-      "Check safe, inform nurse in charge, complete incident form",
-      "Check safe, inform pharmacy, complete incident form"
+      'Complete incident form and contact pharmacy',
+      'Check safe and record books, then complete incident form',
+      'Check safe, inform nurse in charge, complete incident form',
+      'Check safe, inform pharmacy, complete incident form'
     ],
     correctIndex: 2,
-    explanation: "Following protocol ensures accountability and safety in handling controlled substances."
+    explanation: 'Following protocol ensures accountability and safety in handling controlled substances.'
   },
   {
     id: 'pb11-89',
-    text: "What legal checks must be done before administering oral morphine?",
+    text: 'What legal checks must be done before administering oral morphine?',
     options: [
-      "Check identity and prescription",
-      "Check dose and expiry date",
-      "Check with another nurse and record in CD book",
-      "Ask patient to prove identity"
+      'Check identity and prescription',
+      'Check dose and expiry date',
+      'Check with another nurse and record in CD book',
+      'Ask patient to prove identity'
     ],
     correctIndex: 2,
-    explanation: "Controlled drugs require dual verification and documentation for legal compliance."
+    explanation: 'Controlled drugs require dual verification and documentation for legal compliance.'
   },
   {
     id: 'pb11-90',
-    text: "What symptoms are expected in an anaphylactic reaction?",
+    text: 'What symptoms are expected in an anaphylactic reaction?',
     options: [
-      "Low BP, fast HR, skin changes",
-      "High BP, fast HR",
-      "Slow HR, skin changes",
-      "Impending doom, itching"
+      'Low BP, fast HR, skin changes',
+      'High BP, fast HR',
+      'Slow HR, skin changes',
+      'Impending doom, itching'
     ],
     correctIndex: 0,
-    explanation: "Anaphylaxis presents with hypotension, tachycardia, and mucocutaneous symptoms."
+    explanation: 'Anaphylaxis presents with hypotension, tachycardia, and mucocutaneous symptoms.'
   },
   {
     id: 'pb11-91',
-    text: "What are key nursing observations for a patient on frequent opioids?",
+    text: 'What are key nursing observations for a patient on frequent opioids?',
     options: [
-      "Respiratory rate, bowel movements, pain/sedation scores",
-      "Blood pressure for addiction",
-      "Lung function and urine output",
-      "Stool chart and pain level"
+      'Respiratory rate, bowel movements, pain/sedation scores',
+      'Blood pressure for addiction',
+      'Lung function and urine output',
+      'Stool chart and pain level'
     ],
     correctIndex: 0,
-    explanation: "Opioids affect respiration, bowel function, and consciousness—these must be monitored."
+    explanation: 'Opioids affect respiration, bowel function, and consciousness—these must be monitored.'
   },
   {
     id: 'pb11-92',
-    text: "What should NOT be done in barrier nursing for Clostridium difficile?",
+    text: 'What should NOT be done in barrier nursing for Clostridium difficile?',
     options: [
-      "Use gloves and alcohol rub",
-      "Use gloves, gown, and soap and water",
-      "Provide personal washcloths",
-      "Single room isolation"
+      'Use gloves and alcohol rub',
+      'Use gloves, gown, and soap and water',
+      'Provide personal washcloths',
+      'Single room isolation'
     ],
     correctIndex: 0,
-    explanation: "Alcohol rub is ineffective against C. difficile spores; soap and water are required."
+    explanation: 'Alcohol rub is ineffective against C. difficile spores; soap and water are required.'
   }
-]
-and make it 92 questions now in total for test 11
+I have sent all the questions please add them into the test 11 and also correct the question count and one more thing that I have noticed is that in `src/data/questions/part-b-test-10.ts` file questions from 72 to 108 are not in correct format. Please make it correct too.
