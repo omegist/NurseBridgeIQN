@@ -25,6 +25,9 @@ const alegreya = Alegreya({
 export const metadata: Metadata = {
   title: "NURSE IQN",
   description: "A nursing quiz app to test your knowledge.",
+  icons: {
+    icon: '/nurseiqn-logo.png',
+  },
 }
 
 export default function RootLayout({
@@ -35,7 +38,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/nurseiqn-logo.png" type="image/png" />
         <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </head>
       <body className={`${belleza.variable} ${alegreya.variable} font-body antialiased`}>
