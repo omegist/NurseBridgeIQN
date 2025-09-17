@@ -69,6 +69,7 @@ export interface Test {
   name: string;
   timeLimitMinutes?: number | null;   // optional
   questions: Question[];
+  questionCount?: number;
 }
 
 // Payment-related types
