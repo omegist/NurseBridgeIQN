@@ -305,12 +305,7 @@ export const questions: Question[] = [
   {
     id: 'pb9-26',
     text: 'Which of the following is a common side effect of lithium therapy?',
-    options: [
-      'Hypotension',
-      'Hyperglycemia',
-      'Tremors',
-      'Hair loss',
-    ],
+    options: ['Hypotension', 'Hyperglycemia', 'Tremors', 'Hair loss'],
     correctIndex: 2,
     explanation: 'Tremors are a well-known neurological side effect of lithium, especially at higher doses.',
   },
@@ -319,7 +314,7 @@ export const questions: Question[] = [
     text: 'What is the best initial response to a patient expressing suicidal thoughts?',
     options: [
       'Advise the patient to avoid stressful situations',
-      'Notify the patient\'s family members immediately',
+      "Notify the patient's family members immediately",
       'Conduct a thorough risk assessment',
       'Offer empathetic listening and assure confidentiality',
     ],
@@ -331,7 +326,7 @@ export const questions: Question[] = [
     text: 'Why is it necessary to take insulin injections?',
     options: [
       'It lowers blood sugars by increasing the utilization of carbohydrates',
-      'It absorbs rapidly and increases the body\'s resistance to infection',
+      "It absorbs rapidly and increases the body's resistance to infection",
       'It increases the rate of metabolism, therefore decreasing blood glucose levels',
       'It stimulates the liver to excrete more glucose for the body to utilize',
     ],
@@ -348,7 +343,7 @@ export const questions: Question[] = [
       'Nervousness, sweating, and weakness',
     ],
     correctIndex: 3,
-    explanation: 'These symptoms reflect the body\'s adrenergic response to low blood glucose.',
+    explanation: "These symptoms reflect the body's adrenergic response to low blood glucose.",
   },
   {
     id: 'pb9-30',
@@ -389,12 +384,7 @@ export const questions: Question[] = [
   {
     id: 'pb9-33',
     text: 'A patient with a history of IV drug use reports fatigue, joint pain, and dark urine. Which hepatitis type is likely causing these symptoms?',
-    options: [
-      'Hepatitis A',
-      'Hepatitis B',
-      'Hepatitis C',
-      'Hepatitis E',
-    ],
+    options: ['Hepatitis A', 'Hepatitis B', 'Hepatitis C', 'Hepatitis E'],
     correctIndex: 1,
     explanation: 'Hepatitis B is commonly transmitted through blood and bodily fluids, especially in IV drug users, and causes systemic symptoms like fatigue and dark urine.',
   },
@@ -489,7 +479,7 @@ export const questions: Question[] = [
       'Inform the nurse that their method is incorrect and provide guidance based on current protocols',
       'Ignore the situation since the senior nurse has more experience and might have valid reasons',
       'Report the incident to the unit manager in order to avoid discussing the issue with the senior nurse',
-      'Mimic the senior nurse\'s technique to avoid conflict and maintain harmony in the team',
+      "Mimic the senior nurse's technique to avoid conflict and maintain harmony in the team",
     ],
     correctIndex: 0,
     explanation: 'Addressing unsafe practices respectfully ensures patient safety and promotes adherence to evidence-based care.',
@@ -606,10 +596,10 @@ export const questions: Question[] = [
     id: 'pb9-51',
     text: "When a patient experiences an adverse reaction after an enrolled nurse (EN) administers a high-risk medication delegated by a registered nurse, what's the first step?",
     options: [
-      'Review the medication administration record to verify the details.',
-      'Document the adverse reaction in the patient\'s record.',
-      'Inform the healthcare provider about the adverse reaction.',
-      'Conduct a thorough investigation to determine the cause of the reaction.',
+      "Review the medication administration record to verify the details.",
+      "Document the adverse reaction in the patient's record.",
+      "Inform the healthcare provider about the adverse reaction.",
+      "Conduct a thorough investigation to determine the cause of the reaction.",
     ],
     correctIndex: 2,
     explanation: 'Immediate notification allows for timely medical intervention and proper documentation.',
@@ -713,139 +703,139 @@ export const questions: Question[] = [
   {
     id: 'pb9-60',
     text: 'What is the primary treatment for nutritional rickets?',
+    options: [
+      'Vitamin D supplements',
+      'Calcium supplements',
+      'Phosphate supplements',
+      'All of the above',
+    ],
+    correctIndex: 3,
+    explanation: 'Rickets is treated with a combination of vitamin D, calcium, and phosphate to restore bone health.',
+  },
+  {
+    id: 'pb9-61',
+    text: "What's the main advantage of cardiac exercise for post-myocardial infarction (MI) patients?",
+    options: [
+      'Improves cardiac output',
+      'Enhances vasodilation',
+      'Increases muscle strength',
+      'Reduces mortality rate through improved cardiac function',
+    ],
+    correctIndex: 3,
+    explanation: 'Cardiac rehab improves heart efficiency and reduces future cardiac events and mortality.',
+  },
+  {
+    id: 'pb9-62',
+    text: 'What is the primary investigation performed on a newborn within the first 24 hours of life?',
+    options: [
+      'Complete Blood Count (CBC)',
+      'Blood Culture',
+      'Newborn Screening (NBS) tests',
+      'Chest X-ray',
+    ],
+    correctIndex: 2,
+    explanation: 'Newborn screening detects metabolic and genetic disorders early for timely intervention.',
+  },
+  {
+    id: 'pb9-63',
+    text: 'What is the first-line management for a patient presenting with a symptomatic pleural effusion?',
+    options: [
+      'Thoracentesis (pleural fluid drainage)',
+      'Chest tube insertion',
+      'Antibiotic therapy',
+      'Oxygen therapy',
+    ],
+    correctIndex: 0,
+    explanation: 'Thoracentesis relieves symptoms and allows diagnostic evaluation of pleural fluid.',
+  },
+  {
+    id: 'pb9-64',
+    text: 'What is the initial management step for a patient presenting with Diabetic Ketoacidosis (DKA)?',
+    options: [
+      'Administer insulin therapy',
+      'Correct fluid deficits with IV fluids',
+      'Administer potassium supplements',
+      'Provide oral glucose',
+    ],
+    correctIndex: 1,
+    explanation: 'Fluid resuscitation is the first step to correct dehydration and stabilize circulation before insulin.',
+  },
+  {
+    id: 'pb9-65',
+    text: 'What are the layers of tissue damage in a second-degree burn?',
+    options: [
+      'Epidermis only',
+      'Epidermis and dermis (superficial)',
+      'Epidermis, dermis (superficial and deep)',
+      'Epidermis, dermis, and subcutaneous tissue',
+    ],
+    correctIndex: 2,
+    explanation: 'Second-degree burns affect both superficial and deep layers of the dermis, causing blistering and pain.',
+  },
+  {
+    id: 'pb9-66',
+    text: 'Why are statins usually administered in the evening?',
+    options: [
+      'Improved bioavailability',
+      'Enhanced liver enzyme inhibition',
+      'Increased cholesterol synthesis at night',
+      'Better patient compliance'
+    ],
+    correctIndex: 2,
+    explanation: 'Cholesterol synthesis peaks at night, making evening dosing more effective.'
+  },
+  {
+    id: 'pb9-67',
+    text: 'Why is the Varicella Zoster vaccine a live attenuated vaccine?',
+    options: [
+      'It contains a killed virus',
+      'It contains a weakened form of the virus',
+      'It contains a genetically modified virus',
+      'It contains a synthetic virus-like particle'
+    ],
+    correctIndex: 1,
+    explanation: 'Live attenuated vaccines use weakened viruses to stimulate immunity without causing disease.'
+  },
+  {
+    id: 'pb9-68',
+    text: 'What is the initial treatment for mild hypoglycemia?',
+    options: [
+      'Administer glucagon',
+      'Consume 15–20 grams of fast-acting carbohydrates',
+      'Inject insulin',
+      'Call emergency services'
+    ],
+    correctIndex: 1,
+    explanation: 'Fast-acting carbs quickly raise blood glucose in mild hypoglycemia.'
+  },
+  {
+    id: 'pb9-69',
+    text: 'What is the first action to take when a patient falls in the bathroom?',
+    options: [
+      'Check for injuries',
+      'Call for emergency assistance',
+      'Check vital signs (breathing, pulse, blood pressure)',
+      'Help the patient up'
+    ],
+    correctIndex: 0,
+    explanation: 'Assessing for injury ensures safe handling and prevents further harm.'
+  },
+  {
+    id: 'pb9-70',
+    text: 'What are the stages of wound healing?',
+    options: [
+      'Hemostasis, Inflammatory, Proliferative',
+      'Hemostasis, Inflammatory, Proliferative, Maturation',
+      'Inflammatory, Proliferative, Maturation',
+      'Hemostasis, Proliferative, Maturation'
+    ],
+    correctIndex: 1,
+    explanation: 'Wound healing progresses through four stages: hemostasis, inflammation, proliferation, and maturation.'
+  },
+  {
+    id: 'pb9-71',
+    text: 'What is the function of iron in the body?',
     options": {
-      "a": "Vitamin D supplements",
-      "b": "Calcium supplements",
-      "c": "Phosphate supplements",
-      "d": "All of the above"
-    },
-    "answer": "d",
-    "rationale": "Rickets is treated with a combination of vitamin D, calcium, and phosphate to restore bone health."
-  },
-  {
-    "question_number": 61,
-    "question": "What's the main advantage of cardiac exercise for post-myocardial infarction (MI) patients?",
-    "options": {
-      "a": "Improves cardiac output",
-      "b": "Enhances vasodilation",
-      "c": "Increases muscle strength",
-      "d": "Reduces mortality rate through improved cardiac function"
-    },
-    "answer": "d",
-    "rationale": "Cardiac rehab improves heart efficiency and reduces future cardiac events and mortality."
-  },
-  {
-    "question_number": 62,
-    "question": "What is the primary investigation performed on a newborn within the first 24 hours of life?",
-    "options": {
-      "a": "Complete Blood Count (CBC)",
-      "b": "Blood Culture",
-      "c": "Newborn Screening (NBS) tests",
-      "d": "Chest X-ray"
-    },
-    "answer": "c",
-    "rationale": "Newborn screening detects metabolic and genetic disorders early for timely intervention."
-  },
-  {
-    "question_number": 63,
-    "question": "What is the first-line management for a patient presenting with a symptomatic pleural effusion?",
-    "options": {
-      "a": "Thoracentesis (pleural fluid drainage)",
-      "b": "Chest tube insertion",
-      "c": "Antibiotic therapy",
-      "d": "Oxygen therapy"
-    },
-    "answer": "a",
-    "rationale": "Thoracentesis relieves symptoms and allows diagnostic evaluation of pleural fluid."
-  },
-  {
-    "question_number": 64,
-    "question": "What is the initial management step for a patient presenting with Diabetic Ketoacidosis (DKA)?",
-    "options": {
-      "a": "Administer insulin therapy",
-      "b": "Correct fluid deficits with IV fluids",
-      "c": "Administer potassium supplements",
-      "d": "Provide oral glucose"
-    },
-    "answer": "b",
-    "rationale": "Fluid resuscitation is the first step to correct dehydration and stabilize circulation before insulin."
-  },
-  {
-    "question_number": 65,
-    "question": "What are the layers of tissue damage in a second-degree burn?",
-    "options": {
-      "a": "Epidermis only",
-      "b": "Epidermis and dermis (superficial)",
-      "c": "Epidermis, dermis (superficial and deep)",
-      "d": "Epidermis, dermis, and subcutaneous tissue"
-    },
-    "answer": "c",
-    "rationale": "Second-degree burns affect both superficial and deep layers of the dermis, causing blistering and pain."
-  },
-  {
-    "question_number": 66,
-    "question": "Why are statins usually administered in the evening?",
-    "options": {
-      "a": "Improved bioavailability",
-      "b": "Enhanced liver enzyme inhibition",
-      "c": "Increased cholesterol synthesis at night",
-      "d": "Better patient compliance"
-    },
-    "answer": "c",
-    "rationale": "Cholesterol synthesis peaks at night, making evening dosing more effective."
-  },
-  {
-    "question_number": 67,
-    "question": "Why is the Varicella Zoster vaccine a live attenuated vaccine?",
-    "options": {
-      "a": "It contains a killed virus",
-      "b": "It contains a weakened form of the virus",
-      "c": "It contains a genetically modified virus",
-      "d": "It contains a synthetic virus-like particle"
-    },
-    "answer": "b",
-    "rationale": "Live attenuated vaccines use weakened viruses to stimulate immunity without causing disease."
-  },
-  {
-    "question_number": 68,
-    "question": "What is the initial treatment for mild hypoglycemia?",
-    "options": {
-      "a": "Administer glucagon",
-      "b": "Consume 15–20 grams of fast-acting carbohydrates",
-      "c": "Inject insulin",
-      "d": "Call emergency services"
-    },
-    "answer": "b",
-    "rationale": "Fast-acting carbs quickly raise blood glucose in mild hypoglycemia."
-  },
-  {
-    "question_number": 69,
-    "question": "What is the first action to take when a patient falls in the bathroom?",
-    "options": {
-      "a": "Check for injuries",
-      "b": "Call for emergency assistance",
-      "c": "Check vital signs (breathing, pulse, blood pressure)",
-      "d": "Help the patient up"
-    },
-    "answer": "a",
-    "rationale": "Assessing for injury ensures safe handling and prevents further harm."
-  },
-  {
-    "question_number": 70,
-    "question": "What are the stages of wound healing?",
-    "options": {
-      "a": "Hemostasis, Inflammatory, Proliferative",
-      "b": "Hemostasis, Inflammatory, Proliferative, Maturation",
-      "c": "Inflammatory, Proliferative, Maturation",
-      "d": "Hemostasis, Proliferative, Maturation"
-    },
-    "answer": "b",
-    "rationale": "Wound healing progresses through four stages: hemostasis, inflammation, proliferation, and maturation."
-  },
-  {
-    "question_number": 71,
-    "question": "What is the function of iron in the body?",
-    "options": {
       "a": "To make hemoglobin and myoglobin",
       "b": "To produce antibodies and fight infections",
       "c": "To regulate blood pressure",
@@ -1301,4 +1291,4 @@ export const questions: Question[] = [
     "rationale": "Transfusion reactions can be life-threatening, so it is critical to monitor for signs like fever, chills, rash, and shortness of breath."
   }
 ]
- add all the remaining questions in the test 9
+ and add all the questions in the Test 9 I've added a lot of questions in it so just check all the questions and add all of them in the Test 9 with no errors
