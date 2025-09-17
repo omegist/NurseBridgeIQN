@@ -505,5 +505,390 @@ export const questions: Question[] = [
     ],
     correctIndex: 3,
     explanation: "Protocols require two nurses to verify; delaying ensures compliance and safety."
+  },
+  {
+    id: 'pb10-43',
+    text: "What action does a nurse take if they receive a social media request from a patient?",
+    options: [
+      'Accept the request once the patient has been discharged',
+      'Refuse politely and say that it is against the medical code to accept',
+      'Refuse politely and explain that it is against the professional code to accept',
+      'Accept the request straight away'
+    ],
+    correctIndex: 2,
+    explanation: 'Professional boundaries prohibit social media connections with patients to maintain ethical standards.'
+  },
+  {
+    id: 'pb10-44',
+    text: 'When assessing a 15-year-old experiencing acute alcohol withdrawal, what action aligns with NICE 2017 guidelines?',
+    options: [
+      'Refer for an MRI scan',
+      'Refer to a paediatrician',
+      'Refer for an EEG scan',
+      'Refer for an MRI scan'
+    ],
+    correctIndex: 1,
+    explanation: 'NICE guidelines recommend paediatric referral for under-16s in acute alcohol withdrawal.'
+  },
+  {
+    id: 'pb10-45',
+    text: 'What does health promotion enable people to do?',
+    options: [
+      'Choose which health services they prefer',
+      'Increase control over their health and improve it',
+      'Increase knowledge of health conditions',
+      'Increase the knowledge of health conditions'
+    ],
+    correctIndex: 1,
+    explanation: 'Health promotion empowers individuals to take control of their health and make informed choices.'
+  },
+  {
+    id: 'pb10-46',
+    text: 'Strength-based approaches in health promotion focus on:',
+    options: [
+      'Personal strengths to gain financial stability',
+      'Personal strengths to gain financial security',
+      'Personal strengths to aid recovery and empowerment',
+      'Personal strengths to aid recovery and empowerment'
+    ],
+    correctIndex: 2,
+    explanation: 'These approaches build on individual capabilities to support recovery and self-efficacy.'
+  },
+  {
+    id: 'pb10-47',
+    text: 'A patient has experienced a stroke and cannot verbalize their wishes. What can the nurse do?',
+    options: [
+      'Speak to the next of kin and ask them to make a decision',
+      'Ask the speech and language therapist to assess and provide a solution',
+      'Encourage the patient to write down what they want',
+      'Provide appropriate equipment and work with the patient'
+    ],
+    correctIndex: 3,
+    explanation: 'Supporting communication through tools and collaboration respects patient autonomy.'
+  },
+  {
+    id: 'pb10-48',
+    text: 'How should a team leader respond to repeated complaints about a team member’s attitude?',
+    options: [
+      'Arrange a formal meeting and set targets using the performance management policy',
+      'Speak to colleagues to gather opinions',
+      'Initiate a formal investigation and complete an incident form',
+      'Have another chat and suggest a job change'
+    ],
+    correctIndex: 0,
+    explanation: 'Formal performance management ensures structured support and accountability.'
+  },
+  {
+    id: 'pb10-49',
+    text: 'What is the role of the Care Quality Commission?',
+    options: [
+      'Inspection and inspection service for services',
+      'Allocation of funding',
+      'National advisory board',
+      'National research body'
+    ],
+    correctIndex: 0,
+    explanation: 'The CQC regulates and inspects health and social care services in England.'
+  },
+  {
+    id: 'pb10-50',
+    text: 'What is the initial action after a nurse sustains a needle stick injury?',
+    options: [
+      'Inform the doctor and request a blood sample',
+      'Encourage bleeding and wash the site with warm soapy water',
+      'Request a blood test and swab',
+      'Scrub the wound with soap under running water'
+    ],
+    correctIndex: 3,
+    explanation: 'Immediate washing reduces infection risk; further reporting and testing follow.'
+  },
+  {
+    id: 'pb10-51',
+    text: 'What is the nurse’s responsibility when faced with an unfamiliar clinical procedure?',
+    options: [
+      'Identify their scope of competence with the patient',
+      'Ask a colleague for help',
+      'Refuse to undertake the procedure',
+      'Undertake the procedure'
+    ],
+    correctIndex: 0,
+    explanation: 'Nurses must assess their competence and seek support to ensure safe care.'
+  },
+  {
+    id: 'pb10-52',
+    text: 'Why is prior training essential for nurses in major incidents?',
+    options: [
+      'To understand roles and work safely within the incident plan',
+      'To be media trained for reporters',
+      'To undertake new roles regardless of competence',
+      'To undertake any role delegated regardless of competence'
+    ],
+    correctIndex: 0,
+    explanation: 'Training ensures nurses know their roles and responsibilities during emergencies.'
+  },
+  {
+    id: 'pb10-53',
+    text: 'What is the priority nursing action on the first day of TPN therapy in a 2-year-old?',
+    options: [
+      'Use aseptic technique during dressing changes',
+      'Maintain catheter integrity',
+      'Monitor serum glucose levels',
+      'Check liver function tests'
+    ],
+    correctIndex: 2,
+    explanation: 'Glucose monitoring is critical to detect metabolic complications early in TPN therapy.'
+  },
+  {
+    id: 'pb10-54',
+    text: 'What precaution should be taught to a client taking an MAO inhibitor?',
+    options: [
+      'Avoid chocolate and cheese',
+      'Take frequent naps',
+      'Take the medication with milk',
+      'Avoid walking without assistance'
+    ],
+    correctIndex: 0,
+    explanation: 'Tyramine-rich foods like cheese can cause hypertensive crisis with MAOIs.'
+  },
+  {
+    id: 'pb10-55',
+    text: 'How long must diuretics be taken for congestive heart failure?',
+    options: [
+      'Until urination increases',
+      'About twice a day',
+      'Continued as the effect is time-limited',
+      'Ask the physician'
+    ],
+    correctIndex: 2,
+    explanation: 'Diuretics must be continued as prescribed to manage fluid overload.'
+  },
+  {
+    id: 'pb10-56',
+    text: 'Which clinical finding indicates continued salicylate use in rheumatic fever?',
+    options: [
+      'Chorea',
+      'Polyarthritis',
+      'Subcutaneous nodules',
+      'Erythema marginatum'
+    ],
+    correctIndex: 1,
+    explanation: 'Polyarthritis responds well to salicylates and indicates ongoing inflammation.'
+  },
+  {
+    id: 'pb10-57',
+    text: 'Why does a nurse ask about all medications in a patient with Sundown syndrome?',
+    options: [
+      'Multiple medications can lead to dementia',
+      'Reactions may be caused by medical background',
+      'Medication recall assesses orientation',
+      'Medication review is part of every nursing assessment'
+    ],
+    correctIndex: 3,
+    explanation: 'Comprehensive medication review is essential for safe and effective care.'
+  },
+  {
+    id: 'pb10-58',
+    text: 'What response should a nurse prepare a client for when applying Sulfamylon?',
+    options: [
+      'Severe burning pain for a few minutes',
+      'Severe metabolic alkalosis',
+      'Chilling from alcohol evaporation',
+      'Foul-smelling drainage'
+    ],
+    correctIndex: 0,
+    explanation: 'Sulfamylon causes intense burning pain upon application, which should be anticipated.'
+  },
+  {
+    id: 'pb10-59',
+    text: 'What is an early sign of digitalis toxicity in a 2-year-old?',
+    options: [
+      'Bradyapnea',
+      'Fine tremor',
+      'Tachycardia',
+      'Vomiting'
+    ],
+    correctIndex: 3,
+    explanation: 'Vomiting is a common early sign of digoxin toxicity in children.'
+  },
+  {
+    id: 'pb10-60',
+    text: 'Mr. Bates is admitted to the surgical ICU following hepatic lobectomy. He is sleepy but easily aroused. An IV containing hydrocortisone is running. What is essential to include in his care plan?',
+    options: [
+      'Monitor blood glucose levels every shift to detect hypo- or hyperglycemia',
+      'Keep Mr. Bates NPO until bowel sounds return to reduce the risk of hyperglycemia',
+      'Administer hydrocortisone until vital signs stabilize, then discontinue it',
+      'Teach Mr. Bates how to care for his wound and keep him flat on his back to reduce hemorrhage risk'
+    ],
+    correctIndex: 0,
+    explanation: 'Hydrocortisone can alter glucose metabolism, so regular monitoring is essential to detect imbalances.'
+  },
+  {
+    id: 'pb10-61',
+    text: 'How does a nurse ensure the correct patient receives Augmentin for a sinus infection?',
+    options: [
+      'Call the patient by name',
+      'Read the name on the door',
+      'Check the patient\'s wristband',
+      'Check the room number on the census list'
+    ],
+    correctIndex: 2,
+    explanation: 'Verifying identity via wristband is the safest and most accurate method.'
+  },
+  {
+    id: 'pb10-62',
+    text: 'What should a nurse do upon noticing clumpy precipitate in an NPH insulin vial?',
+    options: [
+      'Draw up and administer the dose',
+      'Draw up the dose from a new vial',
+      'Warm the bottle under running water',
+      'Shake the vial to disperse the clumps'
+    ],
+    correctIndex: 1,
+    explanation: 'Clumping may indicate compromised insulin; a new vial ensures safety and efficacy.'
+  },
+  {
+    id: 'pb10-63',
+    text: 'What instruction should be given to a client taking ketoconazole (Nizoral) for histoplasmosis?',
+    options: [
+      'Take the medication on an empty stomach',
+      'Limit intake of foods high in fiber',
+      'Avoid exposure to sunlight',
+      'Take the medication with an antacid'
+    ],
+    correctIndex: 2,
+    explanation: 'Ketoconazole increases photosensitivity; sun exposure should be minimized.'
+  },
+  {
+    id: 'pb10-64',
+    text: 'Which beverage should a client taking a xanthine bronchodilator avoid?',
+    options: [
+      'Chocolate milk',
+      'Cranberry juice',
+      'Coffee',
+      'Cola'
+    ],
+    correctIndex: 1,
+    explanation: 'Cranberry juice does not contain caffeine or xanthines, making it a safe choice.'
+  },
+  {
+    id: 'pb10-65',
+    text: 'What is the safest headache medication for a client taking famotidine (Pepcid)?',
+    options: [
+      'Aspirin (ASA)',
+      'Ibuprofen (Motrin)',
+      'Acetaminophen (Tylenol)',
+      'Naproxen (Naprosyn)'
+    ],
+    correctIndex: 2,
+    explanation: 'Acetaminophen is gentle on the stomach and does not interfere with acid-reducing medications.'
+  },
+  {
+    id: 'pb10-66',
+    text: 'Which medication is prescribed for a cirrhosis patient intolerant to protein?',
+    options: [
+      'Lactulose',
+      'Ethacrynic acid',
+      'Folic acid',
+      'Thiamine'
+    ],
+    correctIndex: 0,
+    explanation: 'Lactulose reduces ammonia levels, helping manage hepatic encephalopathy in cirrhosis.'
+  },
+  {
+    id: 'pb10-67',
+    text: 'What product should a nurse suggest for dry, irritated skin?',
+    options: [
+      'Glycerin emollient',
+      'Aspercreme',
+      'Myoflex',
+      'Acetic acid solution'
+    ],
+    correctIndex: 0,
+    explanation: 'Glycerin emollients hydrate and soothe dry skin effectively.'
+  },
+  {
+    id: 'pb10-68',
+    text: 'What instruction should be given to a client taking quinapril hydrochloride (Accupril)?',
+    options: [
+      'Take the medication with food only',
+      'Rise slowly from lying to sitting position',
+      'Discontinue if nausea occurs',
+      'Therapeutic effect will be noted immediately'
+    ],
+    correctIndex: 1,
+    explanation: 'Accupril may cause orthostatic hypotension; slow position changes reduce dizziness.'
+  },
+  {
+    id: 'pb10-69',
+    text: 'What is the interaction called when two drugs have an effect equal to the sum of their effects?',
+    options: [
+      'Potentiated',
+      'Antagonized',
+      'Agonist',
+      'Additive'
+    ],
+    correctIndex: 3,
+    explanation: 'An additive effect means the combined effect equals the sum of individual effects.'
+  },
+  {
+    id: 'pb10-70',
+    text: 'Which disease may increase absorption, distribution, and excretion of drugs?',
+    options: [
+      'Hyperthyroidism',
+      'Renal insufficiency',
+      'Liver disease',
+      'Hypothyroidism'
+    ],
+    correctIndex: 0,
+    explanation: 'Hyperthyroidism speeds up metabolism, affecting drug pharmacokinetics.'
+  },
+  {
+    id: 'pb10-71',
+    text: 'A pregnant client receiving magnesium sulfate shows toxicity in which assessment?',
+    options: [
+      'Respirations of 10 breaths per minute',
+      'Presence of deep tendon reflexes',
+      'Urine output of 25 mL/hr',
+      'Serum magnesium level of 7 mEq/L'
+    ],
+    correctIndex: 0,
+    explanation: 'Respiratory depression is a key sign of magnesium toxicity and requires immediate action.'
+  },
+  {
+    id: 'pb10-72',
+    text: 'Which statement about erythromycin eye ointment in newborns indicates a need for further teaching?',
+    options: [
+      'Instill into each conjunctival sac',
+      'Administer within an hour after delivery',
+      'Flush the eyes after instilling',
+      'Finish the newborn’s eyes after instilling'
+    ],
+    correctIndex: 2,
+    explanation: 'Flushing the eyes removes the medication and defeats its prophylactic purpose.'
+  },
+  {
+    id: 'pb10-73',
+    text: 'What is the purpose of Rho(D) immune globulin (RhoGAM) given after delivery?',
+    options: [
+      'Prevent pernicious anemia',
+      'Prevent German measles',
+      'Prevent Rh incompatibility',
+      'Prevent HIV transmission'
+    ],
+    correctIndex: 2,
+    explanation: 'RhoGAM prevents maternal sensitization to Rh-positive fetal blood cells.'
+  },
+  {
+    id: 'pb10-74',
+    text: 'What is the nurse’s primary action if a bedridden patient develops a bedsore?',
+    options: [
+      'Apply antibiotic ointment',
+      'Cover with gauze',
+      'Assess and stage the wound',
+      'Turn and reposition the patient'
+    ],
+    correctIndex: 3,
+    explanation: 'Repositioning prevents further pressure damage and promotes healing.'
   }
 ];
+
