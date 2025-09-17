@@ -305,7 +305,7 @@ export const questions: Question[] = [
   {
     id: 'pb9-26',
     text: 'Which of the following is a common side effect of lithium therapy?',
-    options: ['Hypotension', 'Hyperglycemia', 'Tremors', 'Hair loss'],
+    options: [ 'Hypotension', 'Hyperglycemia', 'Tremors', 'Hair loss' ],
     correctIndex: 2,
     explanation: 'Tremors are a well-known neurological side effect of lithium, especially at higher doses.',
   },
@@ -384,7 +384,7 @@ export const questions: Question[] = [
   {
     id: 'pb9-33',
     text: 'A patient with a history of IV drug use reports fatigue, joint pain, and dark urine. Which hepatitis type is likely causing these symptoms?',
-    options: ['Hepatitis A', 'Hepatitis B', 'Hepatitis C', 'Hepatitis E'],
+    options: [ 'Hepatitis A', 'Hepatitis B', 'Hepatitis C', 'Hepatitis E' ],
     correctIndex: 1,
     explanation: 'Hepatitis B is commonly transmitted through blood and bodily fluids, especially in IV drug users, and causes systemic symptoms like fatigue and dark urine.',
   },
@@ -464,7 +464,7 @@ export const questions: Question[] = [
     id: 'pb9-40',
     text: 'During a busy shift, you accidentally administer medication to the wrong patient. What is your immediate action?',
     options: [
-      'Notify the patient and apologize, escalate to the medical team and then document the error in the incident report',
+      'Notify the patient and apologize, escalate to the medical team and then document the incident report',
       'Wait to see if the patient experiences any adverse effects before taking further action',
       'Fill the incident report and notify concerned charge nurse',
       'Keep quiet about the error to avoid disciplinary action',
@@ -498,7 +498,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb9-43',
-    text: "A nurse leaves a patient's confidential information visible on a computer screen while away from the workstation. What action should be taken?",
+    text: 'A nurse leaves a patient\'s confidential information visible on a computer screen while away from the workstation. What action should be taken?',
     options: [
       'Log out, inform unit manager, and document incident',
       'Ignore, considering it unintentional',
@@ -779,10 +779,10 @@ export const questions: Question[] = [
       'Improved bioavailability',
       'Enhanced liver enzyme inhibition',
       'Increased cholesterol synthesis at night',
-      'Better patient compliance'
+      'Better patient compliance',
     ],
     correctIndex: 2,
-    explanation: 'Cholesterol synthesis peaks at night, making evening dosing more effective.'
+    explanation: 'Cholesterol synthesis peaks at night, making evening dosing more effective.',
   },
   {
     id: 'pb9-67',
@@ -791,10 +791,10 @@ export const questions: Question[] = [
       'It contains a killed virus',
       'It contains a weakened form of the virus',
       'It contains a genetically modified virus',
-      'It contains a synthetic virus-like particle'
+      'It contains a synthetic virus-like particle',
     ],
     correctIndex: 1,
-    explanation: 'Live attenuated vaccines use weakened viruses to stimulate immunity without causing disease.'
+    explanation: 'Live attenuated vaccines use weakened viruses to stimulate immunity without causing disease.',
   },
   {
     id: 'pb9-68',
@@ -803,10 +803,10 @@ export const questions: Question[] = [
       'Administer glucagon',
       'Consume 15–20 grams of fast-acting carbohydrates',
       'Inject insulin',
-      'Call emergency services'
+      'Call emergency services',
     ],
     correctIndex: 1,
-    explanation: 'Fast-acting carbs quickly raise blood glucose in mild hypoglycemia.'
+    explanation: 'Fast-acting carbs quickly raise blood glucose in mild hypoglycemia.',
   },
   {
     id: 'pb9-69',
@@ -815,10 +815,10 @@ export const questions: Question[] = [
       'Check for injuries',
       'Call for emergency assistance',
       'Check vital signs (breathing, pulse, blood pressure)',
-      'Help the patient up'
+      'Help the patient up',
     ],
     correctIndex: 0,
-    explanation: 'Assessing for injury ensures safe handling and prevents further harm.'
+    explanation: 'Assessing for injury ensures safe handling and prevents further harm.',
   },
   {
     id: 'pb9-70',
@@ -827,468 +827,467 @@ export const questions: Question[] = [
       'Hemostasis, Inflammatory, Proliferative',
       'Hemostasis, Inflammatory, Proliferative, Maturation',
       'Inflammatory, Proliferative, Maturation',
-      'Hemostasis, Proliferative, Maturation'
+      'Hemostasis, Proliferative, Maturation',
     ],
     correctIndex: 1,
-    explanation: 'Wound healing progresses through four stages: hemostasis, inflammation, proliferation, and maturation.'
+    explanation: 'Wound healing progresses through four stages: hemostasis, inflammation, proliferation, and maturation.',
   },
   {
     id: 'pb9-71',
     text: 'What is the function of iron in the body?',
-    options": {
-      "a": "To make hemoglobin and myoglobin",
-      "b": "To produce antibodies and fight infections",
-      "c": "To regulate blood pressure",
-      "d": "To maintain healthy bones"
-    },
-    "answer": "a",
-    "rationale": "Iron is essential for the synthesis of hemoglobin and myoglobin, which transport oxygen in blood and muscle."
+    options: [
+      'To make hemoglobin and myoglobin',
+      'To produce antibodies and fight infections',
+      'To regulate blood pressure',
+      'To maintain healthy bones',
+    ],
+    correctIndex: 0,
+    explanation: 'Iron is essential for the synthesis of hemoglobin and myoglobin, which transport oxygen in blood and muscle.',
   },
   {
-    "question_number": 72,
-    "question": "What are the effects of iron deficiency anemia?",
-    "options": {
-      "a": "Fatigue, shortness of breath, pale skin",
-      "b": "Headaches, dizziness, nausea",
-      "c": "Weight loss, muscle weakness",
-      "d": "All of the above"
-    },
-    "answer": "a",
-    "rationale": "Iron deficiency reduces oxygen delivery, leading to fatigue, pallor, and breathlessness."
+    id: 'pb9-72',
+    text: 'What are the effects of iron deficiency anemia?',
+    options: [
+      'Fatigue, shortness of breath, pale skin',
+      'Headaches, dizziness, nausea',
+      'Weight loss, muscle weakness',
+      'All of the above',
+    ],
+    correctIndex: 0,
+    explanation: 'Iron deficiency reduces oxygen delivery, leading to fatigue, pallor, and breathlessness.',
   },
   {
-    "question_number": 73,
-    "question": "What action should you take if a senior nurse instructs you to administer medications without labels and double-checking?",
-    "options": {
-      "a": "Administer the medication",
-      "b": "Refuse to administer",
-      "c": "Ask for clarification",
-      "d": "Call the pharmacist"
-    },
-    "answer": "b",
-    "rationale": "Administering unlabeled medication is unsafe; refusal protects patient safety and professional integrity."
+    id: 'pb9-73',
+    text: 'What action should you take if a senior nurse instructs you to administer medications without labels and double-checking?',
+    options: [
+      'Administer the medication',
+      'Refuse to administer',
+      'Ask for clarification',
+      'Call the pharmacist',
+    ],
+    correctIndex: 1,
+    explanation: 'Administering unlabeled medication is unsafe; refusal protects patient safety and professional integrity.',
   },
   {
-    "question_number": 74,
-    "question": "What action should you take if a patient refuses medication?",
-    "options": {
-      "a": "Force the patient to take it",
-      "b": "Document it on the patient’s file",
-      "c": "Ignore the patient’s decision",
-      "d": "Call the doctor"
-    },
-    "answer": "b",
-    "rationale": "Patient autonomy must be respected; documentation ensures legal and clinical accountability."
+    id: 'pb9-74',
+    text: 'What action should you take if a patient refuses medication?',
+    options: [
+      'Force the patient to take it',
+      'Document it on the patient’s file',
+      'Ignore the patient’s decision',
+      'Call the doctor',
+    ],
+    correctIndex: 1,
+    explanation: 'Patient autonomy must be respected; documentation ensures legal and clinical accountability.',
   },
   {
-    "question_number": 75,
-    "question": "What are the uses of benzodiazepines?",
-    "options": {
-      "a": "Treating anxiety and seizures",
-      "b": "Managing pain and inflammation",
-      "c": "Regulating blood pressure",
-      "d": "Lowering cholesterol"
-    },
-    "answer": "a",
-    "rationale": "Benzodiazepines are CNS depressants used for anxiety, insomnia, and seizure control."
+    id: 'pb9-75',
+    text: 'What are the uses of benzodiazepines?',
+    options: [
+      'Treating anxiety and seizures',
+      'Managing pain and inflammation',
+      'Regulating blood pressure',
+      'Lowering cholesterol',
+    ],
+    correctIndex: 0,
+    explanation: 'Benzodiazepines are CNS depressants used for anxiety, insomnia, and seizure control.',
   },
   {
-    "question_number": 76,
-    "question": "What are standard precautions for changing diapers of a child with diarrhea?",
-    "options": {
-      "a": "Hand hygiene, gloves, gown",
-      "b": "Mask, eye protection, gloves",
-      "c": "Gown, gloves, closed shoes",
-      "d": "Hand hygiene, mask"
-    },
-    "answer": "a",
-    "rationale": "Diaper changes involve contact with bodily fluids; gloves and gowns prevent contamination."
+    id: 'pb9-76',
+    text: 'What are standard precautions for changing diapers of a child with diarrhea?',
+    options: [
+      'Hand hygiene, gloves, gown',
+      'Mask, eye protection, gloves',
+      'Gown, gloves, closed shoes',
+      'Hand hygiene, mask',
+    ],
+    correctIndex: 0,
+    explanation: 'Diaper changes involve contact with bodily fluids; gloves and gowns prevent contamination.',
   },
   {
-    "question_number": 77,
-    "question": "What is the reason for urinary tract infections (UTIs) in diabetes mellitus (DM) patients?",
-    "options": {
-      "a": "High blood sugar",
-      "b": "Poor hygiene",
-      "c": "Weakened immune system",
-      "d": "All of the above"
-    },
-    "answer": "d",
-    "rationale": "Multiple factors in DM—hyperglycemia, immune compromise, and hygiene—contribute to UTI risk."
+    id: 'pb9-77',
+    text: 'What is the reason for urinary tract infections (UTIs) in diabetes mellitus (DM) patients?',
+    options: [
+      'High blood sugar',
+      'Poor hygiene',
+      'Weakened immune system',
+      'All of the above',
+    ],
+    correctIndex: 3,
+    explanation: 'Multiple factors in DM—hyperglycemia, immune compromise, and hygiene—contribute to UTI risk.',
   },
   {
-    "question_number": 78,
-    "question": "What are the symptoms of norovirus?",
-    "options": {
-      "a": "Vomiting, watery diarrhea",
-      "b": "Fever, headache, muscle pain",
-      "c": "Cough, runny nose, sore throat",
-      "d": "Rash, itching, swelling"
-    },
-    "answer": "a",
-    "rationale": "Norovirus causes acute gastroenteritis with vomiting and diarrhea, often in outbreaks."
+    id: 'pb9-78',
+    text: 'What are the symptoms of norovirus?',
+    options: [
+      'Vomiting, watery diarrhea',
+      'Fever, headache, muscle pain',
+      'Cough, runny nose, sore throat',
+      'Rash, itching, swelling',
+    ],
+    correctIndex: 0,
+    explanation: 'Norovirus causes acute gastroenteritis with vomiting and diarrhea, often in outbreaks.',
   },
   {
-    "question_number": 79,
-    "question": "What is the reason for cracked nipples in breastfeeding mothers?",
-    "options": {
-      "a": "Poor latching technique",
-      "b": "Inadequate breast milk",
-      "c": "Infrequent feeding",
-      "d": "All of the above"
-    },
-    "answer": "a",
-    "rationale": "Improper latch leads to friction and trauma, causing nipple cracks and pain."
+    id: 'pb9-79',
+    text: 'What is the reason for cracked nipples in breastfeeding mothers?',
+    options: [
+      'Poor latching technique',
+      'Inadequate breast milk',
+      'Infrequent feeding',
+      'All of the above',
+    ],
+    correctIndex: 0,
+    explanation: 'Improper latch leads to friction and trauma, causing nipple cracks and pain.',
   },
   {
-    "question_number": 80,
-    "question": "What is the reason for cracked nipples in breastfeeding mothers?",
-    "options": {
-      "a": "Poor latching technique",
-      "b": "Inadequate breast milk",
-      "c": "Infrequent feeding",
-      "d": "All of the above"
-    },
-    "answer": "a",
-    "rationale": "Repeated: Poor latch remains the primary cause of nipple trauma during breastfeeding."
+    id: 'pb9-80',
+    text: 'What is the reason for cracked nipples in breastfeeding mothers?',
+    options: [
+      'Poor latching technique',
+      'Inadequate breast milk',
+      'Infrequent feeding',
+      'All of the above',
+    ],
+    correctIndex: 0,
+    explanation: 'Repeated: Poor latch remains the primary cause of nipple trauma during breastfeeding.',
   },
   {
-    "question_number": 81,
-    "question": "What is the reason for weight loss in diabetes mellitus (DM)?",
-    "options": {
-      "a": "Increased insulin resistance",
-      "b": "Decreased glucose production",
-      "c": "Body burning fat and muscle for energy",
-      "d": "Increased appetite"
-    },
-    "answer": "c",
-    "rationale": "Without insulin, cells can't use glucose, so the body breaks down fat and muscle for energy."
+    id: 'pb9-81',
+    text: 'What is the reason for weight loss in diabetes mellitus (DM)?',
+    options: [
+      'Increased insulin resistance',
+      'Decreased glucose production',
+      'Body burning fat and muscle for energy',
+      'Increased appetite',
+    ],
+    correctIndex: 2,
+    explanation: "Without insulin, cells can't use glucose, so the body breaks down fat and muscle for energy.",
   },
   {
-    "question_number": 82,
-    "question": "What is the importance of oral care in infants?",
-    "options": {
-      "a": "Prevents oral thrush",
-      "b": "Promotes healthy gums",
-      "c": "Encourages teething",
-      "d": "All of the above"
-    },
-    "answer": "b",
-    "rationale": "While all options are beneficial, healthy gums are foundational for future oral health."
+    id: 'pb9-82',
+    text: 'What is the importance of oral care in infants?',
+    options: [
+      'Prevents oral thrush',
+      'Promotes healthy gums',
+      'Encourages teething',
+      'All of the above',
+    ],
+    correctIndex: 1,
+    explanation: 'While all options are beneficial, healthy gums are foundational for future oral health.',
   },
   {
-    "question_number": 83,
-    "question": "What does increased energy typically indicate?",
-    "options": {
-      "a": "Sedation, confusion",
-      "b": "Increased mood",
-      "c": "Reduced appetite",
-      "d": "Improved mood"
-    },
-    "answer": "d",
-    "rationale": "Improved mood often correlates with increased energy and motivation in clinical assessments."
+    id: 'pb9-83',
+    text: 'What does increased energy typically indicate?',
+    options: [
+      'Sedation, confusion',
+      'Increased mood',
+      'Reduced appetite',
+      'Improved mood',
+    ],
+    correctIndex: 3,
+    explanation: 'Improved mood often correlates with increased energy and motivation in clinical assessments.',
   },
   {
-    "question_number": 84,
-    "question": "What is a common cause of hepatitis B?",
-    "options": {
-      "a": "Contaminated food and water",
-      "b": "Sexual contact, sharing needles",
-      "c": "Vector-borne transmission",
-      "d": "Airborne transmission"
-    },
-    "answer": "b",
-    "rationale": "Hepatitis B spreads through blood and bodily fluids, especially via sexual contact and needle sharing."
+    id: 'pb9-84',
+    text: 'What is a common cause of hepatitis B?',
+    options: [
+      'Contaminated food and water',
+      'Sexual contact, sharing needles',
+      'Vector-borne transmission',
+      'Airborne transmission',
+    ],
+    correctIndex: 1,
+    explanation: 'Hepatitis B spreads through blood and bodily fluids, especially via sexual contact and needle sharing.',
+  },
+  {
+    id: 'pb9-85',
+    text: "What action should you take if a patient who is unable to provide consent due to dementia refuses to take medication?",
+    options: [
+      'Administer medication against patient’s wishes',
+      'Respect the patient’s refusal and document it',
+      'Ask a family member to convince the patient',
+      'Consult with the healthcare team and consider alternatives',
+    ],
+    correctIndex: 3,
+    explanation: 'Collaborative discussion ensures ethical handling while considering patient autonomy and clinical needs.',
+  },
+  {
+    id: 'pb9-86',
+    text: 'What is a primary sign of dehydration in older adults?',
+    options: [
+      'Increased thirst',
+      'Confusion',
+      'Frequent urination',
+      'Moist skin',
+    ],
+    correctIndex: 1,
+    explanation: 'Older adults may have a diminished thirst response; confusion is often an early indicator of dehydration.',
+  },
+  {
+    id: 'pb9-87',
+    text: 'Why is it important for nurses to practice self-care?',
+    options: [
+      'To avoid burnout and maintain professional well-being',
+      'To have more free time for personal activities',
+      'To improve their social media presence',
+      'To get a promotion at work',
+    ],
+    correctIndex: 0,
+    explanation: 'Self-care prevents burnout and maintains physical and mental health, ensuring safe and effective nursing practice.',
+  },
+  {
+    id: 'pb9-88',
+    text: 'What are the common side effects of long-term metformin use?',
+    options: [
+      'Weight gain',
+      'Vitamin B12 deficiency',
+      'High blood pressure',
+      'Hair loss',
+    ],
+    correctIndex: 1,
+    explanation: 'Long-term metformin use can interfere with Vitamin B12 absorption, leading to deficiency.',
+  },
+  {
+    id: 'pb9-89',
+    text: 'What are the characteristics of a patient with borderline personality disorder (BPD)?',
+    options: [
+      'Emotional instability, impulsivity',
+      'Stable relationships, low self-esteem',
+      'Obsessive-compulsive behaviors',
+      'Delusions and hallucinations',
+    ],
+    correctIndex: 0,
+    explanation: 'BPD is characterized by emotional dysregulation, unstable relationships, and impulsive behaviors.',
+  },
+  {
+    id: 'pb9-90',
+    text: 'What is the primary treatment for opioid overdose?',
+    options: [
+      'Naloxone (Narcan)',
+      'Epinephrine',
+      'Atropine',
+      'Glucagon',
+    ],
+    correctIndex: 0,
+    explanation: 'Naloxone is an opioid antagonist that rapidly reverses the effects of an overdose.',
+  },
+  {
+    id: 'pb9-91',
+    text: 'A patient becomes agitated and aggressive. What is the priority nursing action?',
+    options: [
+      'Restrain the patient immediately',
+      'Use de-escalation techniques and ensure safety',
+      'Leave the patient alone',
+      'Call security without attempting to de-escalate',
+    ],
+    correctIndex: 1,
+    explanation: 'De-escalation and ensuring safety for everyone involved is the priority before resorting to restraints.',
+  },
+  {
+    id: 'pb9-92',
+    text: 'Why is it important to use a draw sheet for patient transfers?',
+    options: [
+      'To keep the patient warm',
+      'To reduce friction and shear on the patient’s skin',
+      'To prevent the patient from falling',
+      'To make the transfer faster',
+    ],
+    correctIndex: 1,
+    explanation: 'Draw sheets minimize skin damage by reducing friction and shear forces during repositioning.',
+  },
+  {
+    id: 'pb9-93',
+    text: 'What is the purpose of chest compressions in CPR?',
+    options: [
+      'To restart the heart',
+      'To circulate oxygenated blood to vital organs',
+      'To clear the airway',
+      'To prevent brain damage',
+    ],
+    correctIndex: 1,
+    explanation: 'Chest compressions manually pump blood to the brain and other organs, maintaining perfusion until the heart can be restarted.',
+  },
+  {
+    id: 'pb9-94',
+    text: 'Which of the following is a sign of deep vein thrombosis (DVT)?',
+    options: [
+      'Cool, pale leg',
+      'Swelling, redness, and warmth in one leg',
+      'Bilateral leg cramping',
+      'Numbness in both feet',
+    ],
+    correctIndex: 1,
+    explanation: 'DVT presents with classic inflammatory signs in the affected limb due to clot formation.',
+  },
+  {
+    id: 'pb9-95',
+    text: 'What is the most appropriate food for a toddler?',
+    options: [
+      'Hot dogs and whole grapes',
+      'Small, soft pieces of fruits and vegetables',
+      'Hard candies and nuts',
+      'Popcorn and large chunks of meat',
+    ],
+    correctIndex: 1,
+    explanation: 'Small, soft foods prevent choking, a common hazard for toddlers.',
+  },
+  {
+    id: 'pb9-96',
+    text: 'What is the primary purpose of hospice care?',
+    options: [
+      'To cure the patient’s illness',
+      'To provide comfort and support for terminally ill patients',
+      'To prolong life at all costs',
+      'To focus on aggressive treatment',
+    ],
+    correctIndex: 1,
+    explanation: 'Hospice care focuses on quality of life, comfort, and dignity for patients nearing the end of life.',
+  },
+  {
+    id: 'pb9-97',
+    text: 'What is the primary purpose of obtaining informed consent before a procedure?',
+    options: [
+      'To protect the hospital from lawsuits',
+      'To ensure the patient understands the risks, benefits, and alternatives',
+      'To document that the procedure was explained',
+      'To fulfill a legal requirement',
+    ],
+    correctIndex: 1,
+    explanation: 'Informed consent ensures patient autonomy by providing them with the necessary information to make an educated decision about their care.',
+  },
+  {
+    id: 'pb9-98',
+    text: 'What are the common symptoms of a urinary tract infection (UTI) in older adults?',
+    options: [
+      'Fever and chills',
+      'Confusion and agitation',
+      'Frequent urination',
+      'Abdominal pain',
+    ],
+    correctIndex: 1,
+    explanation: 'Older adults may present with atypical UTI symptoms like confusion or delirium instead of classic urinary symptoms.',
+  },
+  {
+    id: 'pb9-99',
+    text: 'What is the primary role of a registered nurse in a multidisciplinary team?',
+    options: [
+      'To follow doctors’ orders without question',
+      'To coordinate care and advocate for the patient',
+      'To perform only technical tasks',
+      'To manage administrative duties',
+    ],
+    correctIndex: 1,
+    explanation: 'Nurses play a central role in coordinating care, communicating with the team, and advocating for the patient\'s best interests.',
+  },
+  {
+    id: 'pb9-100',
+    text: 'What is the correct way to administer ear drops to an adult?',
+    options: [
+      'Pull the earlobe down and back',
+      'Pull the earlobe up and back',
+      'Instill drops directly onto the eardrum',
+      'Have the patient lie on their stomach',
+    ],
+    correctIndex: 1,
+    explanation: 'Pulling the ear up and back straightens the ear canal in adults, allowing the drops to reach the eardrum.',
+  },
+  {
+    id: 'pb9-101',
+    text: 'Which of the following is a key sign of respiratory distress in an infant?',
+    options: [
+      'Quiet, regular breathing',
+      'Nasal flaring and grunting',
+      'Pink, warm skin',
+      'Strong cry',
+    ],
+    correctIndex: 1,
+    explanation: 'Nasal flaring and grunting are signs of increased work of breathing and respiratory distress in infants.',
+  },
+  {
+    id: 'pb9-102',
+    text: 'What is the main purpose of using a spacer with an inhaler?',
+    options: [
+      'To make the medication taste better',
+      'To increase the amount of medication delivered to the lungs',
+      'To decrease the side effects of the medication',
+      'To make the inhaler easier to carry',
+    ],
+    correctIndex: 1,
+    explanation: 'A spacer improves coordination and allows more medication to be inhaled into the lungs instead of being deposited in the mouth and throat.',
+  },
+  {
+    id: 'pb9-103',
+    text: 'What is the most common cause of hospital-acquired infections?',
+    options: [
+      'Contaminated food',
+      'Airborne pathogens',
+      'Poor hand hygiene',
+      'Inadequate cleaning of patient rooms',
+    ],
+    correctIndex: 2,
+    explanation: 'The hands of healthcare workers are the most common vehicle for transmitting pathogens between patients.',
+  },
+  {
+    id: 'pb9-104',
+    text: 'What is the best way to confirm the placement of a nasogastric (NG) tube?',
+    options: [
+      'Auscultating for an air bolus',
+      'Checking the pH of gastric aspirate',
+      'Obtaining a chest X-ray',
+      'Asking the patient to speak',
+    ],
+    correctIndex: 2,
+    explanation: 'A chest X-ray is the gold standard for confirming correct NG tube placement and preventing inadvertent administration into the lungs.',
+  },
+  {
+    id: 'pb9-105',
+    text: 'A patient with dementia is agitated and trying to get out of bed. What is the most appropriate initial nursing intervention?',
+    options: [
+      'Apply restraints to prevent falls',
+      'Administer a sedative as prescribed',
+      'Redirect the patient with a calming activity',
+      'Ignore the behavior as it is common in dementia',
+    ],
+    correctIndex: 2,
+    explanation: 'Redirection is a non-pharmacological approach that can effectively de-escalate agitation without resorting to restraints or sedation.',
+  },
+  {
+    id: 'pb9-106',
+    text: 'What is a common complication of immobility in elderly patients?',
+    options: [
+      'Increased muscle mass',
+      'Improved circulation',
+      'Pressure ulcers and constipation',
+      'Enhanced cognitive function',
+    ],
+    correctIndex: 2,
+    explanation: 'Immobility leads to pressure on skin and decreased bowel motility, increasing the risk of pressure ulcers and constipation.',
+  },
+  {
+    id: 'pb9-107',
+    text: 'What is the purpose of the \'Five Rights\' of medication administration?',
+    options: [
+      'To make medication administration faster',
+      'To ensure patient safety and prevent medication errors',
+      'To reduce the cost of medications',
+      'To simplify documentation',
+    ],
+    correctIndex: 1,
+    explanation: 'The Five Rights (Right Patient, Right Drug, Right Dose, Right Route, Right Time) are a fundamental safety check to prevent medication errors.',
+  },
+  {
+    id: 'pb9-108',
+    text: 'Which of the following is a priority assessment for a patient receiving a blood transfusion?',
+    options: [
+      'Monitoring for signs of a transfusion reaction',
+      'Checking the patient\'s appetite',
+      'Assessing the patient\'s mobility',
+      'Measuring the patient\'s height and weight',
+    ],
+    correctIndex: 0,
+    explanation: 'Transfusion reactions can be life-threatening, so it is critical to monitor for signs like fever, chills, rash, and shortness of breath.',
   }
-]
-[
-  {
-    "question_number": 85,
-    "question": "What action should you take if a patient who is unable to provide consent due to dementia refuses to take medication?",
-    "options": {
-      "a": "Administer medication against patient’s wishes",
-      "b": "Respect the patient’s refusal and document it",
-      "c": "Ask a family member to convince the patient",
-      "d": "Consult with the healthcare team and consider alternatives"
-    },
-    "answer": "d",
-    "rationale": "Collaborative discussion ensures ethical handling while considering patient autonomy and clinical needs."
-  },
-  {
-    "question_number": 86,
-    "question": "What is a primary sign of dehydration in older adults?",
-    "options": {
-      "a": "Increased thirst",
-      "b": "Confusion",
-      "c": "Frequent urination",
-      "d": "Moist skin"
-    },
-    "answer": "b",
-    "rationale": "Older adults may have a diminished thirst response; confusion is often an early indicator of dehydration."
-  },
-  {
-    "question_number": 87,
-    "question": "Why is it important for nurses to practice self-care?",
-    "options": {
-      "a": "To avoid burnout and maintain professional well-being",
-      "b": "To have more free time for personal activities",
-      "c": "To improve their social media presence",
-      "d": "To get a promotion at work"
-    },
-    "answer": "a",
-    "rationale": "Self-care prevents burnout and maintains physical and mental health, ensuring safe and effective nursing practice."
-  },
-  {
-    "question_number": 88,
-    "question": "What are the common side effects of long-term metformin use?",
-    "options": {
-      "a": "Weight gain",
-      "b": "Vitamin B12 deficiency",
-      "c": "High blood pressure",
-      "d": "Hair loss"
-    },
-    "answer": "b",
-    "rationale": "Long-term metformin use can interfere with Vitamin B12 absorption, leading to deficiency."
-  },
-  {
-    "question_number": 89,
-    "question": "What are the characteristics of a patient with borderline personality disorder (BPD)?",
-    "options": {
-      "a": "Emotional instability, impulsivity",
-      "b": "Stable relationships, low self-esteem",
-      "c": "Obsessive-compulsive behaviors",
-      "d": "Delusions and hallucinations"
-    },
-    "answer": "a",
-    "rationale": "BPD is characterized by emotional dysregulation, unstable relationships, and impulsive behaviors."
-  },
-  {
-    "question_number": 90,
-    "question": "What is the primary treatment for opioid overdose?",
-    "options": {
-      "a": "Naloxone (Narcan)",
-      "b": "Epinephrine",
-      "c": "Atropine",
-      "d": "Glucagon"
-    },
-    "answer": "a",
-    "rationale": "Naloxone is an opioid antagonist that rapidly reverses the effects of an overdose."
-  },
-  {
-    "question_number": 91,
-    "question": "A patient becomes agitated and aggressive. What is the priority nursing action?",
-    "options": {
-      "a": "Restrain the patient immediately",
-      "b": "Use de-escalation techniques and ensure safety",
-      "c": "Leave the patient alone",
-      "d": "Call security without attempting to de-escalate"
-    },
-    "answer": "b",
-    "rationale": "De-escalation and ensuring safety for everyone involved is the priority before resorting to restraints."
-  },
-  {
-    "question_number": 92,
-    "question": "Why is it important to use a draw sheet for patient transfers?",
-    "options": {
-      "a": "To keep the patient warm",
-      "b": "To reduce friction and shear on the patient’s skin",
-      "c": "To prevent the patient from falling",
-      "d": "To make the transfer faster"
-    },
-    "answer": "b",
-    "rationale": "Draw sheets minimize skin damage by reducing friction and shear forces during repositioning."
-  },
-  {
-    "question_number": 93,
-    "question": "What is the purpose of chest compressions in CPR?",
-    "options": {
-      "a": "To restart the heart",
-      "b": "To circulate oxygenated blood to vital organs",
-      "c": "To clear the airway",
-      "d": "To prevent brain damage"
-    },
-    "answer": "b",
-    "rationale": "Chest compressions manually pump blood to the brain and other organs, maintaining perfusion until the heart can be restarted."
-  },
-  {
-    "question_number": 94,
-    "question": "Which of the following is a sign of deep vein thrombosis (DVT)?",
-    "options": {
-      "a": "Cool, pale leg",
-      "b": "Swelling, redness, and warmth in one leg",
-      "c": "Bilateral leg cramping",
-      "d": "Numbness in both feet"
-    },
-    "answer": "b",
-    "rationale": "DVT presents with classic inflammatory signs in the affected limb due to clot formation."
-  },
-  {
-    "question_number": 95,
-    "question": "What is the most appropriate food for a toddler?",
-    "options": {
-      "a": "Hot dogs and whole grapes",
-      "b": "Small, soft pieces of fruits and vegetables",
-      "c": "Hard candies and nuts",
-      "d": "Popcorn and large chunks of meat"
-    },
-    "answer": "b",
-    "rationale": "Small, soft foods prevent choking, a common hazard for toddlers."
-  },
-  {
-    "question_number": 96,
-    "question": "What is the primary purpose of hospice care?",
-    "options": {
-      "a": "To cure the patient’s illness",
-      "b": "To provide comfort and support for terminally ill patients",
-      "c": "To prolong life at all costs",
-      "d": "To focus on aggressive treatment"
-    },
-    "answer": "b",
-    "rationale": "Hospice care focuses on quality of life, comfort, and dignity for patients nearing the end of life."
-  },
-  {
-    "question_number": 97,
-    "question": "What is the primary purpose of obtaining informed consent before a procedure?",
-    "options": {
-      "a": "To protect the hospital from lawsuits",
-      "b": "To ensure the patient understands the risks, benefits, and alternatives",
-      "c": "To document that the procedure was explained",
-      "d": "To fulfill a legal requirement"
-    },
-    "answer": "b",
-    "rationale": "Informed consent ensures patient autonomy by providing them with the necessary information to make an educated decision about their care."
-  },
-  {
-    "question_number": 98,
-    "question": "What are the common symptoms of a urinary tract infection (UTI) in older adults?",
-    "options": {
-      "a": "Fever and chills",
-      "b": "Confusion and agitation",
-      "c": "Frequent urination",
-      "d": "Abdominal pain"
-    },
-    "answer": "b",
-    "rationale": "Older adults may present with atypical UTI symptoms like confusion or delirium instead of classic urinary symptoms."
-  },
-  {
-    "question_number": 99,
-    "question": "What is the primary role of a registered nurse in a multidisciplinary team?",
-    "options": {
-      "a": "To follow doctors’ orders without question",
-      "b": "To coordinate care and advocate for the patient",
-      "c": "To perform only technical tasks",
-      "d": "To manage administrative duties"
-    },
-    "answer": "b",
-    "rationale": "Nurses play a central role in coordinating care, communicating with the team, and advocating for the patient's best interests."
-  },
-  {
-    "question_number": 100,
-    "question": "What is the correct way to administer ear drops to an adult?",
-    "options": {
-      "a": "Pull the earlobe down and back",
-      "b": "Pull the earlobe up and back",
-      "c": "Instill drops directly onto the eardrum",
-      "d": "Have the patient lie on their stomach"
-    },
-    "answer": "b",
-    "rationale": "Pulling the ear up and back straightens the ear canal in adults, allowing the drops to reach the eardrum."
-  },
-  {
-    "question_number": 101,
-    "question": "Which of the following is a key sign of respiratory distress in an infant?",
-    "options": {
-      "a": "Quiet, regular breathing",
-      "b": "Nasal flaring and grunting",
-      "c": "Pink, warm skin",
-      "d": "Strong cry"
-    },
-    "answer": "b",
-    "rationale": "Nasal flaring and grunting are signs of increased work of breathing and respiratory distress in infants."
-  },
-  {
-    "question_number": 102,
-    "question": "What is the main purpose of using a spacer with an inhaler?",
-    "options": {
-      "a": "To make the medication taste better",
-      "b": "To increase the amount of medication delivered to the lungs",
-      "c": "To decrease the side effects of the medication",
-      "d": "To make the inhaler easier to carry"
-    },
-    "answer": "b",
-    "rationale": "A spacer improves coordination and allows more medication to be inhaled into the lungs instead of being deposited in the mouth and throat."
-  },
-  {
-    "question_number": 103,
-    "question": "What is the most common cause of hospital-acquired infections?",
-    "options": {
-      "a": "Contaminated food",
-      "b": "Airborne pathogens",
-      "c": "Poor hand hygiene",
-      "d": "Inadequate cleaning of patient rooms"
-    },
-    "answer": "c",
-    "rationale": "The hands of healthcare workers are the most common vehicle for transmitting pathogens between patients."
-  },
-  {
-    "question_number": 104,
-    "question": "What is the best way to confirm the placement of a nasogastric (NG) tube?",
-    "options": {
-      "a": "Auscultating for an air bolus",
-      "b": "Checking the pH of gastric aspirate",
-      "c": "Obtaining a chest X-ray",
-      "d": "Asking the patient to speak"
-    },
-    "answer": "c",
-    "rationale": "A chest X-ray is the gold standard for confirming correct NG tube placement and preventing inadvertent administration into the lungs."
-  },
-  {
-    "question_number": 105,
-    "question": "A patient with dementia is agitated and trying to get out of bed. What is the most appropriate initial nursing intervention?",
-    "options": {
-      "a": "Apply restraints to prevent falls",
-      "b": "Administer a sedative as prescribed",
-      "c": "Redirect the patient with a calming activity",
-      "d": "Ignore the behavior as it is common in dementia"
-    },
-    "answer": "c",
-    "rationale": "Redirection is a non-pharmacological approach that can effectively de-escalate agitation without resorting to restraints or sedation."
-  },
-  {
-    "question_number": 106,
-    "question": "What is a common complication of immobility in elderly patients?",
-    "options": {
-      "a": "Increased muscle mass",
-      "b": "Improved circulation",
-      "c": "Pressure ulcers and constipation",
-      "d": "Enhanced cognitive function"
-    },
-    "answer": "c",
-    "rationale": "Immobility leads to pressure on skin and decreased bowel motility, increasing the risk of pressure ulcers and constipation."
-  },
-  {
-    "question_number": 107,
-    "question": "What is the purpose of the 'Five Rights' of medication administration?",
-    "options": {
-      "a": "To make medication administration faster",
-      "b": "To ensure patient safety and prevent medication errors",
-      "c": "To reduce the cost of medications",
-      "d": "To simplify documentation"
-    },
-    "answer": "b",
-    "rationale": "The Five Rights (Right Patient, Right Drug, Right Dose, Right Route, Right Time) are a fundamental safety check to prevent medication errors."
-  },
-  {
-    "question_number": 108,
-    "question": "Which of the following is a priority assessment for a patient receiving a blood transfusion?",
-    "options": {
-      "a": "Monitoring for signs of a transfusion reaction",
-      "b": "Checking the patient's appetite",
-      "c": "Assessing the patient's mobility",
-      "d": "Measuring the patient's height and weight"
-    },
-    "answer": "a",
-    "rationale": "Transfusion reactions can be life-threatening, so it is critical to monitor for signs like fever, chills, rash, and shortness of breath."
-  }
-]
- and add all the questions in the Test 9 I've added a lot of questions in it so just check all the questions and add all of them in the Test 9 with no errors
+];
+
+    
