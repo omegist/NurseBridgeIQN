@@ -172,7 +172,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb9-15',
-    text: 'What should you do if another nurse views a patient\'s Electronic Medical Records (EMR) without permission?',
+    text: "What should you do if another nurse views a patient's Electronic Medical Records (EMR) without permission?",
     options: [
       'Ignore the behavior',
       'Report the incident to the supervisor',
@@ -635,7 +635,7 @@ export const questions: Question[] = [
       'Dismiss opinions from non-nursing team members to prioritize nursing perspectives.',
       'Refer the decision-making process solely to the patient to ensure autonomy.',
     ],
-    correctIndex": 1,
+    correctIndex: 1,
     explanation: 'Collaborative decision-making fosters teamwork and ensures well-rounded patient care.',
   },
   {
@@ -713,139 +713,139 @@ export const questions: Question[] = [
   {
     id: 'pb9-60',
     text: 'What is the primary treatment for nutritional rickets?',
-    options: [
-      'Vitamin D supplements',
-      'Calcium supplements',
-      'Phosphate supplements',
-      'All of the above',
-    ],
-    correctIndex: 3,
-    explanation: 'Rickets is treated with a combination of vitamin D, calcium, and phosphate to restore bone health.',
+    options": {
+      "a": "Vitamin D supplements",
+      "b": "Calcium supplements",
+      "c": "Phosphate supplements",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Rickets is treated with a combination of vitamin D, calcium, and phosphate to restore bone health."
   },
   {
-    id: 'pb9-61',
-    text: "What's the main advantage of cardiac exercise for post-myocardial infarction (MI) patients?",
-    options: [
-      'Improves cardiac output',
-      'Enhances vasodilation',
-      'Increases muscle strength',
-      'Reduces mortality rate through improved cardiac function',
-    ],
-    correctIndex: 3,
-    explanation: 'Cardiac rehab improves heart efficiency and reduces future cardiac events and mortality.',
+    "question_number": 61,
+    "question": "What's the main advantage of cardiac exercise for post-myocardial infarction (MI) patients?",
+    "options": {
+      "a": "Improves cardiac output",
+      "b": "Enhances vasodilation",
+      "c": "Increases muscle strength",
+      "d": "Reduces mortality rate through improved cardiac function"
+    },
+    "answer": "d",
+    "rationale": "Cardiac rehab improves heart efficiency and reduces future cardiac events and mortality."
   },
   {
-    id: 'pb9-62',
-    text: 'What is the primary investigation performed on a newborn within the first 24 hours of life?',
-    options: [
-      'Complete Blood Count (CBC)',
-      'Blood Culture',
-      'Newborn Screening (NBS) tests',
-      'Chest X-ray',
-    ],
-    correctIndex: 2,
-    explanation: 'Newborn screening detects metabolic and genetic disorders early for timely intervention.',
+    "question_number": 62,
+    "question": "What is the primary investigation performed on a newborn within the first 24 hours of life?",
+    "options": {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Blood Culture",
+      "c": "Newborn Screening (NBS) tests",
+      "d": "Chest X-ray"
+    },
+    "answer": "c",
+    "rationale": "Newborn screening detects metabolic and genetic disorders early for timely intervention."
   },
   {
-    id: 'pb9-63',
-    text: 'What is the first-line management for a patient presenting with a symptomatic pleural effusion?',
-    options: [
-      'Thoracentesis (pleural fluid drainage)',
-      'Chest tube insertion',
-      'Antibiotic therapy',
-      'Oxygen therapy',
-    ],
-    correctIndex: 0,
-    explanation: 'Thoracentesis relieves symptoms and allows diagnostic evaluation of pleural fluid.',
+    "question_number": 63,
+    "question": "What is the first-line management for a patient presenting with a symptomatic pleural effusion?",
+    "options": {
+      "a": "Thoracentesis (pleural fluid drainage)",
+      "b": "Chest tube insertion",
+      "c": "Antibiotic therapy",
+      "d": "Oxygen therapy"
+    },
+    "answer": "a",
+    "rationale": "Thoracentesis relieves symptoms and allows diagnostic evaluation of pleural fluid."
   },
   {
-    id: 'pb9-64',
-    text: 'What is the initial management step for a patient presenting with Diabetic Ketoacidosis (DKA)?',
-    options: [
-      'Administer insulin therapy',
-      'Correct fluid deficits with IV fluids',
-      'Administer potassium supplements',
-      'Provide oral glucose',
-    ],
-    correctIndex: 1,
-    explanation: 'Fluid resuscitation is the first step to correct dehydration and stabilize circulation before insulin.',
+    "question_number": 64,
+    "question": "What is the initial management step for a patient presenting with Diabetic Ketoacidosis (DKA)?",
+    "options": {
+      "a": "Administer insulin therapy",
+      "b": "Correct fluid deficits with IV fluids",
+      "c": "Administer potassium supplements",
+      "d": "Provide oral glucose"
+    },
+    "answer": "b",
+    "rationale": "Fluid resuscitation is the first step to correct dehydration and stabilize circulation before insulin."
   },
   {
-    question_number: 65,
-    question: "What are the layers of tissue damage in a second-degree burn?",
-    options: {
+    "question_number": 65,
+    "question": "What are the layers of tissue damage in a second-degree burn?",
+    "options": {
       "a": "Epidermis only",
       "b": "Epidermis and dermis (superficial)",
       "c": "Epidermis, dermis (superficial and deep)",
       "d": "Epidermis, dermis, and subcutaneous tissue"
     },
-    answer: "c",
-    rationale: "Second-degree burns affect both superficial and deep layers of the dermis, causing blistering and pain."
+    "answer": "c",
+    "rationale": "Second-degree burns affect both superficial and deep layers of the dermis, causing blistering and pain."
   },
   {
-    question_number: 66,
-    question: "Why are statins usually administered in the evening?",
-    options": {
+    "question_number": 66,
+    "question": "Why are statins usually administered in the evening?",
+    "options": {
       "a": "Improved bioavailability",
       "b": "Enhanced liver enzyme inhibition",
       "c": "Increased cholesterol synthesis at night",
       "d": "Better patient compliance"
     },
-    answer: "c",
-    rationale: "Cholesterol synthesis peaks at night, making evening dosing more effective."
+    "answer": "c",
+    "rationale": "Cholesterol synthesis peaks at night, making evening dosing more effective."
   },
   {
-    question_number: 67,
-    question": "Why is the Varicella Zoster vaccine a live attenuated vaccine?",
-    options": {
+    "question_number": 67,
+    "question": "Why is the Varicella Zoster vaccine a live attenuated vaccine?",
+    "options": {
       "a": "It contains a killed virus",
       "b": "It contains a weakened form of the virus",
       "c": "It contains a genetically modified virus",
       "d": "It contains a synthetic virus-like particle"
     },
-    answer: "b",
-    rationale": "Live attenuated vaccines use weakened viruses to stimulate immunity without causing disease."
+    "answer": "b",
+    "rationale": "Live attenuated vaccines use weakened viruses to stimulate immunity without causing disease."
   },
   {
-    question_number: 68,
-    question": "What is the initial treatment for mild hypoglycemia?",
-    options": {
+    "question_number": 68,
+    "question": "What is the initial treatment for mild hypoglycemia?",
+    "options": {
       "a": "Administer glucagon",
       "b": "Consume 15–20 grams of fast-acting carbohydrates",
       "c": "Inject insulin",
       "d": "Call emergency services"
     },
-    answer": "b",
-    rationale": "Fast-acting carbs quickly raise blood glucose in mild hypoglycemia."
+    "answer": "b",
+    "rationale": "Fast-acting carbs quickly raise blood glucose in mild hypoglycemia."
   },
   {
-    question_number: 69,
-    question": "What is the first action to take when a patient falls in the bathroom?",
-    options": {
+    "question_number": 69,
+    "question": "What is the first action to take when a patient falls in the bathroom?",
+    "options": {
       "a": "Check for injuries",
       "b": "Call for emergency assistance",
       "c": "Check vital signs (breathing, pulse, blood pressure)",
       "d": "Help the patient up"
     },
-    answer": "a",
-    rationale": "Assessing for injury ensures safe handling and prevents further harm."
+    "answer": "a",
+    "rationale": "Assessing for injury ensures safe handling and prevents further harm."
   },
   {
-    question_number: 70,
-    question": "What are the stages of wound healing?",
-    options": {
+    "question_number": 70,
+    "question": "What are the stages of wound healing?",
+    "options": {
       "a": "Hemostasis, Inflammatory, Proliferative",
       "b": "Hemostasis, Inflammatory, Proliferative, Maturation",
       "c": "Inflammatory, Proliferative, Maturation",
       "d": "Hemostasis, Proliferative, Maturation"
     },
-    answer": "b",
-    rationale": "Wound healing progresses through four stages: hemostasis, inflammation, proliferation, and maturation."
+    "answer": "b",
+    "rationale": "Wound healing progresses through four stages: hemostasis, inflammation, proliferation, and maturation."
   },
   {
-    question_number: 71,
-    question": "What is the function of iron in the body?",
-    options": {
+    "question_number": 71,
+    "question": "What is the function of iron in the body?",
+    "options": {
       "a": "To make hemoglobin and myoglobin",
       "b": "To produce antibodies and fight infections",
       "c": "To regulate blood pressure",
@@ -1011,5 +1011,294 @@ export const questions: Question[] = [
     "rationale": "Hepatitis B spreads through blood and bodily fluids, especially via sexual contact and needle sharing."
   }
 ]
+[
+  {
+    "question_number": 85,
+    "question": "What action should you take if a patient who is unable to provide consent due to dementia refuses to take medication?",
+    "options": {
+      "a": "Administer medication against patient’s wishes",
+      "b": "Respect the patient’s refusal and document it",
+      "c": "Ask a family member to convince the patient",
+      "d": "Consult with the healthcare team and consider alternatives"
+    },
+    "answer": "d",
+    "rationale": "Collaborative discussion ensures ethical handling while considering patient autonomy and clinical needs."
+  },
+  {
+    "question_number": 86,
+    "question": "What is a primary sign of dehydration in older adults?",
+    "options": {
+      "a": "Increased thirst",
+      "b": "Confusion",
+      "c": "Frequent urination",
+      "d": "Moist skin"
+    },
+    "answer": "b",
+    "rationale": "Older adults may have a diminished thirst response; confusion is often an early indicator of dehydration."
+  },
+  {
+    "question_number": 87,
+    "question": "Why is it important for nurses to practice self-care?",
+    "options": {
+      "a": "To avoid burnout and maintain professional well-being",
+      "b": "To have more free time for personal activities",
+      "c": "To improve their social media presence",
+      "d": "To get a promotion at work"
+    },
+    "answer": "a",
+    "rationale": "Self-care prevents burnout and maintains physical and mental health, ensuring safe and effective nursing practice."
+  },
+  {
+    "question_number": 88,
+    "question": "What are the common side effects of long-term metformin use?",
+    "options": {
+      "a": "Weight gain",
+      "b": "Vitamin B12 deficiency",
+      "c": "High blood pressure",
+      "d": "Hair loss"
+    },
+    "answer": "b",
+    "rationale": "Long-term metformin use can interfere with Vitamin B12 absorption, leading to deficiency."
+  },
+  {
+    "question_number": 89,
+    "question": "What are the characteristics of a patient with borderline personality disorder (BPD)?",
+    "options": {
+      "a": "Emotional instability, impulsivity",
+      "b": "Stable relationships, low self-esteem",
+      "c": "Obsessive-compulsive behaviors",
+      "d": "Delusions and hallucinations"
+    },
+    "answer": "a",
+    "rationale": "BPD is characterized by emotional dysregulation, unstable relationships, and impulsive behaviors."
+  },
+  {
+    "question_number": 90,
+    "question": "What is the primary treatment for opioid overdose?",
+    "options": {
+      "a": "Naloxone (Narcan)",
+      "b": "Epinephrine",
+      "c": "Atropine",
+      "d": "Glucagon"
+    },
+    "answer": "a",
+    "rationale": "Naloxone is an opioid antagonist that rapidly reverses the effects of an overdose."
+  },
+  {
+    "question_number": 91,
+    "question": "A patient becomes agitated and aggressive. What is the priority nursing action?",
+    "options": {
+      "a": "Restrain the patient immediately",
+      "b": "Use de-escalation techniques and ensure safety",
+      "c": "Leave the patient alone",
+      "d": "Call security without attempting to de-escalate"
+    },
+    "answer": "b",
+    "rationale": "De-escalation and ensuring safety for everyone involved is the priority before resorting to restraints."
+  },
+  {
+    "question_number": 92,
+    "question": "Why is it important to use a draw sheet for patient transfers?",
+    "options": {
+      "a": "To keep the patient warm",
+      "b": "To reduce friction and shear on the patient’s skin",
+      "c": "To prevent the patient from falling",
+      "d": "To make the transfer faster"
+    },
+    "answer": "b",
+    "rationale": "Draw sheets minimize skin damage by reducing friction and shear forces during repositioning."
+  },
+  {
+    "question_number": 93,
+    "question": "What is the purpose of chest compressions in CPR?",
+    "options": {
+      "a": "To restart the heart",
+      "b": "To circulate oxygenated blood to vital organs",
+      "c": "To clear the airway",
+      "d": "To prevent brain damage"
+    },
+    "answer": "b",
+    "rationale": "Chest compressions manually pump blood to the brain and other organs, maintaining perfusion until the heart can be restarted."
+  },
+  {
+    "question_number": 94,
+    "question": "Which of the following is a sign of deep vein thrombosis (DVT)?",
+    "options": {
+      "a": "Cool, pale leg",
+      "b": "Swelling, redness, and warmth in one leg",
+      "c": "Bilateral leg cramping",
+      "d": "Numbness in both feet"
+    },
+    "answer": "b",
+    "rationale": "DVT presents with classic inflammatory signs in the affected limb due to clot formation."
+  },
+  {
+    "question_number": 95,
+    "question": "What is the most appropriate food for a toddler?",
+    "options": {
+      "a": "Hot dogs and whole grapes",
+      "b": "Small, soft pieces of fruits and vegetables",
+      "c": "Hard candies and nuts",
+      "d": "Popcorn and large chunks of meat"
+    },
+    "answer": "b",
+    "rationale": "Small, soft foods prevent choking, a common hazard for toddlers."
+  },
+  {
+    "question_number": 96,
+    "question": "What is the primary purpose of hospice care?",
+    "options": {
+      "a": "To cure the patient’s illness",
+      "b": "To provide comfort and support for terminally ill patients",
+      "c": "To prolong life at all costs",
+      "d": "To focus on aggressive treatment"
+    },
+    "answer": "b",
+    "rationale": "Hospice care focuses on quality of life, comfort, and dignity for patients nearing the end of life."
+  },
+  {
+    "question_number": 97,
+    "question": "What is the primary purpose of obtaining informed consent before a procedure?",
+    "options": {
+      "a": "To protect the hospital from lawsuits",
+      "b": "To ensure the patient understands the risks, benefits, and alternatives",
+      "c": "To document that the procedure was explained",
+      "d": "To fulfill a legal requirement"
+    },
+    "answer": "b",
+    "rationale": "Informed consent ensures patient autonomy by providing them with the necessary information to make an educated decision about their care."
+  },
+  {
+    "question_number": 98,
+    "question": "What are the common symptoms of a urinary tract infection (UTI) in older adults?",
+    "options": {
+      "a": "Fever and chills",
+      "b": "Confusion and agitation",
+      "c": "Frequent urination",
+      "d": "Abdominal pain"
+    },
+    "answer": "b",
+    "rationale": "Older adults may present with atypical UTI symptoms like confusion or delirium instead of classic urinary symptoms."
+  },
+  {
+    "question_number": 99,
+    "question": "What is the primary role of a registered nurse in a multidisciplinary team?",
+    "options": {
+      "a": "To follow doctors’ orders without question",
+      "b": "To coordinate care and advocate for the patient",
+      "c": "To perform only technical tasks",
+      "d": "To manage administrative duties"
+    },
+    "answer": "b",
+    "rationale": "Nurses play a central role in coordinating care, communicating with the team, and advocating for the patient's best interests."
+  },
+  {
+    "question_number": 100,
+    "question": "What is the correct way to administer ear drops to an adult?",
+    "options": {
+      "a": "Pull the earlobe down and back",
+      "b": "Pull the earlobe up and back",
+      "c": "Instill drops directly onto the eardrum",
+      "d": "Have the patient lie on their stomach"
+    },
+    "answer": "b",
+    "rationale": "Pulling the ear up and back straightens the ear canal in adults, allowing the drops to reach the eardrum."
+  },
+  {
+    "question_number": 101,
+    "question": "Which of the following is a key sign of respiratory distress in an infant?",
+    "options": {
+      "a": "Quiet, regular breathing",
+      "b": "Nasal flaring and grunting",
+      "c": "Pink, warm skin",
+      "d": "Strong cry"
+    },
+    "answer": "b",
+    "rationale": "Nasal flaring and grunting are signs of increased work of breathing and respiratory distress in infants."
+  },
+  {
+    "question_number": 102,
+    "question": "What is the main purpose of using a spacer with an inhaler?",
+    "options": {
+      "a": "To make the medication taste better",
+      "b": "To increase the amount of medication delivered to the lungs",
+      "c": "To decrease the side effects of the medication",
+      "d": "To make the inhaler easier to carry"
+    },
+    "answer": "b",
+    "rationale": "A spacer improves coordination and allows more medication to be inhaled into the lungs instead of being deposited in the mouth and throat."
+  },
+  {
+    "question_number": 103,
+    "question": "What is the most common cause of hospital-acquired infections?",
+    "options": {
+      "a": "Contaminated food",
+      "b": "Airborne pathogens",
+      "c": "Poor hand hygiene",
+      "d": "Inadequate cleaning of patient rooms"
+    },
+    "answer": "c",
+    "rationale": "The hands of healthcare workers are the most common vehicle for transmitting pathogens between patients."
+  },
+  {
+    "question_number": 104,
+    "question": "What is the best way to confirm the placement of a nasogastric (NG) tube?",
+    "options": {
+      "a": "Auscultating for an air bolus",
+      "b": "Checking the pH of gastric aspirate",
+      "c": "Obtaining a chest X-ray",
+      "d": "Asking the patient to speak"
+    },
+    "answer": "c",
+    "rationale": "A chest X-ray is the gold standard for confirming correct NG tube placement and preventing inadvertent administration into the lungs."
+  },
+  {
+    "question_number": 105,
+    "question": "A patient with dementia is agitated and trying to get out of bed. What is the most appropriate initial nursing intervention?",
+    "options": {
+      "a": "Apply restraints to prevent falls",
+      "b": "Administer a sedative as prescribed",
+      "c": "Redirect the patient with a calming activity",
+      "d": "Ignore the behavior as it is common in dementia"
+    },
+    "answer": "c",
+    "rationale": "Redirection is a non-pharmacological approach that can effectively de-escalate agitation without resorting to restraints or sedation."
+  },
+  {
+    "question_number": 106,
+    "question": "What is a common complication of immobility in elderly patients?",
+    "options": {
+      "a": "Increased muscle mass",
+      "b": "Improved circulation",
+      "c": "Pressure ulcers and constipation",
+      "d": "Enhanced cognitive function"
+    },
+    "answer": "c",
+    "rationale": "Immobility leads to pressure on skin and decreased bowel motility, increasing the risk of pressure ulcers and constipation."
+  },
+  {
+    "question_number": 107,
+    "question": "What is the purpose of the 'Five Rights' of medication administration?",
+    "options": {
+      "a": "To make medication administration faster",
+      "b": "To ensure patient safety and prevent medication errors",
+      "c": "To reduce the cost of medications",
+      "d": "To simplify documentation"
+    },
+    "answer": "b",
+    "rationale": "The Five Rights (Right Patient, Right Drug, Right Dose, Right Route, Right Time) are a fundamental safety check to prevent medication errors."
+  },
+  {
+    "question_number": 108,
+    "question": "Which of the following is a priority assessment for a patient receiving a blood transfusion?",
+    "options": {
+      "a": "Monitoring for signs of a transfusion reaction",
+      "b": "Checking the patient's appetite",
+      "c": "Assessing the patient's mobility",
+      "d": "Measuring the patient's height and weight"
+    },
+    "answer": "a",
+    "rationale": "Transfusion reactions can be life-threatening, so it is critical to monitor for signs like fever, chills, rash, and shortness of breath."
+  }
 ]
-now add this remaining questions to the Test 9
+ add all the remaining questions in the test 9
