@@ -9,10 +9,10 @@ export const questions: Question[] = [
       'Young adults with active lifestyles',
       'Older adults with altered mental status and inadequate nutrition',
       'Individuals who exercise regularly',
-      'Patients with no underlying health conditions'
+      'Patients with no underlying health conditions',
     ],
     correctIndex: 1,
-    explanation: 'Older adults with cognitive decline and poor nutrition are at higher risk due to immobility and fragile skin.'
+    explanation: 'Older adults with cognitive decline and poor nutrition are at higher risk due to immobility and fragile skin.',
   },
   {
     id: 'pb9-2',
@@ -21,10 +21,10 @@ export const questions: Question[] = [
       'To decrease red blood cells',
       'To increase blood volume and hemoglobin levels',
       'To reduce infection',
-      'To prevent chronic conditions'
+      'To prevent chronic conditions',
     ],
     correctIndex: 1,
-    explanation: 'Iron injections are used when oral iron is ineffective or not tolerated, especially in iron-deficiency anemia.'
+    explanation: 'Iron injections are used when oral iron is ineffective or not tolerated, especially in iron-deficiency anemia.',
   },
   {
     id: 'pb9-3',
@@ -33,10 +33,10 @@ export const questions: Question[] = [
       'Fatigue and weight gain',
       'Dyspnea, tachycardia, and fever',
       'Cough and cold',
-      'Headache and nausea'
+      'Headache and nausea',
     ],
     correctIndex: 1,
-    explanation: 'Sepsis presents with systemic inflammatory signs like fever, rapid heart rate, and breathing difficulty due to infection.'
+    explanation: 'Sepsis presents with systemic inflammatory signs like fever, rapid heart rate, and breathing difficulty due to infection.',
   },
   {
     id: 'pb9-4',
@@ -45,10 +45,10 @@ export const questions: Question[] = [
       'Stridor, tachycardia, and abdominal pain',
       'Fatigue and weight gain',
       'Cough and cold',
-      'Headache and nausea'
+      'Headache and nausea',
     ],
     correctIndex: 0,
-    explanation: 'Anaphylaxis is a severe allergic reaction marked by airway compromise, rapid heart rate, and systemic symptoms.'
+    explanation: 'Anaphylaxis is a severe allergic reaction marked by airway compromise, rapid heart rate, and systemic symptoms.',
   },
   {
     id: 'pb9-5',
@@ -57,10 +57,10 @@ export const questions: Question[] = [
       'Using a face mask',
       'Coughing, smiling, and eating together',
       'Isolating the patient',
-      'Taking medication regularly'
+      'Taking medication regularly',
     ],
     correctIndex: 1,
-    explanation: 'TB spreads through airborne droplets, so close contact activities facilitate transmission.'
+    explanation: 'TB spreads through airborne droplets, so close contact activities facilitate transmission.',
   },
   {
     id: 'pb9-6',
@@ -69,10 +69,10 @@ export const questions: Question[] = [
       'To increase blood sugar levels',
       'To replace the insulin not produced by the pancreas',
       'To decrease appetite',
-      'To improve digestion'
+      'To improve digestion',
     ],
     correctIndex: 1,
-    explanation: 'Type 1 diabetics lack insulin production due to autoimmune destruction of pancreatic beta cells.'
+    explanation: 'Type 1 diabetics lack insulin production due to autoimmune destruction of pancreatic beta cells.',
   },
   {
     id: 'pb9-7',
@@ -81,10 +81,10 @@ export const questions: Question[] = [
       'Young age and polypharmacy',
       'Advanced age and lifestyle',
       'Regular exercise and balanced diet',
-      'Adequate sleep and hydration'
+      'Adequate sleep and hydration',
     ],
     correctIndex: 1,
-    explanation: 'Delirium is more common in older adults with poor lifestyle habits and multiple medications.'
+    explanation: 'Delirium is more common in older adults with poor lifestyle habits and multiple medications.',
   },
   {
     id: 'pb9-8',
@@ -93,10 +93,10 @@ export const questions: Question[] = [
       'Direct pressure, checking every few minutes to see if the bleeding has stopped',
       'Ice the injured leg area several times a day',
       'Direct pressure to the injured area continuously for 10 minutes',
-      'Ice bag with elevation of the leg twice a day'
+      'Ice bag with elevation of the leg twice a day',
     ],
     correctIndex: 2,
-    explanation: 'Hemophilia patients require firm, continuous pressure to control bleeding due to impaired clotting.'
+    explanation: 'Hemophilia patients require firm, continuous pressure to control bleeding due to impaired clotting.',
   },
   {
     id: 'pb9-9',
@@ -105,10 +105,10 @@ export const questions: Question[] = [
       'Encourage the patient to lie down and rest',
       'Administer nitroglycerin as prescribed',
       'Give the patient a high calorie meal',
-      'Call for emergency services and prepare for potential CPR'
+      'Call for emergency services and prepare for potential CPR',
     ],
     correctIndex: 3,
-    explanation: 'Acute chest pain may indicate a cardiac emergency; immediate response is critical.'
+    explanation: 'Acute chest pain may indicate a cardiac emergency; immediate response is critical.',
   },
   {
     id: 'pb9-10',
@@ -117,10 +117,10 @@ export const questions: Question[] = [
       'To reduce postoperative pain',
       'To enhance healing process',
       'To prevent surgical site infections',
-      'To decrease blood loss during surgery'
+      'To decrease blood loss during surgery',
     ],
     correctIndex: 2,
-    explanation: 'Prophylactic antibiotics reduce the risk of infection at the surgical site.'
+    explanation: 'Prophylactic antibiotics reduce the risk of infection at the surgical site.',
   },
   {
     id: 'pb9-11',
@@ -129,10 +129,10 @@ export const questions: Question[] = [
       'Anxiety disorder',
       'Bipolar disorder',
       'Schizophrenia',
-      'Persistent depressive disorder'
+      'Persistent depressive disorder',
     ],
     correctIndex: 3,
-    explanation: 'Persistent depressive disorder is a chronic form of depression that may follow MDD.'
+    explanation: 'Persistent depressive disorder is a chronic form of depression that may follow MDD.',
   },
   {
     id: 'pb9-12',
@@ -141,10 +141,10 @@ export const questions: Question[] = [
       'Administering activated charcoal to bind lithium',
       'Increase sodium intake to promote lithium excretion',
       'Encouraging the patient to drink large amount of water',
-      'Providing high protein diet to decrease lithium levels'
+      'Providing high protein diet to decrease lithium levels',
     ],
     correctIndex: 1,
-    explanation: 'Lithium excretion is enhanced by sodium; low sodium increases lithium retention.'
+    explanation: 'Lithium excretion is enhanced by sodium; low sodium increases lithium retention.',
   },
   {
     id: 'pb9-13',
@@ -153,10 +153,10 @@ export const questions: Question[] = [
       'Tripling their birth weight',
       'Speaking in full sentences',
       'Using a spoon and fork',
-      'Writing their name'
+      'Writing their name',
     ],
     correctIndex: 0,
-    explanation: 'Tripling birth weight by one year is a key developmental milestone.'
+    explanation: 'Tripling birth weight by one year is a key developmental milestone.',
   },
   {
     id: 'pb9-14',
@@ -165,22 +165,22 @@ export const questions: Question[] = [
       'To increase blood sugar levels',
       'To replace the insulin not produced by the pancreas',
       'To decrease appetite',
-      'To improve digestion'
+      'To improve digestion',
     ],
     correctIndex: 1,
-    explanation: 'Type 1 diabetes requires insulin replacement due to pancreatic beta cell destruction.'
+    explanation: 'Type 1 diabetes requires insulin replacement due to pancreatic beta cell destruction.',
   },
   {
     id: 'pb9-15',
-    text: "What should you do if another nurse views a patient's Electronic Medical Records (EMR) without permission?",
+    text: 'What should you do if another nurse views a patient\'s Electronic Medical Records (EMR) without permission?',
     options: [
       'Ignore the behavior',
       'Report the incident to the supervisor',
       'Share more patient details',
-      'Congratulate the nurse for being thorough'
+      'Congratulate the nurse for being thorough',
     ],
     correctIndex: 1,
-    explanation: 'Unauthorized EMR access violates privacy laws and must be reported.'
+    explanation: 'Unauthorized EMR access violates privacy laws and must be reported.',
   },
   {
     id: 'pb9-16',
@@ -189,10 +189,10 @@ export const questions: Question[] = [
       'Reassure her without providing details',
       'Provide detailed information about the benefits of vaccination',
       'Advise her to avoid the vaccination',
-      'Refer her to another healthcare provider'
+      'Refer her to another healthcare provider',
     ],
     correctIndex: 1,
-    explanation: 'Educating parents about vaccine benefits promotes informed decisions and public health.'
+    explanation: 'Educating parents about vaccine benefits promotes informed decisions and public health.',
   },
   {
     id: 'pb9-17',
@@ -201,10 +201,10 @@ export const questions: Question[] = [
       'Increased blood pressure',
       'Diuresis',
       'Bradycardia',
-      'Constipation'
+      'Constipation',
     ],
     correctIndex: 1,
-    explanation: 'Lasix is a diuretic; increased urine output confirms its effectiveness.'
+    explanation: 'Lasix is a diuretic; increased urine output confirms its effectiveness.',
   },
   {
     id: 'pb9-18',
@@ -213,179 +213,803 @@ export const questions: Question[] = [
       'Measuring the volume accurately',
       'Avoiding catheter infection',
       'Checking the color of the urine',
-      'Shaking the urine bag'
+      'Shaking the urine bag',
     ],
     correctIndex: 1,
-    explanation: 'Preventing catheter-associated urinary tract infections (CAUTIs) is a top priority during urine bag handling. Maintaining sterile technique and avoiding contamination are essential to protect the patient.'
+    explanation: 'Preventing catheter-associated urinary tract infections (CAUTIs) is a top priority during urine bag handling. Maintaining sterile technique and avoiding contamination are essential to protect the patient.',
   },
   {
     id: 'pb9-19',
     text: 'During a neurological assessment, which sign requires immediate attention?',
-    options: [ 'Equal pupil size', 'Unequal pupil size', 'Normal reflexes', 'Bilateral hand strength' ],
+    options: [
+      'Equal pupil size',
+      'Unequal pupil size',
+      'Normal reflexes',
+      'Bilateral hand strength',
+    ],
     correctIndex: 1,
-    explanation: 'Unequal pupils may indicate increased intracranial pressure or brain injury and require urgent evaluation.'
+    explanation: 'Unequal pupils may indicate increased intracranial pressure or brain injury and require urgent evaluation.',
   },
   {
     id: 'pb9-20',
     text: 'Which diagnostic tests are commonly used for pneumonia?',
-    options: [ 'CT scan and urine culture', 'MRI and sputum culture', 'Chest X-ray and blood cultures', 'Ultrasound and stool sample' ],
+    options: [
+      'CT scan and urine culture',
+      'MRI and sputum culture',
+      'Chest X-ray and blood cultures',
+      'Ultrasound and stool sample',
+    ],
     correctIndex: 2,
-    explanation: 'Chest X-ray confirms lung involvement, and blood cultures help identify systemic infection.'
+    explanation: 'Chest X-ray confirms lung involvement, and blood cultures help identify systemic infection.',
   },
   {
     id: 'pb9-21',
     text: 'Metoprolol is used in a myocardial infarction (MI) patient primarily to:',
-    options: [ 'Increase heart rate', 'Decrease blood pressure', 'Reduce myocardial oxygen demand', 'Improve renal function' ],
+    options: [
+      'Increase heart rate',
+      'Decrease blood pressure',
+      'Reduce myocardial oxygen demand',
+      'Improve renal function',
+    ],
     correctIndex: 2,
-    explanation: 'Metoprolol reduces heart rate and contractility, lowering oxygen demand and protecting the heart post-MI.'
+    explanation: 'Metoprolol reduces heart rate and contractility, lowering oxygen demand and protecting the heart post-MI.',
   },
   {
     id: 'pb9-22',
     text: 'What is a distinguishing feature between myocardial infarction (MI) and angina?',
-    options: [ 'MI symptoms can be relieved by rest', 'Angina can be resolved by treating precipitating factors', 'MI is not affected by nitroglycerin', 'Angina always results in permanent damage' ],
+    options: [
+      'MI symptoms can be relieved by rest',
+      'Angina can be resolved by treating precipitating factors',
+      'MI is not affected by nitroglycerin',
+      'Angina always results in permanent damage',
+    ],
     correctIndex: 1,
-    explanation: 'Angina is typically reversible and triggered by exertion or stress, unlike MI which causes permanent damage.'
+    explanation: 'Angina is typically reversible and triggered by exertion or stress, unlike MI which causes permanent damage.',
   },
   {
     id: 'pb9-23',
     text: 'What is the first step in managing a patient with suspected myocardial infarction (MI)?',
-    options: [ 'Administer pain relief medication', 'Perform an electrocardiogram (ECG)', 'Provide high-flow oxygen', 'Give the patient aspirin' ],
+    options: [
+      'Administer pain relief medication',
+      'Perform an electrocardiogram (ECG)',
+      'Provide high-flow oxygen',
+      'Give the patient aspirin',
+    ],
     correctIndex: 1,
-    explanation: 'An ECG is essential to confirm MI and guide immediate treatment decisions.'
+    explanation: 'An ECG is essential to confirm MI and guide immediate treatment decisions.',
   },
   {
     id: 'pb9-24',
     text: 'Which intervention is most important in preventing hospital-acquired pneumonia in bedridden patients?',
-    options: [ 'Frequent oral hygiene', 'Administering antibiotics prophylactically', 'Elevating the head of the bed', 'Turning the patient every two hours' ],
+    options: [
+      'Frequent oral hygiene',
+      'Administering antibiotics prophylactically',
+      'Elevating the head of the bed',
+      'Turning the patient every two hours',
+    ],
     correctIndex: 2,
-    explanation: 'Elevating the head reduces aspiration risk, a major contributor to hospital-acquired pneumonia.'
+    explanation: 'Elevating the head reduces aspiration risk, a major contributor to hospital-acquired pneumonia.',
   },
   {
     id: 'pb9-25',
     text: 'What is the most effective way to assess fluid balance in a patient with heart failure?',
-    options: [ 'Measuring daily weight', 'Monitoring blood pressure', 'Checking skin turgor', 'Recording fluid intake and output' ],
+    options: [
+      'Measuring daily weight',
+      'Monitoring blood pressure',
+      'Checking skin turgor',
+      'Recording fluid intake and output',
+    ],
     correctIndex: 0,
-    explanation: 'Daily weight changes reflect fluid retention or loss more accurately than other methods.'
+    explanation: 'Daily weight changes reflect fluid retention or loss more accurately than other methods.',
   },
   {
     id: 'pb9-26',
     text: 'Which of the following is a common side effect of lithium therapy?',
-    options: [ 'Hypotension', 'Hyperglycemia', 'Tremors', 'Hair loss' ],
+    options: [
+      'Hypotension',
+      'Hyperglycemia',
+      'Tremors',
+      'Hair loss',
+    ],
     correctIndex: 2,
-    explanation: 'Tremors are a well-known neurological side effect of lithium, especially at higher doses.'
+    explanation: 'Tremors are a well-known neurological side effect of lithium, especially at higher doses.',
   },
   {
     id: 'pb9-27',
     text: 'What is the best initial response to a patient expressing suicidal thoughts?',
-    options: [ 'Advise the patient to avoid stressful situations', 'Notify the patient\'s family members immediately', 'Conduct a thorough risk assessment', 'Offer empathetic listening and assure confidentiality' ],
+    options: [
+      'Advise the patient to avoid stressful situations',
+      'Notify the patient\'s family members immediately',
+      'Conduct a thorough risk assessment',
+      'Offer empathetic listening and assure confidentiality',
+    ],
     correctIndex: 3,
-    explanation: 'Empathetic listening builds trust and allows for proper assessment and intervention planning.'
+    explanation: 'Empathetic listening builds trust and allows for proper assessment and intervention planning.',
   },
   {
     id: 'pb9-28',
     text: 'Why is it necessary to take insulin injections?',
-    options: [ 'It lowers blood sugars by increasing the utilization of carbohydrates', 'It absorbs rapidly and increases the body\'s resistance to infection', 'It increases the rate of metabolism, therefore decreasing blood glucose levels', 'It stimulates the liver to excrete more glucose for the body to utilize' ],
+    options: [
+      'It lowers blood sugars by increasing the utilization of carbohydrates',
+      'It absorbs rapidly and increases the body\'s resistance to infection',
+      'It increases the rate of metabolism, therefore decreasing blood glucose levels',
+      'It stimulates the liver to excrete more glucose for the body to utilize',
+    ],
     correctIndex: 0,
-    explanation: 'Insulin facilitates glucose uptake into cells, lowering blood sugar and supporting metabolism.'
+    explanation: 'Insulin facilitates glucose uptake into cells, lowering blood sugar and supporting metabolism.',
   },
   {
     id: 'pb9-29',
     text: 'What are the typical early symptoms of hypoglycemia?',
-    options: [ 'Palpitation, nausea, and drooling', 'Drowsiness, dry mouth, and nystagmus', 'Dry skin, vomiting, and irritability', 'Nervousness, sweating, and weakness' ],
+    options: [
+      'Palpitation, nausea, and drooling',
+      'Drowsiness, dry mouth, and nystagmus',
+      'Dry skin, vomiting, and irritability',
+      'Nervousness, sweating, and weakness',
+    ],
     correctIndex: 3,
-    explanation: 'These symptoms reflect the body\'s adrenergic response to low blood glucose.'
+    explanation: 'These symptoms reflect the body\'s adrenergic response to low blood glucose.',
   },
   {
     id: 'pb9-30',
     text: 'What does HbA1c represent?',
-    options: [ 'Blood glucose level that took fasting', 'Average blood glucose level for the past 2-3 months', 'Daily blood glucose fluctuations', 'None of the above' ],
+    options: [
+      'Blood glucose level that took fasting',
+      'Average blood glucose level for the past 2-3 months',
+      'Daily blood glucose fluctuations',
+      'None of the above',
+    ],
     correctIndex: 1,
-    explanation: 'HbA1c reflects long-term glucose control by measuring glycation of hemoglobin.'
+    explanation: 'HbA1c reflects long-term glucose control by measuring glycation of hemoglobin.',
   },
   {
     id: 'pb9-31',
     text: 'Why is post-operative breathing and exercise important?',
-    options: [ 'To prevent pneumonia and pulmonary embolism', 'To prevent injury to the operated site', 'To relieve pain', 'To increase mobility' ],
+    options: [
+      'To prevent pneumonia and pulmonary embolism',
+      'To prevent injury to the operated site',
+      'To relieve pain',
+      'To increase mobility',
+    ],
     correctIndex: 0,
-    explanation: 'Deep breathing and movement prevent respiratory complications and improve circulation.'
+    explanation: 'Deep breathing and movement prevent respiratory complications and improve circulation.',
   },
   {
     id: 'pb9-32',
     text: 'What is the immediate action to take if you accidentally prick yourself with a needle while administering insulin?',
-    options: [ 'Inform nurse manager', 'Clean the wound with soap and water', 'Inform patient about the incident', 'Withdraw blood sample of the patient' ],
+    options: [
+      'Inform nurse manager',
+      'Clean the wound with soap and water',
+      'Inform patient about the incident',
+      'Withdraw blood sample of the patient',
+    ],
     correctIndex: 1,
-    explanation: 'Immediate wound cleaning reduces infection risk; reporting follows after initial care.'
+    explanation: 'Immediate wound cleaning reduces infection risk; reporting follows after initial care.',
   },
   {
     id: 'pb9-33',
     text: 'A patient with a history of IV drug use reports fatigue, joint pain, and dark urine. Which hepatitis type is likely causing these symptoms?',
-    options: [ 'Hepatitis A', 'Hepatitis B', 'Hepatitis C', 'Hepatitis E' ],
+    options: [
+      'Hepatitis A',
+      'Hepatitis B',
+      'Hepatitis C',
+      'Hepatitis E',
+    ],
     correctIndex: 1,
-    explanation: 'Hepatitis B is commonly transmitted through blood and bodily fluids, especially in IV drug users, and causes systemic symptoms like fatigue and dark urine.'
+    explanation: 'Hepatitis B is commonly transmitted through blood and bodily fluids, especially in IV drug users, and causes systemic symptoms like fatigue and dark urine.',
   },
   {
     id: 'pb9-34',
     text: 'What is the first priority when treating a patient experiencing anaphylaxis?',
-    options: [ 'Administering antihistamines', 'Secure the airway, breathing, and circulation (ABCs)', 'Provide supplemental oxygen', 'Inject epinephrine' ],
+    options: [
+      'Administering antihistamines',
+      'Secure the airway, breathing, and circulation (ABCs)',
+      'Provide supplemental oxygen',
+      'Inject epinephrine',
+    ],
     correctIndex: 1,
-    explanation: 'While epinephrine is critical, the first priority is to assess and secure the airway, breathing, and circulation to prevent fatal complications.'
+    explanation: 'While epinephrine is critical, the first priority is to assess and secure the airway, breathing, and circulation to prevent fatal complications.',
   },
   {
     id: 'pb9-35',
     text: 'What is the primary concern when monitoring a patient with a history of diabetes who presents with an infection?',
-    options: [ 'Increased thirst', 'Elevated blood pressure', 'Fluctuations in blood glucose levels', 'Decreased appetite' ],
+    options: [
+      'Increased thirst',
+      'Elevated blood pressure',
+      'Fluctuations in blood glucose levels',
+      'Decreased appetite',
+    ],
     correctIndex: 2,
-    explanation: 'Infections can cause stress-induced hyperglycemia or hypoglycemia, making glucose monitoring essential in diabetic patients.'
+    explanation: 'Infections can cause stress-induced hyperglycemia or hypoglycemia, making glucose monitoring essential in diabetic patients.',
   },
   {
     id: 'pb9-36',
     text: 'What is the primary risk if a patient abruptly stops long-term corticosteroid therapy?',
-    options: [ 'Blood sugar imbalance (hyperglycemia)', 'Adrenal gland dysfunction (adrenal insufficiency)', 'Electrolyte imbalance (hyperkalemia)', 'Blood pressure elevation (hypertension)' ],
+    options: [
+      'Blood sugar imbalance (hyperglycemia)',
+      'Adrenal gland dysfunction (adrenal insufficiency)',
+      'Electrolyte imbalance (hyperkalemia)',
+      'Blood pressure elevation (hypertension)',
+    ],
     correctIndex: 1,
-    explanation: 'Sudden withdrawal of corticosteroids can suppress the hypothalamic-pituitary-adrenal axis, leading to adrenal insufficiency.'
+    explanation: 'Sudden withdrawal of corticosteroids can suppress the hypothalamic-pituitary-adrenal axis, leading to adrenal insufficiency.',
   },
   {
     id: 'pb9-37',
     text: 'What is a well-known side effect of prolonged phenobarbital use?',
-    options: [ 'Increased risk of alcohol dependence', 'Aggressive behavior', 'Physical dependence and addiction', 'Treatment resistance' ],
+    options: [
+      'Increased risk of alcohol dependence',
+      'Aggressive behavior',
+      'Physical dependence and addiction',
+      'Treatment resistance',
+    ],
     correctIndex: 2,
-    explanation: 'Phenobarbital is a barbiturate with high potential for dependence and addiction when used long-term.'
+    explanation: 'Phenobarbital is a barbiturate with high potential for dependence and addiction when used long-term.',
   },
   {
     id: 'pb9-38',
     text: 'What is the appropriate action upon discovering a medication discrepancy in a patient\'s chart?',
-    options: [ 'Overlook as potential clerical error', 'Document and notify healthcare provider immediately', 'Correct discrepancy personally', 'Inform charge nurse and wait' ],
+    options: [
+      'Overlook as potential clerical error',
+      'Document and notify healthcare provider immediately',
+      'Correct discrepancy personally',
+      'Inform charge nurse and wait',
+    ],
     correctIndex: 1,
-    explanation: 'Medication discrepancies can lead to serious harm; notifying the provider ensures timely correction and patient safety.'
+    explanation: 'Medication discrepancies can lead to serious harm; notifying the provider ensures timely correction and patient safety.',
   },
   {
     id: 'pb9-39',
-    text: 'A family member of a patient asks you to disclose another patient\'s medical condition. How do you respond?',
-    options: [ 'Politely decline to disclose any information about the other patient', 'Share the requested information with the family member to maintain transparency', 'Ask the family member to check with the family member directly', 'Provide limited information to the family member in order to avoid arguments' ],
+    text: "A family member of a patient asks you to disclose another patient's medical condition. How do you respond?",
+    options: [
+      'Politely decline to disclose any information about the other patient',
+      'Share the requested information with the family member to maintain transparency',
+      'Ask the family member to check with the family member directly',
+      'Provide limited information to the family member in order to avoid arguments',
+    ],
     correctIndex: 0,
-    explanation: 'Patient confidentiality is a legal and ethical obligation; information must not be shared without consent.'
+    explanation: 'Patient confidentiality is a legal and ethical obligation; information must not be shared without consent.',
   },
   {
     id: 'pb9-40',
     text: 'During a busy shift, you accidentally administer medication to the wrong patient. What is your immediate action?',
-    options: [ 'Notify the patient and apologize, escalate to the medical team and then document the error in the incident report', 'Wait to see if the patient experiences any adverse effects before taking further action', 'Fill the incident report and notify concerned charge nurse', 'Keep quiet about the error to avoid disciplinary action' ],
+    options: [
+      'Notify the patient and apologize, escalate to the medical team and then document the error in the incident report',
+      'Wait to see if the patient experiences any adverse effects before taking further action',
+      'Fill the incident report and notify concerned charge nurse',
+      'Keep quiet about the error to avoid disciplinary action',
+    ],
     correctIndex: 0,
-    explanation: 'Immediate disclosure and documentation are essential to manage potential harm and uphold professional accountability.'
+    explanation: 'Immediate disclosure and documentation are essential to manage potential harm and uphold professional accountability.',
   },
   {
     id: 'pb9-41',
     text: 'A senior nurse performs a procedure contrary to established best practices. How do you respond?',
-    options: [ 'Inform the nurse that their method is incorrect and provide guidance based on current protocols', 'Ignore the situation since the senior nurse has more experience and might have valid reasons', 'Report the incident to the unit manager in order to avoid discussing the issue with the senior nurse', 'Mimic the senior nurse\'s technique to avoid conflict and maintain harmony in the team' ],
+    options: [
+      'Inform the nurse that their method is incorrect and provide guidance based on current protocols',
+      'Ignore the situation since the senior nurse has more experience and might have valid reasons',
+      'Report the incident to the unit manager in order to avoid discussing the issue with the senior nurse',
+      'Mimic the senior nurse\'s technique to avoid conflict and maintain harmony in the team',
+    ],
     correctIndex: 0,
-    explanation: 'Addressing unsafe practices respectfully ensures patient safety and promotes adherence to evidence-based care.'
+    explanation: 'Addressing unsafe practices respectfully ensures patient safety and promotes adherence to evidence-based care.',
   },
   {
     id: 'pb9-42',
-    text: 'A patient with a terminal diagnosis asks you to keep the information secret from their family. How do you respond?',
-    options: [ 'Honor the patient’s request and keep the information confidential', 'Inform the family about the diagnosis despite the patient’s wishes', 'Discuss the situation with the healthcare team and seek their guidance', 'Pretend not to have heard the patient’s request and continue as usual' ],
+    text: "A patient with a terminal diagnosis asks you to keep the information secret from their family. How do you respond?",
+    options: [
+      'Honor the patient’s request and keep the information confidential',
+      'Inform the family about the diagnosis despite the patient’s wishes',
+      'Discuss the situation with the healthcare team and seek their guidance',
+      'Pretend not to have heard the patient’s request and continue as usual',
+    ],
     correctIndex: 2,
-    explanation: 'Balancing patient autonomy with ethical responsibilities requires team input to ensure appropriate handling of sensitive information.'
+    explanation: 'Balancing patient autonomy with ethical responsibilities requires team input to ensure appropriate handling of sensitive information.',
+  },
+  {
+    id: 'pb9-43',
+    text: "A nurse leaves a patient's confidential information visible on a computer screen while away from the workstation. What action should be taken?",
+    options: [
+      'Log out, inform unit manager, and document incident',
+      'Ignore, considering it unintentional',
+      'Close document, remind colleagues to be cautious',
+      'Delete information to prevent access',
+    ],
+    correctIndex: 0,
+    explanation: 'Leaving patient data exposed violates confidentiality; logging out and reporting ensures accountability and prevents future breaches.',
+  },
+  {
+    id: 'pb9-44',
+    text: "During a team meeting, a nurse overhears colleagues discussing a patient's condition in a casual manner. What action should the nurse take?",
+    options: [
+      'Join the conversation to contribute their own insights.',
+      'Report the incident to the unit manager or charge nurse.',
+      'Ignore the conversation as it doesn’t directly involve their patient.',
+      'Confront the colleagues about their unprofessional behavior during the meeting.',
+    ],
+    correctIndex: 1,
+    explanation: 'Discussing patient details casually breaches privacy; reporting ensures professional standards are upheld.',
+  },
+  {
+    id: 'pb9-45',
+    text: 'A nurse suspects medication doses prescribed for a patient are excessively high. How should they proceed?',
+    options: [
+      'Administer the medication as prescribed to avoid delays in treatment.',
+      'Discuss concerns with the prescribing healthcare provider to clarify the dosage.',
+      'Adjust the medication dose without informing the healthcare team to prevent harm.',
+      'Wait until the next shift to discuss concerns with a more experienced nurse.',
+    ],
+    correctIndex: 1,
+    explanation: 'Clarifying with the prescriber ensures safe medication administration and avoids errors.',
+  },
+  {
+    id: 'pb9-46',
+    text: 'A nurse receives a gift from a patient as a token of appreciation. What action should the nurse take according to professional guidelines?',
+    options: [
+      'Politely decline the gift and explain the policy on accepting gifts from patients.',
+      'Accept the gift to maintain a positive relationship with the patient.',
+      'Share the gift with colleagues to avoid any appearance of favoritism.',
+      'Ask the patient to keep the gift until discharge to avoid complications.',
+    ],
+    correctIndex: 0,
+    explanation: 'Accepting gifts may compromise professional boundaries; declining respectfully maintains ethical standards.',
+  },
+  {
+    id: 'pb9-47',
+    text: 'Before delegating medication administration to a junior nurse for an unfamiliar patient, what factors should you consider?',
+    options: [
+      'The workload of the junior nurse and their familiarity with the patient.',
+      'The urgency of other tasks and whether the medication is critical.',
+      'The availability of other nurses who may be more experienced.',
+      'All of the above.',
+    ],
+    correctIndex: 3,
+    explanation: 'Safe delegation requires assessing workload, experience, and urgency to ensure proper care.',
+  },
+  {
+    id: 'pb9-48',
+    text: 'To help a new graduate nurse improve time management and prioritization skills, how should you delegate tasks?',
+    options: [
+      'Assign them routine tasks that are less critical to patient care.',
+      'Provide clear instructions and expectations for each task delegated.',
+      'Avoid delegating tasks until the nurse gains more experience.',
+      'Delegate tasks that require minimal interaction with patients to build confidence.',
+    ],
+    correctIndex: 0,
+    explanation: 'Routine tasks help new nurses build confidence and develop prioritization skills gradually.',
+  },
+  {
+    id: 'pb9-49',
+    text: 'After delegating vital sign monitoring to a diligent nursing assistant lacking formal training, what additional steps should you take?',
+    options: [
+      'Provide the nursing assistant with a checklist for vital sign assessment.',
+      'Monitor the patient’s vital signs yourself to ensure accuracy.',
+      'Document the delegation in the patient’s chart without further action.',
+      'Notify the healthcare provider about the nursing assistant’s lack of training.',
+    ],
+    correctIndex: 0,
+    explanation: 'Providing a checklist ensures consistency and supports the assistant in performing the task correctly.',
+  },
+  {
+    id: 'pb9-50',
+    text: 'When delegating post-operative wound care to an enrolled nurse (EN) who’s unsure about recognizing infection signs, what’s your responsibility?',
+    options: [
+      'Provide the EN with additional training on wound care assessment.',
+      'Assume responsibility for wound care assessments until the EN gains confidence.',
+      'Delegate wound care to another healthcare provider for any concerns.',
+      'Advise the EN to consult with the healthcare provider for any concerns.',
+    ],
+    correctIndex: 1,
+    explanation: 'Until the EN is confident, the delegating nurse must ensure patient safety by retaining responsibility.',
+  },
+  {
+    id: 'pb9-51',
+    text: "When a patient experiences an adverse reaction after an enrolled nurse (EN) administers a high-risk medication delegated by a registered nurse, what's the first step?",
+    options: [
+      'Review the medication administration record to verify the details.',
+      'Document the adverse reaction in the patient\'s record.',
+      'Inform the healthcare provider about the adverse reaction.',
+      'Conduct a thorough investigation to determine the cause of the reaction.',
+    ],
+    correctIndex: 2,
+    explanation: 'Immediate notification allows for timely medical intervention and proper documentation.',
+  },
+  {
+    id: 'pb9-52',
+    text: "What actions should you take when private discussions haven't improved a colleague's substandard work performance?",
+    options: [
+      'Document the incidents and escalate the matter to the nurse manager or supervisor.',
+      'Confront the colleague publicly during a team meeting to ensure accountability.',
+      'Ignore the behavior unless it directly impacts patient safety.',
+      'Offer to take on extra shifts to cover for the colleague and prevent disruptions.',
+    ],
+    correctIndex: 0,
+    explanation: 'Escalating with documentation ensures accountability and protects patient care quality.',
+  },
+  {
+    id: 'pb9-53',
+    text: "When leading a healthcare team with differing opinions on a complex patient's treatment, how do you resolve the disagreement while maintaining collaboration?",
+    options: [
+      'Make the final decision based on your nursing expertise to expedite patient care.',
+      'Encourage open dialogue and respect differing viewpoints to reach a consensus.',
+      'Dismiss opinions from non-nursing team members to prioritize nursing perspectives.',
+      'Refer the decision-making process solely to the patient to ensure autonomy.',
+    ],
+    correctIndex": 1,
+    explanation: 'Collaborative decision-making fosters teamwork and ensures well-rounded patient care.',
+  },
+  {
+    id: 'pb9-54',
+    text: 'During a night shift, you discover that a junior nurse has made an error in documenting medication administration for a critically ill patient. What immediate actions should you take to address this situation?',
+    options: [
+      'Correct the documentation yourself to prevent further confusion.',
+      'Report the error to the nurse manager and document the incident according to policy.',
+      'Ignore the error as it may have been an innocent mistake.',
+      'Inform the patient’s family about the error to maintain transparency.',
+    ],
+    correctIndex: 1,
+    explanation: 'Reporting and documenting errors ensures transparency and supports safe patient care.',
+  },
+  {
+    id: 'pb9-55',
+    text: 'While caring for a post-operative patient, you notice signs of early infection around the surgical wound. The healthcare provider has not yet assessed the patient. What steps should you take to ensure safe and appropriate care for the patient?',
+    options: [
+      'Document your observations and wait for the healthcare provider’s assessment.',
+      'Notify the healthcare provider immediately and document their response.',
+      'Apply topical antibiotics to the wound without consulting the healthcare provider.',
+      'Wait for the next shift to report the findings to the charge nurse.',
+    ],
+    correctIndex: 1,
+    explanation: 'Prompt notification ensures timely intervention and prevents complications from untreated infection.',
+  },
+  {
+    id: 'pb9-56',
+    text: 'You are part of a team planning care for a terminally ill patient. The patient and family have expressed wishes for comfort care only, while some team members want to aggressively explore treatment. How do you advocate for the patient’s wishes while maintaining collaboration with the healthcare team?',
+    options: [
+      'Insist on following the patient’s wishes regardless of team opinions.',
+      'Gather input from all team members and present it to the patient.',
+      'Refer the decision to the healthcare provider to avoid conflict.',
+      'Ignore the family’s wishes and proceed with aggressive treatment to prolong life.',
+    ],
+    correctIndex: 1,
+    explanation: 'Collaborative discussion respects both patient autonomy and team input, ensuring ethical care planning.',
+  },
+  {
+    id: 'pb9-57',
+    text: 'What immediate action should you take if a patient experiences potassium infusion extravasation?',
+    options: [
+      'Apply heat to the affected area',
+      'Continue the infusion at a slower rate to complete the prescribed dose.',
+      'Administer calcium gluconate IV to counteract potassium effects.',
+      'Stop the infusion immediately and apply cold compresses to the affected area and elevate the extremity.',
+    ],
+    correctIndex: 3,
+    explanation: 'Stopping the infusion and applying cold compresses minimizes tissue damage and inflammation.',
+  },
+  {
+    id: 'pb9-58',
+    text: 'What is the first priority in managing an unconscious patient?',
+    options: [
+      'Check vital signs',
+      'Establish IV access',
+      'Ensure airway patency',
+      'Administer oxygen',
+    ],
+    correctIndex: 2,
+    explanation: 'Airway management is the top priority in unconscious patients to prevent hypoxia and death.',
+  },
+  {
+    id: 'pb9-59',
+    text: 'What is the first-line antibiotic therapy for community-acquired pneumonia?',
+    options: [
+      'Azithromycin',
+      'Ceftriaxone',
+      'Amoxicillin-clavulanate',
+      'All of the above',
+    ],
+    correctIndex: 3,
+    explanation: 'All listed antibiotics are commonly used depending on severity, age, and comorbidities.',
+  },
+  {
+    id: 'pb9-60',
+    text: 'What is the primary treatment for nutritional rickets?',
+    options: [
+      'Vitamin D supplements',
+      'Calcium supplements',
+      'Phosphate supplements',
+      'All of the above',
+    ],
+    correctIndex: 3,
+    explanation: 'Rickets is treated with a combination of vitamin D, calcium, and phosphate to restore bone health.',
+  },
+  {
+    id: 'pb9-61',
+    text: "What's the main advantage of cardiac exercise for post-myocardial infarction (MI) patients?",
+    options: [
+      'Improves cardiac output',
+      'Enhances vasodilation',
+      'Increases muscle strength',
+      'Reduces mortality rate through improved cardiac function',
+    ],
+    correctIndex: 3,
+    explanation: 'Cardiac rehab improves heart efficiency and reduces future cardiac events and mortality.',
+  },
+  {
+    id: 'pb9-62',
+    text: 'What is the primary investigation performed on a newborn within the first 24 hours of life?',
+    options: [
+      'Complete Blood Count (CBC)',
+      'Blood Culture',
+      'Newborn Screening (NBS) tests',
+      'Chest X-ray',
+    ],
+    correctIndex: 2,
+    explanation: 'Newborn screening detects metabolic and genetic disorders early for timely intervention.',
+  },
+  {
+    id: 'pb9-63',
+    text: 'What is the first-line management for a patient presenting with a symptomatic pleural effusion?',
+    options: [
+      'Thoracentesis (pleural fluid drainage)',
+      'Chest tube insertion',
+      'Antibiotic therapy',
+      'Oxygen therapy',
+    ],
+    correctIndex: 0,
+    explanation: 'Thoracentesis relieves symptoms and allows diagnostic evaluation of pleural fluid.',
+  },
+  {
+    id: 'pb9-64',
+    text: 'What is the initial management step for a patient presenting with Diabetic Ketoacidosis (DKA)?',
+    options: [
+      'Administer insulin therapy',
+      'Correct fluid deficits with IV fluids',
+      'Administer potassium supplements',
+      'Provide oral glucose',
+    ],
+    correctIndex: 1,
+    explanation: 'Fluid resuscitation is the first step to correct dehydration and stabilize circulation before insulin.',
+  },
+  {
+    question_number: 65,
+    question: "What are the layers of tissue damage in a second-degree burn?",
+    options: {
+      "a": "Epidermis only",
+      "b": "Epidermis and dermis (superficial)",
+      "c": "Epidermis, dermis (superficial and deep)",
+      "d": "Epidermis, dermis, and subcutaneous tissue"
+    },
+    answer: "c",
+    rationale: "Second-degree burns affect both superficial and deep layers of the dermis, causing blistering and pain."
+  },
+  {
+    question_number: 66,
+    question: "Why are statins usually administered in the evening?",
+    options": {
+      "a": "Improved bioavailability",
+      "b": "Enhanced liver enzyme inhibition",
+      "c": "Increased cholesterol synthesis at night",
+      "d": "Better patient compliance"
+    },
+    answer: "c",
+    rationale: "Cholesterol synthesis peaks at night, making evening dosing more effective."
+  },
+  {
+    question_number: 67,
+    question": "Why is the Varicella Zoster vaccine a live attenuated vaccine?",
+    options": {
+      "a": "It contains a killed virus",
+      "b": "It contains a weakened form of the virus",
+      "c": "It contains a genetically modified virus",
+      "d": "It contains a synthetic virus-like particle"
+    },
+    answer: "b",
+    rationale": "Live attenuated vaccines use weakened viruses to stimulate immunity without causing disease."
+  },
+  {
+    question_number: 68,
+    question": "What is the initial treatment for mild hypoglycemia?",
+    options": {
+      "a": "Administer glucagon",
+      "b": "Consume 15–20 grams of fast-acting carbohydrates",
+      "c": "Inject insulin",
+      "d": "Call emergency services"
+    },
+    answer": "b",
+    rationale": "Fast-acting carbs quickly raise blood glucose in mild hypoglycemia."
+  },
+  {
+    question_number: 69,
+    question": "What is the first action to take when a patient falls in the bathroom?",
+    options": {
+      "a": "Check for injuries",
+      "b": "Call for emergency assistance",
+      "c": "Check vital signs (breathing, pulse, blood pressure)",
+      "d": "Help the patient up"
+    },
+    answer": "a",
+    rationale": "Assessing for injury ensures safe handling and prevents further harm."
+  },
+  {
+    question_number: 70,
+    question": "What are the stages of wound healing?",
+    options": {
+      "a": "Hemostasis, Inflammatory, Proliferative",
+      "b": "Hemostasis, Inflammatory, Proliferative, Maturation",
+      "c": "Inflammatory, Proliferative, Maturation",
+      "d": "Hemostasis, Proliferative, Maturation"
+    },
+    answer": "b",
+    rationale": "Wound healing progresses through four stages: hemostasis, inflammation, proliferation, and maturation."
+  },
+  {
+    question_number: 71,
+    question": "What is the function of iron in the body?",
+    options": {
+      "a": "To make hemoglobin and myoglobin",
+      "b": "To produce antibodies and fight infections",
+      "c": "To regulate blood pressure",
+      "d": "To maintain healthy bones"
+    },
+    "answer": "a",
+    "rationale": "Iron is essential for the synthesis of hemoglobin and myoglobin, which transport oxygen in blood and muscle."
+  },
+  {
+    "question_number": 72,
+    "question": "What are the effects of iron deficiency anemia?",
+    "options": {
+      "a": "Fatigue, shortness of breath, pale skin",
+      "b": "Headaches, dizziness, nausea",
+      "c": "Weight loss, muscle weakness",
+      "d": "All of the above"
+    },
+    "answer": "a",
+    "rationale": "Iron deficiency reduces oxygen delivery, leading to fatigue, pallor, and breathlessness."
+  },
+  {
+    "question_number": 73,
+    "question": "What action should you take if a senior nurse instructs you to administer medications without labels and double-checking?",
+    "options": {
+      "a": "Administer the medication",
+      "b": "Refuse to administer",
+      "c": "Ask for clarification",
+      "d": "Call the pharmacist"
+    },
+    "answer": "b",
+    "rationale": "Administering unlabeled medication is unsafe; refusal protects patient safety and professional integrity."
+  },
+  {
+    "question_number": 74,
+    "question": "What action should you take if a patient refuses medication?",
+    "options": {
+      "a": "Force the patient to take it",
+      "b": "Document it on the patient’s file",
+      "c": "Ignore the patient’s decision",
+      "d": "Call the doctor"
+    },
+    "answer": "b",
+    "rationale": "Patient autonomy must be respected; documentation ensures legal and clinical accountability."
+  },
+  {
+    "question_number": 75,
+    "question": "What are the uses of benzodiazepines?",
+    "options": {
+      "a": "Treating anxiety and seizures",
+      "b": "Managing pain and inflammation",
+      "c": "Regulating blood pressure",
+      "d": "Lowering cholesterol"
+    },
+    "answer": "a",
+    "rationale": "Benzodiazepines are CNS depressants used for anxiety, insomnia, and seizure control."
+  },
+  {
+    "question_number": 76,
+    "question": "What are standard precautions for changing diapers of a child with diarrhea?",
+    "options": {
+      "a": "Hand hygiene, gloves, gown",
+      "b": "Mask, eye protection, gloves",
+      "c": "Gown, gloves, closed shoes",
+      "d": "Hand hygiene, mask"
+    },
+    "answer": "a",
+    "rationale": "Diaper changes involve contact with bodily fluids; gloves and gowns prevent contamination."
+  },
+  {
+    "question_number": 77,
+    "question": "What is the reason for urinary tract infections (UTIs) in diabetes mellitus (DM) patients?",
+    "options": {
+      "a": "High blood sugar",
+      "b": "Poor hygiene",
+      "c": "Weakened immune system",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Multiple factors in DM—hyperglycemia, immune compromise, and hygiene—contribute to UTI risk."
+  },
+  {
+    "question_number": 78,
+    "question": "What are the symptoms of norovirus?",
+    "options": {
+      "a": "Vomiting, watery diarrhea",
+      "b": "Fever, headache, muscle pain",
+      "c": "Cough, runny nose, sore throat",
+      "d": "Rash, itching, swelling"
+    },
+    "answer": "a",
+    "rationale": "Norovirus causes acute gastroenteritis with vomiting and diarrhea, often in outbreaks."
+  },
+  {
+    "question_number": 79,
+    "question": "What is the reason for cracked nipples in breastfeeding mothers?",
+    "options": {
+      "a": "Poor latching technique",
+      "b": "Inadequate breast milk",
+      "c": "Infrequent feeding",
+      "d": "All of the above"
+    },
+    "answer": "a",
+    "rationale": "Improper latch leads to friction and trauma, causing nipple cracks and pain."
+  },
+  {
+    "question_number": 80,
+    "question": "What is the reason for cracked nipples in breastfeeding mothers?",
+    "options": {
+      "a": "Poor latching technique",
+      "b": "Inadequate breast milk",
+      "c": "Infrequent feeding",
+      "d": "All of the above"
+    },
+    "answer": "a",
+    "rationale": "Repeated: Poor latch remains the primary cause of nipple trauma during breastfeeding."
+  },
+  {
+    "question_number": 81,
+    "question": "What is the reason for weight loss in diabetes mellitus (DM)?",
+    "options": {
+      "a": "Increased insulin resistance",
+      "b": "Decreased glucose production",
+      "c": "Body burning fat and muscle for energy",
+      "d": "Increased appetite"
+    },
+    "answer": "c",
+    "rationale": "Without insulin, cells can't use glucose, so the body breaks down fat and muscle for energy."
+  },
+  {
+    "question_number": 82,
+    "question": "What is the importance of oral care in infants?",
+    "options": {
+      "a": "Prevents oral thrush",
+      "b": "Promotes healthy gums",
+      "c": "Encourages teething",
+      "d": "All of the above"
+    },
+    "answer": "b",
+    "rationale": "While all options are beneficial, healthy gums are foundational for future oral health."
+  },
+  {
+    "question_number": 83,
+    "question": "What does increased energy typically indicate?",
+    "options": {
+      "a": "Sedation, confusion",
+      "b": "Increased mood",
+      "c": "Reduced appetite",
+      "d": "Improved mood"
+    },
+    "answer": "d",
+    "rationale": "Improved mood often correlates with increased energy and motivation in clinical assessments."
+  },
+  {
+    "question_number": 84,
+    "question": "What is a common cause of hepatitis B?",
+    "options": {
+      "a": "Contaminated food and water",
+      "b": "Sexual contact, sharing needles",
+      "c": "Vector-borne transmission",
+      "d": "Airborne transmission"
+    },
+    "answer": "b",
+    "rationale": "Hepatitis B spreads through blood and bodily fluids, especially via sexual contact and needle sharing."
   }
-];
-
-    
+]
+]
+now add this remaining questions to the Test 9
