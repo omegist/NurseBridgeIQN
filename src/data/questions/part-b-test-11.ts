@@ -676,7 +676,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb11-57',
-    text: 'Which therapeutic communication technique is used in: ‘I’ll stay with you until your husband arrives’?',
+    text: "Which therapeutic communication technique is used in: 'I’ll stay with you until your husband arrives'?",
     options: [
       'Formulating a plan of action',
       'Offering self',
@@ -685,5 +685,425 @@ export const questions: Question[] = [
     ],
     correctIndex: 1,
     explanation: 'Offering self shows presence and emotional support to the patient.'
+  },
+  {
+    id: 'pb11-58',
+    text: "A client expresses concern regarding the confidentiality of her medical information. How does the nurse maintain confidentiality?",
+    options: [
+      "Share information about the client with other clients",
+      "Explain to the client that she has the right to know her medical information",
+      "Provide information only to individuals directly involved in the client’s care and document appropriately",
+      "Share the information with all members of the healthcare team"
+    ],
+    correctIndex: 2,
+    explanation: "Confidentiality is maintained by limiting access to patient information to those directly involved in care and ensuring proper documentation."
+  },
+  {
+    id: 'pb11-59',
+    text: "If you were told by a nurse at handover to take 'standard precautions', what would you expect to be doing?",
+    options: [
+      "Taking precautions when dealing with high-risk body fluids",
+      "Using PPE in protective isolation",
+      "Using hand hygiene, gloves, aprons, disposing of sharps safely, and maintaining a clean environment",
+      "Asking relatives to wash their hands when visiting"
+    ],
+    correctIndex: 2,
+    explanation: "Standard precautions include universal infection control measures to protect both patients and healthcare workers."
+  },
+  {
+    id: 'pb11-60',
+    text: "A nurse manager is described as focusing only on the 'bottom line' and not quality of care. What is likely true?",
+    options: [
+      "The manager is unwilling to listen to staff concerns unless they impact costs",
+      "The manager understands organizational values",
+      "The manager promotes a caring environment",
+      "The manager is looking at the total care picture"
+    ],
+    correctIndex: 0,
+    explanation: "A manager focused solely on cost may neglect staff input and compromise care quality."
+  },
+  {
+    id: 'pb11-61',
+    text: "What is the initial step in implementing a change in the documentation system?",
+    options: [
+      "Identify potential solutions",
+      "Set goals and priorities",
+      "Identify the inefficiency needing improvement",
+      "Plan strategies to implement the change"
+    ],
+    correctIndex: 2,
+    explanation: "Recognizing the problem is the first step in any change process to ensure targeted solutions."
+  },
+  {
+    id: 'pb11-62',
+    text: "In an emergency department, a doctor asks you to perform cannulation, but you haven’t done it before. What should you do?",
+    options: [
+      "Don’t do it and inform the supervisor",
+      "Ask a colleague to do it",
+      "Do it anyway",
+      "Complain to the supervisor about the doctor"
+    ],
+    correctIndex: 0,
+    explanation: "Performing a procedure without competence risks patient safety; refusal and reporting are appropriate."
+  },
+  {
+    id: 'pb11-63',
+    text: "You notice a lack of PPE supplies in a reverse isolation room. Who do you escalate this to first?",
+    options": [
+      "Immediate nurse manager",
+      "Head of department",
+      "Person in charge of supplies",
+      "Infection control team"
+    ],
+    "answer": "c",
+    "rationale": "The supply officer can immediately address stock issues to maintain infection control standards."
+  },
+  {
+    "question_number": 64,
+    "question": "A head nurse wants all tasks completed by 10 a.m. using a task-oriented model. How should you respond?",
+    "options": {
+      "a": "Tell other nurses to follow",
+      "b": "Inform the patient about the goal",
+      "c": "Discuss how this may negatively impact patient care outcomes",
+      "d": "Disregard her method and do it your way"
+    },
+    "answer": "c",
+    "rationale": "Open discussion promotes patient-centered care and addresses concerns about rigid task scheduling."
+  },
+  {
+    "question_number": 65,
+    "question": "An 18-year-old with recurrent UTIs discloses unprotected sex. What is the best nursing response?",
+    "options": {
+      "a": "Inform the healthcare team to help her",
+      "b": "Inform her parents",
+      "c": "Keep the information confidential",
+      "d": "Report her boyfriend to social services"
+    },
+    "answer": "a",
+    "rationale": "Sharing relevant information with the healthcare team ensures appropriate care while maintaining confidentiality."
+  },
+  {
+    "question_number": 66,
+    "question": "What does 'standard precautions' include?",
+    "options": {
+      "a": "Use PPE only for high-risk fluids",
+      "b": "Wear gloves, apron, and mask for all care",
+      "c": "Ask relatives to wash hands",
+      "d": "Use hand hygiene, PPE when needed, dispose of sharps safely, and maintain cleanliness"
+    },
+    "answer": "d",
+    "rationale": "Standard precautions are universal safety measures applied to all patient care situations."
+  },
+  {
+    "question_number": 67,
+    "question": "When a nurse delegates duties to a health assistant, what NMC standard applies?",
+    "options": {
+      "a": "Accountability transfers to the assistant",
+      "b": "NMC is accountable for the assistant’s actions",
+      "c": "No one is accountable",
+      "d": "Healthcare assistant is solely accountable"
+    },
+    "answer": "b",
+    "rationale": "The nurse remains professionally accountable for delegated tasks under NMC standards."
+  },
+  {
+    "question_number": 68,
+    "question": "Which approach creates a barrier to communication?",
+    "options": {
+      "a": "Using many different skills during interaction",
+      "b": "Giving the patient time",
+      "c": "Allowing the patient to become too anxious before engaging",
+      "d": "Focusing on what the patient is saying"
+    },
+    "answer": "c",
+    "rationale": "High anxiety impairs communication; timely engagement is essential for effective dialogue."
+  },
+  {
+    "question_number": 69,
+    "question": "A child is restless and doesn’t understand the doctor. What should you do?",
+    "options": {
+      "a": "Stay quiet",
+      "b": "Interrupt the doctor",
+      "c": "Gain the child’s confidence and assist the doctor",
+      "d": "Make the child quiet and ask the mother to stay"
+    },
+    "answer": "c",
+    "rationale": "Supporting communication and building trust helps the child engage and improves assessment."
+  },
+  {
+    "question_number": 70,
+    "question": "What is the best advice for a nurse who is very active on social media?",
+    "options": {
+      "a": "Don’t reveal your profession",
+      "b": "Don’t post pictures of clients even with permission",
+      "c": "Avoid relationships with clients online",
+      "d": "Keep your profile private"
+    },
+    "answer": "b",
+    "rationale": "Posting patient images breaches confidentiality and professionalism, even with consent."
+  },
+  {
+    "question_number": 71,
+    "question": "A Jewish patient requests roast beef and whole milk. What should the nurse do?",
+    "options": {
+      "a": "Deliver the tray",
+      "b": "Replace whole milk with fat-free milk",
+      "c": "Replace whole milk with diet milk",
+      "d": "Request dietary to replace roast beef with pork"
+    },
+    "answer": "b",
+    "rationale": "Jewish dietary laws prohibit mixing meat and dairy; replacing milk respects religious practices."
+  },
+  {
+    "question_number": 72,
+    "question": "An adult has been medicated for surgery, but the consent form is unsigned. What should the nurse do?",
+    "options": {
+      "a": "Assume consent is implied",
+      "b": "Get the form and have the client sign",
+      "c": "Tell the physician the form is not signed",
+      "d": "Have a family member sign"
+    },
+    "answer": "c",
+    "rationale": "Informed consent must be obtained before surgery; notifying the physician ensures legal compliance."
+  },
+  {
+    "question_number": 73,
+    "question": "A mentally capable client refuses a blood transfusion. What is the nurse’s best response?",
+    "options": {
+      "a": "Accept the decision and explain consequences",
+      "b": "Administer the blood anyway",
+      "c": "Let the doctor decide",
+      "d": "Ignore the client"
+    },
+    "answer": "a",
+    "rationale": "Respecting autonomy and providing information supports informed refusal."
+  },
+  {
+    "question_number": 74,
+    "question": "On which step of the WHO analgesic ladder would you place Tramadol and Codeine?",
+    "options": {
+      "a": "Step 1: Non-opioids",
+      "b": "Step 2: Mild opioids for mild to moderate pain",
+      "c": "Step 3: Opioids for moderate to severe pain",
+      "d": "Step 4: Neuromodulation"
+    },
+    "answer": "b",
+    "rationale": "Tramadol and Codeine are classified as mild opioids and are recommended at Step 2 of the WHO analgesic ladder for managing mild to moderate pain."
+  },
+  {
+    "question_number": 75,
+    "question": "What type of diet would you recommend to a patient with a newly formed stoma?",
+    "options": {
+      "a": "Encourage high fiber foods to avoid constipation",
+      "b": "Encourage lots of vegetables and fruit to avoid constipation",
+      "c": "Encourage a varied diet as peace can be resumed",
+      "d": "Avoid foods like broccoli because they can cause erratic function"
+    },
+    "answer": "d",
+    "rationale": "After stoma formation, patients should avoid gas-producing and high-fiber foods like broccoli initially, as they can cause erratic bowel function and discomfort."
+  },
+  {
+    "question_number": 76,
+    "question": "Which behavior will encourage a patient to talk about their concerns?",
+    "options": {
+      "a": "Giving reassurance and telling them not to worry",
+      "b": "Asking the patient about their family and friends",
+      "c": "Tell the patient you are interested in what is concerning them and that you are available to listen",
+      "d": "Tell the patient you are interested in what is concerning them and if they tell you, they will feel better"
+    },
+    "answer": "c",
+    "rationale": "Showing genuine interest and availability fosters trust and encourages open communication."
+  },
+  {
+    "question_number": 77,
+    "question": "A 17-year-old patient involved in an orthopedic accident refuses meals and bathing. What defense mechanism is this?",
+    "options": {
+      "a": "Suppression",
+      "b": "Undoing",
+      "c": "Regression",
+      "d": "Repression"
+    },
+    "answer": "c",
+    "rationale": "Regression involves reverting to earlier behaviors in response to stress or trauma."
+  },
+  {
+    "question_number": 78,
+    "question": "What does AVPU stand for?",
+    "options": {
+      "a": "Alert verbalize pain unconscious",
+      "b": "Awake voice pain unconscious",
+      "c": "Alert voice pain unconscious",
+      "d": "Awake verbalization pain unconscious"
+    },
+    "answer": "c",
+    "rationale": "AVPU is a rapid assessment tool for consciousness: Alert, responds to Voice, responds to Pain, Unresponsive."
+  },
+  {
+    "question_number": 79,
+    "question": "A child appears withdrawn and refuses food during a hospital visit. What should the nurse do?",
+    "options": {
+      "a": "Inform social worker",
+      "b": "Ignore incident",
+      "c": "Discuss with head nurse for intervention",
+      "d": "Do nothing"
+    },
+    "answer": "c",
+    "rationale": "Raising concerns with the head nurse ensures appropriate assessment and safeguarding."
+  },
+  {
+    "question_number": 80,
+    "question": "Two nurses are absent for the next shift. What should the incoming nurse-in-charge do?",
+    "options": {
+      "a": "Encourage present staff to manage",
+      "b": "Inform head nurse to arrange coverage",
+      "c": "Do nothing and wait",
+      "d": "Call absent nurses to report"
+    },
+    "answer": "b",
+    "rationale": "Escalating to leadership ensures safe staffing and continuity of care."
+  },
+  {
+    "question_number": 81,
+    "question": "You suspect an adult is being abused but they don’t want to report it. What should you do?",
+    "options": {
+      "a": "Respect their decision and support them",
+      "b": "Threaten to inform police",
+      "c": "Report to police",
+      "d": "Ask for photo evidence"
+    },
+    "answer": "a",
+    "rationale": "Respecting autonomy while offering support is key unless there's immediate risk or legal obligation."
+  },
+  {
+    "question_number": 82,
+    "question": "If abuse is happening but not serious enough for police, who should be informed?",
+    "options": {
+      "a": "Adult safeguarding team",
+      "b": "Manager or Adult Social Care Direct",
+      "c": "No one",
+      "d": "Everyone with caring responsibility"
+    },
+    "answer": "a",
+    "rationale": "Safeguarding teams are equipped to assess and respond to non-urgent abuse concerns."
+  },
+  {
+    "question_number": 83,
+    "question": "How do you prevent the spread of Clostridium difficile in isolation?",
+    "options": {
+      "a": "Hand hygiene and infection link nurse role",
+      "b": "Encourage PPE and soap-based cleaning",
+      "c": "Provide hygiene education to patient and family",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Comprehensive infection control includes hygiene, PPE, education, and environmental cleaning."
+  },
+  {
+    "question_number": 84,
+    "question": "A nurse struggles with care plans and team members are concerned. What should the nurse do?",
+    "options": {
+      "a": "Confront the team",
+      "b": "Continue care as usual",
+      "c": "Ignore feedback",
+      "d": "Accept criticism and improve skills"
+    },
+    "answer": "d",
+    "rationale": "Constructive feedback supports professional growth and improves care quality."
+  },
+  {
+    "question_number": 85,
+    "question": "How do you know a student nurse is using critical thinking in community health education?",
+    "options": {
+      "a": "Uses visual aids for illiterate adult",
+      "b": "Reports to instructor",
+      "c": "Listens to elderly patient",
+      "d": "Asks questions during discussion"
+    },
+    "answer": "a",
+    "rationale": "Adapting teaching methods to patient needs reflects critical thinking and patient-centered care."
+  },
+  {
+    "question_number": 86,
+    "question": "What is the primary purpose of the Early Warning Score (EWS)?",
+    "options": {
+      "a": "Detect early signs of deterioration",
+      "b": "Provide diagnosis",
+      "c": "Improve communication",
+      "d": "Assess pre-existing conditions"
+    },
+    "answer": "a",
+    "rationale": "EWS helps identify clinical deterioration early to prompt timely intervention."
+  },
+  {
+    "question_number": 87,
+    "question": "What are the principles of gaining informed consent before surgery?",
+    "options": {
+      "a": "Use medical terms and explain risks",
+      "b": "Provide verbal and written info on surgery day",
+      "c": "Provide info, highlight risks, allow questions",
+      "d": "Provide info and get two signed forms"
+    },
+    "answer": "c",
+    "rationale": "Informed consent requires clear communication, understanding, and voluntary agreement."
+  },
+  {
+    "question_number": 88,
+    "question": "You notice a discrepancy in the controlled drug record book. What should you do?",
+    "options": {
+      "a": "Complete incident form and contact pharmacy",
+      "b": "Check safe and record books, then complete incident form",
+      "c": "Check safe, inform nurse in charge, complete incident form",
+      "d": "Check safe, inform pharmacy, complete incident form"
+    },
+    "answer": "c",
+    "rationale": "Following protocol ensures accountability and safety in handling controlled substances."
+  },
+  {
+    "question_number": 89,
+    "question": "What legal checks must be done before administering oral morphine?",
+    "options": {
+      "a": "Check identity and prescription",
+      "b": "Check dose and expiry date",
+      "c": "Check with another nurse and record in CD book",
+      "d": "Ask patient to prove identity"
+    },
+    "answer": "c",
+    "rationale": "Controlled drugs require dual verification and documentation for legal compliance."
+  },
+  {
+    "question_number": 90,
+    "question": "What symptoms are expected in an anaphylactic reaction?",
+    "options": {
+      "a": "Low BP, fast HR, skin changes",
+      "b": "High BP, fast HR",
+      "c": "Slow HR, skin changes",
+      "d": "Impending doom, itching"
+    },
+    "answer": "a",
+    "rationale": "Anaphylaxis presents with hypotension, tachycardia, and mucocutaneous symptoms."
+  },
+  {
+    "question_number": 91,
+    "question": "What are key nursing observations for a patient on frequent opioids?",
+    "options": {
+      "a": "Respiratory rate, bowel movements, pain/sedation scores",
+      "b": "Blood pressure for addiction",
+      "c": "Lung function and urine output",
+      "d": "Stool chart and pain level"
+    },
+    "answer": "a",
+    "rationale": "Opioids affect respiration, bowel function, and consciousness—these must be monitored."
+  },
+  {
+    "question_number": 92,
+    "question": "What should NOT be done in barrier nursing for Clostridium difficile?",
+    "options": {
+      "a": "Use gloves and alcohol rub",
+      "b": "Use gloves, gown, and soap and water",
+      "c": "Provide personal washcloths",
+      "d": "Single room isolation"
+    },
+    "answer": "a",
+    "rationale": "Alcohol rub is ineffective against C. difficile spores; soap and water are required."
   }
-];
+and this are the remaining questions of the Test 11 so now the total questions in Test 11 are 92 please solve this issue 
