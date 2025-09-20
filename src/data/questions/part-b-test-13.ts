@@ -12,7 +12,7 @@ export const questions: Question[] = [
       'Māori suicide rates are higher but they are not statistically significant',
     ],
     correctIndex: 1,
-    explanation: 'Statistical data shows Māori have higher suicide rates, reflecting disparities in mental health outcomes.',
+    explanation: 'Statistical data shows Māori have higher suicide rates, reflecting disparities in mental health outcomes.'
   },
   {
     id: 'pb13-2',
@@ -24,7 +24,7 @@ export const questions: Question[] = [
       'A knowledge of Māori protocol',
     ],
     correctIndex: 2,
-    explanation: "Cultural safety begins with self-awareness and acknowledging one's limitations in meeting diverse needs.",
+    explanation: "Cultural safety begins with self-awareness and acknowledging one's limitations in meeting diverse needs."
   },
   {
     id: 'pb13-3',
@@ -36,7 +36,7 @@ export const questions: Question[] = [
       'The right to Māori involvement in health care is guaranteed',
     ],
     correctIndex: 1,
-    explanation: 'Article Two guarantees Māori rights to their taonga, including health, making the Treaty central to Māori health equity.',
+    explanation: 'Article Two guarantees Māori rights to their taonga, including health, making the Treaty central to Māori health equity.'
   },
   {
     id: 'pb13-4',
@@ -48,7 +48,7 @@ export const questions: Question[] = [
       'Support the doctor to override the whānau',
     ],
     correctIndex: 0,
-    explanation: 'Respecting whānau decisions aligns with cultural safety and ethical practice in end-of-life care.',
+    explanation: 'Respecting whānau decisions aligns with cultural safety and ethical practice in end-of-life care.'
   },
   {
     id: 'pb13-5',
@@ -60,7 +60,7 @@ export const questions: Question[] = [
       'He is worried about hospital disposal',
     ],
     correctIndex: 2,
-    explanation: 'Māori beliefs emphasize spiritual connection to the land and body integrity, even after death.',
+    explanation: 'Māori beliefs emphasize spiritual connection to the land and body integrity, even after death.'
   },
   {
     id: 'pb13-6',
@@ -72,7 +72,7 @@ export const questions: Question[] = [
       'Ask if they understand the procedures',
     ],
     correctIndex: 3,
-    explanation: 'Clarifying procedures ensures informed decisions while respecting cultural practices.',
+    explanation: 'Clarifying procedures ensures informed decisions while respecting cultural practices.'
   },
   {
     id: 'pb13-7',
@@ -84,7 +84,7 @@ export const questions: Question[] = [
       'Loss of cultural, social, and spiritual ties',
     ],
     correctIndex: 3,
-    explanation: 'Urban migration disrupted traditional Māori structures, weakening cultural and spiritual support systems.',
+    explanation: 'Urban migration disrupted traditional Māori structures, weakening cultural and spiritual support systems.'
   },
   {
     id: 'pb13-8',
@@ -96,7 +96,7 @@ export const questions: Question[] = [
       'Non-Māori researchers are unaware of Māori values',
     ],
     correctIndex: 3,
-    explanation: 'Cultural disconnects in research design and interpretation limit relevance and impact for Māori communities.',
+    explanation: 'Cultural disconnects in research design and interpretation limit relevance and impact for Māori communities.'
   },
   {
     id: 'pb13-9',
@@ -108,7 +108,7 @@ export const questions: Question[] = [
       'Tell him this is the only doctor available',
     ],
     correctIndex: 1,
-    explanation: 'Engaging Māori support respects cultural preferences and promotes culturally safe care.',
+    explanation: 'Engaging Māori support respects cultural preferences and promotes culturally safe care.'
   },
   {
     id: 'pb13-10',
@@ -120,7 +120,7 @@ export const questions: Question[] = [
       'Ask if he wants a Māori nurse',
     ],
     correctIndex: 1,
-    explanation: 'Whānau support is central to Māori wellbeing. Offering connection reduces anxiety and promotes trust.',
+    explanation: 'Whānau support is central to Māori wellbeing. Offering connection reduces anxiety and promotes trust.'
   },
   {
     id: 'pb13-11',
@@ -132,7 +132,7 @@ export const questions: Question[] = [
       'Say it’s not policy but she can have a Māori healer on discharge',
     ],
     correctIndex: 3,
-    explanation: 'Acknowledging cultural preferences outside policy fosters trust and patient engagement.',
+    explanation: 'Acknowledging cultural preferences outside policy fosters trust and patient engagement.'
   },
   {
     id: 'pb13-12',
@@ -144,7 +144,7 @@ export const questions: Question[] = [
       'Seek medical advice',
     ],
     correctIndex: 3,
-    explanation: 'Medical guidance ensures safe coordination of spiritual and clinical care.',
+    explanation: 'Medical guidance ensures safe coordination of spiritual and clinical care.'
   },
   {
     id: 'pb13-13',
@@ -156,7 +156,7 @@ export const questions: Question[] = [
       'All of the above',
     ],
     correctIndex: 1,
-    explanation: 'Nipple discharge and contour changes are hallmark signs of breast cancer requiring urgent evaluation.',
+    explanation: 'Nipple discharge and contour changes are hallmark signs of breast cancer requiring urgent evaluation.'
   },
   {
     id: 'pb13-14',
@@ -168,7 +168,7 @@ export const questions: Question[] = [
       'Ring the kohanga reo to arrange a visit',
     ],
     correctIndex: 3,
-    explanation: 'Respecting school protocols and Māori settings ensures culturally appropriate engagement.',
+    explanation: 'Respecting school protocols and Māori settings ensures culturally appropriate engagement.'
   },
   {
     id: 'pb13-15',
@@ -180,7 +180,7 @@ export const questions: Question[] = [
       'Not all Māori are institutionalized',
     ],
     correctIndex: 2,
-    explanation: 'Social workers can coordinate culturally sensitive care and support for whānau.',
+    explanation: 'Social workers can coordinate culturally sensitive care and support for whānau.'
   },
   {
     id: 'pb13-16',
@@ -192,7 +192,7 @@ export const questions: Question[] = [
       'Māori understand Māori values best',
     ],
     correctIndex: 3,
-    explanation: 'Māori-led research honors cultural context and produces more relevant, impactful outcomes.',
+    explanation: 'Māori-led research honors cultural context and produces more relevant, impactful outcomes.'
   },
   {
     id: 'pb13-17',
@@ -204,7 +204,7 @@ export const questions: Question[] = [
       'Poor economic conditions',
     ],
     correctIndex: 2,
-    explanation: 'Urban migration disrupted traditional Māori structures and connections, leading to poorer health outcomes.',
+    explanation: 'Urban migration disrupted traditional Māori structures and connections, leading to poorer health outcomes.'
   },
   {
     id: 'pb13-18',
@@ -216,7 +216,7 @@ export const questions: Question[] = [
       'All things held precious by the Pākehā',
     ],
     correctIndex: 2,
-    explanation: 'Taonga refers to treasured possessions, including language, culture, and spiritual beliefs.',
+    explanation: 'Taonga refers to treasured possessions, including language, culture, and spiritual beliefs.'
   },
   {
     id: 'pb13-19',
@@ -228,7 +228,7 @@ export const questions: Question[] = [
       'Conduct a physical health assessment',
     ],
     correctIndex: 0,
-    explanation: 'Immediate safety is the top priority in acute psychiatric admissions to prevent harm.',
+    explanation: 'Immediate safety is the top priority in acute psychiatric admissions to prevent harm.'
   },
   {
     id: 'pb13-20',
@@ -240,7 +240,7 @@ export const questions: Question[] = [
       'Take him to a concert',
     ],
     correctIndex: 2,
-    explanation: 'Connecting Piripi with a Māori elder supports cultural identity and healing through trusted relationships.',
+    explanation: 'Connecting Piripi with a Māori elder supports cultural identity and healing through trusted relationships.'
   },
   {
     id: 'pb13-21',
@@ -252,7 +252,7 @@ export const questions: Question[] = [
       'The Treaty guarantees the right to equitable health care',
     ],
     correctIndex: 2,
-    explanation: 'The Treaty affirms Māori autonomy in health decisions, aligning with tino rangatiratanga.',
+    explanation: 'The Treaty affirms Māori autonomy in health decisions, aligning with tino rangatiratanga.'
   },
   {
     id: 'pb13-22',
@@ -264,7 +264,7 @@ export const questions: Question[] = [
       'Phone Wiremu and ask why you wish to see him',
     ],
     correctIndex: 1,
-    explanation: 'Visiting Wiremu at home respects whānau dynamics and builds trust in culturally appropriate ways.',
+    explanation: 'Visiting Wiremu at home respects whānau dynamics and builds trust in culturally appropriate ways.'
   },
   {
     id: 'pb13-23',
@@ -276,7 +276,7 @@ export const questions: Question[] = [
       'He would come up with treatment ready',
     ],
     correctIndex: 2,
-    explanation: 'Culturally aligned care improves engagement, trust, and outcomes for Māori clients.',
+    explanation: 'Culturally aligned care improves engagement, trust, and outcomes for Māori clients.'
   },
   {
     id: 'pb13-24',
@@ -288,7 +288,7 @@ export const questions: Question[] = [
       'Suspiciousness',
     ],
     correctIndex: 1,
-    explanation: 'Paranoid schizophrenia often presents with delusions and auditory hallucinations, especially in early stages.',
+    explanation: 'Paranoid schizophrenia often presents with delusions and auditory hallucinations, especially in early stages.'
   },
   {
     id: 'pb13-25',
@@ -300,7 +300,7 @@ export const questions: Question[] = [
       'Promote partnership, protection, and participation in Māori health',
     ],
     correctIndex: 3,
-    explanation: 'These principles reflect the Treaty of Waitangi and guide culturally safe collaboration.',
+    explanation: 'These principles reflect the Treaty of Waitangi and guide culturally safe collaboration.'
   },
   {
     id: 'pb13-26',
@@ -312,7 +312,7 @@ export const questions: Question[] = [
       'Describe your own culture and how it relates to the Treaty',
     ],
     correctIndex: 0,
-    explanation: 'Cultural safety involves respecting and adapting to the values and beliefs of others.',
+    explanation: 'Cultural safety involves respecting and adapting to the values and beliefs of others.'
   },
   {
     id: 'pb13-27',
@@ -324,7 +324,7 @@ export const questions: Question[] = [
       'Provide resources',
     ],
     correctIndex: 2,
-    explanation: 'Cultural safety supports Māori autonomy and aligns with tino rangatiratanga under the Treaty.',
+    explanation: 'Cultural safety supports Māori autonomy and aligns with tino rangatiratanga under the Treaty.'
   },
   {
     id: 'pb13-28',
@@ -336,7 +336,7 @@ export const questions: Question[] = [
       'Contact a Māori nurse to support her',
     ],
     correctIndex: 2,
-    explanation: 'Consulting Māori elders ensures cultural appropriateness and respects marae protocol.',
+    explanation: 'Consulting Māori elders ensures cultural appropriateness and respects marae protocol.'
   },
   {
     id: 'pb13-29',
@@ -348,7 +348,7 @@ export const questions: Question[] = [
       'Contact a Māori nurse to support her',
     ],
     correctIndex: 2,
-    explanation: 'Engaging Māori elders ensures respectful participation in cultural ceremonies.',
+    explanation: 'Engaging Māori elders ensures respectful participation in cultural ceremonies.'
   },
   {
     id: 'pb13-30',
@@ -360,7 +360,7 @@ export const questions: Question[] = [
       'Constitution Act 1852',
     ],
     correctIndex: 2,
-    explanation: 'The Tohunga Suppression Act 1907 criminalized traditional Māori healing practices.',
+    explanation: 'The Tohunga Suppression Act 1907 criminalized traditional Māori healing practices.'
   },
   {
     id: 'pb13-31',
@@ -372,7 +372,7 @@ export const questions: Question[] = [
       'All of the above',
     ],
     correctIndex: 3,
-    explanation: 'Tangi serve multiple cultural purposes including grief, connection, reflection, and community status.',
+    explanation: 'Tangi serve multiple cultural purposes including grief, connection, reflection, and community status.'
   },
   {
     id: 'pb13-32',
@@ -384,7 +384,7 @@ export const questions: Question[] = [
       'The government sharing the resources 50:50 thus ensuring equity',
     ],
     correctIndex: 0,
-    explanation: 'Māori primary health care emphasizes self-determination, cultural control, and government support to ensure equity.',
+    explanation: 'Māori primary health care emphasizes self-determination, cultural control, and government support to ensure equity.'
   },
   {
     id: 'pb13-33',
@@ -396,7 +396,7 @@ export const questions: Question[] = [
       'Constitution Act 1852',
     ],
     correctIndex: 1,
-    explanation: 'The Tohunga Suppression Act 1907 criminalized traditional Māori healing, undermining indigenous health systems.',
+    explanation: 'The Tohunga Suppression Act 1907 criminalized traditional Māori healing, undermining indigenous health systems.'
   },
   {
     id: 'pb13-34',
@@ -408,7 +408,7 @@ export const questions: Question[] = [
       'Non-Māori professionals leading Māori protocol',
     ],
     correctIndex: 0,
-    explanation: 'True bicultural partnerships involve Māori participation in both service delivery and strategic decisions.',
+    explanation: 'True bicultural partnerships involve Māori participation in both service delivery and strategic decisions.'
   },
   {
     id: 'pb13-35',
@@ -420,7 +420,7 @@ export const questions: Question[] = [
       'All of the above',
     ],
     correctIndex: 3,
-    explanation: 'Land loss disrupted cultural, social, and spiritual foundations, contributing to poor health outcomes.',
+    explanation: 'Land loss disrupted cultural, social, and spiritual foundations, contributing to poor health outcomes.'
   },
   {
     id: 'pb13-36',
@@ -432,7 +432,7 @@ export const questions: Question[] = [
       'Loss of cultural, social and spiritual ties',
     ],
     correctIndex: 3,
-    explanation: 'Urban migration led to disconnection from traditional Māori values and support systems, impacting health.',
+    explanation: 'Urban migration led to disconnection from traditional Māori values and support systems, impacting health.'
   },
   {
     id: 'pb13-37',
@@ -444,7 +444,7 @@ export const questions: Question[] = [
       'All things held precious by the Crown',
     ],
     correctIndex: 2,
-    explanation: 'Taonga refers to treasured possessions, including language, culture, spirituality, and resources.',
+    explanation: 'Taonga refers to treasured possessions, including language, culture, spirituality, and resources.'
   },
   {
     id: 'pb13-38',
@@ -456,7 +456,7 @@ export const questions: Question[] = [
       'Constitution Act 1852',
     ],
     correctIndex: 2,
-    explanation: 'The Tohunga Suppression Act 1907 banned traditional Māori healing practices, undermining indigenous health systems.',
+    explanation: 'The Tohunga Suppression Act 1907 banned traditional Māori healing practices, undermining indigenous health systems.'
   },
   {
     id: 'pb13-39',
@@ -468,7 +468,7 @@ export const questions: Question[] = [
       'All of the above',
     ],
     correctIndex: 3,
-    explanation: 'Tangi are deeply cultural events that serve multiple purposes—grieving, reconnecting, and honoring heritage.',
+    explanation: 'Tangi are deeply cultural events that serve multiple purposes—grieving, reconnecting, and honoring heritage.'
   },
   {
     id: 'pb13-40',
@@ -480,7 +480,7 @@ export const questions: Question[] = [
       'The government sharing resources 50/50 ensuring equity',
     ],
     correctIndex: 3,
-    explanation: 'Equity in resource sharing reflects the Treaty principles and supports culturally responsive care.',
+    explanation: 'Equity in resource sharing reflects the Treaty principles and supports culturally responsive care.'
   },
   {
     id: 'pb13-41',
@@ -492,7 +492,7 @@ export const questions: Question[] = [
       'Promote partnership, protection, and participation in Māori health',
     ],
     correctIndex: 3,
-    explanation: 'These Treaty principles guide respectful and effective collaboration with Māori health initiatives.',
+    explanation: 'These Treaty principles guide respectful and effective collaboration with Māori health initiatives.'
   },
   {
     id: 'pb13-42',
@@ -504,7 +504,7 @@ export const questions: Question[] = [
       'Learn about the history of the marae',
     ],
     correctIndex: 2,
-    explanation: 'Understanding marae protocol ensures respectful behavior and cultural safety during visits.',
+    explanation: 'Understanding marae protocol ensures respectful behavior and cultural safety during visits.'
   },
   {
     id: 'pb13-43',
@@ -516,11 +516,11 @@ export const questions: Question[] = [
       'It acknowledges Māori choice in meeting their health needs',
     ],
     correctIndex: 1,
-    explanation: 'The Treaty underpins cultural safety by affirming Māori rights and guiding equitable health practices.',
+    explanation: 'The Treaty underpins cultural safety by affirming Māori rights and guiding equitable health practices.'
   },
   {
     id: 'pb13-44',
-    text: 'Raewyn wants to make a speech during the marae welcome. What should you say?',
+    text: 'Raewyn wants to make a speech during the marae welcome. What should you advise?',
     options: [
       "That's exciting, which song do you want to sing in support?",
       'We should discuss this with the elders of the marae',
@@ -528,7 +528,7 @@ export const questions: Question[] = [
       'Contact a Māori nurse in the community to support her',
     ],
     correctIndex: 1,
-    explanation: 'Consulting marae elders ensures cultural appropriateness and respects traditional protocols.',
+    explanation: 'Consulting marae elders ensures cultural appropriateness and respects traditional protocols.'
   },
   {
     id: 'pb13-45',
@@ -540,7 +540,7 @@ export const questions: Question[] = [
       'I will discuss this with my colleagues first',
     ],
     correctIndex: 3,
-    explanation: 'Collaborating with colleagues ensures informed, respectful, and culturally safe contributions.',
+    explanation: 'Collaborating with colleagues ensures informed, respectful, and culturally safe contributions.'
   },
   {
     id: 'pb13-46',
@@ -552,7 +552,7 @@ export const questions: Question[] = [
       'The partnership is between the Māori community and the Crown',
     ],
     correctIndex: 1,
-    explanation: 'Partnership involves shared decision-making between whānau and healthcare providers.',
+    explanation: 'Partnership involves shared decision-making between whānau and healthcare providers.'
   },
   {
     id: 'pb13-47',
@@ -563,8 +563,8 @@ export const questions: Question[] = [
       'That Pepe be placed in a Māori facility is more correct',
       'That the principle of tino rangatiratanga is maintained',
     ],
-    correctIndex: 3,
-    explanation: 'Tino rangatiratanga refers to Māori self-determination, including decisions about whānau care and cultural continuity.',
+    correctIndex: 1,
+    explanation: 'Discharging Pepe to his whānau honors his cultural identity and aligns with Treaty principles of protection.'
   },
   {
     id: 'pb13-48',
@@ -576,7 +576,7 @@ export const questions: Question[] = [
       'Introduce him to a Māori elder',
     ],
     correctIndex: 1,
-    explanation: 'Engaging a Māori colleague ensures culturally safe and informed support for Piripi’s reconnection journey.',
+    explanation: 'Engaging a Māori colleague ensures culturally safe and informed support for Piripi’s reconnection journey.'
   },
   {
     id: 'pb13-49',
@@ -588,7 +588,7 @@ export const questions: Question[] = [
       'The company keeps him quiet',
     ],
     correctIndex: 1,
-    explanation: 'Acknowledging Māori rights affirms cultural safety and respects the role of whānau in patient care.',
+    explanation: 'Acknowledging Māori rights affirms cultural safety and respects the role of whānau in patient care.'
   },
   {
     id: 'pb13-50',
@@ -600,7 +600,7 @@ export const questions: Question[] = [
       'He has his whānau with him',
     ],
     correctIndex: 0,
-    explanation: 'Repeating information in his own words confirms comprehension and supports informed consent.',
+    explanation: 'Repeating information in his own words confirms comprehension and supports informed consent.'
   },
   {
     id: 'pb13-51',
@@ -612,7 +612,7 @@ export const questions: Question[] = [
       'Ensure relatives of his admission',
     ],
     correctIndex: 2,
-    explanation: 'A mental health assessment is essential to determine Tao’s immediate needs and ensure safety.',
+    explanation: 'A mental health assessment is essential to determine Tao’s immediate needs and ensure safety.'
   },
   {
     id: 'pb13-52',
@@ -624,7 +624,7 @@ export const questions: Question[] = [
       'Ask her to arrange for a Māori healer to see Tao',
     ],
     correctIndex: 1,
-    explanation: 'Collaborating with whānau acknowledges cultural beliefs and supports holistic care.',
+    explanation: 'Collaborating with whānau acknowledges cultural beliefs and supports holistic care.'
   },
   {
     id: 'pb13-53',
@@ -636,7 +636,7 @@ export const questions: Question[] = [
       'He will comply with treatment more readily',
     ],
     correctIndex: 1,
-    explanation: 'Culturally aligned environments promote healing and emotional safety for Māori clients.',
+    explanation: 'Culturally aligned environments promote healing and emotional safety for Māori clients.'
   },
   {
     id: 'pb13-54',
@@ -648,7 +648,7 @@ export const questions: Question[] = [
       'Non-compliance, visual and audible hallucinations',
     ],
     correctIndex: 2,
-    explanation: 'Paranoid schizophrenia often includes echolalia, delusions, and fearfulness, especially in acute phases.',
+    explanation: 'Paranoid schizophrenia often includes echolalia, delusions, and fearfulness, especially in acute phases.'
   },
   {
     id: 'pb13-55',
@@ -660,7 +660,7 @@ export const questions: Question[] = [
       'Article 3 guarantees the right to equitable health care',
     ],
     correctIndex: 3,
-    explanation: 'Article 3 affirms Māori rights to equitable health care, aligning with cultural safety principles.',
+    explanation: 'Article 3 affirms Māori rights to equitable health care, aligning with cultural safety principles.'
   },
   {
     id: 'pb13-56',
@@ -672,7 +672,7 @@ export const questions: Question[] = [
       'Go and see Wiremu at his home',
     ],
     correctIndex: 3,
-    explanation: 'Visiting Wiremu at home respects whānau dynamics and supports culturally safe engagement.',
+    explanation: 'Visiting Wiremu at home respects whānau dynamics and supports culturally safe engagement.'
   },
   {
     id: 'pb13-57',
@@ -684,7 +684,7 @@ export const questions: Question[] = [
       'Ring the kōhanga reo to arrange a visit',
     ],
     correctIndex: 3,
-    explanation: 'Respecting school protocols and Māori settings ensures culturally appropriate engagement.',
+    explanation: 'Respecting school protocols and Māori settings ensures culturally appropriate engagement.'
   },
   {
     id: 'pb13-58',
@@ -696,7 +696,7 @@ export const questions: Question[] = [
       'Discuss how both treatments are of value',
     ],
     correctIndex: 3,
-    explanation: 'Integrating both biomedical and traditional approaches respects cultural beliefs and promotes healing.',
+    explanation: 'Integrating both biomedical and traditional approaches respects cultural beliefs and promotes healing.'
   },
   {
     id: 'pb13-59',
@@ -708,7 +708,7 @@ export const questions: Question[] = [
       'Call in a social worker to help',
     ],
     correctIndex: 2,
-    explanation: 'Involving whānau in care decisions aligns with Māori values and supports culturally safe practice.',
+    explanation: 'Involving whānau in care decisions aligns with Māori values and supports culturally safe practice.'
   },
   {
     id: 'pb13-60',
@@ -720,7 +720,7 @@ export const questions: Question[] = [
       'Assure them doctors will do everything they can',
     ],
     correctIndex: 0,
-    explanation: 'Acknowledging whānau concerns and offering culturally appropriate care options builds trust and reassurance.',
+    explanation: 'Acknowledging whānau concerns and offering culturally appropriate care options builds trust and reassurance.'
   },
   {
     id: 'pb13-61',
@@ -732,7 +732,7 @@ export const questions: Question[] = [
       'The government sharing the resources 50/50 thus ensuring equity',
     ],
     correctIndex: 0,
-    explanation: 'Māori-led health initiatives reflect tino rangatiratanga and ensure culturally responsive care.',
+    explanation: 'Māori-led health initiatives reflect tino rangatiratanga and ensure culturally responsive care.'
   },
   {
     id: 'pb13-62',
@@ -744,7 +744,7 @@ export const questions: Question[] = [
       'Not answered',
     ],
     correctIndex: 1,
-    explanation: 'Discharging Pepe to his whānau honors his cultural identity and aligns with Treaty principles of protection.',
+    explanation: 'Discharging Pepe to his whānau honors his cultural identity and aligns with Treaty principles of protection.'
   },
   {
     id: 'pb13-63',
@@ -756,7 +756,7 @@ export const questions: Question[] = [
       'The history of a client’s symptoms and his response to stress',
     ],
     correctIndex: 1,
-    explanation: "The 'batom' framework helps assess functional and cognitive status, guiding care planning.",
+    explanation: "The 'batom' framework helps assess functional and cognitive status, guiding care planning."
   },
   {
     id: 'pb13-64',
@@ -768,7 +768,7 @@ export const questions: Question[] = [
       'Carving and artistry',
     ],
     correctIndex: 0,
-    explanation: 'Whakapapa connects individuals to their ancestors, land, and identity—central to Māori worldview.',
+    explanation: 'Whakapapa connects individuals to their ancestors, land, and identity—central to Māori worldview.'
   },
   {
     id: 'pb13-65',
@@ -780,7 +780,7 @@ export const questions: Question[] = [
       'By challenging their authority',
     ],
     correctIndex: 2,
-    explanation: 'Respect for elders is shown through attentive listening and valuing their wisdom and leadership.',
+    explanation: 'Respect for elders is shown through attentive listening and valuing their wisdom and leadership.'
   },
   {
     id: 'pb13-66',
@@ -792,7 +792,7 @@ export const questions: Question[] = [
       'Reciprocity and exchange',
     ],
     correctIndex: 0,
-    explanation: 'Manaakitanga reflects hospitality, care, and respect for others—core values in Māori society.',
+    explanation: 'Manaakitanga reflects hospitality, care, and respect for others—core values in Māori society.'
   },
   {
     id: 'pb13-67',
@@ -804,7 +804,7 @@ export const questions: Question[] = [
       'To negotiate business',
     ],
     correctIndex: 2,
-    explanation: 'Pōwhiri is a formal process of welcoming guests, emphasizing respect, unity, and cultural protocol.',
+    explanation: 'Pōwhiri is a formal process of welcoming guests, emphasizing respect, unity, and cultural protocol.'
   },
   {
     id: 'pb13-68',
@@ -816,7 +816,7 @@ export const questions: Question[] = [
       'Social wellbeing',
     ],
     correctIndex: 2,
-    explanation: 'Wairua represents spiritual health, a vital dimension in Māori models of holistic wellbeing.',
+    explanation: 'Wairua represents spiritual health, a vital dimension in Māori models of holistic wellbeing.'
   },
   {
     id: 'pb13-69',
@@ -828,7 +828,7 @@ export const questions: Question[] = [
       'Avoidance of medical treatment',
     ],
     correctIndex: 1,
-    explanation: 'Māori health philosophy is holistic, integrating physical, emotional, spiritual, and social aspects.',
+    explanation: 'Māori health philosophy is holistic, integrating physical, emotional, spiritual, and social aspects.'
   },
   {
     id: 'pb13-70',
@@ -840,7 +840,7 @@ export const questions: Question[] = [
       'Creation of the New Zealand constitution',
     ],
     correctIndex: 1,
-    explanation: 'Te Tiriti affirms Māori sovereignty and forms the foundation of bicultural governance in Aotearoa.',
+    explanation: 'Te Tiriti affirms Māori sovereignty and forms the foundation of bicultural governance in Aotearoa.'
   },
   {
     id: 'pb13-71',
@@ -852,7 +852,7 @@ export const questions: Question[] = [
       'A means of communication only',
     ],
     correctIndex: 1,
-    explanation: 'Te reo Māori is a living language that embodies identity, heritage, and cultural continuity.',
+    explanation: 'Te reo Māori is a living language that embodies identity, heritage, and cultural continuity.'
   },
   {
     id: 'pb13-72',
@@ -864,7 +864,7 @@ export const questions: Question[] = [
       'All of the above',
     ],
     correctIndex: 3,
-    explanation: 'Māori face multiple health disparities due to systemic inequities and historical trauma.',
+    explanation: 'Māori face multiple health disparities due to systemic inequities and historical trauma.'
   },
   {
     id: 'pb13-73',
@@ -876,44 +876,427 @@ export const questions: Question[] = [
       'All of the above',
     ],
     correctIndex: 3,
-    explanation: 'Reducing disparities requires a multifaceted approach including cultural, structural, and social interventions.',
+    explanation: 'Reducing disparities requires a multifaceted approach including cultural, structural, and social interventions.'
   },
   {
-    "questionNo": 74,
-    "question": "What is the name of the Māori health model that compares the four dimensions of wellbeing to the four walls of a wharenui?",
-    "options": {
-      "a": "Whare Tapa Whā",
-      "b": "Mauri Ora",
-      "c": "Tīno rangatiratanga",
-      "d": "Hauora"
-    },
-    "answer": "a",
-    "rationale": "Whare Tapa Whā is a holistic model representing physical, mental, spiritual, and family wellbeing."
+    id: 'pb13-74',
+    text: 'What is the name of the Māori health model that compares the four dimensions of wellbeing to the four walls of a wharenui?',
+    options: [
+      'Whare Tapa Whā',
+      'Mauri Ora',
+      'Tīno rangatiratanga',
+      'Hauora'
+    ],
+    correctIndex: 0,
+    explanation: 'Whare Tapa Whā is a holistic model representing physical, mental, spiritual, and family wellbeing.'
   },
   {
-    "questionNo": 75,
-    "question": "Which principle of Te Tiriti o Waitangi emphasizes the importance of partnership between Māori and the Crown?",
-    "options": {
-      "a": "Protection",
-      "b": "Participation",
-      "c": "Partnership",
-      "d": "Sovereignty"
+    id: 'pb13-75',
+    text: 'Which principle of Te Tiriti o Waitangi emphasizes the importance of partnership between Māori and the Crown?',
+    options: [
+      'Protection',
+      'Participation',
+      'Partnership',
+      'Sovereignty'
+    ],
+    correctIndex: 2,
+    explanation: 'Partnership ensures shared decision-making and mutual respect in health and governance.'
+  },
+  {
+    id: 'pb13-76',
+    text: 'What is the Māori concept of spiritual wellbeing?',
+    options: [
+      'Wairua',
+      'Mauri Ora',
+      'Hauora',
+      'Whakapapa'
+    ],
+    correctIndex: 0,
+    explanation: 'Wairua reflects the spiritual dimension of health, essential to Māori models of wellbeing.'
+  },
+  {
+    id: 'pb13-77',
+    text: 'A Māori patient requests cultural support. What would you do?',
+    options: [
+      'Refer to cultural support services',
+      'Provide cultural resources',
+      'Provide cultural resources',
+      'Contact whānau'
+    ],
+    correctIndex: 0,
+    explanation: 'Referring to cultural support services ensures the patient receives appropriate and respectful care.'
+  },
+  {
+    id: 'pb13-78',
+    text: 'A Māori patient is nearing end-of-life. What’s essential?',
+    options: [
+      'Whānau involvement',
+      'Cultural rituals',
+      'Pain management',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'End-of-life care for Māori should integrate clinical, cultural, and spiritual support with whānau involvement.'
+  },
+  {
+    id: 'pb13-79',
+    text: 'What contributes to health disparities among Māori?',
+    options: [
+      'Socioeconomic factors',
+      'Cultural barriers',
+      'Access to healthcare',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'Multiple systemic factors contribute to health inequities for Māori, requiring holistic solutions.'
+  },
+  {
+    id: 'pb13-80',
+    text: 'Why is cultural training essential for healthcare staff?',
+    options: [
+      'Improves patient outcomes',
+      'Enhances cultural competence',
+      'Reduces cultural barriers',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'Cultural training equips staff to deliver respectful, effective care and reduce disparities.'
+  },
+  {
+    id: 'pb13-81',
+    text: 'Tane, a Māori patient, is admitted to hospital. His whānau is concerned about his cultural needs. How would you provide family-centered care?',
+    options: [
+      'Limit whānau involvement due to confidentiality concerns',
+      'Encourage whānau participation in care decisions and planning',
+      'Ignore whānau concerns and focus on medical treatment',
+      'Refer whānau to hospital’s cultural support services only'
+    ],
+    correctIndex: 1,
+    explanation: 'Family-centered care for Māori involves whānau in decision-making, respecting collective values.'
+  },
+  {
+    id: 'pb13-82',
+    text: 'Why is dialysis performed in lithium toxicity?',
+    options: [
+      'Enhance lithium absorption',
+      'Reduce lithium distribution',
+      'Eliminate lithium from the body',
+      'Manage lithium side effects'
+    ],
+    correctIndex: 2,
+    explanation: 'Dialysis rapidly removes lithium from the bloodstream, preventing further toxicity and organ damage.'
+  },
+  {
+    id: 'pb13-83',
+    text: 'A Māori patient is hesitant to undergo a surgical procedure due to concerns about tapu (sacredness). What is the most culturally safe response?',
+    options: [
+      'Explain the medical necessity and proceed with consent',
+      'Dismiss the concern and reassure the patient',
+      'Acknowledge the concern and offer to involve a Māori health advocate',
+      'Delay the procedure until the patient agrees'
+    ],
+    correctIndex: 2,
+    explanation: 'Acknowledging tapu and involving cultural support respects Māori beliefs and promotes informed, culturally safe care.'
+  },
+  {
+    id: 'pb13-84',
+    text: 'During a health assessment, a Māori elder expresses discomfort discussing personal health matters without whānau present. What should the nurse do?',
+    options: [
+      'Continue the assessment privately',
+      'Invite whānau to join the conversation with the elder’s consent',
+      'Refer the elder to a different clinician',
+      'Reschedule the assessment for another day'
+    ],
+    correctIndex: 1,
+    explanation: 'Whānau involvement is central to Māori decision-making. Including them fosters trust and cultural safety.'
+  },
+  {
+    id: 'pb13-85',
+    text: 'A Māori patient recovering from surgery requests to return home early to be with whānau. What is the most appropriate nursing action?',
+    options: [
+      'Decline the request due to medical protocol',
+      'Discharge the patient immediately',
+      'Assess clinical stability and coordinate discharge planning with whānau',
+      'Refer the patient to social services'
+    ],
+    correctIndex: 2,
+    explanation: 'Balancing clinical safety with cultural needs ensures respectful, patient-centered care.'
+  },
+  {
+    id: 'pb13-86',
+    text: 'A Māori youth expresses interest in reconnecting with their iwi and cultural identity during a mental health consult. What is the best initial step?',
+    options: [
+      'Refer them to a general counselor',
+      'Encourage them to focus on clinical goals first',
+      'Connect them with a Māori health worker or cultural mentor',
+      'Advise them to research iwi history independently'
+    ],
+    correctIndex: 2,
+    explanation: 'Cultural reconnection supports identity, resilience, and healing—especially in youth mental health contexts.'
+  },
+  {
+    id: 'pb13-87',
+    text: 'What’s essential for effective health promotion among Māori?',
+    options: [
+      'Cultural tailoring',
+      'Community engagement',
+      'Whānau involvement',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'Effective health promotion for Māori requires culturally tailored approaches, community collaboration, and whānau support.'
+  },
+  {
+    id: 'pb13-88',
+    text: 'How often should the Braden Scale be reassessed?',
+    options: [
+      'Daily',
+      'Weekly',
+      'Monthly',
+      'Quarterly'
+    ],
+    correctIndex: 0,
+    explanation: 'Daily reassessment ensures timely identification of pressure injury risk and appropriate interventions.'
+  },
+  {
+    id: 'pb13-89',
+    text: 'What is the consequence of a low Braden Scale score?',
+    options: [
+      'Increased fall risk',
+      'Risk of infection',
+      'Poor wound healing',
+      'Decreased mobility'
+    ],
+    correctIndex: 2,
+    explanation: 'A low Braden score indicates high risk for pressure injuries, which can impair wound healing.'
+  },
+  {
+    id: 'pb13-90',
+    text: 'How can healthcare organizations partner with Māori communities?',
+    options: [
+      'Collaborate on health initiatives',
+      'Employ Māori staff',
+      'Provide cultural training',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'True partnership involves collaboration, representation, and cultural competency development.'
+  },
+  {
+    id: 'pb13-91',
+    text: 'What’s a key aspect of cultural competence in Māori healthcare?',
+    options: [
+      'Knowledge of Māori culture',
+      'Awareness of cultural differences',
+      'Skill in communicating with Māori patients',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'Cultural competence combines knowledge, awareness, and communication skills tailored to Māori values.'
+  },
+  {
+    id: 'pb13-92',
+    text: 'How does Whakapapa influence Māori health?',
+    options: [
+      'Connects individuals to ancestors',
+      'Defines connections to others',
+      'Affects cultural identity',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'Whakapapa shapes identity, relationships, and spiritual wellbeing—core elements of Māori health.'
+  },
+  {
+    id: 'pb13-93',
+    text: 'A Māori patient requests cultural support. What would you do?',
+    options: [
+      'Refer to cultural support services',
+      'Provide cultural resources',
+      'Provide cultural resources',
+      'Contact whānau'
+    ],
+    correctIndex: 0,
+    explanation: 'Referring to cultural support services ensures the patient receives appropriate and respectful care.'
+  },
+  {
+    id: 'pb13-94',
+    text: 'A Māori patient is nearing end-of-life. What’s essential?',
+    options: [
+      'Whānau involvement',
+      'Cultural rituals',
+      'Pain management',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'End-of-life care for Māori should integrate clinical, cultural, and spiritual support with whānau involvement.'
+  },
+  {
+    id: 'pb13-95',
+    text: 'What contributes to health disparities among Māori?',
+    options: [
+      'Socioeconomic factors',
+      'Cultural barriers',
+      'Access to healthcare',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'Multiple systemic factors contribute to health inequities for Māori, requiring holistic solutions.'
+  },
+  {
+    id: 'pb13-96',
+    text: 'Why is cultural training essential for healthcare staff?',
+    options: [
+      'Improves patient outcomes',
+      'Enhances cultural competence',
+      'Reduces cultural barriers',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'Cultural training equips staff to deliver respectful, effective care and reduce disparities.'
+  },
+  {
+    id: 'pb13-97',
+    text: 'Tane, a Māori patient, is admitted to hospital. His whānau is concerned about his cultural needs. How would you provide family-centered care?',
+    options: [
+      'Limit whānau involvement due to confidentiality concerns',
+      'Encourage whānau participation in care decisions and planning',
+      'Ignore whānau concerns and focus on medical treatment',
+      'Refer whānau to hospital’s cultural support services only'
+    ],
+    correctIndex: 1,
+    explanation: 'Family-centered care for Māori involves whānau in decision-making, respecting collective values.'
+  },
+  {
+    id: 'pb13-98',
+    text: 'Why is dialysis performed in lithium toxicity?',
+    options: [
+      'Enhance lithium absorption',
+      'Reduce lithium distribution',
+      'Eliminate lithium from the body',
+      'Manage lithium side effects'
     },
     "answer": "c",
-    "rationale": "Partnership ensures shared decision-making and mutual respect in health and governance."
+    "rationale": "Dialysis rapidly removes lithium from the bloodstream, preventing further toxicity and organ damage."
   },
   {
-    "questionNo": 76,
-    "question": "What is the Māori concept of spiritual wellbeing?",
+    "questionNo": 99,
+    "question": "A Māori patient is hesitant to undergo a surgical procedure due to concerns about tapu (sacredness). What is the most culturally safe response?",
     "options": {
-      "a": "Wairua",
-      "b": "Mauri Ora",
-      "c": "Hauora",
-      "d": "Whakapapa"
+      "a": "Explain the medical necessity and proceed with consent",
+      "b": "Dismiss the concern and reassure the patient",
+      "c": "Acknowledge the concern and offer to involve a Māori health advocate",
+      "d": "Delay the procedure until the patient agrees"
+    },
+    "answer": "c",
+    "rationale": "Acknowledging tapu and involving cultural support respects Māori beliefs and promotes informed, culturally safe care."
+  },
+  {
+    "questionNo": 100,
+    "question": "During a health assessment, a Māori elder expresses discomfort discussing personal health matters without whānau present. What should the nurse do?",
+    "options": {
+      "a": "Continue the assessment privately",
+      "b": "Invite whānau to join the conversation with the elder’s consent",
+      "c": "Refer the elder to a different clinician",
+      "d": "Reschedule the assessment for another day"
+    },
+    "answer": "b",
+    "rationale": "Whānau involvement is central to Māori decision-making. Including them fosters trust and cultural safety."
+  },
+  {
+    "questionNo": 101,
+    "question": "A Māori patient recovering from surgery requests to return home early to be with whānau. What is the most appropriate nursing action?",
+    "options": {
+      "a": "Decline the request due to medical protocol",
+      "b": "Discharge the patient immediately",
+      "c": "Assess clinical stability and coordinate discharge planning with whānau",
+      "d": "Refer the patient to social services"
+    },
+    "answer": "c",
+    "rationale": "Balancing clinical safety with cultural needs ensures respectful, patient-centered care."
+  },
+  {
+    "questionNo": 102,
+    "question": "A Māori youth expresses interest in reconnecting with their iwi and cultural identity during a mental health consult. What is the best initial step?",
+    "options": {
+      "a": "Refer them to a general counselor",
+      "b": "Encourage them to focus on clinical goals first",
+      "c": "Connect them with a Māori health worker or cultural mentor",
+      "d": "Advise them to research iwi history independently"
+    },
+    "answer": "c",
+    "rationale": "Cultural reconnection supports identity, resilience, and healing—especially in youth mental health contexts."
+  },
+  {
+    "questionNo": 103,
+    "question": "A nurse has been assigned to care for a patient from a different cultural background. The nurse's first step should be to:",
+    "options": {
+      "a": "Use standard care practices without change",
+      "b": "Ask the patient about their cultural needs and preferences",
+      "c": "Read up on the patient's culture before providing care",
+      "d": "Assign the patient to another nurse from the same culture"
+    },
+    "answer": "b",
+    "rationale": "Cultural safety involves actively engaging with patients to understand and respect their individual needs and preferences."
+  },
+  {
+    "questionNo": 104,
+    "question": "What is the purpose of the Nursing Council of New Zealand's (NCNZ) professional standards?",
+    "options": {
+      "a": "To ensure nurses receive fair salaries",
+      "b": "To guide nurses in their professional development and practice",
+      "c": "To provide financial guidance for nurses",
+      "d": "To establish rules for patient behavior"
+    },
+    "answer": "b",
+    "rationale": "The professional standards guide nurses in providing safe, effective, and ethical care, ensuring accountability and quality practice."
+  },
+  {
+    "questionNo": 105,
+    "question": "A Māori patient requests a whānau member to be present during a medical procedure. What is the best response from the nurse?",
+    "options": {
+      "a": "Deny the request because it will cause delays",
+      "b": "Accommodate the request as part of providing culturally safe care",
+      "c": "Tell the patient it is not allowed by hospital policy",
+      "d": "Allow the patient’s whānau member to be present only if they are a caregiver"
+    },
+    "answer": "b",
+    "rationale": "Whānau involvement is a key aspect of Māori health practices and shows respect for their cultural values."
+  },
+  {
+    "questionNo": 106,
+    "question": "When a nurse delegates a task to a healthcare assistant (HCA), they are responsible for:",
+    "options": {
+      "a": "Checking that the HCA completed the task",
+      "b": "Doing the task themselves",
+      "c": "Overseeing the HCA's workload",
+      "d": "Discussing the task only with management"
     },
     "answer": "a",
-    "rationale": "Wairua reflects the spiritual dimension of health, essential to Māori models of wellbeing."
+    "rationale": "Delegation involves responsibility for the safe and effective completion of the task, ensuring appropriate oversight."
+  },
+  {
+    "questionNo": 107,
+    "question": "Which of the following actions is most aligned with the Treaty of Waitangi principle of 'equity'?",
+    "options": {
+      "a": "Offering Māori patients the same resources as Pākehā patients",
+      "b": "Providing additional support to Māori patients who face health disparities",
+      "c": "Ignoring the cultural background of Māori patients to treat all patients equally",
+      "d": "Focusing on Māori patients' traditional values"
+    },
+    "answer": "b",
+    "rationale": "Equity involves addressing the specific needs of Māori patients to eliminate health disparities."
+  },
+  {
+    "questionNo": 108,
+    "question": "If a nurse notices a colleague performing a task they are not qualified to do, the nurse should:",
+    "options": {
+      "a": "Ignore it if the colleague seems confident",
+      "b": "Immediately report it to the relevant authority",
+      "c": "Tell the colleague to stop but do nothing further",
+      "d": "Help the colleague complete the task without reporting it"
+    },
+    "answer": "b",
+    "rationale": "Nurses are ethically and legally responsible for patient safety and must report unsafe practices."
   }
 ]
-]
-]
+I have sent the remaining questions. Please add them and make test 13 with 108 questions.
