@@ -244,7 +244,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb12-21',
-    text: 'A nurse discusses a homosexual colleague in the staff room. This is a breach of:',
+    text: "A nurse discusses a homosexual colleague in the staff room. This is a breach of:",
     options: [
       'Confidentiality',
       'Professional competence',
@@ -484,7 +484,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb12-41',
-    text: 'A patient refuses to do passive range of motion exercises. What is the nurse\'s action?',
+    text: "A patient refuses to do passive range of motion exercises. What is the nurse's action?",
     options: [
       'Document the refusal and inform the physician',
       'Perform the procedure without patient consent',
@@ -628,7 +628,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb12-53',
-    text: 'A geriatric patient is prescribed with cimetidine (Tagamet) for the treatment of heartburn. Which of the following is the most frequent CNS side effect of the medication?',
+    text: 'A geriatric patient is prescribed cimetidine (Tagamet) for the treatment of heartburn. Which of the following is the most frequent CNS side effect of the medication?',
     options: [
       'Agitation',
       'Headache',
@@ -917,79 +917,79 @@ export const questions: Question[] = [
   {
     id: 'pb12-77',
     text: 'Which of the following is NOT typically a symptom of hyperthyroidism?',
-    options: {
+    options: [
       'Weight loss despite increased appetite',
       'Heat intolerance and sweating',
       'Bradycardia and cold intolerance',
       'Tremors and nervousness'
-    },
-    answer: 'c',
-    rationale: 'Bradycardia and cold intolerance are signs of hypothyroidism, not hyperthyroidism, which causes increased metabolism and excitability.'
+    ],
+    correctIndex: 2,
+    explanation: 'Bradycardia and cold intolerance are signs of hypothyroidism, not hyperthyroidism, which causes increased metabolism and excitability.'
   },
   {
-    "questionNo": 78,
-    "question": "What is the recommended dietary intervention for a patient with chronic kidney disease (CKD)?",
-    "options": {
-      "a": "High protein, high sodium diet",
-      "b": "Low protein, low potassium diet",
-      "c": "High potassium, low sodium diet",
-      "d": "Low sodium, high phosphorus diet"
-    },
-    "answer": "b",
-    "rationale": "CKD patients require restricted protein and potassium intake to reduce kidney workload and prevent electrolyte imbalance."
+    id: 'pb12-78',
+    text: 'What is the recommended dietary intervention for a patient with chronic kidney disease (CKD)?',
+    options: [
+      'High protein, high sodium diet',
+      'Low protein, low potassium diet',
+      'High potassium, low sodium diet',
+      'Low sodium, high phosphorus diet'
+    ],
+    correctIndex: 1,
+    explanation: 'CKD patients require restricted protein and potassium intake to reduce kidney workload and prevent electrolyte imbalance.'
   },
   {
-    "questionNo": 79,
-    "question": "Which medication class is first-line treatment for newly diagnosed hypertension in the absence of other comorbid conditions?",
-    "options": {
-      "a": "Beta-blockers",
-      "b": "ACE inhibitors",
-      "c": "Calcium channel blockers",
-      "d": "Thiazide diuretics"
-    },
-    "answer": "d",
-    "rationale": "Thiazide diuretics are recommended as first-line therapy for uncomplicated hypertension due to their efficacy and cost-effectiveness."
+    id: 'pb12-79',
+    text: 'Which medication class is first-line treatment for newly diagnosed hypertension in the absence of other comorbid conditions?',
+    options: [
+      'Beta-blockers',
+      'ACE inhibitors',
+      'Calcium channel blockers',
+      'Thiazide diuretics'
+    ],
+    correctIndex: 3,
+    explanation: 'Thiazide diuretics are recommended as first-line therapy for uncomplicated hypertension due to their efficacy and cost-effectiveness.'
   },
   {
-    "questionNo": 80,
-    "question": "What is the primary indication for administering intravenous (IV) fluids in a patient with severe dehydration?",
-    "options": {
-      "a": "To increase urine output",
-      "b": "To enhance appetite",
-      "c": "To correct electrolyte imbalances",
-      "d": "To reduce blood pressure"
-    },
-    "answer": "c",
-    "rationale": "IV fluids restore fluid volume and correct electrolyte disturbances caused by dehydration."
+    id: 'pb12-80',
+    text: 'What is the primary indication for administering intravenous (IV) fluids in a patient with severe dehydration?',
+    options: [
+      'To increase urine output',
+      'To enhance appetite',
+      'To correct electrolyte imbalances',
+      'To reduce blood pressure'
+    ],
+    correctIndex: 2,
+    explanation: 'IV fluids restore fluid volume and correct electrolyte disturbances caused by dehydration.'
   },
   {
-    "questionNo": 81,
-    "question": "Which factor is most critical in determining the severity of a burn injury?",
-    "options": {
-      "a": "The location of the burn",
-      "b": "The cause of the burn",
-      "c": "The percentage of body surface area affected",
-      "d": "The presence of blisters"
-    },
-    "answer": "c",
-    "rationale": "Total body surface area (TBSA) affected is a key determinant in assessing burn severity and guiding treatment."
+    id: 'pb12-81',
+    text: 'Which factor is most critical in determining the severity of a burn injury?',
+    options: [
+      'The location of the burn',
+      'The cause of the burn',
+      'The percentage of body surface area affected',
+      'The presence of blisters'
+    ],
+    correctIndex: 2,
+    explanation: 'Total body surface area (TBSA) affected is a key determinant in assessing burn severity and guiding treatment.'
   },
   {
-    "questionNo": 82,
-    "question": "What is the primary goal of treatment in acute myocardial infarction (heart attack)?",
-    "options": {
-      "a": "To increase heart rate",
-      "b": "To reduce pain",
-      "c": "To restore blood flow to the affected heart muscle",
-      "d": "To decrease blood pressure"
-    },
-    "answer": "c",
-    "rationale": "Restoring perfusion to the heart muscle minimizes damage and improves outcomes in MI."
+    id: 'pb12-82',
+    text: 'What is the primary goal of treatment in acute myocardial infarction (heart attack)?',
+    options: [
+      'To increase heart rate',
+      'To reduce pain',
+      'To restore blood flow to the affected heart muscle',
+      'To decrease blood pressure'
+    ],
+    correctIndex: 2,
+    explanation: 'Restoring perfusion to the heart muscle minimizes damage and improves outcomes in MI.'
   },
   {
-    "questionNo": 83,
-    "question": "In patients with chronic obstructive pulmonary disease (COPD), what is the main reason for encouraging smoking cessation?",
-    "options": {
+    id: 'pb12-83',
+    text: 'In patients with chronic obstructive pulmonary disease (COPD), what is the main reason for encouraging smoking cessation?',
+    options: {
       "a": "To improve appetite",
       "b": "To increase exercise ability",
       "c": "To reduce the progression of lung damage",
@@ -1298,3 +1298,4 @@ export const questions: Question[] = [
     "answer": "b",
     "rationale": "Low calcium levels increase neuromuscular excitability, leading to cramps, spasms, and tetany."
   }
+I have send you the all 108 questions of Test 12. now please add them and correct the question count and make sure not to do any mistakes again.
