@@ -211,7 +211,7 @@ export const questions: Question[] = [
     text: 'In clause 2 of the Treaty of Waitangi (Māori version), Māori were guaranteed possession and control of their taonga. Taonga means:',
     options: [
       'All land and fisheries',
-      'Land, forests and fisheries',
+      'Land and the family and friendships',
       'All things held precious by the Māori',
       'All things held precious by the Pākehā',
     ],
@@ -520,7 +520,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb13-44',
-    text: 'Raewyn wants to make a speech during the marae welcome. What should you advise?',
+    text: 'Raewyn wants to make a speech during the marae welcome. What should you say?',
     options: [
       "That's exciting, which song do you want to sing in support?",
       'We should discuss this with the elders of the marae',
@@ -913,9 +913,10 @@ export const questions: Question[] = [
     ],
     correctIndex: 0,
     explanation: 'Wairua reflects the spiritual dimension of health, essential to Māori models of wellbeing.',
-  },
+  }
+[
   {
-    "questionNo": 93,
+    "questionNo": 77,
     "question": "What’s essential for effective health promotion among Māori?",
     "options": {
       "a": "Cultural tailoring",
@@ -927,7 +928,7 @@ export const questions: Question[] = [
     "rationale": "Effective health promotion for Māori requires culturally tailored approaches, community collaboration, and whānau support."
   },
   {
-    "questionNo": 94,
+    "questionNo": 78,
     "question": "How often should the Braden Scale be reassessed?",
     "options": {
       "a": "Daily",
@@ -939,7 +940,7 @@ export const questions: Question[] = [
     "rationale": "Daily reassessment ensures timely identification of pressure injury risk and appropriate interventions."
   },
   {
-    "questionNo": 95,
+    "questionNo": 79,
     "question": "What is the consequence of a low Braden Scale score?",
     "options": {
       "a": "Increased fall risk",
@@ -951,7 +952,7 @@ export const questions: Question[] = [
     "rationale": "A low Braden score indicates high risk for pressure injuries, which can impair wound healing."
   },
   {
-    "questionNo": 96,
+    "questionNo": 80,
     "question": "How can healthcare organizations partner with Māori communities?",
     "options": {
       "a": "Collaborate on health initiatives",
@@ -963,7 +964,7 @@ export const questions: Question[] = [
     "rationale": "True partnership involves collaboration, representation, and cultural competency development."
   },
   {
-    "questionNo": 97,
+    "questionNo": 81,
     "question": "What’s a key aspect of cultural competence in Māori healthcare?",
     "options": {
       "a": "Knowledge of Māori culture",
@@ -975,7 +976,7 @@ export const questions: Question[] = [
     "rationale": "Cultural competence combines knowledge, awareness, and communication skills tailored to Māori values."
   },
   {
-    "questionNo": 98,
+    "questionNo": 82,
     "question": "How does Whakapapa influence Māori health?",
     "options": {
       "a": "Connects individuals to ancestors",
@@ -987,7 +988,7 @@ export const questions: Question[] = [
     "rationale": "Whakapapa shapes identity, relationships, and spiritual wellbeing—core elements of Māori health."
   },
   {
-    "questionNo": 99,
+    "questionNo": 83,
     "question": "A Māori patient requests cultural support. What would you do?",
     "options": {
       "a": "Refer to cultural support services",
@@ -999,7 +1000,7 @@ export const questions: Question[] = [
     "rationale": "Referring to cultural support services ensures the patient receives appropriate and respectful care."
   },
   {
-    "questionNo": 100,
+    "questionNo": 84,
     "question": "A Māori patient is nearing end-of-life. What’s essential?",
     "options": {
       "a": "Whānau involvement",
@@ -1011,7 +1012,7 @@ export const questions: Question[] = [
     "rationale": "End-of-life care for Māori should integrate clinical, cultural, and spiritual support with whānau involvement."
   },
   {
-    "questionNo": 101,
+    "questionNo": 85,
     "question": "What contributes to health disparities among Māori?",
     "options": {
       "a": "Socioeconomic factors",
@@ -1023,7 +1024,7 @@ export const questions: Question[] = [
     "rationale": "Multiple systemic factors contribute to health inequities for Māori, requiring holistic solutions."
   },
   {
-    "questionNo": 102,
+    "questionNo": 86,
     "question": "Why is cultural training essential for healthcare staff?",
     "options": {
       "a": "Improves patient outcomes",
@@ -1035,7 +1036,7 @@ export const questions: Question[] = [
     "rationale": "Cultural training equips staff to deliver respectful, effective care and reduce disparities."
   },
   {
-    "questionNo": 103,
+    "questionNo": 87,
     "question": "Tane, a Māori patient, is admitted to hospital. His whānau is concerned about his cultural needs. How would you provide family-centered care?",
     "options": {
       "a": "Limit whānau involvement due to confidentiality concerns",
@@ -1047,7 +1048,7 @@ export const questions: Question[] = [
     "rationale": "Family-centered care for Māori involves whānau in decision-making, respecting collective values."
   },
   {
-    "questionNo": 104,
+    "questionNo": 88,
     "question": "Why is dialysis performed in lithium toxicity?",
     "options": {
       "a": "Enhance lithium absorption",
@@ -1059,7 +1060,7 @@ export const questions: Question[] = [
     "rationale": "Dialysis rapidly removes lithium from the bloodstream, preventing further toxicity and organ damage."
   },
   {
-    "questionNo": 105,
+    "questionNo": 89,
     "question": "A Māori patient is hesitant to undergo a surgical procedure due to concerns about tapu (sacredness). What is the most culturally safe response?",
     "options": {
       "a": "Explain the medical necessity and proceed with consent",
@@ -1071,7 +1072,7 @@ export const questions: Question[] = [
     "rationale": "Acknowledging tapu and involving cultural support respects Māori beliefs and promotes informed, culturally safe care."
   },
   {
-    "questionNo": 106,
+    "questionNo": 90,
     "question": "During a health assessment, a Māori elder expresses discomfort discussing personal health matters without whānau present. What should the nurse do?",
     "options": {
       "a": "Continue the assessment privately",
@@ -1083,7 +1084,7 @@ export const questions: Question[] = [
     "rationale": "Whānau involvement is central to Māori decision-making. Including them fosters trust and cultural safety."
   },
   {
-    "questionNo": 107,
+    "questionNo": 91,
     "question": "A Māori patient recovering from surgery requests to return home early to be with whānau. What is the most appropriate nursing action?",
     "options": {
       "a": "Decline the request due to medical protocol",
@@ -1095,7 +1096,7 @@ export const questions: Question[] = [
     "rationale": "Balancing clinical safety with cultural needs ensures respectful, patient-centered care."
   },
   {
-    "questionNo": 108,
+    "questionNo": 92,
     "question": "A Māori youth expresses interest in reconnecting with their iwi and cultural identity during a mental health consult. What is the best initial step?",
     "options": {
       "a": "Refer them to a general counselor",
@@ -1106,6 +1107,4 @@ export const questions: Question[] = [
     "answer": "c",
     "rationale": "Cultural reconnection supports identity, resilience, and healing—especially in youth mental health contexts."
   }
-]
-]
 ]
