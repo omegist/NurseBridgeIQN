@@ -23,7 +23,7 @@ export const questions: Question[] = [
       'A knowledge of Māori protocol',
     ],
     correctIndex: 2,
-    explanation: 'Cultural safety begins with self-awareness and acknowledging one\'s limitations in meeting diverse needs.',
+    explanation: "Cultural safety begins with self-awareness and acknowledging one's limitations in meeting diverse needs.",
   },
   {
     id: 'pb13-3',
@@ -191,7 +191,7 @@ export const questions: Question[] = [
       'Māori understand Māori values best',
     ],
     correctIndex: 3,
-    explanation: 'Māori-led research honors cultural context and produces more relevant, impactful outcomes.',
+    explanation: 'Māori-led research honors cultural context and produces more relevant, impactful outcomes',
   },
   {
     id: 'pb13-17',
@@ -747,7 +747,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb13-63',
-    text: 'Mental status assessment using the \'batom\' formation is useful because it tells you:',
+    text: "Mental status assessment using the 'batom' formation is useful because it tells you:",
     options: [
       'Whether or not a client has a mental illness',
       'The client’s ability to function and cognitive functioning',
@@ -755,7 +755,7 @@ export const questions: Question[] = [
       'The history of a client’s symptoms and his response to stress',
     ],
     correctIndex: 1,
-    explanation: 'The \'batom\' framework helps assess functional and cognitive status, guiding care planning.',
+    explanation: "The 'batom' framework helps assess functional and cognitive status, guiding care planning.",
   },
   {
     id: 'pb13-64',
@@ -878,39 +878,40 @@ export const questions: Question[] = [
     explanation: 'Reducing disparities requires a multifaceted approach including cultural, structural, and social interventions.',
   },
   {
-    id: 'pb13-74',
-    text: 'What is the name of the Māori health model that compares the four dimensions of wellbeing to the four walls of a wharenui?',
-    options: [
-      'Whare Tapa Whā',
-      'Mauri Ora',
-      'Tīno rangatiratanga',
-      'Hauora',
-    ],
-    correctIndex: 0,
-    explanation: 'Whare Tapa Whā is a holistic model representing physical, mental, spiritual, and family wellbeing.',
+    "questionNo": 74,
+    "question": "What is the name of the Māori health model that compares the four dimensions of wellbeing to the four walls of a wharenui?",
+    "options": {
+      "a": "Whare Tapa Whā",
+      "b": "Mauri Ora",
+      "c": "Tīno rangatiratanga",
+      "d": "Hauora"
+    },
+    "answer": "a",
+    "rationale": "Whare Tapa Whā is a holistic model representing physical, mental, spiritual, and family wellbeing."
   },
   {
-    id: 'pb13-75',
-    text: 'Which principle of Te Tiriti o Waitangi emphasizes the importance of partnership between Māori and the Crown?',
-    options: [
-      'Protection',
-      'Participation',
-      'Partnership',
-      'Sovereignty',
-    ],
-    correctIndex: 2,
-    explanation: 'Partnership ensures shared decision-making and mutual respect in health and governance.',
+    "questionNo": 75,
+    "question": "Which principle of Te Tiriti o Waitangi emphasizes the importance of partnership between Māori and the Crown?",
+    "options": {
+      "a": "Protection",
+      "b": "Participation",
+      "c": "Partnership",
+      "d": "Sovereignty"
+    },
+    "answer": "c",
+    "rationale": "Partnership ensures shared decision-making and mutual respect in health and governance."
   },
   {
-    id: 'pb13-76',
-    text: 'What is the Māori concept of spiritual wellbeing?',
-    options: [
-      'Wairua',
-      'Mauri Ora',
-      'Hauora',
-      'Whakapapa',
-    ],
-    correctIndex: 0,
-    explanation: 'Wairua reflects the spiritual dimension of health, essential to Māori models of wellbeing.',
-  },
-];
+    "questionNo": 76,
+    "question": "What is the Māori concept of spiritual wellbeing?",
+    "options": {
+      "a": "Wairua",
+      "b": "Mauri Ora",
+      "c": "Hauora",
+      "d": "Whakapapa"
+    },
+    "answer": "a",
+    "rationale": "Wairua reflects the spiritual dimension of health, essential to Māori models of wellbeing."
+  }
+]
+now correct it and make test 13 with 108 questions
