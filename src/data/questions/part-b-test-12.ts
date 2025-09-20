@@ -30,12 +30,12 @@ export const questions: Question[] = [
     id: 'pb12-3',
     text: 'What does variable deceleration on fetal monitor tracing during contractions suggest?',
     options: [
-      'Variability',
-      'Accelerations',
-      'Early decelerations',
-      'Umbilical cord compression'
+      'Uteroplacental insufficiency',
+      'Fetal head compression',
+      'Umbilical cord compression',
+      'Fetal well-being'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     explanation: 'Variable decelerations are typically caused by umbilical cord compression, which can compromise fetal oxygenation.'
   },
   {
@@ -232,7 +232,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb12-20',
-    text: "The body becomes resistant to insulin or the pancreas doesn't produce enough insulin. What should be done?",
+    text: 'The body becomes resistant to insulin or the pancreas doesn\'t produce enough insulin. What should be done?',
     options: [
       'Administer anti-seizure medication immediately',
       'Ensure safety and observe for further seizure activity',
@@ -249,7 +249,7 @@ export const questions: Question[] = [
       'Confidentiality',
       'Professional competence',
       'Hospital policy on gossip',
-      "Nurse's code of ethics"
+      'Nurse\'s code of ethics'
     ],
     correctIndex: 0,
     explanation: "Discussing personal details about a colleague's sexuality without consent violates confidentiality and professional boundaries."
@@ -260,7 +260,7 @@ export const questions: Question[] = [
     options: [
       'Professional competence',
       'Patient-nurse relationship',
-      "Patient's privacy",
+      'Patient\'s privacy',
       'Medical ethics'
     ],
     correctIndex: 2,
@@ -1098,205 +1098,204 @@ export const questions: Question[] = [
     id: 'pb12-92',
     text: 'What is the risk associated with administering diuretics to a patient?',
     options: [
-      "Hypertension",
-      "Increased risk of falls",
-      "Excessive weight gain",
-      "Hypokalemia"
+      'Hypertension',
+      'Increased risk of falls',
+      'Excessive weight gain',
+      'Hypokalemia'
     ],
     correctIndex: 3,
-    explanation: "Diuretics can cause potassium loss, leading to hypokalemia and potential cardiac complications."
+    explanation: 'Diuretics can cause potassium loss, leading to hypokalemia and potential cardiac complications.'
   },
   {
     id: 'pb12-93',
-    text: "Why are elderly patients more prone to postoperative complications?",
+    text: 'Why are elderly patients more prone to postoperative complications?',
     options: [
-      "Increased metabolic rate",
-      "Enhanced immune response",
-      "Reduced physiological reserves and slower recovery",
-      "Lower risk of infection due to advanced age"
+      'Increased metabolic rate',
+      'Enhanced immune response',
+      'Reduced physiological reserves and slower recovery',
+      'Lower risk of infection due to advanced age'
     ],
     correctIndex: 2,
-    explanation: "Age-related decline in organ function and healing capacity increases the risk of complications post-surgery."
+    explanation: 'Age-related decline in organ function and healing capacity increases the risk of complications post-surgery.'
   },
- 
   {
     id: 'pb12-94',
-    text: "What are the positive signs and symptoms of psychosis?",
+    text: 'What are the positive signs and symptoms of psychosis?',
     options: [
-      "Anxiety and depression",
-      "Hallucinations and delusions",
-      "Insomnia and fatigue",
-      "Overeating and weight gain"
+      'Anxiety and depression',
+      'Hallucinations and delusions',
+      'Insomnia and fatigue',
+      'Overeating and weight gain'
     ],
     correctIndex: 1,
-    explanation: "Positive symptoms of psychosis include hallucinations and delusions, which reflect an excess or distortion of normal functions."
+    explanation: 'Positive symptoms of psychosis include hallucinations and delusions, which reflect an excess or distortion of normal functions.'
   },
   {
     id: 'pb12-95',
-    text: "What is the most common factor in psychosis?",
-    options": [
-      "Genetic predisposition",
-      "Chemical imbalance",
-      "Infectious diseases",
-      "Lack of exercise"
+    text: 'What is the most common factor in psychosis?',
+    options: [
+      'Genetic predisposition',
+      'Chemical imbalance',
+      'Infectious diseases',
+      'Lack of exercise'
     ],
     correctIndex: 0,
-    explanation: "Genetic predisposition is a major risk factor for psychosis, often interacting with environmental triggers."
+    explanation: 'Genetic predisposition is a major risk factor for psychosis, often interacting with environmental triggers.'
   },
   {
     id: 'pb12-96',
-    text: "What is meant by right-sided hemiplegia?",
-    options": [
-      "Paralysis of the left side of the body",
-      "Paralysis of the right side of the body",
-      "Paralysis of the lower body",
-      "Paralysis of the upper body"
+    text: 'What is meant by right-sided hemiplegia?',
+    options: [
+      'Paralysis of the left side of the body',
+      'Paralysis of the right side of the body',
+      'Paralysis of the lower body',
+      'Paralysis of the upper body'
     ],
     correctIndex: 1,
-    explanation: "Hemiplegia refers to paralysis on one side of the body; right-sided hemiplegia affects the right half."
+    explanation: 'Hemiplegia refers to paralysis on one side of the body; right-sided hemiplegia affects the right half.'
   },
   {
     id: 'pb12-97',
-    text: "How should you respond to a mother’s concern about her baby’s whooping cough vaccination?",
-    options": [
-      "Reassure her without providing details",
-      "Provide detailed information about the benefits of vaccination",
-      "Advise her to avoid the vaccination",
-      "Refer her to another healthcare provider"
+    text: 'How should you respond to a mother’s concern about her baby’s whooping cough vaccination?',
+    options: [
+      'Reassure her without providing details',
+      'Provide detailed information about the benefits of vaccination',
+      'Advise her to avoid the vaccination',
+      'Refer her to another healthcare provider'
     ],
     correctIndex: 1,
-    explanation: "Educating parents with accurate information helps build trust and supports informed decision-making about immunization."
+    explanation: 'Educating parents with accurate information helps build trust and supports informed decision-making about immunization.'
   },
   {
     id: 'pb12-98',
-    text: "What is the WHO definition of mental health?",
-    options": [
-      "The absence of mental disorders",
-      "A state of well-being in which every individual realizes their potential",
-      "The ability to perform daily activities",
-      "The absence of stress"
+    text: 'What is the WHO definition of mental health?',
+    options: [
+      'The absence of mental disorders',
+      'A state of well-being in which every individual realizes their potential',
+      'The ability to perform daily activities',
+      'The absence of stress'
     ],
     correctIndex: 1,
-    explanation: "WHO defines mental health as a state of well-being where individuals realize their abilities and cope with normal stresses."
+    explanation: 'WHO defines mental health as a state of well-being where individuals realize their abilities and cope with normal stresses.'
   },
   {
     id: 'pb12-99',
-    text: "What developmental milestone is expected of a one-year-old child?",
-    options": [
-      "Doubling their birth weight",
-      "Tripling their birth weight",
-      "Sitting without support",
-      "Walking independently"
+    text: 'What developmental milestone is expected of a one-year-old child?',
+    options: [
+      'Doubling their birth weight',
+      'Tripling their birth weight',
+      'Sitting without support',
+      'Walking independently'
     ],
     correctIndex: 1,
-    explanation: "By one year, a child typically triples their birth weight, indicating healthy growth and development."
+    explanation: 'By one year, a child typically triples their birth weight, indicating healthy growth and development.'
   },
   {
     id: 'pb12-100',
-    text: "What is the treatment for syphilis and gonorrhea?",
-    options": [
-      "Antivirals",
-      "Antibiotics",
-      "Painkillers",
-      "Antifungals"
+    text: 'What is the treatment for syphilis and gonorrhea?',
+    options: [
+      'Antivirals',
+      'Antibiotics',
+      'Painkillers',
+      'Antifungals'
     ],
     correctIndex: 1,
-    explanation: "Both syphilis and gonorrhea are bacterial infections and are effectively treated with appropriate antibiotics."
+    explanation: 'Both syphilis and gonorrhea are bacterial infections and are effectively treated with appropriate antibiotics.'
   },
   {
     id: 'pb12-101',
-    text: "What is a wound that has not healed called?",
-    options": [
-      "Chronic wound",
-      "Superficial wound",
-      "Clean wound",
-      "Acute wound"
+    text: 'What is a wound that has not healed called?',
+    options: [
+      'Chronic wound',
+      'Superficial wound',
+      'Clean wound',
+      'Acute wound'
     ],
     correctIndex: 0,
-    explanation: "A chronic wound fails to progress through the normal healing stages and remains open for an extended period."
+    explanation: 'A chronic wound fails to progress through the normal healing stages and remains open for an extended period.'
   },
   {
     id: 'pb12-102',
-    text: "What is the first response if you find a patient unconscious in the bathroom?",
-    options": [
-      "Call for help",
-      "Check for a pulse and breathing",
-      "Move the patient immediately",
-      "Leave the patient to get assistance"
+    text: 'What is the first response if you find a patient unconscious in the bathroom?',
+    options: [
+      'Call for help',
+      'Check for a pulse and breathing',
+      'Move the patient immediately',
+      'Leave the patient to get assistance'
     ],
     correctIndex: 1,
-    explanation: "Assessing airway, breathing, and circulation is the first priority in any unconscious patient scenario."
+    explanation: 'Assessing airway, breathing, and circulation is the first priority in any unconscious patient scenario.'
   },
   {
     id: 'pb12-103',
-    text: "How do cardiac exercises help in cardiac rehabilitation?",
-    options": [
-      "Decrease heart rate",
-      "Stimulate coronary arteries and improve cardiac output",
-      "Increase body weight",
-      "Reduce the need for medications"
+    text: 'How do cardiac exercises help in cardiac rehabilitation?',
+    options: [
+      'Decrease heart rate',
+      'Stimulate coronary arteries and improve cardiac output',
+      'Increase body weight',
+      'Reduce the need for medications'
     ],
     correctIndex: 1,
-    explanation: "Cardiac exercises enhance circulation and strengthen the heart muscle, improving overall cardiac function."
+    explanation: 'Cardiac exercises enhance circulation and strengthen the heart muscle, improving overall cardiac function.'
   },
   {
     id: 'pb12-104',
-    text: "Who is more at risk for pressure ulcers?",
-    options": [
-      "Young adults with active lifestyles",
-      "Older adults with altered mental status and inadequate nutrition",
-      "Individuals who exercise regularly",
-      "Patients with no underlying health conditions"
+    text: 'Who is more at risk for pressure ulcers?',
+    options: [
+      'Young adults with active lifestyles',
+      'Older adults with altered mental status and inadequate nutrition',
+      'Individuals who exercise regularly',
+      'Patients with no underlying health conditions'
     ],
     correctIndex: 1,
-    explanation: "Immobility, poor nutrition, and cognitive impairment increase the risk of pressure ulcers in older adults."
+    explanation: 'Immobility, poor nutrition, and cognitive impairment increase the risk of pressure ulcers in older adults.'
   },
   {
     id: 'pb12-105',
-    text: "Which of the following is a common side effect of opioid analgesics?",
-    options": [
-      "Diarrhea",
-      "Hypertension",
-      "Constipation",
-      "Insomnia"
+    text: 'Which of the following is a common side effect of opioid analgesics?',
+    options: [
+      'Diarrhea',
+      'Hypertension',
+      'Constipation',
+      'Insomnia'
     ],
     correctIndex: 2,
-    explanation: "Opioids slow gastrointestinal motility, often leading to constipation as a frequent side effect."
+    explanation: 'Opioids slow gastrointestinal motility, often leading to constipation as a frequent side effect.'
   },
   {
     id: 'pb12-106',
-    text: "Which vitamin is essential for calcium absorption?",
-    options": [
-      "Vitamin A",
-      "Vitamin B12",
-      "Vitamin C",
-      "Vitamin D"
+    text: 'Which vitamin is essential for calcium absorption?',
+    options: [
+      'Vitamin A',
+      'Vitamin B12',
+      'Vitamin C',
+      'Vitamin D'
     ],
     correctIndex: 3,
-    explanation: "Vitamin D facilitates calcium absorption in the intestines, supporting bone health and metabolism."
+    explanation: 'Vitamin D facilitates calcium absorption in the intestines, supporting bone health and metabolism.'
   },
   {
     id: 'pb12-107',
-    text: "Which of the following is a priority nursing intervention for a patient with active tuberculosis?",
-    options": [
-      "Provide a high-protein diet",
-      "Initiate airborne precautions",
-      "Encourage group activities",
-      "Administer IV fluids"
+    text: 'Which of the following is a priority nursing intervention for a patient with active tuberculosis?',
+    options: [
+      'Provide a high-protein diet',
+      'Initiate airborne precautions',
+      'Encourage group activities',
+      'Administer IV fluids'
     ],
     correctIndex: 1,
-    explanation: "Airborne precautions are essential to prevent transmission of TB, which spreads via respiratory droplets."
+    explanation: 'Airborne precautions are essential to prevent transmission of TB, which spreads via respiratory droplets.'
   },
   {
     id: 'pb12-108',
-    text: "Which electrolyte imbalance is most associated with muscle cramps and tetany?",
-    options": [
-      "Hypernatremia",
-      "Hypocalcemia",
-      "Hyperkalemia",
-      "Hypoglycemia"
+    text: 'Which electrolyte imbalance is most associated with muscle cramps and tetany?',
+    options: [
+      'Hypernatremia',
+      'Hypocalcemia',
+      'Hyperkalemia',
+      'Hypoglycemia'
     ],
     correctIndex: 1,
-    explanation: "Low calcium levels increase neuromuscular excitability, leading to cramps, spasms, and tetany."
+    explanation: 'Low calcium levels increase neuromuscular excitability, leading to cramps, spasms, and tetany.'
   }
-now the question count of Test 12 is 108. Please correct it. and also correct the question no. 3 of this test 12. Umbilical cord compression should be the correct answer instead of Variable decelerations
+];
