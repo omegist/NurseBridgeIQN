@@ -1,4 +1,3 @@
-
 import { questions as fundamentals } from './fundamentals';
 import { questions as pharmacology } from './pharmacology';
 import { questions as medicalSurgical } from './medical-surgical';
@@ -16,6 +15,7 @@ import { questions as partBTest9 } from './part-b-test-9';
 import { questions as partBTest10 } from './part-b-test-10';
 import { questions as partBTest11 } from './part-b-test-11';
 import { questions as partBTest12 } from './part-b-test-12';
+import { questions as partBTest13 } from './part-b-test-13';
 import type { Question } from '@/lib/types';
 
 export const allQuestions: Question[] = [
@@ -36,4 +36,5 @@ export const allQuestions: Question[] = [
   ...partBTest10,
   ...partBTest11,
   ...partBTest12,
+  ...partBTest13,
 ];
