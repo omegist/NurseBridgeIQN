@@ -213,10 +213,10 @@ export const questions: Question[] = [
       'All land and fisheries',
       'Land, forests and fisheries',
       'All things held precious by the Māori',
-      'All things held precious by the Pākehā',
+      'All things held precious by the Crown',
     ],
     correctIndex: 2,
-    explanation: 'Taonga refers to treasured possessions, including language, culture, and spiritual beliefs.'
+    explanation: 'Taonga refers to treasured possessions, including language, culture, spirituality, and resources.'
   },
   {
     id: 'pb13-19',
@@ -235,7 +235,7 @@ export const questions: Question[] = [
     text: 'Piripi, a 16-year-old street kid with a history of substance abuse, wants to reconnect with his Māori culture. What is the most appropriate action?',
     options: [
       'Make a Māori colleague responsible',
-      'Tell him not to be concerned, he can learn later',
+      'Tell him not to be concerned, he can learn that later',
       'Contact a Māori elder',
       'Take him to a concert',
     ],
@@ -640,7 +640,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb13-54',
-    text: 'Kiri, a 36-year-old Māori woman, is admitted with paranoid schizophrenia. What behaviors might she exhibit?',
+    text: 'Kiri, a 36-year-old Māori woman with paranoid schizophrenia, is suspicious and refuses medication. What behaviors might she exhibit?',
     options: [
       'Visual hallucinations, ritualistic behavior',
       'Visual hallucinations and intrusive thoughts',
@@ -920,8 +920,8 @@ export const questions: Question[] = [
     options: [
       'Refer to cultural support services',
       'Provide cultural resources',
-      'Provide cultural resources',
       'Contact whānau',
+      'All of the above'
     ],
     correctIndex: 0,
     explanation: 'Referring to cultural support services ensures the patient receives appropriate and respectful care.'
@@ -987,316 +987,315 @@ export const questions: Question[] = [
     explanation: 'Dialysis rapidly removes lithium from the bloodstream, preventing further toxicity and organ damage.'
   },
   {
-    id: 'pb13-83',
-    text: 'A Māori patient is hesitant to undergo a surgical procedure due to concerns about tapu (sacredness). What is the most culturally safe response?',
-    options: [
-      'Explain the medical necessity and proceed with consent',
-      'Dismiss the concern and reassure the patient',
-      'Acknowledge the concern and offer to involve a Māori health advocate',
-      'Delay the procedure until the patient agrees',
-    ],
-    correctIndex: 2,
-    explanation: 'Acknowledging tapu and involving cultural support respects Māori beliefs and promotes informed, culturally safe care.'
-  },
-  {
-    id: 'pb13-84',
-    text: 'During a health assessment, a Māori elder expresses discomfort discussing personal health matters without whānau present. What should the nurse do?',
-    options: [
-      'Continue the assessment privately',
-      'Invite whānau to join the conversation with the elder’s consent',
-      'Refer the elder to a different clinician',
-      'Reschedule the assessment for another day',
-    ],
-    correctIndex: 1,
-    explanation: 'Whānau involvement is central to Māori decision-making. Including them fosters trust and cultural safety.'
-  },
-  {
-    id: 'pb13-85',
-    text: 'A Māori patient recovering from surgery requests to return home early to be with whānau. What is the most appropriate nursing action?',
-    options: [
-      'Decline the request due to medical protocol',
-      'Discharge the patient immediately',
-      'Assess clinical stability and coordinate discharge planning with whānau',
-      'Refer the patient to social services',
-    ],
-    correctIndex: 2,
-    explanation: 'Balancing clinical safety with cultural needs ensures respectful, patient-centered care.'
-  },
-  {
-    id: 'pb13-86',
-    text: 'A Māori youth expresses interest in reconnecting with their iwi and cultural identity during a mental health consult. What is the best initial step?',
-    options: [
-      'Refer them to a general counselor',
-      'Encourage them to focus on clinical goals first',
-      'Connect them with a Māori health worker or cultural mentor',
-      'Advise them to research iwi history independently',
-    ],
-    correctIndex: 2,
-    explanation: 'Cultural reconnection supports identity, resilience, and healing—especially in youth mental health contexts.'
-  },
-  {
-    id: 'pb13-87',
-    text: 'What’s essential for effective health promotion among Māori?',
-    options: [
-      'Cultural tailoring',
-      'Community engagement',
-      'Whānau involvement',
-      'All of the above',
-    ],
-    correctIndex: 3,
-    explanation: 'Effective health promotion for Māori requires culturally tailored approaches, community collaboration, and whānau support.'
-  },
-  {
-    id: 'pb13-88',
-    text: 'How often should the Braden Scale be reassessed?',
-    options: [
-      'Daily',
-      'Weekly',
-      'Monthly',
-      'Quarterly',
-    ],
-    correctIndex: 0,
-    explanation: 'Daily reassessment ensures timely identification of pressure injury risk and appropriate interventions.'
-  },
-  {
-    id: 'pb13-89',
-    text: 'What is the consequence of a low Braden Scale score?',
-    options: [
-      'Increased fall risk',
-      'Risk of infection',
-      'Poor wound healing',
-      'Decreased mobility',
-    ],
-    correctIndex: 2,
-    explanation: 'A low Braden score indicates high risk for pressure injuries, which can impair wound healing.'
-  },
-  {
-    id: 'pb13-90',
-    text: 'How can healthcare organizations partner with Māori communities?',
-    options: [
-      'Collaborate on health initiatives',
-      'Employ Māori staff',
-      'Provide cultural training',
-      'All of the above',
-    ],
-    correctIndex: 3,
-    explanation: 'True partnership involves collaboration, representation, and cultural competency development.'
-  },
-  {
-    id: 'pb13-91',
-    text: 'What’s a key aspect of cultural competence in Māori healthcare?',
-    options: [
-      'Knowledge of Māori culture',
-      'Awareness of cultural differences',
-      'Skill in communicating with Māori patients',
-      'All of the above',
-    ],
-    correctIndex: 3,
-    explanation: 'Cultural competence combines knowledge, awareness, and communication skills tailored to Māori values.'
-  },
-  {
-    id: 'pb13-92',
-    text: 'How does Whakapapa influence Māori health?',
-    options: [
-      'Connects individuals to ancestors',
-      'Defines connections to others',
-      'Affects cultural identity',
-      'All of the above',
-    ],
-    correctIndex: 3,
-    explanation: 'Whakapapa shapes identity, relationships, and spiritual wellbeing—core elements of Māori health.'
-  },
-  {
-    id: 'pb13-93',
-    text: 'What’s essential for effective health promotion among Māori?',
-    "options": [
-      "Cultural tailoring",
-      "Community engagement",
-      "Whānau involvement",
-      "All of the above"
-    ],
-    "answer": "d",
-    "rationale": "Effective health promotion for Māori requires culturally tailored approaches, community collaboration, and whānau support."
-  },
-  {
-    "questionNo": 94,
-    "question": "How often should the Braden Scale be reassessed?",
-    "options": [
-      "Daily",
-      "Weekly",
-      "Monthly",
-      "Quarterly"
-    ],
-    "answer": "a",
-    "rationale": "Daily reassessment ensures timely identification of pressure injury risk and appropriate interventions."
-  },
-  {
-    "questionNo": 95,
-    "question": "What is the consequence of a low Braden Scale score?",
-    "options": [
-      "Increased fall risk",
-      "Risk of infection",
-      "Poor wound healing",
-      "Decreased mobility"
-    ],
-    "answer": "c",
-    "rationale": "A low Braden score indicates high risk for pressure injuries, which can impair wound healing."
-  },
-  {
-    "questionNo": 96,
-    "question": "How can healthcare organizations partner with Māori communities?",
-    "options": [
-      "Collaborate on health initiatives",
-      "Employ Māori staff",
-      "Provide cultural training",
-      "All of the above"
-    ],
-    "answer": "d",
-    "rationale": "True partnership involves collaboration, representation, and cultural competency development."
-  },
-  {
-    "questionNo": 97,
-    "question": "What’s a key aspect of cultural competence in Māori healthcare?",
-    "options": [
-      "Knowledge of Māori culture",
-      "Awareness of cultural differences",
-      "Skill in communicating with Māori patients",
-      "All of the above"
-    ],
-    "answer": "d",
-    "rationale": "Cultural competence combines knowledge, awareness, and communication skills tailored to Māori values."
-  },
-  {
-    "questionNo": 98,
-    "question": "How does Whakapapa influence Māori health?",
-    "options": [
-      "Connects individuals to ancestors",
-      "Defines connections to others",
-      "Affects cultural identity",
-      "All of the above"
-    ],
-    "answer": "d",
-    "rationale": "Whakapapa shapes identity, relationships, and spiritual wellbeing—core elements of Māori health."
-  },
-  {
-    "questionNo": 99,
-    "question": "A Māori patient requests cultural support. What would you do?",
-    "options": [
-      "Refer to cultural support services",
-      "Provide cultural resources",
-      "Provide cultural resources",
-      "Contact whānau"
-    ],
-    "answer": "a",
-    "rationale": "Referring to cultural support services ensures the patient receives appropriate and respectful care."
-  },
-  {
-    "questionNo": 100,
-    "question": "A Māori patient is nearing end-of-life. What’s essential?",
-    "options": [
-      "Whānau involvement",
-      "Cultural rituals",
-      "Pain management",
-      "All of the above"
-    ],
-    "answer": "d",
-    "rationale": "End-of-life care for Māori should integrate clinical, cultural, and spiritual support with whānau involvement."
-  },
-  {
-    "questionNo": 101,
-    "question": "What contributes to health disparities among Māori?",
-    "options": [
-      "Socioeconomic factors",
-      "Cultural barriers",
-      "Access to healthcare",
-      "All of the above"
-    ],
-    "answer": "d",
-    "rationale": "Multiple systemic factors contribute to health inequities for Māori, requiring holistic solutions."
-  },
-  {
-    "questionNo": 102,
-    "question": "Why is cultural training essential for healthcare staff?",
-    "options": [
-      "Improves patient outcomes",
-      "Enhances cultural competence",
-      "Reduces cultural barriers",
-      "All of the above"
-    ],
-    "answer": "d",
-    "rationale": "Cultural training equips staff to deliver respectful, effective care and reduce disparities."
-  },
-  {
-    "questionNo": 103,
-    "question": "Tane, a Māori patient, is admitted to hospital. His whānau is concerned about his cultural needs. How would you provide family-centered care?",
-    "options": [
-      "Limit whānau involvement due to confidentiality concerns",
-      "Encourage whānau participation in care decisions and planning",
-      "Ignore whānau concerns and focus on medical treatment",
-      "Refer whānau to hospital’s cultural support services only"
-    ],
-    "answer": "b",
-    "rationale": "Family-centered care for Māori involves whānau in decision-making, respecting collective values."
-  },
-  {
-    "questionNo": 104,
-    "question": "Why is dialysis performed in lithium toxicity?",
-    "options": [
-      "Enhance lithium absorption",
-      "Reduce lithium distribution",
-      "Eliminate lithium from the body",
-      "Manage lithium side effects"
-    ],
-    "answer": "c",
-    "rationale": "Dialysis rapidly removes lithium from the bloodstream, preventing further toxicity and organ damage."
-  },
-  {
-    "questionNo": 105,
+    "questionNo": 83,
     "question": "A Māori patient is hesitant to undergo a surgical procedure due to concerns about tapu (sacredness). What is the most culturally safe response?",
-    "options": [
-      "Explain the medical necessity and proceed with consent",
-      "Dismiss the concern and reassure the patient",
-      "Acknowledge the concern and offer to involve a Māori health advocate",
-      "Delay the procedure until the patient agrees"
-    ],
+    "options": {
+      "a": "Explain the medical necessity and proceed with consent",
+      "b": "Dismiss the concern and reassure the patient",
+      "c": "Acknowledge the concern and offer to involve a Māori health advocate",
+      "d": "Delay the procedure until the patient agrees"
+    },
     "answer": "c",
     "rationale": "Acknowledging tapu and involving cultural support respects Māori beliefs and promotes informed, culturally safe care."
   },
   {
-    "questionNo": 106,
+    "questionNo": 84,
     "question": "During a health assessment, a Māori elder expresses discomfort discussing personal health matters without whānau present. What should the nurse do?",
-    "options": [
-      "Continue the assessment privately",
-      "Invite whānau to join the conversation with the elder’s consent",
-      "Refer the elder to a different clinician",
-      "Reschedule the assessment for another day"
-    ],
+    "options": {
+      "a": "Continue the assessment privately",
+      "b": "Invite whānau to join the conversation with the elder’s consent",
+      "c": "Refer the elder to a different clinician",
+      "d": "Reschedule the assessment for another day"
+    },
     "answer": "b",
     "rationale": "Whānau involvement is central to Māori decision-making. Including them fosters trust and cultural safety."
   },
   {
-    "questionNo": 107,
+    "questionNo": 85,
     "question": "A Māori patient recovering from surgery requests to return home early to be with whānau. What is the most appropriate nursing action?",
-    "options": [
-      "Decline the request due to medical protocol",
-      "Discharge the patient immediately",
-      "Assess clinical stability and coordinate discharge planning with whānau",
-      "Refer the patient to social services"
-    ],
+    "options": {
+      "a": "Decline the request due to medical protocol",
+      "b": "Discharge the patient immediately",
+      "c": "Assess clinical stability and coordinate discharge planning with whānau",
+      "d": "Refer the patient to social services"
+    },
     "answer": "c",
     "rationale": "Balancing clinical safety with cultural needs ensures respectful, patient-centered care."
   },
   {
-    "questionNo": 108,
+    "questionNo": 86,
     "question": "A Māori youth expresses interest in reconnecting with their iwi and cultural identity during a mental health consult. What is the best initial step?",
-    "options": [
-      "Refer them to a general counselor",
-      "Encourage them to focus on clinical goals first",
-      "Connect them with a Māori health worker or cultural mentor",
-      "Advise them to research iwi history independently"
-    ],
+    "options": {
+      "a": "Refer them to a general counselor",
+      "b": "Encourage them to focus on clinical goals first",
+      "c": "Connect them with a Māori health worker or cultural mentor",
+      "d": "Advise them to research iwi history independently"
+    },
     "answer": "c",
     "rationale": "Cultural reconnection supports identity, resilience, and healing—especially in youth mental health contexts."
+  },
+  {
+    "questionNo": 87,
+    "question": "What’s essential for effective health promotion among Māori?",
+    "options": {
+      "a": "Cultural tailoring",
+      "b": "Community engagement",
+      "c": "Whānau involvement",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Effective health promotion for Māori requires culturally tailored approaches, community collaboration, and whānau support."
+  },
+  {
+    "questionNo": 88,
+    "question": "How often should the Braden Scale be reassessed?",
+    "options": {
+      "a": "Daily",
+      "b": "Weekly",
+      "c": "Monthly",
+      "d": "Quarterly"
+    },
+    "answer": "a",
+    "rationale": "Daily reassessment ensures timely identification of pressure injury risk and appropriate interventions."
+  },
+  {
+    "questionNo": 89,
+    "question": "What is the consequence of a low Braden Scale score?",
+    "options": {
+      "a": "Increased fall risk",
+      "b": "Risk of infection",
+      "c": "Poor wound healing",
+      "d": "Decreased mobility"
+    },
+    "answer": "c",
+    "rationale": "A low Braden score indicates high risk for pressure injuries, which can impair wound healing."
+  },
+  {
+    "questionNo": 90,
+    "question": "How can healthcare organizations partner with Māori communities?",
+    "options": {
+      "a": "Collaborate on health initiatives",
+      "b": "Employ Māori staff",
+      "c": "Provide cultural training",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "True partnership involves collaboration, representation, and cultural competency development."
+  },
+  {
+    "questionNo": 91,
+    "question": "What’s a key aspect of cultural competence in Māori healthcare?",
+    "options": {
+      "a": "Knowledge of Māori culture",
+      "b": "Awareness of cultural differences",
+      "c": "Skill in communicating with Māori patients",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Cultural competence combines knowledge, awareness, and communication skills tailored to Māori values."
+  },
+  {
+    "questionNo": 92,
+    "question": "How does Whakapapa influence Māori health?",
+    "options": {
+      "a": "Connects individuals to ancestors",
+      "b": "Defines connections to others",
+      "c": "Affects cultural identity",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Whakapapa shapes identity, relationships, and spiritual wellbeing—core elements of Māori health."
+  },
+  {
+    "questionNo": 93,
+    "question": "A Māori patient requests cultural support. What would you do?",
+    "options": {
+      "a": "Refer to cultural support services",
+      "b": "Provide cultural resources",
+      "c": "Contact whānau",
+      "d": "All of the above"
+    },
+    "answer": "a",
+    "rationale": "Referring to cultural support services ensures the patient receives appropriate and respectful care."
+  },
+  {
+    "questionNo": 94,
+    "question": "A Māori patient is nearing end-of-life. What’s essential?",
+    "options": {
+      "a": "Whānau involvement",
+      "b": "Cultural rituals",
+      "c": "Pain management",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "End-of-life care for Māori should integrate clinical, cultural, and spiritual support with whānau involvement."
+  },
+  {
+    "questionNo": 95,
+    "question": "What contributes to health disparities among Māori?",
+    "options": {
+      "a": "Socioeconomic factors",
+      "b": "Cultural barriers",
+      "c": "Access to healthcare",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Multiple systemic factors contribute to health inequities for Māori, requiring holistic solutions."
+  },
+  {
+    "questionNo": 96,
+    "question": "Why is cultural training essential for healthcare staff?",
+    "options": {
+      "a": "Improves patient outcomes",
+      "b": "Enhances cultural competence",
+      "c": "Reduces cultural barriers",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Cultural training equips staff to deliver respectful, effective care and reduce disparities."
+  },
+  {
+    "questionNo": 97,
+    "question": "Tane, a Māori patient, is admitted to hospital. His whānau is concerned about his cultural needs. How would you provide family-centered care?",
+    "options": {
+      "a": "Limit whānau involvement due to confidentiality concerns",
+      "b": "Encourage whānau participation in care decisions and planning",
+      "c": "Ignore whānau concerns and focus on medical treatment",
+      "d": "Refer whānau to hospital’s cultural support services only"
+    },
+    "answer": "b",
+    "rationale": "Family-centered care for Māori involves whānau in decision-making, respecting collective values."
+  },
+  {
+    "questionNo": 98,
+    "question": "Why is dialysis performed in lithium toxicity?",
+    "options": {
+      "a": "Enhance lithium absorption",
+      "b": "Reduce lithium distribution",
+      "c": "Eliminate lithium from the body",
+      "d": "Manage lithium side effects"
+    },
+    "answer": "c",
+    "rationale": "Dialysis rapidly removes lithium from the bloodstream, preventing further toxicity and organ damage."
+  },
+  {
+    "questionNo": 99,
+    "question": "A Māori patient is hesitant to undergo a surgical procedure due to concerns about tapu (sacredness). What is the most culturally safe response?",
+    "options": {
+      "a": "Explain the medical necessity and proceed with consent",
+      "b": "Dismiss the concern and reassure the patient",
+      "c": "Acknowledge the concern and offer to involve a Māori health advocate",
+      "d": "Delay the procedure until the patient agrees"
+    },
+    "answer": "c",
+    "rationale": "Acknowledging tapu and involving cultural support respects Māori beliefs and promotes informed, culturally safe care."
+  },
+  {
+    "questionNo": 100,
+    "question": "During a health assessment, a Māori elder expresses discomfort discussing personal health matters without whānau present. What should the nurse do?",
+    "options": {
+      "a": "Continue the assessment privately",
+      "b": "Invite whānau to join the conversation with the elder’s consent",
+      "c": "Refer the elder to a different clinician",
+      "d": "Reschedule the assessment for another day"
+    },
+    "answer": "b",
+    "rationale": "Whānau involvement is central to Māori decision-making. Including them fosters trust and cultural safety."
+  },
+  {
+    "questionNo": 101,
+    "question": "A Māori patient recovering from surgery requests to return home early to be with whānau. What is the most appropriate nursing action?",
+    "options": {
+      "a": "Decline the request due to medical protocol",
+      "b": "Discharge the patient immediately",
+      "c": "Assess clinical stability and coordinate discharge planning with whānau",
+      "d": "Refer the patient to social services"
+    },
+    "answer": "c",
+    "rationale": "Balancing clinical safety with cultural needs ensures respectful, patient-centered care."
+  },
+  {
+    "questionNo": 102,
+    "question": "A Māori youth expresses interest in reconnecting with their iwi and cultural identity during a mental health consult. What is the best initial step?",
+    "options": {
+      "a": "Refer them to a general counselor",
+      "b": "Encourage them to focus on clinical goals first",
+      "c": "Connect them with a Māori health worker or cultural mentor",
+      "d": "Advise them to research iwi history independently"
+    },
+    "answer": "c",
+    "rationale": "Cultural reconnection supports identity, resilience, and healing—especially in youth mental health contexts."
+  },
+  {
+    "questionNo": 103,
+    "question": "What’s essential for effective health promotion among Māori?",
+    "options": {
+      "a": "Cultural tailoring",
+      "b": "Community engagement",
+      "c": "Whānau involvement",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Effective health promotion for Māori requires culturally tailored approaches, community collaboration, and whānau support."
+  },
+  {
+    "questionNo": 104,
+    "question": "How often should the Braden Scale be reassessed?",
+    "options": {
+      "a": "Daily",
+      "b": "Weekly",
+      "c": "Monthly",
+      "d": "Quarterly"
+    },
+    "answer": "a",
+    "rationale": "Daily reassessment ensures timely identification of pressure injury risk and appropriate interventions."
+  },
+  {
+    "questionNo": 105,
+    "question": "What is the consequence of a low Braden Scale score?",
+    "options": {
+      "a": "Increased fall risk",
+      "b": "Risk of infection",
+      "c": "Poor wound healing",
+      "d": "Decreased mobility"
+    },
+    "answer": "c",
+    "rationale": "A low Braden score indicates high risk for pressure injuries, which can impair wound healing."
+  },
+  {
+    "questionNo": 106,
+    "question": "How can healthcare organizations partner with Māori communities?",
+    "options": {
+      "a": "Collaborate on health initiatives",
+      "b": "Employ Māori staff",
+      "c": "Provide cultural training",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "True partnership involves collaboration, representation, and cultural competency development."
+  },
+  {
+    "questionNo": 107,
+    "question": "What’s a key aspect of cultural competence in Māori healthcare?",
+    "options": {
+      "a": "Knowledge of Māori culture",
+      "b": "Awareness of cultural differences",
+      "c": "Skill in communicating with Māori patients",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Cultural competence combines knowledge, awareness, and communication skills tailored to Māori values."
+  },
+  {
+    "questionNo": 108,
+    "question": "How does Whakapapa influence Māori health?",
+    "options": {
+      "a": "Connects individuals to ancestors",
+      "b": "Defines connections to others",
+      "c": "Affects cultural identity",
+      "d": "All of the above"
+    },
+    "answer": "d",
+    "rationale": "Whakapapa shapes identity, relationships, and spiritual wellbeing—core elements of Māori health."
   }
-]
 ]
