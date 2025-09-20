@@ -635,7 +635,7 @@ export const questions: Question[] = [
       'Somnolence',
       'Confusion'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     explanation: 'Agitation is a common CNS side effect of cimetidine, particularly in elderly patients due to altered drug metabolism.'
   },
   {
@@ -917,13 +917,384 @@ export const questions: Question[] = [
   {
     id: 'pb12-77',
     text: 'Which of the following is NOT typically a symptom of hyperthyroidism?',
-    options: [
+    options: {
       'Weight loss despite increased appetite',
       'Heat intolerance and sweating',
       'Bradycardia and cold intolerance',
       'Tremors and nervousness'
-    ],
-    correctIndex: 2,
-    explanation: 'Bradycardia and cold intolerance are signs of hypothyroidism, not hyperthyroidism, which causes increased metabolism and excitability.'
+    },
+    answer: 'c',
+    rationale: 'Bradycardia and cold intolerance are signs of hypothyroidism, not hyperthyroidism, which causes increased metabolism and excitability.'
   },
-];
+  {
+    "questionNo": 78,
+    "question": "What is the recommended dietary intervention for a patient with chronic kidney disease (CKD)?",
+    "options": {
+      "a": "High protein, high sodium diet",
+      "b": "Low protein, low potassium diet",
+      "c": "High potassium, low sodium diet",
+      "d": "Low sodium, high phosphorus diet"
+    },
+    "answer": "b",
+    "rationale": "CKD patients require restricted protein and potassium intake to reduce kidney workload and prevent electrolyte imbalance."
+  },
+  {
+    "questionNo": 79,
+    "question": "Which medication class is first-line treatment for newly diagnosed hypertension in the absence of other comorbid conditions?",
+    "options": {
+      "a": "Beta-blockers",
+      "b": "ACE inhibitors",
+      "c": "Calcium channel blockers",
+      "d": "Thiazide diuretics"
+    },
+    "answer": "d",
+    "rationale": "Thiazide diuretics are recommended as first-line therapy for uncomplicated hypertension due to their efficacy and cost-effectiveness."
+  },
+  {
+    "questionNo": 80,
+    "question": "What is the primary indication for administering intravenous (IV) fluids in a patient with severe dehydration?",
+    "options": {
+      "a": "To increase urine output",
+      "b": "To enhance appetite",
+      "c": "To correct electrolyte imbalances",
+      "d": "To reduce blood pressure"
+    },
+    "answer": "c",
+    "rationale": "IV fluids restore fluid volume and correct electrolyte disturbances caused by dehydration."
+  },
+  {
+    "questionNo": 81,
+    "question": "Which factor is most critical in determining the severity of a burn injury?",
+    "options": {
+      "a": "The location of the burn",
+      "b": "The cause of the burn",
+      "c": "The percentage of body surface area affected",
+      "d": "The presence of blisters"
+    },
+    "answer": "c",
+    "rationale": "Total body surface area (TBSA) affected is a key determinant in assessing burn severity and guiding treatment."
+  },
+  {
+    "questionNo": 82,
+    "question": "What is the primary goal of treatment in acute myocardial infarction (heart attack)?",
+    "options": {
+      "a": "To increase heart rate",
+      "b": "To reduce pain",
+      "c": "To restore blood flow to the affected heart muscle",
+      "d": "To decrease blood pressure"
+    },
+    "answer": "c",
+    "rationale": "Restoring perfusion to the heart muscle minimizes damage and improves outcomes in MI."
+  },
+  {
+    "questionNo": 83,
+    "question": "In patients with chronic obstructive pulmonary disease (COPD), what is the main reason for encouraging smoking cessation?",
+    "options": {
+      "a": "To improve appetite",
+      "b": "To increase exercise ability",
+      "c": "To reduce the progression of lung damage",
+      "d": "To enhance the effectiveness of medication"
+    },
+    "answer": "c",
+    "rationale": "Smoking accelerates lung damage in COPD; cessation slows disease progression and improves quality of life."
+  },
+  {
+    "questionNo": 84,
+    "question": "Which symptom is NOT typically associated with hyperthyroidism?",
+    "options": {
+      "a": "Weight gain",
+      "b": "Increased heart rate",
+      "c": "Heat intolerance",
+      "d": "Tremors"
+    },
+    "answer": "a",
+    "rationale": "Hyperthyroidism causes weight loss due to increased metabolism; weight gain is more typical of hypothyroidism."
+  },
+  {
+    "questionNo": 85,
+    "question": "During a blood transfusion, what immediate action should be taken if an allergic reaction is suspected?",
+    "options": {
+      "a": "Slow the transfusion rate and inform the physician",
+      "b": "Stop the transfusion and administer antihistamines as prescribed",
+      "c": "Discontinue the transfusion, remove the IV line and start a new line for fluids",
+      "d": "Continue the transfusion and monitor the patient"
+    },
+    "answer": "b",
+    "rationale": "Stopping the transfusion and treating the reaction promptly prevents escalation and ensures patient safety."
+  },
+  {
+    "questionNo": 86,
+    "question": "When observing a skin tear with skin flap, what is the appropriate nursing action?",
+    "options": {
+      "a": "Remove the skin flap and cover with a sterile dressing",
+      "b": "Reposition the skin flap and secure it with an adhesive bandage",
+      "c": "Clean the area with hydrogen peroxide and apply an antibiotic ointment",
+      "d": "Leave skin tear open to air and apply an antibiotic ointment"
+    },
+    "answer": "b",
+    "rationale": "Repositioning the skin flap preserves tissue integrity and promotes healing with minimal trauma."
+  },
+  {
+    "questionNo": 87,
+    "question": "How can you identify if a wound is chronic?",
+    "options": {
+      "a": "The wound has been present for more than 6 weeks and shows no signs of healing",
+      "b": "The wound is less than 4 weeks old but larger than 5 cm",
+      "c": "The wound is acute and shows signs of infection",
+      "d": "The wound heals within 2 weeks but frequently reopens"
+    },
+    "answer": "a",
+    "rationale": "Chronic wounds persist beyond normal healing time and often resist conventional treatment."
+  },
+  {
+    "questionNo": 88,
+    "question": "Which medication is likely causing weight gain in a 16-year-old patient?",
+    "options": {
+      "a": "Anxiolytic",
+      "b": "Antipsychotic",
+      "c": "Antidepressant",
+      "d": "Antibiotic"
+    },
+    "answer": "b",
+    "rationale": "Antipsychotics, especially atypical ones, are known to cause metabolic changes and weight gain in adolescents."
+  },
+  {
+    "questionNo": 89,
+    "question": "How should a nurse respond to hallucinations and delirium in a patient? Are these symptoms positive or negative?",
+    "options": {
+      "a": "Positive symptoms; increase the dose of antipsychotic medication",
+      "b": "Negative symptoms; encourage social interaction",
+      "c": "Positive symptoms; maintain safety and provide reassurance",
+      "d": "Negative symptoms; encourage social interaction"
+    },
+    "answer": "c",
+    "rationale": "Hallucinations and delirium are positive symptoms. Safety and reassurance are key nursing priorities."
+  },
+  {
+    "questionNo": 90,
+    "question": "Why is it important to monitor oxygen placement during administration?",
+    "options": {
+      "a": "To prevent oxygen toxicity",
+      "b": "To avoid contact with explosive materials",
+      "c": "To ensure patient comfort",
+      "d": "To reduce nasal dryness"
+    },
+    "answer": "b",
+    "rationale": "Oxygen is highly flammable. Keeping it away from explosive materials is critical for safety."
+  },
+  {
+    "questionNo": 91,
+    "question": "If a nursing assistant is transferring a patient incorrectly, what should be your action?",
+    "options": {
+      "a": "Report the incident to the nursing supervisor immediately",
+      "b": "Assist in correct transfer technique and provide guidance",
+      "c": "Ignore the incident and let the assistant learn from their mistakes",
+      "d": "Reassign the task to a more experienced nursing assistant"
+    },
+    "answer": "b",
+    "rationale": "Providing immediate guidance ensures patient safety and supports skill development for the assistant."
+  },
+  {
+    "questionNo": 92,
+    "question": "What is the risk associated with administering diuretics to a patient?",
+    "options": {
+      "a": "Hypertension",
+      "b": "Increased risk of falls",
+      "c": "Excessive weight gain",
+      "d": "Hypokalemia"
+    },
+    "answer": "d",
+    "rationale": "Diuretics can cause potassium loss, leading to hypokalemia and potential cardiac complications."
+  },
+  {
+    "questionNo": 93,
+    "question": "Why are elderly patients more prone to postoperative complications?",
+    "options": {
+      "a": "Increased metabolic rate",
+      "b": "Enhanced immune response",
+      "c": "Reduced physiological reserves and slower recovery",
+      "d": "Lower risk of infection due to advanced age"
+    },
+    "answer": "c",
+    "rationale": "Age-related decline in organ function and healing capacity increases the risk of complications post-surgery."
+  },
+  {
+    "questionNo": 94,
+    "question": "What are the positive signs and symptoms of psychosis?",
+    "options": {
+      "a": "Anxiety and depression",
+      "b": "Hallucinations and delusions",
+      "c": "Insomnia and fatigue",
+      "d": "Overeating and weight gain"
+    },
+    "answer": "b",
+    "rationale": "Positive symptoms of psychosis include hallucinations and delusions, which reflect an excess or distortion of normal functions."
+  },
+  {
+    "questionNo": 95,
+    "question": "What is the most common factor in psychosis?",
+    "options": {
+      "a": "Genetic predisposition",
+      "b": "Chemical imbalance",
+      "c": "Infectious diseases",
+      "d": "Lack of exercise"
+    },
+    "answer": "a",
+    "rationale": "Genetic predisposition is a major risk factor for psychosis, often interacting with environmental triggers."
+  },
+  {
+    "questionNo": 96,
+    "question": "What is meant by right-sided hemiplegia?",
+    "options": {
+      "a": "Paralysis of the left side of the body",
+      "b": "Paralysis of the right side of the body",
+      "c": "Paralysis of the lower body",
+      "d": "Paralysis of the upper body"
+    },
+    "answer": "b",
+    "rationale": "Hemiplegia refers to paralysis on one side of the body; right-sided hemiplegia affects the right half."
+  },
+  {
+    "questionNo": 97,
+    "question": "How should you respond to a mother’s concern about her baby’s whooping cough vaccination?",
+    "options": {
+      "a": "Reassure her without providing details",
+      "b": "Provide detailed information about the benefits of vaccination",
+      "c": "Advise her to avoid the vaccination",
+      "d": "Refer her to another healthcare provider"
+    },
+    "answer": "b",
+    "rationale": "Educating parents with accurate information helps build trust and supports informed decision-making about immunization."
+  },
+  {
+    "questionNo": 98,
+    "question": "What is the WHO definition of mental health?",
+    "options": {
+      "a": "The absence of mental disorders",
+      "b": "A state of well-being in which every individual realizes their potential",
+      "c": "The ability to perform daily activities",
+      "d": "The absence of stress"
+    },
+    "answer": "b",
+    "rationale": "WHO defines mental health as a state of well-being where individuals realize their abilities and cope with normal stresses."
+  },
+  {
+    "questionNo": 99,
+    "question": "What developmental milestone is expected of a one-year-old child?",
+    "options": {
+      "a": "Doubling their birth weight",
+      "b": "Tripling their birth weight",
+      "c": "Sitting without support",
+      "d": "Walking independently"
+    },
+    "answer": "b",
+    "rationale": "By one year, a child typically triples their birth weight, indicating healthy growth and development."
+  },
+  {
+    "questionNo": 100,
+    "question": "What is the treatment for syphilis and gonorrhea?",
+    "options": {
+      "a": "Antivirals",
+      "b": "Antibiotics",
+      "c": "Painkillers",
+      "d": "Antifungals"
+    },
+    "answer": "b",
+    "rationale": "Both syphilis and gonorrhea are bacterial infections and are effectively treated with appropriate antibiotics."
+  },
+  {
+    "questionNo": 101,
+    "question": "What is a wound that has not healed called?",
+    "options": {
+      "a": "Chronic wound",
+      "b": "Superficial wound",
+      "c": "Clean wound",
+      "d": "Acute wound"
+    },
+    "answer": "a",
+    "rationale": "A chronic wound fails to progress through the normal healing stages and remains open for an extended period."
+  },
+  {
+    "questionNo": 102,
+    "question": "What is the first response if you find a patient unconscious in the bathroom?",
+    "options": {
+      "a": "Call for help",
+      "b": "Check for a pulse and breathing",
+      "c": "Move the patient immediately",
+      "d": "Leave the patient to get assistance"
+    },
+    "answer": "b",
+    "rationale": "Assessing airway, breathing, and circulation is the first priority in any unconscious patient scenario."
+  },
+  {
+    "questionNo": 103,
+    "question": "How do cardiac exercises help in cardiac rehabilitation?",
+    "options": {
+      "a": "Decrease heart rate",
+      "b": "Stimulate coronary arteries and improve cardiac output",
+      "c": "Increase body weight",
+      "d": "Reduce the need for medications"
+    },
+    "answer": "b",
+    "rationale": "Cardiac exercises enhance circulation and strengthen the heart muscle, improving overall cardiac function."
+  },
+  {
+    "questionNo": 104,
+    "question": "Who is more at risk for pressure ulcers?",
+    "options": {
+      "a": "Young adults with active lifestyles",
+      "b": "Older adults with altered mental status and inadequate nutrition",
+      "c": "Individuals who exercise regularly",
+      "d": "Patients with no underlying health conditions"
+    },
+    "answer": "b",
+    "rationale": "Immobility, poor nutrition, and cognitive impairment increase the risk of pressure ulcers in older adults."
+  },
+  {
+    "questionNo": 105,
+    "question": "Which of the following is a common side effect of opioid analgesics?",
+    "options": {
+      "a": "Diarrhea",
+      "b": "Hypertension",
+      "c": "Constipation",
+      "d": "Insomnia"
+    },
+    "answer": "c",
+    "rationale": "Opioids slow gastrointestinal motility, often leading to constipation as a frequent side effect."
+  },
+  {
+    "questionNo": 106,
+    "question": "Which vitamin is essential for calcium absorption?",
+    "options": {
+      "a": "Vitamin A",
+      "b": "Vitamin B12",
+      "c": "Vitamin C",
+      "d": "Vitamin D"
+    },
+    "answer": "d",
+    "rationale": "Vitamin D facilitates calcium absorption in the intestines, supporting bone health and metabolism."
+  },
+  {
+    "questionNo": 107,
+    "question": "Which of the following is a priority nursing intervention for a patient with active tuberculosis?",
+    "options": {
+      "a": "Provide a high-protein diet",
+      "b": "Initiate airborne precautions",
+      "c": "Encourage group activities",
+      "d": "Administer IV fluids"
+    },
+    "answer": "b",
+    "rationale": "Airborne precautions are essential to prevent transmission of TB, which spreads via respiratory droplets."
+  },
+  {
+    "questionNo": 108,
+    "question": "Which electrolyte imbalance is most associated with muscle cramps and tetany?",
+    "options": {
+      "a": "Hypernatremia",
+      "b": "Hypocalcemia",
+      "c": "Hyperkalemia",
+      "d": "Hypoglycemia"
+    },
+    "answer": "b",
+    "rationale": "Low calcium levels increase neuromuscular excitability, leading to cramps, spasms, and tetany."
+  }
