@@ -1105,5 +1105,197 @@ export const questions: Question[] = [
     ],
     correctIndex: 0,
     explanation: 'Alcohol rub is ineffective against C. difficile spores; soap and water are required.'
+  },
+  {
+    id: 'pb11-93',
+    text: 'Why are anti-embolic stockings effective in preventing deep vein thrombosis (DVT)?',
+    options: [
+      'They promote arterial blood flow',
+      'They reduce the risk of postoperative swelling',
+      'They promote lymphatic fluid flow and drainage',
+      'They increase venous blood flow'
+    ],
+    correctIndex: 3,
+    explanation: 'Anti-embolic stockings apply graduated compression to the legs, which increases venous return and reduces the risk of clot formation.'
+  },
+  {
+    id: 'pb11-94',
+    text: 'Safeguarding is the responsibility of:',
+    options: [
+      'Health care assistants',
+      'Registered nurses',
+      'Doctors',
+      'All of the above'
+    ],
+    correctIndex: 3,
+    explanation: 'Safeguarding is a shared responsibility across all healthcare roles to protect vulnerable individuals.'
+  },
+  {
+    id: 'pb11-95',
+    text: 'An elderly man reports his neighbor is stealing money meant for groceries. What is your best course of action?',
+    options: [
+      'Raise a safeguarding alert',
+      'Ignore the old man',
+      'Refer him to a community clergy',
+      'Do nothing'
+    ],
+    correctIndex: 0,
+    explanation: 'This is a potential case of financial abuse and must be reported under safeguarding protocols.'
+  },
+  {
+    id: 'pb11-96',
+    text: 'A newly qualified nurse struggles with documentation. What could be done to educate and support her?',
+    options: [
+      'Tell her to continue as she is',
+      'Encourage her to prepare notes in the morning',
+      'Prevent her from informing her supervisor',
+      'Remove her from the hospital'
+    ],
+    correctIndex: 1,
+    explanation: 'Proactive preparation and mentorship help build confidence and competence in documentation.'
+  },
+  {
+    id: 'pb11-97',
+    text: 'How do you value dignity and respect in nursing care? Select which does NOT apply:',
+    options: [
+      'We respect every patient, their families or carers',
+      'We treat people as individuals and listen to them',
+      'We form decisions for patients',
+      'We are honest and open about what we can and cannot do'
+    ],
+    correctIndex: 2,
+    explanation: 'Forming decisions without patient involvement undermines dignity and autonomy.'
+  },
+  {
+    id: 'pb11-98',
+    text: 'A patient collapses with an anaphylactic reaction. What symptoms would you expect?',
+    options: [
+      'Low blood pressure and fast heart rate with skin changes',
+      'High blood pressure and fast heart rate',
+      'Slow heart rate and skin changes',
+      'Hyperventilation and itching'
+    ],
+    correctIndex: 0,
+    explanation: 'Anaphylaxis typically presents with hypotension, tachycardia, and mucocutaneous symptoms.'
+  },
+  {
+    id: 'pb11-99',
+    text: 'Which of the following must NOT be considered when procuring consent?',
+    options: [
+      'Right to accept or decline treatment',
+      'Excluding people from decisions about care',
+      'Awareness of mental capacity legislation',
+      'Gaining consent before treatment starts'
+    ],
+    correctIndex: 1,
+    explanation: 'Patients must be fully involved in decisions about their care to ensure valid consent.'
+  },
+  {
+    id: 'pb11-100',
+    text: 'How should controlled drugs be transported?',
+    options: [
+      'In a secure, locked or sealed, tamper-evident container',
+      'Stored securely and handed to an authorized person with signature',
+      'With a valid ID badge',
+      'None of the above'
+    ],
+    correctIndex: 0,
+    explanation: 'Controlled drugs must be transported securely to prevent tampering and ensure legal compliance.'
+  },
+  {
+    id: 'pb11-101',
+    text: 'What is the first sign of dehydration?',
+    options: [
+      'Bounding pulse',
+      'Hypotension',
+      'Jugular distension',
+      'Poor skin turgor'
+    ],
+    correctIndex: 3,
+    explanation: 'Poor skin turgor is an early and visible sign of fluid loss and dehydration.'
+  },
+  {
+    id: 'pb11-102',
+    text: 'A patient complains of foul-smelling urine, pain on urination, and night sweats. What assessment should be done?',
+    options: [
+      'Assess blood pressure',
+      'Take a urine sample and send to lab',
+      'Do a buccal swab',
+      'Check prothrombin time'
+    ],
+    correctIndex: 1,
+    explanation: 'Urinalysis is the primary diagnostic tool for suspected urinary tract infections.'
+  },
+  {
+    id: 'pb11-103',
+    text: 'A nurse committed negligence resulting in near death of a patient. What analysis should be used?',
+    options: [
+      'Root cause analysis',
+      'Critical incident analysis',
+      'Incident cause',
+      'None of the above'
+    ],
+    correctIndex: 0,
+    explanation: 'Root cause analysis identifies underlying system failures to prevent recurrence.'
+  },
+  {
+    id: 'pb11-104',
+    text: 'What is the key principle when delivering effective end-of-life care?',
+    options: [
+      'Communicate with the relative first',
+      'Communicate with the patient first',
+      'Communicate with the patient first',
+      'Communicate with the patient first'
+    ],
+    correctIndex: 1,
+    explanation: 'Patient-centered communication ensures dignity and respect in end-of-life care.'
+  },
+  {
+    id: 'pb11-105',
+    text: 'A nurse delegates ambulating a post-op patient. What is the final step in delegation?',
+    options: [
+      'Supervise the procedure',
+      'Ensure competence',
+      'Inform unit manager',
+      'Document task completion'
+    ],
+    correctIndex: 3,
+    explanation: 'Documentation confirms accountability and completion of delegated tasks.'
+  },
+  {
+    id: 'pb11-106',
+    text: 'Two staff are on leave for the next shift, causing a shortage. What should you do?',
+    options: [
+      'Contact a private agency',
+      'Close admissions',
+      'Inform supervisors and call a meeting',
+      'Do nothing'
+    ],
+    correctIndex: 2,
+    explanation: 'Escalating and coordinating with leadership ensures safe staffing and continuity of care.'
+  },
+  {
+    id: 'pb11-107',
+    text: 'What is a severe antibiotic reaction?',
+    options: [
+      'Hypotension',
+      'Fever',
+      'Liver damage',
+      'Abdominal pain'
+    ],
+    correctIndex: 2,
+    explanation: 'Hepatotoxicity is a serious adverse effect of certain antibiotics and requires monitoring.'
+  },
+  {
+    id: 'pb11-108',
+    text: 'What is the nurse’s priority action when a patient reports chest pain during ambulation?',
+    options: [
+      'Encourage the patient to continue walking',
+      'Administer pain medication',
+      'Stop activity and assess vital signs',
+      'Call the family to reassure them'
+    ],
+    correctIndex: 2,
+    explanation: 'Chest pain may indicate cardiac distress; stopping activity and assessing vitals ensures safety and guides further intervention.'
   }
-]
+];
