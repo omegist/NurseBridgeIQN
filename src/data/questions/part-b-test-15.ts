@@ -872,105 +872,105 @@ export const questions: Question[] = [
     explanation: 'Flat affect refers to reduced emotional expression, a common emotional symptom in schizophrenia.',
   },
   {
-    "question_number": 78,
-    "question": "What is the best action when a patient falls in the bathroom?",
-    "options": {
-      "A": "Call for help and check response",
-      "B": "Give recovery position and check vital signs",
-      "C": "Document incident",
-      "D": "Administer oxygen therapy"
-    },
-    "correct_answer": "A",
-    "rationale": "Immediate assessment of consciousness and safety is critical before any further intervention or documentation."
+    id: 'pb15-78',
+    text: "What is the best action when a patient falls in the bathroom?",
+    options: [
+      "Call for help and check response",
+      "Give recovery position and check vital signs",
+      "Document incident",
+      "Administer oxygen therapy"
+    ],
+    correctIndex: 0,
+    explanation: "Immediate assessment of consciousness and safety is critical before any further intervention or documentation."
   },
   {
-    "question_number": 79,
-    "question": "What is the primary management for nutritional rickets?",
-    "options": {
-      "A": "Vitamin D supplements",
-      "B": "Calcium supplements",
-      "C": "Phosphate supplements",
-      "D": "All of the above"
-    },
-    "correct_answer": "D",
-    "rationale": "Rickets is treated with a combination of vitamin D, calcium, and phosphate to restore bone health."
+    id: 'pb15-79',
+    text: "What is the primary treatment for nutritional rickets?",
+    options: [
+      "Vitamin D supplements",
+      "Calcium supplements",
+      "Phosphate supplements",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Rickets is treated with a combination of vitamin D, calcium, and phosphate to restore bone health."
   },
   {
-    "question_number": 80,
-    "question": "What is the main advantage of cardiac exercise for post-myocardial infarction (MI) patients?",
-    "options": {
-      "A": "Improves cardiac output",
-      "B": "Enhances vasodilation",
-      "C": "Increases muscle strength",
-      "D": "Reduces mortality rate through improved cardiac function"
-    },
-    "correct_answer": "D",
-    "rationale": "Cardiac rehab improves heart efficiency and reduces future cardiac events and mortality."
+    id: 'pb15-80',
+    text: "What's the main advantage of cardiac exercise for post-myocardial infarction (MI) patients?",
+    options: [
+      "Improves cardiac output",
+      "Enhances vasodilation",
+      "Increases muscle strength",
+      "Reduces mortality rate through improved cardiac function"
+    ],
+    correctIndex: 3,
+    explanation: "Cardiac rehab improves heart efficiency and reduces future cardiac events and mortality."
   },
   {
-    "question_number": 81,
-    "question": "What is the primary investigation performed on a newborn within the first 24 hours of life?",
-    "options": {
-      "A": "Complete Blood Count (CBC)",
-      "B": "Blood Culture",
-      "C": "Newborn Screening (NBS) tests",
-      "D": "Chest X-ray"
-    },
-    "correct_answer": "C",
-    "rationale": "Newborn screening detects metabolic and genetic disorders early for timely intervention."
+    id: 'pb15-81',
+    text: "What is the primary investigation performed on a newborn within the first 24 hours of life?",
+    options: [
+      "Complete Blood Count (CBC)",
+      "Blood Culture",
+      "Newborn Screening (NBS) tests",
+      "Chest X-ray"
+    ],
+    correctIndex: 2,
+    explanation: "Newborn screening detects metabolic and genetic disorders early for timely intervention."
   },
   {
-    "question_number": 82,
-    "question": "What is the first-line management for a patient presenting with a symptomatic pleural effusion?",
-    "options": {
-      "A": "Thoracentesis (pleural fluid drainage)",
-      "B": "Chest tube insertion",
-      "C": "Antibiotic therapy",
-      "D": "Oxygen therapy"
-    },
-    "correct_answer": "A",
-    "rationale": "Thoracentesis relieves symptoms and allows diagnostic evaluation of pleural fluid."
+    id: 'pb15-82',
+    text: "What is the first-line management for a patient presenting with a symptomatic pleural effusion?",
+    options: [
+      "Thoracentesis (pleural fluid drainage)",
+      "Chest tube insertion",
+      "Antibiotic therapy",
+      "Oxygen therapy"
+    ],
+    correctIndex: 0,
+    explanation: "Thoracentesis relieves symptoms and allows diagnostic evaluation of pleural fluid."
   },
   {
-    "question_number": 83,
-    "question": "What is the initial management step for a patient presenting with Diabetic Ketoacidosis (DKA)?",
-    "options": {
-      "A": "Administer insulin therapy",
-      "B": "Correct fluid deficits with IV fluids",
-      "C": "Administer potassium supplements",
-      "D": "Provide oral glucose"
-    },
-    "correct_answer": "B",
-    "rationale": "Fluid resuscitation is the first step to correct dehydration and stabilize circulation before insulin."
+    id: 'pb15-83',
+    text: "What is the initial management step for a patient presenting with Diabetic Ketoacidosis (DKA)?",
+    options: [
+      "Administer insulin therapy",
+      "Correct fluid deficits with IV fluids",
+      "Administer potassium supplements",
+      "Provide oral glucose"
+    ],
+    correctIndex: 1,
+    explanation: "Fluid resuscitation is the first step to correct dehydration and stabilize circulation before insulin."
   },
   {
-    "question_number": 84,
-    "question": "What are the layers of tissue damage in a second-degree burn?",
-    "options": {
-      "A": "Epidermis only",
-      "B": "Epidermis and dermis (superficial)",
-      "C": "Epidermis, dermis (superficial and deep)",
-      "D": "Epidermis, dermis, and subcutaneous tissue"
-    },
-    "correct_answer": "C",
-    "rationale": "Second-degree burns affect both superficial and deep layers of the dermis, causing blistering and pain."
+    id: 'pb15-84',
+    text: "What are the layers of tissue damage in a second-degree burn?",
+    options: [
+      "Epidermis only",
+      "Epidermis and dermis (superficial)",
+      "Epidermis, dermis (superficial and deep)",
+      "Epidermis, dermis, and subcutaneous tissue"
+    ],
+    correctIndex: 2,
+    explanation: "Second-degree burns affect both superficial and deep layers of the dermis, causing blistering and pain."
   },
   {
-    "question_number": 85,
-    "question": "Why are statins usually administered in the evening?",
-    "options": {
-      "A": "Improved bioavailability",
-      "B": "Enhanced liver enzyme inhibition",
-      "C": "Increased cholesterol synthesis at night",
-      "D": "Better patient compliance"
-    },
-    "correct_answer": "C",
-    "rationale": "Cholesterol synthesis peaks at night, making evening dosing more effective."
+    id: 'pb15-85',
+    text: "Why are statins usually administered in the evening?",
+    options: [
+      "Improved bioavailability",
+      "Enhanced liver enzyme inhibition",
+      "Increased cholesterol synthesis at night",
+      "Better patient compliance"
+    ],
+    correctIndex: 2,
+    explanation: "Cholesterol synthesis peaks at night, making evening dosing more effective."
   },
   {
-    "question_number": 86,
-    "question": "Why is the Varicella Zoster vaccine a live attenuated vaccine?",
-    "options": {
+    id: 'pb15-86',
+    text: "Why is the Varicella Zoster vaccine a live attenuated vaccine?",
+    options: {
       "A": "It contains a killed virus",
       "B": "It contains a weakened form of the virus",
       "C": "It contains a genetically modified virus",
