@@ -11,7 +11,7 @@ const nextConfig = {
     return [
       {
         source: '/api/createOrder',
-        destination: 'https://api-w74e2s66uq-uc.a.run.app', // Points to your deployed Firebase Function
+        destination: 'https://api-w74e2s66uq-uc.a.run.app/api/createOrder', // Points to the specific function endpoint
       },
     ];
   },
