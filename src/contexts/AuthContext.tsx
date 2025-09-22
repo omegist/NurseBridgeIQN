@@ -89,7 +89,7 @@ const getAuthErrorMessage = (error: any): string => {
   }
 }
 
-const DEVELOPER_EMAIL = "chavansahil1610@gmail.com";
+const DEVELOPER_EMAILS = ["chavansahil1610@gmail.com", "hrishikeshchavan13@gmail.com"];
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
@@ -109,7 +109,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (userDoc.exists()) {
       const userData = userDoc.data();
       const firebaseUser = auth.currentUser;
-      const isDeveloper = firebaseUser?.email === DEVELOPER_EMAIL;
+      const isDeveloper = firebaseUser?.email ? DEVELOPER_EMAILS.includes(firebaseUser.email) : false;
 
       return {
         uid: uid,
@@ -129,7 +129,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       try {
         if (firebaseUser) {
           let userProfile = await fetchUserDocument(firebaseUser.uid);
-          const isDeveloper = firebaseUser.email === DEVELOPER_EMAIL;
+          const isDeveloper = firebaseUser.email ? DEVELOPER_EMAILS.includes(firebaseUser.email) : false;
 
           if (!userProfile) {
             const newUser: User = {
@@ -268,7 +268,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         displayName: username,
       })
       
-      const isDeveloper = userCredential.user.email === DEVELOPER_EMAIL;
+      const isDeveloper = userCredential.user.email ? DEVELOPER_EMAILS.includes(userCredential.user.email) : false;
       
        await setDoc(doc(db, "users", userCredential.user.uid), {
           name: username,

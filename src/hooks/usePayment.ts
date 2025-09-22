@@ -11,12 +11,40 @@ declare global {
   }
 }
 
+// ✅ Load Razorpay SDK dynamically
+const loadRazorpayScript = (): Promise<boolean> => {
+  return new Promise((resolve, reject) => {
+    const existingScript = document.querySelector('script[src="https://checkout.razorpay.com/v1/checkout.js"]');
+    if (existingScript) {
+      resolve(true); // already loaded
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    script.onload = () => resolve(true);
+    script.onerror = () => reject(false);
+    document.body.appendChild(script);
+  });
+};
+
 export function usePayment() {
   const { user, refreshUser } = useAuth();
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
 
   const openPaymentDialog = async () => {
+    const scriptLoaded = await loadRazorpayScript();
+
+    if (!scriptLoaded) {
+      toast({
+        variant: 'destructive',
+        title: 'Payment Error',
+        description: 'Unable to load payment gateway. Please try again.',
+      });
+      return;
+    }
+
     if (!user) {
       toast({
         variant: 'destructive',
