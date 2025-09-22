@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone',
+    output: 'export',
     reactStrictMode: true,
     typescript: {
       ignoreBuildErrors: false,
@@ -10,13 +10,6 @@ const nextConfig = {
     },
     images: {
       unoptimized: true,
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'placehold.co',
-          pathname: '/**',
-        },
-      ],
     },
   };
   
