@@ -653,31 +653,31 @@ export const questions: Question[] = [
   {
     id: 'pb16-55',
     text: "A patient is prescribed metformin for type 2 diabetes. What is the primary mechanism of action of metformin?",
-    options: [
+    options": [
       "Increases insulin secretion",
       "Increases glucose production in the liver",
       "Increases insulin sensitivity",
       "Decreases glucose absorption in the gut"
     ],
-    correctIndex: 2,
-    explanation: "Metformin primarily works by increasing insulin sensitivity and reducing hepatic glucose production."
+    "answer": "C",
+    "rationale": "Metformin primarily works by increasing insulin sensitivity and reducing hepatic glucose production."
   },
   {
-    id: 'pb16-56',
-    text: "A patient presents with symptoms of anxiety, including palpitations, sweating, and trembling. What is the most appropriate nursing intervention?",
-    options: [
-      "Administer a benzodiazepine",
-      "Encourage the patient to express their feelings",
-      "Provide a calm and supportive environment",
-      "Teach the patient relaxation techniques"
-    ],
-    correctIndex: 2,
-    explanation: "Creating a calm environment helps reduce anxiety and allows the patient to feel safe and supported."
+    "question_number": 56,
+    "question": "A patient presents with symptoms of anxiety, including palpitations, sweating, and trembling. What is the most appropriate nursing intervention?",
+    "options": {
+      "A": "Administer a benzodiazepine",
+      "B": "Encourage the patient to express their feelings",
+      "C": "Provide a calm and supportive environment",
+      "D": "Teach the patient relaxation techniques"
+    },
+    "answer": "C",
+    "rationale": "Creating a calm environment helps reduce anxiety and allows the patient to feel safe and supported."
   },
   {
-    id: 'pb16-57',
-    text: "A community health nurse is planning a health promotion program for older adults. What is the most effective way to promote healthy aging?",
-    options": {
+    "question_number": 57,
+    "question": "A community health nurse is planning a health promotion program for older adults. What is the most effective way to promote healthy aging?",
+    "options": {
       "A": "Providing written information about healthy aging",
       "B": "Offering exercise classes specifically designed for older adults",
       "C": "Encouraging social support and community engagement",
@@ -782,4 +782,3 @@ export const questions: Question[] = [
     "answer": "D",
     "rationale": "Airway patency is the highest priority in tracheostomy care to ensure adequate ventilation and prevent obstruction."
   }
-I have uploaded the 65 questions now I'll sending the remanining questions in next turn and make Test 16 with complete 108 questions
