@@ -12,7 +12,7 @@ export const questions: Question[] = [
       'Patients with no underlying health conditions',
     ],
     correctIndex: 1,
-    explanation: 'Older adults with cognitive decline and poor nutrition are less mobile and have impaired skin integrity, increasing pressure ulcer risk.',
+    explanation: 'Older adults with cognitive decline and poor nutrition are at higher risk due to immobility and fragile skin.',
   },
   {
     id: 'pb14-2',
@@ -136,7 +136,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb14-12',
-    text: "A patient with a history of major depressive disorder (MDD) reports experiencing increased energy and a decreased need for sleep over the past week, along with engaging in risky behaviors. What is the most likely diagnosis?",
+    text: 'A patient with a history of major depressive disorder (MDD) reports experiencing increased energy and a decreased need for sleep over the past week, along with engaging in risky behaviors. What is the most likely diagnosis?',
     options: [
       'Anxiety disorder',
       'Bipolar disorder',
@@ -148,7 +148,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb14-13',
-    text: "A mother is concerned about her one-year-old child's development. Which of the following milestones is most appropriate for a one-year-old child?",
+    text: 'A mother is concerned about her one-year-old child\'s development. Which of the following milestones is most appropriate for a one-year-old child?',
     options: [
       'Tripling their birth weight',
       'Speaking in full sentences',
@@ -172,7 +172,7 @@ export const questions: Question[] = [
   },
   {
     id: 'pb14-15',
-    text: "What should be your response if another nurse looks at the Electronic Medical Records (EMR) of a patient without permission?",
+    text: 'What should be your response if another nurse looks at the Electronic Medical Records (EMR) of a patient without permission?',
     options: [
       'Ignore the behavior',
       'Report the incident to the supervisor',
@@ -204,7 +204,7 @@ export const questions: Question[] = [
       'Constipation',
     ],
     correctIndex: 1,
-    explanation: 'Lasix is a diuretic, so increased urine output (diuresis) confirms its effectiveness.',
+    explanation: 'Lasix is a diuretic; increased urine output (diuresis) confirms its effectiveness.',
   },
   {
     id: 'pb14-18',
@@ -1000,26 +1000,302 @@ export const questions: Question[] = [
   },
   {
     id: 'pb14-84',
-    text: 'A nurse has been asked to administer medication to the wrong patient. Which action should they take?',
+    text: "After administering rapid-acting insulin, how soon can a meal be given to a patient with diabetes?",
     options: [
-      'Refuse to administer and report the error',
-      'Administer the medication and document it',
-      'Ask the patient to refuse',
-      'Give the medication to the correct patient',
+      "15–30 minutes",
+      "1 hour",
+      "2–3 hours",
+      "4 hours or more"
     ],
     correctIndex: 0,
-    explanation: 'Refusing and reporting prevents harm and ensures accountability for medication errors.',
+    explanation: "Rapid-acting insulin begins working within 15–30 minutes, so meals should be timed accordingly to prevent hypoglycemia."
   },
   {
     id: 'pb14-85',
-    text: "A patient's family requests the medical records of another patient. What should the nurse do?",
+    text: "What is the primary purpose of a creatinine clearance test?",
     options: [
-      'Provide the records',
-      'Refuse and explain privacy laws',
-      'Ask the other patient for permission',
-      'Direct them to hospital administration',
+      "Evaluate liver function",
+      "Assess pancreatic function",
+      "Measure kidney function",
+      "Diagnose thyroid disorders"
+    ],
+    correctIndex: 2,
+    explanation: "Creatinine clearance estimates glomerular filtration rate (GFR), a key indicator of kidney function."
+  },
+  {
+    id: 'pb14-86',
+    text: "Which system primarily maintains hemostasis of body temperature?",
+    options: [
+      "Nervous System",
+      "Circulatory System",
+      "Endocrine System",
+      "Integumentary System"
+    ],
+    correctIndex: 3,
+    explanation: "The integumentary system, including skin and sweat glands, regulates body temperature through heat exchange and evaporation."
+  },
+  {
+    id: 'pb14-87',
+    text: "A patient falls during admission. What is your best immediate action?",
+    options: [
+      "Call for help and check response",
+      "Give recovery position and check vital signs",
+      "Document incident",
+      "Administer oxygen therapy"
+    ],
+    correctIndex: 0,
+    explanation: "Immediate assessment of consciousness and safety is critical before any further intervention or documentation."
+  },
+  {
+    id: 'pb14-88',
+    text: "Furosemide is a loop diuretic that increases urine production. What is a common side effect?",
+    options: [
+      "Hypertension",
+      "Hyperkalemia",
+      "Risk for fall",
+      "Weight gain"
+    ],
+    correctIndex: 2,
+    explanation: "Furosemide can cause hypotension and electrolyte imbalance, increasing fall risk especially in older adults."
+  },
+  {
+    id: 'pb14-89',
+    text: "Minimum urine output of a postoperative patient weighing 60 kg?",
+    options: [
+      "60 mL",
+      "30 mL",
+      "120 mL",
+      "100 mL"
+    ],
+    correctIndex: 2,
+    explanation: "Minimum urine output is 0.5 mL/kg/hr. For 60 kg, that equals 30 mL/hr or 120 mL over 4 hours."
+  },
+  {
+    id: 'pb14-90',
+    text: "A child admitted with weight gain, oliguria, and edema likely has:",
+    options: [
+      "Eating disorder",
+      "Hypertension",
+      "Hypervolemia",
+      "Diabetes mellitus"
+    ],
+    correctIndex: 2,
+    explanation: "These symptoms suggest fluid overload (hypervolemia), often seen in nephrotic syndrome or renal dysfunction."
+  },
+  {
+    id: 'pb14-91',
+    text: "You witness a colleague shouting at a healthcare assistant. What action should you take?",
+    options: [
+      "Ignore the situation",
+      "Intervene immediately",
+      "Report the incident to your supervisor",
+      "Talk to your colleague privately"
+    ],
+    correctIndex: 2,
+    explanation: "Reporting ensures accountability and maintains professional standards in the workplace."
+  },
+  {
+    id: 'pb14-92',
+    text: "A relative of a deceased patient is experiencing inhibited grief. What is the best management?",
+    options: [
+      "Encourage emotional expression",
+      "Provide information on grief stages",
+      "Refer to counseling or bereavement services",
+      "Allow privacy and silence"
+    ],
+    correctIndex: 2,
+    explanation: "Referral to professional support helps address delayed or complicated grief reactions effectively."
+  },
+  {
+    id: 'pb14-93',
+    text: "You are transferring a hemiplegic patient from bed to chair. What is the best action?",
+    options: [
+      "Stand on affected side and pull",
+      "Stand on unaffected side and pull",
+      "Use a slide board",
+      "Ask patient to walk"
     ],
     correctIndex: 1,
-    explanation: 'Patient confidentiality is legally protected; disclosing records without consent is a privacy breach.',
+    explanation: "Standing on the unaffected side provides better support and control during transfer."
   },
+  {
+    id: 'pb14-94',
+    text: "Why are deep breathing and coughing exercises important post-operatively?",
+    options: [
+      "Prevent respiratory complications",
+      "Enhance cardiac function",
+      "Improve GI function",
+      "Reduce pain"
+    ],
+    correctIndex: 0,
+    explanation: "These exercises promote lung expansion and mucociliary clearance, reducing pneumonia risk."
+  },
+  {
+    id: 'pb14-95',
+    text: "What is the primary reason for immediate ambulation post-operatively?",
+    options: [
+      "Prevent deep vein thrombosis (DVT)",
+      "Enhance wound healing",
+      "Reduce pain",
+      "Improve GI function"
+    ],
+    correctIndex: 0,
+    explanation: "Early ambulation improves circulation and reduces the risk of thromboembolic events."
+  },
+  {
+    id: 'pb14-96',
+    text: "Your charge nurse hands you a bottle with 3 tablets. What do you do?",
+    options: [
+      "Administer the tablets immediately",
+      "Verify medication order and patient details",
+      "Count the tablets again",
+      "Store the bottle in the cart"
+    ],
+    correctIndex: 1,
+    explanation: "Verifying the medication order and patient details is a critical safety step before administration."
+  },
+  {
+    id: 'pb14-97',
+    text: "What is the primary treatment for uncomplicated urinary tract infections (UTIs)?",
+    options: [
+      "Antibiotics",
+      "Pain management",
+      "Fluid therapy",
+      "Surgery"
+    ],
+    correctIndex: 0,
+    explanation: "Antibiotics target the causative bacteria and are the first-line treatment for UTIs."
+  },
+  {
+    id: 'pb14-98',
+    text: "What advice would you give to parents whose child is taking anticoagulants?",
+    options: [
+      "Monitor for bleeding or bruising",
+      "Administer with food",
+      "Avoid physical activities",
+      "All of the above"
+    ],
+    correctIndex: 0,
+    explanation: "Monitoring for bleeding is essential due to the increased risk of hemorrhage with anticoagulants."
+  },
+  {
+    id: 'pb14-99',
+    text: "Why is it dangerous to keep oxygen in an explosive area?",
+    options: [
+      "Oxygen accelerates chemical reactions",
+      "Oxygen enriches air, increasing fire risk",
+      "Oxygen reacts with toxic gases",
+      "All of the above"
+    ],
+    correctIndex: 1,
+    explanation: "Oxygen-enriched environments increase flammability and explosion risk."
+  },
+  {
+    id: 'pb14-100',
+    text: "What is the primary action of uremia?",
+    options: [
+      "Fluid retention",
+      "Electrolyte imbalance",
+      "Toxicity from waste buildup",
+      "Hormonal regulation"
+    ],
+    correctIndex: 2,
+    explanation: "Uremia results from accumulation of nitrogenous waste due to kidney failure."
+  },
+  {
+    id: 'pb14-101',
+    text: "A patient in a psychiatric department says you are her relative. What is your response?",
+    options: [
+      "Agree and play along",
+      "Gently clarify the misunderstanding",
+      "Ignore the statement",
+      "Call security"
+    ],
+    correctIndex: 1,
+    explanation: "Therapeutic communication involves gently correcting delusions without confrontation, preserving trust and safety."
+  },
+  {
+    id: 'pb14-102',
+    text: "Why check HbA1c?",
+    options: [
+      "Monitor blood pressure",
+      "Diagnose diabetes/prediabetes",
+      "Assess kidney function",
+      "Evaluate heart health"
+    ],
+    correctIndex: 1,
+    explanation: "HbA1c reflects average blood glucose over 2–3 months and is used to diagnose and monitor diabetes."
+  },
+  {
+    id: 'pb14-103',
+    text: "What are the symptoms of Diabetic Ketoacidosis (DKA)?",
+    options: [
+      "Hyperglycemia, polyuria, polydipsia",
+      "Hypoglycemia, headache, fatigue",
+      "Nausea, vomiting, abdominal pain",
+      "All of the above"
+    ],
+    correctIndex: 0,
+    explanation: "DKA presents with high blood sugar, excessive urination and thirst due to insulin deficiency and ketone buildup."
+  },
+  {
+    id: 'pb14-104',
+    text: "Why is heparin used for MI (Myocardial Infarction) patients?",
+    options: [
+      "Prevent atrial fibrillation",
+      "Reduce blood pressure",
+      "Prevent re-thrombosis and reocclusion",
+      "Improve cardiac contractility"
+    ],
+    correctIndex: 2,
+    explanation: "Heparin prevents clot formation and recurrence after MI, reducing risk of further ischemic events."
+  },
+  {
+    id: 'pb14-105',
+    text: "Which electrolyte imbalance is most associated with muscle cramps and tetany?",
+    options: [
+      "Hyperkalemia",
+      "Hypocalcemia",
+      "Hypernatremia",
+      "Hypomagnesemia"
+    ],
+    correctIndex: 1,
+    explanation: "Low calcium levels increase neuromuscular excitability, leading to cramps, spasms, and tetany."
+  },
+  {
+    id: 'pb14-106',
+    text: "What is the most appropriate nursing intervention for a patient with a low Glasgow Coma Scale (GCS) score?",
+    options: [
+      "Encourage oral intake",
+      "Initiate fall precautions",
+      "Place in high Fowler’s position",
+      "Ensure airway patency"
+    ],
+    correctIndex: 3,
+    explanation: "A low GCS indicates impaired consciousness; maintaining airway is the top priority to prevent hypoxia."
+  },
+  {
+    id: 'pb14-107',
+    text: "Which of the following is a key sign of hypoglycemia?",
+    options: [
+      "Dry skin and thirst",
+      "Slow heart rate and fatigue",
+      "Sweating, shakiness, and confusion",
+      "Weight gain and blurred vision"
+    ],
+    correctIndex: 2,
+    explanation: "Hypoglycemia triggers sympathetic activation and neuroglycopenic symptoms like sweating and confusion."
+  },
+  {
+    id: 'pb14-108',
+    text: "What is the best position to place a patient in during a seizure?",
+    options: [
+      "Supine with legs elevated",
+      "Prone with arms extended",
+      "Side-lying to prevent aspiration",
+      "Sitting upright with head tilted"
+    ],
+    correctIndex: 2,
+    explanation: "Side-lying position protects the airway and reduces risk of aspiration during convulsive activity."
+  }
 ];
