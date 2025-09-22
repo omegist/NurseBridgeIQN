@@ -16,6 +16,7 @@ import { questions as partBTest10 } from './part-b-test-10';
 import { questions as partBTest11 } from './part-b-test-11';
 import { questions as partBTest12 } from './part-b-test-12';
 import { questions as partBTest13 } from './part-b-test-13';
+import { questions as partBTest14 } from './part-b-test-14';
 import type { Question } from '@/lib/types';
 
 export const allQuestions: Question[] = [
@@ -37,4 +38,5 @@ export const allQuestions: Question[] = [
   ...partBTest11,
   ...partBTest12,
   ...partBTest13,
+  ...partBTest14,
 ];

@@ -1,3 +1,4 @@
+
 import { allQuestions } from './questions';
 import { questions as partATest1 } from './questions/part-a-test-1';
 import { questions as partATest2 } from './questions/part-a-test-2';
@@ -11,6 +12,7 @@ import { questions as partBTest10 } from './questions/part-b-test-10';
 import { questions as partBTest11 } from './questions/part-b-test-11';
 import { questions as partBTest12 } from './questions/part-b-test-12';
 import { questions as partBTest13 } from './questions/part-b-test-13';
+import { questions as partBTest14 } from './questions/part-b-test-14';
 import type { Test } from '@/lib/types';
 
 // Seeded shuffle for consistency across builds
@@ -56,6 +58,7 @@ const partBTestsData: Omit<Test, 'questions'>[] = [
   { id: 'test-11', name: 'Test 11', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-12', name: 'Test 12', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-13', name: 'Test 13', timeLimitMinutes: 145, questionCount: 108 },
+  { id: 'test-14', name: 'Test 14', timeLimitMinutes: 145, questionCount: 85 },
 ];
 
 const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
@@ -93,6 +96,12 @@ const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
     return {
       ...testInfo,
       questions: partBTest13
+    };
+  }
+  if (testInfo.id === 'test-14') {
+    return {
+      ...testInfo,
+      questions: partBTest14
     };
   }
   if (index < 6) {
