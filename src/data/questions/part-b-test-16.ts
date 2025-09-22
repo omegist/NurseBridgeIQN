@@ -9,22 +9,22 @@ export const questions: Question[] = [
       'Administer an antipsychotic medication as prescribed',
       'Encourage the patient to ignore the voices',
       'Ask the patient to describe the voices in more detail',
-      'Use a calm and gentle approach to support the patient',
+      'Use a calm and gentle approach to support the patient'
     ],
     correctIndex: 3,
-    explanation: 'A calm and gentle approach helps reduce anxiety and builds trust, which is essential when managing hallucinations in patients with dementia. Immediate pharmacologic intervention is not always necessary.',
+    explanation: 'A calm and gentle approach helps reduce anxiety and builds trust, which is essential when managing hallucinations in patients with dementia. Immediate pharmacologic intervention is not always necessary.'
   },
   {
     id: 'pb16-2',
-    text: 'A patient with a history of bipolar disorder presents to the emergency department with visual hallucinations. The patient reports seeing colors and patterns that are not really there. What is the most likely cause of the patient\'s hallucinations?',
+    text: "A patient with a history of bipolar disorder presents to the emergency department with visual hallucinations. The patient reports seeing colors and patterns that are not really there. What is the most likely cause of the patient's hallucinations?",
     options: [
       'Manic episode',
       'Depressive episode',
       'Psychotic episode',
-      'Medication side effect',
+      'Medication side effect'
     ],
     correctIndex: 2,
-    explanation: 'Visual hallucinations in bipolar disorder are most commonly associated with psychotic episodes, which can occur during either manic or depressive phases.',
+    explanation: 'Visual hallucinations in bipolar disorder are most commonly associated with psychotic episodes, which can occur during either manic or depressive phases.'
   },
   {
     id: 'pb16-3',
@@ -33,10 +33,10 @@ export const questions: Question[] = [
       'Administer an antipsychotic medication as prescribed',
       'Encourage the patient to ignore the voices',
       'Ask the patient to describe the voices in more detail',
-      'Use a trauma-informed approach to support the patient',
+      'Use a trauma-informed approach to support the patient'
     ],
     correctIndex: 3,
-    explanation: 'A trauma-informed approach acknowledges the patient’s history and emphasizes safety, trust, and empowerment, which is crucial in managing hallucinations linked to traumatic brain injury.',
+    explanation: 'A trauma-informed approach acknowledges the patient’s history and emphasizes safety, trust, and empowerment, which is crucial in managing hallucinations linked to traumatic brain injury.'
   },
   {
     id: 'pb16-4',
@@ -45,10 +45,10 @@ export const questions: Question[] = [
       'Sitting upright with head tilted to the side',
       'Lying on one side with the ear being examined facing up',
       'Standing with their head straight',
-      'Sitting comfortably with their head slightly tilted to the side pulled upward and backward',
+      'Sitting comfortably with their head slightly tilted to the side pulled upward and backward'
     ],
     correctIndex: 3,
-    explanation: 'Tilting the head slightly and pulling the ear upward and backward straightens the ear canal, allowing better visualization during examination.',
+    explanation: 'Tilting the head slightly and pulling the ear upward and backward straightens the ear canal, allowing better visualization during examination.'
   },
   {
     id: 'pb16-5',
@@ -57,10 +57,10 @@ export const questions: Question[] = [
       'Ignore the email and hope the issue resolved itself',
       'Respond calmly, acknowledging their concerns and offering to address them.',
       'Forward the email to your supervisor and let them handle it.',
-      'Reply defensively, blaming others',
+      'Reply defensively, blaming others'
     ],
     correctIndex: 1,
-    explanation: 'Acknowledging concerns and responding calmly demonstrates professionalism and empathy, which are key to resolving patient dissatisfaction.',
+    explanation: 'Acknowledging concerns and responding calmly demonstrates professionalism and empathy, which are key to resolving patient dissatisfaction.'
   },
   {
     id: 'pb16-6',
@@ -69,10 +69,10 @@ export const questions: Question[] = [
       'Lifting head while prone',
       'Holding toys',
       'Smiling',
-      'Bringing hands to midline',
+      'Bringing hands to midline'
     ],
     correctIndex: 0,
-    explanation: 'By 1 month, infants typically begin to lift their head briefly when placed on their stomach, indicating early neck muscle development.',
+    explanation: 'By 1 month, infants typically begin to lift their head briefly when placed on their stomach, indicating early neck muscle development.'
   },
   {
     id: 'pb16-7',
@@ -81,10 +81,10 @@ export const questions: Question[] = [
       'Imitating sounds',
       'Responding to own name',
       'Understanding simple games',
-      'Pointing to objects',
+      'Pointing to objects'
     ],
     correctIndex: 0,
-    explanation: 'At 4 months, infants begin to imitate sounds as part of early language and cognitive development.',
+    explanation: 'At 4 months, infants begin to imitate sounds as part of early language and cognitive development.'
   },
   {
     id: 'pb16-8',
@@ -93,10 +93,10 @@ export const questions: Question[] = [
       'Babbling with consonant-vowel combinations',
       'Saying “mama” or “dada”',
       'Responding to simple verbal commands',
-      'Using gestures to communicate',
+      'Using gestures to communicate'
     ],
     correctIndex: 0,
-    explanation: 'Babbling with consonant-vowel combinations is a key language milestone at 6 months, showing early speech development.',
+    explanation: 'Babbling with consonant-vowel combinations is a key language milestone at 6 months, showing early speech development.'
   },
   {
     id: 'pb16-9',
@@ -105,10 +105,10 @@ export const questions: Question[] = [
       'Sitting up without support',
       'Crawling',
       'Standing with support',
-      'Walking unassisted',
+      'Walking unassisted'
     ],
     correctIndex: 1,
-    explanation: 'Crawling typically emerges around 9 months as infants develop core strength and coordination.',
+    explanation: 'Crawling typically emerges around 9 months as infants develop core strength and coordination.'
   },
   {
     id: 'pb16-10',
@@ -117,10 +117,10 @@ export const questions: Question[] = [
       'Transferring toys from one hand to another',
       'Pointing to objects with index finger',
       'Using raking and grasping motions to pick up small objects',
-      'Building towers with blocks',
+      'Building towers with blocks'
     ],
     correctIndex: 1,
-    explanation: 'Pointing to objects is a fine motor and communication milestone that typically appears around 12 months.',
+    explanation: 'Pointing to objects is a fine motor and communication milestone that typically appears around 12 months.'
   },
   {
     id: 'pb16-11',
@@ -129,10 +129,10 @@ export const questions: Question[] = [
       'Holding head up while prone',
       'Bringing hands to midline',
       'Smiling',
-      'Tracking objects with eyes',
+      'Tracking objects with eyes'
     ],
     correctIndex: 0,
-    explanation: 'At 2 months, infants typically begin to lift their head while prone, showing early neck strength and motor development.',
+    explanation: 'At 2 months, infants typically begin to lift their head while prone, showing early neck strength and motor development.'
   },
   {
     id: 'pb16-12',
@@ -141,10 +141,10 @@ export const questions: Question[] = [
       'Imitating facial expressions',
       'Smiling at familiar people',
       'Understanding object permanence',
-      'Pointing to objects',
+      'Pointing to objects'
     ],
     correctIndex: 2,
-    explanation: 'Object permanence begins to develop around 5 months, indicating growing cognitive awareness of the environment.',
+    explanation: 'Object permanence begins to develop around 5 months, indicating growing cognitive awareness of the environment.'
   },
   {
     id: 'pb16-13',
@@ -153,10 +153,10 @@ export const questions: Question[] = [
       'Babbling with consonant-vowel combinations',
       'Saying “mama” or “dada”',
       'Responding to simple verbal commands',
-      'Using gestures to communicate',
+      'Using gestures to communicate'
     ],
     correctIndex: 0,
-    explanation: 'Babbling with consonant-vowel combinations is a key language milestone at 7 months, reflecting early speech development.',
+    explanation: 'Babbling with consonant-vowel combinations is a key language milestone at 7 months, reflecting early speech development.'
   },
   {
     id: 'pb16-14',
@@ -165,10 +165,10 @@ export const questions: Question[] = [
       'Sitting up without support',
       'Crawling',
       'Standing without support',
-      'Walking independently',
+      'Walking independently'
     ],
     correctIndex: 1,
-    explanation: 'Crawling is a typical gross motor milestone around 10 months, showing improved coordination and mobility.',
+    explanation: 'Crawling is a typical gross motor milestone around 10 months, showing improved coordination and mobility.'
   },
   {
     id: 'pb16-15',
@@ -177,10 +177,10 @@ export const questions: Question[] = [
       'Showing affection for familiar people',
       'Playing simple games like pat-a-cake',
       'Imitating gestures and facial expressions',
-      'Showing independence and assertiveness',
+      'Showing independence and assertiveness'
     ],
     correctIndex: 0,
-    explanation: 'At 12 months, infants begin to show affection for familiar people, reflecting emotional bonding and social development.',
+    explanation: 'At 12 months, infants begin to show affection for familiar people, reflecting emotional bonding and social development.'
   },
   {
     id: 'pb16-16',
@@ -189,10 +189,10 @@ export const questions: Question[] = [
       'Accept the coffee and thank the patient',
       'Decline the coffee and explain that it’s against hospital policy to accept gifts from patients',
       'Accept the coffee but offer to pay for it',
-      'Tell the patient that you’re not allowed to accept gifts but appreciate the thought',
+      'Tell the patient that you’re not allowed to accept gifts but appreciate the thought'
     ],
     correctIndex: 3,
-    explanation: 'Acknowledging the gesture while maintaining professional boundaries respects both the patient’s intent and institutional policy.',
+    explanation: 'Acknowledging the gesture while maintaining professional boundaries respects both the patient’s intent and institutional policy.'
   },
   {
     id: 'pb16-17',
@@ -201,10 +201,10 @@ export const questions: Question[] = [
       'Potassium (K⁺)',
       'Sodium (Na⁺)',
       'Magnesium (Mg²⁺)',
-      'Calcium (Ca²⁺)',
+      'Calcium (Ca²⁺)'
     ],
     correctIndex: 1,
-    explanation: 'Burn injuries often lead to significant sodium loss due to fluid shifts and capillary leakage, requiring close monitoring.',
+    explanation: 'Burn injuries often lead to significant sodium loss due to fluid shifts and capillary leakage, requiring close monitoring.'
   },
   {
     id: 'pb16-18',
@@ -213,10 +213,10 @@ export const questions: Question[] = [
       'Accept the patient\'s request and stay with him',
       'Explain to the patient that you have other responsibilities and cannot stay',
       'Ask another nurse to stay with the patient',
-      'Decline the patient\'s request and inform your supervisor',
+      'Decline the patient\'s request and inform your supervisor'
     ],
     correctIndex: 2,
-    explanation: 'Delegating the request to another nurse ensures the patient receives emotional support while maintaining care responsibilities.',
+    explanation: 'Delegating the request to another nurse ensures the patient receives emotional support while maintaining care responsibilities.'
   },
   {
     id: 'pb16-19',
@@ -225,10 +225,10 @@ export const questions: Question[] = [
       'Time-out method: Give the child a brief time-out to calm down',
       'Distraction method: Offer the child a toy or activity to distract them from the tantrum',
       'Redirection method: Redirect the child’s attention to a calm behavior or offer rewards for good behavior',
-      'Behavior modification method: Praise the child for calm behavior and offer rewards for good behavior',
+      'Behavior modification method: Praise the child for calm behavior and offer rewards for good behavior'
     ],
     correctIndex: 1,
-    explanation: 'Distraction is often the most effective and developmentally appropriate method for managing toddler tantrums in public settings.',
+    explanation: 'Distraction is often the most effective and developmentally appropriate method for managing toddler tantrums in public settings.'
   },
   {
     id: 'pb16-20',
@@ -237,10 +237,10 @@ export const questions: Question[] = [
       'Airborne transmission through droplet nuclei',
       'Direct contact with an infected person’s saliva or mucus',
       'Contaminated food or water',
-      'Vector-borne transmission through ticks or mosquitoes',
+      'Vector-borne transmission through ticks or mosquitoes'
     ],
     correctIndex: 1,
-    explanation: 'Neisseria meningitidis is primarily transmitted through close contact with respiratory secretions such as saliva or mucus.',
+    explanation: 'Neisseria meningitidis is primarily transmitted through close contact with respiratory secretions such as saliva or mucus.'
   },
   {
     id: 'pb16-21',
@@ -249,10 +249,10 @@ export const questions: Question[] = [
       'To remove all bacteria from the skin',
       'To diminish the number of microorganisms on the skin',
       'To apply antimicrobial agents to the skin',
-      'To prepare the skin for dressing application',
+      'To prepare the skin for dressing application'
     ],
     correctIndex: 1,
-    explanation: 'Handwashing reduces the microbial load on the skin, minimizing the risk of infection during wound care procedures.',
+    explanation: 'Handwashing reduces the microbial load on the skin, minimizing the risk of infection during wound care procedures.'
   },
   {
     id: 'pb16-22',
@@ -261,10 +261,10 @@ export const questions: Question[] = [
       'Reassure the parents that the injections are quick and relatively painless.',
       'Explain the benefits of insulin injections and how they will help manage the child’s diabetes.',
       'Demonstrate the injection technique using a doll to help the parents understand.',
-      'Discuss the option of using an insulin pump or other alternative delivery methods.',
+      'Discuss the option of using an insulin pump or other alternative delivery methods.'
     ],
     correctIndex: 2,
-    explanation: "Demonstrating the injection technique helps reduce anxiety and builds confidence in the parents' ability to manage their child's care.",
+    explanation: "Demonstrating the injection technique helps reduce anxiety and builds confidence in the parents' ability to manage their child's care."
   },
   {
     id: 'pb16-23',
@@ -273,10 +273,10 @@ export const questions: Question[] = [
       'Reassure the patient that the color change is likely due to a change in the manufacturer’s formulation and that the medication is still safe and effective.',
       'Tell the patient that the medication is different and to contact the doctor to confirm that the prescription has not been changed.',
       'Offer to replace the medication with a different brand or formulation that has the same color as the original.',
-      'Inform the patient that the pharmacy is not responsible for changes in the medication’s appearance and that they should contact the prescribing doctor.',
+      'Inform the patient that the pharmacy is not responsible for changes in the medication’s appearance and that they should contact the prescribing doctor.'
     ],
     correctIndex: 0,
-    explanation: 'Color changes in tablets often result from manufacturer differences and do not affect the medication’s efficacy or safety.',
+    explanation: 'Color changes in tablets often result from manufacturer differences and do not affect the medication’s efficacy or safety.'
   },
   {
     id: 'pb16-24',
@@ -285,22 +285,22 @@ export const questions: Question[] = [
       'Furosemide (Lasix)',
       'Metoprolol (Lopressor)',
       'Lisinopril (Zestril)',
-      'Digoxin (Lanoxin)',
+      'Digoxin (Lanoxin)'
     ],
     correctIndex: 2,
-    explanation: 'ACE inhibitors like lisinopril reduce afterload and improve cardiac output, making them a cornerstone in CHF management.',
+    explanation: 'ACE inhibitors like lisinopril reduce afterload and improve cardiac output, making them a cornerstone in CHF management.'
   },
   {
     id: 'pb16-25',
-    text: 'A patient with CHF is experiencing symptoms of orthopnea and paroxysmal nocturnal dyspnea (PND). Which of the following positions would be most beneficial for this patient?',
+    text: "A patient with CHF is experiencing symptoms of orthopnea and paroxysmal nocturnal dyspnea (PND). Which of the following positions would be most beneficial for this patient?",
     options: [
       'Supine position',
       "Fowler's position",
       "High-Fowler's position",
-      'Trendelenburg position',
+      'Trendelenburg position'
     ],
     correctIndex: 2,
-    explanation: 'High-Fowler’s position helps reduce pulmonary congestion and improves breathing by maximizing lung expansion.',
+    explanation: 'High-Fowler’s position helps reduce pulmonary congestion and improves breathing by maximizing lung expansion.'
   },
   {
     id: 'pb16-26',
@@ -309,10 +309,10 @@ export const questions: Question[] = [
       'Furosemide (Lasix)',
       'Metoprolol (Lopressor)',
       'Lisinopril (Zestril)',
-      'Midodrine (ProAmatine)',
+      'Midodrine (ProAmatine)'
     ],
     correctIndex: 3,
-    explanation: 'Midodrine is used to treat symptomatic hypotension by increasing vascular tone and improving blood pressure.',
+    explanation: 'Midodrine is used to treat symptomatic hypotension by increasing vascular tone and improving blood pressure.'
   },
   {
     id: 'pb16-27',
@@ -321,10 +321,10 @@ export const questions: Question[] = [
       'Cognitive-behavioral therapy (CBT)',
       'Medication therapy',
       'Exercise therapy',
-      'Support group participation',
+      'Support group participation'
     ],
     correctIndex: 0,
-    explanation: 'CBT is effective in managing anxiety and depression by helping patients reframe negative thoughts and improve coping strategies.',
+    explanation: 'CBT is effective in managing anxiety and depression by helping patients reframe negative thoughts and improve coping strategies.'
   },
   {
     id: 'pb16-28',
@@ -333,10 +333,10 @@ export const questions: Question[] = [
       'Administer oxygen therapy via a non-rebreather mask',
       'Initiate fluid resuscitation with 0.9% sodium chloride',
       'Administer a vasopressor to increase blood pressure',
-      'Insert a urinary catheter to monitor urine output',
+      'Insert a urinary catheter to monitor urine output'
     ],
     correctIndex: 1,
-    explanation: 'Fluid resuscitation is the first-line treatment for hypovolemic shock to restore circulating volume and improve perfusion.',
+    explanation: 'Fluid resuscitation is the first-line treatment for hypovolemic shock to restore circulating volume and improve perfusion.'
   },
   {
     id: 'pb16-29',
@@ -345,10 +345,10 @@ export const questions: Question[] = [
       'Administer 1-2 liters of 0.9% sodium chloride',
       'Administer 4-6 liters of lactated Ringer’s solution',
       'Administer 1-2 liters of 5% albumin',
-      'Administer 1-2 liters of normal saline with 50 mmol of sodium bicarbonate',
+      'Administer 1-2 liters of normal saline with 50 mmol of sodium bicarbonate'
     ],
     correctIndex: 1,
-    explanation: 'Lactated Ringer’s is preferred for burn resuscitation due to its balanced electrolyte composition and ability to restore intravascular volume.',
+    explanation: 'Lactated Ringer’s is preferred for burn resuscitation due to its balanced electrolyte composition and ability to restore intravascular volume.'
   },
   {
     id: 'pb16-30',
@@ -357,10 +357,10 @@ export const questions: Question[] = [
       'Administer a fluid bolus of 500 ml of 0.9% sodium chloride',
       'Administer a vasopressor such as norepinephrine',
       'Administer a corticosteroid such as hydrocortisone',
-      'Administer a beta-blocker such as metoprolol',
+      'Administer a beta-blocker such as metoprolol'
     ],
     correctIndex: 1,
-    explanation: 'Vasopressors like norepinephrine are used in septic shock when fluid resuscitation alone is insufficient to maintain adequate blood pressure.',
+    explanation: 'Vasopressors like norepinephrine are used in septic shock when fluid resuscitation alone is insufficient to maintain adequate blood pressure.'
   },
   {
     id: 'pb16-31',
@@ -369,10 +369,10 @@ export const questions: Question[] = [
       'Start a fluid bolus of 500 mL of 0.9% sodium chloride',
       'Administer a vasopressor such as dopamine',
       'Administer an inotropic agent such as dobutamine',
-      'Administer a beta-blocker such as metoprolol',
+      'Administer a beta-blocker such as metoprolol'
     ],
     correctIndex: 2,
-    explanation: 'Dobutamine improves cardiac contractility and output, making it the preferred inotropic agent in cardiogenic shock.',
+    explanation: 'Dobutamine improves cardiac contractility and output, making it the preferred inotropic agent in cardiogenic shock.'
   },
   {
     id: 'pb16-32',
@@ -381,10 +381,10 @@ export const questions: Question[] = [
       'Ischemic stroke',
       'Transient ischemic attack (TIA)',
       'Seizure',
-      'Migraine',
+      'Migraine'
     ],
     correctIndex: 1,
-    explanation: 'Transient ischemic attacks are brief neurological deficits that resolve within 24 hours, often within minutes.',
+    explanation: 'Transient ischemic attacks are brief neurological deficits that resolve within 24 hours, often within minutes.'
   },
   {
     id: 'pb16-33',
@@ -393,10 +393,10 @@ export const questions: Question[] = [
       'Administer aspirin',
       'Administer thrombolytic therapy',
       'Obtain a non-contrast CT scan of the head',
-      'Monitor the patient’s vital signs and neurological status',
+      'Monitor the patient’s vital signs and neurological status'
     ],
     correctIndex: 3,
-    explanation: 'Monitoring vital signs and neurological status ensures early detection of deterioration and guides further intervention.',
+    explanation: 'Monitoring vital signs and neurological status ensures early detection of deterioration and guides further intervention.'
   },
   {
     id: 'pb16-34',
@@ -405,10 +405,10 @@ export const questions: Question[] = [
       'Hypertension',
       'Hyperlipidemia',
       'Diabetes mellitus',
-      'Smoking',
+      'Smoking'
     ],
     correctIndex: 0,
-    explanation: 'Hypertension is the most significant modifiable risk factor for stroke and should be aggressively managed.',
+    explanation: 'Hypertension is the most significant modifiable risk factor for stroke and should be aggressively managed.'
   },
   {
     id: 'pb16-35',
@@ -417,10 +417,10 @@ export const questions: Question[] = [
       'Warfarin',
       'Aspirin',
       'Clopidogrel',
-      'Dabigatran',
+      'Dabigatran'
     ],
     correctIndex: 2,
-    explanation: 'Clopidogrel is often used for secondary prevention in patients with TIA, especially when aspirin is contraindicated or insufficient.',
+    explanation: 'Clopidogrel is often used for secondary prevention in patients with TIA, especially when aspirin is contraindicated or insufficient.'
   },
   {
     id: 'pb16-36',
@@ -429,10 +429,10 @@ export const questions: Question[] = [
       'Phlebitis',
       'Infiltration',
       'Extravasation',
-      'Nerve damage',
+      'Nerve damage'
     ],
     correctIndex: 1,
-    explanation: 'Infiltration occurs when IV fluid leaks into surrounding tissue, causing swelling, coolness, and discomfort.',
+    explanation: 'Infiltration occurs when IV fluid leaks into surrounding tissue, causing swelling, coolness, and discomfort.'
   },
   {
     id: 'pb16-37',
@@ -441,10 +441,10 @@ export const questions: Question[] = [
       'Remove the IV line',
       'Elevate the affected limb',
       'Apply a warm compress to the affected area',
-      'Administer pain relief medication',
+      'Administer pain relief medication'
     ],
     correctIndex: 0,
-    explanation: 'Removing the IV line immediately prevents further tissue damage and allows for reassessment of the site.',
+    explanation: 'Removing the IV line immediately prevents further tissue damage and allows for reassessment of the site.'
   },
   {
     id: 'pb16-38',
@@ -453,10 +453,10 @@ export const questions: Question[] = [
       'Using a small-gauge IV needle',
       'Securing the IV line with tape',
       'Monitoring the IV site regularly for signs of infiltration',
-      'Administering IV fluids at a rapid rate',
+      'Administering IV fluids at a rapid rate'
     ],
     correctIndex: 2,
-    explanation: 'Frequent monitoring allows early detection of infiltration, minimizing complications and ensuring safe IV therapy.',
+    explanation: 'Frequent monitoring allows early detection of infiltration, minimizing complications and ensuring safe IV therapy.'
   },
   {
     id: 'pb16-39',
@@ -465,10 +465,10 @@ export const questions: Question[] = [
       'Stop the blood transfusion immediately',
       'Administer acetaminophen (paracetamol) to reduce the fever',
       'Notify the physician and obtain orders for further treatment',
-      'Continue the blood transfusion and monitor the patient’s temperature closely',
+      'Continue the blood transfusion and monitor the patient’s temperature closely'
     ],
     correctIndex: 0,
-    explanation: 'Stopping the transfusion is the priority to prevent further exposure and assess for transfusion reactions.',
+    explanation: 'Stopping the transfusion is the priority to prevent further exposure and assess for transfusion reactions.'
   },
   {
     id: 'pb16-40',
@@ -477,22 +477,22 @@ export const questions: Question[] = [
       'Bacterial contamination of the blood product',
       'Hemolytic transfusion reaction',
       'Febrile non-hemolytic transfusion reaction (FNHTR)',
-      'Allergic transfusion reaction',
+      'Allergic transfusion reaction'
     ],
     correctIndex: 2,
-    explanation: 'FNHTR is the most common cause of fever during transfusion and is typically benign but requires monitoring.',
+    explanation: 'FNHTR is the most common cause of fever during transfusion and is typically benign but requires monitoring.'
   },
   {
     id: 'pb16-41',
-    text: 'A 30-year-old patient with a diagnosis of schizophrenia is being assessed for symptoms. The patient\'s family member reports that the patient has become increasingly withdrawn and isolated, showing little interest in activities they once enjoyed. What negative symptom of schizophrenia is the patient exhibiting?',
+    text: "A 30-year-old patient with a diagnosis of schizophrenia is being assessed for symptoms. The patient's family member reports that the patient has become increasingly withdrawn and isolated, showing little interest in activities they once enjoyed. What negative symptom of schizophrenia is the patient exhibiting?",
     options: [
       'Hallucinations',
       'Delusions',
       'Avolition',
-      'Agitation',
+      'Agitation'
     ],
     correctIndex: 2,
-    explanation: 'Avolition refers to a lack of motivation or initiative, commonly seen as a negative symptom in schizophrenia.',
+    explanation: 'Avolition refers to a lack of motivation or initiative, commonly seen as a negative symptom in schizophrenia.'
   },
   {
     id: 'pb16-42',
@@ -501,10 +501,10 @@ export const questions: Question[] = [
       'Medication nonadherence',
       'Substance abuse',
       'Sleep deprivation',
-      'All of the above',
+      'All of the above'
     ],
     correctIndex: 3,
-    explanation: 'All listed factors can contribute to worsening psychotic symptoms in patients with schizophrenia.',
+    explanation: 'All listed factors can contribute to worsening psychotic symptoms in patients with schizophrenia.'
   },
   {
     id: 'pb16-43',
@@ -513,10 +513,10 @@ export const questions: Question[] = [
       'To eliminate symptoms completely',
       'To reduce symptoms and improve quality of life',
       'To stop all medications once side effects decrease',
-      'To reduce hospital readmissions',
+      'To reduce hospital readmissions'
     ],
     correctIndex: 1,
-    explanation: 'The goal is to manage symptoms effectively and improve the patient’s overall functioning and quality of life.',
+    explanation: 'The goal is to manage symptoms effectively and improve the patient’s overall functioning and quality of life.'
   },
   {
     id: 'pb16-44',
@@ -525,10 +525,10 @@ export const questions: Question[] = [
       'To prevent the spread of infections',
       'To promote patient comfort',
       'To reduce healthcare costs',
-      'To improve staff morale',
+      'To improve staff morale'
     ],
     correctIndex: 0,
-    explanation: 'Hand hygiene is the most effective method to prevent healthcare-associated infections.',
+    explanation: 'Hand hygiene is the most effective method to prevent healthcare-associated infections.'
   },
   {
     id: 'pb16-45',
@@ -537,10 +537,10 @@ export const questions: Question[] = [
       'Administer the medication as ordered',
       'Call the pharmacist',
       'Check the patient\'s chart for previous dosages',
-      'Contact the prescribing physician',
+      'Contact the prescribing physician'
     ],
     correctIndex: 3,
-    explanation: 'Verifying with the prescribing physician ensures patient safety and prevents potential medication errors.',
+    explanation: 'Verifying with the prescribing physician ensures patient safety and prevents potential medication errors.'
   },
   {
     id: 'pb16-46',
@@ -549,10 +549,10 @@ export const questions: Question[] = [
       'Coerce the patient to take the medication',
       'Document the refusal and notify the physician',
       'Leave the medication at the bedside',
-      'Discontinue the medication',
+      'Discontinue the medication'
     ],
     correctIndex: 1,
-    explanation: 'Documenting and notifying the physician ensures proper communication and respects patient autonomy.',
+    explanation: 'Documenting and notifying the physician ensures proper communication and respects patient autonomy.'
   },
   {
     id: 'pb16-47',
@@ -561,10 +561,10 @@ export const questions: Question[] = [
       "The nurse's decision on the best way to manage a patient's pain",
       "The physician's order for pain medication",
       "The patient's reported pain level and pain history",
-      'The availability of pain medications',
+      'The availability of pain medications'
     ],
     correctIndex: 2,
-    explanation: 'Pain management should be individualized based on the patient’s experience and history.',
+    explanation: 'Pain management should be individualized based on the patient’s experience and history.'
   },
   {
     id: 'pb16-48',
@@ -573,10 +573,10 @@ export const questions: Question[] = [
       'When the non-urgent task can prevent future complications',
       'When the non-urgent task is quicker to complete',
       'When the urgent task is unpleasant',
-      'When the urgent task is less important',
+      'When the urgent task is less important'
     ],
     correctIndex: 0,
-    explanation: 'Preventive actions can reduce future risks and improve long-term outcomes, justifying prioritization.',
+    explanation: 'Preventive actions can reduce future risks and improve long-term outcomes, justifying prioritization.'
   },
   {
     id: 'pb16-49',
@@ -585,10 +585,10 @@ export const questions: Question[] = [
       'Inform the charge nurse and request assistance',
       'Attend to the immediate care needs of the patient',
       'Prioritize the needs of the tasks to the nursing assistant',
-      'Prioritize the needs of the other patients first',
+      'Prioritize the needs of the other patients first'
     ],
     correctIndex: 0,
-    explanation: 'Seeking help ensures that all patients receive appropriate care without compromising safety.',
+    explanation: 'Seeking help ensures that all patients receive appropriate care without compromising safety.'
   },
   {
     id: 'pb16-50',
@@ -597,10 +597,10 @@ export const questions: Question[] = [
       'Blood pressure',
       'Blood glucose',
       'International Normalized Ratio (INR)',
-      'White blood cell count',
+      'White blood cell count'
     ],
     correctIndex: 2,
-    explanation: 'INR monitoring is essential to ensure therapeutic anticoagulation and prevent bleeding complications.',
+    explanation: 'INR monitoring is essential to ensure therapeutic anticoagulation and prevent bleeding complications.'
   },
   {
     id: 'pb16-51',
@@ -609,10 +609,10 @@ export const questions: Question[] = [
       'Administer oxygen',
       'Call the doctor',
       'Perform an electrocardiogram (ECG)',
-      'Assess the patient’s airway, breathing, and circulation (ABCs)',
+      'Assess the patient’s airway, breathing, and circulation (ABCs)'
     ],
     correctIndex: 3,
-    explanation: 'Assessing ABCs is the first step in emergency care to stabilize the patient and identify life-threatening conditions.',
+    explanation: 'Assessing ABCs is the first step in emergency care to stabilize the patient and identify life-threatening conditions.'
   },
   {
     id: 'pb16-52',
@@ -621,10 +621,10 @@ export const questions: Question[] = [
       'Gloves and a face mask',
       'Gloves, a face mask, and eye protection',
       'Gloves, face mask, eye protection, and gown',
-      'Gloves, face mask, eye protection, gown, and a respirator',
+      'Gloves, face mask, eye protection, gown, and a respirator'
     ],
     correctIndex: 3,
-    explanation: 'Full PPE including a respirator is required for airborne precautions when caring for COVID-19 patients.',
+    explanation: 'Full PPE including a respirator is required for airborne precautions when caring for COVID-19 patients.'
   },
   {
     id: 'pb16-53',
@@ -633,153 +633,153 @@ export const questions: Question[] = [
       'Respect the patient’s autonomy and do not administer treatment',
       'Administer treatment against the patient’s will',
       'Consult with the patient’s family and obtain their consent',
-      'Seek a court order to override the patient’s decision',
+      'Seek a court order to override the patient’s decision'
     ],
     correctIndex: 0,
-    explanation: 'Respecting patient autonomy is a core ethical principle, even when the decision involves refusing life-saving treatment.',
+    explanation: 'Respecting patient autonomy is a core ethical principle, even when the decision involves refusing life-saving treatment.'
   },
   {
-    id: 'pb16-54',
-    text: 'A patient with diabetes is discharged from the hospital. What should the nurse include in the patient’s discharge teaching?',
-    options: [
-      'Only medication instructions',
-      'Only diet instructions',
-      'Medication instructions, dietary instructions, and signs of hypoglycemia',
-      'Medication instructions, dietary instructions, and how to manage stress',
-    ],
-    correctIndex: 2,
-    explanation: 'Comprehensive discharge teaching should include medication, diet, and symptom recognition to prevent complications.',
+    "question_number": 54,
+    "question": "A patient with diabetes is discharged from the hospital. What should the nurse include in the patient’s discharge teaching?",
+    "options": {
+      "A": "Only medication instructions",
+      "B": "Only diet instructions",
+      "C": "Medication instructions, dietary instructions, and signs of hypoglycemia",
+      "D": "Medication instructions, dietary instructions, and how to manage stress"
+    },
+    "answer": "C",
+    "rationale": "Comprehensive discharge teaching should include medication, diet, and symptom recognition to prevent complications."
   },
   {
-    id: 'pb16-55',
-    text: 'A patient is prescribed metformin for type 2 diabetes. What is the primary mechanism of action of metformin?',
-    options: [
-      'Increases insulin secretion',
-      'Increases glucose production in the liver',
-      'Increases insulin sensitivity',
-      'Decreases glucose absorption in the gut',
-    ],
-    correctIndex: 2,
-    explanation: 'Metformin primarily works by increasing insulin sensitivity and reducing hepatic glucose production.',
+    "question_number": 55,
+    "question": "A patient is prescribed metformin for type 2 diabetes. What is the primary mechanism of action of metformin?",
+    "options": {
+      "A": "Increases insulin secretion",
+      "B": "Increases glucose production in the liver",
+      "C": "Increases insulin sensitivity",
+      "D": "Decreases glucose absorption in the gut"
+    },
+    "answer": "C",
+    "rationale": "Metformin primarily works by increasing insulin sensitivity and reducing hepatic glucose production."
   },
   {
-    id: 'pb16-56',
-    text: 'A patient presents with symptoms of anxiety, including palpitations, sweating, and trembling. What is the most appropriate nursing intervention?',
-    options: [
-      'Administer a benzodiazepine',
-      'Encourage the patient to express their feelings',
-      'Provide a calm and supportive environment',
-      'Teach the patient relaxation techniques',
-    ],
-    correctIndex: 2,
-    explanation: 'Creating a calm environment helps reduce anxiety and allows the patient to feel safe and supported.',
+    "question_number": 56,
+    "question": "A patient presents with symptoms of anxiety, including palpitations, sweating, and trembling. What is the most appropriate nursing intervention?",
+    "options": {
+      "A": "Administer a benzodiazepine",
+      "B": "Encourage the patient to express their feelings",
+      "C": "Provide a calm and supportive environment",
+      "D": "Teach the patient relaxation techniques"
+    },
+    "answer": "C",
+    "rationale": "Creating a calm environment helps reduce anxiety and allows the patient to feel safe and supported."
   },
   {
-    id: 'pb16-57',
-    text: 'A community health nurse is planning a health promotion program for older adults. What is the most effective way to promote healthy aging?',
-    options: [
-      'Providing written information about healthy aging',
-      'Offering exercise classes specifically designed for older adults',
-      'Encouraging social support and community engagement',
-      'Providing regular health screenings',
-    ],
-    correctIndex: 2,
-    explanation: 'Social engagement is strongly linked to improved mental and physical health outcomes in older adults.',
+    "question_number": 57,
+    "question": "A community health nurse is planning a health promotion program for older adults. What is the most effective way to promote healthy aging?",
+    "options": {
+      "A": "Providing written information about healthy aging",
+      "B": "Offering exercise classes specifically designed for older adults",
+      "C": "Encouraging social support and community engagement",
+      "D": "Providing regular health screenings"
+    },
+    "answer": "C",
+    "rationale": "Social engagement is strongly linked to improved mental and physical health outcomes in older adults."
   },
   {
-    id: 'pb16-58',
-    text: 'A patient has a stage 3 pressure ulcer on their sacrum. What is the most appropriate nursing intervention?',
-    options: [
-      'Apply a hydrocolloid dressing',
-      'Use a wound vacuum-assisted closure device',
-      'Perform wound debridement',
-      'Apply a transparent film dressing',
-    ],
-    correctIndex: 1,
-    explanation: 'Vacuum-assisted closure promotes healing by removing exudate and improving circulation in deep pressure ulcers.',
+    "question_number": 58,
+    "question": "A patient has a stage 3 pressure ulcer on their sacrum. What is the most appropriate nursing intervention?",
+    "options": {
+      "A": "Apply a hydrocolloid dressing",
+      "B": "Use a wound vacuum-assisted closure device",
+      "C": "Perform wound debridement",
+      "D": "Apply a transparent film dressing"
+    },
+    "answer": "B",
+    "rationale": "Vacuum-assisted closure promotes healing by removing exudate and improving circulation in deep pressure ulcers."
   },
   {
-    id: 'pb16-59',
-    text: 'A patient is experiencing symptoms of heart failure, including shortness of breath and fatigue. What is the most appropriate nursing intervention?',
-    options: [
-      'Administer oxygen therapy',
-      'Provide a low-sodium diet',
-      'Encourage the patient to rest',
-      'Administer a diuretic medication',
-    ],
-    correctIndex: 3,
-    explanation: 'Diuretics help reduce fluid overload, relieving symptoms like dyspnea and fatigue in heart failure patients.',
+    "question_number": 59,
+    "question": "A patient is experiencing symptoms of heart failure, including shortness of breath and fatigue. What is the most appropriate nursing intervention?",
+    "options": {
+      "A": "Administer oxygen therapy",
+      "B": "Provide a low-sodium diet",
+      "C": "Encourage the patient to rest",
+      "D": "Administer a diuretic medication"
+    },
+    "answer": "D",
+    "rationale": "Diuretics help reduce fluid overload, relieving symptoms like dyspnea and fatigue in heart failure patients."
   },
   {
-    id: 'pb16-60',
-    text: 'A patient has been diagnosed with a stroke and is experiencing weakness on one side of their body. What is the most appropriate nursing intervention?',
-    options: [
-      'Encourage the patient to use their affected limb',
-      'Provide range-of-motion exercises',
-      'Use a splint to support the affected limb',
-      'Encourage the patient to rest',
-    ],
-    correctIndex: 1,
-    explanation: 'Range-of-motion exercises help maintain joint flexibility and prevent contractures in stroke patients with hemiparesis.',
+    "question_number": 60,
+    "question": "A patient has been diagnosed with a stroke and is experiencing weakness on one side of their body. What is the most appropriate nursing intervention?",
+    "options": {
+      "A": "Encourage the patient to use their affected limb",
+      "B": "Provide range-of-motion exercises",
+      "C": "Use a splint to support the affected limb",
+      "D": "Encourage the patient to rest"
+    },
+    "answer": "B",
+    "rationale": "Range-of-motion exercises help maintain joint flexibility and prevent contractures in stroke patients with hemiparesis."
   },
   {
-    id: 'pb16-61',
-    text: 'A patient with chronic kidney disease is scheduled for hemodialysis. What is the most important nursing action before initiating dialysis?',
-    options: [
-      'Administer antihypertensive medication',
-      'Check the patient’s weight and vital signs',
-      'Encourage fluid intake',
-      'Assess for signs of infection at the fistula site',
-    ],
-    correctIndex: 1,
-    explanation: 'Baseline weight and vital signs are essential for evaluating fluid removal and hemodynamic stability during dialysis.',
+    "question_number": 61,
+    "question": "A patient with chronic kidney disease is scheduled for hemodialysis. What is the most important nursing action before initiating dialysis?",
+    "options": {
+      "A": "Administer antihypertensive medication",
+      "B": "Check the patient’s weight and vital signs",
+      "C": "Encourage fluid intake",
+      "D": "Assess for signs of infection at the fistula site"
+    },
+    "answer": "B",
+    "rationale": "Baseline weight and vital signs are essential for evaluating fluid removal and hemodynamic stability during dialysis."
   },
   {
-    id: 'pb16-62',
-    text: 'A patient with COPD is receiving oxygen therapy via nasal cannula. What is the recommended oxygen flow rate for this patient?',
-    options: [
-      '1–2 L/min',
-      '4–6 L/min',
-      '6–8 L/min',
-      '10–12 L/min',
-    ],
-    correctIndex: 0,
-    explanation: 'Low-flow oxygen (1–2 L/min) is recommended for COPD patients to prevent suppression of their hypoxic respiratory drive.',
+    "question_number": 62,
+    "question": "A patient with COPD is receiving oxygen therapy via nasal cannula. What is the recommended oxygen flow rate for this patient?",
+    "options": {
+      "A": "1–2 L/min",
+      "B": "4–6 L/min",
+      "C": "6–8 L/min",
+      "D": "10–12 L/min"
+    },
+    "answer": "A",
+    "rationale": "Low-flow oxygen (1–2 L/min) is recommended for COPD patients to prevent suppression of their hypoxic respiratory drive."
   },
   {
-    id: 'pb16-63',
-    text: 'A nurse is preparing to administer insulin to a diabetic patient before breakfast. What is the most important action before giving the insulin?',
-    options: [
-      'Check the patient’s blood pressure',
-      'Assess the patient’s hydration status',
-      'Verify the patient’s blood glucose level',
-      'Ensure the patient has eaten',
-    ],
-    correctIndex: 2,
-    explanation: 'Blood glucose monitoring ensures safe and appropriate insulin dosing, preventing hypoglycemia.',
+    "question_number": 63,
+    "question": "A nurse is preparing to administer insulin to a diabetic patient before breakfast. What is the most important action before giving the insulin?",
+    "options": {
+      "A": "Check the patient’s blood pressure",
+      "B": "Assess the patient’s hydration status",
+      "C": "Verify the patient’s blood glucose level",
+      "D": "Ensure the patient has eaten"
+    },
+    "answer": "C",
+    "rationale": "Blood glucose monitoring ensures safe and appropriate insulin dosing, preventing hypoglycemia."
   },
   {
-    id: 'pb16-64',
-    text: 'A patient is admitted with suspected appendicitis. Which of the following findings would most likely confirm the diagnosis?',
-    options: [
-      'Pain in the left lower quadrant',
-      'Rebound tenderness in the right lower quadrant',
-      'Pain relieved by eating',
-      'Generalized abdominal distension',
-    ],
-    correctIndex: 1,
-    explanation: 'Rebound tenderness in the right lower quadrant (McBurney’s point) is a classic sign of appendicitis.',
+    "question_number": 64,
+    "question": "A patient is admitted with suspected appendicitis. Which of the following findings would most likely confirm the diagnosis?",
+    "options": {
+      "A": "Pain in the left lower quadrant",
+      "B": "Rebound tenderness in the right lower quadrant",
+      "C": "Pain relieved by eating",
+      "D": "Generalized abdominal distension"
+    },
+    "answer": "B",
+    "rationale": "Rebound tenderness in the right lower quadrant (McBurney’s point) is a classic sign of appendicitis."
   },
   {
-    id: 'pb16-65',
-    text: 'A nurse is caring for a patient with a newly placed tracheostomy. What is the priority nursing intervention?',
-    options: [
-      'Provide oral hygiene',
-      'Monitor oxygen saturation',
-      'Secure the tracheostomy ties',
-      'Assess for airway patency',
-    ],
-    correctIndex: 3,
-    explanation: 'Airway patency is the highest priority in tracheostomy care to ensure adequate ventilation and prevent obstruction.',
-  },
-];
+    "question_number": 65,
+    "question": "A nurse is caring for a patient with a newly placed tracheostomy. What is the priority nursing intervention?",
+    "options": {
+      "A": "Provide oral hygiene",
+      "B": "Monitor oxygen saturation",
+      "C": "Secure the tracheostomy ties",
+      "D": "Assess for airway patency"
+    },
+    "answer": "D",
+    "rationale": "Airway patency is the highest priority in tracheostomy care to ensure adequate ventilation and prevent obstruction."
+  }
+add this questions and make Test 16 with complete 65 questions
