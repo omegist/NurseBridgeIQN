@@ -11,19 +11,21 @@ declare global {
   }
 }
 
-// ✅ Load Razorpay SDK dynamically
 const loadRazorpayScript = (): Promise<boolean> => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const existingScript = document.querySelector('script[src="https://checkout.razorpay.com/v1/checkout.js"]');
     if (existingScript) {
-      resolve(true); // already loaded
+      resolve(true);
       return;
     }
 
     const script = document.createElement('script');
     script.src = 'https://checkout.razorpay.com/v1/checkout.js';
     script.onload = () => resolve(true);
-    script.onerror = () => reject(false);
+    script.onerror = () => {
+      console.error("Razorpay script failed to load.");
+      resolve(false);
+    };
     document.body.appendChild(script);
   });
 };
@@ -39,8 +41,8 @@ export function usePayment() {
     if (!scriptLoaded) {
       toast({
         variant: 'destructive',
-        title: 'Payment Error',
-        description: 'Unable to load payment gateway. Please try again.',
+        title: 'Payment Gateway Error',
+        description: 'The payment gateway could not be loaded. Please check your internet connection and try again.',
       });
       return;
     }
@@ -63,15 +65,25 @@ export function usePayment() {
           },
           body: JSON.stringify({ amount: 2000 }),
         });
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            // Log the full HTML response for inspection
+            console.error('Failed to create order. Server responded with:', errorText);
+            throw new Error(`Server error: ${response.status} ${response.statusText}`);
+        }
+        
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+            const responseText = await response.text();
+            console.error("Expected JSON response but received:", responseText);
+            throw new Error("Invalid response from server. Please contact support.");
+        }
 
         const order = await response.json();
 
-        if (!response.ok) {
-          throw new Error(order.message || 'Failed to create payment order');
-        }
-
         const options = {
-          key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || '',
+          key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
           amount: order.amount,
           currency: order.currency,
           name: 'Nurse IQN',
@@ -84,12 +96,12 @@ export function usePayment() {
                 title: 'Payment Successful!',
                 description: 'You now have full access to all features.',
               });
-              refreshUser();
+              await refreshUser();
             } else {
               toast({
                 variant: 'destructive',
                 title: 'Payment Verification Failed',
-                description: 'Please contact support.',
+                description: 'Your payment was successful but we failed to update your account. Please contact support.',
               });
             }
           },
@@ -103,12 +115,20 @@ export function usePayment() {
         };
 
         const razorpay = new window.Razorpay(options);
+         razorpay.on('payment.failed', function (response: any) {
+            console.error('Razorpay payment failed:', response.error);
+            toast({
+                variant: "destructive",
+                title: "Payment Failed",
+                description: response.error.description || "An unknown error occurred during payment.",
+            });
+        });
         razorpay.open();
       } catch (error: any) {
         toast({
           variant: 'destructive',
           title: 'Could Not Create Order',
-          description: error.message || 'An unknown error occurred.',
+          description: error.message || 'An unknown error occurred. Please contact support.',
         });
       }
     });
