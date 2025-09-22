@@ -1,3 +1,4 @@
+
 import { onUserCreate } from "firebase-functions/v2/auth";
 import type { UserRecord } from "firebase-admin/auth";
 import { logger } from "firebase-functions/v2";
@@ -107,5 +108,3 @@ app.post("/createOrder", async (req: Request, res: Response) => {
 
 // ✅ Export the Express App as a Firebase HTTPS Function
 export const api = functions.https.onRequest(app);
-
-
