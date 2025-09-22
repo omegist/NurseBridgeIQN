@@ -209,7 +209,7 @@ export const questions: Question[] = [
     id: 'pb15-20',
     text: 'A mother refuses to vaccinate her baby, stating that the baby already has natural immunity. What should the nurse do?',
     options: [
-      'Respect the mother\'s decision',
+      "Respect the mother's decision",
       'Explain the importance of vaccinations and address any concerns',
       'Insist on vaccinating the baby',
       'Refer the mother to a healthcare provider',
@@ -299,7 +299,7 @@ export const questions: Question[] = [
       'Rapid heart rate',
     ],
     correctIndex: 1,
-    explanation: 'CHF results in the heart\'s inability to pump effectively, leading to reduced cardiac output.',
+    explanation: "CHF results in the heart's inability to pump effectively, leading to reduced cardiac output.",
   },
   {
     id: 'pb15-28',
@@ -363,7 +363,7 @@ export const questions: Question[] = [
       'Hypothyroidism',
       'Hyperthyroidism',
       'Diabetic ketoacidosis (DKA)',
-      'Addison\'s disease',
+      "Addison's disease",
     ],
     correctIndex: 2,
     explanation: 'DKA is a serious complication of uncontrolled diabetes due to insulin deficiency.',
@@ -682,7 +682,7 @@ export const questions: Question[] = [
       'Below the level of the bladder',
       'At the level of the bladder',
       'Above the level of the bladder',
-      'Away from the patient\'s body',
+      "Away from the patient's body",
     ],
     correctIndex: 0,
     explanation: 'Positioning the urine bag below bladder level prevents backflow and reduces infection risk.',
@@ -711,7 +711,7 @@ export const questions: Question[] = [
     text: 'What is the most common cause of a hemolytic transfusion reaction?',
     options: [
       'Allergic reaction to a medication',
-      'Mismatch between the donor\'s and recipient\'s ABO blood types',
+      "Mismatch between the donor's and recipient's ABO blood types",
       'Contamination of the blood product with bacteria',
       'Overhydration',
     ],
@@ -1243,3 +1243,4 @@ export const questions: Question[] = [
     "correct_answer": "A",
     "rationale": "BPD is characterized by emotional dysregulation, unstable relationships, and impulsive behaviors."
   }
+add the remaining questions. Total questions will be 108
