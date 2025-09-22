@@ -13,6 +13,7 @@ import { questions as partBTest11 } from './questions/part-b-test-11';
 import { questions as partBTest12 } from './questions/part-b-test-12';
 import { questions as partBTest13 } from './questions/part-b-test-13';
 import { questions as partBTest14 } from './questions/part-b-test-14';
+import { questions as partBTest15 } from './questions/part-b-test-15';
 import type { Test } from '@/lib/types';
 
 // Seeded shuffle for consistency across builds
@@ -58,7 +59,8 @@ const partBTestsData: Omit<Test, 'questions'>[] = [
   { id: 'test-11', name: 'Test 11', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-12', name: 'Test 12', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-13', name: 'Test 13', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-14', name: 'Test 14', timeLimitMinutes: 145, questionCount: 85 },
+  { id: 'test-14', name: 'Test 14', timeLimitMinutes: 145, questionCount: 108 },
+  { id: 'test-15', name: 'Test 15', timeLimitMinutes: 145, questionCount: 77 },
 ];
 
 const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
@@ -104,6 +106,12 @@ const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
       questions: partBTest14
     };
   }
+  if (testInfo.id === 'test-15') {
+    return {
+      ...testInfo,
+      questions: partBTest15
+    };
+  }
   if (index < 6) {
     // Tests 1-6 have 108 questions each
     const startIndex = index * 108;
@@ -126,3 +134,5 @@ export const tests = {
   partA: partATests,
   partB: partBTests
 };
+
+    
