@@ -53,14 +53,14 @@ const partBTestsData: Omit<Test, 'questions'>[] = [
   { id: 'test-5', name: 'Test 5', timeLimitMinutes: 145 },
   { id: 'test-6', name: 'Test 6', timeLimitMinutes: 145 },
   { id: 'test-7', name: 'Test 7', timeLimitMinutes: null }, // No time limit
-  { id: 'test-8', name: 'Test 8', timeLimitMinutes: 145 },
+  { id: 'test-8', name: 'Test 8', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-9', name: 'Test 9', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-10', name: 'Test 10', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-11', name: 'Test 11', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-12', name: 'Test 12', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-13', name: 'Test 13', timeLimitMinutes: 145, questionCount: 108 },
   { id: 'test-14', name: 'Test 14', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-15', name: 'Test 15', timeLimitMinutes: 145, questionCount: 77 },
+  { id: 'test-15', name: 'Test 15', timeLimitMinutes: 145, questionCount: 108 },
 ];
 
 const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
@@ -134,5 +134,3 @@ export const tests = {
   partA: partATests,
   partB: partBTests
 };
-
-    
