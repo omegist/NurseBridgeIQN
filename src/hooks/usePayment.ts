@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useTransition } from 'react';
+import { useTransition } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
 import { updateUserPaymentStatus } from '@/app/actions/payment';
@@ -13,7 +13,9 @@ declare global {
 
 const loadRazorpayScript = (): Promise<boolean> => {
   return new Promise((resolve) => {
-    const existingScript = document.querySelector('script[src="https://checkout.razorpay.com/v1/checkout.js"]');
+    const existingScript = document.querySelector(
+      'script[src="https://checkout.razorpay.com/v1/checkout.js"]'
+    );
     if (existingScript) {
       resolve(true);
       return;
@@ -23,7 +25,7 @@ const loadRazorpayScript = (): Promise<boolean> => {
     script.src = 'https://checkout.razorpay.com/v1/checkout.js';
     script.onload = () => resolve(true);
     script.onerror = () => {
-      console.error("Razorpay script failed to load.");
+      console.error('Razorpay script failed to load.');
       resolve(false);
     };
     document.body.appendChild(script);
@@ -42,7 +44,8 @@ export function usePayment() {
       toast({
         variant: 'destructive',
         title: 'Payment Gateway Error',
-        description: 'The payment gateway could not be loaded. Please check your internet connection and try again.',
+        description:
+          'The payment gateway could not be loaded. Please check your internet connection and try again.',
       });
       return;
     }
@@ -58,26 +61,26 @@ export function usePayment() {
 
     startTransition(async () => {
       try {
-        const response = await fetch('/api/createOrder', {
+        // ✅ Send ₹2000 as 200000 paise
+        const response = await fetch('/api/createorder', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ amount: 2000 }),
+          body: JSON.stringify({ amount: 200000 }),
         });
-        
+
         if (!response.ok) {
-            const errorText = await response.text();
-            // Log the full HTML response for inspection
-            console.error('Failed to create order. Server responded with:', errorText);
-            throw new Error(`Server error: ${response.status} ${response.statusText}`);
+          const errorText = await response.text();
+          console.error('Failed to create order. Server responded with:', errorText);
+          throw new Error(`Server error: ${response.status} ${response.statusText}`);
         }
-        
-        const contentType = response.headers.get("content-type");
-        if (!contentType || !contentType.includes("application/json")) {
-            const responseText = await response.text();
-            console.error("Expected JSON response but received:", responseText);
-            throw new Error("Invalid response from server. Please contact support.");
+
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          const responseText = await response.text();
+          console.error('Expected JSON response but received:', responseText);
+          throw new Error('Invalid response from server. Please contact support.');
         }
 
         const order = await response.json();
@@ -101,7 +104,8 @@ export function usePayment() {
               toast({
                 variant: 'destructive',
                 title: 'Payment Verification Failed',
-                description: 'Your payment was successful but we failed to update your account. Please contact support.',
+                description:
+                  'Your payment was successful but we failed to update your account. Please contact support.',
               });
             }
           },
@@ -115,13 +119,14 @@ export function usePayment() {
         };
 
         const razorpay = new window.Razorpay(options);
-         razorpay.on('payment.failed', function (response: any) {
-            console.error('Razorpay payment failed:', response.error);
-            toast({
-                variant: "destructive",
-                title: "Payment Failed",
-                description: response.error.description || "An unknown error occurred during payment.",
-            });
+        razorpay.on('payment.failed', function (response: any) {
+          console.error('Razorpay payment failed:', response.error);
+          toast({
+            variant: 'destructive',
+            title: 'Payment Failed',
+            description:
+              response.error.description || 'An unknown error occurred during payment.',
+          });
         });
         razorpay.open();
       } catch (error: any) {
