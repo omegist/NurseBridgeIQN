@@ -60,29 +60,27 @@ export function TestProvider({ children }: { children: ReactNode }) {
             let answersToSet;
             let indexToSet = 0;
 
-            if (progressSnap.exists() && !progressSnap.data().completed) {
-                const progress = progressSnap.data();
-                answersToSet = progress.userAnswers || new Array(selectedTest.questions.length).fill(null);
-                indexToSet = progress.currentQuestionIndex || 0;
-            } else {
+            // If the user has taken the test before, reset the progress for a fresh start.
+            if (progressSnap.exists()) {
                  answersToSet = new Array(selectedTest.questions.length).fill(null);
                  await setDoc(progressRef, { 
                     userId: user.uid,
                     testId: selectedTest.id, 
                     userAnswers: answersToSet, 
                     currentQuestionIndex: 0, 
-                    completed: false, 
+                    completed: false,
+                    // Explicitly reset the completed count
+                    completedCount: 0,
                     updatedAt: new Date()
                 }, { merge: true });
+            } else {
+                 answersToSet = new Array(selectedTest.questions.length).fill(null);
             }
 
             setUserAnswers(answersToSet);
             setCurrentQuestionIndex(indexToSet);
 
             const initialVisited = new Array(selectedTest.questions.length).fill(false);
-            answersToSet.forEach((ans: number | null, index: number) => {
-                if (ans !== null) initialVisited[index] = true;
-            });
             initialVisited[indexToSet] = true;
             setVisitedQuestions(initialVisited);
 

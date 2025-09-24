@@ -112,8 +112,11 @@ export function TestResultsClient() {
             let currentAttempts = 0;
             if (docSnap.exists()) {
                 const data = docSnap.data();
-                // Ensure completedCount is a valid number, otherwise reset to 0
-                currentAttempts = (typeof data.completedCount === 'number' && !isNaN(data.completedCount)) ? data.completedCount : 0;
+                // Ensure the count is a valid number, otherwise default to 0
+                const count = data.completedCount;
+                if (typeof count === 'number' && !isNaN(count)) {
+                    currentAttempts = count;
+                }
             }
             
             await setDoc(ref, {

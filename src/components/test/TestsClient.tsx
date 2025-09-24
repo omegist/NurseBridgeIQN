@@ -40,7 +40,7 @@ async function getTestAttempts(userId: string) {
     querySnapshot.forEach((doc) => {
         const data = doc.data();
         const count = data.completedCount;
-        // Ensure the count is a valid number before storing it
+        // Ensure the count is a valid number, otherwise default to 0
         if (typeof count === 'number' && !isNaN(count)) {
             attemptsData[doc.id] = count;
         } else {
