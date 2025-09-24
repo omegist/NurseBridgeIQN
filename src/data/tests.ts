@@ -14,6 +14,7 @@ import { questions as partBTest12 } from './questions/part-b-test-12';
 import { questions as partBTest13 } from './questions/part-b-test-13';
 import { questions as partBTest14 } from './questions/part-b-test-14';
 import { questions as partBTest15 } from './questions/part-b-test-15';
+import { questions as partBTest16 } from './questions/part-b-test-16';
 import type { Test } from '@/lib/types';
 
 // Seeded shuffle for consistency across builds
@@ -46,21 +47,22 @@ const partATests: Test[] = [
 ];
 
 const partBTestsData: Omit<Test, 'questions'>[] = [
-  { id: 'test-1', name: 'Test 1', timeLimitMinutes: 145 },
-  { id: 'test-2', name: 'Test 2', timeLimitMinutes: 145 },
-  { id: 'test-3', name: 'Test 3', timeLimitMinutes: 145 },
-  { id: 'test-4', name: 'Test 4', timeLimitMinutes: 145 },
-  { id: 'test-5', name: 'Test 5', timeLimitMinutes: 145 },
-  { id: 'test-6', name: 'Test 6', timeLimitMinutes: 145 },
+  { id: 'test-1', name: 'Test 1', timeLimitMinutes: 135 },
+  { id: 'test-2', name: 'Test 2', timeLimitMinutes: 135 },
+  { id: 'test-3', name: 'Test 3', timeLimitMinutes: 135 },
+  { id: 'test-4', name: 'Test 4', timeLimitMinutes: 135 },
+  { id: 'test-5', name: 'Test 5', timeLimitMinutes: 135 },
+  { id: 'test-6', name: 'Test 6', timeLimitMinutes: 135 },
   { id: 'test-7', name: 'Test 7', timeLimitMinutes: null }, // No time limit
-  { id: 'test-8', name: 'Test 8', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-9', name: 'Test 9', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-10', name: 'Test 10', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-11', name: 'Test 11', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-12', name: 'Test 12', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-13', name: 'Test 13', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-14', name: 'Test 14', timeLimitMinutes: 145, questionCount: 108 },
-  { id: 'test-15', name: 'Test 15', timeLimitMinutes: 145, questionCount: 108 },
+  { id: 'test-8', name: 'Test 8', timeLimitMinutes: 135, questionCount: 108 },
+  { id: 'test-9', name: 'Test 9', timeLimitMinutes: 135, questionCount: 108 },
+  { id: 'test-10', name: 'Test 10', timeLimitMinutes: 135, questionCount: 108 },
+  { id: 'test-11', name: 'Test 11', timeLimitMinutes: 135, questionCount: 108 },
+  { id: 'test-12', name: 'Test 12', timeLimitMinutes: 135, questionCount: 108 },
+  { id: 'test-13', name: 'Test 13', timeLimitMinutes: 135, questionCount: 108 },
+  { id: 'test-14', name: 'Test 14', timeLimitMinutes: 135, questionCount: 108 },
+  { id: 'test-15', name: 'Test 15', timeLimitMinutes: 135, questionCount: 108 },
+  { id: 'test-16', name: 'Test 16', timeLimitMinutes: 135, questionCount: 65 },
 ];
 
 const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
@@ -112,6 +114,12 @@ const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
       questions: partBTest15
     };
   }
+   if (testInfo.id === 'test-16') {
+    return {
+      ...testInfo,
+      questions: partBTest16
+    };
+  }
   if (index < 6) {
     // Tests 1-6 have 108 questions each
     const startIndex = index * 108;
@@ -134,3 +142,5 @@ export const tests = {
   partA: partATests,
   partB: partBTests
 };
+
+    

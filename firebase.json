@@ -9,15 +9,19 @@
   "hosting": [
     {
       "target": "newsite",
-      "source": ".",
+      "public": ".next",
       "ignore": [
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
       ],
-      "frameworksBackend": {
-        "region": "us-central1"
-      }
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     }
   ]
 }
+

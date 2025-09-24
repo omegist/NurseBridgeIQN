@@ -17,7 +17,7 @@ import { ClipboardCheck, ArrowRight, Clock, Repeat, BookCopy } from "lucide-reac
 import type { Test } from "@/lib/types";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
-import { collection, query, getDocs } from "firebase/firestore";
+import { collection, query, getDocs, where } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { Skeleton } from "../ui/skeleton";
 import { cn } from "@/lib/utils";
@@ -33,7 +33,7 @@ async function getTestAttempts(userId: string, testIds: string[]) {
 
   const attemptsData: Record<string, number> = {};
   const progressCollectionRef = collection(db, `users/${userId}/testProgress`);
-  const q = query(progressCollectionRef);
+  const q = query(progressCollectionRef, where("userId", "==", userId));
 
   try {
     const querySnapshot = await getDocs(q);
@@ -246,3 +246,5 @@ export function TestsClient({ tests }: TestsClientProps) {
     </div>
   );
 }
+
+    
