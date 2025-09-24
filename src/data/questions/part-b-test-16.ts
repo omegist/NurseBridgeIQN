@@ -781,5 +781,446 @@ export const questions: Question[] = [
     ],
     correctIndex: 3,
     explanation: "Airway patency is the highest priority in tracheostomy care to ensure adequate ventilation and prevent obstruction."
+  },
+  {
+    id: 'pb16-66',
+    text: "A 35-year-old male patient is admitted to the hospital with a history of chronic alcohol use. He has not consumed alcohol for the past 24 hours and is now exhibiting symptoms of alcohol withdrawal. Which of the following symptoms is most likely to occur within the first 24–48 hours of withdrawal?",
+    options: [ 'Seizures', 'Hallucinations', 'Tremors', 'Delirium tremens' ],
+    correctIndex: 2,
+    explanation: 'Tremors are one of the earliest and most common symptoms of alcohol withdrawal, typically appearing within 6–48 hours after cessation.'
+  },
+  {
+    id: 'pb16-67',
+    text: 'A 35-year-old male patient with a history of chronic alcohol use is admitted to the hospital. Which of the following is the most appropriate initial treatment to prevent Wernicke-Korsakoff syndrome?',
+    options: [
+      'Folic acid supplementation',
+      'Thiamine (Vitamin B1) supplementation',
+      'Multivitamin supplementation',
+      'Magnesium supplementation'
+    ],
+    correctIndex: 1,
+    explanation: 'Thiamine deficiency is the primary cause of Wernicke-Korsakoff syndrome. Early supplementation prevents neurological damage.'
+  },
+  {
+    id: 'pb16-68',
+    text: 'A patient had a plaster of Paris (POP) cast applied to their leg after an accident. Two days later, the doctor examines the patient and finds that the patient is concerned about the sensation of their leg. Which of the following assessments should the doctor prioritize to address the patient’s concern?',
+    options: [
+      'Neurovascular assessment',
+      'Range of motion assessment',
+      'Wound assessment',
+      'Muscle strength assessment'
+    ],
+    correctIndex: 0,
+    explanation: 'Neurovascular assessment is critical to detect complications like compartment syndrome or impaired circulation under the cast.'
+  },
+  {
+    id: 'pb16-69',
+    text: 'A 5-year-old child is being transferred to the post-anesthesia care unit (PACU) after undergoing a surgical procedure under general anesthesia. What is the priority assessment that the nurse should perform first?',
+    options: [ 'Respiratory status', 'Cardiovascular status', 'Neurological status', 'Pain level' ],
+    correctIndex: 0,
+    explanation: 'Respiratory status is the highest priority post-anesthesia due to the risk of airway obstruction or hypoventilation in pediatric patients.'
+  },
+  {
+    id: 'pb16-70',
+    text: 'A patient is experiencing difficulty swallowing (dysphagia) and is having trouble taking their medication in tablet form. Which of the following is the most appropriate reason to switch the patient’s medication to a liquid form?',
+    options: [
+      'To reduce the risk of choking',
+      'To improve the medication’s absorption rate',
+      'To reduce the patient’s risk of allergic reaction',
+      'To increase the patient’s compliance with medication regimen'
+    ],
+    correctIndex: 3,
+    explanation: 'Switching to liquid form improves compliance by making it easier for the patient to take their medication consistently and safely.'
+  },
+  {
+    id: 'pb16-71',
+    text: 'A patient is scheduled to undergo a thyroidectomy and is concerned about how they will manage without a thyroid gland. Which of the following statements should the nurse provide to address the patient’s concern?',
+    options: [
+      'The thyroid gland is not essential for survival.',
+      'The patient will need to take synthetic thyroid hormone replacement for the rest of their life.',
+      'The patient’s parathyroid glands will take over the function of the thyroid gland.',
+      'The patient will need to follow a strict diet to manage their thyroid hormone levels.'
+    ],
+    correctIndex: 1,
+    explanation: 'After thyroidectomy, lifelong synthetic hormone replacement is necessary to maintain normal metabolic function and prevent hypothyroidism.'
+  },
+  {
+    id: 'pb16-72',
+    text: 'A 40-year-old woman presents to the clinic with complaints of fatigue, weight gain, and dry skin. Which of the following signs or symptoms is most likely indicative of hypothyroidism?',
+    options: [ 'Excessive sweating', 'Rapid heartbeat', 'Cold intolerance', 'Increased appetite' ],
+    correctIndex: 2,
+    explanation: 'Cold intolerance is a hallmark symptom of hypothyroidism due to slowed metabolism and reduced heat production.'
+  },
+  {
+    id: 'pb16-73',
+    text: 'A patient with hypothyroidism is likely to experience which of the following symptoms?',
+    options: [ 'Weight loss', 'Increased energy', 'Hair loss', 'Rapid heartbeat' ],
+    correctIndex: 2,
+    explanation: 'Hair loss is a common symptom of hypothyroidism due to slowed metabolism and hormonal imbalance affecting hair follicles.'
+  },
+  {
+    id: 'pb16-74',
+    text: 'A 32-year-old woman with hypothyroidism is experiencing menstrual irregularities. Which of the following is a common menstrual irregularity associated with hypothyroidism?',
+    options: [ 'Amenorrhea', 'Dysmenorrhea', 'Menorrhagia', 'Polymenorrhea' ],
+    correctIndex: 2,
+    explanation: 'Menorrhagia, or heavy menstrual bleeding, is commonly associated with hypothyroidism due to hormonal disruption affecting the menstrual cycle.'
+  },
+  {
+    id: 'pb16-75',
+    text: 'A patient with hypothyroidism is at risk for developing which of the following conditions?',
+    options: [ 'Hyperglycemia', 'Hypocalcemia', 'Depression', 'Hyperlipidemia' ],
+    correctIndex: 3,
+    explanation: 'Hypothyroidism can lead to elevated cholesterol levels, making hyperlipidemia a common complication.'
+  },
+  {
+    id: 'pb16-76',
+    text: 'A patient is scheduled to undergo a thyroidectomy and is concerned about how they will manage without a thyroid gland. Which of the following functions will the patient need to replace with medication after surgery?',
+    options: [
+      'Regulation of blood pressure',
+      'Production of thyroid hormone',
+      'Production of thyroid hormone',
+      'Regulation of body temperature'
+    ],
+    correctIndex: 1,
+    explanation: 'The thyroid gland produces thyroid hormones essential for metabolism. After thyroidectomy, hormone replacement therapy is required to maintain normal function.'
+  },
+  {
+    id: 'pb16-77',
+    text: 'A patient who has undergone a thyroidectomy will need to take synthetic thyroid hormone replacement to regulate which of the following bodily functions?',
+    options: [ 'Metabolism and growth', 'Blood sugar levels', 'Heart rate', 'Blood pressure' ],
+    correctIndex: 0,
+    explanation: 'Thyroid hormones regulate metabolism and growth. After thyroidectomy, synthetic hormone replacement is essential to maintain these functions.'
+  },
+  {
+    id: 'pb16-78',
+    text: 'A patient is concerned about the potential effects of thyroidectomy on their overall health. Which of the following is a potential long-term effect of thyroidectomy?',
+    options: [ 'Hypothyroidism', 'Hyperthyroidism', 'Diabetes', 'Hypertension' ],
+    correctIndex: 0,
+    explanation: 'Removal of the thyroid gland often leads to hypothyroidism, requiring lifelong hormone replacement therapy.'
+  },
+  {
+    id: 'pb16-79',
+    text: 'Psychomotor development in children refers to the development of which of the following skills?',
+    options: [
+      'Language and communication skills',
+      'Cognitive and problem-solving skills',
+      'Gross and fine motor skills',
+      'Emotional and social skills'
+    ],
+    correctIndex: 2,
+    explanation: 'Psychomotor development focuses on physical movement and coordination, including both gross and fine motor skills.'
+  },
+  {
+    id: 'pb16-80',
+    text: 'What is meant by Psychomotor development?',
+    options: [
+      'The development of emotional intelligence and social skills.',
+      'The development of cognitive abilities, such as memory and problem-solving.',
+      'The development of language and communication skills.',
+      'The development of physical skills, including gross and fine motor skills.'
+    ],
+    correctIndex: 3,
+    explanation: 'Psychomotor development refers to the growth of physical abilities like movement, coordination, and motor control.'
+  },
+  {
+    id: 'pb16-81',
+    text: 'A patient has been diagnosed with meningitis and is experiencing severe headache, fever, and stiff neck. Which of the following measures can help the patient feel more comfortable?',
+    options: [
+      'Elevating the head of the bed to 30 degrees',
+      'Providing a warm bath to reduce fever',
+      'Administering a non-steroidal anti-inflammatory drug (NSAID) for headache relief',
+      'Placing the patient in a quiet, dark room to reduce noise and light'
+    ],
+    correctIndex: 3,
+    explanation: 'Reducing sensory stimulation in a quiet, dark room helps alleviate discomfort from headache and photophobia in meningitis.'
+  },
+  {
+    id: 'pb16-82',
+    text: 'A patient with meningitis is experiencing severe headache and stiff neck. Which of the following measures can help alleviate these symptoms?',
+    options: [
+      'Applying a heating pad to the neck and shoulders',
+      'Providing a gentle massage to the neck and shoulders',
+      'Immobilizing the neck with a cervical collar',
+      'Placing the patient in a semi-Fowler\'s position'
+    ],
+    correctIndex: 3,
+    explanation: 'Semi-Fowler’s position helps reduce intracranial pressure and improves comfort for patients with meningitis symptoms.'
+  },
+  {
+    id: 'pb16-83',
+    text: 'A patient with meningitis is experiencing fever and chills. Which of the following measures can help manage these symptoms?',
+    options: [
+      'Providing a warm bath to reduce fever',
+      'Administering an antipyretic medication, such as acetaminophen (Tylenol)',
+      'Providing a fan to circulate cool air',
+      'Encouraging the patient to drink more fluids'
+    ],
+    correctIndex: 1,
+    explanation: 'Antipyretics like acetaminophen are effective in reducing fever and improving comfort in patients with meningitis.'
+  },
+  {
+    id: 'pb16-84',
+    text: 'What universal precautions should be followed when caring for a child with acute diarrhea?',
+    options: [
+      'Hand hygiene only',
+      'Hand hygiene, use of gloves, and proper disposal of soiled linens',
+      'Hand hygiene, use of mask, and proper disposal of sharps',
+      'Hand hygiene, use of goggles, and proper disposal of chemicals'
+    ],
+    correctIndex: 1,
+    explanation: 'Standard precautions for infectious diarrhea include hand hygiene, gloves, and safe disposal of contaminated materials.'
+  },
+  {
+    id: 'pb16-85',
+    text: 'Midazolam belongs to which category of medications?',
+    options: [ 'Opioid analgesics', 'Benzodiazepines', 'Barbiturates', 'Antiemetics' ],
+    correctIndex: 1,
+    explanation: 'Midazolam is a benzodiazepine used for sedation, anesthesia, and seizure control.'
+  },
+  {
+    id: 'pb16-86',
+    text: 'Midazolam is primarily used for which of the following purposes?',
+    options: [ 'Pain management', 'Seizure control', 'Sedation and anesthesia', 'Anti-anxiety treatment' ],
+    correctIndex: 2,
+    explanation: 'Midazolam is commonly used for sedation and anesthesia due to its rapid onset and calming effects.'
+  },
+  {
+    id: 'pb16-87',
+    text: 'Midazolam has which of the following side effects?',
+    options: [
+      'Increased heart rate',
+      'Increased blood pressure',
+      'Respiratory depression',
+      'Increased alertness'
+    ],
+    correctIndex: 2,
+    explanation: 'Respiratory depression is a known side effect of midazolam, especially when used in high doses or with other sedatives.'
+  },
+  {
+    id: 'pb16-88',
+    text: 'A patient with uremia is experiencing a lack of appetite and is refusing to eat. Which of the following is the most likely cause of this symptom?',
+    options: [
+      'Electrolyte imbalance',
+      'Fluid overload',
+      'Uremic toxins affecting the gastrointestinal system',
+      'Anemia'
+    ],
+    correctIndex: 2,
+    explanation: 'Uremic toxins can irritate the gastrointestinal tract, leading to nausea, anorexia, and poor appetite in patients with uremia.'
+  },
+  {
+    id: 'pb16-89',
+    text: 'A patient with diabetes mellitus (DM) is not eating due to nausea and vomiting. Should insulin still be administered?',
+    options: [
+      'Yes, only insulin should still be administered to control blood sugar levels',
+      'No, insulin should be withheld until the patient is eating again',
+      'Only short-acting insulin should be administered',
+      'Only long-acting insulin should be administered'
+    ],
+    correctIndex: 0,
+    explanation: 'Insulin is necessary to control blood glucose even if the patient is not eating, especially to prevent diabetic ketoacidosis.'
+  },
+  {
+    id: 'pb16-90',
+    text: '8 hours post-colostomy, what is the most important assessment to perform?',
+    options: [
+      'Stoma size and color',
+      'Bowel sounds and abdominal distension',
+      'Stool consistency and output',
+      'Wound drainage and signs of infection'
+    ],
+    correctIndex: 0,
+    explanation: 'Assessing stoma size and color is critical to ensure proper perfusion and detect early complications like ischemia.'
+  },
+  {
+    id: 'pb16-91',
+    text: 'Which of the following is a common symptom of sepsis?',
+    options: [ 'Confusion and hypotension', 'Tachypnea and fever', 'Abdominal pain and vomiting', 'All of the above' ],
+    correctIndex: 1,
+    explanation: 'Tachypnea and fever are hallmark signs of systemic infection and early sepsis.'
+  },
+  {
+    id: 'pb16-92',
+    text: 'What is the definition of a delusion?',
+    options: [
+      'A false belief that is not based in reality, but is held with conviction',
+      'A distorted perception of a real stimulus',
+      'A disorganized thought process',
+      'A labile mood'
+    ],
+    correctIndex: 0,
+    explanation: 'Delusions are fixed false beliefs that are resistant to reason or contrary evidence.'
+  },
+  {
+    id: 'pb16-93',
+    text: 'What does the “P” in the PQRST pain scale assess?',
+    options: [
+      'Provocation: What triggers the pain?',
+      'Position: What position exacerbates the pain?',
+      'Palliation: What relieves the pain?',
+      'Pulse: The patient’s heart rate'
+    ],
+    correctIndex: 0,
+    explanation: '“P” stands for Provocation — identifying what causes or worsens the pain helps guide diagnosis and treatment.'
+  },
+  {
+    id: 'pb16-94',
+    text: 'Which of the following is a characteristic symptom of delirium?',
+    options: [
+      'Depressed mood and loss of interest in activities',
+      'Disorganized thinking and altered level of consciousness',
+      'Excessive worry and fear about the future',
+      'Recurring nightmares and flashbacks'
+    ],
+    correctIndex: 1,
+    explanation: 'Delirium is marked by sudden confusion, disorganized thinking, and fluctuating consciousness.'
+  },
+  {
+    id: 'pb16-95',
+    text: 'What is one of the primary functions of the spleen?',
+    options: [
+      'To produce digestive enzymes',
+      'To filter the blood and remove old red blood cells',
+      'To store bile',
+      'To produce insulin'
+    ],
+    correctIndex: 1,
+    explanation: 'The spleen filters blood and removes aging or damaged red blood cells, playing a key role in immune function.'
+  },
+  {
+    id: 'pb16-96',
+    text: 'Which of the following is a common diagnostic test for pneumonia?',
+    options: [
+      'Complete Blood Count (CBC)',
+      'Chest X-ray (CXR)',
+      'Electrocardiogram (ECG)',
+      'Ultrasound of the lungs'
+    ],
+    correctIndex: 1,
+    explanation: 'Chest X-ray is the standard imaging test to confirm pneumonia and assess lung involvement.'
+  },
+  {
+    id: 'pb16-97',
+    text: 'A patient presents with stabbing chest pain that radiates to the left hand. What is the most likely diagnosis?',
+    options: [ 'Myocardial infarction', 'Pulmonary embolism (PE)', 'Pneumothorax', 'Angina pectoris' ],
+    correctIndex: 0,
+    explanation: 'Stabbing chest pain radiating to the left hand is a classic sign of myocardial infarction due to cardiac ischemia.'
+  },
+  {
+    id: 'pb16-98',
+    text: 'Agranulocytosis is characterized by:',
+    options: [
+      'Decreased production of red blood cells',
+      'Decreased production of platelets',
+      'Severe decrease in white blood cells, particularly neutrophils',
+      'Increased production of eosinophils'
+    ],
+    correctIndex: 2,
+    explanation: 'Agranulocytosis involves a dangerous drop in neutrophils, increasing infection risk.'
+  },
+  {
+    id: 'pb16-99',
+    text: 'A patient with Type 1 Diabetes Mellitus (T1DM) is not eating and feeling unwell. The patient asks if they should still take their insulin. What is the immediate action?',
+    options: [
+      'Withhold insulin until scheduled meals begin again',
+      'Administer insulin as scheduled, regardless of food intake',
+      'Administer a reduced dose of insulin',
+      'Check blood glucose and ketone levels before deciding on insulin administration'
+    ],
+    correctIndex: 2,
+    explanation: 'Reducing insulin dose helps prevent hypoglycemia while still managing blood glucose during illness.'
+  },
+  {
+    id: 'pb16-100',
+    text: 'What is the mechanism of action of the anticoagulant medication dabigatran?',
+    options: [
+      'Inhibits platelet aggregation',
+      'Inhibits vitamin K-dependent clotting factors',
+      'Directly inhibits thrombin (Factor IIa)',
+      'Enhances fibrinolysis'
+    ],
+    correctIndex: 2,
+    explanation: 'Dabigatran is a direct thrombin inhibitor, preventing clot formation by blocking Factor IIa.'
+  },
+  {
+    id: 'pb16-101',
+    text: 'What is a potential side effect of the medication risperidone (Clenil Modulite), used to treat asthma and COPD?',
+    options: [ 'Hypertension', 'Hyperglycemia', 'Oropharyngeal candidiasis', 'Hypokalemia' ],
+    correctIndex: 2,
+    explanation: 'Inhaled corticosteroids like Clenil Modulite can cause fungal infections in the mouth if not rinsed properly.'
+  },
+  {
+    id: 'pb16-102',
+    text: 'A patient with burns injury experiences facial grimace. What is the most likely cause?',
+    options: [ 'Pain', 'Anxiety', 'Respiratory distress', 'Hypovolemic shock' ],
+    correctIndex: 0,
+    explanation: 'Facial grimacing is a non-verbal cue of pain, especially common in burn injuries.'
+  },
+  {
+    id: 'pb16-103',
+    text: 'What is the best way to avoid cellular injury?',
+    options: [
+      'Take antioxidant supplements daily',
+      'Eat regularly and maintain a balanced diet',
+      'Get regular exposure to sunlight',
+      'Take painkillers regularly'
+    ],
+    correctIndex: 1,
+    explanation: 'A balanced diet provides essential nutrients and antioxidants that protect cells from damage.'
+  },
+  {
+    id: 'pb16-104',
+    text: 'A staff nurse prepares medicine and hands it to another nurse to administer. What is your immediate action?',
+    options: [
+      'Allow the other nurse to administer the medication',
+      'Stop the other nurse and do not use the medication',
+      'Report the incident to the nurse manager',
+      'Document the incident in the patient’s chart'
+    ],
+    correctIndex: 2,
+    explanation: 'Medication administration must follow strict protocols. Reporting to the nurse manager ensures accountability and prevents unsafe practices.'
+  },
+  {
+    id: 'pb16-105',
+    text: 'A patient informs the nurse that they had a fall yesterday. What is the nurse\'s best action?',
+    options: [
+      'Document the incident in the patient\'s chart and continue with routine care',
+      'Assess the patient for injuries and provide immediate treatment as needed',
+      'Call the patient\'s family to inform them of the incident',
+      'Ask the patient to fill out an incident report form'
+    ],
+    correctIndex: 1,
+    explanation: 'Immediate assessment ensures patient safety and helps identify any injuries that may require urgent care.'
+  },
+  {
+    id: 'pb16-106',
+    text: 'A patient falls in the bathroom. What is the nurse\'s first action?',
+    options: [
+      'Call for assistance to help the patient up',
+      'Assess the patient for injuries before moving them',
+      'Leave the patient and document the incident',
+      'Call the doctor to report the incident'
+    ],
+    correctIndex: 1,
+    explanation: 'Assessing for injuries before moving the patient prevents further harm and ensures appropriate care.'
+  },
+  {
+    id: 'pb16-107',
+    text: 'A patient is receiving a potassium infusion with 40 mmol/L over 6 hours. However, the infusion is stopped after 2.5 hours due to an allergic reaction. How much potassium did the patient receive?',
+    options: [ '10 mmol', '16.7 mmol', '20 mmol', '30 mmol' ],
+    correctIndex: 1,
+    explanation: 'Using the formula: (2.5 hours / 6 hours) × 40 mmol = 16.7 mmol. This calculates the proportion of potassium infused before stopping.'
+  },
+  {
+    id: 'pb16-108',
+    text: 'During a meeting, a nurse looks at their mobile phone. What action should be taken?',
+    options: [
+      'Ignore the behavior and continue the meeting',
+      'Politely ask the nurse to put their phone away',
+      'Reprimand the nurse for unprofessional behavior',
+      'End the meeting immediately'
+    ],
+    correctIndex: 1,
+    explanation: 'A polite reminder maintains professionalism while avoiding confrontation. It reinforces respectful behavior in a team setting.'
   }
 ];

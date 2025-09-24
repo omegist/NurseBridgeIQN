@@ -62,7 +62,7 @@ const partBTestsData: Omit<Test, 'questions'>[] = [
   { id: 'test-13', name: 'Test 13', timeLimitMinutes: 135, questionCount: 108 },
   { id: 'test-14', name: 'Test 14', timeLimitMinutes: 135, questionCount: 108 },
   { id: 'test-15', name: 'Test 15', timeLimitMinutes: 135, questionCount: 108 },
-  { id: 'test-16', name: 'Test 16', timeLimitMinutes: 135, questionCount: 65 },
+  { id: 'test-16', name: 'Test 16', timeLimitMinutes: 135, questionCount: 108 },
 ];
 
 const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
