@@ -11,7 +11,7 @@ const nextConfig = {
   experimental: {
     // This allows the Next.js dev server to accept requests from your cloud development environment.
     allowedDevOrigins: [
-      "https://*.cloudworkstations.dev",
+      "*.cloudworkstations.dev",
     ],
   },
 };
