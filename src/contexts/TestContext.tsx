@@ -54,63 +54,56 @@ export function TestProvider({ children }: { children: ReactNode }) {
     setTest(selectedTest);
 
     if (user) {
-      const progressRef = doc(db, "users", user.uid, "testProgress", selectedTest.id);
-      try {
-        const progressSnap = await getDoc(progressRef);
+        const progressRef = doc(db, "users", user.uid, "testProgress", selectedTest.id);
+        try {
+            const progressSnap = await getDoc(progressRef);
+            let answersToSet;
+            let indexToSet = 0;
 
-        if (progressSnap.exists() && !progressSnap.data().completed) {
-          // Resume in-progress test
-          const progress = progressSnap.data();
-          const savedAnswers = progress.userAnswers || [];
-          
-          setUserAnswers(savedAnswers);
-          setCurrentQuestionIndex(progress.currentQuestionIndex || 0);
+            if (progressSnap.exists() && !progressSnap.data().completed) {
+                const progress = progressSnap.data();
+                answersToSet = progress.userAnswers || new Array(selectedTest.questions.length).fill(null);
+                indexToSet = progress.currentQuestionIndex || 0;
+            } else {
+                 answersToSet = new Array(selectedTest.questions.length).fill(null);
+                 await setDoc(progressRef, { 
+                    userId: user.uid,
+                    testId: selectedTest.id, 
+                    userAnswers: answersToSet, 
+                    currentQuestionIndex: 0, 
+                    completed: false, 
+                    updatedAt: new Date()
+                }, { merge: true });
+            }
 
-          const initialVisited = new Array(selectedTest.questions.length).fill(false);
-          savedAnswers.forEach((ans: number | null, index: number) => {
-            if (ans !== null) initialVisited[index] = true;
-          });
-          initialVisited[progress.currentQuestionIndex || 0] = true;
-          setVisitedQuestions(initialVisited);
+            setUserAnswers(answersToSet);
+            setCurrentQuestionIndex(indexToSet);
 
-        } else {
-          // New test or completed test, so reset
-          const newAnswers = new Array(selectedTest.questions.length).fill(null);
-          setUserAnswers(newAnswers);
-          setCurrentQuestionIndex(0);
-          const initialVisited = new Array(selectedTest.questions.length).fill(false);
-          initialVisited[0] = true;
-          setVisitedQuestions(initialVisited);
-          // Optional: clear previous progress if retaking a completed test
-          if (progressSnap.exists() && progressSnap.data().completed) {
-              await setDoc(progressRef, {
-                  userAnswers: newAnswers,
-                  currentQuestionIndex: 0,
-                  completed: false,
-                  updatedAt: new Date()
-              }, {merge: true});
-          }
+            const initialVisited = new Array(selectedTest.questions.length).fill(false);
+            answersToSet.forEach((ans: number | null, index: number) => {
+                if (ans !== null) initialVisited[index] = true;
+            });
+            initialVisited[indexToSet] = true;
+            setVisitedQuestions(initialVisited);
+
+        } catch (error) {
+            console.error("Error loading test progress, starting fresh:", error);
+            const newAnswers = new Array(selectedTest.questions.length).fill(null);
+            setUserAnswers(newAnswers);
+            setCurrentQuestionIndex(0);
+            const initialVisited = new Array(selectedTest.questions.length).fill(false);
+            initialVisited[0] = true;
+            setVisitedQuestions(initialVisited);
         }
-      } catch (error) {
-        console.error("Error loading test progress, starting fresh:", error);
-        // Fallback to starting a new test if Firestore fails
+    } else {
         const newAnswers = new Array(selectedTest.questions.length).fill(null);
         setUserAnswers(newAnswers);
         setCurrentQuestionIndex(0);
-        const initialVisited = new Array(selectedTest.questions.length).fill(false);
+        const initialVisited = new Array(selectedTest.questions.length).fill(null);
         initialVisited[0] = true;
         setVisitedQuestions(initialVisited);
-      }
-    } else {
-      // Not logged in fallback
-      const newAnswers = new Array(selectedTest.questions.length).fill(null);
-      setUserAnswers(newAnswers);
-      setCurrentQuestionIndex(0);
-      const initialVisited = new Array(selectedTest.questions.length).fill(false);
-      initialVisited[0] = true;
-      setVisitedQuestions(initialVisited);
     }
-  }, [user]);
+}, [user]);
 
   const resetTest = useCallback(() => {
     setTest(null)

@@ -13,7 +13,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ClipboardCheck, ArrowRight, Clock, Repeat, BookCopy } from "lucide-react";
+import { ClipboardCheck, ArrowRight, Clock, Repeat } from "lucide-react";
 import type { Test } from "@/lib/types";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
@@ -28,7 +28,7 @@ interface TestsClientProps {
   tests: Test[];
 }
 
-async function getTestAttempts(userId: string, testIds: string[]) {
+async function getTestAttempts(userId: string) {
   if (!db) return {};
 
   const attemptsData: Record<string, number> = {};
@@ -38,10 +38,7 @@ async function getTestAttempts(userId: string, testIds: string[]) {
   try {
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      if (testIds.includes(doc.id)) {
-        attemptsData[doc.id] = data.completedCount || 0;
-      }
+        attemptsData[doc.id] = doc.data().completedCount || 0;
     });
   } catch (error) {
     console.error("Failed to fetch test attempts:", error);
@@ -68,15 +65,14 @@ export function TestsClient({ tests }: TestsClientProps) {
     }
     setIsLoading(true);
     try {
-      const testIds = tests.map(t => t.id);
-      const attempts = await getTestAttempts(user.uid, testIds);
+      const attempts = await getTestAttempts(user.uid);
       setTestAttempts(attempts);
     } catch (error) {
       console.error("Error fetching test attempts:", error);
     } finally {
       setIsLoading(false);
     }
-  }, [user, tests]);
+  }, [user]);
 
   useEffect(() => {
     fetchAttempts();
@@ -246,5 +242,3 @@ export function TestsClient({ tests }: TestsClientProps) {
     </div>
   );
 }
-
-    

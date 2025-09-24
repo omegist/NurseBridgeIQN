@@ -103,18 +103,29 @@ export function TestResultsClient() {
     setResults(calculatedResults);
     if (score > 0) updateUserScore(score * 10);
 
-    const ref = doc(db, "users", user.uid, "testProgress", test.id);
-    setDoc(
-      ref,
-      { 
-        completed: true, 
-        lastScore: score, 
-        lastPercentage: percentage,
-        completedCount: increment(1)
-      },
-      { merge: true }
-    ).catch(() => {});
+    const updateAttempts = async () => {
+        if (!user || !test) return;
+        const ref = doc(db, "users", user.uid, "testProgress", test.id);
+        
+        try {
+            const docSnap = await getDoc(ref);
+            const currentAttempts = docSnap.exists() ? (docSnap.data().completedCount || 0) : 0;
+            
+            await setDoc(ref, {
+                userId: user.uid,
+                testId: test.id,
+                completed: true,
+                lastScore: score,
+                lastPercentage: percentage,
+                completedCount: currentAttempts + 1
+            }, { merge: true });
 
+        } catch (error) {
+            console.error("Failed to update test attempts:", error);
+        }
+    };
+
+    updateAttempts();
     setIsLoading(false);
   }, [test, userAnswers, user, updateUserScore]);
 
@@ -138,7 +149,12 @@ export function TestResultsClient() {
     ];
   }, [results]);
 
-  const handleRetake = () => test && router.push(`/test/${test.id}`);
+  const handleRetake = () => {
+    if (test) {
+        resetTest(); 
+        router.push(`/test/${test.id}`);
+    }
+  };
   const handleNewTest = () => {
     resetTest();
     router.push("/tests");

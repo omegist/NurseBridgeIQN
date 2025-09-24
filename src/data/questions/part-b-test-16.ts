@@ -653,132 +653,133 @@ export const questions: Question[] = [
   {
     id: 'pb16-55',
     text: "A patient is prescribed metformin for type 2 diabetes. What is the primary mechanism of action of metformin?",
-    options": [
+    options: [
       "Increases insulin secretion",
       "Increases glucose production in the liver",
       "Increases insulin sensitivity",
       "Decreases glucose absorption in the gut"
     ],
-    "answer": "C",
-    "rationale": "Metformin primarily works by increasing insulin sensitivity and reducing hepatic glucose production."
+    correctIndex: 2,
+    explanation: "Metformin primarily works by increasing insulin sensitivity and reducing hepatic glucose production."
   },
   {
-    "question_number": 56,
-    "question": "A patient presents with symptoms of anxiety, including palpitations, sweating, and trembling. What is the most appropriate nursing intervention?",
-    "options": {
-      "A": "Administer a benzodiazepine",
-      "B": "Encourage the patient to express their feelings",
-      "C": "Provide a calm and supportive environment",
-      "D": "Teach the patient relaxation techniques"
-    },
-    "answer": "C",
-    "rationale": "Creating a calm environment helps reduce anxiety and allows the patient to feel safe and supported."
+    id: 'pb16-56',
+    text: "A patient presents with symptoms of anxiety, including palpitations, sweating, and trembling. What is the most appropriate nursing intervention?",
+    options: [
+      "Administer a benzodiazepine",
+      "Encourage the patient to express their feelings",
+      "Provide a calm and supportive environment",
+      "Teach the patient relaxation techniques"
+    ],
+    correctIndex: 2,
+    explanation: "Creating a calm environment helps reduce anxiety and allows the patient to feel safe and supported."
   },
   {
-    "question_number": 57,
-    "question": "A community health nurse is planning a health promotion program for older adults. What is the most effective way to promote healthy aging?",
-    "options": {
-      "A": "Providing written information about healthy aging",
-      "B": "Offering exercise classes specifically designed for older adults",
-      "C": "Encouraging social support and community engagement",
-      "D": "Providing regular health screenings"
-    },
-    "answer": "C",
-    "rationale": "Social engagement is strongly linked to improved mental and physical health outcomes in older adults."
+    id: 'pb16-57',
+    text: "A community health nurse is planning a health promotion program for older adults. What is the most effective way to promote healthy aging?",
+    options: [
+      "Providing written information about healthy aging",
+      "Offering exercise classes specifically designed for older adults",
+      "Encouraging social support and community engagement",
+      "Providing regular health screenings"
+    ],
+    correctIndex: 2,
+    explanation: "Social engagement is strongly linked to improved mental and physical health outcomes in older adults."
   },
   {
-    "question_number": 58,
-    "question": "A patient has a stage 3 pressure ulcer on their sacrum. What is the most appropriate nursing intervention?",
-    "options": {
-      "A": "Apply a hydrocolloid dressing",
-      "B": "Use a wound vacuum-assisted closure device",
-      "C": "Perform wound debridement",
-      "D": "Apply a transparent film dressing"
-    },
-    "answer": "B",
-    "rationale": "Vacuum-assisted closure promotes healing by removing exudate and improving circulation in deep pressure ulcers."
+    id: 'pb16-58',
+    text: "A patient has a stage 3 pressure ulcer on their sacrum. What is the most appropriate nursing intervention?",
+    options: [
+      "Apply a hydrocolloid dressing",
+      "Use a wound vacuum-assisted closure device",
+      "Perform wound debridement",
+      "Apply a transparent film dressing"
+    ],
+    correctIndex: 1,
+    explanation: "Vacuum-assisted closure promotes healing by removing exudate and improving circulation in deep pressure ulcers."
   },
   {
-    "question_number": 59,
-    "question": "A patient is experiencing symptoms of heart failure, including shortness of breath and fatigue. What is the most appropriate nursing intervention?",
-    "options": {
-      "A": "Administer oxygen therapy",
-      "B": "Provide a low-sodium diet",
-      "C": "Encourage the patient to rest",
-      "D": "Administer a diuretic medication"
-    },
-    "answer": "D",
-    "rationale": "Diuretics help reduce fluid overload, relieving symptoms like dyspnea and fatigue in heart failure patients."
+    id: 'pb16-59',
+    text: "A patient is experiencing symptoms of heart failure, including shortness of breath and fatigue. What is the most appropriate nursing intervention?",
+    options: [
+      "Administer oxygen therapy",
+      "Provide a low-sodium diet",
+      "Encourage the patient to rest",
+      "Administer a diuretic medication"
+    ],
+    correctIndex: 3,
+    explanation: "Diuretics help reduce fluid overload, relieving symptoms like dyspnea and fatigue in heart failure patients."
   },
   {
-    "question_number": 60,
-    "question": "A patient has been diagnosed with a stroke and is experiencing weakness on one side of their body. What is the most appropriate nursing intervention?",
-    "options": {
-      "A": "Encourage the patient to use their affected limb",
-      "B": "Provide range-of-motion exercises",
-      "C": "Use a splint to support the affected limb",
-      "D": "Encourage the patient to rest"
-    },
-    "answer": "B",
-    "rationale": "Range-of-motion exercises help maintain joint flexibility and prevent contractures in stroke patients with hemiparesis."
+    id: 'pb16-60',
+    text: "A patient has been diagnosed with a stroke and is experiencing weakness on one side of their body. What is the most appropriate nursing intervention?",
+    options: [
+      "Encourage the patient to use their affected limb",
+      "Provide range-of-motion exercises",
+      "Use a splint to support the affected limb",
+      "Encourage the patient to rest"
+    ],
+    correctIndex: 1,
+    explanation: "Range-of-motion exercises help maintain joint flexibility and prevent contractures in stroke patients with hemiparesis."
   },
   {
-    "question_number": 61,
-    "question": "A patient with chronic kidney disease is scheduled for hemodialysis. What is the most important nursing action before initiating dialysis?",
-    "options": {
-      "A": "Administer antihypertensive medication",
-      "B": "Check the patient’s weight and vital signs",
-      "C": "Encourage fluid intake",
-      "D": "Assess for signs of infection at the fistula site"
-    },
-    "answer": "B",
-    "rationale": "Baseline weight and vital signs are essential for evaluating fluid removal and hemodynamic stability during dialysis."
+    id: 'pb16-61',
+    text: "A patient with chronic kidney disease is scheduled for hemodialysis. What is the most important nursing action before initiating dialysis?",
+    options: [
+      "Administer antihypertensive medication",
+      "Check the patient’s weight and vital signs",
+      "Encourage fluid intake",
+      "Assess for signs of infection at the fistula site"
+    ],
+    correctIndex: 1,
+    explanation: "Baseline weight and vital signs are essential for evaluating fluid removal and hemodynamic stability during dialysis."
   },
   {
-    "question_number": 62,
-    "question": "A patient with COPD is receiving oxygen therapy via nasal cannula. What is the recommended oxygen flow rate for this patient?",
-    "options": {
-      "A": "1–2 L/min",
-      "B": "4–6 L/min",
-      "C": "6–8 L/min",
-      "D": "10–12 L/min"
-    },
-    "answer": "A",
-    "rationale": "Low-flow oxygen (1–2 L/min) is recommended for COPD patients to prevent suppression of their hypoxic respiratory drive."
+    id: 'pb16-62',
+    text: "A patient with COPD is receiving oxygen therapy via nasal cannula. What is the recommended oxygen flow rate for this patient?",
+    options: [
+      "1–2 L/min",
+      "4–6 L/min",
+      "6–8 L/min",
+      "10–12 L/min"
+    ],
+    correctIndex: 0,
+    explanation: "Low-flow oxygen (1–2 L/min) is recommended for COPD patients to prevent suppression of their hypoxic respiratory drive."
   },
   {
-    "question_number": 63,
-    "question": "A nurse is preparing to administer insulin to a diabetic patient before breakfast. What is the most important action before giving the insulin?",
-    "options": {
-      "A": "Check the patient’s blood pressure",
-      "B": "Assess the patient’s hydration status",
-      "C": "Verify the patient’s blood glucose level",
-      "D": "Ensure the patient has eaten"
-    },
-    "answer": "C",
-    "rationale": "Blood glucose monitoring ensures safe and appropriate insulin dosing, preventing hypoglycemia."
+    id: 'pb16-63',
+    text: "A nurse is preparing to administer insulin to a diabetic patient before breakfast. What is the most important action before giving the insulin?",
+    options: [
+      "Check the patient’s blood pressure",
+      "Assess the patient’s hydration status",
+      "Verify the patient’s blood glucose level",
+      "Ensure the patient has eaten"
+    ],
+    correctIndex: 2,
+    explanation: "Blood glucose monitoring ensures safe and appropriate insulin dosing, preventing hypoglycemia."
   },
   {
-    "question_number": 64,
-    "question": "A patient is admitted with suspected appendicitis. Which of the following findings would most likely confirm the diagnosis?",
-    "options": {
-      "A": "Pain in the left lower quadrant",
-      "B": "Rebound tenderness in the right lower quadrant",
-      "C": "Pain relieved by eating",
-      "D": "Generalized abdominal distension"
-    },
-    "answer": "B",
-    "rationale": "Rebound tenderness in the right lower quadrant (McBurney’s point) is a classic sign of appendicitis."
+    id: 'pb16-64',
+    text: "A patient is admitted with suspected appendicitis. Which of the following findings would most likely confirm the diagnosis?",
+    options: [
+      "Pain in the left lower quadrant",
+      "Rebound tenderness in the right lower quadrant",
+      "Pain relieved by eating",
+      "Generalized abdominal distension"
+    ],
+    correctIndex: 1,
+    explanation: "Rebound tenderness in the right lower quadrant (McBurney’s point) is a classic sign of appendicitis."
   },
   {
-    "question_number": 65,
-    "question": "A nurse is caring for a patient with a newly placed tracheostomy. What is the priority nursing intervention?",
-    "options": {
-      "A": "Provide oral hygiene",
-      "B": "Monitor oxygen saturation",
-      "C": "Secure the tracheostomy ties",
-      "D": "Assess for airway patency"
-    },
-    "answer": "D",
-    "rationale": "Airway patency is the highest priority in tracheostomy care to ensure adequate ventilation and prevent obstruction."
+    id: 'pb16-65',
+    text: "A nurse is caring for a patient with a newly placed tracheostomy. What is the priority nursing intervention?",
+    options: [
+      "Provide oral hygiene",
+      "Monitor oxygen saturation",
+      "Secure the tracheostomy ties",
+      "Assess for airway patency"
+    ],
+    correctIndex: 3,
+    explanation: "Airway patency is the highest priority in tracheostomy care to ensure adequate ventilation and prevent obstruction."
   }
+];
