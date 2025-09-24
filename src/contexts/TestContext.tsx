@@ -60,19 +60,34 @@ export function TestProvider({ children }: { children: ReactNode }) {
             let answersToSet;
             let indexToSet = 0;
 
-            // If the user has taken the test before, reset the progress for a fresh start.
-            if (progressSnap.exists()) {
-                 answersToSet = new Array(selectedTest.questions.length).fill(null);
-                 await setDoc(progressRef, { 
+            // ✅ Force reset for the specified user to clear corrupted data
+            if (user.email === "hrishikeshchavan13@gmail.com") {
+                answersToSet = new Array(selectedTest.questions.length).fill(null);
+                await setDoc(progressRef, { 
                     userId: user.uid,
                     testId: selectedTest.id, 
                     userAnswers: answersToSet, 
                     currentQuestionIndex: 0, 
                     completed: false,
-                    // Explicitly reset the completed count
-                    completedCount: 0,
+                    completedCount: 0, // Force reset to 0
                     updatedAt: new Date()
                 }, { merge: true });
+            } else if (progressSnap.exists()) {
+                 // For other users, if they retake a completed test, reset it.
+                 const data = progressSnap.data();
+                 if (data.completed) {
+                    answersToSet = new Array(selectedTest.questions.length).fill(null);
+                    await setDoc(progressRef, { 
+                        userAnswers: answersToSet, 
+                        currentQuestionIndex: 0, 
+                        completed: false,
+                        completedCount: data.completedCount || 0, // Keep old count to be incremented on next completion
+                        updatedAt: new Date()
+                    }, { merge: true });
+                 } else {
+                    answersToSet = data.userAnswers || new Array(selectedTest.questions.length).fill(null);
+                    indexToSet = data.currentQuestionIndex || 0;
+                 }
             } else {
                  answersToSet = new Array(selectedTest.questions.length).fill(null);
             }
@@ -81,6 +96,11 @@ export function TestProvider({ children }: { children: ReactNode }) {
             setCurrentQuestionIndex(indexToSet);
 
             const initialVisited = new Array(selectedTest.questions.length).fill(false);
+            if (answersToSet) {
+              answersToSet.forEach((ans: number | null, index: number) => {
+                if (ans !== null) initialVisited[index] = true;
+              });
+            }
             initialVisited[indexToSet] = true;
             setVisitedQuestions(initialVisited);
 
@@ -94,6 +114,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
             setVisitedQuestions(initialVisited);
         }
     } else {
+        // Fallback for non-logged-in users
         const newAnswers = new Array(selectedTest.questions.length).fill(null);
         setUserAnswers(newAnswers);
         setCurrentQuestionIndex(0);
