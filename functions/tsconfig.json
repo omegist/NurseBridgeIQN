@@ -1,21 +1,25 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2017",
-    "lib": ["es2017"],
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "outDir": "lib",
-    "sourceMap": true,
+    "target": "es2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "incremental": true,
     "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "compileOnSave": true,
-  "include": [
-    "src",
-    "src/types"
-  ]
+  "include": ["next-env.d.ts", "src", "src/types"],
+  "exclude": ["node_modules"]
 }
-
 
