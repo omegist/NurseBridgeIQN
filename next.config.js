@@ -7,13 +7,10 @@ const nextConfig = {
     };
     return config;
   },
-  // Add the experimental block below
-  experimental: {
-    // This allows the Next.js dev server to accept requests from your cloud development environment.
-    allowedDevOrigins: [
+  // This allows the Next.js dev server to accept requests from your cloud development environment.
+  allowedDevOrigins: [
       "*.cloudworkstations.dev",
-    ],
-  },
+  ],
 };
 
 export default nextConfig;
