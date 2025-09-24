@@ -38,7 +38,14 @@ async function getTestAttempts(userId: string) {
   try {
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-        attemptsData[doc.id] = doc.data().completedCount || 0;
+        const data = doc.data();
+        const count = data.completedCount;
+        // Ensure the count is a valid number before storing it
+        if (typeof count === 'number' && !isNaN(count)) {
+            attemptsData[doc.id] = count;
+        } else {
+            attemptsData[doc.id] = 0;
+        }
     });
   } catch (error) {
     console.error("Failed to fetch test attempts:", error);

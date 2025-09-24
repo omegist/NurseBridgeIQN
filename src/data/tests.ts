@@ -67,58 +67,31 @@ const partBTestsData: Omit<Test, 'questions'>[] = [
 
 const partBTests: Test[] = partBTestsData.map((testInfo, index) => {
   if (testInfo.id === 'test-8') {
-    return {
-      ...testInfo,
-      questions: partBTest8
-    };
+    return { ...testInfo, questions: partBTest8 };
   }
   if (testInfo.id === 'test-9') {
-    return {
-      ...testInfo,
-      questions: partBTest9
-    };
+    return { ...testInfo, questions: partBTest9 };
   }
   if (testInfo.id === 'test-10') {
-    return {
-      ...testInfo,
-      questions: partBTest10
-    };
+    return { ...testInfo, questions: partBTest10 };
   }
    if (testInfo.id === 'test-11') {
-    return {
-      ...testInfo,
-      questions: partBTest11
-    };
+    return { ...testInfo, questions: partBTest11 };
   }
   if (testInfo.id === 'test-12') {
-    return {
-      ...testInfo,
-      questions: partBTest12
-    };
+    return { ...testInfo, questions: partBTest12 };
   }
   if (testInfo.id === 'test-13') {
-    return {
-      ...testInfo,
-      questions: partBTest13
-    };
+    return { ...testInfo, questions: partBTest13 };
   }
   if (testInfo.id === 'test-14') {
-    return {
-      ...testInfo,
-      questions: partBTest14
-    };
+    return { ...testInfo, questions: partBTest14 };
   }
   if (testInfo.id === 'test-15') {
-    return {
-      ...testInfo,
-      questions: partBTest15
-    };
+    return { ...testInfo, questions: partBTest15 };
   }
    if (testInfo.id === 'test-16') {
-    return {
-      ...testInfo,
-      questions: partBTest16
-    };
+    return { ...testInfo, questions: partBTest16 };
   }
   if (index < 6) {
     // Tests 1-6 have 108 questions each
@@ -142,5 +115,3 @@ export const tests = {
   partA: partATests,
   partB: partBTests
 };
-
-    

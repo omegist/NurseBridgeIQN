@@ -109,7 +109,12 @@ export function TestResultsClient() {
         
         try {
             const docSnap = await getDoc(ref);
-            const currentAttempts = docSnap.exists() ? (docSnap.data().completedCount || 0) : 0;
+            let currentAttempts = 0;
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                // Ensure completedCount is a valid number, otherwise reset to 0
+                currentAttempts = (typeof data.completedCount === 'number' && !isNaN(data.completedCount)) ? data.completedCount : 0;
+            }
             
             await setDoc(ref, {
                 userId: user.uid,
