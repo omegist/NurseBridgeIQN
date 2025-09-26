@@ -61,80 +61,79 @@ export function TestResultsClient() {
       return;
     }
 
-    let score = 0;
-    let correctAnswers = 0;
-    let incorrectAnswers = 0;
+    const calculateResults = async () => {
+      let score = 0;
+      let correctAnswers = 0;
+      let incorrectAnswers = 0;
 
-    const breakdown = test.questions.map((question, index) => {
-      const userAnswerIndex = userAnswers[index];
-      const isCorrect = userAnswerIndex === question.correctIndex;
-      if (isCorrect) {
-        score++;
-        correctAnswers++;
-      } else {
-        incorrectAnswers++;
-      }
-      return {
-        questionId: question.id,
-        question: question.text,
-        isCorrect,
-        options: question.options,
-        correctIndex: question.correctIndex,
-        userAnswerIndex: userAnswerIndex,
-        correctAnswer: question.options[question.correctIndex],
-        userAnswer:
-          userAnswerIndex !== null && userAnswerIndex !== undefined
-            ? question.options[userAnswerIndex]
-            : null,
-        originalExplanation: question.explanation,
-      };
-    });
-
-    const percentage = (score / test.questions.length) * 100;
-
-    const calculatedResults: TestResults = {
-      score,
-      percentage,
-      correctAnswers,
-      incorrectAnswers,
-      breakdown,
-    };
-
-    setResults(calculatedResults);
-    if (score > 0) updateUserScore(score * 10);
-
-    const updateAttempts = async () => {
-        if (!user || !test) return;
-        const ref = doc(db, "users", user.uid, "testProgress", test.id);
-        
-        try {
-            const docSnap = await getDoc(ref);
-            let currentAttempts = 0;
-            if (docSnap.exists()) {
-                const data = docSnap.data();
-                // Ensure the count is a valid number, otherwise default to 0
-                const count = data.completedCount;
-                if (typeof count === 'number' && !isNaN(count)) {
-                    currentAttempts = count;
-                }
-            }
-            
-            await setDoc(ref, {
-                userId: user.uid,
-                testId: test.id,
-                completed: true,
-                lastScore: score,
-                lastPercentage: percentage,
-                completedCount: currentAttempts + 1
-            }, { merge: true });
-
-        } catch (error) {
-            console.error("Failed to update test attempts:", error);
+      const breakdown = test.questions.map((question, index) => {
+        const userAnswerIndex = userAnswers[index];
+        const isCorrect = userAnswerIndex === question.correctIndex;
+        if (isCorrect) {
+          score++;
+          correctAnswers++;
+        } else {
+          incorrectAnswers++;
         }
-    };
+        return {
+          questionId: question.id,
+          question: question.text,
+          isCorrect,
+          options: question.options,
+          correctIndex: question.correctIndex,
+          userAnswerIndex: userAnswerIndex,
+          correctAnswer: question.options[question.correctIndex],
+          userAnswer:
+            userAnswerIndex !== null && userAnswerIndex !== undefined
+              ? question.options[userAnswerIndex]
+              : null,
+          originalExplanation: question.explanation,
+        };
+      });
 
-    updateAttempts();
-    setIsLoading(false);
+      const percentage = (score / test.questions.length) * 100;
+
+      const calculatedResults: TestResults = {
+        score,
+        percentage,
+        correctAnswers,
+        incorrectAnswers,
+        breakdown,
+      };
+
+      setResults(calculatedResults);
+      if (score > 0) updateUserScore(score * 10);
+
+      // Update Firestore progress
+      const ref = doc(db, "users", user.uid, "testProgress", test.id);
+      try {
+        const docSnap = await getDoc(ref);
+        let currentAttempts = 0;
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          const count = data.completedCount;
+          // Ensure the count is a valid number, otherwise default to 0
+          if (typeof count === 'number' && !isNaN(count)) {
+            currentAttempts = count;
+          }
+        }
+        
+        await setDoc(ref, {
+          userId: user.uid,
+          testId: test.id,
+          completed: true,
+          lastScore: score,
+          lastPercentage: percentage,
+          completedCount: currentAttempts + 1
+        }, { merge: true });
+
+      } catch (error) {
+        console.error("Failed to update test attempts:", error);
+      }
+      setIsLoading(false);
+    }
+    
+    calculateResults();
   }, [test, userAnswers, user, updateUserScore]);
 
   useEffect(() => {
@@ -159,8 +158,8 @@ export function TestResultsClient() {
 
   const handleRetake = () => {
     if (test) {
-        resetTest(); 
-        router.push(`/test/${test.id}`);
+      resetTest();
+      router.push(`/test/${test.id}`);
     }
   };
   const handleNewTest = () => {
@@ -334,3 +333,5 @@ export function TestResultsClient() {
     </div>
   );
 }
+
+    
