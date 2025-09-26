@@ -20,8 +20,8 @@ interface TestContextType {
   visitedQuestions: boolean[];
   setVisitedQuestions: React.Dispatch<React.SetStateAction<boolean[]>>;
   saveProgress: (answers: (number | null)[], currentIndex: number) => Promise<void>;
-  testDuration: number;
-  setTestDuration: (duration: number) => void;
+  testStartTime: number | null;
+  setTestStartTime: (time: number | null) => void;
 }
 
 const TestContext = createContext<TestContextType | undefined>(undefined)
@@ -33,7 +33,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [testStarted, setTestStarted] = useState(false)
   const [visitedQuestions, setVisitedQuestions] = useState<boolean[]>([])
-  const [testDuration, setTestDuration] = useState(0);
+  const [testStartTime, setTestStartTime] = useState<number | null>(null);
 
   const saveProgress = useCallback(async (answers: (number | null)[], currentIndex: number) => {
     if (user && test) {
@@ -52,6 +52,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
   const startTest = useCallback(async (selectedTest: Test) => {
     setTestStarted(true);
     setTest(selectedTest);
+    setTestStartTime(Date.now());
 
     if (user) {
         const progressRef = doc(db, "users", user.uid, "testProgress", selectedTest.id);
@@ -60,35 +61,26 @@ export function TestProvider({ children }: { children: ReactNode }) {
             let answersToSet;
             let indexToSet = 0;
 
-            // ✅ Force reset for the specified user to clear corrupted data
-            if (user.email === "hrishikeshchavan13@gmail.com") {
-                answersToSet = new Array(selectedTest.questions.length).fill(null);
-                await setDoc(progressRef, { 
-                    userId: user.uid,
-                    testId: selectedTest.id, 
-                    userAnswers: answersToSet, 
-                    currentQuestionIndex: 0, 
-                    completed: false,
-                    completedCount: 0, // Force reset to 0
-                    updatedAt: new Date()
-                }, { merge: true });
-            } else if (progressSnap.exists()) {
-                 // For other users, if they retake a completed test, reset it.
+            if (progressSnap.exists()) {
                  const data = progressSnap.data();
                  if (data.completed) {
+                    // This is a retake, so reset the progress fully.
                     answersToSet = new Array(selectedTest.questions.length).fill(null);
                     await setDoc(progressRef, { 
                         userAnswers: answersToSet, 
                         currentQuestionIndex: 0, 
                         completed: false,
-                        completedCount: data.completedCount || 0, // Keep old count to be incremented on next completion
+                        // Resetting the count for a retake.
+                        completedCount: 0, 
                         updatedAt: new Date()
                     }, { merge: true });
                  } else {
+                    // Resuming an in-progress test.
                     answersToSet = data.userAnswers || new Array(selectedTest.questions.length).fill(null);
                     indexToSet = data.currentQuestionIndex || 0;
                  }
             } else {
+                 // First time taking this test.
                  answersToSet = new Array(selectedTest.questions.length).fill(null);
             }
 
@@ -122,7 +114,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
         initialVisited[0] = true;
         setVisitedQuestions(initialVisited);
     }
-}, [user]);
+  }, [user]);
 
   const resetTest = useCallback(() => {
     setTest(null)
@@ -130,7 +122,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
     setCurrentQuestionIndex(0)
     setTestStarted(false)
     setVisitedQuestions([])
-    setTestDuration(0);
+    setTestStartTime(null);
   }, [])
 
   return (
@@ -148,8 +140,8 @@ export function TestProvider({ children }: { children: ReactNode }) {
         visitedQuestions,
         setVisitedQuestions,
         saveProgress,
-        testDuration,
-        setTestDuration,
+        testStartTime,
+        setTestStartTime,
       }}
     >
       {children}

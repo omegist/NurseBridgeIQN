@@ -67,7 +67,7 @@ export type SerializableFlashcardTopic = FlashcardTopic;
 export interface Test {
   id: string;
   name: string;
-  timeLimitMinutes?: number | null;   // optional
+  timeLimitMinutes: number | null;   // optional
   questions: Question[];
   questionCount?: number;
 }

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
@@ -42,21 +43,12 @@ export function TestClient({ test }: { test: Test }) {
     visitedQuestions,
     setVisitedQuestions,
     saveProgress,
-    setTestDuration,
+    testStartTime,
   } = useTest();
 
-  /* ------------------------------------------------------------------ */
-  /*   Local state                                                      */
-  /* ------------------------------------------------------------------ */
   const [time, setTime] = useState(
     test.timeLimitMinutes ? test.timeLimitMinutes * 60 : 0
   );
-  const [isMounted, setIsMounted] = useState(false);
-
-  /* ------------------------------------------------------------------ */
-  /*   Effects                                                          */
-  /* ------------------------------------------------------------------ */
-  useEffect(() => setIsMounted(true), []);
 
   useEffect(() => {
     startTest(test);
@@ -72,56 +64,30 @@ export function TestClient({ test }: { test: Test }) {
     });
   }, [currentQuestionIndex, setVisitedQuestions]);
 
-  /* ------------------------------------------------------------------ */
-  /*   Submit handler                                                   */
-  /* ------------------------------------------------------------------ */
   const handleSubmit = useCallback(() => {
     saveProgress(userAnswers, currentQuestionIndex);
-    setTestDuration(
-      test.timeLimitMinutes ? test.timeLimitMinutes * 60 - time : time
-    );
     router.push("/test-results");
-  }, [
-    userAnswers,
-    currentQuestionIndex,
-    time,
-    test.timeLimitMinutes,
-    saveProgress,
-    setTestDuration,
-    router,
-  ]);
+  }, [userAnswers, currentQuestionIndex, saveProgress, router]);
 
-  /* ------------------------------------------------------------------ */
-  /*   Timer                                                            */
-  /* ------------------------------------------------------------------ */
   useEffect(() => {
-    if (!isMounted) return;
+    if (!test.timeLimitMinutes || !testStartTime) return;
 
     const timer = setInterval(() => {
-      if (test.timeLimitMinutes) {
-        // Countdown
-        setTime((t) => {
-          if (t <= 1) {
-            clearInterval(timer);
-            /* fire-and-forget to avoid returning a Promise */
-            handleSubmit();
-            return 0;
-          }
-          return t - 1;
-        });
+      const timeElapsed = Math.floor((Date.now() - testStartTime) / 1000);
+      const timeRemaining = test.timeLimitMinutes! * 60 - timeElapsed;
+
+      if (timeRemaining <= 0) {
+        setTime(0);
+        clearInterval(timer);
+        handleSubmit();
       } else {
-        // Count‑up
-        setTime((t) => t + 1);
+        setTime(timeRemaining);
       }
     }, 1000);
 
-    /* sync cleanup */
     return () => clearInterval(timer);
-  }, [isMounted, test.timeLimitMinutes, handleSubmit]);
+  }, [testStartTime, test.timeLimitMinutes, handleSubmit]);
 
-  /* ------------------------------------------------------------------ */
-  /*   Navigation callbacks                                             */
-  /* ------------------------------------------------------------------ */
   const handleNext = useCallback(() => {
     if (currentQuestionIndex < test.questions.length - 1) {
       saveProgress(userAnswers, currentQuestionIndex);
@@ -147,7 +113,6 @@ export function TestClient({ test }: { test: Test }) {
     userAnswers,
   ]);
 
-  /* key bindings */
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") handleNext();
@@ -157,34 +122,23 @@ export function TestClient({ test }: { test: Test }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [handleNext, handlePrevious]);
 
-  /* ------------------------------------------------------------------ */
-  /*   Guards                                                           */
-  /* ------------------------------------------------------------------ */
   if (!test.questions?.length) return <div>Loading test…</div>;
   const currentQuestion = test.questions[currentQuestionIndex];
   if (!currentQuestion) return <div>Loading question…</div>;
 
-  /* ------------------------------------------------------------------ */
-  /*   Answer change                                                    */
-  /* ------------------------------------------------------------------ */
   const handleAnswerChange = (val: string) => {
     const arr = [...userAnswers];
     arr[currentQuestionIndex] = parseInt(val, 10);
     setUserAnswers(arr);
   };
 
-  /* progress & timer display */
   const progress = ((currentQuestionIndex + 1) / test.questions.length) * 100;
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
 
-  /* ------------------------------------------------------------------ */
-  /*   Render                                                           */
-  /* ------------------------------------------------------------------ */
   return (
     <div className="container mx-auto py-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* main card */}
         <div className="md:col-span-2">
           <Card className="shadow-2xl rounded-2xl">
             <CardHeader>
@@ -266,7 +220,6 @@ export function TestClient({ test }: { test: Test }) {
           </Card>
         </div>
 
-        {/* sidebar */}
         <div className="sticky top-24 h-fit">
           <QuestionPreview
             questionCount={test.questions.length}
