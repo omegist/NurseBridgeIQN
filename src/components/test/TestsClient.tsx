@@ -17,7 +17,7 @@ import { ClipboardCheck, ArrowRight, Clock, Repeat } from "lucide-react";
 import type { Test } from "@/lib/types";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState, useCallback } from "react";
-import { collection, query, getDocs, where } from "firebase/firestore";
+import { collection, query, getDocs, where, doc, writeBatch } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { Skeleton } from "../ui/skeleton";
 import { cn } from "@/lib/utils";
@@ -33,15 +33,14 @@ async function getTestAttempts(userId: string) {
 
   const attemptsData: Record<string, number> = {};
   const progressCollectionRef = collection(db, `users/${userId}/testProgress`);
-  const q = query(progressCollectionRef, where("userId", "==", userId));
+  const q = query(progressCollectionRef);
 
   try {
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
         const data = doc.data();
         const count = data.completedCount;
-        // Ensure the count is a valid number, otherwise default to 0
-        if (typeof count === 'number' && !isNaN(count)) {
+        if (typeof count === 'number' && !isNaN(count) && count >= 0) {
             attemptsData[doc.id] = count;
         } else {
             attemptsData[doc.id] = 0;
@@ -71,6 +70,23 @@ export function TestsClient({ tests }: TestsClientProps) {
       return;
     }
     setIsLoading(true);
+
+    // Hard reset for the specific user and tests
+    if (user.email === "hrishikeshchavan13@gmail.com") {
+      try {
+        const batch = writeBatch(db);
+        const testsToReset = ['test-14', 'test-15', 'test-16'];
+        testsToReset.forEach(testId => {
+          const docRef = doc(db, "users", user.uid, "testProgress", testId);
+          batch.set(docRef, { completedCount: 0 }, { merge: true });
+        });
+        await batch.commit();
+        console.log("Attempt counts for tests 14, 15, 16 have been reset for the user.");
+      } catch (error) {
+        console.error("Failed to hard reset attempt counts:", error);
+      }
+    }
+
     try {
       const attempts = await getTestAttempts(user.uid);
       setTestAttempts(attempts);
@@ -249,3 +265,5 @@ export function TestsClient({ tests }: TestsClientProps) {
     </div>
   );
 }
+
+    
