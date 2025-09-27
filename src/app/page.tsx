@@ -2,10 +2,10 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { useAuth } from "@/contexts/AuthContext"
 import { Button } from "@/components/ui/button"
-import AnimatedLogo from "@/components/shared/AnimatedLogo"
 import { CheckCircle } from "lucide-react"
 
 export default function HomePage() {
@@ -33,7 +33,7 @@ export default function HomePage() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="mb-8"
       >
-        <AnimatedLogo className="h-40 w-40" />
+        <Image src="/nurseiqn-logo.png" alt="NURSE IQN Logo" width={160} height={160} className="h-40 w-40" />
       </motion.div>
 
       <motion.div
