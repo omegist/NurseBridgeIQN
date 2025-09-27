@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Alegreya } from 'next/font/google'
+import { Alegreya, Belleza } from 'next/font/google'
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 import { AuthProvider } from "@/contexts/AuthContext"
@@ -11,7 +11,13 @@ import Script from "next/script"
 
 const alegreya = Alegreya({
   subsets: ['latin'],
-  variable: '--font-alegreya',
+  variable: '--font-body',
+});
+
+const belleza = Belleza({
+  subsets: ['latin'],
+  weight: "400",
+  variable: '--font-headline',
 });
 
 export const metadata: Metadata = {
@@ -32,7 +38,7 @@ export default function RootLayout({
       <head>
         <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </head>
-      <body className={`${alegreya.variable} font-body antialiased`}>
+      <body className={`${alegreya.variable} ${belleza.variable} font-body antialiased`}>
         <ThemeProvider storageKey="nurse-iqn-theme" defaultTheme="dark">
           <AuthProvider>
             <QuizProvider>
