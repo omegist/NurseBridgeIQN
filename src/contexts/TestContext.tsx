@@ -61,24 +61,22 @@ export function TestProvider({ children }: { children: ReactNode }) {
             let answersToSet;
             let indexToSet = 0;
 
-            if (progressSnap.exists()) {
-                 const data = progressSnap.data();
-                 if (data.completed) {
-                    // This is a retake, so reset the progress fully.
-                    answersToSet = new Array(selectedTest.questions.length).fill(null);
-                    await setDoc(progressRef, { 
-                        userAnswers: answersToSet, 
-                        currentQuestionIndex: 0, 
-                        completed: false,
-                        // Resetting the count for a retake.
-                        completedCount: 0, 
-                        updatedAt: new Date()
-                    }, { merge: true });
-                 } else {
-                    // Resuming an in-progress test.
-                    answersToSet = data.userAnswers || new Array(selectedTest.questions.length).fill(null);
-                    indexToSet = data.currentQuestionIndex || 0;
-                 }
+            if (progressSnap.exists() && progressSnap.data().completed) {
+               // This is a retake, so reset the progress fully.
+                answersToSet = new Array(selectedTest.questions.length).fill(null);
+                await setDoc(progressRef, { 
+                    userAnswers: answersToSet, 
+                    currentQuestionIndex: 0, 
+                    completed: false,
+                    // Resetting the count for a retake.
+                    completedCount: 0, 
+                    updatedAt: new Date()
+                }, { merge: true });
+            } else if (progressSnap.exists()) {
+                // Resuming an in-progress test.
+                const data = progressSnap.data();
+                answersToSet = data.userAnswers || new Array(selectedTest.questions.length).fill(null);
+                indexToSet = data.currentQuestionIndex || 0;
             } else {
                  // First time taking this test.
                  answersToSet = new Array(selectedTest.questions.length).fill(null);
@@ -156,3 +154,6 @@ export function useTest() {
   }
   return context
 }
+
+
+    

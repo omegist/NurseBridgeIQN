@@ -70,23 +70,7 @@ export function TestsClient({ tests }: TestsClientProps) {
       return;
     }
     setIsLoading(true);
-
-    // Hard reset for the specific user and tests
-    if (user.email === "hrishikeshchavan13@gmail.com") {
-      try {
-        const batch = writeBatch(db);
-        const testsToReset = ['test-14', 'test-15', 'test-16'];
-        testsToReset.forEach(testId => {
-          const docRef = doc(db, "users", user.uid, "testProgress", testId);
-          batch.set(docRef, { completedCount: 0 }, { merge: true });
-        });
-        await batch.commit();
-        console.log("Attempt counts for tests 14, 15, 16 have been reset for the user.");
-      } catch (error) {
-        console.error("Failed to hard reset attempt counts:", error);
-      }
-    }
-
+    
     try {
       const attempts = await getTestAttempts(user.uid);
       setTestAttempts(attempts);
@@ -265,5 +249,7 @@ export function TestsClient({ tests }: TestsClientProps) {
     </div>
   );
 }
+
+    
 
     

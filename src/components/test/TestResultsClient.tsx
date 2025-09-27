@@ -24,7 +24,7 @@ import {
 import { CheckCircle, XCircle, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
-import { doc, setDoc, getDoc, increment } from "firebase/firestore";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
@@ -113,7 +113,7 @@ export function TestResultsClient() {
           const data = docSnap.data();
           const count = data.completedCount;
           // Ensure the count is a valid number, otherwise default to 0
-          if (typeof count === 'number' && !isNaN(count)) {
+          if (typeof count === 'number' && !isNaN(count) && count >= 0) {
             currentAttempts = count;
           }
         }
@@ -333,5 +333,7 @@ export function TestResultsClient() {
     </div>
   );
 }
+
+    
 
     
