@@ -3,7 +3,6 @@
 
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
-import Image from "next/image"
 import {
   Menu,
   BarChart2,
@@ -38,6 +37,7 @@ import { ContactForm } from "./ContactForm"
 import { FeedbackForm } from "./FeedbackForm"
 import { usePayment } from "@/hooks/usePayment"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import AnimatedLogo from "../shared/AnimatedLogo"
 
 export function Header() {
   const { user, loading, logout } = useAuth()
@@ -106,7 +106,7 @@ export function Header() {
                     <SheetHeader className="border-b pb-4">
                     <SheetTitle className="sr-only">Menu</SheetTitle>
                     <Link href="/" className="flex items-center space-x-2">
-                        <Image src="/nurseiqn-logo.png" alt="NURSE IQN Logo" width={32} height={32} />
+                        <AnimatedLogo className="h-8 w-auto" />
                     </Link>
                     </SheetHeader>
                     <nav className="flex flex-col space-y-2 mt-4">
@@ -185,7 +185,7 @@ export function Header() {
             )}
           </div>
           <Link href="/" className="flex items-center space-x-2">
-             <Image src="/nurseiqn-logo.png" alt="NURSE IQN Logo" width={32} height={32} />
+             <AnimatedLogo className="h-10 w-auto" />
           </Link>
         </div>
 

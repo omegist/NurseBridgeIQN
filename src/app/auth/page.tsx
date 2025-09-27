@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+import AnimatedLogo from "@/components/shared/AnimatedLogo";
 
 export default function AuthPage() {
     const { user, loading } = useAuth();
@@ -28,8 +28,8 @@ export default function AuthPage() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-background p-4">
-            <Link href="/" className="mb-8">
-                <Image src="/nurseiqn-logo.png" alt="NURSE IQN Logo" width={80} height={80} className="h-20 w-auto" />
+            <Link href="/" className="mb-8 h-20 w-auto">
+                <AnimatedLogo />
             </Link>
             <AuthForm />
         </div>
